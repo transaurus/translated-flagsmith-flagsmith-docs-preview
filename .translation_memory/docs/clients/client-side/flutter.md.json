@@ -1,0 +1,542 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/client-side/flutter.md",
+  "source_file_content_hash": "443cab85ae8a9d1252a3b580191c20a5642b8f83d983c08d27a9be6f16773ca4",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Flutter SDK\nsidebar_label: Flutter\ndescription: Manage your Feature Flags and Remote Config in your Flutter applications.\nslug: /clients/flutter\n---",
+      "source_content_hash": "7d8929a917225af7fcc78f612b06d92103bab077c881501c06dd91ee2d8bc463",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This SDK can be used for Flutter applications. The source code for the client is available on\n[Github](https://github.com/flagsmith/flagsmith-flutter-client).",
+      "source_content_hash": "80bf6c7927ef2b04dceecec78b0dfb3768f0f966a31471eb7f968f46fac22756",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该SDK可用于Flutter应用程序。客户端源代码托管于\n[Github](https://github.com/flagsmith/flagsmith-flutter-client)。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The Flagsmith Flutter SDK supports iOS, Android and Web targets.",
+      "source_content_hash": "b74ecadbd7dcf1ff1e6bca83a9b24218e8b2fdfc520472364aa892857afbef31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith Flutter SDK支持iOS、Android及Web平台。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开始使用"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "The client library is available from the [https://pub.dev/packages/flagsmith](https://pub.dev/packages/flagsmith):",
+      "source_content_hash": "bd051ed57ca9b0fb17d59f02f41779c09946b37fdc152b3ace39bd5faccaf529",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端库可通过[https://pub.dev/packages/flagsmith](https://pub.dev/packages/flagsmith)获取："
+      }
+    },
+    {
+      "segment_id": "93be3c14",
+      "source_content": "```dart\ndependencies:\n  flagsmith:\n```",
+      "source_content_hash": "2da8835413b3a24ca6dfe260236e77fd758def07c695192598f1a52933fbef75",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_93be3c14"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需初始化为[https://flagsmith.com](https://flagsmith.com)项目中特定环境（如开发或生产环境）。环境密钥可在环境设置页面获取。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "![Image](/img/api-key.png)",
+      "source_content_hash": "2f8c9c0b83b22f457d85301252648e4ee57be438573461d3e6a2d30e2b49a330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Sign Up and create an account at [https://flagsmith.com/](https://flagsmith.com/)",
+      "source_content_hash": "9559ba0deaca605cf2571975229a49632a0bc517b61057b39c5c288d81e584c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请先注册账号并登录[https://flagsmith.com/](https://flagsmith.com/)"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "In your application, initialise the Flagsmith client with your API key:",
+      "source_content_hash": "c4293b046eb7de2217f59df9b597d0f81215fae1e845c6b0efb542f340607312",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用中通过API密钥初始化Flagsmith客户端："
+      }
+    },
+    {
+      "segment_id": "076d64d1",
+      "source_content": "```dart\nimport 'package:flagsmith/flagsmith.dart';\n\nfinal flagsmithClient = FlagsmithClient(\n        apiKey: 'YOUR_ENV_API_KEY'\n        config: config,\n        seeds: <Flag>[\n            Flag.seed('feature', enabled: true),\n        ],\n    );\nawait flagsmithClient.initialize();\nawait flagsmithClient.getFeatureFlags(reload: true) // fetch updates from api\n```",
+      "source_content_hash": "750c4c3242007b770314a0e8f11c4531af1b9281fa4827582e7f0da348c7726b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_076d64d1"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "if you prefer async initialization then you should use",
+      "source_content_hash": "40ee18bc34c385c31d22059623e05a8aaee6d91b03c110e5d6510cfb38ff8234",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需异步初始化，可使用："
+      }
+    },
+    {
+      "segment_id": "64b6f348",
+      "source_content": "```dart\nimport 'package:flagsmith/flagsmith.dart';\n\nfinal flagsmithClient = await FlagsmithClient.init(\n        apiKey: 'YOUR_ENV_API_KEY',\n        config: config,\n        seeds: <Flag>[\n            Flag.seed('feature', enabled: true),\n        ],\n    );\nawait flagsmithClient.getFeatureFlags(reload: true) // fetch updates from api\n```",
+      "source_content_hash": "26dcfe785483f9d58ff020a1997118cb9f2713ba0868ad8003c42e97d6796018",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64b6f348"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "To check if a feature flag exists:",
+      "source_content_hash": "f8bf9c4d404bc8dde452b82c28e3b29759fb3bcf911c367eac42e58a997a7522",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在："
+      }
+    },
+    {
+      "segment_id": "1d510af2",
+      "source_content": "```dart\nbool featureExists = await flagsmithClient.hasFeatureFlag(\"my_test_feature\");\n```",
+      "source_content_hash": "5edeb0fcaf1307a289333b3006626cb00ac310f4b285598a32ab37e1ceb7227f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1d510af2"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Check if Feature flag exist and is enabled:",
+      "source_content_hash": "d8def44d46eeb6d3d94e6f7cd4143834c3b8af3086aea29d476ac0ce6017ea9c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在且已启用："
+      }
+    },
+    {
+      "segment_id": "bc137a19",
+      "source_content": "```dart\nbool featureEnabled = await flagsmithClient.isFeatureFlagEnabled(\"my_test_feature\");\nif (featureEnabled) {\n    // run the code to execute enabled feature\n} else {\n    // run the code if feature switched off\n}\n```",
+      "source_content_hash": "6dc454387a33cf451543b78ec84c3cfa65f6e29910d2cf58d81d00cff24820e1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bc137a19"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "To get the configuration value for a feature flag:",
+      "source_content_hash": "dfd461104e8b5bd1de4d6cbc4a4da44a4eeb2c37d0d7a9c244893e71bb6c2340",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取功能开关的配置值："
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```dart\nfinal myRemoteConfig = await flagsmithClient.getFeatureFlagValue(\"my_test_feature\");\nif (myRemoteConfig != null) {\n    // run the code to use remote config value\n} else {\n    // run the code without remote config\n}\n```",
+      "source_content_hash": "ec402e064141c56686f23712ec67ad3b37d8516a803eeca0a8690fb886690aba",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "To listen for fetch request state",
+      "source_content_hash": "a169fe49afb2a2252f5e874a6b79350d6d9db0fa9348166da64dabdcfcf80711",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "监听获取请求状态："
+      }
+    },
+    {
+      "segment_id": "59f28e14",
+      "source_content": "```dart\nflagsmithClient.loading.listen((state){\n    // FlagsmithLoading.loading\n    // FlagsmithLoading.loaded\n});\n```",
+      "source_content_hash": "74c3f91a03c85d08b4818a58344e2e936915dcb5fc57d541325f4566bd7616e1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59f28e14"
+      }
+    },
+    {
+      "segment_id": "6ca4479f",
+      "source_content": "To listen for feature flag changes:",
+      "source_content_hash": "a5b5420bcdde53550a3762fabcd09a89d343c9ef2984aed799860762b8bf18fb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "监听功能开关变更："
+      }
+    },
+    {
+      "segment_id": "1cf51900",
+      "source_content": "```dart\nflagsmithClient.stream(\"my_test_feature\").listen((value){\n    // call to action\n});\n```",
+      "source_content_hash": "d118d8272278d1d43ad0447d473063a9dc7a8068b7052272093a78a99ab1b64c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1cf51900"
+      }
+    },
+    {
+      "segment_id": "7ded566f",
+      "source_content": "```dart\nStreamBuilder(\n    stream: flagsmithClient.stream(\"my_test_feature\"),\n    builder: (context, AsyncSnapshot<String> snapshot) {\n        if (snapshot.connectionState == ConnectionState.waiting) {\n            return CircularProgressIndicator();\n        }\n        return TextButton(\n            onPressed: snapshot.data.enabled ? (){} : null,\n            child: Text('Call to Action'),);\n    },\n),\n```",
+      "source_content_hash": "05dbb22bc1bc4b4df1492b8936936d52200d5320fef0c4a1a6457379b18af894",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7ded566f"
+      }
+    },
+    {
+      "segment_id": "64d57278",
+      "source_content": "## Cached flags",
+      "source_content_hash": "0b210fa9b1dbe2f7d391df533d236ade729f0481cf07162614189bc72af548d0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 缓存开关"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "You can use caches instead of async/await",
+      "source_content_hash": "e1254c4ed1a43ada4e4d419b39bb1fba6864ca3daea2cf04bb4d665d40947dcc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可使用缓存替代async/await："
+      }
+    },
+    {
+      "segment_id": "1ae0b80d",
+      "source_content": "```dart\nfinal config = FlagsmithConfig(\n    baseURI: 'http://yoururl.com/',\n    connectTimeout: 200,\n    receiveTimeout: 500,\n    sendTimeout: 500,\n    storeType = StoreType.inMemory,\n    caches: true, // mandatory if you want to use caches\n);\nawait flagsmithClient.initialize();\n\nfinal flagsmithClient = await FlagsmithClient.init(\n        apiKey: 'YOUR_ENV_API_KEY',\n        config: config,\n        seeds: <Flag>[\n            Flag.seed('feature', enabled: true),\n        ],\n    );\n\nawait flagsmithClient.getFeatureFlags(reload: true); // fetch updates from api\nbool isFeatureEnabled = flagsmithClient.hasCachedFeatureFlag('feature');\n```",
+      "source_content_hash": "ec2dab69d329d6e61c161b39e40a21d11709e3f316e11e32880df960696cc85d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1ae0b80d"
+      }
+    },
+    {
+      "segment_id": "3cd8185f",
+      "source_content": "### Identifying users",
+      "source_content_hash": "364500f1634504c5a369ef91cd8b65c60e06a1a00b4e6bc22bb2faadd7818295",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户标识"
+      }
+    },
+    {
+      "segment_id": "3e8f45da",
+      "source_content": "Identifying users allows you to target specific users from the [Flagsmith dashboard](https://flagsmith.com/).",
+      "source_content_hash": "61469c1a58de394cef1725c68b7b6540b8f880b52ff026deffa8251b8682d8f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户标识功能允许您通过[Flagsmith控制台](https://flagsmith.com/)定向特定用户。"
+      }
+    },
+    {
+      "segment_id": "4c787c52",
+      "source_content": "To check if a feature exists for a given user Identity:",
+      "source_content_hash": "7a40dbe81ffcd81d269b2cdbf9470c69cc34ff912aabd6d19d1c281080ab77b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查某用户身份的功能是否存在："
+      }
+    },
+    {
+      "segment_id": "520cfa65",
+      "source_content": "```dart\nfinal user = Identity(identifier: 'flagsmith_sample_user');\nbool featureEnabled = await flagsmithClient.hasFeatureFlag('my_test_feature', user: user);\nif (featureEnabled) {\n    // run the code to execute enabled feature for given user\n} else {\n    // run the code when feature switched off\n}\n```",
+      "source_content_hash": "f553359777164fc4acf99fa1d837ae95a19abebd31696928f8f2589ed7be9bac",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_520cfa65"
+      }
+    },
+    {
+      "segment_id": "6b40e7a2",
+      "source_content": "To get the configuration value for a feature flag for given a user Identity:",
+      "source_content_hash": "60770b7840680f09360b05aaa2bad6d11282552ba359cb83dd1f781ce1bf2e3e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户身份的功能开关配置值："
+      }
+    },
+    {
+      "segment_id": "71969be5",
+      "source_content": "```dart\nfinal myRemoteConfig = await flagsmithClient.getFeatureFlagValue('my_test_feature', user: user);\nif (myRemoteConfig != null) {\n    // run the code to use remote config value\n} else {\n    // run the code without remote config\n}\n```",
+      "source_content_hash": "24ce3c824b790b0ca7ebd3749351341d758b2cdd233974f66d4ff33b93e4653a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_71969be5"
+      }
+    },
+    {
+      "segment_id": "dc72fd20",
+      "source_content": "To get the user traits for given user Identity:",
+      "source_content_hash": "8d4be19935c9822793ae945e47473cdf8527ff290d81794d18b8f6236b9a5092",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户身份的所有特征值："
+      }
+    },
+    {
+      "segment_id": "82a37a1b",
+      "source_content": "```dart\nfinal userTraits = await flagsmithClient.getTraits(user)\nif (userTraits != null && userTraits) {\n    // run the code to use user traits\n} else {\n    // run the code without user traits\n}\n```",
+      "source_content_hash": "c60286817ad4ccceaa34945004ab62a6cad0acbd50eb3e6e8eb39faaac71b806",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_82a37a1b"
+      }
+    },
+    {
+      "segment_id": "b49a7009",
+      "source_content": "To get user trait for given user Identity and specific Trait key:",
+      "source_content_hash": "b4ebf6c836f4464990187f68e191b29c087622ffc6f2a4364d4030c0666d0619",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户身份下特定特征键的值："
+      }
+    },
+    {
+      "segment_id": "768336f1",
+      "source_content": "```dart\nfinal userTrait = await flagsmithClient.getTrait(user, 'cookies_key');\nif (userTrait != null) {\n    // run the code to use user trait\n} else {\n    // run the code without user trait\n}\n```",
+      "source_content_hash": "f5db506a09191a0a5ac59dd217a7b6b06d27fe057d3c93cc1d837b1c0ffa77b0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_768336f1"
+      }
+    },
+    {
+      "segment_id": "015c0c6e",
+      "source_content": "Or get user traits for given user Identity and specific Trait keys:",
+      "source_content_hash": "dc632d09cea612cea0eb2ef11bf78046ef79c0c0ea1c6c9440b6ac31f0f003fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或获取指定用户身份下多个特征键的值："
+      }
+    },
+    {
+      "segment_id": "bb86adcb",
+      "source_content": "```dart\nfinal userTraits = await flagsmithClient.getTraits(user, keys: ['cookies_key', 'other_trait']);\nif (userTraits != null) {\n    // run the code to use user traits\n} else {\n    // run the code without user traits\n}\n```",
+      "source_content_hash": "ae54ad08e19b57350e6b32389bdb9c1a0b616114de245e1fd101f0ed8b7971f6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bb86adcb"
+      }
+    },
+    {
+      "segment_id": "eeeea5ce",
+      "source_content": "To update a user trait for given user Identity:",
+      "source_content_hash": "9863d991d458b87bd6f95314e43450c28f3ff74752a1d40ab3884f04aa42687b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更新指定用户身份的特征值："
+      }
+    },
+    {
+      "segment_id": "ade38aab",
+      "source_content": "```dart\nfinal userTrait = await flagsmithClient.getTrait(user, 'cookies_key');\nif (userTrait != null) {\n    // update value for user trait\n    var updatedTrait = userTrait.copyWith(value: 'new value');\n    Trait updated = await flagsmithClient.updateTrait(user, updatedTrait);\n} else {\n    // run the code without user trait\n}\n```",
+      "source_content_hash": "4b7f9ebe6e5baa2bdee5bf58b8714a2311f28d745df0139ab99af1d0f1b5e1e9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ade38aab"
+      }
+    },
+    {
+      "segment_id": "2c3ad447",
+      "source_content": "## Reset storage",
+      "source_content_hash": "666244c45c9789c7436beb5cde7ce36a28f272e0f2b05bf2a11ffffcd129dffc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 重置存储"
+      }
+    },
+    {
+      "segment_id": "61e5dad6",
+      "source_content": "To reset storage and re-seed default values",
+      "source_content_hash": "49cc397787eaff94d8a604f289f943deaf71bfd4d11600b5550483b8fc96daf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "重置存储并重新初始化默认值："
+      }
+    },
+    {
+      "segment_id": "18e3e63d",
+      "source_content": "```dart\nawait flagsmithClient.reset();\n```",
+      "source_content_hash": "e98aa7379c795e26407ee8f4436e2102ba2192fb3e250a33ff48c49193429064",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_18e3e63d"
+      }
+    },
+    {
+      "segment_id": "79f90fe4",
+      "source_content": "## Override default configuration",
+      "source_content_hash": "242d7e795c949122455c15bebd1a6da0d35e44cae8b607acd146f8b795b3b897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认配置"
+      }
+    },
+    {
+      "segment_id": "85b17c36",
+      "source_content": "By default, the client uses the default configuration. You can override this configuration as follows:",
+      "source_content_hash": "90d4d10d9996cc3f964be4bf6a3e4c2b4906a2c67667d5f5bb3e3453a93a8e3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下客户端使用标准配置，可按如下方式覆盖："
+      }
+    },
+    {
+      "segment_id": "d1a6eaaa",
+      "source_content": "```dart\nfinal flagsmithClient = FlagsmithClient(\n      config: FlagsmithConfig(\n          baseURI: 'http://yoururl.com/'\n      ), apiKey: 'YOUR_ENV_API_KEY');\n```",
+      "source_content_hash": "0dbc472379f51a4f440b3c37ddb693c4afe9ab5b0be18a387051b9fd1df39789",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d1a6eaaa"
+      }
+    },
+    {
+      "segment_id": "f211c69a",
+      "source_content": "Override the default configuration with your own:",
+      "source_content_hash": "6eeed5c77292a9585de0601915e24ab6b4d0f469141e2f1c51e3044fa0d86eff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用自定义配置覆盖默认值："
+      }
+    },
+    {
+      "segment_id": "03859cae",
+      "source_content": "```dart\nfinal flagsmithClient = FlagsmithClient(\n      config: FlagsmithConfig(\n          baseURI: 'http://yoururl.com/',\n          connectTimeout: 200,\n          receiveTimeout: 500,\n          sendTimeout: 500,\n          storeType = StoreType.inMemory,\n          caches: true,\n      ), apiKey: 'YOUR_ENV_API_KEY');\n```",
+      "source_content_hash": "72f867aba3beb1743b3929c650e28cd85da5d515127c5220cdf775243139e322",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_03859cae"
+      }
+    },
+    {
+      "segment_id": "365a11aa",
+      "source_content": "## Known issues",
+      "source_content_hash": "4cecb6da2e40cc04ae6e30cf3f1e7cbd0703e50078cb7c162c0ca14c29be5058",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 已知问题"
+      }
+    },
+    {
+      "segment_id": "6f588b55",
+      "source_content": "- If using the package Dio, you may encounter an error saying `Bad state: Future already completed`. There is a bug in\n  the Dio package, introduced in 4.0.5 (and as of writing this on 12/09/2022, is unresolved). To resolve, you'll need to\n  pin your Dio version in pubspec.yaml to 4.0.4 or earlier. You can track the state of this issue\n  [here within our repo](https://github.com/Flagsmith/flagsmith-flutter-client/issues/45) and also at the\n  [dio repo](https://github.com/flutterchina/dio/pull/1550).",
+      "source_content_hash": "df78885e20228bfb76ba42be8cc6c36bbf18d76e3933c745104cd63433bbf8c8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 如果使用Dio包，可能会遇到报错`Bad state: Future already completed`。这是Dio包在4.0.5版本引入的bug（截至2022年12月9日撰写本文时尚未修复）。解决方案是在pubspec.yaml中将Dio版本锁定为4.0.4或更早版本。您可以通过[我们代码库中的这个issue](https://github.com/Flagsmith/flagsmith-flutter-client/issues/45)和[dio代码库](https://github.com/flutterchina/dio/pull/1550)跟踪该问题的解决进展。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/client-side/flutter.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.925835+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "443cab85ae8a9d1252a3b580191c20a5642b8f83d983c08d27a9be6f16773ca4"
+  }
+}

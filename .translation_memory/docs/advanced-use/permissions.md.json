@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/permissions.md",
+  "source_file_content_hash": "f3e44f36d8512d398da39d4b334e618632b931d279245d1e792ed33321dc2ad2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Role Based Access Control\ndescription: Team member and group permissions.\n---",
+      "source_content_hash": "f3eb78f6d86ba56caf014439c4aab0812753da68fcf29c64d2961436264464cb",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "Flagsmith provides fine-grained permissions to help larger teams manage access and roles across projects and\nenvironments.",
+      "source_content_hash": "953981b2594a5357a8a7348ea7ad7affafec59bcd75944b976561f75a4c308fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith提供细粒度的权限控制，帮助大型团队跨项目和环境管理访问权限与角色分配。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Permissions are assigned to individual team members or to groups.",
+      "source_content_hash": "b68fd8cf5ccec1beb446069d59465901a618b7c16f18a184bd40cea764180129",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "权限可分配给单个团队成员或群组。"
+      }
+    },
+    {
+      "segment_id": "bb849aa9",
+      "source_content": ":::caution\n\nThe Permissions/Role Based Access features of Flagsmith are _not_ part of the Open Source version. If you want to use\nthese features as part of a self hosted/on premise solution, please [get in touch](https://flagsmith.com/contact-us/).\n\n:::",
+      "source_content_hash": "e315ba076dc2d702933893a5af2339f537254186778c9abdafd02776b30524c3",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::caution\n\nFlagsmith的权限/基于角色的访问控制功能_不_包含在开源版本中。如需在自托管/本地化解决方案中使用这些功能，请[联系我们](https://flagsmith.com/contact-us/)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Groups",
+      "source_content_hash": "0473f1f7fb78f0741a4a5287dd89156f1400df0bb3a1fd8162377a63047d8198",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 群组管理"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Groups are a convenient way to manage permissions for multiple team members. Groups can contain any number of team\nmembers. You can create groups with the Organisation Settings page.",
+      "source_content_hash": "7885a7f96935be2871d8600278523a5c060a2cb8b1efc25eeeaf3063849bdc24",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "群组是管理多成员权限的便捷方式。群组可包含任意数量的团队成员，您可以通过组织设置页面创建群组。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Organisations",
+      "source_content_hash": "926eab090f25dd1cc2e0d0f6529ef2de32a3d5bd462cf06f213c5dfded945be7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 组织架构"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "Team members can be defined as Organisation Administrators or Users. Organisation Administrator is effectively a\nsuper-user role, and gives full read/write access to every Project, Environment, Flag, Remote Config and Segment within\nthat Organisation.",
+      "source_content_hash": "15b22bb56507a7afb776967bac9e0de0a77e6aecf2a24e65e4d936bb0f246405",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "团队成员可被定义为组织管理员或普通用户。组织管理员实质上是超级用户角色，拥有对该组织内所有项目、环境、功能开关、远程配置和用户分段的完全读写权限。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Users that are not Organisation Administrators must have permissions assigned to them manually at the relevant levels.\nThe permissions available at the Organisation level are defined below.",
+      "source_content_hash": "000cf91daef84f6a98175d82274e8ea996d1aa1484a8863ede03ed685565017c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "非管理员的普通用户需要在相关层级手动分配权限。组织层级的可用权限如下所示。"
+      }
+    },
+    {
+      "segment_id": "84112082",
+      "source_content": "| **Role**       | **Ability**                                                  |\n| -------------- | ------------------------------------------------------------ |\n| Create Project | Allows the user to create projects in the given Organisation |",
+      "source_content_hash": "ebb642d64296556c8c7b6dc8504c8ddd96acb8d648531c2b580f1cb07abbf8ee",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_84112082"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![Image](/img/organisation-permissions.png)",
+      "source_content_hash": "43efca6ec04d368b9996807662781175bd487ac86f1c32f3dc9858d43afe01d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/organisation-permissions.png)"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Projects",
+      "source_content_hash": "fcfd91ca588cb50b3e45d7f9304d0df1a3b6faf456dc17040e8df233556a2267",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 项目管理"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Team Members and Groups can be given individual roles at a Project level.",
+      "source_content_hash": "2c36358d72658cebe092eb2df55e490cd53c37b52346699c9ba4d8da6c275b2a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可在项目层级为团队成员和群组分配特定角色。"
+      }
+    },
+    {
+      "segment_id": "60430721",
+      "source_content": "| **Role**           | **Ability**                                                                                |\n| ------------------ | ------------------------------------------------------------------------------------------ |\n| Administrator      | Full Read/Write over all Environments, Feature Flag, Remote Config, Segment and Tag values |\n| View Project       | Can view the Project within their account                                                  |\n| Create Environment | Can create new Environments within the Project                                             |\n| Create Feature     | Can create a new Feature / Remote Config                                                   |\n| Delete Feature     | Can remove an existing Feature / Remote Config entirely from the Project                   |\n| Manage Segments    | Can create, delete and edit Segments within the Project                                    |",
+      "source_content_hash": "6ecc69bc757d577ddf74c4c7fbaa48fd796d2c9cd605289d1063c586a1f7eb3f",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_60430721"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "![Image](/img/project-permissions.png)",
+      "source_content_hash": "3afc659d741a587d9e0bf80fb7d52066b28e5c19501002fa91dc9f9df67fcd95",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/project-permissions.png)"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Environments",
+      "source_content_hash": "246b332f56ea1c05616e98f8ddffda08701cf2e9c028f3e8aa25b9a42afff17a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境管理"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Team Members and Groups can be given individual roles at an Environment level.",
+      "source_content_hash": "ccecdaef3a60dd593d16241e29f7f72c519a82b76dc1bbd1c9a8286ad77e0ef8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可在环境层级为团队成员和群组分配特定角色。"
+      }
+    },
+    {
+      "segment_id": "0b4652a4",
+      "source_content": "| **Role**               | **Ability**                                               |\n| ---------------------- | --------------------------------------------------------- |\n| Administrator          | Can modify Feature Flag, Remote Config and Segment values |\n| View Environment       | Can see the Environment within their account              |\n| Update Feature State   | Update the state or value for a given feature             |\n| Manage Identities      | View and update Identities                                |\n| Create Change Request  | Creating a new Change Request                             |\n| Approve Change Request | Approving or denying existing Change Requests             |\n| View Identities        | Viewing Identities                                        |",
+      "source_content_hash": "17132b4b9996e7ed08acd2379b8c4ba61034cf09aee2cfad561b905970153365",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0b4652a4"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "![Image](/img/environment-permissions.png)",
+      "source_content_hash": "4374909ef734a16ab73446d88ae735a163d632edb5347977d89c2646cc60214c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/environment-permissions.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/permissions.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.936100+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f3e44f36d8512d398da39d4b334e618632b931d279245d1e792ed33321dc2ad2"
+  }
+}

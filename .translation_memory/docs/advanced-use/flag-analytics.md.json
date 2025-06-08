@@ -1,0 +1,160 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/flag-analytics.md",
+  "source_file_content_hash": "cb39621ef36beb9c89784d1203567bc2c3180b2bdba2b953e14dfe9e2bb5b819",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flag Analytics\n---",
+      "source_content_hash": "e9655d288fed635a08f3e3a4203365adb5463b07bfb55bdf59263425c7f163ad",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Flag Analytics allow you to track how often individual Flags are evaluated within the Flagsmith SDK.",
+      "source_content_hash": "b09759a9eaebeb12e5771afd04404d07068a4707702549663087c218c4a3c9b9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志分析允许您追踪Flagsmith SDK中各功能标志被评估的频率。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "To view Analytics for a particular flag, browse to the relevant environment and click on a single flag to edit that\nflag.",
+      "source_content_hash": "f4a9e3e17cd53758f496e4e0ba5ef9995af00ae2952de5ea126a447b2d7a6dfd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要查看特定标志的分析数据，请浏览至相应环境并点击单个标志进行编辑。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "![Image](/img/flag-analytics.png)",
+      "source_content_hash": "e5d68c17c57a4233325097c7539507b84ee433d42edd578846de19955033ab8f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-analytics.png)"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Flag Analytics can be really useful when removing flags from Flagsmith. More often than not, flags can be removed from\nyour codebase and platform once they have been rolled out and everyone is comfortable with them running in production.",
+      "source_content_hash": "28e17f00f3c00fc998d64878e999e545e79ae9b178ddc1348e0b370a1bf90b3f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当需要从Flagsmith中移除标志时，标志分析功能尤为实用。通常而言，在功能标志已全面上线且团队对其在生产环境运行状态感到满意后，即可从代码库和平台中移除这些标志。"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Once you have removed the evaluation code from your code base, its nice to be sure that all references to that flag have\nbeen removed, and that removing the flag itself from Flagsmith will not cause any unforeseen issues. Flag Analytics help\nwith this.",
+      "source_content_hash": "ead4eee0fb822badbfe7077ca2756e991b59c5073687084ecdece41200ed6c7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您从代码库中移除标志评估逻辑后，可通过分析数据确认该标志的所有引用是否已彻底清除，从而确保从Flagsmith平台删除该标志不会引发意外问题。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Flag Analytics can also be helpful when identifying integration issues. Occasionally errors can creep into your code\nthat cause multiple needless evaluations of a flag. Again, these analytics can help isolate these situations.",
+      "source_content_hash": "142def061b68e24453818eb055a3ea3bd9111f1e93d0ea7d042c78a84e15f6eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标志分析也有助于识别集成问题。某些情况下，代码中可能出现错误导致标志被重复无效评估，分析数据可帮助定位这类异常情况。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## SDK Support",
+      "source_content_hash": "157b1bec97a8acae20ed68fbfdb89b26d3faabe3688d7df03c1ff2ca21ae3ebf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SDK支持"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "We currently support Flag Analytics with the following SDKs:",
+      "source_content_hash": "c369b000531387328c9db1f003c9cf82cc500e6f1b9df2440cc1749fc5e58957",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {}
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- [Javascript and React/React Native](/clients/javascript/). Currently enabled in version `1.2.2` and above.",
+      "source_content_hash": "e791dca3da18742d60d882b7fe550c1e65926990c2a3b36483a614cc3c0078c8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [JavaScript及React/React Native](/clients/javascript/)。当前版本`1.2.2`及以上已支持该功能。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "We are working to build integrate Flag Analytics with our other SDKs but happy to take Pull Requests!",
+      "source_content_hash": "300678a7744f243b565773715caa5378f8589885730016c29c9482020fb3747d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们正在为其他SDK集成标志分析功能，同时欢迎提交Pull Request！"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## How does it work?",
+      "source_content_hash": "cabe7b4ea1251edc235dc25fdf3eef20e8c6fa0220386c0293c892724a4fb177",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 工作原理"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Every time a flag is evaluated within the SDK (generally a call to a method like\n`flagsmith.hasFeature(\"myCoolFeature\")`), the SDK keeps a track of the flag name along with an evaluation count.",
+      "source_content_hash": "e0700d12f1ff10914fb39aee883ddbe205f75facd6d9cf8eeda82d5a2c240320",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每当SDK中对标志进行评估时（通常通过调用类似`flagsmith.hasFeature(\"myCoolFeature\")`的方法），SDK会记录该标志名称及评估次数。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Every `n` seconds (currently set to 10 seconds in the JS SDK) the SDK sends a message to the Flagsmith API with the list\nof flags that have been evaluated and their count. If no flags have been evaluated in that time window, no message is\nsent.",
+      "source_content_hash": "b8a28c3edd783490aaab82995696492e2aad5132684056337d4704bc9f7160d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每隔n秒（当前JavaScript SDK设置为10秒），SDK会向Flagsmith API发送包含已评估标志列表及其次数的消息。若该时间段内无标志被评估，则不发送消息。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/flag-analytics.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.935283+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "cb39621ef36beb9c89784d1203567bc2c3180b2bdba2b953e14dfe9e2bb5b819"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/version-comparison.md",
+  "source_file_content_hash": "35cf90bbe4a9c789fb63cb84d3d407256144ea4b82d5cbae496d6dcb20eb8390",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_position: 3\n---",
+      "source_content_hash": "57430a289358d8e38d7464d7df5ab948274d7e83ff708b215f37775a5a384353",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Version Comparison",
+      "source_content_hash": "fc68951284ca48bf97791c090f705926616f547c0905423dcd8ef907f97671a1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 版本对比"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "You are free to run the Open Source version of Flagsmith however you see fit! There are some differences between the\nOpen Source, SaaS hosted and Enterprise versions:",
+      "source_content_hash": "548a81451ed7ac3c563e1c4b318b22cb70b5294e323152df5657ec00ce7d2783",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以自由选择运行Flagsmith的开源版本！以下是开源版、SaaS托管版和企业版之间的主要区别："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "- The Open Source version has **no** API request or Identity limits - you can run as many API instances in a cluster as\n  you wish.\n- The Open Source version has **no** Dashboard User limits - you can have as many team members as you wish.\n- The SaaS and Enterprise versions have [Change Requests and Flag Scheduling](advanced-use/change-requests.md).\n- The SaaS and Enterprise versions have [Role-Based Access Controls](advanced-use/permissions.md).\n- The SaaS and Enterprise versions have additional\n  [Authentication Providers](/deployment/configuration/enterprise-edition):\n  - Okta\n  - LDAP\n  - SAML\n  - AD FS",
+      "source_content_hash": "6265005834e46cb38c07ef7473779c74724458b3a34fd9134ff6f9c646ecafb9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开源版本**没有**API请求或身份标识限制——您可以根据需要在集群中运行任意数量的API实例。\n- 开源版本**没有**仪表盘用户数量限制——团队成员数量不受限制。\n- SaaS版和企业版支持[变更请求与功能标志调度](advanced-use/change-requests.md)。\n- SaaS版和企业版提供[基于角色的访问控制](advanced-use/permissions.md)。\n- SaaS版和企业版额外支持以下[认证提供商](/deployment/configuration/enterprise-edition)：\n  - Okta\n  - LDAP\n  - SAML\n  - AD FS"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## SaaS Benefits",
+      "source_content_hash": "14d5b1ed008bf33856de12b065f1a584bf969ea1a7f48e8bc4c7540a760db610",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SaaS版优势"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Our SaaS platform has a number of benefits:",
+      "source_content_hash": "ba287880e764305fc888faf33cbc0c6e687244e2c2b211e7878479da77cb2f9e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的SaaS平台具有以下核心优势："
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- You can get up and running right away.\n- Our global [Edge API](advanced-use/edge-api.md) provides global low latency flags. We aim to serve all flag requests\n  in < 150ms, globally.\n- Get real-time flag updates to your clients, the moment they are changed in the dashboard.\n- We deal with platform upgrades, security patches, scaling and backups.",
+      "source_content_hash": "4ec27fdc0305d5b5f21978455df1c058ba97f67897acc332d071cacd09bcd2f5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 可立即快速部署使用\n- 全球分布的[边缘API](advanced-use/edge-api.md)确保低延迟特性交付，全球范围内标志请求响应时间控制在150毫秒内\n- 实时推送标志变更至客户端，仪表盘修改即刻生效\n- 由我们负责平台升级、安全补丁、扩展备份等运维工作"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### SaaS Architecture",
+      "source_content_hash": "5591f4459bdacfb35f9e9c61104c591024565bbaaaeb8fd9bd33e22c5e8f8749",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SaaS架构"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![Image](/img/saas-architecture.svg)",
+      "source_content_hash": "038c894af53dd2ec6be8221c7c9ccddfafbd9016848b35ffbc2d3f8a4c166ae3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![架构图](/img/saas-architecture.svg)"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Enterprise Benefits",
+      "source_content_hash": "c1b90a439220950f8bbe80b7ce1911424a1750566b5365d98bb01bebf1fd0d41",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 企业版优势"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "You can run our Enterprise version either on-premise, or we can provide private cloud instance dedicated to your\norganisation.",
+      "source_content_hash": "0c271f790372a322e08994af63532331cc22f422ba15c2f5fbef0e191cbc3585",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业版支持本地化部署，也可为您组织提供专属私有云实例。"
+      }
+    },
+    {
+      "segment_id": "8a01ee7b",
+      "source_content": "- [Role Based Access Controls](advanced-use/permissions.md).\n- [SAML, LDAP, ADFS and Okta authentication](deployment/configuration/authentication.md), as well as the ability to lock\n  authentication to a single provider.\n- Additional database engines: Oracle, SQL Server and MySQL.\n- Additional deployment and orchestration options as detailed below.",
+      "source_content_hash": "23ee55ac049f0284f645b6a714b80bf18069ec8c492a7a0252f8669245be48fe",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [基于角色的访问控制](advanced-use/permissions.md)\n- 支持[SAML、LDAP、ADFS和Okta认证](deployment/configuration/authentication.md)，并可锁定单一认证提供商\n- 额外数据库引擎支持：Oracle、SQL Server和MySQL\n- 下文详述的更多部署与编排选项"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Open Source Benefits",
+      "source_content_hash": "5ed03c8e9e34425775cd69b8010aa4131e971c44f38e2fc4659af955860328af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开源版优势"
+      }
+    },
+    {
+      "segment_id": "6773b78b",
+      "source_content": "- Completely Free!\n- The Open Source version has **no** API request or Identity limits - you can run as many API instances in a cluster as\n  you wish.\n- The Open Source version has **no** Dashboard User limits - you can have as many team members as you wish.\n- Deploy with one click to a number of different [IaaS and PaaS providers](deployment/overview#one-click-installers).",
+      "source_content_hash": "c01d79a0123754c8b252875addc57c7ba480d9189a10596434d30c231eeec567",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 完全免费！\n- 开源版本**没有**API请求或身份标识限制——集群中可无限扩展API实例\n- 开源版本**没有**仪表盘用户数量限制——团队成员数量不受限制\n- 支持一键部署至多种[IaaS和PaaS提供商](deployment/overview#one-click-installers)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/version-comparison.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.942646+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "35cf90bbe4a9c789fb63cb84d3d407256144ea4b82d5cbae496d6dcb20eb8390"
+  }
+}

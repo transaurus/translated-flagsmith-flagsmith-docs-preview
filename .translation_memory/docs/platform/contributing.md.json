@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/platform/contributing.md",
+  "source_file_content_hash": "3de3bc0df97df1bb58b501815bc5ff5caf2e29d13d9e86cc88ac62a5441773a2",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Contributing",
+      "source_content_hash": "d720a828da1110733f6baa861dbe161da9315aa8d2e7971c9bcca92354d64cf3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 贡献指南"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "We're always looking to improve this project! Open source contribution is encouraged so long as they adhere to these\nguidelines.",
+      "source_content_hash": "5cc80b726e6dc985490b3098e2d6a762162ecf35657218d8a8c12821acb26cdc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们始终致力于改进本项目！只要符合以下准则，欢迎参与开源贡献。"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "## Pull Requests",
+      "source_content_hash": "98b854ff204836d218ad6daa8c0f4c2fd989b3249252dc53054370edc2c81d76",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 拉取请求"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The Flagsmith team will be monitoring for pull requests. When we get one, a member of team will test the work against\nour internal uses and sign off on the changes. From here, we'll either merge the pull request or provide feedback\nsuggesting the next steps.",
+      "source_content_hash": "1ea92df1d9f365e1506c018c9da14cf0a7c9ed9d8990faef810876003d552c74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith团队会持续关注拉取请求。收到PR后，团队成员将根据内部用例测试代码变更并签署确认。我们会直接合并PR或提供改进建议。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "### A couple things to keep in mind",
+      "source_content_hash": "414debd493cb7b89feafe52ad590178e2dde5b76f95679b127576742603f6ada",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 注意事项"
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- If you've changed APIs, update the documentation.\n- Keep the code style (indents, wrapping) consistent.\n- If your PR involves a lot of commits, squash them using `git rebase -i` as this makes it easier for us to review.\n- Keep lines under 80 characters.",
+      "source_content_hash": "a61d1f597f037a867196da6b1aedeacdf7303106467f9cbaa7ac0202ee033fb3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 若涉及API变更，请同步更新文档\n- 保持代码风格统一（缩进、换行等）\n- 若提交包含多次commit，建议使用`git rebase -i`压缩提交记录以便审查\n- 单行代码不超过80个字符"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## Pre-commit",
+      "source_content_hash": "e2fd619f325c0bafe47cef0a96fec483d6f23a16dab7b73260765665d175d121",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 预提交规范"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "The application uses pre-commit configuration ( `.pre-commit-config.yaml` ) to run `black`, `flake8` and `isort`\nformatting before commits.",
+      "source_content_hash": "372154198b8ea3ced02405f94c8935acf32e840f568e8fa1faaae19cdca07f0d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目采用预提交配置（`.pre-commit-config.yaml`），在提交前自动执行`black`、`flake8`和`isort`代码格式化。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "To install pre-commit:",
+      "source_content_hash": "ad353e7720fa7286d348644528b7522c72069c4f94abb408befb81116504f041",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安装预提交钩子："
+      }
+    },
+    {
+      "segment_id": "a89b882e",
+      "source_content": "```bash\n# From the repository root\npip install pre-commit\npre-commit install\n```",
+      "source_content_hash": "962fadd34ded27701d56df33b1bf6daf213a5b197af87bbd32332518a5330722",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a89b882e"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "You can also manually run all the checks across the entire codebase with:",
+      "source_content_hash": "54ddb9f28d03f39c6791c1722672296b62d92043903b9aab5a87b6dd6bd8585a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "也可手动全量执行代码检查："
+      }
+    },
+    {
+      "segment_id": "6543a19e",
+      "source_content": "```bash\npre-commit run --all-files\n```",
+      "source_content_hash": "9f0422ea4f2a4999f8f5346b33a846f30157d5bcf48d2f29b7dad2b0d611202d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6543a19e"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Running Tests",
+      "source_content_hash": "4d7f16177825c2d74ef8a4f890660f9892fe83ade43e429dc84c96afef85ef82",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 运行测试"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "The application uses pytest for writing(appropritate use of fixtures) and running tests. Before running tests please\nmake sure that `DJANGO_SETTINGS_MODULE` env var is pointing to the right module, e.g. `app.settings.test`.",
+      "source_content_hash": "f3b6a96016a604d84abd3b1d9482b6cae93b35492dd64d7e9d6c81dba0e37c18",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目使用pytest框架编写（合理运用fixture）和运行测试。执行测试前请确保`DJANGO_SETTINGS_MODULE`环境变量指向正确模块，例如`app.settings.test`。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "To run tests:",
+      "source_content_hash": "bc52a8d34c6dddf7cc428e4b2e2f3aa78238553fad3084cacd851b46b2fcbaae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行测试命令："
+      }
+    },
+    {
+      "segment_id": "6648a219",
+      "source_content": "```bash\nDJANGO_SETTINGS_MODULE=app.settings.test pytest\n```",
+      "source_content_hash": "66c44690f46c5564c29bfc759d2dfb6540aef5ff1e62fdae123815d50a197983",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6648a219"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## Adding Dependencies",
+      "source_content_hash": "34bf2df185dcd93660f7d96eb903aa259b964af9d5e04c6a4821bcc916b81160",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 添加依赖"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "To add a python dependency:",
+      "source_content_hash": "664814ee92331e9907d1a6a0fd467752ae7e80256de33afcc1f5f2616a7d31ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "添加Python依赖步骤："
+      }
+    },
+    {
+      "segment_id": "310e47b7",
+      "source_content": "- Add to `requirements.in` or `requirements-dev.in`\n- Run `pip-compile` or `pip-compile requirements-dev.in`",
+      "source_content_hash": "806146c355418e4cfcb3503f09d8a72398d0a5e0aff1dd62cb519dd3e9c80785",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 在`requirements.in`或`requirements-dev.in`中声明依赖\n- 执行`pip-compile`或`pip-compile requirements-dev.in`"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/platform/contributing.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.936787+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3de3bc0df97df1bb58b501815bc5ff5caf2e29d13d9e86cc88ac62a5441773a2"
+  }
+}

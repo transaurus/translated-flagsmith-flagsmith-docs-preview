@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/authentication-methods.md",
+  "source_file_content_hash": "3d4cddeb18d24d657f0cacd75c9272833d119303971b3d7ba55ab266960f86ea",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Authentication Methods",
+      "source_content_hash": "77ed35d7af3fe97d5f1fb93718ca9db981fb395345315e187d08d7321aee6a3b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 认证方式"
+      }
+    },
+    {
+      "segment_id": "13b248dc",
+      "source_content": ":::tip\n\nOrganisations within Flagsmith can be locked to a single authentication method if required, meaning that accounts can\nneither be created or logged into with anything other than the method specified.\n\nThis can be configured at an Organisation level by a Super-Administrator. Please get in touch if you need help with\nthis.\n\n:::",
+      "source_content_hash": "533065d04dd3764aaf61192852cc8d48f691a59611acef3d978dfb51186ee848",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nFlagsmith中的组织可以按需锁定为单一认证方式，这意味着账户只能通过指定方式创建或登录。\n\n此配置可由超级管理员在组织层级设置。如需协助，请联系我们。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "As well as Email/Password and OAuth2 via Google or Github, we also provide the following methods of authentication.",
+      "source_content_hash": "709f4b7c54daba8d0cbbf570af7aa4af6adceec20228020aec9d5df06f60fcff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除邮箱/密码及通过Google或Github的OAuth2认证外，我们还提供以下认证方式。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## SAML",
+      "source_content_hash": "81ea58ec59fc6890cf1f19e5e6fdfdb2003d86954e948b236e1855aa19b64115",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "The Flagsmith platform can be configured for a given organisation to use SAML authentication. To configure SAML login\nfor your organisation please get in touch with us directly to help set it up.",
+      "source_content_hash": "26a98f4518673f937b8e99d8cdc14c356152cd3c5340214ccd12956ac68c81ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith平台可为特定组织配置SAML认证。如需为您的组织设置SAML登录，请直接联系我们协助完成配置。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Note that users authenticated via SAML can only belong to one organisation, the one that the SAML configuration is tied\nto.",
+      "source_content_hash": "48ad4d6aa89fa1c50c71ae13de924210f9becab237cb240870abc8f0ff4f439e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，通过SAML认证的用户只能归属于一个组织，即与该SAML配置绑定的组织。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "To set up SAML authentication, we will provide you with a unique name for your SAML organisation that you must then\nenter when prompted by the 'Single Sign on' dialog. We will also provide you with our Service Provider metadata and\nexpect your IdP metadata in return.",
+      "source_content_hash": "1e220e7b9430662fd0de1a56e5e9b0990b2aafcccc263f686d9cbaf4a36e2a29",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要设置SAML认证，我们将为您提供SAML组织的唯一名称，您需在\"单点登录\"对话框中输入该名称。同时我们会提供我们的服务提供商元数据，并需要您返回身份提供商元数据。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "### Mapping information",
+      "source_content_hash": "cb07a9b03d9e2191e5cd749e1295a6f0282fd56484818c3b5217842d0407dd3f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 信息映射"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "To uniquely identify users, we attempt to retrieve a unique identifier from either the `subject-id` or `uid` claim, or\nwe use the content of the `NameID` attribute.",
+      "source_content_hash": "92553530dc229edc32eefc64736058726da08cba2c3a12665a05cdb4697561c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为唯一识别用户，我们会尝试从`subject-id`或`uid`声明中获取唯一标识符，或使用`NameID`属性的内容。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "We also map the following Flagsmith user attributes to the following claims in the SAML response.",
+      "source_content_hash": "81b97c0a7b8f572227d16185da028cf182b681a7798d925eae5a46935b3d8a74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们还将以下Flagsmith用户属性映射到SAML响应中的对应声明。"
+      }
+    },
+    {
+      "segment_id": "6c3c2cc2",
+      "source_content": "| Flagsmith Attribute | IdP claims                                             |\n| ------------------- | ------------------------------------------------------ |\n| `email`             | `mail`, `email` or `emailAddress`                      |\n| `first_name`        | `gn`, `givenName` or (the first part of) `displayName` |\n| `last_name`         | `sn`, `surname` or (the second part of) `displayName`  |",
+      "source_content_hash": "cbb4f3b5eee9f7e1a56d5bc6b438832cabc331b289b5f773c5f3e6ae4d7b0f95",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6c3c2cc2"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Here's an example configuration from Google's SAML app creation flow.",
+      "source_content_hash": "65751154de0fa4ccd748a26d9146dc02ace0b5bde00ae775814654ee10e05e7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是Google的SAML应用创建流程中的配置示例。"
+      }
+    },
+    {
+      "segment_id": "ff6ab177",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/saml-mapping-configuration.png\"/></div>",
+      "source_content_hash": "c6728c228afa367f4f71355d562bb820a2322ac19dfa90df12d3c1bb5e20312f",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ff6ab177"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## LDAP",
+      "source_content_hash": "244732b9e011dbaf8a0335921e46d894139b7d4f77d2fbd65c2423e8a842412b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## LDAP"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "LDAP Authentication is available in our [Enterprise Edition](../enterprise-edition.md). Please contact us if this is of\ninterest. We also support sync-ing of LDAP groups into [Flagsmith RBAC groups](permissions.md#groups).",
+      "source_content_hash": "e3e2dc3f1dce2e67bf04679fc39fd7d1a90d89cc5f238d4ef8044269f5636141",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "LDAP认证功能包含在我们的[企业版](../enterprise-edition.md)中。如有需求请联系我们。我们还支持将LDAP群组同步至[Flagsmith RBAC群组](permissions.md#groups)。"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "## AD FS",
+      "source_content_hash": "95331357795dbb7811cc1271592648eb087e435e853f21718da308ccd68f7a34",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## AD FS"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Active Directory Federation Services Authentication is available in our [Enterprise Edition](../enterprise-edition.md).",
+      "source_content_hash": "909be4fd9c9fdd97c16af8e01d430cb7fd065e427419e3bf67a7febda93f22db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Active Directory联合服务认证功能包含在我们的[企业版](../enterprise-edition.md)中。"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Okta",
+      "source_content_hash": "1da451447f5c7c30426fb5bccf4b2e6711824fa43894b6851df11a4cbcbba7c5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Okta"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "Okta Integration is available in our [Enterprise Edition](../enterprise-edition.md).",
+      "source_content_hash": "68d7811ee391dd5b22ecce1952ff6670f69733460a137f74d2b173efdcf19dad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Okta集成功能包含在我们的[企业版](../enterprise-edition.md)中。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/authentication-methods.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.942184+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3d4cddeb18d24d657f0cacd75c9272833d119303971b3d7ba55ab266960f86ea"
+  }
+}

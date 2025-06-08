@@ -1,0 +1,182 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/integrations/datadog.md",
+  "source_file_content_hash": "3ab124f8237f5be6508028fd90a616282fe73bc84a63718c907f28a8e0682ac7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Datadog Integration\nsidebar_label: Datadog\nhide_title: true\n---",
+      "source_content_hash": "d5eaa6f68f0a3ecc0471dfec4ccdf2f710903ce80002ed93c1a363cc45934224",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "10c4cb47",
+      "source_content": "import ReactPlayer from 'react-player'",
+      "source_content_hash": "b1429c5f48f2979b37dc822b5312137877e71b790ce37e2386c4aca7198892cd",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_10c4cb47"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-logo.svg)",
+      "source_content_hash": "5ca0215fd318e6c5a3246cf68c415d669157d8679b0742b01beaa5b9b0278157",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "You can integrate Flagsmith with Datadog in two ways:",
+      "source_content_hash": "2d53be029b6aed7c3520042cb61b75dfe66cb19d5286fa682c1bfb999d2dd14b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过两种方式将Flagsmith与Datadog集成："
+      }
+    },
+    {
+      "segment_id": "730c423c",
+      "source_content": "- [1. Integrate Flagsmith into your Datadog Dashboard](#1-integrate-flagsmith-into-your-datadog-dashboard)\n- [2. Send Flag Change events to Datadog](#2-send-flag-change-events-to-datadog)",
+      "source_content_hash": "89e09e021e9efceeb4e013afc3b682bab5bf5af189f7893a27269cc904437942",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [1. 将Flagsmith集成至Datadog仪表盘](#1-integrate-flagsmith-into-your-datadog-dashboard)\n- [2. 向Datadog发送功能标志变更事件](#2-send-flag-change-events-to-datadog)"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## 1. Integrate Flagsmith into your Datadog Dashboard",
+      "source_content_hash": "17b1d6b1c6696afb40268b185f463bbd8811c28f274d2d5db53b3489b8049c6c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 1. 将Flagsmith集成至Datadog仪表盘"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "This integration lets you add a Flagsmith widget into your Datadog Dashboard so you can view and manage your flags\nwithout having to leave the Datadog application.",
+      "source_content_hash": "c5ace706d8c2ba3593392fa86c43d8cd8967e3f6bf8399f4295794747d040765",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该集成允许您在Datadog仪表盘中添加Flagsmith小组件，无需离开Datadog应用即可查看和管理功能标志。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "![Datadog Dashboard Widget](/img/integrations/datadog/datadog-dashboard-widget.png)",
+      "source_content_hash": "08a61d0b32037ce8dfa36186ae9b8dbb180eb194e7c7bdd158cbadeb21ef21a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog仪表盘小组件](/img/integrations/datadog/datadog-dashboard-widget.png)"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "The video below will walk you through the steps of adding the integration:",
+      "source_content_hash": "5d1eb0323983a8971f9b1a2305ab03df70803c0e620b5b660e62e3a54b34f926",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下方视频将逐步演示如何添加该集成："
+      }
+    },
+    {
+      "segment_id": "0dc46dba",
+      "source_content": "<ReactPlayer\n    playing\n    controls\n    width=\"100%\"\n    height=\"460px\"\n    url='https://getleda.wistia.com/medias/76558s9yj7' />",
+      "source_content_hash": "3f75e4e5327dd7d1444b7bda85972d3844c855052e779d9416bc8cf2b0cad53a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0dc46dba"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## 2. Send Flag Change events to Datadog",
+      "source_content_hash": "1586b804dcbf237d64615bed4eb1c0f046ff1bc10553acdd14745bf9ed2ce620",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2. 向Datadog发送功能标志变更事件"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "The second type of integration allows you to send Flag change events in Flagsmith into your Datadog event stream.",
+      "source_content_hash": "6288eca73aa8254ca2923036ec4b3449a28f7c8565855b148991f9766c4d800d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "第二种集成方式允许您将Flagsmith中的功能标志变更事件发送至Datadog事件流。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-3.png)",
+      "source_content_hash": "3ef4af1bd5ac29216390cf548d9bbd138d170223a645118f1505fc6dc6bc23e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-3.png)"
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "1. Log into Datadog and go to Organization Settings > Access > API\n2. Generate a new API key\n3. Add the Datadog API key into Flagsmith (Integrations > Add Datadog Integration)\n4. Add the Datadog URL into Flagsmith as the Base URL - (This is either `https://api.datadoghq.com/` or\n   `https://api.datadoghq.eu/`)",
+      "source_content_hash": "53f6fd1c01339d0c6bb2a5691598637d5b4d0f106276fd7dbedc5a19775ef485",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 登录Datadog并进入组织设置 > 访问 > API\n2. 生成新的API密钥\n3. 在Flagsmith中添加Datadog API密钥（集成 > 添加Datadog集成）\n4. 在Flagsmith中配置Datadog基础URL（可选择`https://api.datadoghq.com/`或`https://api.datadoghq.eu/`）"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-1.png)",
+      "source_content_hash": "b988ebbfa89b5bf11fe2fcb35fb54e086074f32bf4b6864de0e8ac46deb2e7f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-1.png)"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-2.png)",
+      "source_content_hash": "1b9d8121c081f4d756c0a40ef0bcdfd4e02f7fd1db6ff68d196816c6e586605c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-2.png)"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Flag change events will now be sent to Datadog.",
+      "source_content_hash": "a37bdb68f6e06a4f5a9e2eb2d7c2e2f9efd77fd629edaf990531873370b3a5d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志变更事件现在将自动发送至Datadog。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/integrations/datadog.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.945165+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3ab124f8237f5be6508028fd90a616282fe73bc84a63718c907f28a8e0682ac7"
+  }
+}

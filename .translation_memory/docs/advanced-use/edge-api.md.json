@@ -1,0 +1,500 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/edge-api.md",
+  "source_file_content_hash": "389c1779ebe326755f6809485c5d93de93809ca1ba8025a35758ccdbaaa21021",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Edge API",
+      "source_content_hash": "4cd42076169ed82d0060378eb2ccc5844e5a4944924c187c5ecc0c5c567bcebd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Edge API"
+      }
+    },
+    {
+      "segment_id": "13b248dc",
+      "source_content": ":::info\n\nThe Edge API is only available with on our SaaS platform. It does not form part of our Open Source project.\n\n:::",
+      "source_content_hash": "0beffe94e7bfe51257da3c6434abd484fd076824fd209a3632611fdc2f697a0c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\nEdge API仅在我们的SaaS平台中提供，不属于开源项目的一部分。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "[The Flagsmith Architecture](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side) is based\naround a server-side flag engine. This comes with a number of benefits, but it can increase latency, especially when the\ncalls are being made from a location that is far from the EU; the location of our current API. It also provides a single\npoint of failure in the event of an AWS region-wide outage.",
+      "source_content_hash": "6ae998a7fb91c8e98c8a9e98729ad3afef1a9d30fa57c4b1a5f4c9c14d56fd6c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Flagsmith架构](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side)基于服务端标志计算引擎。这带来诸多优势，但也可能增加延迟——尤其是当调用来自距离我们当前API所在地（欧盟地区）较远的位置时。同时，这也构成了单一故障点，若遭遇AWS区域级中断将影响服务可用性。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The Edge API solves both of these issues. It provides a datastore and Edge compute API that is replicated across 8 AWS\nregions, with latency-based routing and global failover in the event of a region outage.",
+      "source_content_hash": "a33591fb3712c7f0435a536b5542b65ee8b289b8a9780360998f1a1dafa7a33b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Edge API可同时解决这两个问题。它提供跨8个AWS区域复制的数据存储和边缘计算API，支持基于延迟的路由选择，并在区域中断时实现全局故障转移。"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "The Edge API provides API service from the following AWS regions:",
+      "source_content_hash": "0da75f771f479c1df4617222fdad3b0bd34b0cef64692d0e4319ff504d7dfbfc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Edge API服务覆盖以下AWS区域："
+      }
+    },
+    {
+      "segment_id": "034de896",
+      "source_content": "- Europe (London) - eu-west-2\n- US East (Ohio) - us-east-2\n- US West (N. California) - us-west-1\n- Asia Pacific (Mumbai) - ap-south-1\n- Asia Pacific (Sydney) - ap-southeast-2\n- South America (São Paulo) - sa-east-1\n- Asia Pacific (Seoul) - ap-northeast-2\n- Asia Pacific (Singapore) - ap-southeast-1",
+      "source_content_hash": "7892034beb978524b13a2e6159eaeca5633a5588a675aa96363fa8a93123d187",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 欧洲（伦敦） - eu-west-2\n- 美国东部（俄亥俄） - us-east-2\n- 美国西部（北加利福尼亚） - us-west-1\n- 亚太（孟买） - ap-south-1\n- 亚太（悉尼） - ap-southeast-2\n- 南美（圣保罗） - sa-east-1\n- 亚太（首尔） - ap-northeast-2\n- 亚太（新加坡） - ap-southeast-1"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Enabling the Edge API",
+      "source_content_hash": "b6ea8df5b1a848859f2b66c99cfa50645fbdaed9453ac48316534eb230e24fe0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 启用Edge API"
+      }
+    },
+    {
+      "segment_id": "f79f5ed0",
+      "source_content": ":::tip\n\nExisting Organisations created before **7th June 2022** have their Projects deployed to the Core API. You can migrate\nyour Project over to our Edge API by going to the Project Settings page and hitting the \"Start Migration\" button. The\nmigration will take between 1 minute and an hour depending on how many Identities your Project has.\n\nThe Core API will continue to work normally during and following the migration. See the\n[Migration Steps](#migration-steps) for more info.\n\n:::",
+      "source_content_hash": "dd10d3354e70c3ac019d4e26fd330b280be77af8ecab884e29935019da3a1dc8",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n在**2022年6月7日**之前创建的现有组织，其项目默认部署在核心API上。您可通过访问项目设置页面点击\"开始迁移\"按钮，将项目迁移至Edge API。迁移耗时将根据项目包含的身份数据量在1分钟至1小时之间不等。\n\n迁移期间及迁移完成后，核心API仍可正常运作。详见[迁移步骤](#migration-steps)获取更多信息。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Once you have had your Projects migrated to Edge, all you will need to do is point your SDK to a new Flagsmith Edge API\nURL at `edge.api.flagsmith.com`. This domain points to our Edge CDN. That's it!",
+      "source_content_hash": "ce4ca6a122e32cff71195fede7a7781c9f84c0881088126a82d31614e0ce9764",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目完成Edge迁移后，您只需将SDK指向新的Flagsmith Edge API URL：`edge.api.flagsmith.com`。该域名指向我们的边缘CDN，仅此而已！"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "The easiest way to do this is to upgrade to the latest version of the Flagsmith SDK for your language.",
+      "source_content_hash": "f1be43871218147043509f28cf8ed85dc16d4c75fda2d211ddc58660f86fc852",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最简便的方式是升级至您所用编程语言的最新版Flagsmith SDK。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "If you are unable to upgrade, you can manually point the existing SDK to the Edge API endpoint. So for example, in the\nJava SDK we just add the `withApiUrl` line:",
+      "source_content_hash": "f63bdb4cbb2bc4206f14c218bbf1b758b2bd6d7f45173689efb4af2407590ea9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若无法升级，您可手动修改现有SDK配置指向Edge API端点。例如在Java SDK中，我们只需添加`withApiUrl`参数："
+      }
+    },
+    {
+      "segment_id": "229d6705",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n        .setApiKey(\"aaa\"))\n        .withApiUrl(\"https://edge.api.flagsmith.com/api/v1/\")\n        .build();\n```",
+      "source_content_hash": "0a52583e8ffcc3155e4a5d42b4f93080d22d0214bb1d5f167cbbcecbdcd9f108",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_229d6705"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Note that the Edge API URL is: `https://edge.api.flagsmith.com/api/v1/`.",
+      "source_content_hash": "f4f28978c001391856da3dd3272f06d39e26364bf4a3b6946c7c44057a4f3635",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意Edge API URL为：`https://edge.api.flagsmith.com/api/v1/`。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "Check the docs for your language SDK on how to override the endpoint URL prefix.",
+      "source_content_hash": "e539995635499de346735f079ac9bf38e8b5b2b5eb0214cbe899f11fc39a2085",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请查阅对应语言SDK文档了解如何重写端点URL前缀。"
+      }
+    },
+    {
+      "segment_id": "ab5fc5b5",
+      "source_content": "## Migration Steps",
+      "source_content_hash": "cd86bec1cbb22764eda8e07ca21cc5caccbdcffa7055ab75f5e9695c33f4ecd8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 迁移步骤"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "The migration process will carry out a one-way sync of your `Identity` data, from the Core API to the Edge API. All your\n`Identity` data will continue to exist within the Core API, and you can continue to write `Identities` to the Core API\nif you wish.",
+      "source_content_hash": "12b859ada457b95b183fd23c3c25ee50498ecc07dcad0f28786a8ae5858dd690",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "迁移过程会将您的`Identity`数据从核心API单向同步至Edge API。所有身份数据仍会保留在核心API中，您也可以选择继续向核心API写入身份数据。"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The goal is to get all of your applications running against the Edge API, where you will benefit from global low latency\nas well as multi-region failover and fault tolerance.",
+      "source_content_hash": "fbea106c3a04dd14d262cfeda7db6fb84a73ff13cb2f9ca5401650c44a6ace3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最终目标是让所有应用程序接入Edge API，从而享受全球低延迟优势，并获得多区域故障转移和容错能力。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "### Step 1 - Prepare your applications",
+      "source_content_hash": "fa72e45bdd8ef050abf5a9091c5c3b9d8a95fad32f7881ac5e0e678ac3eb074a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 步骤1 - 准备应用程序"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "Set your applications up to point to the Flagsmith Edge API. This means going from `api.flagsmith.com` to\n`edge.api.flagsmith.com`. You can either set this explicitly in our SDK or just ensure you are running the latest\nversion of the SDK; by default the _latest version_ of the SDKs will point to `edge.api.flagsmith.com`.",
+      "source_content_hash": "cfc1ff0b4703e704f3af8a28844cf590d5733f283a60e3d060ebc79657bab204",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将应用程序配置为指向Flagsmith Edge API，即将`api.flagsmith.com`更改为`edge.api.flagsmith.com`。您可以选择在SDK中显式设置，或直接确保使用最新版SDK——默认情况下最新版SDK会自动指向`edge.api.flagsmith.com`。"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "### Step 2 - Migrate your data",
+      "source_content_hash": "7d0bed3e1cb45a862d57f73b9fe1c8b03c1bb792196a0da60113810cbf1b27df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 步骤2 - 迁移数据"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "You can now trigger a one-way sync of data for each of your Flagsmith Projects within the Flagsmith Dashboard. You can\nmigrate your Project over to our Edge API by going to the Project Settings page and hitting the \"Start Migration\"\nbutton. This will start a job that can take between 1 minute and 1 hour, depending on how much data you have. Once the\njob is complete, all the Identities that were present in your Core API will be present in the Edge API.",
+      "source_content_hash": "90075e229058112964affe01e7bed3a015bb6cb7270f4edd896735db6f2ffef9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您现在可以通过Flagsmith仪表板为每个项目触发单向数据同步。只需进入项目设置页面点击\"开始迁移\"按钮，即可将项目迁移至Edge API。该操作将启动一个耗时1分钟至1小时的作业（具体时长取决于数据量）。迁移完成后，核心API中的所有身份数据都将同步至Edge API。"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "The Core API will continue to work normally during and following the migration.",
+      "source_content_hash": "06931f270a37213a2c516a73988c911639cfa775a94451d9c086fab2b4e4ec1e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "迁移过程中及迁移完成后，核心API仍可正常运作。"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "If you have a product like a mobile app, where you cannot immediately force your users to upgrade (as opposed to a web\napp, for example), you will likely generate Identity writes to the old Core API.",
+      "source_content_hash": "216b778b8d5a10e926cf3d5698eaa6369cb79891de71a7045b7c4afc260c0a90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您拥有类似移动应用的产品（与网页应用不同），无法立即强制所有用户升级，在此期间很可能仍会向旧版核心API写入身份数据。"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Following and during the migration, if we receive a request to an `Identity` endpoint that results in a write to the\ncore API, we will persist the data in the Core API _and replay the request into the Edge API_. You can then update your\nAPI endpoints/SDKs in your own time to gradually move over the Edge API. This will give you time to migrate your users\nover to the new version of your application.",
+      "source_content_hash": "bf21b7e1bec02f07e7bd6cf3814fc840fef37533cb490303adb5f630e67efa87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在迁移期间及迁移完成后，若系统收到针对核心API身份端点的写入请求，我们将在核心API保存数据的同时将该请求重放至Edge API。您可以逐步将API端点/SDK更新至Edge API，为用户迁移至新版本应用争取时间。"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "Note that writes to the Core API will still work into the future, but the data will not be synchronised across the two\nplatforms (Core and Edge).",
+      "source_content_hash": "f5b206e054b8f4870bae84346a77d100532a863ea348b3059d2f5480d106a0d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意：未来仍可向核心API写入数据，但这些数据不会在核心平台与边缘平台之间同步。"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "### Step 3 - Deploy your applications",
+      "source_content_hash": "79e13449013655993ba2a2b6e54214b12cc9122157cf564246b7352de6eb6dfc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 步骤3 - 部署应用程序"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Once your data has been copied onto the Edge API datastore, you can now deploy your applications that point to the new\nendpoint `edge.api.flagsmith.com` and benefit from global low latency!",
+      "source_content_hash": "f1ce5c824b3f1f8322592ffcce5d510a385c9f447243c1ef55726d9921908016",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当数据完成复制至Edge API数据存储后，您即可部署指向新端点`edge.api.flagsmith.com`的应用程序，享受全球低延迟优势！"
+      }
+    },
+    {
+      "segment_id": "c19de48a",
+      "source_content": "## Things you should know",
+      "source_content_hash": "b59df7eda37c17cbb4325d39c1499fe0a91a6b273306165e18b4ee295a00e2cb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 注意事项"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "### Some of the secure Identity endpoints have changed",
+      "source_content_hash": "0b839cc06a769be2d05e4742935299aa77afaf62a8b76b1fc2fd47536b164325",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 部分安全身份端点已变更"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "If you are using our REST API to manipulate/update/list your Identities, some of these endpoints have changed. Please\nget in touch if you need any help related to this.",
+      "source_content_hash": "cb1878608c8926d806aeb7dbf85ac727bbe9ff48e79c1b1c53a044f0d85ac83e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您使用REST API管理身份数据，请注意部分端点已更新。如需帮助请联系我们。"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "### New Identity Overrides will only apply to the Edge API",
+      "source_content_hash": "349d100661f392b1983ea6c80b93a3457d63c38a9bcf0e5ed4e4e4d3b353f8a1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 新增身份覆盖仅适用于Edge API"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "After the migration, any new Identity Overrides you apply to flag values for specific Identities will only be applied to\nthe Edge API.",
+      "source_content_hash": "9c91562dd7781a8fe6e3f633fafc8769a95e877db0d054916f8f6292d43235b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "迁移完成后，针对特定身份设置的任何新标记值覆盖将仅作用于Edge API。"
+      }
+    },
+    {
+      "segment_id": "722e4930",
+      "source_content": "### Increment and Decrement endpoints are deprecated",
+      "source_content_hash": "f458f3ecdeafbdd17fa66b6ff45b66e5f838b18da522d1ea80c454ee53372f10",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 增量/减量端点已弃用"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "You probably didn't know these existed though, right?",
+      "source_content_hash": "2e8090d8aa2c6f4aa5fb059e167410f79daa9ed080499c99a79e510b4cd01773",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "不过您可能原本就不知道这些端点存在吧？"
+      }
+    },
+    {
+      "segment_id": "7974af84",
+      "source_content": "### Bulk Trait endpoint is deprecated",
+      "source_content_hash": "c12d1bc349188ea12cb12de3ba0aa133214f1009b947f6effe7bcd051bf4b878",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 批量特征端点已弃用"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "But you can still achieve the same functionality using our POST /identities endpoints.",
+      "source_content_hash": "a8c3d41efbc20153ae8d7a69f9d10bdcf2a3e0f70655ba6292a3eb2fff095684",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您仍可通过POST /identities端点实现相同功能。"
+      }
+    },
+    {
+      "segment_id": "638efb88",
+      "source_content": "### The API responses have been slimmed down",
+      "source_content_hash": "03c1044ba0549a5b016b038572e125f76ea84d4c7add100ae3ae5849d2c731a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### API响应已精简"
+      }
+    },
+    {
+      "segment_id": "558df877",
+      "source_content": "Our core API responses are quite verbose, and the SDKs ignore a lot of the fields they receive. We've taken the\nopportunity to remove these additional, unused fields. This wont affect the SDKs but if you are using these values via\nthe REST API, things have changed. The list of removed fields is as follows:",
+      "source_content_hash": "acf92ae93ae64e082f26432363e366427fc3b8386fd78d03c79a8bbf1c692ab0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们移除了核心API响应中SDK未使用的冗余字段。虽然不影响SDK运作，但若您直接使用REST API获取这些值，请注意以下字段已被移除："
+      }
+    },
+    {
+      "segment_id": "e2c67c87",
+      "source_content": "```txt\ntrait.id\nflag.feature.created_data\nflag.feature.description\nflag.feature.initial_value\nflag.feature.default_enabled\nflag.environment\nflag.identity\nflag.feature_segment\n```",
+      "source_content_hash": "00957ff3999a892be3ce5297fa81f57e68f33c521876a2992ef0a66e5905b2ea",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "a461a67b",
+      "source_content": "## Architecture",
+      "source_content_hash": "a7e56472b11bd3c838bc8199601f5a5527112a003c69fbf95b012bc13573a193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 架构设计"
+      }
+    },
+    {
+      "segment_id": "c6868a9f",
+      "source_content": "### Core API Only",
+      "source_content_hash": "07a04ae36f3a8631a639aaa6f46489b96e66e9ef4820fb1e45eeeddda312a2ec",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 仅核心API模式"
+      }
+    },
+    {
+      "segment_id": "bb1346b6",
+      "source_content": "![Image](/img/core-api-now.svg)",
+      "source_content_hash": "bbfce892bbd73936f0dcaec86da19373cf81bfcc5a12be5f9f940036641ca672",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/core-api-now.svg)"
+      }
+    },
+    {
+      "segment_id": "734d40d8",
+      "source_content": "### Core and Edge API",
+      "source_content_hash": "d5471e348e6cc03952a9e2c3b61e5aae627ef6e005b4e50b5f571069493cf242",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 核心+边缘API模式"
+      }
+    },
+    {
+      "segment_id": "9e90a9b3",
+      "source_content": "![Image](/img/edge-api-now.svg)",
+      "source_content_hash": "8bd2d71d8dc5635ea7b3f62f5c09aa14d4bc22624eec7853f0d4907d195b5f76",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/edge-api-now.svg)"
+      }
+    },
+    {
+      "segment_id": "a0d0e29e",
+      "source_content": "## How It Works",
+      "source_content_hash": "f029fb0d33f0802e53458729c7a20710b671d86867fd9cb957609a4af8aee229",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 工作原理"
+      }
+    },
+    {
+      "segment_id": "8b448c8b",
+      "source_content": "### Lambda@Edge",
+      "source_content_hash": "c94d4354413b4dec18e1c3ad6cfeec41a083117effea5a05dc1d8adf661cf6f8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Lambda@Edge"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "Our core [Rules Engine](https://github.com/Flagsmith/flagsmith-engine) has been factored out of our REST API. This\nallows us to use it as a dependency within both the Flagsmith API, but also within a set of Lambda functions that\nservice SDK API calls. You can point your SDK clients to our global CDN `edge.api.flagsmith.com` which will serve your\nrequest using a Lambda function running in an AWS data-centre near your client. This is how we reduce latency!",
+      "source_content_hash": "055c62e47633dd0910d9171cfe6426b68e373fa9b33575f27772c64fb8145c26",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的核心[规则引擎](https://github.com/Flagsmith/flagsmith-engine)已从REST API解耦，使其既能作为Flagsmith API的依赖项，也可用于处理SDK API调用的Lambda函数集。将SDK客户端指向我们的全球CDN节点`edge.api.flagsmith.com`后，请求将由距离客户端最近的AWS数据中心内的Lambda函数处理，从而实现低延迟。"
+      }
+    },
+    {
+      "segment_id": "2f2d5f01",
+      "source_content": "### DynamoDB Global Tables",
+      "source_content_hash": "cb61c19f326c921d26aabc6ce6ec8623a47ec959e396fa94ddae12c9811b8bb7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### DynamoDB全局表"
+      }
+    },
+    {
+      "segment_id": "44285072",
+      "source_content": "We store state within our API - both related to the Environments for your Projects, but also for the Identities within\nthose Environments. Our Edge design sees us write this data through to DynamoDB global tables, which are replicated\nglobally. Our Lambda functions then connect to the nearest DynamoDB table to retrieve both Environment and Identity\ndata.",
+      "source_content_hash": "1a8f0a1377e4a6382dbc93bdf7861c5a531c4c58f992459298335f773070dd38",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的API中存储了两种状态数据：与您项目环境相关的数据，以及这些环境内身份(Identities)的数据。边缘架构设计采用DynamoDB全局表进行数据写入，这些表格会在全球范围内同步复制。我们的Lambda函数随后会连接最近的DynamoDB表，以获取环境数据和身份数据。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/edge-api.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.923062+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "389c1779ebe326755f6809485c5d93de93809ca1ba8025a35758ccdbaaa21021"
+  }
+}

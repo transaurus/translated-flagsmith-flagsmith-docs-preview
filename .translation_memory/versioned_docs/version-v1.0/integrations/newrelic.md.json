@@ -1,0 +1,72 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/integrations/newrelic.md",
+  "source_file_content_hash": "3661aa6df98e17d0a5200e36752575b0f93e0d8caf21ec897697b320eda6c219",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: New Relic Analytics Integration\ndescription: Integrate Flagsmith with New Relic\nsidebar_label: New Relic\nhide_title: true\n---",
+      "source_content_hash": "f6395ea24b7807dbb332e09e643febb0a51b2810ab75be58e16cd771f1476d0e",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "![Image](/img/integrations/newrelic/newrelic-logo.svg)",
+      "source_content_hash": "1d7647c2eb91e1b61b5a828b4b22c2f9963c62cf8cd9b0634dd7f4c74c550e09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/integrations/newrelic/newrelic-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "You can integrate Flagsmith with New Relic. Send flag change events from Flagsmith into your New Relic event stream.",
+      "source_content_hash": "9fbaba03ccacb2e2f4b4b0a52decbc00615eb88a482d92bf6129fa5ea616533d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与New Relic集成。将Flagsmith中的功能标志变更事件发送至New Relic事件流。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Integration Setup",
+      "source_content_hash": "42eeb793ab64304e5c9607a7548631a7e61c3a4aa782d56d87f97c42e486f90f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成设置"
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "1. Log into New Relic and navigate to the APM project that you want to integrate with. Make a note of the `App ID`.\n2. Generate a New Relic API key. Account Settings > API keys > Create Key. The Key type is `User`.\n3. Go to your Flagsmith project, and click Integrations. Add the New Relic Integration. Enter the New Relic `API Key`\n   and `App ID`. For the API URL, enter either:\n   - `https://api.newrelic.com/` for the US datacenter\n   - `https://api.eu.newrelic.com/` for the EU datacenter\n4. Click Save.",
+      "source_content_hash": "17250c7c988b010164c910feb9fcab8bcfb163d62ec10e5a730318a88c939a0a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 登录New Relic并导航至需要集成的APM项目，记录下`App ID`。\n2. 生成New Relic API密钥：账户设置 > API密钥 > 创建密钥，密钥类型选择`用户`。\n3. 进入Flagsmith项目，点击\"集成\"添加New Relic集成。输入New Relic的`API密钥`和`App ID`。API URL需填写：\n   - 美国数据中心：`https://api.newrelic.com/`\n   - 欧盟数据中心：`https://api.eu.newrelic.com/`\n4. 点击保存。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "Flag change events will now be sent to New Relic as `Deployments`.",
+      "source_content_hash": "1f81d9b8dc8d618609903c7ca44b9891bad2cc53b767be203dcb865c755745cf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志变更事件将以`部署`形式发送至New Relic平台。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/integrations/newrelic.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.929587+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3661aa6df98e17d0a5200e36752575b0f93e0d8caf21ec897697b320eda6c219"
+  }
+}

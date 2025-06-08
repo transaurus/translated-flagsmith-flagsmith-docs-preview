@@ -1,0 +1,852 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/hosting/kubernetes.md",
+  "source_file_content_hash": "e5949ade426c61321eae9dc32e6d8c83c74f6c86cfd7d1504bbd96476efcdf41",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Kubernetes\nsidebar_position: 50\n---",
+      "source_content_hash": "b7f4f48f73210177c2ac5e32d3dee5123f8ea05d59234a2053ea6e65b1da62f4",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Check out our [Kubernetes Chart Repository on GitHub](https://github.com/Flagsmith/flagsmith-charts) and our\n[published Helm Charts](https://flagsmith.github.io/flagsmith-charts/).",
+      "source_content_hash": "4efdc2849dbdf0d4c47bd2ec994123602dbb8eda5b59c1557d3ee7bf1b9c090b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请查看我们在GitHub上的[Kubernetes Chart仓库](https://github.com/Flagsmith/flagsmith-charts)以及[已发布的Helm Charts](https://flagsmith.github.io/flagsmith-charts/)。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Quick-start",
+      "source_content_hash": "2b61f8e328a97e3dd294ada0ac03ef10a5b4d264db299a28451e93385f4b897d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速开始"
+      }
+    },
+    {
+      "segment_id": "b9c7a144",
+      "source_content": "```bash\nhelm repo add flagsmith https://flagsmith.github.io/flagsmith-charts/\nhelm install -n flagsmith --create-namespace flagsmith flagsmith/flagsmith\nkubectl -n flagsmith port-forward svc/flagsmith-frontend 8080:8080\n```",
+      "source_content_hash": "851504d3ed4e80230754d20bc4bbfcacdfea36b55c575b78243b15f2b7cd9dfe",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b9c7a144"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Then view `http://localhost:8080` in a browser. This will install using default options, in a new namespace `flagsmith`.",
+      "source_content_hash": "ded03a6bf31ef9ec89854bbca9f72d32bd662f9bb54e3a5d1a27ea9dccb12910",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后在浏览器中访问`http://localhost:8080`。这将使用默认选项在新命名空间`flagsmith`中完成安装。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "### Ingress configuration",
+      "source_content_hash": "0ed9d1caddc9a0d17ab38ed199c6da54852c34fa86ef28d80e327306db3be2a7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 入口配置"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "The above is a quick and simple way of gaining access to Flagsmith, but in many cases will need to configure ingress to\nwork with an ingress controller.",
+      "source_content_hash": "ca43ca31a4f920d8dfad69dadd15f0246bb0df40263625769e31b7801bc0ee10",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "上述方法是一种快速简单的访问Flagsmith的方式，但在许多情况下需要配置入口以与入口控制器配合使用。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "#### Port forwarding",
+      "source_content_hash": "871ad1b3dfc206d20554067bef1d18c24244b670117e95016cdd9f952126c0a7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 端口转发"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "In a terminal, run:",
+      "source_content_hash": "f3702877d47bd68f172ebf7dcc767f40f53c7f9a747c3eb9ef67339590d75f5f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在终端中运行："
+      }
+    },
+    {
+      "segment_id": "b7c3dbd1",
+      "source_content": "```bash\nkubectl -n [flagsmith-namespace] port-forward svc/[flagsmith-release-name]-frontend 8080:8080\n```",
+      "source_content_hash": "b7585f20a3b4c59335b1cac816022b66b5083769235a4a35005e2c7282e0782b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b7c3dbd1"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Then access `http://localhost:8080` in a browser.",
+      "source_content_hash": "ab71b0df8629acf359d6fd951d733e2e59d79ab37a1e9c70a50f4968001c874a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后在浏览器中访问`http://localhost:8080`。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "#### In a cluster that has an ingress controller, using the frontend proxy",
+      "source_content_hash": "31d254e55e9aae8185ba6d829a99255b429db6c52f347b9ed0e66274d84432c4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 在具有入口控制器的集群中，使用前端代理"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "In this configuration, api requests are proxied by the frontend. This is simpler to configure, but introduces some\nlatency.",
+      "source_content_hash": "357d50662cdbf7a61670cc605fdd1a20e14314f9f597ee8d4ea3f8cc12f1b7a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在此配置中，API请求由前端代理转发。这种配置更简单，但会引入一些延迟。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Set the following values for flagsmith, with changes as needed to accommodate your ingress controller, and any\nassociated DNS changes.",
+      "source_content_hash": "2bd5c2a8ec9d9efd3d00464a5edeb89f90ef8bd0dd372b748ee7a54dc0a3b89a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为flagsmith设置以下值，根据需要调整以适应您的入口控制器及相关的DNS变更。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Eg:",
+      "source_content_hash": "006173ba1858dcac0d937347498d859dc83e5feeef075eebe0981f871e0ed4dc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如："
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```yaml\ningress:\n frontend:\n  enabled: true\n  hosts:\n   - host: flagsmith.[MYDOMAIN]\n     paths:\n      - /\n```",
+      "source_content_hash": "5ec374563ba09e7c34ad2a55866dd0f690b4b1f9d2e9a1d2620afbceadd4ba14",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Then, once any out-of-cluster DNS or CDN changes have been applied, access `https://flagsmith.[MYDOMAIN]` in a browser.",
+      "source_content_hash": "f2cd08fa8b9ccb5baae42391b18fee2b71166a570fcdd11a7b1ecef3cfbe8eef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后，在完成集群外DNS或CDN变更后，在浏览器中访问`https://flagsmith.[MYDOMAIN]`。"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "#### In a cluster that has an ingress controller, using separate ingresses for frontend and api",
+      "source_content_hash": "512d9437aed8e14d3152eb75bf641eb6ec16d841393815f95f910c2af5814b18",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 在具有入口控制器的集群中，为前端和API分别配置入口"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "Set the following values for flagsmith, with changes as needed to accommodate your ingress controller, and any\nassociated DNS changes. Also, set the `FLAGSMITH_API_URL` env-var such that the URL is reachable from a browser\naccessing the frontend.",
+      "source_content_hash": "6102413b7bc57c574ac1d5e5b6b075905dbf1232683ee4b60e2c713d3e72579c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为flagsmith设置以下值，根据需要调整以适应您的入口控制器及相关的DNS变更。同时，设置`FLAGSMITH_API_URL`环境变量，确保该URL可从访问前端的浏览器中访问。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Eg:",
+      "source_content_hash": "006173ba1858dcac0d937347498d859dc83e5feeef075eebe0981f871e0ed4dc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如："
+      }
+    },
+    {
+      "segment_id": "5d4925eb",
+      "source_content": "```yaml\ningress:\n frontend:\n  enabled: true\n  hosts:\n   - host: flagsmith.[MYDOMAIN]\n     paths:\n      - /\n api:\n  enabled: true\n  hosts:\n   - host: flagsmith.[MYDOMAIN]\n     paths:\n      - /api/\n      - /health/\n\nfrontend:\n extraEnv:\n  FLAGSMITH_API_URL: 'https://flagsmith.[MYDOMAIN]/api/v1/'\n```",
+      "source_content_hash": "26816421fcce1a22308c1fadcf5d20744338f68f4cf673907f6e6a3de04e3004",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5d4925eb"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Then, once any out-of-cluster DNS or CDN changes have been applied, access `https://flagsmith.[MYDOMAIN]` in a browser.",
+      "source_content_hash": "f2cd08fa8b9ccb5baae42391b18fee2b71166a570fcdd11a7b1ecef3cfbe8eef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后，在完成集群外DNS或CDN变更后，在浏览器中访问`https://flagsmith.[MYDOMAIN]`。"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "#### Minikube ingress",
+      "source_content_hash": "c978de393949a4f632d8e4d62624b30358dc9b6f23fee599b93b6ef9c741b070",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### Minikube入口"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "(See https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/ for more details.)",
+      "source_content_hash": "94919b3810213480e28162b3fa56fa076b114df85ae9c93dc7e316ce1c167cd8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "（更多详情请参阅https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/。）"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "If using minikube, enable ingress with `minikube addons enable ingress`.",
+      "source_content_hash": "58b47886f605eb03894c3b28f9d7dbc9acb931946d0e0959cbd7be26b3a75474",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果使用minikube，通过`minikube addons enable ingress`启用入口。"
+      }
+    },
+    {
+      "segment_id": "785750ac",
+      "source_content": "Then set the following values for flagsmith:",
+      "source_content_hash": "0914d75da47460131ec55b2b3987c592df2facbe95f250eff775065dc896fa6c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后为flagsmith设置以下值："
+      }
+    },
+    {
+      "segment_id": "ec99e704",
+      "source_content": "```yaml\ningress:\n frontend:\n  enabled: true\n  hosts:\n   - host: flagsmith.local\n     paths:\n      - /\n```",
+      "source_content_hash": "3165159c14e9f2df7d36f8baa48d423f431edac8a83daa90c4f855c711cfcfae",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ec99e704"
+      }
+    },
+    {
+      "segment_id": "4be28ed1",
+      "source_content": "and apply. This will create two ingress resources.",
+      "source_content_hash": "ae663c70d0be7c98a05c2e4b61b5d35bf219dbf2757ca7fb61dbcee3ab921a4f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "并应用。这将创建两个入口资源。"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "Run `minikube ip`. Set this ip and `flagsmith.local` in your `/etc/hosts`, eg:",
+      "source_content_hash": "6186691b328f195d9a412cb2c9a12002b8fa414509c13a95ef61f6df778d124f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行`minikube ip`。将该IP和`flagsmith.local`添加到您的`/etc/hosts`文件中，例如："
+      }
+    },
+    {
+      "segment_id": "59534425",
+      "source_content": "```txt\n192.168.99.99 flagsmith.local\n```",
+      "source_content_hash": "d082c6708b909cece90f706cfaf54695486456e78fde179848e54a8881b99bc0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59534425"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "Then access `http://flagsmith.local` in a browser.",
+      "source_content_hash": "c2f0dd4b3a5ac761cef817f5611295e143f8ef949156f11157d888992c819509",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后在浏览器中访问`http://flagsmith.local`。"
+      }
+    },
+    {
+      "segment_id": "48155948",
+      "source_content": "### Provided Database configuration",
+      "source_content_hash": "92e340769e27bbcf8b0126900f523b5745cac06083d7491bb6485b206a99c81a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 提供的数据库配置"
+      }
+    },
+    {
+      "segment_id": "1958bc43",
+      "source_content": "By default, the chart creates its own PostgreSQL server within the cluster, referencing\n[https://github.com/helm/charts/tree/master/stable/postgresql](https://github.com/helm/charts/tree/master/stable/postgresql)\nfor the service.",
+      "source_content_hash": "d6322b18ca901d07cb06d9731bfa1383e14e1b7f3c8c6693e74335a17c3d424d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，该chart会在集群内创建自己的PostgreSQL服务器，引用[https://github.com/helm/charts/tree/master/stable/postgresql](https://github.com/helm/charts/tree/master/stable/postgresql)作为服务。"
+      }
+    },
+    {
+      "segment_id": "c9cbbb2d",
+      "source_content": ":::caution\n\nWe recommend running an externally managed database in production, either by deploying your own Postgres instance in\nyour cluster, or using a service like [AWS RDS](https://aws.amazon.com/rds/postgresql/).\n\n:::",
+      "source_content_hash": "9f602c5e799992375c96492b740e1a245557de6127ed8b663b79991fca293811",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::caution\n\n我们建议在生产环境中运行外部托管的数据库，可以通过在集群中部署自己的Postgres实例，或使用类似[AWS RDS](https://aws.amazon.com/rds/postgresql/)的服务。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "c364340c",
+      "source_content": "You can provide configuration options to the postgres database by modifying the values, for example the below changes\nthe max_connections:",
+      "source_content_hash": "c498afe07ababf43a94ed6f69a1fdbbca1df099a6dd195ae92ecc55de5f98eaa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过修改值来为Postgres数据库提供配置选项，例如以下更改了max_connections："
+      }
+    },
+    {
+      "segment_id": "18fb666f",
+      "source_content": "```yaml\npostgresql:\n enabled: true\n\n postgresqlConfiguration:\n  max_connections: '200' # override the default max_connections of 100\n```",
+      "source_content_hash": "5094ff424af74503f4b0759f6175ddcab00e64cd3071aa1178d07148de7e40dc",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_18fb666f"
+      }
+    },
+    {
+      "segment_id": "fff17ff8",
+      "source_content": "### External Database configuration",
+      "source_content_hash": "51313741f4902d275299ad9cd8cd48fb7a44024102607804d4228e6158c6da48",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 外部数据库配置"
+      }
+    },
+    {
+      "segment_id": "8664ed0b",
+      "source_content": "To connect the Flagsmith API to an external PostgreSQL server set the values under `databaseExternal`, eg:",
+      "source_content_hash": "49fbbf03404cd0b4495b7658bf5c0d3bdc511e451a9a28beace3251f7644f070",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要将Flagsmith API连接到外部PostgreSQL服务器，请在`databaseExternal`下设置值，例如："
+      }
+    },
+    {
+      "segment_id": "a6c3f55f",
+      "source_content": "```yaml\npostgresql:\n enabled: false # turn off the chart-managed postgres\n\ndatabaseExternal:\n enabled: true\n # Can specify the full URL\n url: 'postgres://myuser:mypass@myhost:5432/mydbname'\n # Or can specify each part (url takes precedence if set)\n type: postgres\n host: myhost\n port: 5432\n database: mydbname\n username: myuser\n password: mypass\n # Or can specify a pre-existing k8s secret containing the database URL\n urlFromExistingSecret:\n  enabled: true\n  name: my-precreated-db-config\n  key: DB_URL\n```",
+      "source_content_hash": "e29a70f9d23ab1f9f8b19df784c816e1e1514ae8310a4ba3250377e9c6966527",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a6c3f55f"
+      }
+    },
+    {
+      "segment_id": "3f77c6a0",
+      "source_content": "### Environment variables",
+      "source_content_hash": "44be08f5aab0be24ffb9061d26883387121f8f28e7d2d8268740306980a72967",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境变量"
+      }
+    },
+    {
+      "segment_id": "b1fb63b3",
+      "source_content": ":::caution\n\nIt's important to define a [`secretKey`](https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-SECRET_KEY)\nvalue in your helm chart when running in Kubernetes. Use a password manager to generate a random hash and set this so\nthat all the API nodes are running with an identical `DJANGO_SECRET_KEY`.\n\nIf you are using our Helm charts and don't provide a `secretKey`, one will be generated for you and shared across the\nrunning pods, but this will change upon redeployment, which you probably don't want to happen.\n\n:::",
+      "source_content_hash": "15d233db47b951706257aa61f74d95b5f3b49b1ba275434fe7b70a3adf237aa1",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::caution\n\n在 Kubernetes 中运行时，必须在 Helm Chart 中定义 [`secretKey`](https://docs.djangoproject.com/zh-hans/4.1/ref/settings/#std-setting-SECRET_KEY) 值。请使用密码管理器生成随机哈希值并设置该值，以确保所有 API 节点使用相同的 `DJANGO_SECRET_KEY`。\n\n如果使用我们的 Helm Chart 且未提供 `secretKey`，系统会自动生成一个密钥并在运行的 Pod 之间共享，但重新部署时该密钥会变更，这通常不是期望的行为。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "674abb31",
+      "source_content": "The chart handles most environment variables required, but see the\n[API readme](https://docs.flagsmith.com/deployment/hosting/locally-api#environment-variables) for all available\nconfiguration options. These can be set using `api.extraEnv`, eg:",
+      "source_content_hash": "491b55e14d8f3a90e9488b850a9da0324504b48a777d862b85a3e860faa9b059",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该 Chart 已处理大部分必需的环境变量，完整配置选项请参阅 [API 说明文档](https://docs.flagsmith.com/deployment/hosting/locally-api#environment-variables)。可通过 `api.extraEnv` 设置这些变量，例如："
+      }
+    },
+    {
+      "segment_id": "8185786b",
+      "source_content": "```yaml\napi:\n extraEnv:\n  LOG_LEVEL: DEBUG\n```",
+      "source_content_hash": "10a3a74d76a44d1112d4c9e6cbf2782bdcc607d48741a64857a94e63a16eab00",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8185786b"
+      }
+    },
+    {
+      "segment_id": "4b62f7d8",
+      "source_content": "### Resource allocation",
+      "source_content_hash": "52aa76ba9c281edb4b3a45452202bd253a62c9277e02a9ddb372682eb3f7c247",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 资源分配"
+      }
+    },
+    {
+      "segment_id": "4899bc54",
+      "source_content": "By default, no resource limits or requests are set.",
+      "source_content_hash": "1a5fd48456311266202e9758fa0b950f2b1f1d320d4a558e76431e702099295d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认未设置资源限制或请求。"
+      }
+    },
+    {
+      "segment_id": "b27c61de",
+      "source_content": "TODO: recommend some defaults",
+      "source_content_hash": "64217359b023f803bd084495c6f6433fc5c6f28f10423cf83553cd34c3c2e83b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待办：推荐默认配置"
+      }
+    },
+    {
+      "segment_id": "de588fa2",
+      "source_content": "### Replicas",
+      "source_content_hash": "daf1a57bb9d7b9e0b64c3327e61c58ea45d62a2cc495e2ffea45c85258925d40",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 副本数量"
+      }
+    },
+    {
+      "segment_id": "3799844b",
+      "source_content": "By default, 1 replica of each of the frontend and api is used.",
+      "source_content_hash": "45ba50973e5cb8c4d5ffcaccabc0fb131ec3e2c0a88a0fdc29fd326a176ed07b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，前端和 API 各使用 1 个副本。"
+      }
+    },
+    {
+      "segment_id": "015c0c6e",
+      "source_content": "TODO: recommend some defaults.",
+      "source_content_hash": "aa3edc0fbfe945f11582111d693d37ef5060d84488945f3885bff568ba8bf1a5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待办：推荐默认配置。"
+      }
+    },
+    {
+      "segment_id": "6e5d54a8",
+      "source_content": "TODO: consider some autoscaling options.",
+      "source_content_hash": "a12acea9f18ee72448176f2e53453cb39ccfa7777d689a6b1fe025375f19e721",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待办：考虑自动伸缩方案。"
+      }
+    },
+    {
+      "segment_id": "48249e3c",
+      "source_content": "TODO: create a pod-disruption-budget",
+      "source_content_hash": "f0dc6dbd01de6778acc7610bce0b7effd1674f173ea8829ca7442c46d095fb52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待办：创建 Pod 中断预算"
+      }
+    },
+    {
+      "segment_id": "a7628008",
+      "source_content": "### Deployment strategy",
+      "source_content_hash": "f7c9604c7ee2c9659ab9a8240685757778f35b03ba4d3dc369d4dc23ce9ce78c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 部署策略"
+      }
+    },
+    {
+      "segment_id": "7e563909",
+      "source_content": "For each of the deployments, you can set `deploymentStrategy`. By default this is unset, meaning you get the default\nKubernetes behaviour, but you can set this to an object to adjust this. See\nhttps://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy.",
+      "source_content_hash": "125c6a92370943eec03592f226b80c96971539ddc7f4adb23e95e86bd303925b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于每个部署，可设置 `deploymentStrategy`。默认未设置此值（采用 Kubernetes 默认行为），也可设置为对象进行调整。详见 https://kubernetes.io/zh-cn/docs/concepts/workloads/controllers/deployment/#strategy。"
+      }
+    },
+    {
+      "segment_id": "1f9058cd",
+      "source_content": "For example:",
+      "source_content_hash": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如："
+      }
+    },
+    {
+      "segment_id": "a414aca8",
+      "source_content": "```yaml\napi:\n deploymentStrategy:\n  type: RollingUpdate\n  rollingUpdate:\n   maxUnavailable: 1\n   maxSurge: '50%'\n```",
+      "source_content_hash": "5c7de8ece5b8d8b8944b3288947d2d008099eef59531aba06ce14a10578a2c4c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a414aca8"
+      }
+    },
+    {
+      "segment_id": "c7ab93a8",
+      "source_content": "### PgBouncer",
+      "source_content_hash": "371325fc95f26ba06ed1d31482d7234caf6e3bdfea58179a91fcd37e577418d5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### PgBouncer"
+      }
+    },
+    {
+      "segment_id": "9ede513a",
+      "source_content": "By default, Flagsmith connects directly to the database - either in-cluster, or external. Can enable PgBouncer with\n`pgbouncer.enabled: true` to have Flagsmith connect to PgBouncer, and PgBouncer connect to the database.",
+      "source_content_hash": "70dd3cf1d6d22ab3d457b72a3fd082a9eb0ae08bbdb357179c64593b740b33ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下 Flagsmith 直接连接数据库（集群内或外部数据库）。可通过设置 `pgbouncer.enabled: true` 启用 PgBouncer，使 Flagsmith 连接至 PgBouncer，再由 PgBouncer 连接数据库。"
+      }
+    },
+    {
+      "segment_id": "43662a16",
+      "source_content": "### All-in-one Docker image",
+      "source_content_hash": "695b73bc92301d121b99d5d17e940e448d9d4c647e5f449cf297c43b24045180",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 一体化 Docker 镜像"
+      }
+    },
+    {
+      "segment_id": "85821ad3",
+      "source_content": "The Docker image at https://hub.docker.com/r/flagsmith/flagsmith/ contains both the API and the frontend. To make use of\nthis, set the following values:",
+      "source_content_hash": "269ac889d5e2027e1feafff875b9f6db4c061a09e5cc92c9480e557656ff0b75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "https://hub.docker.com/r/flagsmith/flagsmith/ 提供的 Docker 镜像同时包含 API 和前端。使用时需设置以下值："
+      }
+    },
+    {
+      "segment_id": "489cbec9",
+      "source_content": "```yaml\napi:\n image:\n  repository: flagsmith/flagsmith # or some other repository hosting the combined image\n  tag: 2.14 # or some other tag that exists in that repository\n separateApiAndFrontend: false\n```",
+      "source_content_hash": "d7dacc614a4ea0092244f49e278526c2fe4fce7886c68e4a999a6653bb09a177",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_489cbec9"
+      }
+    },
+    {
+      "segment_id": "8f4e752e",
+      "source_content": "This switches off the Kubernetes deployment for the frontend. However, the ingress and service are retained, but all\nrequests are handled by the API deployment.",
+      "source_content_hash": "e866f3a24388f5e4df2309943c00389fb2b364cab4ad77d88530b43a7e2f0b97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这将关闭前端的 Kubernetes 部署，但保留 Ingress 和 Service 配置，所有请求由 API 部署处理。"
+      }
+    },
+    {
+      "segment_id": "5f4381f8",
+      "source_content": "## Configuration",
+      "source_content_hash": "37f210b46aa9013050eaa3d7a439965867d73a7f632cdfce2001f865b525946e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置"
+      }
+    },
+    {
+      "segment_id": "80dbdeb8",
+      "source_content": "The following table lists the configurable parameters of the chart and their default values.",
+      "source_content_hash": "273a0ea6f1b45c3534e23ff80f0e93d487a644ddba19623941306736b0cc74b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下表列出该 Chart 的可配置参数及其默认值。"
+      }
+    },
+    {
+      "segment_id": "47f1ba32",
+      "source_content": "| Parameter                                          | Description                                                    | Default                        |\n| -------------------------------------------------- | -------------------------------------------------------------- | ------------------------------ |\n| `api.image.repository`                             | docker image repository for flagsmith api                      | `flagsmith/flagsmith-api`      |\n| `api.image.tag`                                    | docker image tag for flagsmith api                             | appVersion                     |\n| `api.image.imagePullPolicy`                        |                                                                | `IfNotPresent`                 |\n| `api.image.imagePullSecrets`                       |                                                                | `[]`                           |\n| `api.separateApiAndFrontend`                       | Set to false if using flagsmith/flagsmith image for the api    | `true`                         |\n| `api.replicacount`                                 | number of replicas for the flagsmith api, `null` to unset      | 1                              |\n| `api.deploymentStrategy`                           | See \"Deployment strategy\" above                                |                                |\n| `api.resources`                                    | resources per pod for the flagsmith api                        | `{}`                           |\n| `api.podLabels`                                    | additional labels to apply to pods for the flagsmith api       | `{}`                           |\n| `api.extraEnv`                                     | extra environment variables to set for the flagsmith api       | `{}`                           |\n| `api.nodeSelector`                                 |                                                                | `{}`                           |\n| `api.tolerations`                                  |                                                                | `[]`                           |\n| `api.affinity`                                     |                                                                | `{}`                           |\n| `api.podSecurityContext`                           |                                                                | `{}`                           |\n| `api.defaultPodSecurityContext.enabled`            | whether to use the default security context                    | `true`                         |\n| `api.livenessProbe.failureThreshold`               |                                                                | 5                              |\n| `api.livenessProbe.initialDelaySeconds`            |                                                                | 10                             |\n| `api.livenessProbe.periodSeconds`                  |                                                                | 10                             |\n| `api.livenessProbe.successThreshold`               |                                                                | 1                              |\n| `api.livenessProbe.timeoutSeconds`                 |                                                                | 2                              |\n| `api.readinessProbe.failureThreshold`              |                                                                | 10                             |\n| `api.readinessProbe.initialDelaySeconds`           |                                                                | 10                             |\n| `api.readinessProbe.periodSeconds`                 |                                                                | 10                             |\n| `api.readinessProbe.successThreshold`              |                                                                | 1                              |\n| `api.readinessProbe.timeoutSeconds`                |                                                                | 2                              |\n| `api.dbWaiter.image.repository`                    |                                                                | `willwill/wait-for-it`         |\n| `api.dbWaiter.image.tag`                           |                                                                | `latest`                       |\n| `api.dbWaiter.image.imagePullPolicy`               |                                                                | `IfNotPresent`                 |\n| `api.dbWaiter.timeoutSeconds`                      | Time before init container will retry                          | 30                             |\n| `frontend.enabled`                                 | Whether the flagsmith frontend is enabled                      | `true`                         |\n| `frontend.image.repository`                        | docker image repository for flagsmith frontend                 | `flagsmith/flagsmith-frontend` |\n| `frontend.image.tag`                               | docker image tag for flagsmith frontend                        | appVersion                     |\n| `frontend.image.imagePullPolicy`                   |                                                                | `IfNotPresent`                 |\n| `frontend.image.imagePullSecrets`                  |                                                                | `[]`                           |\n| `frontend.replicacount`                            | number of replicas for the flagsmith frontend, `null` to unset | 1                              |\n| `frontend.deploymentStrategy`                      | See \"Deployment strategy\" above                                |                                |\n| `frontend.resources`                               | resources per pod for the flagsmith frontend                   | `{}`                           |\n| `frontend.apiProxy.enabled`                        | proxy API requests to the API service within the cluster       | `true`                         |\n| `frontend.extraEnv`                                | extra environment variables to set for the flagsmith frontend  | `{}`                           |\n| `frontend.nodeSelector`                            |                                                                | `{}`                           |\n| `frontend.tolerations`                             |                                                                | `[]`                           |\n| `frontend.affinity`                                |                                                                | `{}`                           |\n| `api.podSecurityContext`                           |                                                                | `{}`                           |\n| `api.defaultPodSecurityContext.enabled`            | whether to use the default security context                    | `true`                         |\n| `frontend.livenessProbe.failureThreshold`          |                                                                | 20                             |\n| `frontend.livenessProbe.initialDelaySeconds`       |                                                                | 20                             |\n| `frontend.livenessProbe.periodSeconds`             |                                                                | 10                             |\n| `frontend.livenessProbe.successThreshold`          |                                                                | 1                              |\n| `frontend.livenessProbe.timeoutSeconds`            |                                                                | 10                             |\n| `frontend.readinessProbe.failureThreshold`         |                                                                | 20                             |\n| `frontend.readinessProbe.initialDelaySeconds`      |                                                                | 20                             |\n| `frontend.readinessProbe.periodSeconds`            |                                                                | 10                             |\n| `frontend.readinessProbe.successThreshold`         |                                                                | 1                              |\n| `frontend.readinessProbe.timeoutSeconds`           |                                                                | 10                             |\n| `postgresql.enabled`                               | if `true`, creates in-cluster PostgreSQL database              | `true`                         |\n| `postgresql.serviceAccount.enabled`                | creates a serviceaccount for the postgres pod                  | `true`                         |\n| `nameOverride`                                     |                                                                | `flagsmith-postgres`           |\n| `postgresqlDatabase`                               |                                                                | `flagsmith`                    |\n| `postgresqlUsername`                               |                                                                | `postgres`                     |\n| `postgresqlPassword`                               |                                                                | `flagsmith`                    |\n| `databaseExternal.enabled`                         | use an external database. Specify database URL, or all parts.  | `false`                        |\n| `databaseExternal.url`                             | See https://github.com/kennethreitz/dj-database-url#url-schema |                                |\n| `databaseExternal.type`                            | Note: Only postgres supported by default images.               | `postgres`                     |\n| `databaseExternal.port`                            |                                                                | 5432                           |\n| `databaseExternal.database`                        | Name of the database within the server                         |                                |\n| `databaseExternal.username`                        |                                                                |                                |\n| `databaseExternal.password`                        |                                                                |                                |\n| `databaseExternal.urlFromExistingSecret.enabled`   | Reference an existing secret containing the database URL       |                                |\n| `databaseExternal.urlFromExistingSecret.name`      | Name of referenced secret                                      |                                |\n| `databaseExternal.urlFromExistingSecret.key`       | Key within the referenced secrt to use                         |                                |\n| `influxdb.enabled`                                 |                                                                | `true`                         |\n| `influxdb.nameOverride`                            |                                                                | `influxdb`                     |\n| `influxdb.image.repository`                        | docker image repository for influxdb                           | `quay.io/influxdb/influxdb`    |\n| `influxdb.image.tag`                               | docker image tag for influxdb                                  | `v2.0.2`                       |\n| `influxdb.image.imagePullPolicy`                   |                                                                | `IfNotPresent`                 |\n| `influxdb.image.imagePullSecrets`                  |                                                                | `[]`                           |\n| `influxdb.adminUser.organization`                  |                                                                | `influxdata`                   |\n| `influxdb.adminUser.bucket`                        |                                                                | `default`                      |\n| `influxdb.adminUser.user`                          |                                                                | `admin`                        |\n| `influxdb.adminUser.password`                      |                                                                | randomly generated             |\n| `influxdb.adminUser.token`                         |                                                                | randomly generated             |\n| `influxdb.persistence.enabled`                     |                                                                | `false`                        |\n| `influxdb.resources`                               | resources per pod for the influxdb                             | `{}`                           |\n| `influxdb.nodeSelector`                            |                                                                | `{}`                           |\n| `influxdb.tolerations`                             |                                                                | `[]`                           |\n| `influxdb.affinity`                                |                                                                | `{}`                           |\n| `influxdbExternal.enabled`                         | Use an InfluxDB not managed by this chart                      | `false`                        |\n| `influxdbExternal.url`                             |                                                                |                                |\n| `influxdbExternal.bucket`                          |                                                                |                                |\n| `influxdbExternal.organization`                    |                                                                |                                |\n| `influxdbExternal.token`                           |                                                                |                                |\n| `influxdbExternal.tokenFromExistingSecret.enabled` | Use reference to a k8s secret not managed by this chart        | `false`                        |\n| `influxdbExternal.tokenFromExistingSecret.name`    | Referenced secret name                                         |                                |\n| `influxdbExternal.tokenFromExistingSecret.key`     | Key within the referenced secret to use                        |                                |\n| `pgbouncer.enabled`                                |                                                                | `false`                        |\n| `pgbouncer.image.repository`                       |                                                                | `bitnami/pgbouncer`            |\n| `pgbouncer.image.tag`                              |                                                                | `1.16.0`                       |\n| `pgbouncer.image.imagePullPolicy`                  |                                                                | `IfNotPresent`                 |\n| `pgbouncer.image.imagePullSecrets`                 |                                                                | `[]`                           |\n| `pgbouncer.replicaCount`                           | number of replicas for pgbouncer, `null` to unset              | 1                              |\n| `pgbouncer.deploymentStrategy`                     | See \"Deployment strategy\" above                                |                                |\n| `pgbouncer.podAnnotations`                         |                                                                | `{}`                           |\n| `pgbouncer.resources`                              |                                                                | `{}`                           |\n| `pgbouncer.podLabels`                              |                                                                | `{}`                           |\n| `pgbouncer.extraEnv`                               |                                                                | `{}`                           |\n| `pgbouncer.nodeSelector`                           |                                                                | `{}`                           |\n| `pgbouncer.tolerations`                            |                                                                | `[]`                           |\n| `pgbouncer.affinity`                               |                                                                | `{}`                           |\n| `pgbouncer.podSecurityContext`                     |                                                                | `{}`                           |\n| `pgbouncer.securityContext`                        |                                                                | `{}`                           |\n| `pgbouncer.defaultSecurityContext.enabled`         |                                                                | `true`                         |\n| `pgbouncer.defaultSecurityContext`                 |                                                                | `{}`                           |\n| `pgbouncer.livenessProbe.failureThreshold`         |                                                                | 5                              |\n| `pgbouncer.livenessProbe.initialDelaySeconds`      |                                                                | 5                              |\n| `pgbouncer.livenessProbe.periodSeconds`            |                                                                | 10                             |\n| `pgbouncer.livenessProbe.successThreshold`         |                                                                | 1                              |\n| `pgbouncer.livenessProbe.timeoutSeconds`           |                                                                | 2                              |\n| `pgbouncer.readinessProbe.failureThreshold`        |                                                                | 10                             |\n| `pgbouncer.readinessProbe.initialDelaySeconds`     |                                                                | 1                              |\n| `pgbouncer.readinessProbe.periodSeconds`           |                                                                | 10                             |\n| `pgbouncer.readinessProbe.successThreshold`        |                                                                | 1                              |\n| `pgbouncer.readinessProbe.timeoutSeconds`          |                                                                | 2                              |\n| `service.influxdb.externalPort`                    |                                                                | `8080`                         |\n| `service.api.type`                                 |                                                                | `ClusterIP`                    |\n| `service.api.port`                                 |                                                                | `8000`                         |\n| `service.frontend.type`                            |                                                                | `ClusterIP`                    |\n| `service.frontend.port`                            |                                                                | `8080`                         |\n| `ingress.frontend.enabled`                         |                                                                | `false`                        |\n| `ingress.frontend.ingressClassName`                |                                                                |                                |\n| `ingress.frontend.annotations`                     |                                                                | `{}`                           |\n| `ingress.frontend.hosts[].host`                    |                                                                | `chart-example.local`          |\n| `ingress.frontend.hosts[].paths`                   |                                                                | `[]`                           |\n| `ingress.frontend.tls`                             |                                                                | `[]`                           |\n| `ingress.api.enabled`                              |                                                                | `false`                        |\n| `ingress.api.ingressClassName`                     |                                                                |                                |\n| `ingress.api.annotations`                          |                                                                | `{}`                           |\n| `ingress.api.hosts[].host`                         |                                                                | `chart-example.local`          |\n| `ingress.api.hosts[].paths`                        |                                                                | `[]`                           |\n| `ingress.api.tls`                                  |                                                                | `[]`                           |\n| `api.statsd.enabled`                               | Enable statsd metric reporting from gunicorn.                  | `false`                        |\n| `api.statsd.host`                                  | Host URL to receive statsd metrics                             | `null`                         |\n| `api.statsd.hostFromNodeIp`                        | Set as true to use the node IP as the statsd host instead      | `false`                        |\n| `api.statsd.port`                                  | Host port to receive statsd metrics                            | `8125`                         |\n| `api.statsd.prefix`                                | Prefix to add to metric ids                                    | `flagsmith.api`                |",
+      "source_content_hash": "d8ab6d2165e842339cdb95a4ac364f12b61d8db0f48be2e076800370623f105c",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_47f1ba32"
+      }
+    },
+    {
+      "segment_id": "672ed619",
+      "source_content": "---",
+      "source_content_hash": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+      "node_type": "thematicBreak",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "---"
+      }
+    },
+    {
+      "segment_id": "c489a644",
+      "source_content": "### InfluxDB",
+      "source_content_hash": "d31eb55ef79aa1d7c694e7419dc27597d62cc5f66f66d21d323a4a0ab5548c36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### InfluxDB"
+      }
+    },
+    {
+      "segment_id": "b63b9ccf",
+      "source_content": "By default, Flagsmith uses Postgres to store time series data. You can alternatively use Influx to track:",
+      "source_content_hash": "3c8dfa61c19ac10a0f4439e04c390641f6a6d257f5adf2e58adeeb08134c6dc4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下 Flagsmith 使用 Postgres 存储时间序列数据。也可选用 Influx 来追踪："
+      }
+    },
+    {
+      "segment_id": "0a48254a",
+      "source_content": "- SDK API traffic\n- SDK Flag Evaluations",
+      "source_content_hash": "c10e891b947cdc9e3ce400ada923ca20c5170a9388e0312fa0c685873b67cf4d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SDK API 流量\n- SDK 功能标志评估"
+      }
+    },
+    {
+      "segment_id": "7ba83bb3",
+      "source_content": "[You need to perform some additional steps to configure InfluxDB.](/deployment/overview#influxdb).",
+      "source_content_hash": "bcdd6323516b03998938310e42e7c6e3661006fd21fd2cdb0cc3cdaee78763fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[配置 InfluxDB 需执行额外步骤](/deployment/overview#influxdb)。"
+      }
+    },
+    {
+      "segment_id": "5d1aec8a",
+      "source_content": "## Development and contributing",
+      "source_content_hash": "b663a0950f23e32bcc8d675db411d76091b59058b63a5f19a943ef5585309a65",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开发与贡献"
+      }
+    },
+    {
+      "segment_id": "453cd509",
+      "source_content": "### Requirements",
+      "source_content_hash": "2b0c19102a0fe244435ee339d7e394f2b88ea976889c2566401900d95b5a1bb8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境要求"
+      }
+    },
+    {
+      "segment_id": "80b10d5a",
+      "source_content": "helm version > 3.0.2",
+      "source_content_hash": "e11e7e5b177cbfad8050ed4b6e1e5454b5d9a19d76598656d23ce9b69575d24f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "helm 版本 > 3.0.2"
+      }
+    },
+    {
+      "segment_id": "086e47bd",
+      "source_content": "### To run locally",
+      "source_content_hash": "b62f2176c554cb95c37521eef7949c07ea014d892bfa7bfb894c144e6f0056c5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 本地运行"
+      }
+    },
+    {
+      "segment_id": "94a47b80",
+      "source_content": "You can test and run the application locally on OSX using `minikube` like this:",
+      "source_content_hash": "ef486fa3254290ba88e9d0f860cc635039343de1dc8e0d855e353f93a1ce502d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在 OSX 上可通过 `minikube` 按以下方式测试和运行应用："
+      }
+    },
+    {
+      "segment_id": "9f4bf2e5",
+      "source_content": "```bash\n# Install Docker for Desktop and then:\n\nbrew install minikube\nminikube start --memory 8192 --cpus 4\nhelm install flagsmith --debug ./flagsmith\nminikube dashboard\n```",
+      "source_content_hash": "fbe64a41287cc1c55103cd8500077d4e1611735625b8b3ac652ae2e2558b6bd9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9f4bf2e5"
+      }
+    },
+    {
+      "segment_id": "407ddf18",
+      "source_content": "### Test install Chart",
+      "source_content_hash": "8919a1ab3b270916cecfaad030f3c26ef06adff34c472eed938070c579a3aded",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 测试安装 Chart"
+      }
+    },
+    {
+      "segment_id": "a2532daf",
+      "source_content": "Install Chart without building a package:",
+      "source_content_hash": "ca8e12e7bb1cb91d508530a85fd8bef8a85785d088297b9a58dc8cca3136467d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "不构建包直接安装 Chart："
+      }
+    },
+    {
+      "segment_id": "4de0f839",
+      "source_content": "```bash\nhelm install flagsmith --debug ./flagsmith\n```",
+      "source_content_hash": "f29af405c02708e9c648eb02c9462e8879c9019507453bb2f0a093dec4e9f521",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4de0f839"
+      }
+    },
+    {
+      "segment_id": "df64d276",
+      "source_content": "Run template and check kubernetes resouces are made:",
+      "source_content_hash": "7e292f29f0699aa660ace46b3dada1d13a9b76e5a987709fb19b92364aee5e21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行模板并检查 Kubernetes 资源生成："
+      }
+    },
+    {
+      "segment_id": "2be9fcf6",
+      "source_content": "```bash\nhelm template flagsmith flagsmith --debug -f flagsmith/values.yaml\n```",
+      "source_content_hash": "b6ff232ae103399a711c450cf7020b151ca1db6fb5716d5824b18994a89f27f4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2be9fcf6"
+      }
+    },
+    {
+      "segment_id": "489e5683",
+      "source_content": "### build chart package",
+      "source_content_hash": "3add5f1f182f9381639fa55ca6df4d277592f804b904dd9369263013bac49fda",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 构建 Chart 包"
+      }
+    },
+    {
+      "segment_id": "a1cac8e0",
+      "source_content": "To build chart package run:",
+      "source_content_hash": "a82a20dc4a77f01f364a8a89963be2e64d5c15132e4fc8f3eeaab4a53ddc1a0f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "执行以下命令构建 Chart 包："
+      }
+    },
+    {
+      "segment_id": "c1c6219e",
+      "source_content": "```bash\nhelm package ./flagsmith\n```",
+      "source_content_hash": "65a02b818340b7585168343c1bb64b91d906e9d2fa9f45748702620e15ea65b5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c1c6219e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/hosting/kubernetes.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.957600+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e5949ade426c61321eae9dc32e6d8c83c74f6c86cfd7d1504bbd96476efcdf41"
+  }
+}

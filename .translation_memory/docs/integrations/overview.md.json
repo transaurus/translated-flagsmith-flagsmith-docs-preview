@@ -1,0 +1,402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/integrations/overview.md",
+  "source_file_content_hash": "00cda0505341cd33dbec42f5f8ee29824cec229785f26e2a8775180260b91bc9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Integrations\ndescription: Flagsmith Integrations\nsidebar_label: Overview\nhide_title: true\nsidebar_position: 1\n---",
+      "source_content_hash": "88bd0536a33952758a94054d229c6e06b0f76fa40cbc18139d325e659914e8c5",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Flagsmith Integrates with the following providers. If you are interested in an integration with a platform not listed\nhere, please get in touch to discuss your particular use case.",
+      "source_content_hash": "29496f2e183d09ff2269ae2331fc226c0bb536b1d31124edd83ede54193de4e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 可与以下服务提供商集成。若您需要集成未列出的平台，请联系我们讨论您的具体使用场景。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## CI/CD Platforms",
+      "source_content_hash": "bfeca42ac44aee7325b4046462f0cefaddb46ff268128d3f06b6b4bc67093ac8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## CI/CD 平台"
+      }
+    },
+    {
+      "segment_id": "899bc9b4",
+      "source_content": "<a href=\"/integrations/terraform\" alt=\"Terraform\"><img width=\"40%\" src=\"/img/integrations/terraform/terraform-logo.svg\"/></a>",
+      "source_content_hash": "a5be8cab55ef7880c92e639a860ef60f7848017d9db298ae2e48b42ced971330",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_899bc9b4"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "You can integrate Flagsmith with Terraform. Use our Terraform provider to drive flag management as part of your\nInfrastructure as Code tooling. [Learn more](/integrations/terraform)",
+      "source_content_hash": "c7cd1239e70b9f13ab87ed290a35f79193172377b44510c595efc6aafd79d956",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Terraform 集成。使用我们的 Terraform Provider 将功能标志管理纳入基础设施即代码工具链。[了解更多](/integrations/terraform)"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## Analytics Platforms",
+      "source_content_hash": "ced77e602d583d789addc1eca833005fb78fdf465df6f2163d978d00f4480783",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 分析平台"
+      }
+    },
+    {
+      "segment_id": "1485a88b",
+      "source_content": "<a href=\"/integrations/amplitude\" alt=\"Amplitude\"><img width=\"40%\" src=\"/img/integrations/amplitude/amplitude-logo.svg\"/></a>",
+      "source_content_hash": "37804686943201b1694410f09b1a9b8325bd2708cd594a094b1b9d73cf31a7e4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1485a88b"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "You can integrate Flagsmith with Amplitude. You can automate AB tests by connecting the Flagsmith platform with\nAmplitude. [Learn more](/integrations/amplitude)",
+      "source_content_hash": "68d12377cdc47a391743280051902d679ec3c07cb2534ad0d7370f62161cb201",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Amplitude 集成。通过连接 Flagsmith 平台与 Amplitude 实现自动化 A/B 测试。[了解更多](/integrations/amplitude)"
+      }
+    },
+    {
+      "segment_id": "1941846d",
+      "source_content": "<a href=\"/integrations/heap\" alt=\"Heap Analytics\"><img width=\"30%\" src=\"/img/integrations/heap/heap-logo.svg\"/></a>",
+      "source_content_hash": "98facdc365eb1294103d9c0d7d502a96fd1fd02310defa87468915cd69835a6b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1941846d"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "You can integrate Flagsmith with Heap Analytics. The integration automatically sends the flag states for identified\nusers into Heap for cohort analysis, A/B testing and more. [Learn more](/integrations/heap)",
+      "source_content_hash": "86839d95712f2a5a00e8f800937873e2dbc94787666eba9125b6e647aeff6ea6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Heap Analytics 集成。该集成会自动将已识别用户的标志状态发送至 Heap，用于群体分析、A/B 测试等场景。[了解更多](/integrations/heap)"
+      }
+    },
+    {
+      "segment_id": "ea37d64a",
+      "source_content": "<a href=\"/integrations/mixpanel\" alt=\"Mixpanel\"><img width=\"30%\" src=\"/img/integrations/mixpanel/mixpanel-logo.svg\"/></a>",
+      "source_content_hash": "79c0b9045c91ee7b2babc0198a80d3820889f4125ac61fa3653fae15b535a0ea",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ea37d64a"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "You can integrate Flagsmith with Mixpanel. The integration automatically sends the flag states for identified users into\nMixpanel for cohort analysis, A/B testing and more. [Learn more](/integrations/mixpanel)",
+      "source_content_hash": "80b64ccf7156fa5e17f6ecaaa331eb863ccf14bc2ee88e513ecf1f38f2a464f8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Mixpanel 集成。该集成会自动将已识别用户的标志状态发送至 Mixpanel，用于群体分析、A/B 测试等场景。[了解更多](/integrations/mixpanel)"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<a href=\"/integrations/segment\" alt=\"Segment\"><img width=\"30%\" src=\"/img/integrations/segment/segment-logo.svg\"/></a>",
+      "source_content_hash": "166da3e3ab131e2979dbb85f89f74feab96bb8748684926f83863ade4a840d9f",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "You can integrate Flagsmith with Segment. Send your Identity flag states into segment for further downstream analysis.\n[Learn more](/integrations/segment)",
+      "source_content_hash": "2e5f04fe48db18f674bc813c41d0fdd6b667ff7830b99517129be4ec2b414a8f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Segment 集成。将用户身份标志状态发送至 Segment 进行下游分析。[了解更多](/integrations/segment)"
+      }
+    },
+    {
+      "segment_id": "d1ce550c",
+      "source_content": "<a href=\"/integrations/rudderstack\" alt=\"Rudderstack\"><img width=\"40%\" src=\"/img/integrations/rudderstack/rudderstack-logo.svg\"/></a>",
+      "source_content_hash": "dc5638cefe45830a973b67d3b74017535e1dae97a2c828e04dbef65a4909f5a8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d1ce550c"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "You can integrate Flagsmith with Rudderstack. Send your Identity flag states into Rudderstack for further downstream\nanalysis. [Learn more](/integrations/rudderstack)",
+      "source_content_hash": "a058c760cdf9d38dd1c5710dbe4b94f23dd512744c71ac35cddbd91b35f5a5ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Rudderstack 集成。将用户身份标志状态发送至 Rudderstack 进行下游分析。[了解更多](/integrations/rudderstack)"
+      }
+    },
+    {
+      "segment_id": "f5276727",
+      "source_content": "<a href=\"/integrations/webhook\" alt=\"WebHook\"><img width=\"30%\" src=\"/img/integrations/webhook/webhook-logo.svg\"/></a>",
+      "source_content_hash": "700d28f67b5722694175a36e7cf155fe883004c64a78aeb0ccb30a3782eb441d",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f5276727"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "You can integrate Flagsmith with your own Analytics Platform/Data Warehouse. Send your Identity flag states into\nSnowflake, RedShift or anywhere else for further downstream analysis! [Learn more](/integrations/webhook)",
+      "source_content_hash": "74b4375fca85edf55f6ab2963d402325ff60c0a73e0ed1df520c9d1e285e6728",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与自定义分析平台/数据仓库集成。将用户身份标志状态发送至 Snowflake、RedShift 或其他平台进行下游分析！[了解更多](/integrations/webhook)"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Application Monitoring and Performance",
+      "source_content_hash": "539742450934184330fa9b5c314e4c5f196476340adb428f467dd7ec5a2b8973",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 应用监控与性能"
+      }
+    },
+    {
+      "segment_id": "8296bd42",
+      "source_content": "<a href=\"/integrations/datadog\" alt=\"Datadog\"><img width=\"30%\" src=\"/img/integrations/datadog/datadog-logo.svg\"/></a>",
+      "source_content_hash": "7c55d7aaea3be6121cec0ef23b3939b2a1a507c94e2325bdb3aaf5d357470063",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8296bd42"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "You can integrate Flagsmith with Datadog. Send flag change events from Flagsmith into your Datadog event stream.\n[Learn more](/integrations/datadog)",
+      "source_content_hash": "16c56fe6f3dd05d029e24c0320c4fc5f1c7a022dd6223edf9e9868617099ad01",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Datadog 集成。将 Flagsmith 的标志变更事件发送至 Datadog 事件流。[了解更多](/integrations/datadog)"
+      }
+    },
+    {
+      "segment_id": "6214d3c2",
+      "source_content": "<a href=\"/integrations/dynatrace\" alt=\"Dynatrace\"><img width=\"30%\" src=\"/img/integrations/dynatrace/dynatrace-logo.svg\"/></a>",
+      "source_content_hash": "6f3542e8add0991bee1e0972db8a7a530dec411438f1c18fa680f240b7335462",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6214d3c2"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "You can integrate Flagsmith with Dynatrace. Send flag change events from Flagsmith into your Dynatrace event stream.\n[Learn more](/integrations/dynatrace)",
+      "source_content_hash": "68ea91fd3f23fc1a3cbfa82a117b9b720f07685a38bceaf9fdc5d3c6df575833",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Dynatrace 集成。将 Flagsmith 的标志变更事件发送至 Dynatrace 事件流。[了解更多](/integrations/dynatrace)"
+      }
+    },
+    {
+      "segment_id": "abc45ff5",
+      "source_content": "<a href=\"/integrations/newrelic\" alt=\"New Relic\"><img width=\"30%\" src=\"/img/integrations/newrelic/newrelic-logo.svg\"/></a>",
+      "source_content_hash": "1fa3f325ce8d8c0387c679f1be167d8f2ee10ba2fb0fb0865901b1fcb10dd2c8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_abc45ff5"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "You can integrate Flagsmith with New Relic. Send flag change events from Flagsmith into your Datadog event stream.\n[Learn more](/integrations/newrelic)",
+      "source_content_hash": "1e3387f50952f442086068d5739d6764c3a459adaeca5d7c3ff6c485cc07ef0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 New Relic 集成。将 Flagsmith 的标志变更事件发送至 New Relic 事件流。[了解更多](/integrations/newrelic)"
+      }
+    },
+    {
+      "segment_id": "c537a3d3",
+      "source_content": "<a href=\"/integrations/appdynamics\" alt=\"AppDynamics\"><img width=\"30%\" src=\"/img/integrations/appdynamics/appdynamics-logo.svg\"/></a>",
+      "source_content_hash": "3c14cb464bdea942dbbcc2b41a527d3080b79246af2118ded6e3a89372490a97",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c537a3d3"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "You can integrate Flagsmith with AppDynamics. Send flag change events from Flagsmith into your AppDynamics event stream.\n[Learn more](/integrations/appdynamics)",
+      "source_content_hash": "690fd75bd944fcf8cfe4a4de6fb80d97c919d1895d40ed98abf9e312182e5fb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 AppDynamics 集成。将 Flagsmith 的标志变更事件发送至 AppDynamics 事件流。[了解更多](/integrations/appdynamics)"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "## Chat / Messaging Platforms",
+      "source_content_hash": "954f370ba23dc6766f241711921e98eb661697fd014df73cd71a0237db414e60",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 即时通讯平台"
+      }
+    },
+    {
+      "segment_id": "e7961985",
+      "source_content": "<a href=\"/integrations/slack\" alt=\"Slack\"><img width=\"30%\" src=\"/img/integrations/slack/slack-logo.svg\"/></a>",
+      "source_content_hash": "5fe84732c925eb9b37dda3de81987630602f069861cc67dd8da457ff4cd9c714",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7961985"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "You can integrate Flagsmith with Slack. Send flag change events from Flagsmith into your Slack channels.\n[Learn more](/integrations/slack)",
+      "source_content_hash": "fe26266b6fd307e900fbf930e998a5c52d5e2d65fec1cf5346f2a318d40f2d5a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将 Flagsmith 与 Slack 集成。将 Flagsmith 的标志变更事件发送至 Slack 频道。[了解更多](/integrations/slack)"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "## Authentication Providers / IDPs",
+      "source_content_hash": "57052dd1af2ae61bc86cc1cc5780b32ce62371e2225b22359f0684b583fa1e8b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 认证提供商/身份管理"
+      }
+    },
+    {
+      "segment_id": "8a9b6c26",
+      "source_content": "### OAUTH",
+      "source_content_hash": "a40448eda7ff23790a64efb0128b8b02ecd8ef0c58a6ce1f46d0b0257066afdd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### OAUTH"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "You can authenticate Flagsmith with oAuth providers. [Learn more](/deployment/configuration/authentication#oauth)",
+      "source_content_hash": "e68c76bd56f16011cc6f679d582cd07ce8a114be3c9f979171a49c1071137a75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可通过 oAuth 提供商认证 Flagsmith。[了解更多](/deployment/configuration/authentication#oauth)"
+      }
+    },
+    {
+      "segment_id": "1c598ecd",
+      "source_content": "### SAML",
+      "source_content_hash": "31db2953d6b039691f73b58707fbf533daad24cdffd546f7c4e77cdd3a45d021",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "You can authenticate Flagsmith with SAML providers. [Learn more](/deployment/configuration/authentication#saml---saas)",
+      "source_content_hash": "6be0d95b5c86c65d1e2809b1bb9d09687a6c16299fd1276ea0e07927732a8e2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可通过 SAML 提供商认证 Flagsmith。[了解更多](/deployment/configuration/authentication#saml---saas)"
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "### LDAP",
+      "source_content_hash": "2320091ba3f93a45de727930bc0fa38ffc03edf19d968ea47cda74958e834dcd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### LDAP"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "You can authenticate Flagsmith with LDAP providers. [Learn more](/deployment/configuration/authentication#ldap)",
+      "source_content_hash": "04f0167621e9abd431acd6b91742e06d1aeda2056427e1a5bcd294fc9b8b498c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可通过 LDAP 提供商认证 Flagsmith。[了解更多](/deployment/configuration/authentication#ldap)"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "### Okta",
+      "source_content_hash": "ec77d3ca2a3ec52c70ac28d565eaa38e3f8b979968442c4205dba09265c5dce7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Okta"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "You can authenticate Flagsmith with Okta. [Learn more](/deployment/configuration/authentication#okta)",
+      "source_content_hash": "7e82eed9a0917dec7ea1ca426e22fcb7288289bbde070c7ed89ab28e27788769",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可通过 Okta 认证 Flagsmith。[了解更多](/deployment/configuration/authentication#okta)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/integrations/overview.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.957942+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "00cda0505341cd33dbec42f5f8ee29824cec229785f26e2a8775180260b91bc9"
+  }
+}

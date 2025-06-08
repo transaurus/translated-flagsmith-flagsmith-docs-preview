@@ -1,0 +1,462 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/php.md",
+  "source_file_content_hash": "566c0647c17fd48114588be727765d8a7a4c4c33e69abd336ffaa691948f8d12",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith PHP SDK\nsidebar_label: PHP\ndescription: Manage your Feature Flags and Remote Config in your PHP applications.\nslug: /clients/php\n---",
+      "source_content_hash": "ba4226670b0d93dd2dc7a240151de5e720e72e48a4efc6fb37a57f12263291f8",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The SDK client for PHP [https://flagsmith.com/](https://www.flagsmith.com/). Flagsmith allows you to manage feature\nflags and remote config across multiple projects, environments and organisations.",
+      "source_content_hash": "24f83ea1b9a2d8b24acfd377c594f35c5b2e0c6f4d7bdfe23eb3eeabf71eca20",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该SDK客户端适用于PHP[https://flagsmith.com/](https://www.flagsmith.com/)。Flagsmith使您能够跨多个项目、环境和组织管理功能开关与远程配置。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-php-client).",
+      "source_content_hash": "1c6a32e12ad7e0dedf3a49419b2114741192724a1057ccdffe7b28d29b47310b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-php-client)。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装指南"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "`composer require flagsmith/flagsmith-php-client`",
+      "source_content_hash": "dc98c857b7c056d4083dbfbe5fc126b132bb5f3600492b847a071b22eb127027",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`composer require flagsmith/flagsmith-php-client`"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Requires PHP 7.4 or newer and ships with GuzzleHTTP.",
+      "source_content_hash": "76cc53aabb650017d6c67529cc6e2bd05df8903a1989db9b0cb4f86109313039",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要求PHP 7.4或更高版本，并内置GuzzleHTTP支持。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "You can optionally provide your own implementation of PSR-18 and PSR-16",
+      "source_content_hash": "696396c5487da136f20d7fef5162f487f2ebcbb2debf27a27dac34b21b169660",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可选择自行实现PSR-18和PSR-16规范"
+      }
+    },
+    {
+      "segment_id": "265557aa",
+      "source_content": "> You will also need some implementation of [PSR-18](https://packagist.org/providers/psr/http-client-implementation) and\n> [PSR-17](https://packagist.org/providers/psr/http-factory-implementation), for example\n> [Guzzle](https://packagist.org/packages/guzzlehttp/guzzle) and\n> [PSR-16](https://packagist.org/providers/psr/simple-cache-implementation), for example\n> [Symfony Cache](https://packagist.org/packages/symfony/cache). Example:",
+      "source_content_hash": "9dd38c831d035c8a4f09a5250c351b0d9666a789a1d998d5efab8d98679249a6",
+      "node_type": "blockquote",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "> 您还需要安装[PSR-18](https://packagist.org/providers/psr/http-client-implementation)和\n> [PSR-17](https://packagist.org/providers/psr/http-factory-implementation)的实现，例如\n> [Guzzle](https://packagist.org/packages/guzzlehttp/guzzle)以及\n> [PSR-16](https://packagist.org/providers/psr/simple-cache-implementation)实现，例如\n> [Symfony缓存组件](https://packagist.org/packages/symfony/cache)。示例："
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "`composer require flagsmith/flagsmith-php-client guzzlehttp/guzzle symfony/cache`",
+      "source_content_hash": "0e7039388808a23a9a0944342edc0ef1f4933b850b446757cc7329488e181acc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`composer require flagsmith/flagsmith-php-client guzzlehttp/guzzle symfony/cache`"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "or",
+      "source_content_hash": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "`composer require flagsmith/flagsmith-php-client symfony/http-client nyholm/psr7 symfony/cache`",
+      "source_content_hash": "ef43bcfe14db4f110993e3fab35b8d4ba13b8a9820c572a0ee1fe40d9746ed93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`composer require flagsmith/flagsmith-php-client symfony/http-client nyholm/psr7 symfony/cache`"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Usage",
+      "source_content_hash": "63bfd61a0561b255a2caa0a2e3add091ca7e327f2fa06a407cbb2ff341b858d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用说明"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "The Flagsmith PHP Client is utilized in such a way that makes it immutable. Every time you change or set a setting the\nclient will return a clone of itself.",
+      "source_content_hash": "f90c1b88f8f215eb1569c73fd2cd03b16e274c2a9aa8acbd5f41cc92ae4e5a29",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith PHP客户端采用不可变设计模式，每次修改设置时都会返回自身的克隆实例。"
+      }
+    },
+    {
+      "segment_id": "4dd51304",
+      "source_content": "```php\n$flagsmith = new Flagsmith('apiToken');\n$flagsmithWithCache = $flagsmith->withCache(/** PSR-16 Cache Interface  **/);\n```",
+      "source_content_hash": "f13e16e49c58ae67c1978bfce3f0ed3e94b641adc340b5650264bf2e1b2d2c64",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4dd51304"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "If you are self hosting an instance of Flagsmith you can set that as the second parameter of the Flagsmith Class, make\nsure to include the full path",
+      "source_content_hash": "ae57bd9ea61e587cc694cc66319d91115f4e3975517e78f1fce27fd0b0f8ff29",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您自行托管Flagsmith实例，可通过Flagsmith类的第二个参数指定主机地址（需包含完整路径）"
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```php\n$flagsmith = new Flagsmith('apiToken', 'https://api.flagsmith.com/api/v1/');\n```",
+      "source_content_hash": "2359323cf1ef7b2d5682305bb921c5e656169a5f6e9fd5c7f2a133f7d37e5469",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Utilizing Cache",
+      "source_content_hash": "b138345f18fdf5067f209397f6d49f8ce7ade6783d79896b8da82314c0195d37",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 缓存应用"
+      }
+    },
+    {
+      "segment_id": "64b6f348",
+      "source_content": "```php\n$flagsmith = new Flagsmith('apiToken');\n$flagsmithWithCache = $flagsmith\n  ->withCache(/** PSR-16 Cache Interface  **/)\n  ->withTimeToLive(15); //15 seconds\n```",
+      "source_content_hash": "76a72c77368cd2e7093ab9146e20a7e388d340dafe15b5b44c41937673469be7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64b6f348"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "### Get all Flags",
+      "source_content_hash": "1be059600276f18be14ebd09028541356082ca2b00a6c71fcf2af3047ca2e36f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取所有功能开关"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "Get All feature flags. The flags will be returned as a `Flagsmith\\Models\\Flag` model",
+      "source_content_hash": "d6998075c872d88749922caa2a56d2cc41b69d694bfb74ec71d9bcc2491884d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取全部功能开关，返回结果为`Flagsmith\\Models\\Flag`模型对象"
+      }
+    },
+    {
+      "segment_id": "9e95fc4a",
+      "source_content": "#### Globally",
+      "source_content_hash": "cf49b46dbc7d1fde074b4557dc937dd7671cd0e4d1ced73e3f785264a5ed8835",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 全局获取"
+      }
+    },
+    {
+      "segment_id": "7a577a50",
+      "source_content": "```php\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFlags();\n```",
+      "source_content_hash": "7dbf53a2dbac3e812916459c0cff260765c69da20880beccb7b48756e2c87e16",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7a577a50"
+      }
+    },
+    {
+      "segment_id": "ee8401db",
+      "source_content": "#### By Identity",
+      "source_content_hash": "220984d79dc366c4d58d09f620d80d0e1cd06db7dab24a2307f3662e6cfc8e94",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 按用户标识获取"
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```php\n$identity = new \\Flagsmith\\Models\\Identity('identity');\n\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFlagsByIdentity($identity);\n```",
+      "source_content_hash": "7ff1fcf230cca79fb7559ac92aa55e86298fe07ebcf4e3cac628c251a9531b26",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    },
+    {
+      "segment_id": "58ed925f",
+      "source_content": "### Get Individual Flag",
+      "source_content_hash": "3c0ce525ca8dc0d2c97286abc9804b08ed46025acfbd42d3f1db6ab6c44f72cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取单个功能开关"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "The Individual flag will be returned as a `Flagsmith\\Models\\Flag` model",
+      "source_content_hash": "90e56e9220f71dfa49651a6e0c1802dec615b86efd97da352b15914e4b9f4b1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "单个功能开关将返回为`Flagsmith\\Models\\Flag`模型对象"
+      }
+    },
+    {
+      "segment_id": "66819c78",
+      "source_content": "#### Get Individual Flag Globally",
+      "source_content_hash": "d4ad99bbc58011a6eb4c5a90feb9e3b38d1cc24665d062510c40e36ba1601f3e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 全局获取单个开关"
+      }
+    },
+    {
+      "segment_id": "65400624",
+      "source_content": "```php\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFlag('name');\n```",
+      "source_content_hash": "67b709e2ee4ea927df08a973e74f56ade6e2ccb9e24084b011157577907c9dd4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_65400624"
+      }
+    },
+    {
+      "segment_id": "90d35b51",
+      "source_content": "#### Get Individual Flag By Identity",
+      "source_content_hash": "b6582643ad23ebdb9dd8faf4ed744aa91f52602ebace9866db61d6a7e872d831",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 按用户标识获取单个开关"
+      }
+    },
+    {
+      "segment_id": "f8065412",
+      "source_content": "```php\n$identity = new \\Flagsmith\\Models\\Identity('identity');\n\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFlagByIdentity($identity, 'name');\n```",
+      "source_content_hash": "82c4815ce85761ba06ee33b839f953fbfc826a6a29fc33c775d02bd1547e07fe",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f8065412"
+      }
+    },
+    {
+      "segment_id": "e06c002e",
+      "source_content": "### Check if Feature is Enabled",
+      "source_content_hash": "64b20351533992ccfc4f72f3eadf96a7ca4cbfa5fa1b33119bfc30cdebdcef32",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 检查功能是否启用"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "Check if a feature is enabled or not",
+      "source_content_hash": "f89b7c8e9d5ad3ad388eed76915c4b3a2fc09bae109417cc23e396675d9f9359",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "验证特定功能是否处于启用状态"
+      }
+    },
+    {
+      "segment_id": "94145a94",
+      "source_content": "#### Check if Feature is Enabled Globally",
+      "source_content_hash": "314b2cffed6416e21f57cd89bdb68ccc453c9de03543fea5a9f12d2a8e6224f1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 全局检查功能状态"
+      }
+    },
+    {
+      "segment_id": "64071bcc",
+      "source_content": "```php\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->isFeatureEnabled('name');\n```",
+      "source_content_hash": "6586c0f65a6179ec481cbad42f04e90eb32c25a28b206e7de9a8ba919edd4677",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64071bcc"
+      }
+    },
+    {
+      "segment_id": "56bc971f",
+      "source_content": "#### Check if Feature is Enabled By Identity",
+      "source_content_hash": "87b5f23b9c54232ce6afdc104b7441ee1f982c43cf763377315fce76bd39466a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 按用户标识检查功能状态"
+      }
+    },
+    {
+      "segment_id": "03a9ab41",
+      "source_content": "```php\n$identity = new \\Flagsmith\\Models\\Identity('identity');\n\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->isFeatureEnabledByIdentity($identity, 'name');\n```",
+      "source_content_hash": "3f3596b7074d40f0cd8f2b8af91daaf733408febefcab9ec4782b5598610330d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_03a9ab41"
+      }
+    },
+    {
+      "segment_id": "37fca32e",
+      "source_content": "### Get Feature Value",
+      "source_content_hash": "85e564104a1b97454ff2a7bc30d617259141cc313c459225fa44a208b564bf5b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取功能值"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "Get the value of a feature",
+      "source_content_hash": "a01c25f71c90694c23f7ea60b50698653f33d86c1bd1617e2e7ba82606e913e2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取特定功能的配置值"
+      }
+    },
+    {
+      "segment_id": "b9b8694c",
+      "source_content": "#### Get Feature Value Globally",
+      "source_content_hash": "7078f546a5a8230b83e7cd147725b947f16a569710b72e26cb273a8478a6ecd0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 全局获取功能值"
+      }
+    },
+    {
+      "segment_id": "3917a88d",
+      "source_content": "```php\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFeatureValue('name', 'default value');\n```",
+      "source_content_hash": "02c5651ca26cda18a0055defa685c77d913328edb2e15d98d9727a1f6d569581",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3917a88d"
+      }
+    },
+    {
+      "segment_id": "4dd6a631",
+      "source_content": "#### Get Feature Value By Identity",
+      "source_content_hash": "7fe75e06dbb6194b33d1a4b5dfe9815b0b60a3c88fd6942c851ce595e10d424b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 按用户标识获取功能值"
+      }
+    },
+    {
+      "segment_id": "b474abd5",
+      "source_content": "```php\n$identity = new \\Flagsmith\\Models\\Identity('identity');\n\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFeatureValueByIdentity($identity, 'name', 'default value');\n```",
+      "source_content_hash": "b5511253fa326e4ac35b116968bbfc82a07a3b0a221edb1f1f606646b2ada8fd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b474abd5"
+      }
+    },
+    {
+      "segment_id": "c6868a9f",
+      "source_content": "### Utilizing Identity Traits",
+      "source_content_hash": "dd170cc54a510e14b41e92fa0f8a468a3b5026a28835ea2611b52da9a322cf85",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户特征应用"
+      }
+    },
+    {
+      "segment_id": "bb1346b6",
+      "source_content": "You can optionally declare traits against the identity model",
+      "source_content_hash": "c3b0f9ef0c6eff536c06771f0be6776ff3a794eac40185a2063e6bb33cc1cb97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可选择在用户标识模型上声明特征属性"
+      }
+    },
+    {
+      "segment_id": "8a061704",
+      "source_content": "```php\n$identity = new \\Flagsmith\\Models\\Identity('identity');\n\n$identityTrait = (new \\Flagsmith\\Models\\IdentityTrait('Foo'))->withValue('Bar');\n\n$identity = $identity->withTrait($identityTrait);\n\n$flagsmith = new \\Flagsmith\\Flagsmith('apiToken');\n$flagsmith->getFlagsByIdentity($identity);\n```",
+      "source_content_hash": "3ae760d9f1378d9a8507bc8843b4f3cb8a5c07737b51e2fddc21465de908148e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8a061704"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/php.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.958164+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "566c0647c17fd48114588be727765d8a7a4c4c33e69abd336ffaa691948f8d12"
+  }
+}

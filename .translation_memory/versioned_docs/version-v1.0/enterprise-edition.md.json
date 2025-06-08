@@ -1,0 +1,932 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/enterprise-edition.md",
+  "source_file_content_hash": "6374f2952e4c0635ed120ba3e54a26a86a8d51c5c963fed9da44668e2803a9b0",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_position: 3\n---",
+      "source_content_hash": "57430a289358d8e38d7464d7df5ab948274d7e83ff708b215f37775a5a384353",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Enterprise Edition",
+      "source_content_hash": "02e79c8c98aa983aa2e6bd58da14cc443215426213aa230faa85f2765da9719b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 企业版"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Flagsmith is also provided as an \"Enterprise Edition\" which has additional features and capabilities over the Open\nSource product:",
+      "source_content_hash": "97e23ee701a5f8829f459b1b54c93b391674f90fb47371f17ab6b329d008cfac",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 还提供\"企业版\"，相较于开源版本具备更多功能特性："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "- [Role Based Access Controls](advanced-use/permissions.md)\n- [SAML, LDAP, ADFS and Okta authentication](advanced-use/authentication-methods.md), as well as the ability to lock\n  authentication to a single provider\n- Additional database engines: Oracle, SQL Server and MySQL\n- Additional deployment and orchestration options as detailed below",
+      "source_content_hash": "364b3d6bde8d03d04fbc2b8f95d861947acedfdc0058f751ce0c06906ea178a4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [基于角色的访问控制](advanced-use/permissions.md)\n- [SAML、LDAP、ADFS 和 Okta 认证](advanced-use/authentication-methods.md)，并支持锁定单一认证提供商\n- 额外数据库引擎支持：Oracle、SQL Server 和 MySQL\n- 如下文所述的额外部署与编排选项"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Deployment Options",
+      "source_content_hash": "c2692de12786ef71b3cc85770a58a3c9b5a66f4e18c4bf7ae9131fb92e25390e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署选项"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "We currently support the following infrastructure platforms:",
+      "source_content_hash": "1b8f949ee46943b6351c100d74b19ef55d51f3c2fec7223701f2f7faaed81951",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前支持的底层架构平台包括："
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- Kubernetes\n- Redhat OpenShift\n- Amazon Web Services (AWS) - via\n  [Amazon ECS](https://aws.amazon.com/ecs/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)\n- Google Cloud Platform (GCP) - via [AppEngine](https://cloud.google.com/appengine)\n- Azure - via [Container Instances](https://azure.microsoft.com/en-gb/services/container-instances/)",
+      "source_content_hash": "7008598dd254a7097565c38fe5643a3a9f36fc64d02ae8ace04c139cc686589c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Kubernetes\n- Redhat OpenShift\n- 亚马逊云服务(AWS) - 通过 [Amazon ECS](https://aws.amazon.com/ecs/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)\n- 谷歌云平台(GCP) - 通过 [AppEngine](https://cloud.google.com/appengine)\n- Azure - 通过 [容器实例](https://azure.microsoft.com/en-gb/services/container-instances/)"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "If you require additional deployment options, please contact us.",
+      "source_content_hash": "ac7413b2adeff3a5691de0fa047bb39d070fb9daddbdc90c780c00d7c9fd3a7f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需其他部署方案，请联系我们。"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Orchestration",
+      "source_content_hash": "b0b99a69a00c7c0dd37da1a35240761e30d2acf0ce785108c74e051f34ddae2a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 编排方案"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "We currently have the following orchestration options:",
+      "source_content_hash": "1da96317ad75f703c8943ed689eabcd1363d3aa1c2f3ed9c06997cf5fd0669b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前支持的编排工具包括："
+      }
+    },
+    {
+      "segment_id": "cd471e4e",
+      "source_content": "- [Pulumi](https://www.pulumi.com/) scripts for AWS deployments\n- [Terraform](https://www.terraform.io/) scripts for AWS and GCP deployments\n- [Helm Charts](https://helm.sh/) for Kubernetes deployments\n- [Kubernetes Operator](https://operatorhub.io/operator/flagsmith) for Kubernetes Operator deployments",
+      "source_content_hash": "5c142a49eeb24de2734d1c8a8c277f6d027ab9ef91b73df1617b4c132e7ab5d4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- AWS 部署的 [Pulumi](https://www.pulumi.com/) 脚本\n- AWS 和 GCP 部署的 [Terraform](https://www.terraform.io/) 脚本\n- Kubernetes 部署的 [Helm Charts](https://helm.sh/)\n- Kubernetes Operator 部署的 [Kubernetes Operator](https://operatorhub.io/operator/flagsmith)"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Please contact us for the relevant source code for these projects.",
+      "source_content_hash": "51f0e3e3d02b84faae14238e99daf9e4802a139ba224e174ed419a6ea6f910c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需获取相关项目源码，请联系我们。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Docker Image Repository",
+      "source_content_hash": "0d77bbb4e8c206e4d9c1e712fa5dc6874ee438a0993a2d11d2ef48cb2f72069c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Docker 镜像仓库"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "The Flagsmith API Enterprise Edition is hosted with a private Docker Hub repository. To access the Docker images in this\nrepository you will need to provide a Docker Hub account. Please get in touch if you need access to these repos.",
+      "source_content_hash": "367cf9be2a5bd8b19aed266cd9886c1a7e0b8d2451cdf971ab421deaf3d7cd6b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith API 企业版镜像托管于私有 Docker Hub 仓库。访问该仓库需提供 Docker Hub 账户凭证，如需访问权限请与我们联系。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "We have 2 different Enterprise Edition Images. You can choose to use either image.",
+      "source_content_hash": "4dacb59cb2102f8e336cf478134c9af815d7226be693c4e088b3b461dc82c1bd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们提供两种企业版镜像，您可任选其一："
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "### \"SaaS\" image",
+      "source_content_hash": "f0c1c4a626d547c1c833b00e6092138f9881da36eef8f2a6810190fdafb579dd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### \"SaaS\"镜像"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "This image tracks our SaaS build and includes additional packages:",
+      "source_content_hash": "d9d586bdb8ece7e14a99aca917118d276f100d9168024fdd7861a4ffb68b2c2d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该镜像与我们的 SaaS 构建版本同步，包含额外功能包："
+      }
+    },
+    {
+      "segment_id": "ddd2c7ae",
+      "source_content": "- SAML and LDAP authentication\n- Workflows (Change Requests and Flag Scheduling)",
+      "source_content_hash": "63a05a279bdb1f9c5e9930168b46f43d12dcd68a46704b04833992ec7c929d09",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SAML 和 LDAP 认证\n- 工作流（变更请求与功能标志调度）"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "This image also bundles the front end into the python application, meaning you don't need to run a separate front end\nand back end.",
+      "source_content_hash": "13ca1c6ffd8e4ede9b23feffe714d49aef5374e2e97501f2e451c761218700f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此镜像还将前端打包至 Python 应用内，无需单独运行前后端服务。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "### Enterprise Edition image",
+      "source_content_hash": "8a530940953c33cc797cbe469f136d54129ada0aa9ffd5880a6cb3ea2865f04a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 企业版镜像"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "This image includes additions from the SaaS image above:",
+      "source_content_hash": "b18956206734629e72bfc0b249541ecba34fa721a58674e461550a4def67cf94",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该镜像在 SaaS 镜像基础上额外包含："
+      }
+    },
+    {
+      "segment_id": "3df4f066",
+      "source_content": "- Oracle Support\n- MySQL Support\n- Appdynamics Integration",
+      "source_content_hash": "0b8b12e8da9845c83f21f4b42fcb4de6e6d57790a74a1b419eb7594964069a7c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Oracle 支持\n- MySQL 支持\n- Appdynamics 集成"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "## Environment Variables",
+      "source_content_hash": "66baf6a5eea36889cda747ee8bd898452b11c5f0336a0df2ed10f9e3b9d43415",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境变量"
+      }
+    },
+    {
+      "segment_id": "a5a4323e",
+      "source_content": "### Frontend Environment Variables",
+      "source_content_hash": "966a5629c4e4d3d4380efa3249af6600f20c5f9669b1e3ed0ec87992435e2b33",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 前端环境变量"
+      }
+    },
+    {
+      "segment_id": "5eeb0e94",
+      "source_content": "| Variable                 | Example Value                | Description                                                                                                                           |\n| ------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |\n| **API_URL**              | http://localhost:8888/api/v1 | The URL of the API Backend                                                                                                            |\n| **FLAGSMITH_CLIENT_API** | http://localhost:8888/api/v1 | This is where the features for the front end themselves are pulled from. Create a project within your backend and refer to flag names |",
+      "source_content_hash": "ef278ae10caba6ae70bb28e617a4826dd5ae400468db8e7b3a10f388626546d7",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5eeb0e94"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "Env Var: **FLAGSMITH** Value example: 4vfqhypYjcPoGGu8ByrBaj Description: The `environment id` for the\n`FLAGSMITH_CLIENT_API` project above.",
+      "source_content_hash": "a2d97284183fe152d2db0dce8d19f604550aca73f03e8081c9b7246258f4991d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "环境变量: **FLAGSMITH** 示例值: 4vfqhypYjcPoGGu8ByrBaj 说明: 上述 `FLAGSMITH_CLIENT_API` 项目对应的 `environment id`。"
+      }
+    },
+    {
+      "segment_id": "93028a4e",
+      "source_content": "### Backend Environment Variables",
+      "source_content_hash": "f18b1b1a8cdfbb91fe1ff29f8e474819fd620971d50336128d0a328e98f89b44",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 后端环境变量"
+      }
+    },
+    {
+      "segment_id": "feacddee",
+      "source_content": "| Variable                                   | Example Value                                                                                            | Description                                                                                                                                                                                                                                                                                                                                        | Default Value                                              |\n| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |\n| **LDAP_AUTH_URL**                          | ldap://localhost:389                                                                                     | The URL of the LDAP server                                                                                                                                                                                                                                                                                                                         | None                                                       |\n| **LDAP_AUTH_USE_TLS**                      | False                                                                                                    | Setting this to true will initiate TLS on connection                                                                                                                                                                                                                                                                                               | False                                                      |\n| **LDAP_AUTH_SEARCH_BASE**                  | ou=people,dc=example,dc=com                                                                              | The LDAP search base for looking up users                                                                                                                                                                                                                                                                                                          | ou=people,dc=example,dc=com                                |\n| **LDAP_AUTH_OBJECT_CLASS**                 | inetOrgPerson                                                                                            | The LDAP class that represents a user                                                                                                                                                                                                                                                                                                              | inetOrgPerson                                              |\n| **LDAP_AUTH_USER_FIELDS**                  | username=uid,email=email                                                                                 | User model fields mapped to the LDAP attributes that represent them.                                                                                                                                                                                                                                                                               | username=uid,email=email,first_name=givenName,last_name=sn |\n| **LDAP_AUTH_ACTIVE_DIRECTORY_DOMAIN**      | DOMAIN                                                                                                   | Sets the login domain for Active Directory users.                                                                                                                                                                                                                                                                                                  | None                                                       |\n| **LDAP_AUTH_CONNECT_TIMEOUT**              | 60                                                                                                       | Set connection timeouts (in seconds) on the underlying `ldap3` library.                                                                                                                                                                                                                                                                            | None                                                       |\n| **LDAP_AUTH_RECEIVE_TIMEOUT**              | 60                                                                                                       | Set receive timeouts (in seconds) on the underlying `ldap3` library.                                                                                                                                                                                                                                                                               | None                                                       |\n| **LDAP_AUTH_FORMAT_USERNAME**              | django_python3_ldap.<br/>utils.format_username_openldap                                                  | Path to a callable used to format the username to bind to the LDAP server                                                                                                                                                                                                                                                                          | django_python3_ldap.utils.format_username_openldap         |\n| **LDAP_DEFAULT_FLAGSMITH_ORGANISATION_ID** | 1                                                                                                        | All newly created users will be added to this originisation                                                                                                                                                                                                                                                                                        | None                                                       |\n| **LDAP_AUTH_SYNC_USER_RELATIONS**          | custom_auth.ldap.sync_user_groups                                                                        | Path to a callable used to sync user realtions. Note: if you are setting this value to `custom_auth.ldap.sync_user_groups` please make sure `LDAP_DEFAULT_FLAGSMITH_ORGANISATION_ID` is set.                                                                                                                                                       | django_python3_ldap.utils.sync_user_relations              |\n| **LDAP_AUTH_FORMAT_SEARCH_FILTERS**        | custom_auth.ldap.login_group_search_filter                                                               | Path to a callable used to add search filters to login to restrict login to a certain group                                                                                                                                                                                                                                                        | django_python3_ldap.utils.format_search_filters            |\n| **LDAP_SYNCED_GROUPS**                     | CN=Readers,CN=Roles,CN=webapp01,<br/>dc=admin,dc=com:CN=Marvel,CN=Roles,<br/>CN=webapp01,dc=admin,dc=com | colon(:) seperated list of DN's of ldap group that will be copied over to flagmsith(lazily, i.e: On user login we will create the group(s) and add the current user to the group(s) if the user is a part of them). Note: please make sure to set `LDAP_AUTH_SYNC_USER_RELATIONS` to `custom_auth.ldap.sync_user_groups` inorder for this to work. | []                                                         |\n| **LDAP_LOGIN_GROUP**                       | CN=Readers,CN=Roles,CN=webapp01,<br/>dc=admin,dc=com                                                     | DN of the user allowed login user group. Note: Please make sure to set `LDAP_AUTH_FORMAT_SEARCH_FILTERS` to `custom_auth.ldap.login_group_search_filter` in order for this to work.                                                                                                                                                                | None                                                       |",
+      "source_content_hash": "2b65da033c6416ecb485a7750d8ec2eccb6f8e21fce36d0869710e7922800b4b",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_feacddee"
+      }
+    },
+    {
+      "segment_id": "5baf88e2",
+      "source_content": "### Version Tags",
+      "source_content_hash": "703bdda5d94d8dfb75ec725bf0c6601574a648e36d75e9f548bfb07444bac239",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 版本标签"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "The versions of the `flagsmith-api-ee` track the versions of our Open Source version. You can view these tags here:",
+      "source_content_hash": "f77c678599e686fb21c8194db7bf073fbad19a41d87935b78343600fc8a23988",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`flagsmith-api-ee` 的版本号与开源版本保持同步，可通过以下链接查看："
+      }
+    },
+    {
+      "segment_id": "1862c5fe",
+      "source_content": "[https://github.com/Flagsmith/flagsmith/tags](https://github.com/Flagsmith/flagsmith/tags)",
+      "source_content_hash": "fbffcf88e8d6b822fdd92c275540af381ee06d359ec0e6e11d01cf394a190aab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[https://github.com/Flagsmith/flagsmith/tags](https://github.com/Flagsmith/flagsmith/tags)"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "## AppDynamics",
+      "source_content_hash": "ad914f91eb72a42d63f5392aaa3763ebe620d8ebcc40b75247d94bf7e6e4dbb9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## AppDynamics"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "The application supports the use of AppDynamics for monitoring purposes. In order to set up AppDynamics for your\nenvironment follow the steps below:",
+      "source_content_hash": "b2048a25c7a9877f80c96070ab93797a92f058afe040b30a3895ec1ed3c6cf82",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本应用支持使用 AppDynamics 进行监控，配置步骤如下："
+      }
+    },
+    {
+      "segment_id": "467b2691",
+      "source_content": ":::note\n\nThere is a bug in the AppDynamics wizard that sets the value `ssl = (on)` which needs to be changed to `ssl = on`\n\n:::",
+      "source_content_hash": "1aebca89af72a46417440297f2cbaaf13c460c2c4422fd2f90a078482f57bcfb",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\nAppDynamics 向导存在一个缺陷：会将 `ssl = (on)` 设为默认值，需手动修改为 `ssl = on`\n\n:::"
+      }
+    },
+    {
+      "segment_id": "b0465fca",
+      "source_content": "1. Set up your application in your AppDynamics dashboard using the \"Getting Started Wizard - Python\".\n2. In the wizard you will need to select the \"uWSGI with Emperor: Module Directive\" when choosing a deployment method\n3. On completing the wizard you will be provided with a configuration file like the one seen here in the\n   appdynamics.template.cfg provided, except with your application information. Make a copy of this information and\n   place it in a file.",
+      "source_content_hash": "9ea2ef2677d2ccc87fa4607dd0d790e2d99ace46c62635c993b1a705eba9cd18",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在AppDynamics仪表板中使用\"入门向导 - Python\"设置您的应用程序。\n2. 在向导中选择部署方法时，需选择\"uWSGI with Emperor: Module Directive\"。\n3. 完成向导后，您将获得一个类似appdynamics.template.cfg模板的配置文件（包含您的应用信息）。请复制这些信息并保存到文件中。"
+      }
+    },
+    {
+      "segment_id": "37fca32e",
+      "source_content": "### Running with docker",
+      "source_content_hash": "92b7a6c059fd43931d24fc62be913c4b462b868a9ab311197e599ea2dd6296d6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Docker运行方式"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "When running with traditional Docker you can use the code snippet below to inject the required information for running\nApp Dynamics",
+      "source_content_hash": "5eadedd2770d7c4cf89c67fb9b7aa8393b20e1b0c61aab4f91350f21322272cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用传统Docker运行时，可通过以下代码片段注入AppDynamics所需的配置信息"
+      }
+    },
+    {
+      "segment_id": "6f605d92",
+      "source_content": "```shell\ndocker run -t {image_name} -v {config_file_path}:/etc/appdynamics.cfg -e APP_DYNAMICS=on\n```",
+      "source_content_hash": "9a6ba03ab7c2ae597d24a6ad598b99336fa4b796f820cb52ddb6fea834074ad9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6f605d92"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "Replacing the values for:",
+      "source_content_hash": "2545b2d3a352b048934c7b0d225d92dfdff2c6c0ef462319fc1a148d16213f7f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需要替换以下参数："
+      }
+    },
+    {
+      "segment_id": "d9b1e67e",
+      "source_content": "- **_{image_name}_**: the tagged name of the docker image you are using\n- **_{config_file_path}_**: the absolute path of the appdynamics.cfg file on your system",
+      "source_content_hash": "d5e5d8f1ee709612eab5b05ace74dc0b2b11f9b871b50d10b7e81b13f35afdce",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **_{image_name}_**: 您使用的Docker镜像标签名\n- **_{config_file_path}_**: 系统中appdynamics.cfg配置文件的绝对路径"
+      }
+    },
+    {
+      "segment_id": "c766290e",
+      "source_content": "### Running with docker-compose",
+      "source_content_hash": "ccb564453f3b332d74c4b4620990b84f1a20b8d3c9282cd74e7e515630a349de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### docker-compose运行方式"
+      }
+    },
+    {
+      "segment_id": "5c7d994c",
+      "source_content": "When running with the `docker-compose.yml` file provided ensure the `APP_DYNAMICS` environment variable is set to `on`\nas seen below:",
+      "source_content_hash": "677f9dd8735ae342704c8a2d1118d3e660f0089479d43de9c1f88d4f1d432860",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用提供的`docker-compose.yml`文件时，请确保将`APP_DYNAMICS`环境变量设置为`on`，如下所示："
+      }
+    },
+    {
+      "segment_id": "8d1b00fd",
+      "source_content": "```yaml\napi:\n   build:\n   context: .\n   dockerfile: docker/Dockerfile\n   env:\n      APP_DYNAMICS: \"on\"\n   volumes:\n   - {config_file_path}:/etc/appdynamics.cfg\n```",
+      "source_content_hash": "e5806a98af3cb1d74ee0296935d7213455fd388366a6859748c11a5a91054622",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8d1b00fd"
+      }
+    },
+    {
+      "segment_id": "be17ccc3",
+      "source_content": "Replacing the value for **_{config_file_path}_** with the absolute path of the appdynamics.cfg file on your system.",
+      "source_content_hash": "144de2717c90c2df491590d26a1c0f7ce6f017dd251f2bc89f0989a78779ccf7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将**_{config_file_path}_**替换为系统中appdynamics.cfg配置文件的绝对路径。"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "Running the command below will build the docker image with all the AppDynamics config included",
+      "source_content_hash": "2942016c4debc594f49aacee07ee23f63a68fa4307ab9567135ed00a2901775e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "执行以下命令将构建包含所有AppDynamics配置的Docker镜像"
+      }
+    },
+    {
+      "segment_id": "cf5bbc3b",
+      "source_content": "```shell\ndocker-compose -f docker-compose.yml build\n```",
+      "source_content_hash": "6c582bd83d6403a06c2629c668cd592fd5871129eba2392a312dd78d9c585b33",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cf5bbc3b"
+      }
+    },
+    {
+      "segment_id": "63565425",
+      "source_content": "This image can then be run locally using the docker-compose `up` command as seen below",
+      "source_content_hash": "304f98ef7c8ffa55598a4ffd2f256b2618e681c64ae7b18d48f5a7751f0450d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后可通过docker-compose的`up`命令本地运行该镜像，如下所示"
+      }
+    },
+    {
+      "segment_id": "e9921a93",
+      "source_content": "```shell\ndocker-compose -f docker-compose.yml up\n```",
+      "source_content_hash": "4c5d2e1a29c80120566ac3bd95250026816708bf3ad262845f7affa540d311cf",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e9921a93"
+      }
+    },
+    {
+      "segment_id": "7312e69e",
+      "source_content": "### Additional settings",
+      "source_content_hash": "2a09585e8838a3317cff74324a0a7297be800f762ee0599c632f6ce1c8f0280d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 附加设置"
+      }
+    },
+    {
+      "segment_id": "2dbfc5f7",
+      "source_content": "If you need additional AppDynamics setup options you can find the other environment variables you can set\n[here](https://docs.appdynamics.com/display/PRO21/Python+Agent+Settings).",
+      "source_content_hash": "1b8a4ffa32591a904f75217d3a13cc0e0637ced95f6bfb37c6e4ed33a81c51d8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需其他AppDynamics配置选项，可查阅[此处](https://docs.appdynamics.com/display/PRO21/Python+Agent+Settings)列出的环境变量。"
+      }
+    },
+    {
+      "segment_id": "08f73f73",
+      "source_content": "### Oracle Database",
+      "source_content_hash": "7526dad6d0a580805a9800fd6b351c690e3b81378d1a85e46453f0fada3eb317",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Oracle数据库"
+      }
+    },
+    {
+      "segment_id": "b08ad0b4",
+      "source_content": "Flagsmith is compatible with the Oracle database engine by configuring a few environment variables correctly. Firstly,\nyou'll need to ensure that you have a value for `DJANGO_DB_ENGINE` set as `oracle`. Then you can set the remaining\ndatabase parameters (`DJANGO_DB_*`) as required.",
+      "source_content_hash": "f66ca89e5265e488c3d48f456496f049551c5f621173531e55b2e51a800f1866",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过正确配置环境变量，Flagsmith可兼容Oracle数据库引擎。首先需确保将`DJANGO_DB_ENGINE`设为`oracle`，然后按需设置其他数据库参数（`DJANGO_DB_*`）。"
+      }
+    },
+    {
+      "segment_id": "191265da",
+      "source_content": "#### Local Testing",
+      "source_content_hash": "6b746ffc38578a512ae349e88038d8402fb0d8bb9550c55aa8417798484d5936",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 本地测试"
+      }
+    },
+    {
+      "segment_id": "85ea22dd",
+      "source_content": "The following sections detail how to run the application locally using the OracleDB Docker image. If you're looking to\nrun the application using an instance of OracleDB elsewhere, you just need to setup the environment variables correctly\nas per the documentation.",
+      "source_content_hash": "0d223b45094a2e3ec70723ae2805b96fa25a04dab1e75461a5ea75143491e80b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下章节详述如何使用OracleDB Docker镜像本地运行应用。若需连接其他OracleDB实例，只需按文档正确设置环境变量即可。"
+      }
+    },
+    {
+      "segment_id": "5055654e",
+      "source_content": ":::note\n\n**Prerequisites**\n\nYou will likely need to install the Oracle client on the machine running the Flagsmith API  \napplication. The instructions to do so are\n[here](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html).\n\n:::",
+      "source_content_hash": "d6c55d5e6eb016e1c8f7395d929d4bf365903f9be1b7bdc0e3da5682aa7a6ecb",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\n**前置条件**\n\n需要在运行Flagsmith API应用的机器上安装Oracle客户端，安装指南参见[此处](https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "0427bb2b",
+      "source_content": "To run the application locally using Oracle (via Docker), you need to go through a registration with your docker hub\naccount to get access to the images. Go to https://hub.docker.com/_/oracle-database-enterprise-edition and register.\nOnce you've done that, you can run the Oracle database using docker, and we've created a docker-compose file to simplify\nthis.",
+      "source_content_hash": "7ab74b7fadd3eb15ef1c80742eea05db1fe40ba7040cb8ad89372ecc492c9fb8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要通过Docker本地运行Oracle数据库，需先使用Docker Hub账户注册获取镜像访问权限。访问https://hub.docker.com/_/oracle-database-enterprise-edition 完成注册后，即可运行Oracle数据库。我们已准备好简化此过程的docker-compose文件。"
+      }
+    },
+    {
+      "segment_id": "edfcc73c",
+      "source_content": "```bash\ndocker-compose -f docker-compose.oracle.yml up db\n```",
+      "source_content_hash": "f80f705849b657d84357101f1690958a0b14a192973ec9bad600627f099d6500",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_edfcc73c"
+      }
+    },
+    {
+      "segment_id": "f2c67ca5",
+      "source_content": "Once you have a database running, you'll need to set up the database and users correctly. This can be done with the\nfollowing processes.",
+      "source_content_hash": "bce249603131a173b81e9bd9943be4d443e33e3a06f71dd8f8b7d7c18011adc2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "数据库运行后，需正确设置数据库和用户，具体操作如下："
+      }
+    },
+    {
+      "segment_id": "6e5d54a8",
+      "source_content": "First, connect to the database itself:",
+      "source_content_hash": "9f354de741c892e05f2fdc67b593429a29871ae7d57f872e0ac6b93012c0f5f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先连接至数据库："
+      }
+    },
+    {
+      "segment_id": "bf3146e1",
+      "source_content": "```bash\nsqlplus /nolog\n```",
+      "source_content_hash": "49cd454c595fe93ce4f7911f9805b7c07e10de9950c9b2f36e8162bbc39b1334",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bf3146e1"
+      }
+    },
+    {
+      "segment_id": "7e563909",
+      "source_content": "OR",
+      "source_content_hash": "829e5b28af38ab3379fd0b4f3fd4f2f161326bb38dfeaf83bc97d08f60f84c88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或"
+      }
+    },
+    {
+      "segment_id": "7079d2d5",
+      "source_content": "```bash\ndocker-compose exec db bash -c \"source /home/oracle/.bashrc; sqlplus /nolog\"\n```",
+      "source_content_hash": "fe1f582f5dab23e4d1e3b020bfb1429d52167ad553765f7a57511e18fcfbcd5d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7079d2d5"
+      }
+    },
+    {
+      "segment_id": "09512450",
+      "source_content": "Once connected, you'll need to run the following SQL commands. Note that these commands should be amended if you'd like\na different password / user combination.",
+      "source_content_hash": "537ba5644bf251c7d3e4b80f1592889de9f1fe4ad9b6f4791283ebe351789dcc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "连接成功后执行以下SQL命令（如需不同密码/用户组合请自行修改）："
+      }
+    },
+    {
+      "segment_id": "6b0761da",
+      "source_content": "```sql\nconn sys as sysdba;\n# password is blank when asked\nalter session set \"_ORACLE_SCRIPT\"=true;\ncreate user oracle_user identified by oracle_password;\ngrant dba to oracle_user;\nGRANT EXECUTE ON SYS.DBMS_LOB TO oracle_user;\nGRANT EXECUTE ON SYS.DBMS_RANDOM TO oracle_user;\n```",
+      "source_content_hash": "1f2f5daf257f8b03b22a9bed6b7159f8b9210b9a6e454c5ed28b94f0c39f78cf",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6b0761da"
+      }
+    },
+    {
+      "segment_id": "43ad2e31",
+      "source_content": "### SAML Authentication",
+      "source_content_hash": "124a7eee2cfcdb0c9ec44b5b07b6c636219c8f42d7d5a72dd42e5138c071465d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SAML认证"
+      }
+    },
+    {
+      "segment_id": "01902900",
+      "source_content": "The application can be run using SAML2 as an authentication backend. You should not need any additional configuration on\nthe startup of the application to use SAML2, however, once the application is running, you will need to create the\nrelevant configuration entities for any organisations on your installation that require SAML2 authentication. This can\ncurrently only be done via the Django admin console, via the 'Saml Configurations' section on the 'Organisation' page.\nFurther information on how to access the django admin console can be found\n[here](/deployment/configuration/django-admin).",
+      "source_content_hash": "59a7bb9192bf9b628c0f77ed087866fabe2089421af4773d4a1a9b1e9dbe84c1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用程序可使用SAML2作为认证后端运行。启动应用程序时通常无需额外配置SAML2，但运行后需为需要SAML2认证的组织创建相关配置实体。目前只能通过Django管理控制台操作，在\"Organisation\"页面的\"Saml Configurations\"版块完成。访问django管理控制台的更多信息请参阅[此处](/deployment/configuration/django-admin)。"
+      }
+    },
+    {
+      "segment_id": "d3912b2e",
+      "source_content": "The SAML configuration requires the following parameters:",
+      "source_content_hash": "9d7a373b8f17b244f1e110e5dac94cb79e31d0a0cefdd9350125764ea46d380c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SAML配置需要以下参数："
+      }
+    },
+    {
+      "segment_id": "4e844e8c",
+      "source_content": "| Parameter name    | Description                                                                                                                   |\n| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |\n| Organisation      | The flagsmith organisation entity to allow SAML login for                                                                     |\n| Organisation name | A unique string for the organisation. You'll enter this when prompted by the SSO login flow and forms part of your entity ID. |\n| Frontend URL      | This is the URL to redirect to on a successful SAML authentication, e.g. app.flagsmith.com.                                   |\n| Idp metadata      | This is the metadata from your Identity Provider.                                                                             |",
+      "source_content_hash": "86f7674a9e57831fe0addc09f1324b415c0351136cb2f7c75dc411d3925377d8",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4e844e8c"
+      }
+    },
+    {
+      "segment_id": "6be537d9",
+      "source_content": ":::note\n\nWhen running the application locally, you will also need [xmlsec1](https://command-not-found.com/xmlsec1) installed.\n\n:::",
+      "source_content_hash": "b2a4ec565c36898109f6a3aa303b9ceb4df68d87b8dd2824edc2678e9b5e4cc4",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\n本地运行时需额外安装[xmlsec1](https://command-not-found.com/xmlsec1)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "accb07e1",
+      "source_content": "#### SAML Environment Variables",
+      "source_content_hash": "4d3c929d7d85bf8a4903d10ebfd116bb08578fc16a66e0a27fda165dc5359067",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### SAML环境变量"
+      }
+    },
+    {
+      "segment_id": "cd7684b7",
+      "source_content": "| Variable           | Example Value | Description                                                                            | Default Value |\n| ------------------ | ------------- | -------------------------------------------------------------------------------------- | ------------- |\n| **SAML_FORCE_SSL** | True          | Ignores X-Forwarded-Proto HTTP headers and forces SAML redirects to occur over `https` | False         |",
+      "source_content_hash": "e026a7ef170250c24d5d0eddd25726e175833169a0e310c9bf0378cf6461029f",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cd7684b7"
+      }
+    },
+    {
+      "segment_id": "365a11aa",
+      "source_content": "### LDAP Authentication",
+      "source_content_hash": "d66d0416abe884359b17ad60af7a499c0be62b2baa7b5c396a78bf649bb8b06c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### LDAP认证"
+      }
+    },
+    {
+      "segment_id": "15d5abf0",
+      "source_content": "The application can be configured to use an LDAP based authentication backend using\n[environment variables](#backend-environment-variables). When enabled, it works by authenticating the user with username\nand password using the ldap server, fetching the user details from the LDAP server (if the authentication was\nsuccessful) and creating the user in the Django database.",
+      "source_content_hash": "9c4596616858a5556338edfb48c8ffbad62897a7e06de42ca328aaefcd87bb70",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用程序可通过[环境变量](#backend-environment-variables)配置基于LDAP的认证后端。启用后，系统会通过LDAP服务器用用户名和密码认证用户，认证成功后从LDAP服务器获取用户详情，并在Django数据库中创建相应用户。"
+      }
+    },
+    {
+      "segment_id": "11d689a0",
+      "source_content": ":::note\n\n#### Microsoft Active Directory support\n\nLDAP is configured by default to support login via OpenLDAP. To connect to a Microsoft Active Directory, you need to\nmodify following environment variables.\n\n:::",
+      "source_content_hash": "16fa01905ff4cb32fd238267f4b167562bb2683f321a2b6cbb19586520b27842",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\n#### Microsoft Active Directory支持\n\n默认配置支持OpenLDAP登录。要连接Microsoft Active Directory，需修改以下环境变量。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "f4b938fe",
+      "source_content": "For simple usernames (e.g. \"username\"):",
+      "source_content_hash": "2221169b42a3946396ec1d1d12872ce0de40150499f1903dde099ba0dabb732d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简单用户名格式（如\"username\"）："
+      }
+    },
+    {
+      "segment_id": "229a037e",
+      "source_content": "```txt\nLDAP_AUTH_FORMAT_USERNAME=\"django_python3_ldap.utils.format_username_active_directory\"\n```",
+      "source_content_hash": "46547d38645e61642255d85e63a1029819e43f75df4ecd03c486961ad37be74e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_229a037e"
+      }
+    },
+    {
+      "segment_id": "53e725dc",
+      "source_content": "For down-level login name formats (e.g. \"DOMAIN\\username\"):",
+      "source_content_hash": "76b4e3077a84e3ea8c63787d3a392fd9231418eba79919c0aecd66beed38891f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下级登录名格式（如\"DOMAIN\\username\"）："
+      }
+    },
+    {
+      "segment_id": "79d8cec2",
+      "source_content": "```txt\nLDAP_AUTH_FORMAT_USERNAME=\"django_python3_ldap.utils.format_username_active_directory\"\nLDAP_AUTH_ACTIVE_DIRECTORY_DOMAIN=\"DOMAIN\"\n```",
+      "source_content_hash": "db90d1b7764531abf603749b94ca15e2936ea85cdef25a85dccc9ec4a4e59a1c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_79d8cec2"
+      }
+    },
+    {
+      "segment_id": "46e586a3",
+      "source_content": "For user-principal-name formats (e.g. \"user@domain.com\"):",
+      "source_content_hash": "211720db987c7a696360dd64770bc6d512e9a748dc1c01b3d44293fcff01ad4e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户主体名称格式（如\"user@domain.com\"）："
+      }
+    },
+    {
+      "segment_id": "3753b81e",
+      "source_content": "```txt\nLDAP_AUTH_FORMAT_USERNAME=\"django_python3_ldap.utils.format_username_active_directory_principal\"\nLDAP_AUTH_ACTIVE_DIRECTORY_DOMAIN=\"domain.com\"\n```",
+      "source_content_hash": "ee3dc1cdff2f1e47770de69f64e1cb2b63b949b2d5d0755394ab5f227baf9e68",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3753b81e"
+      }
+    },
+    {
+      "segment_id": "850ec775",
+      "source_content": "Depending on how your Active Directory server is configured, the following additional settings may match your server\nbetter than the defaults used by django-python3-ldap:",
+      "source_content_hash": "792fa217ec95e8fca0aab51725297460edee58797b8ee13b749481f19eeb233a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据Active Directory服务器配置，以下附加设置可能比django-python3-ldap的默认配置更匹配您的服务器："
+      }
+    },
+    {
+      "segment_id": "45bc4861",
+      "source_content": "```txt\nLDAP_AUTH_USER_FIELDS=username=sAMAccountName,email=mail,first_name=givenName,last_name=sn LDAP_AUTH_OBJECT_CLASS=\"user\"\n```",
+      "source_content_hash": "6059fe9238e5a26bb82f0b4c76798be5e4cc9c8ee3c1df0499913b73c3c39ef3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_45bc4861"
+      }
+    },
+    {
+      "segment_id": "793be93c",
+      "source_content": "## Load testing",
+      "source_content_hash": "8f82ee75a4e50b76a3529c6bee8c93705915bfe2c9f9a212c557bef569d0cfd2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 压力测试"
+      }
+    },
+    {
+      "segment_id": "0b7ed806",
+      "source_content": "### JMeter",
+      "source_content_hash": "b689a1d143ea6f43e9c55bff788cce3f9c4e5c5f6cbf53a60ca93921fedd8589",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### JMeter"
+      }
+    },
+    {
+      "segment_id": "8517ac25",
+      "source_content": "There are [JMeter](https://jmeter.apache.org/) tests avaiable in our public repo on Github:",
+      "source_content_hash": "460233cd2d0f65bad7e134540af0a1898e404270bc47f7911875598098f4afc5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们在Github公共仓库中提供了[JMeter](https://jmeter.apache.org/)测试脚本："
+      }
+    },
+    {
+      "segment_id": "5e0ab881",
+      "source_content": "https://github.com/Flagsmith/flagsmith/tree/main/jmeter-tests",
+      "source_content_hash": "4347a99865dfb4b7ed1350f3cb51b27c6ae485c2349846ab49a5d5aa51f62a69",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "https://github.com/Flagsmith/flagsmith/tree/main/jmeter-tests"
+      }
+    },
+    {
+      "segment_id": "b8925cfb",
+      "source_content": "### wrk",
+      "source_content_hash": "3dcc433c55bee08e2464eb31dcedd4f463350ad9f1bdc89755c706abf15b19f1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### wrk"
+      }
+    },
+    {
+      "segment_id": "95b3e282",
+      "source_content": "We also recommend using [wrk](https://github.com/wg/wrk) for load testing the core SDK endpoints. Some examples of this\n(make sure you update URL and environment keys!)",
+      "source_content_hash": "ddde5e864e0916b74dd2567c50b092288e93aa4429487cb3f0316125b8f355d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们也推荐使用[wrk](https://github.com/wg/wrk)测试核心SDK端点的负载性能。示例命令如下（请替换URL和环境密钥）："
+      }
+    },
+    {
+      "segment_id": "7650124c",
+      "source_content": "```bash\n# Simple get flags endpoint\nwrk -t6 -c200 -d20s -H 'X-Environment-Key: iyiS5EDNDxMDuiFpHoiwzG' http://127.0.0.1:8000/api/v1/flags/\n\n# Get flags for an identity\nwrk -t6 -c200 -d20s -H 'X-Environment-Key: iyiS5EDNDxMDuiFpHoiwzG' \"http://127.0.0.1:8000/api/v1/identities/?identifier=mrflags@flagsmith.com\"\n```",
+      "source_content_hash": "4a468a66bec57f7dea7afb67bfb23312dcde0516d0023ec3976afcc3e861d3d6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7650124c"
+      }
+    },
+    {
+      "segment_id": "757c087d",
+      "source_content": "## Common Installation Issues and Fixes",
+      "source_content_hash": "cc77508f392a9ff9c559cecead3684a149121fb1f517bd98bc9cfee1b78ff041",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 常见安装问题及解决方法"
+      }
+    },
+    {
+      "segment_id": "5cd80849",
+      "source_content": "### Front end build errors with npm ERR! errno 137",
+      "source_content_hash": "fb1a97b0978bf84956abb028378ddba93ba305a0fd3b26fc38f0bd68c0fe6a85",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 前端构建报错 npm ERR! errno 137"
+      }
+    },
+    {
+      "segment_id": "8862791b",
+      "source_content": "This is an out of memory error. Start the container with more RAM.",
+      "source_content_hash": "7d9e5be71d300e7b9aa9b22f247f62e21d089561fadb0400b9befe5bc8596db6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此为内存不足错误，请为容器分配更多内存启动。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/enterprise-edition.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.948260+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "6374f2952e4c0635ed120ba3e54a26a86a8d51c5c963fed9da44668e2803a9b0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/platform/roadmap.md",
+  "source_file_content_hash": "e39ff54f526738ef6e52b4798b38b2d36036262ac07d08ef611ad2bc6e2f7c4e",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Roadmap",
+      "source_content_hash": "565f11e9c179df6219ac059610f79652f6cf4128892b6a8d8759934c48bbdd44",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 路线图"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "You can view our public roadmap on [Github](https://github.com/orgs/Flagsmith/projects/7).",
+      "source_content_hash": "0c552246d81cc40a27279e691f9afe2b955d50f911e55515460471c2201dbb6c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在 [Github](https://github.com/orgs/Flagsmith/projects/7) 上查看我们的公开路线图。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/platform/roadmap.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.924561+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e39ff54f526738ef6e52b4798b38b2d36036262ac07d08ef611ad2bc6e2f7c4e"
+  }
+}

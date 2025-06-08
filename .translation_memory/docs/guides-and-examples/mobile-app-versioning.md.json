@@ -1,0 +1,302 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/mobile-app-versioning.md",
+  "source_file_content_hash": "db3764489eced66c259f29f11b2032712d2cfb71364478b3b3056521675b94c7",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Mobile App Versioning\n---",
+      "source_content_hash": "3fa13e80f4a8372e13655e3ff685cc6689aef88085304bacb963bfdd371d2ddc",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## The Problem",
+      "source_content_hash": "951ec64cc337cc0aaf9d99c8b2b144cb5e66e92fcf63c9f37a75f1454d6f3e70",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 问题背景"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Feature Flags really come into their own when managing the features of a mobile application. If you ship a bug in your\nmobile app, there is a significant time delay in getting a fix onto your user's device:",
+      "source_content_hash": "39298783adf8a42c638a481a62dbe2c732fc235e71fa41541f114ce7ddaca63b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能开关在管理移动应用特性时展现出独特价值。当移动应用中出现缺陷时，修复补丁触达用户设备存在显著延迟："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "1. You have to wait for App/Play Store approval (although this time period has got much better in recent years)\n2. Once your new app version is live, you then have to wait for your users to upgrade their application, which could\n   take weeks or even months.",
+      "source_content_hash": "3afc76a77269efc2f06ab5bf7734a73b035e1b0326d4d1c9b5c8be5b40b49413",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 需等待应用商店审核（近年来审核周期已大幅缩短）\n2. 新版本上架后，用户可能需要数周甚至数月才会完成应用升级"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Combined, these two problems can cause real headaches if you ship a bug. Feature flags to the rescue...",
+      "source_content_hash": "9a81b79e6c9cab4204abac9cc17639deace61f829cf397ecf1e0935ae7d3780e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这两个问题叠加时，线上缺陷会造成严重困扰。此时功能开关便能大显身手..."
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## The Solution",
+      "source_content_hash": "85aef9fe7503ca480a1dbc8de4cdd0317c4517f3d1969ca7572a8ce8e13eb16b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 解决方案"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "We're going to create a Segment of affected users, and override (in this case, disable) the affected feature from _just\nthe affected users_ of our application altogether. Here's how we go about it.",
+      "source_content_hash": "4fa5576477fad6900b3db41be21bc21c74e0232a125362ff9a7e5f9ed2f96094",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将创建受影响用户分群，并针对性地对这部分用户禁用问题功能。具体实施步骤如下："
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "### 1. Put Features behind Flags",
+      "source_content_hash": "42818d7154ae6e4ee15cd162dc7da238a02cc9a3861191dc12b4dd673d30ba6b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1. 为功能添加开关"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "It sounds obvious, but if you don't wrap features in feature flags, you lose the ability to control them remotely. Make\nit a part of your routine to wrap new features/code in flags so you can start managing them remotely.",
+      "source_content_hash": "034d84b93375a50d8565ea55f2076d44b1699c1b377c2edd6092df0d1ead5222",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然显而易见，但若未用功能开关封装特性，将丧失远程控制能力。建议将新功能/代码封装至开关中作为开发规范。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "### 2. Start telling Flagsmith about the Device and Application Version",
+      "source_content_hash": "7db026b9b9ce25bcea45c45c692819a9589f17094332e7c8ba9478c100b6f9b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2. 向Flagsmith同步设备及应用版本信息"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Using [Identities and Traits](/basic-features/managing-identities.md), make sure you are transmitting data about your\ndevice type and version to Flagsmith. We recommend using the following Traits:",
+      "source_content_hash": "708f41c4ce06f408978997b6bdcf324ce38fe04b1453f0b55e2b4b3817b34d43",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过[身份与特征值](/basic-features/managing-identities.md)机制，确保传输设备类型和版本数据至Flagsmith。推荐使用以下特征值："
+      }
+    },
+    {
+      "segment_id": "c6dea11f",
+      "source_content": "- Platform (iOS or Android)\n- Platform Version (e.g. Android 11, iOS 14)\n- Your Application Version (this would be the version number you ship your app as - generally the one that shows up in\n  the App/Play Store)",
+      "source_content_hash": "5759a1b5ba51382301f878b7361523bb5b887b6a372c9f54c3daceaf77eddee6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 平台（iOS或Android）\n- 系统版本（如Android 11, iOS 14）\n- 应用版本（即应用商店显示的版本号）"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### 3. Track down your bug",
+      "source_content_hash": "03bd7dbf758219597bfd769f43ff75f97a3667249d48c55044fb5eaaa1b51ab6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 3. 定位缺陷范围"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "When you inevitably do ship a bug (don't worry; we've all been there!), and the bug reports start rolling in, try and\nrapidly isolate exactly what subset of devices are affected:",
+      "source_content_hash": "1b56e2e6537076b1e4644ef7531e7eeeab31536cdb57c732c1f23ecb988216f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当不可避免出现缺陷时（无需担心，这是开发者常态），根据用户反馈快速界定受影响设备范围："
+      }
+    },
+    {
+      "segment_id": "8a01ee7b",
+      "source_content": "- Is it just iOS devices running the just-shipped version?\n- Or have all Android devices broken for some reason?\n- Did you actually ship the bug 2 versions back but have only just realised now?",
+      "source_content_hash": "e2026fdde49a8bd2da0d161dd70c0b683433198690227d31321d2f35a3185f37",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 是否仅影响最新发布的iOS版本？\n- 或是所有Android设备均出现异常？\n- 可能该缺陷实际存在于前两个版本中？"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "This is generally the hardest part of the process. Work to isolate and define the smallest subset of your user-base that\nis affected.",
+      "source_content_hash": "04223d324a37f7712ed3f80e2d55543ca5b7ab0d649bf6743413a8913c92c180",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此阶段通常最为困难。需精确定义最小范围的受影响用户群体。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### 4. Segment your Users based on the Bug",
+      "source_content_hash": "587d075601c3a05ec42eb6dc35a6ecbb7c3265c73ce408b45554d543caade649",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 4. 基于缺陷创建用户分群"
+      }
+    },
+    {
+      "segment_id": "7d0728d9",
+      "source_content": ":::tip\n\nWe can make use of [Semver Aware Operators](/basic-features/managing-segments#semver-aware-operators) to drive these\nSegment rules.\n\n:::",
+      "source_content_hash": "a968c983ec68f872d593ca0e4ea89069cd6bec344dd3d666acaab2b391755274",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n可运用[语义化版本操作符](/basic-features/managing-segments#semver-aware-operators)来构建分群规则\n\n:::"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "From your work in #3, create a [Segment](/basic-features/managing-segments.md) in Flagsmith that captures the defined\nset of users from #3. Let's say we just shipped version `5.4.1`, but we have figured out that the bug actually showed up\nin version `5.4.0`. Also, this issue is only affecting iOS devices; Android users don't have the problem. So our Segment\nwould contain 2 rules and read something like:",
+      "source_content_hash": "53b3a28cb14d1c8b65abd5e18b7dcfb356c87604da61ed6d91f569ceeaa97b4c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据第3步分析结果，在Flagsmith中创建对应[分群](/basic-features/managing-segments.md)。例如：最新发布版本为`5.4.1`，但发现缺陷实际始于`5.4.0`，且仅影响iOS设备。此时分群规则应包含："
+      }
+    },
+    {
+      "segment_id": "24c174ca",
+      "source_content": "- Trait `platform` _equals_ `iOS`\n- Trait `version` _semver >=_ `5.4.0` **AND** _semver<=_ `5.4.1`",
+      "source_content_hash": "22fcbb459521b2b149563ab30577b046e2413cad977698f2f39a044356dd05cb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 特征值`platform`等于`iOS`\n- 特征值`version`满足语义化版本`>=5.4.0`且`<=5.4.1`"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "### 5. Override your Feature with your Segment",
+      "source_content_hash": "dd569e8cb8d2660c0fe2c1671f30545cafccaa87b45fa0716c86b8049f4d2805",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 5. 针对分群覆盖功能开关"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "Locate the feature that is causing the problem. Get to the Overrides tab, add the Segment you defined in #4, and set\nthat Feature Override to **_disabled_**.",
+      "source_content_hash": "d79d705db3ae5d51f2656dca4185d421702b7db191a6b49738a76bf2ac5a6587",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "定位问题功能，进入覆盖选项卡，添加第4步定义的分群，并将该功能覆盖设置为**_禁用_**状态。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "And breathe...",
+      "source_content_hash": "a9728c8658981cfc6cc001d086589e5894177019dd2e41ff2162b3f9df5b61e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在可以松口气了..."
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "## What just happened?",
+      "source_content_hash": "d50266bfef0db38c28929755d4ab33b01da2b7f284eeecc8fa9cf4aaea9fc182",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 实现原理"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "We've done the hard work and isolated which precise subset of users are affected by this issue. We want the feature to\ncontinue to show and work for all our other users (in this case Android users and iOS users on versions older than\n`5.4.0`), but we want to disable it for the affected users.",
+      "source_content_hash": "8914e6360fc02b82fa9697926cd1add471d382fd206bf1f6780de4c9d742c6fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过上述步骤，我们精确锁定了受影响的用户子集。在保持其他用户（Android用户及版本低于`5.4.0`的iOS用户）正常使用功能的同时，仅对问题用户禁用该特性。"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "So we created a Segment that precisely identified the affected users, and then used that Segment to override the\nfeature, **_but just for those users_**.",
+      "source_content_hash": "b72bdcc77137c08124906df4ff042c66b3548aad8383af31039b3558d8f04cec",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因此，我们创建了一个精准识别受影响用户的用户分群，并利用该分群对功能进行覆盖——**_但仅针对这些特定用户_**。"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "## What happens next?",
+      "source_content_hash": "08fc964e369afa4ad68bf9ff6e496c72f1aa781195a702e3cd4b89066d01e219",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续会发生什么？"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "Firstly, (sounds obvious but who knows!) ship a fix! Push version 5.4.2 that fixes the issue. As users upgrade, their\n`version` trait will automatically change to 5.4.2 and they will drop out of the Segment. Flagsmith will then start\nsending an Enabled flag for this feature, and your users will have access to the feature that you just fixed.",
+      "source_content_hash": "d8ebe84cb6c66a384c76e8c191ccf8479d49c532dca10552c9c1b930968f066a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先（虽然听起来显而易见但值得强调），发布修复版本！推送修复问题的5.4.2版本。当用户升级后，其`version`特征值将自动变更为5.4.2，从而脱离该分群。Flagsmith随后会开始向这些用户发送该功能的启用标志，用户即可访问已修复的功能。"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "We can keep this Segment and the override in place. In fact, it's really important that we do! Lots of people don't\nbother upgrading their apps at all. That's fine though; with the Segment in place, they will never know that you shipped\na clanger.",
+      "source_content_hash": "e3ae9a48562f2fcd9ca7a60c994c2cc0dde145c1f962a77a1254326f55f54316",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们可以保留这个分群及其覆盖设置。事实上，这非常必要！许多用户根本不会主动升级应用。但这并无妨——只要分群规则持续生效，这些用户就永远不会察觉你曾发布过有缺陷的版本。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/mobile-app-versioning.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.927009+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "db3764489eced66c259f29f11b2032712d2cfb71364478b3b3056521675b94c7"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/integrations/dynatrace.md",
+  "source_file_content_hash": "ae19023cc32e8dc69174cb563bdbaaa54f2bc10cc915f47a8952df45fc993fcc",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Dynatrace Integration\nsidebar_label: Dynatrace\nhide_title: true\n---",
+      "source_content_hash": "a2a5b11578cd0ed289011a17b00c709dda3977885372d7e68712bfe2661ffd58",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "![Dynatrace](/img/integrations/dynatrace/dynatrace-logo.svg)",
+      "source_content_hash": "7baaf69ee17e316e95b3614cc0168b16dec4bc1d53b8a90411359d3bd878ef69",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Dynatrace](/img/integrations/dynatrace/dynatrace-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Flag Change Events",
+      "source_content_hash": "f3af6d40bcc44ef9d2959a3340936e387c6865446afa5d6b79cde661b8556e7a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关变更事件"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "You can integrate Flagsmith with Dynatrace. Send flag change events from Flagsmith into your Dynatrace event stream.",
+      "source_content_hash": "f33e26a7538a4fed1b334e39b5629c635e19e3ea90c1d8344b95a2a32570aa93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与Dynatrace集成，将Flagsmith中的功能开关变更事件发送至Dynatrace事件流。"
+      }
+    },
+    {
+      "segment_id": "2e76584d",
+      "source_content": ":::tip\n\nThe Flagsmith Javascript SDK can also talk to the Dynatrace Javascript SDK.\n[More info available in our JS docs page](../clients/client-side/javascript.md#dynatrace-javascript-sdk-integration).\n\n:::",
+      "source_content_hash": "c6043a4970c7a12331d93b1f53568c643a87c1b32b89b56c5aedf26e57438184",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nFlagsmith JavaScript SDK 也可与 Dynatrace JavaScript SDK 进行交互。\n[更多信息请参阅我们的JS文档页面](../clients/client-side/javascript.md#dynatrace-javascript-sdk-integration)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "### Integration Setup",
+      "source_content_hash": "bee661851c6e6558becef2ac586ab1bdcd083298d8e9619019e16e897b41dfab",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 集成设置"
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "1. Log into Dynatrace create a new Access Token with the following permissions:\n   - `API v2 scopes` : `Ingest events`\n2. Go to Flagsmith > Integrations > Dynatrace > Add Integration\n3. Select the `Flagsmith Environment` you want to track.\n4. The `Base URL` depends on your Dynatrace installation:\n   - Managed: `https://{your-domain}/e/{your-environment-id}/`\n   - SaaS: `https://{your-environment-id}.live.dynatrace.com/`\n   - Environment ActiveGate: `https://{your-activegate-domain}/e/{your-environment-id}/`\n5. The `API Key` is the Access Token you created in step 1.\n6. The `Entity Selector` defines which Dynatrace entities you want to associate Flag Change events with.\n   [Check the Dynatrace Docs](https://www.dynatrace.com/support/help/dynatrace-api/environment-api/entity-v2/entity-selector)\n   for more information on those.",
+      "source_content_hash": "7aee0613e498f502c857af7b8a22a4fdf32df0ac034fbf8d0e94af43e830ec29",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 登录Dynatrace并创建具有以下权限的新访问令牌：\n   - `API v2 作用域`：`接收事件`\n2. 进入Flagsmith > 集成 > Dynatrace > 添加集成\n3. 选择您要追踪的`Flagsmith环境`\n4. `基础URL`取决于您的Dynatrace部署方式：\n   - 托管版：`https://{您的域名}/e/{您的环境ID}/`\n   - SaaS版：`https://{您的环境ID}.live.dynatrace.com/`\n   - 环境ActiveGate：`https://{您的ActiveGate域名}/e/{您的环境ID}/`\n5. `API密钥`即步骤1中创建的访问令牌\n6. `实体选择器`用于定义要将功能开关变更事件关联到哪些Dynatrace实体\n   [查阅Dynatrace文档](https://www.dynatrace.com/support/help/dynatrace-api/environment-api/entity-v2/entity-selector)\n   获取更多相关信息"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "### How It Works",
+      "source_content_hash": "c5126b76281158737eb739962a52f0462e915e4a257aa4c0a535528e4c3ff75c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 工作原理"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Once the setup is complete, try changing a Flag value in the Environment you configured during setup. Then look at one\nof the Dynatrace Entities defined in the `Entity Selector`. You will see Deployment Events show up in the Events panel.",
+      "source_content_hash": "fe88e87c5cac096798c450e312b5dccdfa0e17b78a5db35a369968ce1d441f57",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成设置后，尝试在配置过程中指定的环境中修改某个功能开关值。然后查看`实体选择器`中定义的任一Dynatrace实体，您将在事件面板中看到部署事件。"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "![Dynatrace Events](/img/integrations/dynatrace/dynatrace-events-panel.png)",
+      "source_content_hash": "0941e7c1078f272f5114ed7cc44797b1e92b4901b5c5554dd76f73be640c3477",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Dynatrace事件](/img/integrations/dynatrace/dynatrace-events-panel.png)"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Javascript to Javascript SDK",
+      "source_content_hash": "a03e22da4330149ad47df20148b49b94d17633122ffdc2e87d7e3f3611c92057",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## JavaScript SDK间通信"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "You can also send Identity flag values from Flagsmith to Dynatrace using our\n[Javascript Integration](../clients/client-side/javascript.md#dynatrace-javascript-sdk-integration).",
+      "source_content_hash": "dc75becd0eaf82ee530a348be0971f56a878b9ae8c3c42a112bc5b4b00c1f6b0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以通过我们的\n[JavaScript集成](../clients/client-side/javascript.md#dynatrace-javascript-sdk-integration)\n将用户身份标识的功能开关值从Flagsmith发送至Dynatrace。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/integrations/dynatrace.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.941268+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ae19023cc32e8dc69174cb563bdbaaa54f2bc10cc915f47a8952df45fc993fcc"
+  }
+}

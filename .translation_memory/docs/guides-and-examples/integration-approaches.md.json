@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/integration-approaches.md",
+  "source_file_content_hash": "ab842f1c66a7ca88ceb4da8e151f6c63383541a10f26a1831596770e52d6b808",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Integration Approaches\n---",
+      "source_content_hash": "f46ea30638643b91b72c86d0fe825f17af08d80e9fd70195e78efe8ff7ea238f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Client Side SDK Flag endpoints are public",
+      "source_content_hash": "34255e298a7a86c8d9f949c5c1cdc56fe112ce70f15b6a6e970db8bdf6f36229",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 客户端SDK的Flag端点均为公开"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "The API endpoints that our SDKs make calls to are all public. Your Environment API key should also be considered public.\nThink if it in the same way you would a Google Analytics key.",
+      "source_content_hash": "6e5bd90dacb0ea72d9bc2e5e12c44d03d01a8dd409e1ebd68452c8489ca1002e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们SDK调用的API端点都是公开的。您的环境API密钥也应视为公开信息，其性质类似于Google Analytics跟踪密钥。"
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "### Segment and Targeting rules are not leaked to the client",
+      "source_content_hash": "bbda812981572af396cecf88c8b29c3cb6ce2064eb8f435f61e2234c18f2dd05",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户分群与定向规则不会泄露至客户端"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "If flags are evaluated within the client-side SDKs (Web Browser, Mobile App), the entire set of rules for targeting\nusers based on Segments etc need to be sent to the client. Given these endpoints are public by default, we think this is\na leak of potentially sensitive information. We think the best place for your flags to be evaluated is on our server or\nyour server. Not on the client.",
+      "source_content_hash": "d84a7a06bb3c1a9a1deab290be379c053b9adbfb09e3f9f1bd05a781b48d3261",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果在客户端SDK（网页浏览器、移动应用）内评估功能开关，则需要将基于用户分群的全部定向规则发送至客户端。鉴于这些端点默认公开，我们认为这可能导致敏感信息泄露。最佳实践是在我们的服务器或您的服务器上评估功能开关，而非客户端。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### You can get your flags with a single HTTP GET",
+      "source_content_hash": "ddcc8c11d3d9dabd37c397c6b24a43a59963b67b6699851a7827b4dd230f9122",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过简单HTTP GET即可获取功能开关"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "You don't need to run a set of complicated rule evaluations to get your flags. Just hit our endpoint and you get your\nflags. You won't receive any information on Segments or rollout rules, and this is by design. If you want to run your\nown HTTP client within your application its just a simple HTTP GET and you're good.",
+      "source_content_hash": "961e62dc95725815a887248fa8bf66040acdd88f810d22e7057cb1b51e138cc4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "无需运行复杂的规则评估逻辑，只需调用我们的端点即可获取功能开关。您不会收到任何关于用户分群或发布规则的信息，这是刻意设计。若需在应用中自行实现HTTP客户端，仅需发起简单的HTTP GET请求即可。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "### Build Time Flag Retrieval",
+      "source_content_hash": "89de13396be737e774c7ac21e6591201a9cda6e5ad962175c321d3e19139d372",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 构建时获取功能开关"
+      }
+    },
+    {
+      "segment_id": "64f5e8db",
+      "source_content": ":::tip\n\nWe have a [Flagsmith CLI](https://github.com/Flagsmith/flagsmith-cli) which can be helpful here!\n\n:::",
+      "source_content_hash": "af5ce53dc2c45f224080a7f28295746ca48fc4e0ca3fb559906820888e88c8b4",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n我们提供[Flagsmith CLI工具](https://github.com/Flagsmith/flagsmith-cli)可简化此流程！\n\n:::"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "A more advanced technique is to grab the Flag defaults from the Flagsmith API at build time and include them on your\napplication build. The steps for this might look something like this:",
+      "source_content_hash": "d03ac2cf97d5618179c6556755c67ce156445e9f79e848182e0cefbe77a68388",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更高级的技术方案是在构建时从Flagsmith API获取功能开关默认值，并将其嵌入应用构建。具体步骤如下："
+      }
+    },
+    {
+      "segment_id": "f2c8a42b",
+      "source_content": "1. Push your code to your git repository.\n2. An automated build pipeline is triggered.\n3. One stage of the pipeline is to grab the current default flag states from the `/flags` endpoint and store the JSON\n   response within your application build.\n4. Upon startup of your application, read the JSON file is embedded within your application first to get sane default\n   flags and config.\n5. Asynchronously call the Flagsmith API to get the most recent Flag and Config values.",
+      "source_content_hash": "2a0dd3d6570c7926d4d7ea550515ca16ab6b0152a7791783d3d901e3f742a391",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 将代码推送至Git仓库\n2. 触发自动化构建流水线\n3. 在流水线阶段中调用`/flags`端点获取当前默认开关状态，并将JSON响应存入应用构建\n4. 应用启动时优先读取内嵌的JSON文件获取初始开关配置\n5. 异步调用Flagsmith API获取最新开关配置"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Caching Flags Locally",
+      "source_content_hash": "e28ab81acc9d6f4e251d7ec32f8b35792f3e7627506f83dfdf69f655819a8ea0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 本地缓存功能开关"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "This approach depends on whether your application has an ability to persist data to the host OS during runtime. Locally\ncaching flags within your application environment ensures that you can subsequently start your application without\nhaving to block for a call to the Flagsmith API. A common workflow would then be:",
+      "source_content_hash": "8c12722cc74aec1729facac5d4ac9a785baceb15969c9bcea8c85742b1975e28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方案取决于应用运行时能否在主机操作系统持久化数据。在应用环境中本地缓存开关可确保后续启动时无需阻塞等待Flagsmith API调用。典型工作流如下："
+      }
+    },
+    {
+      "segment_id": "cef3cb03",
+      "source_content": "1. Build your application with sane defaults.\n2. Start your app, using the sane defaults, and asynchronously call the Flagsmith API to retrieve up-to-date Flags.\n3. Once the up-to-date Flags are retrieved, store them locally.\n4. On subsequent app launches, check local storage to see if any flags are available. If they are, load them\n   immediately.\n5. Asynchronously call the Flagsmith API to retrieve the up-to-date Flags.",
+      "source_content_hash": "7038dc9dc4175f0e305400968eb2ab25312a66e0339cff8801d6d433150343c3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 使用合理默认值构建应用\n2. 启动时先使用默认值，同时异步调用Flagsmith API获取最新开关\n3. 获取最新开关后将其存入本地存储\n4. 后续启动时优先检查本地存储中的开关配置\n5. 始终异步调用Flagsmith API保持配置更新"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "The official [Javascript Client](/clients/javascript/) offers optional caching built in to the SDK.",
+      "source_content_hash": "bba49a22c6b0c6ac1ae331d58b528e66a820b19d9bb51ea33bd552e6218fbd41",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "官方[Javascript客户端](/clients/javascript/)已内置可选缓存功能。"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Caching Flags on a Server",
+      "source_content_hash": "b45aa9546787813551b4bcd995284ba3e509ce647ac40c67645112dbb8a86acf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 服务器端缓存功能开关"
+      }
+    },
+    {
+      "segment_id": "97388c5b",
+      "source_content": ":::tip\n\nNote that you can also [evaluate flags locally](../clients/overview.md) in our Server Side SDKs.\n\n:::",
+      "source_content_hash": "9df1a13f75870cb43b514bca3f9c1a8fb9edd8cd3faafa17db89dcd920a80be9",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n注意：我们的服务端SDK也支持[本地评估开关](../clients/overview.md)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "When running the Flagsmith SDK within a Server environment, it is difficult for the SDK to ascertain what sort of\ncaching infrastructure is available to it. For this reason, caching flags in a Server Environment needs to be integrated\nby hand. However, it's pretty simple!",
+      "source_content_hash": "171b5cbeec0e7d58df4caa18c47db694ca0ee55a94cd64eff40bb0e10ce401e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在服务器环境中运行时，SDK难以自动感知可用的缓存基础设施。因此服务端缓存需要手动集成，但实现非常简单："
+      }
+    },
+    {
+      "segment_id": "a4bd3cfc",
+      "source_content": "1. When a server starts up, get the Flags from the Flagsmith API. They will now be in memory within the server runtime.\n2. If you have caching infrastructure available (for example, memcache, redis etc), you can then store the flags for\n   that environment within your caching infrastructure.\n3. You can set up a [Web Hook](/advanced-use/system-administration.md#web-hooks) within Flagsmith that sends flag change\n   events to your server infrastructure.\n4. Write an API endpoint within your infrastructure that receives flag change events and stores them in your local\n   cache.\n5. You can now rely on your local cache to get up to date flags.",
+      "source_content_hash": "e4896227ce5f311fe29d18933f7dbe93cfdcf06fc318b4cd8752aa383ba03278",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 服务器启动时从Flagsmith API获取开关配置，此时配置存在于运行时内存中\n2. 若有可用缓存设施（如memcache、redis等），可将环境开关存入缓存\n3. 在Flagsmith中设置[Web Hook](/advanced-use/system-administration.md#web-hooks)，将开关变更事件推送至服务器\n4. 编写接收开关变更事件的API端点，将更新存入本地缓存\n5. 后续可直接依赖本地缓存获取最新开关配置"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/integration-approaches.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.953487+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ab842f1c66a7ca88ceb4da8e151f6c63383541a10f26a1831596770e52d6b808"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/elixir.md",
+  "source_file_content_hash": "c15f1137a8c5f425e89298d5b80d817e1f1114c01c6b756f4510c67bd6a27fcf",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Elixir SDK\nsidebar_label: Elixir\ndescription: Manage your Feature Flags and Remote Config in your Elixir applications.\nslug: /clients/elixir\n---",
+      "source_content_hash": "c6d2bc08302d0affeecbee682d4d5f5cc0bf0d155dc8c7107531cdca16bb7040",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library can be used with server-side Elixir projects. The source code for the client is available on\n[Github](https://github.com/flagsmith/flagsmith-elixir-client).",
+      "source_content_hash": "074bde7febb88564a33ec8ceffecf1064eb2157e718c18334484e28585df4da5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库可用于服务端Elixir项目，客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-elixir-client)。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Includes functions and types wrapping the API functionality, schemas and responses.",
+      "source_content_hash": "3b63904436f3318f50c9b4b48001be014eafe0e7d78667a7d129275e6b0a2e0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "包含封装API功能、数据模式及响应的函数与类型。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "Add to your `mix.exs` `deps`:",
+      "source_content_hash": "fd0618788ce340cca2ed7448d71b4b51bfc39f0d4af67f6d40dab5591530dd31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在`mix.exs`文件的`deps`部分添加："
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "### github only while developing",
+      "source_content_hash": "16b1f42b0d167f3b9c1290e2d97a46091875d146987fe518e8312e8b9f9ebe75",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开发期间仅使用github源"
+      }
+    },
+    {
+      "segment_id": "940e34e3",
+      "source_content": "```elixir\ndef deps do\n  [\n    {:flagsmith_elixir_sdk, \"~> 0.1\"}\n  ]\nend\n```",
+      "source_content_hash": "8775228716e0daecc61eb66619c2e401872eb87287bac61235b98ec799509482",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_940e34e3"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Configuration",
+      "source_content_hash": "37f210b46aa9013050eaa3d7a439965867d73a7f632cdfce2001f865b525946e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "You can configure the SDK per environment using a static default config, for instance in your `config/config.exs`\nadding:",
+      "source_content_hash": "0d81a27218fb2b718fc69d1456851c454f5d218b7ebe0edc66a52bd2830c1e48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过静态默认配置按环境配置SDK，例如在`config/config.exs`中添加："
+      }
+    },
+    {
+      "segment_id": "b017063d",
+      "source_content": "```elixir\nconfig :flagsmith_elixir_sdk, :sdk,\n       environment_key: \"YOUR-ENV-KEY\"\n```",
+      "source_content_hash": "4b4bbac10a0cd3e70c1bc275258ea00e2e99f6fbbd8eaf87b9637cb155521e43",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b017063d"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "You can also configure the base url path to use in case you're not using the public API:",
+      "source_content_hash": "b245ced83c15658aee297d3b8e9da4b503aeefd81c0c0091f1bf0a53bebdbdbb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若未使用公共API，可配置基础URL路径："
+      }
+    },
+    {
+      "segment_id": "de8f60af",
+      "source_content": "```elixir\nconfig :flagsmith_elixir_sdk, :sdk,\n       environment_key: \"YOUR-ENV-KEY\",\n       base_url: \"YOUR-BASE-URL\"\n```",
+      "source_content_hash": "9f3fe7aa2840ad310f3d60f0023175659e61996bd41d6a077310988d0ac748f9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_de8f60af"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "For runtime configuration you can create a client struct manually and pass it as the first argument to whatever SDK\nfunction you want to call:",
+      "source_content_hash": "e248dc55968dcbf2a47920cff4980d31a37abbbf42ff029f1e5a80c25a0903c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需运行时配置，可手动创建客户端结构体，并将其作为首个参数传递给任意SDK函数："
+      }
+    },
+    {
+      "segment_id": "48ec8149",
+      "source_content": "```elixir\n{:ok, sdk_client} = Flagsmith.SDK.new(\"YOUR-ENV-KEY\")\n\nFlagsmith.SDK.API.flags_list(sdk_client)\n\n### sample response ###\n{:ok, [\n   %Flagsmith.API.FeatureStateSerializerFull{\n     enabled: false,\n     environment: 11278,\n     feature: %Flagsmith.API.Feature{\n       created_date: ~U[2021-10-24 13:40:02Z],\n       default_enabled: false,\n       description: \"Header Size\",\n       id: 13534,\n       initial_value: \"24px\",\n       name: \"header_size\",\n       type: \"MULTIVARIATE\"\n     },\n     feature_segment: nil,\n     feature_state_value: \"24px\",\n     id: 72267,\n     identity: nil\n   },\n   %Flagsmith.API.FeatureStateSerializerFull{\n     enabled: false,\n     environment: 11278,\n     feature: %Flagsmith.API.Feature{\n       created_date: ~U[2021-10-24 13:41:35Z],\n       default_enabled: false,\n       description: nil,\n       id: 13535,\n       initial_value: \"18px\",\n       name: \"body_size\",\n       type: \"STANDARD\"\n     },\n     feature_segment: nil,\n     feature_state_value: \"18px\",\n     id: 72269,\n     identity: nil\n   }\n ]}\n```",
+      "source_content_hash": "b915b94a746d8edd111a0f7c1a3785d49f6e5b4830bfde7e64d07ca5f09f37af",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_48ec8149"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "`Flagsmith.SDK.new/2` accepts the base url as the second argument.",
+      "source_content_hash": "1514c169489898194e17518b780425351cc26c5d21c7af96e8e2a172bcb5bd7c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`Flagsmith.SDK.new/2`将基础URL作为第二个参数接收。"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "## HTTP Client",
+      "source_content_hash": "a685f292ddc2e665576ccb6aed645c628280ac8b7d0c7d783ff411a32bbd2f8a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## HTTP客户端"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "Underneath the SDK uses [Tesla](https://github.com/teamon/tesla), so you can customise which adapter you want to use.\nRefer to `Tesla`'s documentation for additional context.",
+      "source_content_hash": "4f2a0f6532b71ced53b5dce0d3ac9d32d177ba8bfa70cb37152e290f2d5b55cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK底层使用[Tesla](https://github.com/teamon/tesla)，因此可自定义适配器。具体配置请参阅`Tesla`文档。"
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "The default HTTP adapter is Erlang's `httpc`, to use instead, for instance, `hackney`, and the same for any other of the\nsupported clients, add to your deps the correct dependency:",
+      "source_content_hash": "cf19794210a9f1578593915357e1af1c7ebd0769c36a13325d06f59e3535d544",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认HTTP适配器为Erlang的`httpc`。若需改用例如`hackney`等支持的客户端，需在依赖中添加对应组件："
+      }
+    },
+    {
+      "segment_id": "a476a172",
+      "source_content": "```elixir\ndefp deps do\n  [\n    # ...\n    {:hackney, \"~> 1.17\"}\n  ]\nend\n```",
+      "source_content_hash": "0dc5a14a25d83de58b6f6dee2cbc9b1a479c8f6c01df6c9c43ce9af82239d477",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a476a172"
+      }
+    },
+    {
+      "segment_id": "7bc8bb24",
+      "source_content": "and to your `config/config.exs` the adapter module",
+      "source_content_hash": "051a160b122e535c519725828e8d762fef136237634086faebc46c3391420990",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "并在`config/config.exs`中配置适配器模块："
+      }
+    },
+    {
+      "segment_id": "f39e109c",
+      "source_content": "```elixir\nconfig :tesla, adapter: Tesla.Adapter.Hackney\n```",
+      "source_content_hash": "c285cb296451cfad848336372116b5358eddac3f0e4beec02128cf675802356c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f39e109c"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/elixir.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.939811+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c15f1137a8c5f425e89298d5b80d817e1f1114c01c6b756f4510c67bd6a27fcf"
+  }
+}

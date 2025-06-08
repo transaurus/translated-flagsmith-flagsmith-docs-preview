@@ -1,0 +1,112 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/integrations/slack.md",
+  "source_file_content_hash": "51a729f52e4ec4b065e8d6a1fc8f1101f84947bde11872d427ea427186fae92c",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Slack Integration\ndescription: Integrate Flagsmith with Slack\nsidebar_label: Slack\nhide_title: true\n---",
+      "source_content_hash": "d85b9c03474318af6bfbd98d51a399f7c6f50144c72e8c39878cdd518cdd4b41",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "![Image](/img/integrations/slack/slack-logo.svg)",
+      "source_content_hash": "e407350bd79c8a25fc22da2176f820f28cd82bb737e1bf2e69814106d1171fb5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/integrations/slack/slack-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "You can integrate Flagsmith with Slack. Send flag change events from Flagsmith into your Slack channels.",
+      "source_content_hash": "9fc9de08646e9fa3919833e8cab0e4be12cf2f1e6e6d28eca201a2b3b29155c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与Slack集成。将Flagsmith中的功能标志变更事件发送至您的Slack频道。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Integration Setup",
+      "source_content_hash": "42eeb793ab64304e5c9607a7548631a7e61c3a4aa782d56d87f97c42e486f90f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成设置"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If you don't have an account with Flagsmith already, please [sign up](https://app.flagsmith.com/signup) and create a new\nProject within Flagsmith.",
+      "source_content_hash": "9e89f60e49a571f1541c76e9b40baa7da9a1e787803419e99e8ca5223b77e8e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您尚未拥有Flagsmith账户，请先[注册](https://app.flagsmith.com/signup)并在Flagsmith中创建新项目。"
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "1. Go to your Flagsmith project, and click Integrations. Then click \"Add Integration\" by the Slack integration.\n2. Select the Environment you want to receive events for in Slack, then click \"Authorise\"\n3. You will be sent to Slack to authenticate your account.\n4. Once back in Flagsmith, select the Slack Channel you want to send events to.",
+      "source_content_hash": "a5df478fc1af2860a81760de5f3b9d1f2dc3de7f3ab50405fd13229d62ec0d6d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 进入您的Flagsmith项目，点击\"集成\"，然后在Slack集成旁点击\"添加集成\"。\n2. 选择需要接收Slack通知的环境，点击\"授权\"。\n3. 系统将跳转至Slack进行账户认证。\n4. 返回Flagsmith后，选择要接收通知的Slack频道。"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Using the Slack App",
+      "source_content_hash": "90b8dc94f0b0b6cc1e729a24c187d7caff2f9e1226512e52428149ce38a1df19",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用Slack应用"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Whenever you create, update or delete a Flag in your selected Environments, the Flagsmith Bot will send a message into\nyour selected Slack channel detailing the changes that were made.",
+      "source_content_hash": "632e68d8291b8a8c62d5b12300dc603b86afe9448a56645a1e1fad1cf5301af9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您在选定环境中创建、更新或删除功能标志时，Flagsmith机器人会向指定Slack频道发送详细变更信息。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Privacy Policy",
+      "source_content_hash": "1925b2aedabaf9519dec85e9578825ce3e9336a44a7277f1509526e2322c54b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 隐私政策"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "You can view our [privacy policy here](https://flagsmith.com/privacy-policy/).",
+      "source_content_hash": "e7f33c8524bae1b2e2fd9462d6ee377de7fb8ce78c66d0570b2582e7fc3a997f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可在此查看我们的[隐私政策](https://flagsmith.com/privacy-policy/)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/integrations/slack.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.931289+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "51a729f52e4ec4b065e8d6a1fc8f1101f84947bde11872d427ea427186fae92c"
+  }
+}

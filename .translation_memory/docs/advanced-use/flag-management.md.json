@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/flag-management.md",
+  "source_file_content_hash": "dc16748ef5efdb0838e44ea4f9de2cc30c09d2f677481acb970521b105f247d7",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Flag Management",
+      "source_content_hash": "b1943cc33ced9d01c14636b8b10e7cf509edf3875c456a65c4dcd9ee08c635bd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 功能开关管理"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "Managing larger numbers of flags is easy using some of the tools built into Flagsmith.",
+      "source_content_hash": "f184c9e8eb9f2f888c6cea4b157a0e5e0b9c8d7b71ba248580c365636d38834a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过Flagsmith内置工具，可以轻松管理大量功能开关。"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "![Image](/img/flag-settings.png)",
+      "source_content_hash": "d6f49862ba189c1fe0fe8dab4a99a1b701bbfb4dbc488be74414184e26411ae8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-settings.png)"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Tagging",
+      "source_content_hash": "0714d8fd587dd33d23783b2824afb461989a5b7afbd1b06974260cfea027cfbe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 标签管理"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "You can create tags within Flagsmith and tag Flags in order to organise them. Tags can also be used to filter the list\nof Flags in the event that you have a large number.",
+      "source_content_hash": "e220eed86cb483a40175b3ba41a69a57145613a3a1b711870ccd3f86af9dd763",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在Flagsmith中创建标签并为功能开关打标，以便进行组织管理。当存在大量功能开关时，标签还可用于筛选列表。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "![Image](/img/flag-tags.png)",
+      "source_content_hash": "d3ff8ebc4e382735270433b32bacfc8a10140a81f6f32142f301994d9da401fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-tags.png)"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Flag Archiving",
+      "source_content_hash": "9feacfc539c83bad97006f69dadcc265f6b400fae0fbba9f23f8b0c61daa9734",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关归档"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "You can also archive Flags within Flagsmith. Archived flags will continue to be sent to your SDKs when you get the flags\nfor your Environment, but by default they are hidden from the main list of flags.",
+      "source_content_hash": "19f5c8732e6f3367f57f70daf6d0514e74d59b1c5bb0b4c016310b57be06d31f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以在Flagsmith中归档功能开关。归档后的开关仍会随环境配置下发至SDK，但默认会从主列表中隐藏。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "You can set a Flag as Archived from the Flag settings tab.",
+      "source_content_hash": "3a03302731f81ec323304c0a0e95f47917bc56fd41e87b19ed9f69d3865d7e2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过功能开关设置选项卡将开关标记为已归档状态。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Archived flags are often used when you have customers running older versions of your mobile app. You may well have\nfinished with a flag, but you can't remove it as there are still some older versions of your app out there that depend\non that flag. Archiving the flag helps to keep your main list of flags under control.",
+      "source_content_hash": "cdbe3f0101a12d9ae89b4fed64526215c3f9acafd236782d948f8a45e3811e1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当存在运行旧版移动应用的客户时，常会使用归档功能。虽然某个开关已完成使命，但由于仍有旧版应用依赖该开关而无法删除。归档功能可帮助保持主列表的整洁。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Case Sensitive Flags",
+      "source_content_hash": "ee159e39b05abc1ea9c0df61da68d63a43d34c89f0eb2150c52316c831ee2090",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 大小写敏感开关"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "By default, Flagsmith stores flags with lower case characters in order to minimise human error. If you want to store\nflags in a case-sensitive manner you can do this as a Project-wide setting from the Project Settings page.",
+      "source_content_hash": "d3042c0b0b863de51d609cd5217bc35827e8b1e01400225bb9719b27db2f3566",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，Flagsmith以小写形式存储功能开关名称以减少人为错误。如需启用大小写敏感模式，可在项目设置页面进行全局配置。"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Feature Name Regular Expressions",
+      "source_content_hash": "f80ae4f4c631e6ce3757cf761cbe6f9e3813b1dadf2d0e0bec1e09b5de5da2b4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能名称正则表达式"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "You can enforce feature name String formatting by way of a regular expression in the Project Settings area. If you want\nflags to always be lower case, or camel case, or whatever your preference, you can set it here.",
+      "source_content_hash": "081570616d1f62af26aa6c6deda74eb80f6d6f18f2d8678e68d22e505e302c5f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在项目设置区域通过正则表达式强制规范功能名称格式。无论是强制小写、驼峰命名还是其他格式要求，均可在此配置。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "## Flag Owners",
+      "source_content_hash": "df6b72404b275ccd44b92da51a7ea2d422688f95e0032486d3db141841ebe193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关负责人"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "You can specify members of your team as owners of individual Flags. This helps in larger teams when you need to identify\nwho is responsible for a particular flag.",
+      "source_content_hash": "c8363c0c78cfc4cc0ea791f0e2cfa7eb79037f9ceafbde33fbcc6f8c53ec5331",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可为每个功能开关指定团队负责人。这在大型团队中有助于明确各开关的维护责任。"
+      }
+    },
+    {
+      "segment_id": "1641af73",
+      "source_content": "<img width=\"75%\" src=\"/img/flag-owners.png\"/>",
+      "source_content_hash": "c322b8428629859a17df2252fdf7f181724fb4077cdffaf06bc405daedbf9838",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1641af73"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Flag Defaults",
+      "source_content_hash": "5137c8a2c1af258d8137bd37b244eaf0f0e3e11eba2160b894bd3e860351181b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关默认值"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "By default, when you create a feature with a value and enabled state it acts as a default for your other Environments.\nIn the Project Settings page, you have the option of enabling this setting. It forces the user to create a Feature\nbefore setting its values per Environment.",
+      "source_content_hash": "c2db19c2612f289e142d3619f7fa38be978245176ee7de0ec49f8fcf9dd6a704",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，当您创建具有特定值和启用状态的功能时，该设置将作为其他环境的默认值。在项目设置页面可启用强制配置选项，要求用户必须先创建功能实体，才能按环境设置具体值。"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "## Comparing Flags",
+      "source_content_hash": "f5e8baa71011cb1ded0ce3bee06c70acc5b84acc3cf4718e98585839f39e6df2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关对比"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "You can compare Flags both across Environments and for individual Flags.",
+      "source_content_hash": "5dc73c0866248f36b2a8a3b02461d4fd57d34df64e2675ca0e6484167b0becae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以跨环境对比功能开关，也可针对单个开关进行多环境对比。"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "### Environment Comparison",
+      "source_content_hash": "a20b243d60635ddd7b125e02360676f768421908fae50f60cadd4ec5ed7faaf0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境对比"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Use the \"Compare\" menu item to get an overview of how flag values differ between any two Environments:",
+      "source_content_hash": "6bb80ea2b1a093a866cf11a11b2dec6c353e4ef402f24473e83074ecc6791d0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用\"对比\"菜单项可概览任意两个环境间的功能开关差异："
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "![Image](/img/flag-compare-environment.png)",
+      "source_content_hash": "e18c5c9c64d22a71d4231cc8b028148272ac535da8cb8b5beba7928c8b43bf21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-compare-environment.png)"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### Flag Comparison",
+      "source_content_hash": "edc176945eb9beff6c7f19c46d7b6f580b9da807541a7529e70cc3c829290a09",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开关对比"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "You can also view a the values of a single Flag against all the Environments within the Project:",
+      "source_content_hash": "2e36f53cc9ed13627e7f82f307a23a589aa73543deafc76a5b7bcb3deae663ce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以查看单个功能开关在项目所有环境中的配置值："
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "![Image](/img/flag-compare-flag.png)",
+      "source_content_hash": "bb1b90b4dd8a037ca55e63a1d27dae9d2f83fa26a94dddec3880bb3aba1ade07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-compare-flag.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/flag-management.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.949120+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "dc16748ef5efdb0838e44ea4f9de2cc30c09d2f677481acb970521b105f247d7"
+  }
+}

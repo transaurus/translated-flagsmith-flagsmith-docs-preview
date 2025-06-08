@@ -1,0 +1,412 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/server-side.md",
+  "source_file_content_hash": "aea41b9fa0f7aeb1ad0e36dfa22797a8bb836e8f93d15ef2c1d1350ce16bb080",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Manage your Feature Flags and Remote Config in your Server Side Applications.\nsidebar_label: Server Side\nsidebar_position: 2\n---",
+      "source_content_hash": "a113afac28a43f7fc4b9daaf9ce763857846363a2e975bbfa216117872adfc5a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "10c4cb47",
+      "source_content": "import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';",
+      "source_content_hash": "160e2c82fbaef13ccd094cf4ce2a1e62af37597dcff12160638e70581430def6",
+      "node_type": "mdxjsEsm",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_10c4cb47"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "# Server Side SDKs",
+      "source_content_hash": "ecd626f5cbcfa4d0d8af41176bf4e035e34cd992c18180d287d03d3278d233cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 服务端 SDK"
+      }
+    },
+    {
+      "segment_id": "bb849aa9",
+      "source_content": ":::tip\n\nServer Side SDKs can run in 2 different modes: `Local Evaluation` and `Remote Evaluation`. We recommend\n[reading up about the differences](overview#remote-and-local-evaluation-modes) first before integrating the SDKS into\nyour applications.\n\nOnce you've got that understood, lets get the SDKs integrated!\n\n:::",
+      "source_content_hash": "6496915b664984050594938ea19cdf6c18dad0433a57c325ee20cdb6997c380b",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n服务端 SDK 支持两种运行模式：`本地评估(Local Evaluation)`和`远程评估(Remote Evaluation)`。建议在集成 SDK 前先\n[了解两种模式的区别](overview#remote-and-local-evaluation-modes)。\n\n理解模式差异后，即可开始集成 SDK！\n\n:::"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Github Links",
+      "source_content_hash": "13b2df308c922fd6bb87ac550bfc2436876a53423b83a1c6737040a0388c8f17",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## GitHub 代码库"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "All our SDKs are on Github.",
+      "source_content_hash": "b8136122833434d6d1c682bd49e400acedfeb214ca5a3c1d2a303497f637ce4a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有 SDK 均托管于 GitHub。"
+      }
+    },
+    {
+      "segment_id": "0dc46dba",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\nhttps://github.com/Flagsmith/flagsmith-python-client\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\nhttps://github.com/Flagsmith/flagsmith-java-client\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\nhttps://github.com/Flagsmith/flagsmith-dotnet-client\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\nhttps://github.com/Flagsmith/flagsmith-nodejs-client\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\nhttps://github.com/Flagsmith/flagsmith-ruby-client\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\nhttps://github.com/Flagsmith/flagsmith-php-client\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\nhttps://github.com/Flagsmith/flagsmith-go-client\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\nhttps://github.com/Flagsmith/flagsmith-rust-client\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\nhttps://github.com/Flagsmith/flagsmith-elixir-client\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "1c5edd781dd4e7a5e0e4e70551dcf1ba68811bdca8cf46aa5ba8c7ddedfebe6c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0dc46dba"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "## Add the Flagsmith package",
+      "source_content_hash": "6e702b5a63ef779c87f99b398e5e0bcfffea56dd76674cc537551676bb8a51ec",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装 Flagsmith 包"
+      }
+    },
+    {
+      "segment_id": "e7961985",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```bash\npip install flagsmith\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```xml\n# Check https://search.maven.org/artifact/com.flagsmith/flagsmith-java-client\n# for the latest version!\n\n# Maven\n<dependency>\n  <groupId>com.flagsmith</groupId>\n  <artifactId>flagsmith-java-client</artifactId>\n  <version>5.0.0</version>\n</dependency>\n\n# Gradle\nimplementation 'com.flagsmith:flagsmith-java-client:5.0.0'\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```bash\n# Package Manager\nInstall-Package Flagsmith -Version 4.0.0\n\n#.NET CLI\ndotnet add package Flagsmith --version 4.0.0\n\n# PackageReference\n<PackageReference Include=\"Flagsmith\" Version=\"4.0.0\" />\n\n# Paket CLI\npaket add Flagsmith --version 4.0.0\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```bash\n# Via NPM\nnpm i flagsmith-nodejs --save\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\ngem install flagsmith\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```bash\n# Requires PHP 7.4 or newer and ships with GuzzleHTTP.\ncomposer require flagsmith/flagsmith-php-client\n\n# You can optionally provide your own implementation of PSR-18 and PSR-16.\n# You will also need some implementation of PSR-18 and PSR-17,\n# for example Guzzle and PSR-16, for example Symfony Cache.\ncomposer require flagsmith/flagsmith-php-client guzzlehttp/guzzle symfony/cache\n\n# or\ncomposer require flagsmith/flagsmith-php-client symfony/http-client nyholm/psr7 symfony/cache\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```bash\ngo get github.com/Flagsmith/flagsmith-go-client/v2\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```bash\n# Cargo.toml\n[dependencies]\nflagsmith = \"~1\"\n\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\n```elixir\ndef deps do\n  [\n    {:flagsmith_engine, \"~> 1.0\"}\n  ]\nend\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "5a81c0267c84164561f152e9c7e94f2e66059b53b0f0c1a65952dc16f52cc905",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7961985"
+      }
+    },
+    {
+      "segment_id": "a75f8411",
+      "source_content": "## Initialise the SDK",
+      "source_content_hash": "c66e0eccd95d22e0286788813b0fcf9438009f04848a47acd408576aab739468",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 初始化 SDK"
+      }
+    },
+    {
+      "segment_id": "0a66a90b",
+      "source_content": ":::tip\n\nServer-side SDKs must be initialised with Server-side Environment keys. These can be created in the Environment settings\narea and should be considered secret.\n\n:::",
+      "source_content_hash": "fc611d0c0ca66c1d939a1205450780f76778389022dcad35fa7a127b495aa71b",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n服务端 SDK 必须使用服务端环境密钥初始化。该密钥可在环境设置中创建，应视为敏感信息。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "b8c004ac",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```python\nfrom flagsmith import Flagsmith\n\nflagsmith = Flagsmith(\n    environment_key = \"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\"\n)\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java\nprivate static FlagsmithClient flagsmith = FlagsmithClient\n    .newBuilder()\n    .setApiKey(System.getenv(\"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\"))\n    .build();\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```csharp\nusing Flagsmith;\n\nFlagsmithClient _flagsmithClient;\n\n_flagsmithClient = new(\"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\");\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```javascript\nconst Flagsmith = require('flagsmith-nodejs');\n\nconst flagsmith = new Flagsmith({\n environmentKey: '<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>',\n});\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\nrequire \"flagsmith\"\n\n$flagsmith = Flagsmith::Client.new(\n  environment_key: '<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>'\n)\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```php\nuse Flagsmith\\Flagsmith;\n\n$flagsmith = new Flagsmith('<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>');\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```go\nimport (\n  flagsmith \"github.com/Flagsmith/flagsmith-go-client\"\n)\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()\n\n// Initialise the Flagsmith client\nclient := flagsmith.NewClient('<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>', flagsmith.WithContext(ctx),)\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```rust\nuse std::env;\nuse flagsmith::{Flag, Flagsmith, FlagsmithOptions};\n\nlet options = FlagsmithOptions {..Default::default()};\nlet flagsmith = Flagsmith::new(\n        env::var(\"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY\")\n            .expect(\"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY not found in environment\"),\n        options,\n    );\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\n```elixir\nclient_configuration = Flagsmith.Client.new(environment_key: \"MY_SDK_KEY\")\n```\n\nOr use global configuration in which case you don't need to create a client or pass configuration options to requests.\nAll configuration is optional with exception of the `:environment_key`. For instance in `config/config.exs`:\n\n```elixir\nconfig :flagsmith_engine, :configuration,\n       environment_key: \"<YOUR SDK KEY>\",\n       api_url: \"https://edge.api.flagsmith.com/api/v1>\",\n       default_flag_handler: function_defaults_to_not_found,\n       custom_headers: [{\"to add to\", \"the requests\"}],\n       request_timeout_milliseconds: 5000,\n       enable_local_evaluation: false,\n       environment_refresh_interval_milliseconds: 60_000,\n       retries: 0,\n       enable_analytics: false\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "f3f75ffaf27834c61301fe7d4d0784a6e2e4eec2ccd4c0fac83ed596d2e30eb0",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b8c004ac"
+      }
+    },
+    {
+      "segment_id": "ca32a808",
+      "source_content": "## Get Flags for an Environment",
+      "source_content_hash": "9e09b67ef67e90534ea176aed6277d4fcf6feab2089a08ccde7f692821d8fb12",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 获取环境特征开关"
+      }
+    },
+    {
+      "segment_id": "1bd97d1b",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```python\n# The method below triggers a network request\nflags = flagsmith.get_environment_flags()\nshow_button = flags.is_feature_enabled(\"secret_button\")\nbutton_data = json.loads(flags.get_feature_value(\"secret_button\"))\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java\nFlags flags = flagsmith.getEnvironmentFlags();\nBoolean showButton = flags.isFeatureEnabled(featureName);\nObject value = flags.getFeatureValue(featureName);\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```csharp\n# Sync\n# The method below triggers a network request\nvar flags = _flagsmithClient.GetEnvironmentFlags().Result;  # This method triggers a network request\nvar showButton = flags.IsFeatureEnabled(\"secret_button\").Result;\nvar buttonData = flags.GetFeatureValue(\"secret_button\").Result;\n\n# Async\n# The method below triggers a network request\nvar flags = await _flagsmithClient.GetEnvironmentFlags();  # This method triggers a network request\nvar showButton = await flags.IsFeatureEnabled(\"secret_button\");\nvar buttonData = await flags.GetFeatureValue(\"secret_button\");\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```javascript\nconst flags = await flagsmith.getEnvironmentFlags();\nvar showButton = flags.isFeatureEnabled('secret_button');\nvar buttonData = flags.getFeatureValue('secret_button');\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\n$flags = $flagsmith.get_environment_flags()\n$show_button = $flags.is_feature_enabled('secret_button')\n$button_data = $flags.get_feature_value('secret_button')\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```php\n$flags = $flagsmith->getFlags();\n$flags->isFeatureEnabled('secret_button');\n$flags->getFeatureValue('secret_button');\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```go\n// The method below triggers a network request\nflags, _ := client.GetEnvironmentFlags()\nshowButton, _ := flags.IsFeatureEnabled(\"secret_button\")\nbuttonData, _ := flags.GetFeatureValue(\"secret_button\")\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```rust\n// The method below triggers a network request\nlet flags = flagsmith.get_environment_flags().unwrap();\n\nlet show_button = flags.is_feature_enabled(\"secret_button\").unwrap();\n\nlet button_data = flags.get_feature_value_as_string(\"secret_button\").unwrap();\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\n```elixir\n# The method below triggers a network request\n{:ok, %Flagsmith.Schemas.Flags{} = flags} = Flagsmith.Client.get_environment_flags(client_configuration)\n\nsecret_button_enabled? = Flagsmith.Client.is_feature_enabled(flags, \"secret_button\")\nsecret_button_feature_value = Flagsmith.Client.get_feature_value(flags, \"secret_button\")\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "c870881e31212b52b3577894e051dbaa5028342af25389f6f30907d59c48c8d9",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1bd97d1b"
+      }
+    },
+    {
+      "segment_id": "0d14771f",
+      "source_content": "## Get Flags for an Identity",
+      "source_content_hash": "7ef460f5e53021d1c3fe3887eb2fc28667451088919abc720a57d0127b893466",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 获取用户身份特征开关"
+      }
+    },
+    {
+      "segment_id": "72660758",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```python\nidentifier = \"delboy@trotterstraders.co.uk\"\ntraits = {\"car_type\": \"robin_reliant\"}\n\n# The method below triggers a network request\nidentity_flags = flagsmith.get_identity_flags(identifier=identifier, traits=traits)\nshow_button = identity_flags.is_feature_enabled(\"secret_button\")\nbutton_data = json.loads(identity_flags.get_feature_value(\"secret_button\"))\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java\nString identifier = \"delboy@trotterstraders.co.uk\"\nMap<String, Object> traits = new HashMap<String, Object>();\ntraits.put(\"car_type\", \"robin_reliant\");\n\n// The method below triggers a network request\nFlags flags = flagsmith.getIdentityFlags(identifier, traits);\nBoolean showButton = flags.isFeatureEnabled(featureName);\nObject value = flags.getFeatureValue(featureName);\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```csharp\nvar identifier = \"delboy@trotterstraders.co.uk\";\nvar traitKey = \"car_type\";\nvar traitValue = \"robin_reliant\";\nvar traitList = new List<Trait> { new Trait(traitKey, traitValue) };\n\n# Sync\n# The method below triggers a network request\nvar flags = _flagsmithClient.GetIdentityFlags(identifier, traitList).Result;\nvar showButton = flags.IsFeatureEnabled(\"secret_button\").Result;\n\n# Async\n# The method below triggers a network request\nvar flags = await _flagsmithClient.GetIdentityFlags(identifier, traitList);\nvar showButton = await flags.IsFeatureEnabled(\"secret_button\");\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```javascript\nconst identifier = 'delboy@trotterstraders.co.uk';\nconst traitList = { car_type: 'robin_reliant' };\n\nconst flags = await flagsmith.getIdentityFlags(identifier, traitList);\nvar showButton = flags.isFeatureEnabled('secret_button');\nvar buttonData = flags.getFeatureValue('secret_button');\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\n$identifier = 'delboy@trotterstraders.co.uk'\n$traits = {'car_type': 'robin_reliant'}\n\n$flags = $flagsmith.get_identity_flags($identifier, **$traits)\n$show_button = $flags.is_feature_enabled('secret_button')\n$button_data = $flags.get_feature_value('secret_button')\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```php\n$identifier = 'delboy@trotterstraders.co.uk';\n$traits = (object) [ 'car_type' => 'robin_reliant' ];\n\n$flags = $flagsmith->getIdentityFlags($identifier, $traits);\n$showButton = $flags->isFeatureEnabled('secret_button');\n$buttonData = $flags->getFeatureValue('secret_button');\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```go\ntrait := flagsmith.Trait{TraitKey: \"trait\", TraitValue: \"trait_value\"}\ntraits = []*flagsmith.Trait{&trait}\n\n// The method below triggers a network request\nflags, _ := client.GetIdentityFlags(identifier, traits)\n\nshowButton, _ := flags.IsFeatureEnabled(\"secret_button\")\nbuttonData, _ := flags.GetFeatureValue(\"secret_button\")\n\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```rust\nuse flagsmith_flag_engine::identities::Trait;\nuse flagsmith_flag_engine::types::{FlagsmithValue, FlagsmithValueType};\n\nlet identifier = \"delboy@trotterstraders.co.uk\";\n\nlet traits = vec![Trait {\n            trait_key: \"car_type\".to_string(),\n            trait_value: FlagsmithValue {\n                value: \"robin_reliant\".to_string(),\n                value_type: FlagsmithValueType::String,\n            },\n        }];\n\n// The method below triggers a network request\nlet identity_flags = flagsmith.get_identity_flags(identifier, Some(traits)).unwrap();\n\nlet show_button = identity_flags.is_feature_enabled(\"secret_button\").unwrap();\nlet button_data = identity_flags.get_feature_value_as_string(\"secret_button\").unwrap();\n\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\n```elixir\n# The method below triggers a network request\n{:ok, flags} = Flagsmith.Client.get_identity_flags(\n      client_configuration,\n      \"user-a\",\n      [%{trait_key: \"is_subscribed\", trait_value: false}]\n)\n\nsecret_button_enabled? = Flagsmith.Client.is_feature_enabled(flags, \"secret_button\")\nsecret_button_feature_value = Flagsmith.Client.get_feature_value(flags, \"secret_butteon\")\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "0ec8c0519b0822aca2ed31c859079cc91adf88d69e493bd0e1845c7710ae6e14",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_72660758"
+      }
+    },
+    {
+      "segment_id": "03464bfb",
+      "source_content": "## Managing Default Flags",
+      "source_content_hash": "2005c6cfb9a44e187209ef18321668106e20ab81cd673697ac3bca2475ed3962",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 管理默认特征开关"
+      }
+    },
+    {
+      "segment_id": "2e4be0ab",
+      "source_content": "Default Flags are configured by passing in a function that is called when a Flag cannot be found or if the network\nrequest to the API fails when retrieving flags.",
+      "source_content_hash": "9ac1d2247e2def6d4d7f03754b29f38326e1428a2540f3d13dd6d1fdd56734cf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认特征开关通过传入回调函数实现，当无法获取特征开关或API请求失败时触发该函数。"
+      }
+    },
+    {
+      "segment_id": "38040aa7",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```python\nfrom flagsmith import Flagsmith\nfrom flagsmith.models import DefaultFlag\n\ndef default_flag_handler(feature_name: str) -> DefaultFlag:\n    \"\"\"\n    Function that will be used if the API doesn't respond, or an unknown\n    feature is requested\n    \"\"\"\n    if feature_name == \"secret_button\":\n        return DefaultFlag(\n            enabled=False,\n            value=json.dumps({\"colour\": \"#b8b8b8\"}),\n            feature_name=\"secret_button\",\n        )\n    ],\n    return DefaultFlag(False, None)\n\nflagsmith = Flagsmith(\n    environment_key=\"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\",\n    default_flag_handler=default_flag_handler,\n)\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java\nprivate static FlagsmithClient flagsmith = FlagsmithClient\n    .newBuilder()\n    .setDefaultFlagValueFunction(HelloController::defaultFlagHandler)\n    .setApiKey(System.getenv(\"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\"))\n    .build();\n\nprivate static DefaultFlag defaultFlagHandler(String featureName) {\n    DefaultFlag flag = new DefaultFlag();\n    flag.setEnabled(Boolean.FALSE);\n\n    if (featureName.equals(\"secret_button\")) {\n        flag.setValue(\"{\\\"colour\\\": \\\"#ababab\\\"}\");\n    } else {\n        flag.setValue(null);\n    }\n\n    return flag;\n}\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```csharp\nusing Flagsmith;\n\nFlagsmithClient _flagsmithClient;\n_flagsmithClient = new(\"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\", defaultFlagHandler: defaultFlagHandler);\n\nstatic Flag defaultFlagHandler(string featureName)\n{\n    // Function that will be used if the API doesn't respond, or an unknown\n    // feature is requested\n    if (featureName == \"secret_button\")\n        return new Flag(new Feature(\"secret_button\"), enabled: false, value: JsonConvert.SerializeObject(new { colour = \"#b8b8b8\" }).ToString());\n    else return new Flag() { };\n}\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```javascript\nconst flagsmith = new Flagsmith({\n environmentKey,\n enableLocalEvaluation: true,\n defaultFlagHandler: (str) => {\n  return { enabled: false, isDefault: true, value: { colour: '#ababab' } };\n },\n});\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\n$flagsmith = Flagsmith::Client.new(\n    environment_key: '<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY'>,\n    default_flag_handler: lambda { |feature_name|\n        Flagsmith::Flags::DefaultFlag.new(\n            enabled: false, value: {'colour': '#ababab'}.to_json\n        )\n    }\n)\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```php\n$flagsmith = (new Flagsmith('<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>'))\n    ->withDefaultFlagHandler(function ($featureName) {\n        $defaultFlag = (new DefaultFlag())\n            ->withEnabled(false)->withValue(null);\n        if ($featureName === 'secret_button') {\n            return $defaultFlag->withValue('{\"colour\": \"#ababab\"}');\n        }\n\n        return $defaultFlag;\n    });\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```go\nfunc defaultFlagHandler(featureName string) flagsmith.Flag {\n\treturn flagsmith.Flag{IsDefault: true, FeatureName: featureName, Value: `{\"colour\": \"#ababab\"}`}\n}\n\nclient := flagsmith.NewClient(os.Getenv(\"FLAGSMITH_API_KEY\"),\n\t\tflagsmith.WithDefaultHandler(defaultFlagHandler),\n)\n\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```rust\n\nuse flagsmith::{Flag, Flagsmith, FlagsmithOptions};\n\nfn default_flag_handler(feature_name: &str) -> Flag {\n    let mut flag: Flag = Default::default();\n    if feature_name == \"secret_button\" {\n        flag.value.value_type = FlagsmithValueType::String;\n        flag.value.value = serde_json::json!({\"colour\": \"#b8b8b8\"}).to_string();\n    }\n    return flag;\n}\n\nlet options = FlagsmithOptions {\n    default_flag_handler: Some(default_flag_handler),\n    ..Default::default()\n};\n\nlet flagsmith = Flagsmith::new(\n        env::var(\"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY\")\n            .expect(\"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY not found in environment\"),\n        options,\n    );\n\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\n```elixir\nflag_handler =\n    fn name ->\n        case name == \"special_feature\" do\n            true ->\n            %Flagsmith.Schemas.Flag{feature_name: name, value: \"special\", enabled: true}\n            _ -> :not_found\n        end\n    end\n\nclient_configuration = Flagsmith.Client.new(environment_key: \"MY_SDK_KEY\", default_flag_handler: flag_handler)\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "4988d47e7e450043eaca77abfebb4825071815266d4279208fac40182b0f674a",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_38040aa7"
+      }
+    },
+    {
+      "segment_id": "b7d2f710",
+      "source_content": "## Network Behaviour",
+      "source_content_hash": "c27abaf74532fabbf47407e4521a18846f25b1171e647708a4b94982992dd209",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 网络行为"
+      }
+    },
+    {
+      "segment_id": "c3d63f8a",
+      "source_content": "The Server Side SDKS share the same network behaviour across the different languages:",
+      "source_content_hash": "9aaad076bd4757f4ddc3f9f1fd2edb585796f75f2e18eff9c828af2b59888d13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有服务端 SDK 均遵循相同的网络行为规范："
+      }
+    },
+    {
+      "segment_id": "a4e536ef",
+      "source_content": "### Remote Evaluation Mode Network Behaviour",
+      "source_content_hash": "99bb4afe1b69f0a8ef2585c3ef76961d715e0ecea0ba8204ee2f25afd148567e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 远程评估模式网络行为"
+      }
+    },
+    {
+      "segment_id": "a86d67f8",
+      "source_content": "- A blocking network request is made every time you make a call to get an Environment Flags. In Python, for example,\n  `flagsmith.get_environment_flags()` will trigger this request.\n- A blocking network request is made every time you make a call to get an Identities Flags. In Python, for example,\n  `flagsmith.get_identity_flags(identifier=identifier, traits=traits)` will trigger this request.",
+      "source_content_hash": "063e66cf78404a3cf9f1af39b8af9c6642fd0ddec72a276fd38665ef7ee6a20f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 每次调用获取环境特征开关时都会发起阻塞式网络请求。例如在 Python 中调用 `flagsmith.get_environment_flags()` 会触发该请求。\n- 每次调用获取用户身份特征开关时都会发起阻塞式网络请求。例如在 Python 中调用 `flagsmith.get_identity_flags(identifier=identifier, traits=traits)` 会触发该请求。"
+      }
+    },
+    {
+      "segment_id": "7cc74021",
+      "source_content": "### Local Evaluation Mode Network Behaviour",
+      "source_content_hash": "201f40b5d7b0817bf600a7090aa8b4829eea2ea4e970d75c0c603746c4c94a74",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 本地评估模式网络行为"
+      }
+    },
+    {
+      "segment_id": "65c2cb31",
+      "source_content": ":::info\n\nWhen using Local Evaluation, it's important to read up on the\n[Pros, Cons and Caveats](overview.md#pros-cons-and-caveats).\n\nTo use Local Evaluation mode, you must use a Server Side key.\n\n:::",
+      "source_content_hash": "2a4422f490d512470d5818feb2b009b142dc2c59e4a3044c1b95cd688b608318",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n使用本地评估模式前，请务必阅读\n[优势、局限与注意事项](overview.md#pros-cons-and-caveats)。\n\n本地评估模式必须使用服务端密钥。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "2301bdac",
+      "source_content": "- When the SDK is initialised, it will make an asnchronous network request to retrieve details about the Environment.\n- Every 60 seconds (by default), it will repeat this aysnchronous request to ensure that the Environment information it\n  has is up to date.",
+      "source_content_hash": "4d98ce5e1198cdf2bfbe299445e94dfb45801d23432d16da137753397f30c8e5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- SDK 初始化时会异步请求获取环境配置信息\n- 默认每60秒会重复该异步请求以确保环境信息最新"
+      }
+    },
+    {
+      "segment_id": "d4c07c1d",
+      "source_content": "To achieve Local Evaluation, in most languages, the SDK spawns a separate thread (or equivalent) to poll the API for\nchanges to the Environment. In certain languages, you may be required to terminate this thread before cleaning up the\ninstance of the Flagsmith client. Languages in which this is necessary are provided below.",
+      "source_content_hash": "d87a5eac56c029578237436b108120577b70f3cc4162c81a49c6b538718beda0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为实现本地评估，多数语言版本的 SDK 会创建独立线程（或等效机制）轮询API获取环境变更。某些语言需在清理Flagsmith客户端实例前手动终止该线程，相关语言会在下方注明。"
+      }
+    },
+    {
+      "segment_id": "401541fe",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"nodejs\" label = \"NodeJS\">\n\n```javascript\n// available from v2.2.1\nflagsmith.close();\n```\n\n</TabItem>\n<TabItem value=\"java\" label = \"Java\">\n\n```javascript\n// available from v5.0.5\nflagsmith.close();\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "2dd2f3fc6dc3dacf530751b5babb6faf8f47ce50289c2dc0ffcfab9c9ceccf47",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_401541fe"
+      }
+    },
+    {
+      "segment_id": "e7ed82e8",
+      "source_content": "## Configuring the SDK",
+      "source_content_hash": "b47e8b854e820bd140b728b273e15bab944bd43ec8013b2646d28b46bc466d20",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置 SDK"
+      }
+    },
+    {
+      "segment_id": "398d0803",
+      "source_content": "You can modify the behaviour of the SDK during initialisation. Full configuration options are shown below.",
+      "source_content_hash": "9a7261bcc16baadffcb3d06b96b70165fa2ed8a2a3442bc96af133142bce6dc1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "初始化时可修改 SDK 行为，完整配置选项如下所示。"
+      }
+    },
+    {
+      "segment_id": "93f0bf64",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\n```python\nflagsmith = Flagsmith(\n    # Your API Token.\n    # Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    # depending on if you are using Local or Remote Evaluation\n    # Required.\n    environment_key = \"<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>\",\n\n    # Controls which mode to run in; local or remote evaluation.\n    # See the `SDKs Overview Page` for more info\n    # Optional.\n    # Defaults to False.\n    enable_local_evaluation = False,\n\n    # Override the default Flagsmith API URL if you are self-hosting.\n    # Optional.\n    # Defaults to https://edge.api.flagsmith.com/api/v1/\n    api_url = \"https://api.yourselfhostedflagsmith.com/api/v1/\",\n\n    # The network timeout in seconds.\n    # Optional.\n    # Defaults to 10 seconds\n    request_timeout_seconds = 10,\n\n    # When running in local evaluation mode, defines\n    # how often to request an updated Environment document in seconds\n    # Optional\n    # Defaults to 60 seconds\n    environment_refresh_interval_seconds: int = 60,\n\n    # A `urllib3` Retries object to control network retry policy\n    # See https://urllib3.readthedocs.io/en/latest/reference/urllib3.util.html#urllib3.util.Retry\n    # Optional\n    # Defaults to None\n    retries: Retry = None,\n\n    # Controls whether Flag Analytics data is sent to the Flagsmith API\n    # See https://docs.flagsmith.com/advanced-use/flag-analytics\n    # Optional\n    # Defaults to False\n    enable_analytics: bool = False,\n\n    # You can pass custom headers to the Flagsmith API with this Dictionary.\n    # This can be helpful, for example, when sending request IDs to help trace requests.\n    # Optional\n    # Defaults to None\n    custom_headers: typing.Dict[str, typing.Any] = None,\n\n    # You can specify a function to handle returning defaults in the case that\n    # the request to flagsmith fails or the flag requested is not included in the\n    # response\n    # Optional\n    default_flag_handler = lambda feature_name: return DefaultFlag(enabled=False, value=None)\n\n    # (Available in 3.2.0+) Pass a mapping of protocol to proxy URL as per\n    # https://requests.readthedocs.io/en/latest/api/#requests.Session.proxies\n    # Optional\n    proxies: typing.Dict[str, str] = None\n)\n```\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java\n// The configuration for the Java client is currently split across the FlagsmithClient and\n// FlagsmithConfig class, we are working to improve that in a future release.\n\nprivate static FlagsmithClient flagsmith = FlagsmithClient\n    .newBuilder()\n    // Your API Token.\n    // Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    // depending on if you are using Local or Remote Evaluation\n    // Required.\n    .setApiKey(System.getenv(\"FLAGSMITH_API_KEY\"))\n\n    // You can specify default Flag values on initialisation.\n    // Optional\n    .setDefaultFlagValueFunction(HelloController::defaultFlagHandler)\n\n    // Controls which mode to run in; local or remote evaluation.\n    // See the `SDKs Overview Page` for more info\n    // Optional.\n    // Defaults to False.\n    .withLocalEvaluation(True)\n\n    // Add custom headers which will be sent with each network request\n    // to the Flagsmith API.\n    // Optional.\n    // Defaults to no custom headers.\n    .withCustomHttpHeaders(new HashMap<string, string>() {{\n        put(\"header\", \"value\");\n    }})\n\n    // Enable in-memory caching for the Flagsmith API.\n    // Optional.\n    // Defaults to not cache anything.\n    .withCache(FlagsmithCacheConfig.builder().enableEnvLevelCaching(\"cache-key\").build())\n\n    .withConfiguration(FlagsmithConfig.builder()\n        // Override the default Flagsmith API URL if you are self-hosting.\n        // Optional.\n        // Defaults to https://edge.api.flagsmith.com/api/v1/\n        .baseUri(\"https://api.yourselfhostedflagsmith.com/api/v1/\")\n\n        // The network timeout in milliseconds.\n        // See https://square.github.io/okhttp/4.x/okhttp/okhttp3/ for details\n        // Defaults are:\n        //   connect: 2000\n        //   write: 5000\n        //   read: 5000\n        // Optional.\n        .connectTimeout(<millisecond int>)\n        .writeTimeout(<millisecond int>)\n        .readTimeout(<millisecond int>)\n\n        // Override the sslSocketFactory\n        // See https://square.github.io/okhttp/4.x/okhttp/okhttp3/ for details\n        // Optional.\n        .sslSocketFactory(SSLSocketFactory sslSocketFactory, X509TrustManager trustManager)\n\n        // Add a custom HTTP interceptor in the form of an okhttp3.Interceptor\n        // object\n        // Optional\n        .addHttpInterceptor(interceptor)\n\n        // Add a custom java.net.Proxy to the OkHttp client\n        // Optional\n        .withProxy(proxy)\n\n        // Add a custom com.flagsmith.config.Retry object to configure the\n        // backoff / retry configuration\n        // Optional\n        // Defaults to Retry(3)\n        .retries(retries)\n\n        // Enable local evaluation mode\n        // ()\n        // Optional\n        // Defaults to false\n        .withLocalEvaluation(true)\n\n        // Set environment refresh rate with polling manager.\n        // Only needed when local evaluation is true.\n        // Optional.\n        // Defaults to 60 seconds\n        .withEnvironmentRefreshIntervalSeconds(Integer seconds)\n\n        // Controls whether Flag Analytics data is sent to the Flagsmith API\n        // See https://docs.flagsmith.com/advanced-use/flag-analytics\n        // Optional\n        // Defaults to False\n        .withEnableAnalytics(Boolean enable)\n\n        .build())\n\n    .build();\n```\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\n```csharp\n_flagsmithClient = new FlagsmithClient(\n    # Your API Token.\n    # Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    # depending on if you are using Local or Remote Evaluation\n    # Required.\n    environmentKey: \"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY\",\n\n    # Pass in a default Flag Handler method\n    # Optional\n    defaultFlagHandler: defaultFlagHandler,\n\n    # Override the default Flagsmith API URL if you are self-hosting.\n    # Optional.\n    # Defaults to https://edge.api.flagsmith.com/api/v1/\n    apiUrl: \"https://flagsmith.myproject.com\"\n\n    # Controls which mode to run in; local or remote evaluation.\n    # See the `SDKs Overview Page` for more info\n    # Optional.\n    # Defaults to False.\n    enableClientSideEvaluation: false;\n\n    # Controls whether Flag Analytics data is sent to the Flagsmith API\n    # See https://docs.flagsmith.com/advanced-use/flag-analytics\n    # Optional\n    # Defaults to false\n    enableAnalytics: false\n\n    # When running in local evaluation mode, defines\n    # how often to request an updated Environment document in seconds\n    # Optional\n    # Defaults to 60 seconds\n    environmentRefreshIntervalSeconds: 60\n\n    # You can pass custom headers to the Flagsmith API with this Dictionary.\n    # This can be helpful, for example, when sending request IDs to help trace requests.\n    # Optional\n    # Defaults to None\n    customHeaders: <Dictionary>\n\n    # How often to retry failed HTTP requests\n    # Optional\n    # Defaults to 1\n    retries: 1\n\n    # The network timeout in seconds.\n    # Optional.\n    # Defaults to null (http client default)\n    requestTimeout: null,\n)\n```\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby\n$flagsmith = Flagsmith::Client.new(\n    # Your API Token.\n    # Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    # depending on if you are using Local or Remote Evaluation\n    # Required.\n    environment_key = \"FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY\",\n\n    # Controls which mode to run in; local or remote evaluation.\n    # See the `SDKs Overview Page` for more info\n    # Optional.\n    # Defaults to false.\n    enable_local_evaluation = false,\n\n    # Override the default Flagsmith API URL if you are self-hosting.\n    # Optional.\n    # Defaults to https://edge.api.flagsmith.com/api/v1/\n    api_url = \"https://api.yourselfhostedflagsmith.com/api/v1/\",\n\n    # The network timeout in seconds.\n    # Optional.\n    # Defaults to 10 seconds\n    request_timeout_seconds = 10,\n\n    # When running in local evaluation mode, defines\n    # how often to request an updated Environment document in seconds\n    # Optional\n    # Defaults to 60 seconds\n    environment_refresh_interval_seconds = 60,\n\n    # A faraday retry object to control network retry policy\n    # See https://www.rubydoc.info/gems/faraday/0.15.3/Faraday/Request/Retry\n    # Optional\n    # Defaults to nil\n    retries = nil,\n\n    # Controls whether Flag Analytics data is sent to the Flagsmith API\n    # See https://docs.flagsmith.com/advanced-use/flag-analytics\n    # Optional\n    # Defaults to False\n    enable_analytics = false,\n\n    # You can pass custom headers to the Flagsmith API with this Dictionary.\n    # This can be helpful, for example, when sending request IDs to help trace requests.\n    # Optional\n    # Defaults to nill\n    custom_headers = nil,\n\n    # You can specify a function to handle returning defaults in the case that\n    # the request to flagsmith fails or the flag requested is not included in the\n    # response\n    # Optional\n    default_flag_handler = lambda { |feature_name| Flagsmith::DefaultFlag.new(enabled=false, value=nil) }\n)\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\n```javascript\nconst flagsmith = new Flagsmith({\n    /*\n    Your API Token.\n    Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    depending on if you are using Local or Remote Evaluation\n    Required.\n    */\n    environmentKey: '<FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY>',\n\n    /*\n    Controls which mode to run in; local or remote evaluation.\n    See the `SDKs Overview Page` for more info\n    Optional.\n    Defaults to false.\n    */\n    enableLocalEvaluation: true,\n\n    /*\n    Override the default Flagsmith API URL if you are self-hosting.\n    Optional.\n    Defaults to https://edge.api.flagsmith.com/api/v1/\n    */\n    apiUrl: 'https://api.yourselfhostedflagsmith.com/api/v1/',\n\n    /*\n    Set environment refresh rate with polling manager.\n    Only needed when local evaluation is true.\n    Optional.\n    Defaults to 60 seconds\n    */\n    environmentRefreshIntervalSeconds: 60,\n\n    /*\n    You can specify default Flag values on initialisation.\n    Optional\n    */\n    defaultFlagHandler: str => {\n        return { enabled: false, isDefault: true, value: null };\n    },\n\n    /*\n    Controls whether Flag Analytics data is sent to the Flagsmith API\n    See https://docs.flagsmith.com/advanced-use/flag-analytics\n    Optional\n    Defaults to false\n    */\n    enableAnalytics: true\n\n    /*\n    The network timeout in seconds.\n    Optional.\n    Defaults to 10 seconds\n    */\n    requestTimeoutSeconds: 30,\n\n    /*\n    Custom http headers can be added to the http client\n    Optional\n    */\n    customHeaders: { 'aHeader': 'aValue' },\n});\n```\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\n```php\n$flagsmith = new Flagsmith(\n    /*\n    Your API Token.\n    Note that this is either the `Environment API` key or the `Server Side SDK Token`\n    depending on if you are using Local or Remote Evaluation\n    Required.\n    */\n    string $apiKey,\n\n    /*\n    Override the default Flagsmith API URL if you are self-hosting.\n    Optional.\n    Defaults to https://edge.api.flagsmith.com/api/v1/\n    */\n    string $host = self::DEFAULT_API_URL,\n\n    /*\n    Custom http headers can be added to the http client\n    Optional\n    */\n    object $customHeaders = null,\n\n    /*\n    Set environment refresh rate with polling manager.\n    This also enables local evaluation.\n    Optional.\n    Defaults to null\n    */\n    int $environmentTtl = null,\n\n    /*\n    Retry Object, instance of Flagsmith\\Utils\\Retry\n    Retry configuration for api calls.\n    Defaults to 3 retries for every api call.\n    */\n    Retry $retries = null,\n\n    /*\n    Controls whether Flag Analytics data is sent to the Flagsmith API\n    See https://docs.flagsmith.com/advanced-use/flag-analytics\n    Optional\n    Defaults to false\n    */\n    bool $enableAnalytics = false,\n\n    /*\n    You can specify default Flag values on initialisation.\n    Optional\n    */\n    Closure $defaultFlagHandler = null\n);\n```\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\n```go\nclient := flagsmith.NewClient(os.Getenv(\"FLAGSMITH_API_KEY\"),\n        // Override the default Flagsmith API URL if you are self-hosting.\n        // Defaults to https://edge.api.flagsmith.com/api/v1/\n        flagsmith.WithBaseURL(\"http://localhost:8080/api/v1/\"),\n\n        // Controls which mode to run in; local or remote evaluation.\n        // See the `SDKs Overview Page` for more info\n        // Defaults to False\n        flagsmith.WithLocalEvaluation(),\n\n        // The network timeout in seconds.\n        flagsmith.WithRequestTimeout(10*time.Second),\n\n        // When running in local evaluation mode, defines\n        // how often to request an updated Environment document\n        // Defaults to 60 seconds\n        flagsmith.WithEnvironmentRefreshInterval(60*time.Second),\n\n        // Controls whether Flag Analytics data is sent to the Flagsmith API\n        // See https://docs.flagsmith.com/advanced-use/flag-analytics\n        flagsmith.WithAnalytics(),\n\n        // Sets `resty.Client` options.  `SetRetryCount` and `SetRetryWaitTime`\n        // Ref: https://pkg.go.dev/github.com/go-resty/resty/v2#Client.SetRetryCount\n        // https://pkg.go.dev/github.com/go-resty/resty/v2#Client.SetRetryWaitTime\n        flagsmith.WithRetries(3, 5*time.Second),\n\n        // You can pass custom headers to the Flagsmith API with this Dictionary.\n        // This can be helpful, for example, when sending request IDs to help trace requests.\n        flagsmith.WithCustomHeaders(map[string]string{\n          \"Content-Type\": \"application/json\",\n          \"Accept\":       \"application/json\",\n        }),\n\n        // You can specify a function to handle returning defaults in the case that\n        // the request to flagsmith fails or the flag requested is not included in the\n        // response\n        flagsmith.WithDefaultHandler(defaultFlagHandler),\n\n        // You can specify the context to use.\n        flagsmith.WithContext(ctx),\n)\n```\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\n```rust\nuse reqwest::header::{self, HeaderMap};\n// Optional Arguments\nlet options = FlagsmithOptions {\n    // Override the default Flagsmith API URL if you are self-hosting.\n    // Defaults to https://edge.api.flagsmith.com/api/v1/\n    api_url: \"https://edge.flagsmith.com/api/v1/\".to_string(),\n\n    // You can pass custom headers to the Flagsmith API with this HashMap\n    // This can be helpful, for example, when sending request IDs to help trace requests.\n    // Defaults to an empty header::HeaderMap.\n    custom_headers: header::HeaderMap::new(),\n\n    // The network timeout in seconds.\n    // Defaults to 10 seconds\n    request_timeout_seconds: 10,\n\n    // Controls which mode to run in; local or remote evaluation.\n    // See the `SDKs Overview Page` for more info\n    // Defaults to False.\n    enable_local_evaluation: false,\n\n    // When running in local evaluation mode, defines\n    // how often to request an updated Environment document in milliseconds.\n    // Defaults to 60 seconds\n    environment_refresh_interval_mills: 60* 1000,\n\n    // Controls whether Flag Analytics data is sent to the Flagsmith API\n    // See https://docs.flagsmith.com/advanced-use/flag-analytics\n    // Defaults to False\n    enable_analytics: false,\n\n    //Function that will be used if the API doesn't respond, or an unknown\n    // feature is Requested\n    // Defaults to None\n    default_flag_handler: None\n};\n\n// Required Arguments\n// Your API Token.\n// Note that this is either the `Environment API` key or the `Server Side SDK Token`\n// depending on if you are using Local or Remote Evaluation\nlet FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY = \"some_key\".to_string();\n\nlet flagsmith = Flagsmith::new(\n        FLAGSMITH_SERVER_SIDE_ENVIRONMENT_KEY,\n        options,\n    );\n\n\n```\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\nApplication level Configuration\n\n```elixir\n# The only required option is the `:environment_key`\n\nconfig :flagsmith_engine, :configuration,\n       #\n       # Your API Token.\n       # Note that this is either the `Environment API` key or the\n       # `Server Side SDK Token` depending on if you are using Local or\n       # Remote Evaluation\n       environment_key: \"<YOUR SDK KEY>\",\n       #\n       # Override the default Flagsmith API URL if you are self-hosting.\n       # Defaults to https://edge.api.flagsmith.com/api/v1/\n       api_url: \"https://api.yourselfhostedflagsmith.com/api/v1\",\n       #\n       # You can specify a function to handle returning defaults in the case that\n       # the request to flagsmith fails or the flag requested is not included in the\n       # response, defaults to returning :not_found`\n       default_flag_handler: function_defaults_to_not_found,\n       #\n       # You can pass custom headers to the Flagsmith API as a list of `header` `value`\n       # tuples, for example, when sending request IDs to help trace requests, defaults\n       # to an empty list.\n       custom_headers: [{\"to add to\", \"the requests\"}],\n       #\n       # Network timeout in milliseconds, defaults to 5_000\n       request_timeout_milliseconds: 5000,\n       #\n       # Controls which mode to run in; local or remote evaluation.\n       # See the `SDKs Overview Page` for more info, defaults to false\n       enable_local_evaluation: false,\n       #\n       # When running in local evaluation mode, defines how often to request\n       # an updated Environment document in milliseconds, defaults to 1 minute\n       environment_refresh_interval_milliseconds: 60_000,\n       #\n       # Defines how many retries the HTTP adapter is allowed to execute before\n       # deeming the request failed, defaults to 0\n       retries: 0,\n       #\n       # Controls whether Flag Analytics data is sent to the Flagsmith API\n       # See https://docs.flagsmith.com/advanced-use/flag-analytics, defaults to false\n       enable_analytics: false\n\n```\n\nOr when starting a client or making a request, allows the exact same options as when configuring through the application\nconfiguration.\n\n```elixir\nclient_configuration = Flagsmith.Client.new(\n        environment_key: \"<YOUR SDK KEY>\",\n        api_url: \"https://api.yourselfhostedflagsmith.com/api/v1\",\n        default_flag_handler: function_defaults_to_not_found,\n        custom_headers: [{\"to add to\", \"the requests\"}],\n        request_timeout_milliseconds: 5000,\n        enable_local_evaluation: false,\n        environment_refresh_interval_milliseconds: 60_000,\n        retries: 0,\n        enable_analytics: false\n)\n\n{:ok, flags} = Flagsmith.Client.get_environment_flags(client_configuration)\n\n# or\n\n{:ok, flags} = Flagsmith.Client.get_environment_flags(\n        environment_key: \"<YOUR SDK KEY>\",\n        api_url: \"https://api.yourselfhostedflagsmith.com/api/v1\",\n        default_flag_handler: function_defaults_to_not_found,\n        custom_headers: [{\"to add to\", \"the requests\"}],\n        request_timeout_milliseconds: 5000,\n        enable_local_evaluation: false,\n        environment_refresh_interval_milliseconds: 60_000,\n        retries: 0,\n        enable_analytics: false\n)\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "22cd48cd121b644785e92119549e1900b435b2020f1343137423c99437ac0f8b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_93f0bf64"
+      }
+    },
+    {
+      "segment_id": "960ed2e9",
+      "source_content": "## Caching",
+      "source_content_hash": "662dcec212d64216418e4285034eda4d5cd40aea26d13a431f995130322cb514",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 缓存机制"
+      }
+    },
+    {
+      "segment_id": "f4301448",
+      "source_content": "The following SDKs have code and functionality related to caching flags.",
+      "source_content_hash": "2216f2c80168f8ac012fb734067df6e36b20de417820678ab6688d8e611e87fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下 SDK 实现了特征开关缓存功能："
+      }
+    },
+    {
+      "segment_id": "ede17470",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"java\" label=\"Java\">\n\nIf you would like to use in-memory caching, you will need to enable it (it is disabled by default). The main advantage\nof using in-memory caching is that you can reduce the number of HTTP calls performed to fetch flags.\n\nFlagsmith uses [Caffeine](https://github.com/ben-manes/caffeine), a high performance, near optimal caching library.\n\nIf you enable caching on the Flagsmith client without setting any values (as shown below), the following default values\nwill be set for you:\n\n- `maxSize(10)`\n- `expireAfterWrite(5, TimeUnit.MINUTES)`\n- project level caching will be disabled by default (i.e. only enabled if you configure a caching key)\n\n```java\n// use in-memory caching with Flagsmith defaults as described above\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .build())\n                .build();\n```\n\nIf you would like to change the default settings, you can overwrite them by using the available builder methods:\n\n```java\n// use in-memory caching with custom configuration\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .maxSize(100)\n                        .expireAfterWrite(10, TimeUnit.MINUTES)\n                        .recordStats()\n                        .enableEnvLevelCaching(\"some-key-to-avoid-clashing-with-user-identifiers\")\n                        .build())\n                .build();\n```\n\nThe user identifier is used as the cache key, this provides granular control over the cache should you require it. If\nyou would like to manipulate the cache:\n\n```java\n// this will return null if caching is disabled\nfinal FlagsmithCache cache = flagsmithClient.getCache();\n// you can now discard a single or all entries in the cache\ncache.invalidate(\"user-identifier\");\n// or\ncache.invalidateAll();\n// get stats (if you have enabled them in the cache configuration, otherwise all values will be zero)\nfinal CacheStats stats = cache.stats();\n// check if flags for a user identifier are cached\nfinal FlagsAndTraits flags = cache.getIfPresent(\"user-identifier\");\n```\n\nSince the user identifier is used as the cache key, you need to configure a cache key to enable project level caching.\nMake sure you select a project level cache key that will never be a user identifier.\n\n```java\n// use in-memory caching with Flagsmith defaults and project level caching enabled\nfinal String projectLevelCacheKey = \"some-key-to-avoid-clashing-with-user-identifiers\";\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .enableEnvLevelCaching(projectLevelCacheKey)\n                        .build())\n                .build();\n\n// if you need to access the cache directly, you can do this:\nfinal FlagsmithCache cache = flagsmithClient.getCache();\n// invalidate project level cache\ncache.invalidate(projectLevelCacheKey);\n// check if project level flags have been cached\nfinal FlagsAndTraits flags = cache.getIfPresent(projectLevelCacheKey);\n```\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\nYou can initialise the SDK with something like this:\n\n```javascript\nflagsmith.init({\n cache: {\n   has:(key)=> return Promise.resolve(!!cache[key]) , // true | false\n   get: (k)=> cache[k] // return flags or flags for user\n   set: (k,v)=> cache[k] = v // gets called if has returns false with response from API for Identify or getFlags\n  }\n})\n```\n\nThe core concept is that if `has` returns false, the SDK will make the required API calls under the hood. The keys are\neither `flags` or `flags_traits-${identity}`.\n\nAn example of a concrete implemention is below.\n\n```javascript\nconst flagsmith = require('flagsmith-nodejs');\nconst redis = require('redis');\n\nconst redisClient = redis.createClient({\n host: 'localhost',\n port: 6379,\n});\n\nflagsmith.init({\n environmentID: '<Flagsmith Environment API Key>',\n cache: {\n  has: (key) =>\n   new Promise((resolve, reject) => {\n    redisClient.exists(key, (err, reply) => {\n     console.log('check ' + key + ' from cache', err, reply);\n     resolve(reply === 1);\n    });\n   }),\n  get: (key) =>\n   new Promise((resolve) => {\n    redisClient.get(key, (err, cacheValue) => {\n     console.log('get ' + key + ' from cache');\n     resolve(cacheValue && JSON.parse(cacheValue));\n    });\n   }),\n  set: (key, value) =>\n   new Promise((resolve) => {\n    // Expire the key after 60 seconds\n    redisClient.set(key, JSON.stringify(value), 'EX', 60, (err, reply) => {\n     console.log('set ' + key + ' to cache', err);\n     resolve();\n    });\n   }),\n },\n});\n\nrouter.get('/', function (req, res, next) {\n flagsmith.getValue('background_colour').then((value) => {\n  res.render('index', {\n   title: value,\n  });\n });\n});\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "e26b6b5270c6e97e3a6e261a44b302bec72e86dcf8e60e987ddb74f42c1a6bf2",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ede17470"
+      }
+    },
+    {
+      "segment_id": "a78f1107",
+      "source_content": "## Logging",
+      "source_content_hash": "72c03f5fd212f806a1ced4e2443d7bdf2ab3d615ea78d491bee3ebc3f4d17bfd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 日志记录"
+      }
+    },
+    {
+      "segment_id": "c26c0431",
+      "source_content": "The following SDKs have code and functionality related to logging.",
+      "source_content_hash": "a649ac3cfa2973a4f0e4093b8b9d6b2871de684287067f1b9e007e82017b1d9f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下 SDK 实现了日志记录功能："
+      }
+    },
+    {
+      "segment_id": "a565fb2b",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"java\" label=\"Java\">\n\nLogging is disabled by default. If you would like to enable it then call `.enableLogging()` on the client builder:\n\n```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                // other configuration as shown above\n                .enableLogging()\n                .build();\n```\n\nFlagsmith uses [SLF4J](http://www.slf4j.org) and we only implement its API. If your project does not already have SLF4J,\nthen include an implementation, i.e.:\n\n```xml\n<dependency>\n    <groupId>org.slf4j</groupId>\n    <artifactId>slf4j-simple</artifactId>\n    <version>${slf4j.version}</version>\n</dependency>\n```\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "ef101bed5b95fe4a6f896a950dba2b23c31116bb034069605abd3918d715e3d8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a565fb2b"
+      }
+    },
+    {
+      "segment_id": "62a9663d",
+      "source_content": "## Contribute to the SDKs",
+      "source_content_hash": "48a0e3534db8dc1d3cba5f84f1bf8e46ae367a2eb7bc2b4b2930e0a3b0223d4f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 参与 SDK 开发"
+      }
+    },
+    {
+      "segment_id": "8d869e58",
+      "source_content": "All our SDKs are Open Source.",
+      "source_content_hash": "ce49e12ce9cf3d98d1111696769ef5190ddf3eb2673ea1f13bf20bf9f6a39d7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有 SDK 均为开源项目。"
+      }
+    },
+    {
+      "segment_id": "a5c5a90c",
+      "source_content": "<Tabs groupId=\"language\">\n<TabItem value=\"py\" label=\"Python\">\n\nhttps://github.com/Flagsmith/flagsmith-python-client\n\n</TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\nhttps://github.com/Flagsmith/flagsmith-java-client\n\n</TabItem>\n<TabItem value=\"dotnet\" label=\".NET\">\n\nhttps://github.com/Flagsmith/flagsmith-dotnet-client\n\n</TabItem>\n<TabItem value=\"nodejs\" label=\"NodeJS\">\n\nhttps://github.com/Flagsmith/flagsmith-nodejs-client\n\n</TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\nhttps://github.com/Flagsmith/flagsmith-ruby-client\n\n</TabItem>\n<TabItem value=\"php\" label=\"PHP\">\n\nhttps://github.com/Flagsmith/flagsmith-php-client\n\n</TabItem>\n<TabItem value=\"go\" label=\"Go\">\n\nhttps://github.com/Flagsmith/flagsmith-go-client\n\n</TabItem>\n<TabItem value=\"rust\" label=\"Rust\">\n\nhttps://github.com/Flagsmith/flagsmith-rust-client\n\n</TabItem>\n<TabItem value=\"elixir\" label=\"Elixir\">\n\nhttps://github.com/Flagsmith/flagsmith-elixir-client\n\n</TabItem>\n</Tabs>",
+      "source_content_hash": "1c5edd781dd4e7a5e0e4e70551dcf1ba68811bdca8cf46aa5ba8c7ddedfebe6c",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a5c5a90c"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/server-side.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.954165+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "aea41b9fa0f7aeb1ad0e36dfa22797a8bb836e8f93d15ef2c1d1350ce16bb080"
+  }
+}

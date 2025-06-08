@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/django-admin.md",
+  "source_file_content_hash": "7599ae05d59734238cbaa608dd0661db54313990d47204df294b495133cda18e",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_label: Django Admin\ntitle: Django Admin\nsidebar_position: 100\n---",
+      "source_content_hash": "f11384c26f55479050d9423f8bb9350b66b2aef600438d1ffad3378b4f17094c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Django Admin",
+      "source_content_hash": "89fb34a4b26f05342d0812669c6c2f51a443cf95188f2c6579936c04e66808a7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Django 管理后台"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Since the application is built using Django, it benefits from the django admin pages. Flagsmith is built to utilise the\nDjango admin site for certain aspects of the platform. If you are self hosting, you may find it useful to access these\npages at certain times.",
+      "source_content_hash": "6ccbf027563b68fdba4427f9c4d75f3fed1268eb1fc3faaa3ccbd0f3e01e3b7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于该应用基于 Django 构建，因此天然支持 Django 管理后台功能。Flagsmith 专门利用 Django 管理站点来处理平台的特定功能。如果您正在自托管部署，在某些场景下访问这些管理页面会非常有用。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Authentication",
+      "source_content_hash": "df96773c8abc735dd4f21f5ff9ce623e4d544cd60d025eeba0e89dca1e0f9238",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份验证"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "The admin pages are only available to uses that are designated as 'super users'. This can only be done when first\nsetting up the platform or via the database. If you're just starting out, you can follow the instructions\n[here](/deployment/hosting/locally-api#Initialising), otherwise, you need to set the `is_staff` and `is_superuser` flags\nagainst any of the users in your database.",
+      "source_content_hash": "f3a83a12b85db3a5a129cd93d7feb1869929d145a60b99b6b1f4c5b395f28afe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "管理后台页面仅对标记为\"超级用户\"的账户开放。该权限只能在平台初始设置时或通过数据库操作授予。如果是首次使用，您可以按照[此处指南](/deployment/hosting/locally-api#Initialising)操作；否则需要通过数据库为用户设置`is_staff`和`is_superuser`权限标志位。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Once you have a user, you can access the django admin pages at `/admin`. You will be prompted to log in with the\ncredentials of any of your super users.",
+      "source_content_hash": "9f49698ca0b62c0ae70e6c99592c5d4939bc3ed3ba54848b555aeabb8d0b296a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获得超级用户权限后，您可通过`/admin`路径访问管理后台。系统将提示您使用任意超级用户凭证登录。"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Admin Pages",
+      "source_content_hash": "0688a5cba43ac937197611ed042c304d62c9b6ed6ee6335d867814337a9d9f84",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 管理页面"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "### Organisation",
+      "source_content_hash": "e4a834f6ed802849f218bf56fea445a6bbd0de03da77c64d121af99e631574dd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 组织管理"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "The key pages that one might want to access are the ones that configuration organisations on the platform. From the home\npage of the admin, you'll see an link to `Organisations` about halfway down the page. From here, you can manage the\norganisations on your platform as required. For example, SAML configuration data must be set via these pages.",
+      "source_content_hash": "72c7f6119e34c798a0ee4a92894f2607efc7cc875c1376f586aae766206b766a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最重要的配置页面当属平台组织管理模块。在管理后台首页中段位置，您会看到`Organisations`链接入口。通过这些页面，您可以按需管理平台上的所有组织。例如，SAML 认证配置数据就必须通过这些页面进行设置。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/django-admin.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.931477+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7599ae05d59734238cbaa608dd0661db54313990d47204df294b495133cda18e"
+  }
+}

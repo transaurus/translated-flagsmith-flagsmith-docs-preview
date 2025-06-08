@@ -1,0 +1,252 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/change-requests.md",
+  "source_file_content_hash": "6b532ea3120e99a6e3e4f61f727018b6fc590a69cad2a89f5a78e66f4972d59d",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Change Requests",
+      "source_content_hash": "6ac6e10da608a48d3ada7e7247dc32dff223102af4494ca08ffd6d7ecd10347e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 变更请求"
+      }
+    },
+    {
+      "segment_id": "13b248dc",
+      "source_content": ":::tip\n\nChange requests are part of our Scale-Up and Enterprise plans.\n\n:::",
+      "source_content_hash": "1f35eed26038adad622939d1dc589537ef57366ae926783b25a49553419f8a02",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n变更请求功能仅在企业版和规模扩展版套餐中提供。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "You can use Change Requests to add workflow control to the changing of Flag values. Change Requests allow a user to\npropose a change to a flag value, and then require that change is approved by a number of other team members.",
+      "source_content_hash": "3253403d9d3717fda32660629ab2c3da6366432eb92eb20ecfccb779f8537a4a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过变更请求功能，您可以为功能标志值的修改添加工作流管控机制。用户可发起标志值变更提案，并需获得指定数量团队成员的审批方可生效。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "You can use Change Requests to ensure that, for example, a change to a flag in Production has to be approved by another\nteam member. They work in a similar way to Pull Requests in git.",
+      "source_content_hash": "e006ece765fff4f06e2942035e14665df74c76aba61b17327a7adfe5fe446b2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该功能可确保生产环境的标志变更必须经过其他成员审核（例如双重审批），其运作逻辑类似于git中的Pull Request。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Setting up Change Requests",
+      "source_content_hash": "efc16aefd9a5a11a6c2e1258ae7056275c74ffa3d984da3eb79034f8c9f7c95c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置变更请求"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "Change Requests are configured at the Environment level. To enable Change Requests, go to the Environment Settings Page,\nEnable 4 Eyes Change Request Approvals, and select how many approvals you would like for each Change Request to be\napplied.",
+      "source_content_hash": "2d444a40055011be9ae35ca40dc105baa7c7fcf3ff0423703d854a531a55f06b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "变更请求在环境级别进行配置。启用方式：进入环境设置页面，开启\"四眼原则变更审批\"功能，并设置每个变更请求所需的审批人数。"
+      }
+    },
+    {
+      "segment_id": "b7a64917",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/change-request-enable.png\"/></div>",
+      "source_content_hash": "1eee080c196f970b1edfb5753191f0dba6f8a3dd1dbf81cfc87935cc280231d7",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b7a64917"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Creating a Change Request",
+      "source_content_hash": "317eb85ddb33f969c5cf1ca148cef554c4d9c57b8af440a71135eca946fba1ca",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建变更请求"
+      }
+    },
+    {
+      "segment_id": "6b3596a2",
+      "source_content": ":::info\n\nAny user that has permission to _Update_ a Feature within the Environment can create a Change Request\n\n:::",
+      "source_content_hash": "1d8df791062e3af4ec41368ae8e6e2f411c6650fbd3cab06775a89506dd839f0",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n拥有环境内功能_更新_权限的用户均可创建变更请求\n\n:::"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Once an Environment is configured with Change Requests enabled, attempting to change a flag value will prompt you to\ncreate a new Change Request.",
+      "source_content_hash": "9defee47ac5cab6e0c181218b364416acf9fabde543fef8ca2072dc33a8c2ce7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当环境启用变更请求功能后，任何尝试修改标志值的操作都会触发创建新变更请求的流程。"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/change-request-create.png\"/></div>",
+      "source_content_hash": "128201b293103c908aedccbc00a5a76c3d3294505c059f4fbdc11f385efb06fa",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "You will need to provide:",
+      "source_content_hash": "f3152360a31186dd82c8a54b828fb1ced7ad4881d4e845e5737fc20d7bf81990",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需填写以下信息："
+      }
+    },
+    {
+      "segment_id": "e7bc8c38",
+      "source_content": "- The title of the Change Request\n- Optionally a description of the reason for the Change Request\n- Any number of assignees. These people will receive an email alerting them of the Change Request",
+      "source_content_hash": "9d50d071d416fa61b12f10aa31e1992991ff763e0373e098db0f276f1ebce1aa",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 变更请求标题\n- 可选的变更原因说明\n- 任意数量的指派人员（这些成员将收到变更请求的邮件通知）"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Approving a Change Request",
+      "source_content_hash": "a314f623161ed3a6dc241068674f98362635ff6f22ce539756769f0d062502ff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审批变更请求"
+      }
+    },
+    {
+      "segment_id": "80e5ac71",
+      "source_content": ":::info\n\nAny user that has permission to write to the Environment containing the Change Request can approve it.\n\n:::",
+      "source_content_hash": "a431557595f8a8690a0e6d781131c8c6598a0d85249063553292121738159e5b",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n拥有该环境写入权限的用户均可审批变更请求。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Change Requests awaiting approval are listed in the Change Request area.",
+      "source_content_hash": "021f8bb99c2427d16b46e56d525c6a7b6682d4fdaf707ef57f0d38bad2ee8a78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待审批的变更请求会集中显示在变更请求专区。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "![Listing Change Requests](/img/change-request-list.png)",
+      "source_content_hash": "d2144079e30ceaccd5d1d6d15b3d5feabe0cf873d52e3506f36260f227415c84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![变更请求列表](/img/change-request-list.png)"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "Clicking on a Change Request brings up the details of the request, and the current and new Flag values.",
+      "source_content_hash": "b28cd165108bb4100d4313264997262bfbe369371b4ae1a53de045bcf1ef215d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击具体请求可查看详情，包括当前值与拟变更值对比。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "![Approving a Change Requests](/img/change-request-approve.png)",
+      "source_content_hash": "4d80b5d5460dc9b5c060bbaa828f7f67193a82c935d26966d8706ebd45fba9a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![审批变更请求](/img/change-request-approve.png)"
+      }
+    },
+    {
+      "segment_id": "ab5fc5b5",
+      "source_content": "## Publishing a Change Request",
+      "source_content_hash": "64ad5de3939ec166a235a71612cc1612555f616cb5e392cc84cddb7cc2aa19a1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 发布变更请求"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "When the required number of approvals have been made, you will be able to publish the Change Request.",
+      "source_content_hash": "a5b7ae59eae0a39026811be1127eb9bc7baeaad959d519021fede669bdf53fbb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当满足预设的审批人数要求后，即可发布变更请求。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "![Publishing a Change Requests](/img/change-request-publish.png)",
+      "source_content_hash": "bb19f42f486c931e5038ea1f1a05ee1684a1548acbcc4b73ecf3797d92962a40",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![发布变更请求](/img/change-request-publish.png)"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The Change Request will immediately come into effect once the Publish Change button is clicked.",
+      "source_content_hash": "dc726fc37d87c8fe16305951fc7bb239aecc94dce5e1b9c5d92a69e50f12281e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "点击\"发布变更\"按钮后，变更将立即生效。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/change-requests.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.946330+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "6b532ea3120e99a6e3e4f61f727018b6fc590a69cad2a89f5a78e66f4972d59d"
+  }
+}

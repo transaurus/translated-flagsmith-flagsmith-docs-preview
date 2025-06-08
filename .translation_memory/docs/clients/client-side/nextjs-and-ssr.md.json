@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/client-side/nextjs-and-ssr.md",
+  "source_file_content_hash": "942941b2f44f0abaf7409339afb82c4d55281905691577166207675d6d5ca8dd",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith React SDK\nsidebar_label: Next.js and SSR\ndescription: Manage your Feature Flags and Remote Config with NextJS and SSR.\nslug: /clients/next-ssr\n---",
+      "source_content_hash": "9238f6a1fce44d70c47e0dfb1da7cce341671a93a0c49c98e4b92e364aad668c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The JavaScript Library contains a bundled isomorphic library, allowing you to fetch flags in the server and hydrate your\napplication with the resulting state.",
+      "source_content_hash": "7b130d81d461718d8f5dfae5a1a674d1bdb5fa8aaab062f49428edf4c5011f7f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该JavaScript库包含一个同构的捆绑库，允许您在服务器端获取功能标志，并将结果状态注入到您的应用程序中。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Example applications for a variety of Next.js and SSR can be found\n[here](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/nextjs).",
+      "source_content_hash": "590fe0b92e1543bc05a315684acbdc2542680fe686dfe5492ed464128c931181",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "针对Next.js和服务端渲染(SSR)的示例应用可在[此处](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/nextjs)查看。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Example applications for Svelte be found\n[here](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/svelte).",
+      "source_content_hash": "ec1245f83d5a9b91d229b8769400c6a3226f46b9f4d29bdc5f1722816112f241",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "针对Svelte的示例应用可在[此处](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/svelte)查看。"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "An example application for Next.js middleware can be found\n[here](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/nextjs-middleware).",
+      "source_content_hash": "558f8eb375df1843ea8ec4e378e4ba022fc5a25002529b165da47e9948c072ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Next.js中间件的示例应用可在[此处](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples/nextjs-middleware)查看。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "### NPM",
+      "source_content_hash": "1df339bc436e1ca6250e69e63b2afee2a2bd90eb657e75485ba822efeca431c1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### NPM"
+      }
+    },
+    {
+      "segment_id": "f2b711c6",
+      "source_content": "```bash\nnpm i flagsmith --save\n```",
+      "source_content_hash": "16e310fdc2b4491c1ed2478ba658af0ad4534224a4e2238bb9686b5a8059eac0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f2b711c6"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example, the Development or Production environment. You can find your Client-side Environment Key in the Environment\nsettings page.",
+      "source_content_hash": "f58d8b0d98d179999d973859d72c1f9082c53ea0b349d3e3473f760296e79e60",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目内的单个环境进行初始化，例如开发环境或生产环境。您可以在环境设置页面找到客户端环境密钥。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "![Image](/img/api-key.png)",
+      "source_content_hash": "2f8c9c0b83b22f457d85301252648e4ee57be438573461d3e6a2d30e2b49a330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Comparing SSR and client-side Flagsmith usage",
+      "source_content_hash": "021b760a1397e2f98632e6f11784a3f5536ef7aa80afe9fff43524ba309f1ea9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 比较SSR与客户端Flagsmith用法"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The SDK is initialised and used in the same way as the [JavaScript](/clients/javascript) and [React](/clients/react)\nSDK. The main difference is that Flagsmith should be imported from `flagsmith/isomorphic`.",
+      "source_content_hash": "bd4d82156ac341434b79af5b32b6dbcc4b23f5d50cf0611a7cc921289eef4712",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK的初始化与使用方式与[JavaScript](/clients/javascript)和[React](/clients/react) SDK相同。主要区别在于Flagsmith应从`flagsmith/isomorphic`导入。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "The main flow with Next.js and any JavaScript-based SSR can be as follows:",
+      "source_content_hash": "8f892b32e325b12e1c85c84475eda99eec63334be837fd05160fd45087a532f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Next.js及任何基于JavaScript的SSR主要流程如下："
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "- 1: Fetch the flags on the server, optionally passing an identity to\n  [flagsmith.init({})](https://docs.flagsmith.com/clients/javascript#initialisation-options)\n- 2: Pass the resulting state to the client with\n  [flagsmith.getState()](https://docs.flagsmith.com/clients/javascript#available-functions)\n- 3: Initialise flagsmith on the client with\n  [flagsmith.setState(state)](https://docs.flagsmith.com/clients/javascript#available-functions)",
+      "source_content_hash": "6243ead7328e47bfcc7851269619c93aecf1da0219bd5de1778b3a4efdd13707",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 1: 在服务端获取标志，可选择通过[flagsmith.init({})](https://docs.flagsmith.com/clients/javascript#initialisation-options)传递身份标识\n- 2: 使用[flagsmith.getState()](https://docs.flagsmith.com/clients/javascript#available-functions)将结果状态传递至客户端\n- 3: 在客户端通过[flagsmith.setState(state)](https://docs.flagsmith.com/clients/javascript#available-functions)初始化flagsmith"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Example: Initialising the SDK with Next.js",
+      "source_content_hash": "5ea4d692583ea44bd8a9cd73cbb60cc2506347c6c2bf2535bcb8582abce649d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：在Next.js中初始化SDK"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Taking the above into account, the following example fetches flags on the server and initialises Flagsmith with the\nstate.",
+      "source_content_hash": "c59dcff24cdc20f25bb046ff5e6f970e9e343dd189a7ba79f8ee695838cafb68",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基于上述流程，以下示例演示了如何在服务端获取标志并使用该状态初始化Flagsmith。"
+      }
+    },
+    {
+      "segment_id": "f275f5fd",
+      "source_content": "```javascript\nimport { FlagsmithProvider } from 'flagsmith/react';\nimport flagsmith from 'flagsmith/isomorphic';\nfunction MyApp({ Component, pageProps, flagsmithState }) {\n return (\n  <FlagsmithProvider flagsmith={flagsmith} serverState={flagsmithState}>\n   <Component {...pageProps} />\n  </FlagsmithProvider>\n );\n}\n\nMyApp.getInitialProps = async () => {\n // this could be getStaticProps too depending on your build flow\n // calls page's `getInitialProps` and fills `appProps.pageProps`\n await flagsmith.init({\n  // fetches flags on the server\n  environmentID: '<YOUR_ENVIRONMENT_ID>',\n  identity: 'my_user_id', // optionaly specify the identity of the user to get their specific flags\n });\n return { flagsmithState: flagsmith.getState() };\n};\n\nexport default MyApp;\n```",
+      "source_content_hash": "8c43181aa753a53e13389373894be88102c15d60f3e4bf72cc743868db2c2b77",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f275f5fd"
+      }
+    },
+    {
+      "segment_id": "7b2110d8",
+      "source_content": "```javascript\nimport { useFlags } from 'flagsmith/react';\n\nexport function MyComponent() {\n const flags = useFlags(['font_size'], ['example_trait']); // only causes re-render if specified flag values / traits change\n return (\n  <div className=\"App\">\n   font_size: {flags.font_size.value}\n   example_trait: {flags.example_trait}\n  </div>\n );\n}\n```",
+      "source_content_hash": "fb7c4d278ffba13eb57da8dbd381de5f30ce651dcde477cb7f5cde50da9456d0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b2110d8"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "From that point the SDK usage is the same as the [React SDK Guide](/clients/react)",
+      "source_content_hash": "ab1a0907357cbbce954080578ebf977613965a874ad05578d96c311ff9cefd22",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此后SDK的使用方式与[React SDK指南](/clients/react)相同"
+      }
+    },
+    {
+      "segment_id": "5baf88e2",
+      "source_content": "### Example: Flagsmith with Next.js middleware",
+      "source_content_hash": "638b4547d95f3c31ee4fc95f62432a4ebf0619a3f30ad634c3a4cc6031b4b7e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：Next.js中间件中的Flagsmith"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "The Flagsmith JS client includes `flagsmith/next-middleware`, it can be used just like the regular library within\nNext.js middleware.",
+      "source_content_hash": "ef4ab1d9210abc3d23d324d1b37ddf3fa2ada2adad9c402d661e680fabbcae87",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith JS客户端包含`flagsmith/next-middleware`，可在Next.js中间件中像常规库一样使用。"
+      }
+    },
+    {
+      "segment_id": "efbe5e3f",
+      "source_content": "```javascript\n// middleware.ts\nimport { NextResponse } from 'next/server';\nimport type { NextRequest } from 'next/server';\nimport flagsmith from 'flagsmith/next-middleware';\n\nexport async function middleware(request: NextRequest) {\n const identity = request.cookies.get('user');\n\n if (!identity) {\n  // redirect to homepage\n  return NextResponse.redirect(new URL('/', request.url));\n }\n\n await flagsmith.init({\n  environmentID: '<YOUR_ENVIRONMENT_ID>',\n  identity,\n });\n\n // Return a different URL based on a feature flag\n if (flagsmith.hasFeature('beta')) {\n  return NextResponse.redirect(new URL(`/account-v2/`, request.url));\n }\n\n // Return a different URL based on a remote config\n const theme = flagsmith.getValue('colour');\n return NextResponse.redirect(new URL(`/account/${theme}`, request.url));\n}\n\nexport const config = {\n matcher: '/login',\n};\n```",
+      "source_content_hash": "72cb9b9b76a08359ec354af7a77ce3ad23c9d91d2ac909ca0b70182e1dfe26f9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_efbe5e3f"
+      }
+    },
+    {
+      "segment_id": "d53c8ed4",
+      "source_content": "### Example: SSR without Next.js",
+      "source_content_hash": "e3915f34fbe88f733f1c002464adaf4b3b89ab38d637cca80941ef5986b086ef",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：不使用Next.js的SSR"
+      }
+    },
+    {
+      "segment_id": "1ecf0882",
+      "source_content": "The same can be accomplished without using Next.js.",
+      "source_content_hash": "e52d9e325fc393b360c9c5481a761d32f3d4fdd5a39f310604ae0b748b36b11c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同样的功能可以在不使用Next.js的情况下实现。"
+      }
+    },
+    {
+      "segment_id": "e77cf7c6",
+      "source_content": "Step 1: Initialising the SDK and passing the resulting state to the client.",
+      "source_content_hash": "d47df1e217aa0bba8c7f75c2d12d7aae49b16a53212417596da2297826f84c71",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "步骤1：初始化SDK并将结果状态传递至客户端。"
+      }
+    },
+    {
+      "segment_id": "6e57b94c",
+      "source_content": "```javascript\nawait flagsmith.init({\n // fetches flags on the server\n environmentID: '<YOUR_ENVIRONMENT_ID>',\n identity: 'my_user_id', // optionaly specify the identity of the user to get their specific flags\n});\nconst state = flagsmith.getState(); // Pass this data to your client\n```",
+      "source_content_hash": "69796b14b5e0f4de9c8e0d5844d6954aff45e0be8dbf3e2202d1870b43154123",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6e57b94c"
+      }
+    },
+    {
+      "segment_id": "17b50e81",
+      "source_content": "Step 2: Initialising the SDK on the client.",
+      "source_content_hash": "3d5f097e250633f05743eb006acf91e3434d15739195671614bac5789d6d7e04",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "步骤2：在客户端初始化SDK。"
+      }
+    },
+    {
+      "segment_id": "3ad9440a",
+      "source_content": "```javascript\nflagsmith.setState(state); // set the state based on your\n```",
+      "source_content_hash": "109bd7f4c16a2790a54687455e46d439af2251de9fc84ebb0bf147a5a6d820b7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3ad9440a"
+      }
+    },
+    {
+      "segment_id": "619c3209",
+      "source_content": "Step 3: Optionally force the client to fetch a fresh set of flags",
+      "source_content_hash": "f12bfd8e5850d61912f7e58de5f3a6e706a8b2d5f6d96a78ba1ca23fb7fb8bcb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "步骤3：可选强制客户端获取最新标志集"
+      }
+    },
+    {
+      "segment_id": "9129c0c5",
+      "source_content": "```javascript\nflagsmith.getFlags(); // set the state based on your\n```",
+      "source_content_hash": "088d86f58117588f139be696478d7369b8c0f641dbf082e5e054e47fc9c664df",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9129c0c5"
+      }
+    },
+    {
+      "segment_id": "d2a3d4c7",
+      "source_content": "From that point the SDK usage is the same as the [JavaScript SDK Guide](/clients/javascript)",
+      "source_content_hash": "14a404228fd5770cdb6cbd1ae183d9da6aa81d65df7c9d5f5f6372ef87d9ab5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此后SDK的使用方式与[JavaScript SDK指南](/clients/javascript)相同"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/client-side/nextjs-and-ssr.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.956870+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "942941b2f44f0abaf7409339afb82c4d55281905691577166207675d6d5ca8dd"
+  }
+}

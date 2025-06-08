@@ -1,0 +1,212 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/ruby.md",
+  "source_file_content_hash": "a7d723097166ff9d265f37468ca5bafe5369d352d60e7ca8f97cd55de343f7b0",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Ruby SDK\nsidebar_label: Ruby\ndescription: Manage your Feature Flags and Remote Config in your Ruby applications.\nslug: /clients/ruby\n---",
+      "source_content_hash": "3d1dcb7794d621fac434c18fa34ff7fbdcac1650337a9d3d45e4e60b1b703637",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The SDK clients for Ruby [https://flagsmith.com/](https://www.flagsmith.com/). Flagsmith allows you to manage feature\nflags and remote config across multiple projects, environments and organisations.",
+      "source_content_hash": "b665814fd854119d0799619f427b88af91751eb6c308ca57aba00537398c4cc1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Ruby版SDK客户端 [https://flagsmith.com/](https://www.flagsmith.com/)。Flagsmith支持跨多项目、多环境和多组织管理功能开关与远程配置。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-ruby-client).",
+      "source_content_hash": "7f2fa43a946308fd7397b0410ead70b4192535f6474dd41bc494fd77dbe22b15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-ruby-client)。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 入门指南"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "These instructions will get you a copy of the project up and running on your local machine for development and testing\npurposes. See running in production for notes on how to deploy the project on a live system.",
+      "source_content_hash": "946931c4af53151d7d6f2da72209f3315865a791a06b6b61541c00127eb04af8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本指南将帮助您在本地开发测试环境中运行项目副本。生产环境部署说明请参阅运行部署章节。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Installing",
+      "source_content_hash": "a0354fdd247f6a2a869700b731890a6eec3fc4a5a00efad493609d361813c60e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装说明"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "VIA gem:",
+      "source_content_hash": "0d4677ac4f4c7f4c66a060e406b2b093d343ef96af700778ff1f285b1ea82be3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过gem安装："
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "`gem install flagsmith`",
+      "source_content_hash": "19a121940a08bc6f2c350270f0ebd7e5484230319d144425792e99f5f9c1df43",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`gem install flagsmith`"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目的特定环境（如开发环境或生产环境）进行初始化。环境密钥可在环境设置页面获取。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "![API Key](/img/api-key.png)",
+      "source_content_hash": "63fc462a78f011a99f44055dd4364789086c3b250ee6096e21f73f70b29dbb7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API密钥](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Usage",
+      "source_content_hash": "63bfd61a0561b255a2caa0a2e3add091ca7e327f2fa06a407cbb2ff341b858d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用说明"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "076d64d1",
+      "source_content": "```ruby\nrequire \"flagsmith\"\n\nflagsmith = Flagsmith.new(\"<<Your API KEY>>\")\n\nif flagsmith.get_value(\"font_size\")\n  #    Do something awesome with the font size\nend\n\nif flagsmith.feature_enabled?(\"does_not_exist\")\n  #do something\nelse\n  #do nothing, or something else\nend\n```",
+      "source_content_hash": "57d3b7694fefa589653393fe446570542c89ae51c603f1fca8021866f3e6593f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_076d64d1"
+      }
+    },
+    {
+      "segment_id": "cb5b269c",
+      "source_content": "## Available Options",
+      "source_content_hash": "c04cc4c0d8de540d0f6b092f320685603d75fb216d5f4a19998784a197fb9d0c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 可用配置项"
+      }
+    },
+    {
+      "segment_id": "619c9033",
+      "source_content": "| Property  |                                            Description                                            | Required |                       Default Value |   Environment Key |\n| --------- | :-----------------------------------------------------------------------------------------------: | -------: | ----------------------------------: | ----------------: |\n| `api_key` |  Defines which project environment you wish to get flags for. _example ACME Project - Staging._   |  **YES** |                                null | FLAGSMITH_API_KEY |\n| `url`     | Use this property to define where you're getting feature flags from, e.g. if you're self hosting. |   **NO** | <https://api.flagsmith.com/api/v1/> |     FLAGSMITH_URL |",
+      "source_content_hash": "d5570689293a33601f8b68baa648ffc21d3fa7e0b4cbaa929b29c16ebd4c2dbe",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_619c9033"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "## Available Functions",
+      "source_content_hash": "4808d3dd2ec54985a673471358921d6b58c245c1385959f5ba86e96f7f6ff4d2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 可用函数"
+      }
+    },
+    {
+      "segment_id": "e52f2675",
+      "source_content": "| Property                                          |                                                     Description                                                      |\n| ------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------: |\n| `init`                                            |                                 Initialize the sdk against a particular environment                                  |\n| `feature_enabled?(key)`                           |         Get the value of a particular feature e.g. `flagsmith.feature_enabled?(\"powerUserFeature\") // true`          |\n| `feature_enabled?(key, user_id, default = false)` | Get the value of a particular feature for a user e.g. `flagsmith.feature_enabled?(\"powerUserFeature\", 1234) // true` |\n| `get_value(key)`                                  |                 Get the value of a particular feature e.g. `flagsmith.get_value(\"font_size\") // 10`                  |\n| `get_value(key, user_id, default = nil)`          |    Get the value of a particular feature for a specified user e.g. `flagsmith.get_value(\"font_size\", 1234) // 15`    |\n| `get_flags()`                                     |       Trigger a manual fetch of the environment features, if a user is identified it will fetch their features       |\n| `get_flags(user_id)`                              |                       Trigger a manual fetch of the environment features with a given user id                        |\n| `set_trait(user_id, trait, value)`                |                                    Set the value of a trait for the given user id                                    |",
+      "source_content_hash": "461ce6689d0b154fdd589799f45a1c48dda75d56042d86debad996cea4b23b99",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e52f2675"
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "## Identifying Users",
+      "source_content_hash": "eb438c52b3da95b84637b0cf80a597c9a28b7b7d72733301cc37efe881aebae6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 用户标识"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "Identifying users allows you to target specific users from the [Flagsmith dashboard](https://www.flagsmith.com/). You\ncan include an optional user identifier as part of the `feature_enabled?` and `get_value` methods to retrieve unique\nuser flags and variables.",
+      "source_content_hash": "5fea97ff13651dc80d231bed3831d4a52f4a3788e608a6876c5f25247e21a672",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过[Flagsmith控制面板](https://www.flagsmith.com/)标识用户可实现精准用户定向。在调用`feature_enabled?`和`get_value`方法时传入可选用户标识参数，即可获取相应用户的功能开关与变量配置。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/ruby.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.937437+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "a7d723097166ff9d265f37468ca5bafe5369d352d60e7ca8f97cd55de343f7b0"
+  }
+}

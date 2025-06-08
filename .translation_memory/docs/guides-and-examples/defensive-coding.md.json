@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/defensive-coding.md",
+  "source_file_content_hash": "ad350e6c001a852bd02d5e47096470bdb3545fa68045ac7d4c4f5e97b55f38a8",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Defensive Coding and Designing for Failure\nsidebar_label: Defensive Coding\n---",
+      "source_content_hash": "9be9e1cc7e13d51bc72cc05b7255ab7bb72f245ba75e52ce7d78e86735aed27f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "Introducing Feature Flags and Remote Config to your applications can provide a wealth of benefits, but there are also a\nfew drawbacks. Fortunately, the majority of these can be avoided through [defensive coding](#defensive-coding) and\nsensible approaches to default flags.",
+      "source_content_hash": "30ab8e322baa52ee62ba44cf9994ca7fa53cac05770565cfb1e6896eb00fe9d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为应用程序引入功能开关和远程配置能带来诸多优势，但也存在一些潜在缺陷。幸运的是，通过[防御性编程](#defensive-coding)和合理的默认值设置策略，大多数问题都可以规避。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "In addition to the approaches you can take integrating our SDKs, there are a number of\n[Design for Failure](#designing-for-failure) concepts that are built into the platform architecture to ensure that\nFlagsmith provides a reliable, dependable solution.",
+      "source_content_hash": "4354ccef8f6aa9e29e292bba2c6196a952227af8c825f8b73330f7884957dd75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除了集成SDK时可采取的措施外，平台架构中还内置了多项[故障设计](#designing-for-failure)理念，确保Flagsmith能提供稳定可靠的服务。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Defensive Coding",
+      "source_content_hash": "7a03111196d683a68fea127b8fa9c6f4bda7f49a26946789fb7c88f9d6422b99",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 防御性编程"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "### Don't expect a 200 response from the Flagsmith API",
+      "source_content_hash": "400b256335e53cb5b48a4d45eada583a53b0da32f5c57c04b0c794b23373119c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 不要假设Flagsmith API始终返回200状态码"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "First up - we care deeply about our [SaaS uptime and stability](https://flagsmith.statuspage.io/). Whilst no one has\n100% uptime, in our experience there are numerous situations where your application is unable to get a response from our\nAPI:",
+      "source_content_hash": "693f446d3ea966a74675d53e9ffb52927dfd3c4d626d60c9c7943555279dff3f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "首先声明——我们高度重视[SaaS服务的可用性与稳定性](https://flagsmith.statuspage.io/)。虽然100%的在线率不现实，但实践中存在多种可能导致API请求失败的情况："
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- They are using a mobile device, open your app, and step into a lift.\n- They are using a web application in a hotel that has the craziest DNS setup you have ever seen.\n- As above but for TLS certificates.\n- They are running a DNS blocker that has over-zealous blacklists.",
+      "source_content_hash": "8b55ce1428ecc6b1385c11691b8e8595e3303192cc055d4beeb200755e377956",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 移动设备用户进入电梯后打开应用\n- 酒店WiFi存在异常的DNS配置\n- 类似场景下的TLS证书问题\n- 用户启用了过于激进的DNS拦截工具"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "The list goes on and on, but the bottom line is that whilst our API being down is extremely unlikely, you cannot rely on\n200's from our API in 100% of cases.",
+      "source_content_hash": "67cdc304881f38ab2a1a42876750f8d16b73a578874b97880e1ce528f5ebf81c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然API中断的概率极低，但您必须认识到：无法保证在所有场景下都能获得成功的API响应。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "So with that in mind, here are some rules you can follow to avoid any issues stemming from the above.",
+      "source_content_hash": "6e00b6ac96a04fbd5fd599e82c52367d31ed3c84e1e1429eecd6883c0764518a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基于此认知，以下规则可帮助您规避相关问题。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Don't block your application waiting on our response",
+      "source_content_hash": "5679817645da8508b612da5686c51ae777d99cbfdfdd6874cd517d6e28155e65",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 避免阻塞主线程等待API响应"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "The solution here really depends on which of our SDKs you are using. By default our Client SDKs will not block your main\napplication thread, and are designed to work around an asynchronous callback model.",
+      "source_content_hash": "0fa4780bc4491249f7e42249705fa72f85c8e10b4c2366ad930fedefd3373d8e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "具体解决方案取决于您使用的SDK类型。默认情况下，客户端SDK不会阻塞主线程，采用异步回调模式设计。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Where our Server Side SDKs are being used, it really depends on if you are using them in\n[local or remote evaluation mode](/clients/overview.md#server-side-sdks). When running in local evaluation mode, once\nthe SDKs have received a response from the API with the Environment related data, they will keep that data in memory. In\nthe event of the SDKs then not receiving an update, they will continue to function.",
+      "source_content_hash": "3a0b2bd15c01f5523d0591ba0591f4accc868b182cf14d5223e21edf792beef3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于服务端SDK，需区分[本地/远程评估模式](/clients/overview.md#server-side-sdks)。本地评估模式下，SDK获取环境数据后会将其缓存在内存中，即使后续无法连接API仍可持续运作。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "In the event that the SDKs aren't able to contact the API at all, they will time out and resort to\n[Default flags](#rule-2-progressively-enhance-your-application-with-default-flags). When running in remote evaluation\nmode, you will need to decide what the best approach is based on your particular application. Again,\n[Default flags](#rule-2-progressively-enhance-your-application-with-default-flags) can help here.",
+      "source_content_hash": "e4535264b7884df1f5ddaa011fc38ea7ac98b7d99ad266a4667ef1df45645289",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当完全无法连接API时，SDK会超时并回退到[默认值设置](#rule-2-progressively-enhance-your-application-with-default-flags)。远程评估模式下，您需要根据应用场景选择最佳策略，此时[默认值](#rule-2-progressively-enhance-your-application-with-default-flags)同样能发挥作用。"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "### Progressively enhance your application with default flags",
+      "source_content_hash": "d5388f7f9bbafb7c217b930fbfe0c1c4f2562b5dfe5f3fc7150fda804473f369",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 采用渐进增强的默认值策略"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "The most effective way of dealing with these issues is to provide a sane set of default values for _all of your flags_.\nThe Flagsmith SDKs all have provision for specifying default values for both flag boolean and flag text values. We\nstrongly recommend setting defaults for all of your flags as a matter of routine.",
+      "source_content_hash": "435c38a17fb13e002d142f3e1963a3354c4f31ff003977e4757f0b6f1a8bbefa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最有效的解决方案是为所有功能开关设置合理的默认值。Flagsmith SDK支持为布尔型和文本型开关指定默认值，我们强烈建议将其作为标准实践。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Your application should operate in a default, safe mode and its behaviour should only be modified or enhanced with flags\non receiving an API response.",
+      "source_content_hash": "b9511f388caa794683ee18cf6e47663f8d4e029c570abb3120e0346faca82a90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用程序应能在默认安全模式下运行，仅在成功获取API响应后才根据开关值调整行为。"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Cache flags where possible",
+      "source_content_hash": "b250e4a7d1a56cce05563364b77e884be93a734c510ad4abae8c079261707891",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 尽可能缓存开关值"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "Our Javascript SDK has the capability of caching the last received flags in the localStorage of the user's browser. When\nthe browser starts a new session, the last cached flags will be used while waiting for a response from the API for a\nfresh set of flags. This pattern helps if the browser never receives a response from the API.",
+      "source_content_hash": "2d11fbd5a21d81de74b2f61adbcc24c9e3c85715fc85b91735d6a9e8a716e41b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的JavaScript SDK支持将最新获取的开关值存入浏览器localStorage。当新会话启动时，在等待API响应的过程中会优先使用缓存值。这种机制能有效应对API完全不可达的情况。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Designing for Failure",
+      "source_content_hash": "8ecdc960e33a681b729d9f97a642b3376456f20f6eba8844f606723cceb4972b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 故障设计"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### The Edge API",
+      "source_content_hash": "d439bd2196778e48870b975ec0326b2f953452b87741ce3964f6659a5fc3e4f2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 边缘API"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "When our SDKs request their flags, they will make requests to our [Edge API](/advanced-use/edge-api.md). This\ninfrastructure is serverless both at the compute and data-store, as well as being replicated across eight AWS regions.\nWe also provide latency based routing and regional fault tolerance.",
+      "source_content_hash": "f449fe7a3a1b24f7126e98d26d1db8d9afa66eabdafb242c1b08688f7bf23311",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK获取开关值时，会请求我们的[边缘API](/advanced-use/edge-api.md)。该基础设施采用无服务器架构（包括计算层和数据存储层），并部署在八个AWS区域，提供基于延迟的路由和区域级故障转移能力。"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "What this means is that your application will be served by the nearest region to the request. In addition to this, in\nthe event of the failure of an entire AWS region, requests will automatically be routed to the next nearest region.",
+      "source_content_hash": "405677ab70909783f1d6b63f1a73077eb0dd3ca2dd4ccc304aa580d95cd3051b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这意味着您的应用程序请求将由距离最近的区域提供服务。此外，如果整个AWS区域发生故障，请求将自动路由至次近的区域。"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "### Caching, Performant SDKs",
+      "source_content_hash": "820983b51466871c15789a791518918bed736a6db0f57d2b698cf1f625e13a29",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 缓存与高性能SDK"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "Our client-side SDKs will always remember their last known flags and use these in the event that they cannot reach our\nAPI; for example if they are on a mobile device set to flight mode.",
+      "source_content_hash": "05d249256d070f1f5e8d02d31789a2d9b56a2a5000f3cdd1eeb0ae54986cc833",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的客户端SDK始终会记住最后已知的开关配置，并在无法连接API时（例如移动设备处于飞行模式）使用这些缓存值。"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "In addition to this, by default our client-sde SDKs will only make a network call when they are initialised. Subsequent\nrequests for flag evaluation will happen locally in memory in fractions of a millisecond.",
+      "source_content_hash": "534889b2bf2417c39d5093ad262b17fc54062cd408a38f6f131587d0ea8a4b3d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此外，默认情况下我们的客户端SDK仅在初始化时发起网络请求。后续的开关评估请求将在内存中以毫秒级延迟本地完成。"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "### Server side SDKs and local evaluation mode",
+      "source_content_hash": "8fdfe37fe27fbd069c0765f6d215ee5782ff2e1534d1d4c041d97a9509e1b150",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 服务端SDK与本地评估模式"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "If you need sub-millisecond latency for end-to-end flag evaluation, for example in the event that you are running a\nmulti-variate test on a landing page of your website, you can employ one of our Server Side SDKs running in\n[local evaluation mode](/clients/overview.md#2---local-evaluation) mode. This will provide sub-millisecond latency of\nthe entire flag evaluation rules engine, running locally within your server infrastructure, allowing you to run\nmultivariate tests with zero latency impact.",
+      "source_content_hash": "226894c9fdf7c4e7cea1f24e0bb6d999babde1949b58ea9ad67588d4f8dabaf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您需要端到端开关评估的亚毫秒级延迟（例如在网站落地页进行多变量测试时），可采用运行于[本地评估模式](/clients/overview.md#2---local-evaluation)的服务端SDK。该模式将完整的开关规则引擎部署在您的服务器基础设施中，实现亚毫秒级延迟的多变量测试，完全消除延迟影响。"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "### No proxy-server required",
+      "source_content_hash": "fdbb24b6e39ffa82482313d675a27813750ffa0fbbc5930eb60aaf2e500dd639",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 无需代理服务器"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "We do not require you to run any infrastructure whatsoever to run our platform. There are no relays, proxies, caches or\nCDNs in between your client request and our API.",
+      "source_content_hash": "6b7e42011cf2fc2c8b816909b0f8054baacd1bab5515f909ca22609118927a8c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的平台不要求您运行任何额外基础设施。客户端请求与API之间不存在中继、代理、缓存或CDN节点。"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "We do have an [Edge Proxy](/advanced-use/edge-proxy.md) if required, but it is entirely optional.",
+      "source_content_hash": "ff7973e5ff132a36f16cbe1e56f2d25dfe4ce3f3478d79f25b4802b63454a045",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们提供可选的[边缘代理](/advanced-use/edge-proxy.md)，但该组件并非强制要求。"
+      }
+    },
+    {
+      "segment_id": "5baf88e2",
+      "source_content": "### Bring your own CDN or DNS if you wish",
+      "source_content_hash": "c4230e8509bb1d333fe854464e3ad68e4746b74ae5cc1b1e4fa373c22955a1af",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 支持自定义CDN或DNS"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "Because we don't do any caching, you are free to add your own reverse proxy into the architecture if you wish. Customers\noften do this to provide an additional layer of security (for example, only allowing authenticated clients to get their\nflags). They also do this to ensure that requests from their application don't make requests to a third party domain,\nfor example by setting up their own DNS namespace for our API.",
+      "source_content_hash": "0b0fa93f3d1d1cbb6a5e271a9e26b1659b3da082248f9e8b4a8edac5d96b761d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于我们不进行缓存处理，您可自由在架构中添加反向代理。客户常通过此方式增强安全性（例如仅允许认证客户端获取开关），或确保应用程序不向第三方域名发起请求（例如为我们的API配置自有DNS命名空间）。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/defensive-coding.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.935886+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ad350e6c001a852bd02d5e47096470bdb3545fa68045ac7d4c4f5e97b55f38a8"
+  }
+}

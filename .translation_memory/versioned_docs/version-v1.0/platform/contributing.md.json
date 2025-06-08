@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/platform/contributing.md",
+  "source_file_content_hash": "9eeff24fbd554aa9bca3e9a6fdace74b85e21c7fe75f926207bb25d624b95bf1",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Contributing",
+      "source_content_hash": "d720a828da1110733f6baa861dbe161da9315aa8d2e7971c9bcca92354d64cf3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 贡献指南"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "We're always looking to improve this project, open source contribution is encouraged so long as they adhere to these\nguidelines.",
+      "source_content_hash": "60f49839cf6898e3d17796df09e0b46eda2405ff570df64aabaff8946ebe71c4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们始终致力于改进本项目，欢迎遵循以下准则的开源贡献。"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "## Pull Requests",
+      "source_content_hash": "98b854ff204836d218ad6daa8c0f4c2fd989b3249252dc53054370edc2c81d76",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 拉取请求"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The Flagsmith team will be monitoring for pull requests. When we get one, a member of team will test the work against\nour internal uses and sign off on the changes. From here, we'll either merge the pull request or provide feedback\nsuggesting the next steps.",
+      "source_content_hash": "1ea92df1d9f365e1506c018c9da14cf0a7c9ed9d8990faef810876003d552c74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith团队会持续关注拉取请求。收到PR后，团队成员将根据内部用例测试修改内容并签署确认。我们会直接合并通过审核的PR，或提供改进建议。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "### A couple things to keep in mind",
+      "source_content_hash": "414debd493cb7b89feafe52ad590178e2dde5b76f95679b127576742603f6ada",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 注意事项"
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- If you've changed APIs, update the documentation.\n- Keep the code style (indents, wrapping) consistent.\n- If your PR involves a lot of commits, squash them using `git rebase -i` as this makes it easier for us to review.\n- Keep lines under 80 characters.",
+      "source_content_hash": "a61d1f597f037a867196da6b1aedeacdf7303106467f9cbaa7ac0202ee033fb3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 若涉及API变更，请同步更新文档\n- 保持代码风格统一（缩进、换行等）\n- 若提交包含大量commit，建议使用`git rebase -i`进行压缩以方便评审\n- 单行代码不超过80个字符"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## Code Formatting/Linting",
+      "source_content_hash": "0d2eec934e034e8734a4edea0b1128082c5b1cede748971577a28c183ac3a8a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 代码格式化/静态检查"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Please check our [pre-commit setup](/deployment/hosting/locally-api#pre-commit).",
+      "source_content_hash": "637a8f89d934aebf4e13974584359a2ada7f1101fecc90918c8d37d648f19288",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请参考我们的[pre-commit配置](/deployment/hosting/locally-api#pre-commit)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/platform/contributing.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.928033+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "9eeff24fbd554aa9bca3e9a6fdace74b85e21c7fe75f926207bb25d624b95bf1"
+  }
+}

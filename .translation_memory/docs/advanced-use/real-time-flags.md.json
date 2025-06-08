@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/real-time-flags.md",
+  "source_file_content_hash": "fd51a5593ab0df7f857f870da245cb6bf305282e0667ce2aa2d9214bd1ad0add",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Real-Time Flags",
+      "source_content_hash": "6e53d6a0724686da17f7bba185e1e09e84d69ffb326fc329b46e3037085b9943",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 实时功能开关"
+      }
+    },
+    {
+      "segment_id": "13b248dc",
+      "source_content": ":::tip\n\nReal-time Flags are part of our SaaS Scale-Up and Enterprise plans.\n\n:::",
+      "source_content_hash": "b6b6157f8200762f93f69f9a6c21efde7851491876cbc66bf165b1b44e5c0352",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n实时功能开关是我们的SaaS Scale-Up和企业版计划的一部分。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "0d5e1c45",
+      "source_content": ":::info\n\nReal-time Flags are currently in beta. Please contact us to join the beta!\n\n:::",
+      "source_content_hash": "818d3f93fb3cb2a680bf88949014cee760949595eeeb36811b603aac17a9892a",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n实时功能开关目前处于测试阶段。请联系我们加入测试计划！\n\n:::"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Real-time flags allow you to stream flag changes from Flagsmith downstream to connected clients.",
+      "source_content_hash": "4c71d1a1cc095c1ceaf6d5f6cfd1529ca59432388776851d5b582369311fc2a3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "实时功能开关允许您将功能开关的变更从Flagsmith实时推送到已连接的客户端。"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## How it works",
+      "source_content_hash": "5ae438610cf16e31eb584a453d76f45d94f6d1bb14751446ac4e99e3e37c33a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 工作原理"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Our SDK will make a long-lived request (actually a\n[Server Sent Event](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)), to\nour real-time infrastructure. This connection will remain open for the duration of the SDK session, listening for events\nfrom our API.",
+      "source_content_hash": "b17324ea34f744a85f34090316ce51e3a7bd65b53857a026cc8446e53b019e5d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的SDK会发起一个长连接请求（实际上是\n[服务器发送事件](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)），连接到\n我们的实时基础设施。该连接将在整个SDK会话期间保持开放，监听来自API的事件。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "When an Environment is updated in some way, either via the Flagsmith dashboard or our API, all the clients connected to\nthat Environment stream will receive a message (actually an epoch timestamp) that alerts them to refresh their flags,\nwhich they will go ahead and do.",
+      "source_content_hash": "622fa7f60ccb0dcb5b3ab0f95a1c42983e09cca963c5b53e940598d6627ae3c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当通过Flagsmith仪表板或API更新某个环境时，所有连接到该环境流的客户端都会收到一条消息（实际上是一个时间戳），提醒它们刷新功能开关状态。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "It is then up to you, as part of the SDK integration, to reflect that new flag state within your application.",
+      "source_content_hash": "721637f78bdcd0bd9850f892bd1f98a4853acc7ac393e56764ced130e1c8d135",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后需要您在SDK集成中，将新的功能开关状态反映到应用程序中。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "## Pricing",
+      "source_content_hash": "06a01cd87491b2a566d82106cac18e637e7a9ae9a59bf055c51c33a687537151",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 定价"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Real-time flags are included within the Scale-Up and Enterprise plans.",
+      "source_content_hash": "5d691e8f40e98d1ad5156be9e10eb4df6006b26886c313050820ed2b92af1870",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "实时功能开关包含在Scale-Up和企业版计划中。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## SDK support",
+      "source_content_hash": "783c0fc8205a4e00b880e04ea43d3083c7851f8f94dd9eaf1147a0a6dd2cf97d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SDK支持"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "We are working to build out support for all our SDKs. We are going to prioritise client-side SDKs over server-side SDKs\nbut are happy to take pull requests!",
+      "source_content_hash": "e18910e32b61a51aad7b5184534c1175693bb7ed9cf75c29eff6e20a4addaee7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们正在为所有SDK构建支持。我们将优先考虑客户端SDK而非服务端SDK，但也欢迎提交Pull Request！"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Client Side",
+      "source_content_hash": "c1d7ac9c1261f16e920726a1125e23760692514099e6264ca9d0da83f7a531ee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 客户端"
+      }
+    },
+    {
+      "segment_id": "4eee00b9",
+      "source_content": "| Language       | Support |\n| -------------- | ------- |\n| Javascript     | ✅      |\n| iOS/Swift      | ❌      |\n| Android/Kotlin | ❌      |\n| Dart/Flutter   | ❌      |",
+      "source_content_hash": "02687c1fedeae563fdc0ecbbbf9619ca4254e579716f0444a3c32b067c9a6803",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4eee00b9"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "### Server Side",
+      "source_content_hash": "f00fbd0827a67f1b534e529e4ea9e69cc380b35e5e68d017c4aa9e640968b6b3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 服务端"
+      }
+    },
+    {
+      "segment_id": "84e35a30",
+      "source_content": "| Language | Support |\n| -------- | ------- |\n| Node.js  | ❌      |\n| Java     | ❌      |\n| .Net     | ❌      |\n| Python   | ❌      |\n| Ruby     | ❌      |\n| Rust     | ❌      |\n| Go       | ❌      |\n| Elixir   | ❌      |",
+      "source_content_hash": "7d9936706aae2cdc313c3d2a9a0a193963b7876760f7c146fb9667fc27ec5f69",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_84e35a30"
+      }
+    },
+    {
+      "segment_id": "9e95fc4a",
+      "source_content": "## Things you should know",
+      "source_content_hash": "b59df7eda37c17cbb4325d39c1499fe0a91a6b273306165e18b4ee295a00e2cb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 注意事项"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "### Per-Identity overrides do not trigger an update",
+      "source_content_hash": "116afc5026dda4aee02697922b4b3e40c289c94b48b0d46561085f744becdb61",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 基于Identity的覆盖不会触发更新"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "This is being worked on and we hope to release this capability in Q2 2023.",
+      "source_content_hash": "3af61810c5ac89a108fdc654386c6528792108f0252fa547b4e51439ce25bc7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该功能正在开发中，预计将于2023年第二季度发布。"
+      }
+    },
+    {
+      "segment_id": "3ef18741",
+      "source_content": "### Identity Trait updates do not trigger an update",
+      "source_content_hash": "7816bda71d3a907af5f9794cf6ccc564ea94d035424b329882b3d58d5216a9c3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Identity特征更新不会触发更新"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "This is being worked on and we hope to release this capability in Q2 2023.",
+      "source_content_hash": "3af61810c5ac89a108fdc654386c6528792108f0252fa547b4e51439ce25bc7d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该功能正在开发中，预计将于2023年第二季度发布。"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "## How it works under the hood",
+      "source_content_hash": "36c758e31c8d8ccd0867d3dafd0a6310545e5b257af97c927ea2d696d19e950b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 底层实现原理"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "When realtime streaming is enabled within the SDK, the client will try to connect to:\n`eventSourceUrl + \"sse/environments/\" + environmentID + \"/stream\"`. The streaming services is built on top of\n[Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events), _not_ Websockets!",
+      "source_content_hash": "a117e0cc587aacb8ca513cd9260f1375edb2dea73227542161bfd229e7d6dbf7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当SDK启用实时流功能时，客户端将尝试连接到：\n`eventSourceUrl + \"sse/environments/\" + environmentID + \"/stream\"`。该流服务基于\n[服务器发送事件](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)构建，而非WebSocket！"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "By default, this `eventSourceUrl` is set to `https://realtime.flagsmith.com/`.",
+      "source_content_hash": "97235aaf4dae17e034a2ad184b4a9ced04c14b88605b230fbae3fd7d64fb79aa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，`eventSourceUrl`设置为`https://realtime.flagsmith.com/`。"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "Every time flags are fetched (via identify, get flags, set traits etc) via the REST API, we update an epoch timestamp\ninternally within the SDK, storing how fresh the flags are.",
+      "source_content_hash": "5ee014f60bf45b41aece4f8c3acc9a18967787ee31a7fd8e69067964b80e1137",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每次通过REST API获取功能开关时（通过identify、get flags、set traits等操作），SDK内部会更新一个时间戳，记录功能开关的新鲜度。"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "Whilst connected to the streaming service, the client will receive a new epoch timestamp event if the Flagsmith\nEnvironment state has changed. If that epoch timestamp value is greater (as in more recent) than our internal timestamp\nwe refetch the flags.",
+      "source_content_hash": "0b3fd20a593669c02e40fdb01437258d0ed76ab3c262a5f3745d9c69083a8bab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当连接到流服务时，如果Flagsmith环境状态发生变化，客户端会收到新的时间戳事件。若该时间戳值大于内部记录的时间戳，则重新获取功能开关。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/real-time-flags.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.950401+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fd51a5593ab0df7f857f870da245cb6bf305282e0667ce2aa2d9214bd1ad0add"
+  }
+}

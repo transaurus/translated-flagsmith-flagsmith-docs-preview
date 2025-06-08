@@ -1,0 +1,232 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/go.md",
+  "source_file_content_hash": "9098c80b268c0011dd80f5ac783ed71ee979f009ef46e0077f895acdb2d428b8",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Go SDK\nsidebar_label: Go\ndescription: Manage your Feature Flags and Remote Config in your Go applications.\nslug: /clients/go\n---",
+      "source_content_hash": "6c24a35b90dda4be089dc10425e95a88eb71cfa5fcec53b69cf07056760ff1f9",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The SDK client for Go [https://flagsmith.com/](https://www.flagsmith.com/). Flagsmith allows you to manage feature flags\nand remote config across multiple projects, environments and organisations.",
+      "source_content_hash": "5c74a3ddc90a3f3f33a8543d7d96d30514794b5c7ffff741e1ae62c8b385c984",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该Go语言SDK客户端适用于[https://flagsmith.com/](https://www.flagsmith.com/)。Flagsmith能帮助您跨项目、环境和组织管理功能开关与远程配置。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-go-client).",
+      "source_content_hash": "96d0d39b150a9744493bbc94f92496f146cecb4e7ac79f1fe8e009af189b866d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-go-client)。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 入门指南"
+      }
+    },
+    {
+      "segment_id": "4b395385",
+      "source_content": "```bash\ngo get github.com/Flagsmith/flagsmith-go-client\n```",
+      "source_content_hash": "85632124b347aed9de6051df9f818de0ea8b53184bcd7ccd9271fdcc63009f70",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4b395385"
+      }
+    },
+    {
+      "segment_id": "940e34e3",
+      "source_content": "```go\nimport (\n  \"github.com/Flagsmith/flagsmith-go-client\"\n)\n```",
+      "source_content_hash": "d843b8cadfd5b1a65fb11f9305bb46011f493955861a680ff38a7eb099b19747",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_940e34e3"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上单个项目环境（如开发环境或生产环境）进行初始化。您可在环境设置页面获取环境密钥。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "![API Key](/img/api-key.png)",
+      "source_content_hash": "63fc462a78f011a99f44055dd4364789086c3b250ee6096e21f73f70b29dbb7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API密钥](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Retrieving feature flags for your project",
+      "source_content_hash": "bca69896a0ae558d6cc320389f2e769a1fa150cbc6164f02d7024787478d4219",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "For full documentation visit [https://docs.flagsmith.com](https://docs.flagsmith.com)",
+      "source_content_hash": "dabb9c7da6b1c59e48c6a37408ca0f3f057d5d1c3a075c4bdc20aa2ecaec9c9c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整文档请访问[https://docs.flagsmith.com](https://docs.flagsmith.com)"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Sign Up and create account at [https://flagsmith.com/](https://www.flagsmith.com/)",
+      "source_content_hash": "02ed23faa0d80d62463c13b43d07ee95abb457efb9d39a9353d803042b70758d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注册并创建账户请至[https://flagsmith.com/](https://www.flagsmith.com/)"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "In your application initialise the Flagsmith client with your API key",
+      "source_content_hash": "0342395d0e2c9f42362887b967968956107f5412adc1b2b1ddd24fda31096785",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用中通过API密钥初始化Flagsmith客户端"
+      }
+    },
+    {
+      "segment_id": "bca33820",
+      "source_content": "```go\nfs := flagsmith.DefaultClient(\"<Your API Key>\")\n```",
+      "source_content_hash": "fe836db9ff43055fa3a24db7375be17f6993d78f452f842c182500461f644f05",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bca33820"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "To check if a feature flag exists and is enabled:",
+      "source_content_hash": "2d71f5e6484a76e4b0dca71d1f9380e67621196b6aa12ab0561d102f844c2571",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在并启用："
+      }
+    },
+    {
+      "segment_id": "b75ddc12",
+      "source_content": "```go\nfs := flagsmith.DefaultClient(\"<Your API Key>\")\nenabled, err := fs.FeatureEnabled(\"cart_abundant_notification_ab_test_enabled\")\nif err != nil {\n    log.Fatal(err)\n} else {\n    if (enabled) {\n        fmt.Printf(\"Feature enabled\")\n    }\n}\n```",
+      "source_content_hash": "b12d1a2c3750e5f30867251ac85506ef6870730449a79cdfae5d0cf5f7d1cb50",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b75ddc12"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "To get the configuration value for feature flag value:",
+      "source_content_hash": "371d5e66e05051270aef801e7a9ba2b1b5f453dcd7a459a845aeaf54ca8be636",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取功能开关的配置值："
+      }
+    },
+    {
+      "segment_id": "c05ad55e",
+      "source_content": "```go\nfeature_value, err := fs.GetValue(\"cart_abundant_notification_ab_test\")\nif err != nil {\n    log.Fatal(err)\n} else {\n    fmt.Printf(feature_value)\n}\n```",
+      "source_content_hash": "f30230808a3642c16cfb3634106562dd27d7767bb3770938def24a4d58087f6d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c05ad55e"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "More examples can be found in the [Tests](https://github.com/Flagsmith/flagsmith-go-client/blob/main/client_test.go)",
+      "source_content_hash": "06a72245878efb5c958df15d62e95280c225eaab97a594f1c262986328758af3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更多示例可参阅[测试代码](https://github.com/Flagsmith/flagsmith-go-client/blob/main/client_test.go)"
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "## Override default configuration",
+      "source_content_hash": "242d7e795c949122455c15bebd1a6da0d35e44cae8b607acd146f8b795b3b897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认配置"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "By default, client is using default configuration. You can override configuration as follows:",
+      "source_content_hash": "3eda83b532790dd5560ee76491b9ffe63ea1f477ba46587b72844c618aadd1e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下客户端使用标准配置，您可通过以下方式覆盖配置："
+      }
+    },
+    {
+      "segment_id": "468b36ba",
+      "source_content": "```go\nfs := flagsmith.NewClient(\"<Your API Key>\", flagsmith.Config{BaseURI: \"<Your API URL>\"})\n```",
+      "source_content_hash": "363d2d264ec8ee016a1afeca688367699f9c0903fa89db2ab38b8fa2647b74eb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_468b36ba"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/go.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.940060+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "9098c80b268c0011dd80f5ac783ed71ee979f009ef46e0077f895acdb2d428b8"
+  }
+}

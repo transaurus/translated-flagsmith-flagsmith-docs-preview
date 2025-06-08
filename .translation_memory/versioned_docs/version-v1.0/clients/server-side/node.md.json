@@ -1,0 +1,232 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/node.md",
+  "source_file_content_hash": "37b975a50aa376922913abe220be287e20ca1600975a09f51f6e34883fb79c7b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith NodeJS SDK\nsidebar_label: NodeJS\ndescription: Manage your Feature Flags and Remote Config in your NodeJS applications.\nslug: /clients/node\n---",
+      "source_content_hash": "7eafa7046a84cf249385f932be1fafcf2d8b917d3fa556f56db5c98b30ef81a0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library can be used with server-side NodeJS projects. The source code for the client is available on\n[Github](https://github.com/flagsmith/flagsmith-nodejs-client).",
+      "source_content_hash": "a3fda9c1cc91f166de65b6dc647029180c1f7938181e83b72743c719135f2de3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库可用于服务端NodeJS项目。客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-nodejs-client)。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 入门指南"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "These instructions will get you a copy of the project up and running on your local machine for development and testing\npurposes. See running in production for notes on how to deploy the project on a live system.",
+      "source_content_hash": "946931c4af53151d7d6f2da72209f3315865a791a06b6b61541c00127eb04af8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下说明将帮助您在本地开发环境获取项目副本并运行，用于开发和测试目的。生产环境部署注意事项请参阅运行指南。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Installing",
+      "source_content_hash": "a0354fdd247f6a2a869700b731890a6eec3fc4a5a00efad493609d361813c60e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装说明"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "VIA npm:",
+      "source_content_hash": "839e58a47bde4e7c7d83e9d04c49dbdf10713bc56134c15216d957624edb1ea9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过npm安装："
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "`npm i flagsmith-nodejs --save`",
+      "source_content_hash": "87aad37ed71566ecefc5feaa655892f0e1a434058d8b2636afde4b885cba551f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`npm i flagsmith-nodejs --save`"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Usage",
+      "source_content_hash": "63bfd61a0561b255a2caa0a2e3add091ca7e327f2fa06a407cbb2ff341b858d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用说明"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "a89b882e",
+      "source_content": "```javascript\nconst flagsmith = require('flagsmith-nodejs');\n\nflagsmith.init({\n environmentID: '<YOUR_ENVIRONMENT_KEY>',\n});\n\nflagsmith.hasFeature('header', '<My User Id>').then((featureEnabled) => {\n if (featureEnabled) {\n  //Show my awesome cool new feature to this one user\n }\n});\n\nflagsmith.hasFeature('header').then((featureEnabled) => {\n if (featureEnabled) {\n  //Show my awesome cool new feature to the world\n }\n});\n\nflagsmith.getValue('header', '<My User Id').then((value) => {\n //Show some unique value to this user\n});\n\nflagsmith.getValue('header').then((value) => {\n //Show a value to the world\n});\n```",
+      "source_content_hash": "ae09ec06f13aec534cc123abc330e9360170bf679c1ccf1105196f847a3f54fc",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a89b882e"
+      }
+    },
+    {
+      "segment_id": "60410af6",
+      "source_content": "## Available Options",
+      "source_content_hash": "c04cc4c0d8de540d0f6b092f320685603d75fb216d5f4a19998784a197fb9d0c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 可用配置项"
+      }
+    },
+    {
+      "segment_id": "96b8c6f1",
+      "source_content": "| Property        |                                            Description                                            | Required |                      Default Value |\n| --------------- | :-----------------------------------------------------------------------------------------------: | -------: | ---------------------------------: |\n| `environmentID` |  Defines which project environment you wish to get flags for. _example ACME Project - Staging._   |  **YES** |                               null |\n| `onError`       |                 Callback function on failure to retrieve flags. `(error)=>{...}`                  |   **NO** |                               null |\n| `api`           | Use this property to define where you're getting feature flags from, e.g. if you're self hosting. |   **NO** | <https://api.flagsmith.com/api/v1> |\n| `cache`         |  Defines an object containing 3 functions (`has(k)`, `get(k)`, `set(k,v)`) to cache API results   |   **NO** |                               null |",
+      "source_content_hash": "f525be8552c2ae5478a779b1a1e672568a722ec8311e289dfab72a908a805859",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_96b8c6f1"
+      }
+    },
+    {
+      "segment_id": "9e95fc4a",
+      "source_content": "## Available Functions",
+      "source_content_hash": "4808d3dd2ec54985a673471358921d6b58c245c1385959f5ba86e96f7f6ff4d2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 可用函数"
+      }
+    },
+    {
+      "segment_id": "faba0bc9",
+      "source_content": "| Property                       |                                                  Description                                                   |\n| ------------------------------ | :------------------------------------------------------------------------------------------------------------: |\n| `init`                         |                              Initialise the sdk against a particular environment                               |\n| `hasFeature(key)`              |         Get the value of a particular feature e.g. `flagsmith.hasFeature(\"powerUserFeature\") // true`          |\n| `hasFeature(key, userId)`      | Get the value of a particular feature for a user e.g. `flagsmith.hasFeature(\"powerUserFeature\", 1234) // true` |\n| `getValue(key)`                |               Get the value of a particular feature e.g. `flagsmith.getValue(\"font_size\") // 10`               |\n| `getValue(key, userId)`        | Get the value of a particular feature for a specificed user e.g. `flagsmith.getValue(\"font_size\", 1234) // 15` |\n| `getFlags()`                   |                               Trigger a manual fetch of the environment features                               |\n| `getFlagsForUser(userId)`      |                     Trigger a manual fetch of the environment features for a given user id                     |\n| `getUserIdentity(userId)`      |         Trigger a manual fetch of both the environment features and users' traits for a given user id          |\n| `getTrait(userId, key)`        |                         Trigger a manual fetch of a specific trait for a given user id                         |\n| `setTrait(userId, key, value)` |                                    Set a specific trait for a given user id                                    |",
+      "source_content_hash": "56579041c8a5604bbd73a4e3897def1b5346f1c5bdc94bd9a6b1a8f002b89ad1",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_faba0bc9"
+      }
+    },
+    {
+      "segment_id": "98355e36",
+      "source_content": "## Identifying users",
+      "source_content_hash": "1d187bfc6e3a363da645672fb5a9e09ca5066da334aac5e4a454d749eb5b2410",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 用户标识"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "Identifying users allows you to target specific users from the [Flagsmith dashboard](https://www.flagsmith.com/). You\ncan include an optional user identifier as part of the `hasFeature` and `getValue` methods to retrieve unique user flags\nand variables.",
+      "source_content_hash": "594a3b54449ebe1aee927dfaa1494d3ed1232eed430ca4411e9b5fa47b25dba7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户标识功能允许您通过[Flagsmith控制台](https://www.flagsmith.com/)定位特定用户。您可以在调用`hasFeature`和`getValue`方法时传入可选的用户标识参数，以获取相应用户的功能开关和变量配置。"
+      }
+    },
+    {
+      "segment_id": "a4bf4268",
+      "source_content": "## Caching Data",
+      "source_content_hash": "38f2796afb03fdf1e09268cc274a90210a7799bb245049b03aab951e30d3175e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据缓存"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "You can initialise the SDK with something like this:",
+      "source_content_hash": "6e3ca68f6be7da7eaec35de1c57008c4e2fe36ff650bcf44634589517d500ab7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过如下方式初始化SDK："
+      }
+    },
+    {
+      "segment_id": "26f7c825",
+      "source_content": "```javascript\nflagsmith.init({\n cache: {\n   has:(key)=> return Promise.resolve(!!cache[key]) , // true | false\n   get: (k)=> cache[k] // return flags or flags for user\n   set: (k,v)=> cache[k] = v // gets called if has returns false with response from API for Identify or getFlags\n  }\n})\n```",
+      "source_content_hash": "567b8b65f78fed8dbdfc2868594220ef34c52f6d5e004a788627cee973f503f0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_26f7c825"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "The core concept is that if `has` returns false, the SDK will make the required API calls under the hood. The keys are\neither `flags` or `flags_traits-${identity}`.",
+      "source_content_hash": "12f11793097117ee55fc5073b85a0217f14d52cb3a0bc13eedf93705101592f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "核心机制是当`has`返回false时，SDK会自动执行必要的API调用。缓存键名格式为`flags`或`flags_traits-${identity}`。"
+      }
+    },
+    {
+      "segment_id": "25212439",
+      "source_content": "An example of a concrete implemention is below.",
+      "source_content_hash": "eed7d995942f369be41d4771cf320562a15e580362cc3b36dbea0d840e36ef04",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "具体实现示例如下。"
+      }
+    },
+    {
+      "segment_id": "cae897fb",
+      "source_content": "```javascript\nconst flagsmith = require('flagsmith-nodejs');\nconst redis = require('redis');\n\nconst redisClient = redis.createClient({\n host: 'localhost',\n port: 6379,\n});\n\nflagsmith.init({\n environmentID: '<Flagsmith Environment API Key>',\n cache: {\n  has: (key) =>\n   new Promise((resolve, reject) => {\n    redisClient.exists(key, (err, reply) => {\n     console.log('check ' + key + ' from cache', err, reply);\n     resolve(reply === 1);\n    });\n   }),\n  get: (key) =>\n   new Promise((resolve) => {\n    redisClient.get(key, (err, cacheValue) => {\n     console.log('get ' + key + ' from cache');\n     resolve(cacheValue && JSON.parse(cacheValue));\n    });\n   }),\n  set: (key, value) =>\n   new Promise((resolve) => {\n    // Expire the key after 60 seconds\n    redisClient.set(key, JSON.stringify(value), 'EX', 60, (err, reply) => {\n     console.log('set ' + key + ' to cache', err);\n     resolve();\n    });\n   }),\n },\n});\n\nrouter.get('/', function (req, res, next) {\n flagsmith.getValue('background_colour').then((value) => {\n  res.render('index', {\n   title: value,\n  });\n });\n});\n```",
+      "source_content_hash": "c4c71942de3dc8f6f88783f3f412c38f6ce13b51866956e26759b76952a299e3",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cae897fb"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/node.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.936564+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "37b975a50aa376922913abe220be287e20ca1600975a09f51f6e34883fb79c7b"
+  }
+}

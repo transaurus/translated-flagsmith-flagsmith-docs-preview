@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/guides-and-examples/testing-push-notifications.md",
+  "source_file_content_hash": "252c5809ad3cac3fd87a5d72f7bc38ce5b7b86057d385b059d9b2c3c70e914b8",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Testing Push Notifications\n---",
+      "source_content_hash": "b46949b1ea8582a880704dc39bcd1908f1344c9d63e6536c1768297f8aa47f2f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## The Problem",
+      "source_content_hash": "951ec64cc337cc0aaf9d99c8b2b144cb5e66e92fcf63c9f37a75f1454d6f3e70",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 问题背景"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Sending out Push Notifications (and Email messages!) accurately and without error is notoriously difficult. Combine the\nfact that they can be extremely sensitive/error prone across dev/staging/production environments, along with the\ninability to recall them if you've sent them out in error, and you have a subject area that can strike fear into even\nthe most hardened engineer. Deploying code that sends out messages to potentially millions of users is not a relaxing\nexperience.",
+      "source_content_hash": "31229154c5fae339d53643792845182cb0f6fc26990e1d8b151469fdbd140f96",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "精准无误地发送推送通知（及电子邮件）是业界公认的难题。考虑到这些通知在不同开发/测试/生产环境中极易出错，且一旦误发无法撤回，即便是经验最丰富的工程师也会对此心生畏惧。向数百万用户推送消息的代码部署过程，绝非轻松体验。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "When you send a push notification via [Firebase FCM](https://firebase.google.com/docs/cloud-messaging), you can test\nthings out by sending messages to a specific device via a device token. The problem is that it’s quite technical to get\nset up, and these tokens are not readily surfaced within an app. In addition, if you want to test out a campaign it’s\nlikely you will want to try sending push notifications to more than 1 device so you can test between QA, product owners,\ndevelopers and marketing when validating behavior and fixing bugs.",
+      "source_content_hash": "c46ed0a7fb3049a6aaaaa293d3bb30a05153a677d110c4e3767dc03bbea6d37a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过[Firebase FCM](https://firebase.google.com/docs/cloud-messaging)发送推送通知时，虽然可以通过设备令牌向特定设备测试消息，但配置过程技术门槛较高，且这些令牌在应用中不易获取。此外，测试营销活动时通常需要向多个设备发送通知，以便在QA、产品负责人、开发人员和营销团队之间验证行为并修复缺陷。"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## The Solution",
+      "source_content_hash": "85aef9fe7503ca480a1dbc8de4cdd0317c4517f3d1969ca7572a8ce8e13eb16b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 解决方案"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "We want to be able to test out the end-to-end process of sending marketing push notifications, before rolling them out\nin production. This often means working across marketing, product and engineering teams in what can become a complex,\nerror prone process. Testing this process before pushing things live is one of the best ways of making sure that your\nprocedures are working.",
+      "source_content_hash": "b7d62c0d0daf253e3e9f5627112880a01e42e9085625f1427e064af47a1ae3ab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们需要在生产环境全面推送前，测试营销通知的端到端流程。这往往涉及跨营销、产品和工程团队的协作，过程复杂且易出错。提前测试是确保流程可靠的最佳实践。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "You can utilise Flagsmith in combination with Firebase FCM topics to make this easier. When sending a push notification\nto a topic, Firebase will send that notification to all the users that are subscribed to that named topic. We will\neventually use these topics to target marketing messages to our user-base, but we can also use them to test out the\nmessaging with our team before sending them out to all our users.",
+      "source_content_hash": "a376c31c21af3ed9a20067249c45b31f4d8009609fab5c08aad395c398d21c74",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过结合使用Flagsmith和Firebase FCM主题可简化此流程。当向主题发送推送通知时，Firebase会将该通知投递给订阅该主题的所有用户。我们最终会使用这些主题向全体用户推送营销消息，但也可以先用于团队内部测试。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "We're going to create a flag in Flagsmith called `fcm_marketing_beta`. We want anyone with this flag enabled in\nFlagsmith to be subscribed to the `marketing` FCM topic. We will then send messages out via this topic.",
+      "source_content_hash": "1764ca0150fd4599f20cd42ffca3c279886d13eb5e9a7dd479790521bc81adf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将在Flagsmith中创建名为`fcm_marketing_beta`的功能开关。任何启用此开关的用户都将自动订阅`marketing` FCM主题，后续消息将通过该主题推送。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "We use the following code in our React Native application to do this:",
+      "source_content_hash": "f8c66ea898e9322b9123bd7285318b290c807e3aec8f7529e14d5f904df8c43c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在React Native应用中采用以下实现代码："
+      }
+    },
+    {
+      "segment_id": "076d64d1",
+      "source_content": "```javascript\nconst isInMarketingBeta = flagsmith.hasFeature('fcm_marketing_beta');\n\nif (isInMarketingBeta) {\n messaging().subscribeToTopic('marketing');\n}\n```",
+      "source_content_hash": "f48ad6f5e9bd9b6a2cc460e2a1ade3625536e966651d8054242c74190d33afb2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_076d64d1"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Adding Individual Users",
+      "source_content_hash": "c038e98644a218506f0ab161053a9edadd4bee752e8145be6404121088797d6d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 添加单个用户"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "Once our code is deployed, we can start enabling this flag for individual users of our application. Using the\n[Identities](/basic-features/managing-identities.md) aspect of Flagsmith, we can enable this flag for our user in the\napplication, as well as enabling it for some of our close team mates.",
+      "source_content_hash": "a3aa93a48259a65422f8e53984630b2a1b109925632f3e34a428aaab8b0efd62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "代码部署后，可通过Flagsmith的[用户标识](/basic-features/managing-identities.md)功能为指定用户启用该开关。在应用界面为团队成员逐个启用此功能。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "![Overriding the Flag for our User](/img/guides/fcm-user-override.png)",
+      "source_content_hash": "e0030e29f85c47cc9ba835dc22f45ebc29743d4e4d28dd92899f54ff0afd01c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![为用户覆盖功能开关](/img/guides/fcm-user-override.png)"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Refreshing the application will cause the `messaging().subscribeToTopic('marketing');` code to execute, adding us to the\nFCM topic.",
+      "source_content_hash": "c70716610fa60d2a7deb75c8f06e03c216cf817b8a23c6298c2c07da95f1fa98",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用刷新后将执行`messaging().subscribeToTopic('marketing');`代码，完成FCM主题订阅。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "![FCM Subscriptions](/img/guides/fcm-subscribed.png)",
+      "source_content_hash": "16eeab417721eed54635db7c6efb86872e4fc2e67a465ce08f37774237b0a5be",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![FCM订阅状态](/img/guides/fcm-subscribed.png)"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Our device has now appeared in this topic, and we can use the topic to start sending test marketing messages.",
+      "source_content_hash": "3f21f7dbf19581ba8d4e3cf271bb46c21ea7953bcc6f67757726bd4008468257",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设备成功加入主题后，即可通过该主题发送测试营销消息。"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "### Adding Teams of Users with Segments",
+      "source_content_hash": "9eef12a5c1e0fa8c15f69558a549249064288a6ed6a56dcfe66f172bc20210a8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过用户分群批量添加"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "We can now make use of [Flagsmith Segments](/basic-features/managing-segments.md) to add all our team to this beta FCM\ngroup.",
+      "source_content_hash": "9038eec65f4b4dbbd8f1345fe28dc59460fa11390fe51422d9c7a95eb26e05c3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "利用[Flagsmith用户分群](/basic-features/managing-segments.md)功能，可将整个团队纳入FCM测试组。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Create a Segment, add a rule that will include our team (in our case we match against the domain name of an email\nTrait), and override the `fcm_marketing_beta` Flag with this Segment:",
+      "source_content_hash": "efb5bdd08fd789eb1814bbb3580ed0935657ec7b37d01c6b50f1352475df28ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建分群并设置匹配规则（本例使用邮箱域名特征匹配），然后为该分群覆盖`fcm_marketing_beta`开关："
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "![Overriding the Flag for our Segment](/img/guides/fcm-segment.png)",
+      "source_content_hash": "872c26f05d8318cf019f537c3a959d81b9620f8cbd9d0b21dd240a3983c91886",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![为分群覆盖功能开关](/img/guides/fcm-segment.png)"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "We're now able to test these messages with our entire team, no further code or deployments required!",
+      "source_content_hash": "afde7fb2c02163dc59087777e72af61daab3f5ead21e74243da6d16c52e24cf7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在无需额外编码或部署，即可实现全团队成员的营销消息测试！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/guides-and-examples/testing-push-notifications.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.953879+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "252c5809ad3cac3fd87a5d72f7bc38ce5b7b86057d385b059d9b2c3c70e914b8"
+  }
+}

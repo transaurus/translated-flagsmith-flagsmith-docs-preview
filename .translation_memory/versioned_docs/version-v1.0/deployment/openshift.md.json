@@ -1,0 +1,42 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/openshift.md",
+  "source_file_content_hash": "7ea2543af213eba3851f2c25de86461cc5bab522fc87f3bb9c1cc2c9db60ca54",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: OpenShift\ndescription: Getting Started with Flagsmith on OpenShift\nsidebar_label: OpenShift\nsidebar_position: 60\n---",
+      "source_content_hash": "bdff929dfe2f0a48959fbbc3085a67c72b55aa492263216ba4d2a71c629555ec",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Check out or [OpenShift Operator on GitHub](https://github.com/Flagsmith/flagsmith-operator).",
+      "source_content_hash": "7fa15e89c3f5b09d0870be7310531db186786ed5bfb140ec8b9d00322e174cd2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查看我们在GitHub上的[OpenShift Operator](https://github.com/Flagsmith/flagsmith-operator)。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "We also have an [Operator on OperatorHub](https://operatorhub.io/operator/flagsmith).",
+      "source_content_hash": "6494f72ebf5baa17b5c1754db3e3ec8df89577e25cdada6e23a8b93d3e30387f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们还在[OperatorHub](https://operatorhub.io/operator/flagsmith)上提供了Operator。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/openshift.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.925294+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7ea2543af213eba3851f2c25de86461cc5bab522fc87f3bb9c1cc2c9db60ca54"
+  }
+}

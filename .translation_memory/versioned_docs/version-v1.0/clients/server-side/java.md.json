@@ -1,0 +1,720 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/java.md",
+  "source_file_content_hash": "978874b9616f6fc7f10880f2e0e1f4e5def4f08d6e7ecf00d7d85123f9161313",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Java SDK\nsidebar_label: Java\ndescription: Manage your Feature Flags and Remote Config in your Java applications.\nslug: /clients/java\n---",
+      "source_content_hash": "f69d2451a82d6fa01551066dda34268d0ed958ac2342b2cc224a39c1df9a6bd9",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library can be used with server-side Java, Kotlin and Android applications. The source code for the client is\navailable on [Github](https://github.com/flagsmith/flagsmith-java-client).",
+      "source_content_hash": "5bcf78e2d5917339ed2c1289907b6f0ed36e4f0133f13fea55147d0d878cf524",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库可用于服务端Java、Kotlin及Android应用程序。客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-java-client)。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 入门指南"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "The client library is available from the Central Maven Repository and can be added to your project by many tools:",
+      "source_content_hash": "ea189a9be82dd7e662680735da0f63f1427a7f220fa9475d6faf4120f4a2c3b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端库已发布至中央Maven仓库，可通过多种工具添加到您的项目中："
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### Maven",
+      "source_content_hash": "4ebc6da73f1866072c2063ee738eb32bc760effa7525b617eae0d54d36122956",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Maven"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Add following dependencies to your project in `pom.xml`",
+      "source_content_hash": "ab92b37c58870f5d2286fa2d79bbc55c905c287c03f37cfd52f02429e4fccfa9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在项目的`pom.xml`中添加以下依赖项"
+      }
+    },
+    {
+      "segment_id": "940e34e3",
+      "source_content": "```xml\n<dependency>\n  <groupId>com.flagsmith</groupId>\n  <artifactId>flagsmith-java-client</artifactId>\n  <version>3.1</version>\n</dependency>\n```",
+      "source_content_hash": "6c14adc066cbd0d2046fc43c7115b71f4300855896d4de4a372358f8da760aa6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_940e34e3"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "### Gradle",
+      "source_content_hash": "9d13101d60dee5a47d521288c1eab382519536847e17c529c53cce90bb3e36f8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Gradle"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```groovy\nimplementation 'com.flagsmith:flagsmith-java-client:2.8'\n```",
+      "source_content_hash": "2a4bed1afbe6ff9304ee9f84530aff944d22f6881ccd2e1fd7cb370c3950f0c9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目内的单个环境进行初始化，例如开发环境或生产环境。您可以在环境设置页面找到环境密钥。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "![API Key](/img/api-key.png)",
+      "source_content_hash": "63fc462a78f011a99f44055dd4364789086c3b250ee6096e21f73f70b29dbb7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API密钥](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Sign Up and create an account at [https://www.flagsmith.com/](https://www.flagsmith.com/)",
+      "source_content_hash": "c036578009b3c60a67b74cc884c7e097562007184db6a6759fdaf20739c6c3e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请前往[https://www.flagsmith.com/](https://www.flagsmith.com/)注册并创建账户"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "In your application initialise the Flagsmith client with your API key:",
+      "source_content_hash": "7b48047dfbd217670b5526ff4af4963636f65bd979d42dbabc2e9723b8532b86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用程序中使用API密钥初始化Flagsmith客户端："
+      }
+    },
+    {
+      "segment_id": "b75ddc12",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .build();\n```",
+      "source_content_hash": "c99510560d136fb32e492447cec422368a6b2d668bccdaa730f895c566f34ab1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b75ddc12"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "To check if a feature flag exists and is enabled:",
+      "source_content_hash": "2d71f5e6484a76e4b0dca71d1f9380e67621196b6aa12ab0561d102f844c2571",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在并已启用："
+      }
+    },
+    {
+      "segment_id": "f275f5fd",
+      "source_content": "```java\nboolean featureEnabled = flagsmithClient.hasFeatureFlag(\"my_test_feature\");\nif (featureEnabled) {\n    // run the code that executes the enabled feature\n} else {\n    // run the code that doesn't include the feature\n}\n```",
+      "source_content_hash": "b125810b4befad2eb9f2cec9941c18368c473c51b2f898279207dcd8cabe6e63",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f275f5fd"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "To get configuration value for a feature flag:",
+      "source_content_hash": "4dc62152d767a8a492ce973892a7ff22225c03003e00a97af1666db1ea8aa84d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取功能开关的配置值："
+      }
+    },
+    {
+      "segment_id": "5d4925eb",
+      "source_content": "```java\nString myRemoteConfig = flagsmithClient.getFeatureFlagValue(\"my_test_feature\");\nif (myRemoteConfig != null) {\n    // run the code that uses the remote config value\n} else {\n    // run the code that doesn't depend on the remote config value\n}\n```",
+      "source_content_hash": "68007e246984a5b290e2ec71075d6b371d310d66e08677c337b1a856beb25ad2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5d4925eb"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "### Identifying users",
+      "source_content_hash": "364500f1634504c5a369ef91cd8b65c60e06a1a00b4e6bc22bb2faadd7818295",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户标识"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "Identifying users allows you to target specific users from the [Flagsmith dashboard](https://www.flagsmith.com/).",
+      "source_content_hash": "150b39018b72cca0decf1264c91605e268c0bc553e834949cf5c81eac9aac80d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户标识功能允许您通过[Flagsmith控制台](https://www.flagsmith.com/)定向特定用户。"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "To check if feature exists for given a user context:",
+      "source_content_hash": "85d91426cb4e95d25b380137c21afa731700ca7a51b6527586836bad8a1ed70a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查指定用户上下文下的功能是否存在："
+      }
+    },
+    {
+      "segment_id": "9f4336b3",
+      "source_content": "```java\nFeatureUser user = new FeatureUser();\nuser.setIdentifier(\"flagsmith_sample_user\");\nboolean featureEnabled = flagsmithClient.hasFeatureFlag(\"my_test_feature\", user);\nif (featureEnabled) {\n    // run the code that executes the enabled feature for a given user\n} else {\n    // run the code that doesn't include the feature\n}\n```",
+      "source_content_hash": "0dda0e757a2fd7125f340f257ba61c3fe79f59e47c15de851c1724524e70aebd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9f4336b3"
+      }
+    },
+    {
+      "segment_id": "86348f98",
+      "source_content": "To get the configuration value of a feature flag for a given user context:",
+      "source_content_hash": "05d323b4b73a26844943e50ea42b1bcca46a1f8b0af5da1052622ec1239a1e7c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户上下文下功能开关的配置值："
+      }
+    },
+    {
+      "segment_id": "daa16011",
+      "source_content": "```java\nString myRemoteConfig = flagsmithClient.getFeatureFlagValue(\"my_test_feature\", user);\nif (myRemoteConfig != null) {\n    // run the code that uses the remote config value\n} else {\n    // run the code that doesn't depend on the remote config value\n}\n```",
+      "source_content_hash": "a7481bfa61003b6e620d3a2352589242000885c56b97790844d297cfe82229d1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_daa16011"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "To set user traits:",
+      "source_content_hash": "070fd2a4cb1796c642da5e931d4049450bc1fabaa3f2955f78e6d3896a3ff3e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置用户特征："
+      }
+    },
+    {
+      "segment_id": "64071bcc",
+      "source_content": "```java\nFeatureUser user = new FeatureUser();\nuser.setIdentifier(identifier);\n\nFlagsAndTraits flagsAndTraits = flagsmithClient.identifyUserWithTraits(user, Arrays.asList(\n    new Trait(null, \"trait1\", \"some value1\"),\n    new Trait(null, \"trait2\", \"some value2\")));\n\n// Since version 3.0, this method returns a FlagsAndTraits object, from which you can obtain the\n// returned flags and / or traits.\nList<Trait> traits = flagsAndTraits.getTraits();\nList<Flag> flags = flagsAndTraits.getFlags();\n```",
+      "source_content_hash": "664ddd98d872e3738f4eb0dd7b6b580d8b079e32ddecc86dcb55f421d7ee5fc6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64071bcc"
+      }
+    },
+    {
+      "segment_id": "1958bc43",
+      "source_content": "To get user traits for a given user context:",
+      "source_content_hash": "474abec0aaa56e92c1d61ce5703b40b6a91e211e8438d467b1918d5ad3d51a93",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户上下文下的用户特征："
+      }
+    },
+    {
+      "segment_id": "1a63b635",
+      "source_content": "```java\nList<Trait> userTraits = flagsmithClient.getTraits(user)\nif (userTraits != null && userTraits) {\n    // run the code that expects the user traits\n} else {\n    // run the code that doesn't depend on user traits\n}\n```",
+      "source_content_hash": "25fef917280dc9e4cf18f736ef37895040a0e10852e82996a939c07e54d945ab",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1a63b635"
+      }
+    },
+    {
+      "segment_id": "c364340c",
+      "source_content": "To get a user trait for a given user context and specific key:",
+      "source_content_hash": "81fe3275fa3394d3b0e00bf8075a511995025dc7e2d88e637a3fbaea542e68a6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取指定用户上下文下特定键的用户特征："
+      }
+    },
+    {
+      "segment_id": "b474abd5",
+      "source_content": "```java\nTrait userTrait = flagsmithClient.getTrait(user, \"cookies_key\");\nif (userTrait != null) {\n    // run the code that uses the user trait\n} else {\n    // run the code that doesn't depend on the user trait\n}\n```",
+      "source_content_hash": "1659fa1344078285a45ebe285c02e7d423c1d46ddc0b65c9d4a5faf7fc325e82",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b474abd5"
+      }
+    },
+    {
+      "segment_id": "bb1346b6",
+      "source_content": "Or get the user traits for a given user context and specific keys:",
+      "source_content_hash": "fc20fe4b605b858bf88090622eb98caa979bc0021ba725aa39d04892fd9828ab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或获取指定用户上下文下多个特定键的用户特征："
+      }
+    },
+    {
+      "segment_id": "8a061704",
+      "source_content": "```java\nList<Trait> userTraits = flagsmithClient.getTraits(user, \"cookies_key\", \"other_trait\");\nif (userTraits != null) {\n    // run the code that uses the user traits\n} else {\n    // run the code doesn't depend on user traits\n}\n```",
+      "source_content_hash": "5b41c697e46a50b00f25122f1fd661c68aee2d561b578cfaf924adc51bd6d3a1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8a061704"
+      }
+    },
+    {
+      "segment_id": "719d3997",
+      "source_content": "To update the value for user traits for a given user context and specific keys:",
+      "source_content_hash": "dedfa30ee317517b0bb017206b8c332ceef1d7b7239160defde825d59485fbb8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更新指定用户上下文下特定键的用户特征值："
+      }
+    },
+    {
+      "segment_id": "5d30fd9b",
+      "source_content": "```java\nTrait userTrait = flagsmithClient.getTrait(user, \"cookies_key\");\nif (userTrait != null) {\n    // update the value for a user trait\n    userTrait.setValue(\"new value\");\n    Trait updated = flagsmithClient.updateTrait(user, userTrait);\n} else {\n    // run the code that doesn't depend on the user trait\n}\n```",
+      "source_content_hash": "c98e79e0601e879dcd36f9f92988bc0e284eaa3c65d54ecc082f36762d9769f4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5d30fd9b"
+      }
+    },
+    {
+      "segment_id": "f6a06609",
+      "source_content": "### Flags and Traits",
+      "source_content_hash": "21852431954f7e304469722089545bcf203ad2ed2062e2cdf4feada5692f6384",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 功能开关与特征"
+      }
+    },
+    {
+      "segment_id": "6b40e7a2",
+      "source_content": "Or get flags and traits for a user in a single call:",
+      "source_content_hash": "bbbf2520480da90a9305fe132cb305d0e70738dccf14136d4f7cd79a28e3984f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或通过单次调用获取用户的功能开关和特征："
+      }
+    },
+    {
+      "segment_id": "71969be5",
+      "source_content": "```java\nFlagsAndTraits userFlagsAndTraits = flagsmithClient.getUserFlagsAndTraits(user);\n// get traits\nList<Trait> traits = flagsmithClient.getTraits(userFlagsAndTraits, \"cookies_key\");\n// or get a flag value\nString featureFlagValue = flagsmithClient.getFeatureFlagValue(\"font_size\", userFlagsAndTraits);\n// or get flag enabled\nboolean enabled = flagsmithClient.hasFeatureFlag(\"hero\", userFlagsAndTraits);\n\n// see above examples on how to evaluate flags and traits\n```",
+      "source_content_hash": "ee165e4e9baf0b8a73143c86b48a86ec4f25dc5e2285c120d99f636a618c9810",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_71969be5"
+      }
+    },
+    {
+      "segment_id": "2b5df263",
+      "source_content": "## Override default configuration",
+      "source_content_hash": "242d7e795c949122455c15bebd1a6da0d35e44cae8b607acd146f8b795b3b897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认配置"
+      }
+    },
+    {
+      "segment_id": "e29bd639",
+      "source_content": "By default, the client uses a default configuration. You can override the configuration as follows:",
+      "source_content_hash": "89c1f36aae76dce9de58794127d5a38ae08b643885a0a07d92364761d568d9df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端默认使用标准配置，您可按如下方式覆盖配置："
+      }
+    },
+    {
+      "segment_id": "e5821418",
+      "source_content": "Override just the default API URI with your own:",
+      "source_content_hash": "d5e36eef7f1bf02df2fd0a8df159d9ee2ad1c483ff1ad2254271e6ae5afa7349",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "仅覆盖默认API地址："
+      }
+    },
+    {
+      "segment_id": "1cd1d315",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withApiUrl(\"http://yoururl.com\")\n                .build();\n```",
+      "source_content_hash": "1b129eb683f8de6f48dd8a1c85f4037f569a31fbd49a0b0a04c46b8037e25129",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1cd1d315"
+      }
+    },
+    {
+      "segment_id": "b27c61de",
+      "source_content": "Override the full configuration with your own",
+      "source_content_hash": "5455abbe47e2b32beb2d88c0c1f17041ba868ffaa1f0773a5ad7ae38be833dc3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完全覆盖配置项："
+      }
+    },
+    {
+      "segment_id": "de34d0f2",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n            .setApiKey(\"YOUR_ENV_API_KEY\")\n            .withConfiguration(FlagsmithConfig.newBuilder()\n                    .baseURI(\"http://yoururl.com\")\n                    .connectTimeout(200)\n                    .writeTimeout(5000)\n                    .readTimeout(5000)\n                    .build())\n            .build();\n\n```",
+      "source_content_hash": "8d59ec5b5245cfd877d778d6f8f4c500de1eaa370e5e66b457ccfe290d65327a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_de34d0f2"
+      }
+    },
+    {
+      "segment_id": "e457c208",
+      "source_content": "### Logging",
+      "source_content_hash": "3c0550fd1dfc464f382afbe0ff75d609708e018c093707647ba18586d18cf128",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 日志记录"
+      }
+    },
+    {
+      "segment_id": "eeeea5ce",
+      "source_content": "Logging is disabled by default. If you would like to enable it then call `.enableLogging()` on the client builder:",
+      "source_content_hash": "ca3100ba33fda868db199cb22e40ed285a8beb81e87214f6a48618f83ac11068",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "日志功能默认禁用。如需启用，请在客户端构建器上调用`.enableLogging()`："
+      }
+    },
+    {
+      "segment_id": "ade38aab",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                // other configuration as shown above\n                .enableLogging()\n                .build();\n```",
+      "source_content_hash": "319d787cc5b55a819a88792212a43e60008cf6a1184866fb6b943289a3516f7d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ade38aab"
+      }
+    },
+    {
+      "segment_id": "d8c366cc",
+      "source_content": "Flagsmith uses [SLF4J](http://www.slf4j.org) and we only implement its API. If your project does not already have SLF4J,\nthen include an implementation, i.e.:",
+      "source_content_hash": "189ee1107df139b65b2fd7fc3beed5fa5db945c38b7be2cea59304deeda345d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用[SLF4J](http://www.slf4j.org)框架且仅实现其API。若项目未集成SLF4J，需引入具体实现例如："
+      }
+    },
+    {
+      "segment_id": "93bf74a6",
+      "source_content": "```xml\n<dependency>\n    <groupId>org.slf4j</groupId>\n    <artifactId>slf4j-simple</artifactId>\n    <version>${slf4j.version}</version>\n</dependency>\n```",
+      "source_content_hash": "4d532a84308079db1560d0eb5f37cd6a230e414f85554db5b2b9a09b77f97e27",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_93bf74a6"
+      }
+    },
+    {
+      "segment_id": "200685d4",
+      "source_content": "### Custom HTTP Headers",
+      "source_content_hash": "5cea82cddab000fe690737ea9bf2422fe3c8115f086913c160c0e9df3f7a9cec",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 自定义HTTP头"
+      }
+    },
+    {
+      "segment_id": "09d52457",
+      "source_content": "adding custom headers to all HTTP calls:",
+      "source_content_hash": "b3cf9d2bfb8a1c44a2a47ba94275a59ff0e5bc86b733a9fc8270e16ca0b4c53e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为所有HTTP调用添加自定义头："
+      }
+    },
+    {
+      "segment_id": "741c654c",
+      "source_content": "```java\nfinal HashMap<String, String> customHeaders = new HashMap(){{\n    put(\"x-custom-header\", \"value1\");\n    put(\"x-my-key\", \"value2\");\n}};\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n    // other configuration as shown above\n    .withCustomHttpHeaders(customHeaders)\n    .build();\n```",
+      "source_content_hash": "b1b02166f1eccbce343defe2637e0a19592ed11d3afdaf5bcdfc756632ec4ba9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_741c654c"
+      }
+    },
+    {
+      "segment_id": "a9950191",
+      "source_content": "### In-Memory Caching",
+      "source_content_hash": "a8d88a7370ba361bcb21a00d4a7822920e59736f559856d55a01de5cca28b1b4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 内存缓存"
+      }
+    },
+    {
+      "segment_id": "92dd4071",
+      "source_content": ":::note\n\nCaching was made available in version 2.6+\n\n:::",
+      "source_content_hash": "7debd93d3a37665700bf6ce69685b72811d37e5360ae1d988a9ca61bc9ea8edf",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\n缓存功能自2.6+版本起可用\n\n:::"
+      }
+    },
+    {
+      "segment_id": "318fb07e",
+      "source_content": "If you would like to use in-memory caching, you will need to enable it (it is disabled by default). The main advantage\nof using in-memory caching is that you can reduce the number of HTTP calls performed to fetch flags.",
+      "source_content_hash": "2c64f07c1f2cb0951e4498213185d66e491cda79401c3ae8e3ec78786a013c83",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需启用内存缓存功能（默认禁用），其主要优势在于能减少获取功能标志所需的HTTP请求次数。"
+      }
+    },
+    {
+      "segment_id": "41e7f712",
+      "source_content": "Flagsmith uses [Caffeine](https://github.com/ben-manes/caffeine), a high performance, near optimal caching library.",
+      "source_content_hash": "3cc978fe5c907e578b2329ed39297ae30016f19f7fbe851a0a2c69334da50a35",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用高性能缓存库[Caffeine](https://github.com/ben-manes/caffeine)，其缓存效率接近最优水平。"
+      }
+    },
+    {
+      "segment_id": "15d5abf0",
+      "source_content": "If you enable caching on the Flagsmith client without setting any values (as shown below), the following default values\nwill be set for you:",
+      "source_content_hash": "839ec777b4c50bed91dab7832250f49ca01ada450c0e78642b9dc120447f33a6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若在Flagsmith客户端启用缓存但未设置参数（如下所示），将自动应用以下默认配置："
+      }
+    },
+    {
+      "segment_id": "a8a2e09b",
+      "source_content": "- maxSize(10)\n- expireAfterWrite(5, TimeUnit.MINUTES)\n- project level caching will be disabled by default (i.e. only enabled if you configure a caching key)",
+      "source_content_hash": "5bf19fc68094dabd86ad097ecd3986cb5b483782f3fcca16c4525d60dbc61ffc",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 最大缓存数(maxSize): 10\n- 写入后过期时间(expireAfterWrite): 5分钟\n- 项目级缓存默认禁用（仅当配置缓存键时启用）"
+      }
+    },
+    {
+      "segment_id": "f3924775",
+      "source_content": "```java\n// use in-memory caching with Flagsmith defaults as described above\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .build())\n                .build();\n```",
+      "source_content_hash": "886aeb871accfe980816a8e62b546a79460ed20dd4ace094ae667773fbca1d33",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "2f8456b2",
+      "source_content": "If you would like to change the default settings, you can overwrite them by using the available builder methods:",
+      "source_content_hash": "f6cf293e304628756c9905304cebf5041069c8c4e52c7cb4834946c736e9bf92",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需修改默认设置，可通过构建器方法进行覆盖："
+      }
+    },
+    {
+      "segment_id": "37cbaa50",
+      "source_content": "```java\n// use in-memory caching with custom configuration\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .maxSize(100)\n                        .expireAfterWrite(10, TimeUnit.MINUTES)\n                        .recordStats()\n                        .enableEnvLevelCaching(\"some-key-to-avoid-clashing-with-user-identifiers\")\n                        .build())\n                .build();\n```",
+      "source_content_hash": "f80951543fb7ebbbd246d484a5ac096b1b886164407e69c404c23d61f0f67405",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "c9e08343",
+      "source_content": "The user identifier is used as the cache key, this provides granular control over the cache should you require it. If\nyou would like to manipulate the cache:",
+      "source_content_hash": "b316aec9c66ea347c1ac336a22d5254cf7e990184ebd9889f52caec95a5e5ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户标识符将作为缓存键使用，便于实现细粒度的缓存控制。如需操作缓存："
+      }
+    },
+    {
+      "segment_id": "16758561",
+      "source_content": "```java\n// this will return null if caching is disabled\nfinal FlagsmithCache cache = flagsmithClient.getCache();\n// you can now discard a single or all entries in the cache\ncache.invalidate(\"user-identifier\");\n// or\ncache.invalidateAll();\n// get stats (if you have enabled them in the cache configuration, otherwise all values will be zero)\nfinal CacheStats stats = cache.stats();\n// check if flags for a user identifier are cached\nfinal FlagsAndTraits flags = cache.getIfPresent(\"user-identifier\");\n```",
+      "source_content_hash": "58cbe34b5d4a73726e99e0e5d66477063ed8385ddb7954f583134de9da2ed5d0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "83d7d3bc",
+      "source_content": "Since the user identifier is used as the cache key, you need to configure a cache key to enable project level caching.\nMake sure you select a project level cache key that will never be a user identifier.",
+      "source_content_hash": "a0c1634c64ee16d3d12057cd9d73dbda4cea0bc50c83df48fed581eab3297d1e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于用户标识符作为缓存键使用，启用项目级缓存需配置专属缓存键。请确保所选项目级缓存键永远不会与用户标识符重复。"
+      }
+    },
+    {
+      "segment_id": "9a01bde3",
+      "source_content": "```java\n// use in-memory caching with Flagsmith defaults and project level caching enabled\nfinal String projectLevelCacheKey = \"some-key-to-avoid-clashing-with-user-identifiers\";\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .withConfiguration(FlagsmithConfig\n                        .newBuilder()\n                        .baseURI(\"http://yoururl.com\")\n                        .build())\n                .withCache(FlagsmithCacheConfig\n                        .newBuilder()\n                        .enableEnvLevelCaching(projectLevelCacheKey)\n                        .build())\n                .build();\n\n// if you need to access the cache directly, you can do this:\nfinal FlagsmithCache cache = flagsmithClient.getCache();\n// invalidate project level cache\ncache.invalidate(projectLevelCacheKey);\n// check if project level flags have been cached\nfinal FlagsAndTraits flags = cache.getIfPresent(projectLevelCacheKey);\n```",
+      "source_content_hash": "f8532f604e077dca1b79a638234c68b4ca6dc0676c2c596aa5b0c785c3da2784",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "95ba516f",
+      "source_content": "### Default flag/config Values",
+      "source_content_hash": "0e5cd99084540e02a0666e7ad0dc99a580c0235ed2b7b3352f55c07736620c64",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 默认标志/配置值"
+      }
+    },
+    {
+      "segment_id": "6c135b48",
+      "source_content": "Evaluating a flag will always return a value, even if the evaluation fails, i.e. the flag does not exist in Flagsmith or\nthe HTTP call fails. By default, a flag will be evaluated to `false` for flags and to `null` for configuration values if\nthere is an error. If you would like to override this behaviour, you can use the following methods:",
+      "source_content_hash": "47859a8cc6f031a3929b899f0662e8b26c9d96e7562c178a12fa91ba85e4ec9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标志评估始终会返回值，即使评估失败（如标志不存在于Flagsmith或HTTP调用失败）。默认情况下，错误状态下标志将评估为`false`，配置值评估为`null`。如需覆盖此行为，可使用以下方法："
+      }
+    },
+    {
+      "segment_id": "14ea483b",
+      "source_content": "```java\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .setDefaultFlagPredicate(\n                    (featureFlagName) -> true /* your logic for default flags */\n                  )\n                .setDefaultFlagValueFunction(\n                  (featureFlagName) ->\n                    \"my-new-default-value\" /* your logic for default config values */\n                 )\n                .build();\n```",
+      "source_content_hash": "e4af5edfc1327c19aab4999bf0a2682e1fc0052ae07519ae10b5cada71677a0f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "f7f08e35",
+      "source_content": "However, the code above will only be used if the evaluation is for a specific flag name, i.e.\n`client.getFeatureFlagValue(\"flag-name\")` or `client.hasFeatureFlag(\"flag-name\")`. If you call method\n`client.getFeatureFlags()` and an error occurs, you will get an empty list of flags. If you would like to change this\nbehaviour, you can configure a default list of flags:",
+      "source_content_hash": "3937e4f5bb8be36da4060e899c88a7d47d70273048c6486b8410473416fef568",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但上述代码仅适用于特定标志名的评估场景，例如`client.getFeatureFlagValue(\"flag-name\")`或`client.hasFeatureFlag(\"flag-name\")`。当调用`client.getFeatureFlags()`方法发生错误时，将返回空标志列表。如需修改此行为，可配置默认标志列表："
+      }
+    },
+    {
+      "segment_id": "d14a389e",
+      "source_content": "```java\nfinal FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n                .setApiKey(\"YOUR_ENV_API_KEY\")\n                .setDefaultFeatureFlags(new HashSet<String>() {{\n                    add(\"flag-name-1\");\n                    add(\"flag-name-2\");\n                    add(\"flag-name-3\");\n                    }})\n                .build();\n```",
+      "source_content_hash": "9e602f6cebb230b1b0393f93b6964d2a4cdb41fc091f46fa8b46bcd13c870c74",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "b0c7a884",
+      "source_content": "Setting default flag names also means that if one of those flags is not configured in the Flagsmith server, it will\nstill be included in the list of flags returned in the example of above.",
+      "source_content_hash": "73bbc2f93598b763ffd19783128c979d39380a3f9913bcb2049c66b0e81a3177",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置默认标志名还意味着：即使Flagsmith服务器未配置某些标志，这些标志仍会包含在返回的标志列表中（如上例所示）。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/java.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.937856+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "978874b9616f6fc7f10880f2e0e1f4e5def4f08d6e7ecf00d7d85123f9161313"
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/ab-testing.md",
+  "source_file_content_hash": "d995fbaeaea7c2bdafb8d0e1bcf4bf00a51eb0f7db9c2eb7bd9f3852e7ffa132",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: A/B Testing\n---",
+      "source_content_hash": "68294ead2bf30ad13f43ab996188169310917e1becd2673d072d028320610e1e",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "A/B testing enables you to experiment with design and functionality variants of your application. The data generated\nwill allow you to make modifications to your app, safe in the knowledge that it will have a net positive effect.",
+      "source_content_hash": "91c6fb98e7c1755017eba48599a9c7d8bab7e090cb53253b3d938448136ca15c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "A/B测试使您能够对应用程序的设计和功能变体进行实验。产生的数据将让您放心地对应用进行修改，确保这些改动会产生积极的净效应。"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "You can use Flagsmith to perform A/B Tests. Using a combination of\n[Multivariate Flags](/basic-features/managing-features.md#multi-variate-flags) and a 3rd party analytics tool like\n[Amplitude](https://amplitude.com/) or [Mixpanel](https://mixpanel.com/), you can easily perform complex A/B tests that\nwill help improve your product.",
+      "source_content_hash": "2c6e1d551c552bcd23ff43a6e3a4b8b3e1522bae32a844da9bf2f04cec5ca1cf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用Flagsmith执行A/B测试。通过结合使用[多变量功能标志](/basic-features/managing-features.md#multi-variate-flags)和第三方分析工具如[Amplitude](https://amplitude.com/)或[Mixpanel](https://mixpanel.com/)，您可以轻松执行复杂的A/B测试来优化产品。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Running AB tests require two main components: a bucketing engine and an analytics platform. The bucketing engine is used\nto put users into a particular AB testing bucket. These buckets will control the specific user experience that is being\ntested. The analytics platform will receive a stream of event data derived from the behaviour of the user. Combining\nthese two concepts allows you to deliver seamless AB test.",
+      "source_content_hash": "087904301d74de0f07660d49ae236f68191dc05b0439bb5f695adadd7b9a3b54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行A/B测试需要两个核心组件：分桶引擎和分析平台。分桶引擎用于将用户分配到特定的A/B测试桶中，这些桶将控制被测试的具体用户体验。分析平台会接收来自用户行为的事件数据流。结合这两个概念，您就能实现无缝的A/B测试。"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "We have [integrations](integrations/overview.md) with a number of analytics platforms. If we don't integrate with the\nplatform you are using, you can still manually send the test data to the downstream platform manually.",
+      "source_content_hash": "fb7d6de9ac1febd4d730ca8ca18241a820d2267014598ec25946e6d78b7dc6b3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们已与多家分析平台建立了[集成](integrations/overview.md)。若您使用的平台尚未支持，仍可手动将测试数据发送至下游平台。"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "## Overview - Testing a new Paypal button",
+      "source_content_hash": "a85601d57f152aa0e39952d5f424cdf67a1dfa7ecd0511fd6ac947caf5cd0a36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述 - 测试新的Paypal按钮"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "For this example, lets assume we have an app that currently accepts Credit Card payments only. We have a hunch that we\nare losing out on potential customers that would like to pay with Paypal. We're going to test whether adding Paypal to\nthe payment options increases our checkout rate.",
+      "source_content_hash": "36de3042c8ce4c8a051094f00843f27a1e2e90864b58b82f75be91014ffde09d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本例中，假设我们现有应用仅支持信用卡支付。我们推测可能因缺少Paypal支付选项而流失潜在客户，将通过测试添加Paypal支付选项是否能提升结账转化率。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "We have a lot of users on our platform, so we don't want to run this test against our entire user-base. We want 90% of\nour users to be excluded from the test. Then for our test, 5% of our users will see the new Paypal button, and the\nremaining 5% will not see it. So we will have 3 buckets:",
+      "source_content_hash": "11d93b51e233f5767f7f9c491e727dd92198cd21d32267d30b63f0e8a9b414f6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "由于平台用户基数庞大，我们不希望对全部用户进行测试。计划将90%用户排除在测试外，剩余用户中5%展示新Paypal按钮，另5%不展示。因此设置三个测试桶："
+      }
+    },
+    {
+      "segment_id": "c6dea11f",
+      "source_content": "1. Excluded (Control) Users\n2. Paypal Test Button Users\n3. Test users that don't see the Paypal Button",
+      "source_content_hash": "1510e88d7d72562e62a2ef60525acf16a267ffe1292a065bc90de69da51be3af",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 排除组（对照组）\n2. Paypal测试按钮组\n3. 不显示Paypal按钮的测试组"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Because Flagsmith Flags can contain both boolean states as well as multivariate flag values, we can make use of both. We\nwill use the boolean flag state to control whether to run the test. Then, if the flag is `enabled`, check the\nMultivariate value. In this example, we will only show the Paypal button if the value is set to `show`.",
+      "source_content_hash": "b5864a0226faa97d070ce5d1c72483587e2825dbd92321ca519f5db232703f69",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith的功能标志同时支持布尔状态和多变量值，我们将利用这两特性：用布尔标志控制是否进行测试；若标志为`enabled`，则检查多变量值。本例中仅当值为`show`时展示Paypal按钮。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Creating the Test",
+      "source_content_hash": "f4035410f37dd4392c811fbb394cdd87cae19e49fd2cabc732cedd921e30b802",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建测试"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "In order to perform the A/B Test, we need to complete the following steps:",
+      "source_content_hash": "54617e1ceb62c6d346f1b14dd063b10f6cec1e57be31433b03242544138acf63",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "执行A/B测试需完成以下步骤："
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "1. Create a new [Multivariate Flag](/basic-features/managing-features.md#multi-variate-flags) that will control which of\n   the 3 buckets the user is put into. We'll call this flag `paypal_button_test`. We will provide 3 variate options:\n\n   1. Control - 90% of users\n   2. Paypal Button - 5% of users\n   3. Test users that don't see the Paypal Button - 5% of users\n\n2. In our app, we want to [identify](/basic-features/managing-identities.md) each user before they start the checkout\n   process. All Flagsmith Multivariate flags need us to identify the user, so we can bucket them in a reproducible\n   manner.\n3. When we get to the checkout page, check the `value` of the `paypal_button_test` flag for that user. If it evaluates\n   to `show`, show the Paypal payment button. Otherwise, don't show the button.\n4. Send an event message to the analytics platform, adding the name/value pair of `paypal_button_test` and the value of\n   the flag; in this case it would be one of either `control`, `show` or `hide`.\n5. Deploy our app, enable the flag and watch the data come in to your analytics platform.",
+      "source_content_hash": "a94a3c3923c1668c79ca545f7cf6b212e635aef857f16cf312e4d9d13a370072",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 创建新的[多变量功能标志](/basic-features/managing-features.md#multi-variate-flags)控制用户分入三个测试桶，命名为`paypal_button_test`。设置三个变量选项：\n   \n   1. 对照组 - 90%用户\n   2. Paypal按钮组 - 5%用户\n   3. 不显示按钮的测试组 - 5%用户\n\n2. 在应用中，用户开始结账流程前需先进行[身份识别](/basic-features/managing-identities.md)。所有Flagsmith多变量标志都要求识别用户以确保分桶可复现。\n3. 用户进入结账页面时，检查该用户`paypal_button_test`标志的`value`。若值为`show`则展示Paypal支付按钮，否则隐藏。\n4. 向分析平台发送事件消息，添加`paypal_button_test`的键值对，其值为`control`、`show`或`hide`之一。\n5. 部署应用，启用功能标志，观察分析平台的数据流入情况。"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "Here is what creating the Flag would look like.",
+      "source_content_hash": "01ea54eae67b8141ecbd06a792484a6f55b26dc5c279e75350df9e325d3ee678",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "下图展示了功能标志的创建过程。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "![Image](/img/ab-test-paypal-example.png)",
+      "source_content_hash": "5833b7d2b54ce6cff5461c09cbebc0e56f9bf5a058943dbbacd5b223a4ca1c80",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/ab-test-paypal-example.png)"
+      }
+    },
+    {
+      "segment_id": "9e95fc4a",
+      "source_content": "## Evaluating the Test",
+      "source_content_hash": "d2d013fa9c531859079cd4a6739c2564ee976870e31e320dadb9f090140bf266",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 测试评估"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "Once the test is set up, and the flag has been enabled, data will start streaming into the analytics platform. We can\nnow evaluate the results of the tests based on the behavioral changes that the new button has created.",
+      "source_content_hash": "b9f1720db792bf61d72d9ac765a1345b31c3453a6ab612cae84b767f3082ac3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "测试设置完成且功能标志启用后，数据将开始流入分析平台。此时我们可以根据新按钮引发的用户行为变化来评估测试结果。"
+      }
+    },
+    {
+      "segment_id": "bd92edfc",
+      "source_content": "## Anonymous/Unknown Identities",
+      "source_content_hash": "e51e1300b5e0e96a1d3f6c31ed1efd02b99f54dd64b834025b9b1d43e2c42253",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 匿名/未知身份标识"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "To do A/B testing you need to use Identities. Without an Identity to key from, it's impossible for the platform to serve\na consistent experience to your users.",
+      "source_content_hash": "bc5398aabd584d455060f857edbf0822f5fb95f5ff1f59fd3584223bea3ea8f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "进行A/B测试必须使用身份标识。若缺乏作为键值的身份标识，平台将无法为用户提供一致的体验。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "What if you want to run an A/B test in an area of your application where you don't know who your users are? For example\non the homepage of your website? In this instance, you need to generate _Anonymous Identities_ values for your users. In\nthis case we will generate a _GUID_ for each user.",
+      "source_content_hash": "bfb590075dc96632e8d589a8411a390beaf6437ac844e0278479f884f5e6d37d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果需要在无法识别用户身份的应用程序区域（例如网站首页）运行A/B测试怎么办？此时需要为这些用户生成_匿名身份标识_值——通常我们会为每个用户生成一个_GUID_。"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "A _GUID_ value is just a random string that has an extremely high likelihood of being unique. There's more info about\ngenerating GUID values [on Stack Overflow](https://stackoverflow.com/a/2117523).",
+      "source_content_hash": "4ecb2879bc96c5936890fad594065cd5f183d0ab84314cf8d80b91290376db0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "_GUID_值本质上是一个具有极高唯一概率的随机字符串。关于生成GUID值的更多信息可参阅[Stack Overflow上的解答](https://stackoverflow.com/a/2117523)。"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "The general flow would be:",
+      "source_content_hash": "e5d3dbf0139de38600536d1de4da9d924b84990f8cf47692316127765f02e9e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通用流程如下："
+      }
+    },
+    {
+      "segment_id": "c0ea80dd",
+      "source_content": "1. A new browser visits your website homepage for the first time.\n2. You see that this is an anonymous user, so you generate a random _GUID_ for that user and assign it to them.\n3. You send that GUID along with an Identify call to Flagsmith. This will then segment that visitor.\n4. You add a cookie to the browser and store the GUID. That way, if the user returns to your page, they will still be in\n   the same segment.",
+      "source_content_hash": "9cabb683a61e7d7800b1e4a8cf7870663e2f92535b48a3e7bf64b01dbe5c1c8e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 新用户首次访问网站首页\n2. 系统识别到匿名用户后，为其生成随机_GUID_并分配\n3. 将该GUID通过Identify调用发送至Flagsmith平台完成用户分群\n4. 在浏览器中设置cookie存储该GUID，确保用户再次访问时仍处于相同分群组"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "These techniques will be slightly different depending on what platform you are developing for, but the general concept\nwill remain the same.",
+      "source_content_hash": "af6e8ad665b32bce01cdbd6f506a43686ddd21ebe3b05263150d68efa673806b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "具体实现方式因开发平台而异，但核心逻辑保持一致。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/ab-testing.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.930663+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d995fbaeaea7c2bdafb8d0e1bcf4bf00a51eb0f7db9c2eb7bd9f3852e7ffa132"
+  }
+}

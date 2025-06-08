@@ -1,0 +1,962 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/overview.md",
+  "source_file_content_hash": "7f049f6c2824615e74b36c69c6d2874bf005f5416f222252620b6480842aa03e",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Deployment Overview\nsidebar_label: Overview\nsidebar_position: 1\n---",
+      "source_content_hash": "7dfa6829b03cc122c1c7d40266d667c1cd797fa6d38c0fc80938babe0b48056d",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Paid Hosting",
+      "source_content_hash": "9e73fab04e2bf887cbb915f3d08d8663a51527f3972a7ec9c208f62d70dbf181",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 付费托管服务"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "If you would rather skip the hosting and jump straight to integrating Flagsmith with your own application, you can use\n[https://flagsmith.com/](https://flagsmith.com/) right now. We have\n[paid plans with pricing to suit both startups and enterprise customers alike](https://flagsmith.com/pricing).",
+      "source_content_hash": "4d0da3e2f5cab317e5708044fe91336b9b4ad9148042d907040cd224de51a18a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若您希望跳过自托管环节直接集成Flagsmith到应用，可立即使用[https://flagsmith.com/](https://flagsmith.com/)。我们提供[适合初创企业和大型企业的付费方案](https://flagsmith.com/pricing)。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## One Click Installers",
+      "source_content_hash": "2a4c01da926efb5e89cc3f0185c80d9220f9a880be9d77c0deab73a2a564c4ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 一键部署方案"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/flagsmith/flagsmith/tree/main)",
+      "source_content_hash": "bb9d91dbeb4993bbf1cd2dd303f0989f5c5d7ef642552dc3c2eeb1700a1de4a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![部署至DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/flagsmith/flagsmith/tree/main)"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/flagsmith/flagsmith/tree/main)",
+      "source_content_hash": "def4b498a5e4d00cd1248eafa448d4e35e4b64a64db7bccaba9e9539bc5c81e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![部署至Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/flagsmith/flagsmith/tree/main)"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FFlagsmith%2Fflagsmith&plugins=postgresql&envs=DJANGO_ALLOWED_HOSTS%2CGUNICORN_THREADS%2CGUNICORN_WORKERS%2CPORT%2Cenv&DJANGO_ALLOWED_HOSTSDefault=%5B%27*%27%5D&GUNICORN_THREADSDefault=1&GUNICORN_WORKERSDefault=1&PORTDefault=8000&envDefault=prod)",
+      "source_content_hash": "a0f3cc48c10a7e8d15f0b311cac50aeab4396dd53a4eb31071b271fc5ebe6156",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![Railway部署](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FFlagsmith%2Fflagsmith&plugins=postgresql&envs=DJANGO_ALLOWED_HOSTS%2CGUNICORN_THREADS%2CGUNICORN_WORKERS%2CPORT%2Cenv&DJANGO_ALLOWED_HOSTSDefault=%5B%27*%27%5D&GUNICORN_THREADSDefault=1&GUNICORN_WORKERSDefault=1&PORTDefault=8000&envDefault=prod)"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "![Fly.io](/img/logos/fly.io.svg)",
+      "source_content_hash": "ad0999a4890477250c74cb6ae08357704aecf16c5fbce6d321f686b80cfc6312",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Fly.io](/img/logos/fly.io.svg)"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "We're big fans of [Fly.io](https://Fly.io)! You can deploy to fly.io really easily:",
+      "source_content_hash": "b68c716790d4bdc72f328597d447cc7f6ce9ffa94b6acaef9739e6688285c774",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们强烈推荐[Fly.io](https://Fly.io)平台，您可轻松完成部署："
+      }
+    },
+    {
+      "segment_id": "3569d545",
+      "source_content": "```bash\ngit clone git@github.com:Flagsmith/flagsmith.git\ncd flagsmith\nflyctl postgres create --name flagsmith-flyio-db\nflyctl apps create flagsmith-flyio\nflyctl postgres attach --postgres-app flagsmith-flyio-db\nflyctl deploy\n```",
+      "source_content_hash": "6d9fba5a4edd6694df929310e9eccc90d13b42c07fae06d33d0d865ad399f283",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3569d545"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Fly.io has a global application namespace, and so you may need to change the name of the application defined in\n[`fly.toml`](https://github.com/Flagsmith/flagsmith/blob/main/fly.toml) as well as the commands above.",
+      "source_content_hash": "14142d35adc17b4d9945d8e9ca187fb83ebff9ae633257ecb10d0fe207d01e0b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Fly.io采用全局应用命名空间，您可能需要修改[`fly.toml`](https://github.com/Flagsmith/flagsmith/blob/main/fly.toml)中定义的应用名称及上述命令。"
+      }
+    },
+    {
+      "segment_id": "3b7478ea",
+      "source_content": "### Caprover",
+      "source_content_hash": "2a0ba9c81c80b059b32efe35bc3530bad08efcff5dbbb41d100db6e15ec16d34",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Caprover"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "You can also deploy to a [Caprover Server](https://caprover.com/) with\n[One Click Apps](https://caprover.com/docs/one-click-apps.html).",
+      "source_content_hash": "ec63225954ea22e2614d3dd33a7ea69c1dc8bb181c1aebf5fe9c01f5384131b5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以通过[Caprover服务器](https://caprover.com/)的[一键应用](https://caprover.com/docs/one-click-apps.html)进行部署。"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## Self Hosting Overview",
+      "source_content_hash": "42d93132788752f98ff4ee239f07102a12e286589ebd7174e89055c3be79b64d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 自托管概览"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "You will need to run through the following steps to get set up:",
+      "source_content_hash": "0492cbbec29fdcd1e7ce27cfd9307f7fc9955eb0d17107b9aa6988b61ffc4bff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成自托管需执行以下步骤："
+      }
+    },
+    {
+      "segment_id": "824626b3",
+      "source_content": "1. Create a Postgres database to store the Flagsmith data.\n2. Deploy the API and set up DNS for it. If you are using health-checks, make sure to use `/health` as the health-check\n   endpoint.\n3. Visit `http://<your-server-domain:8000>/api/v1/users/config/init/` to create an initial Superuser and provide DNS\n   info to the platform.\n4. Deploy the Front End Dashboard and set up DNS for it. Point the Dashboard to the API using the relevant Environment\n   Variables. If you are using health-checks, make sure to use `/health` as the health-check endpoint.\n5. Create a new Organisation, Project, Environment and Flags via the Dashboard.\n6. When using our SDKs, you will need to override the API URL that they point to, otherwise they will default to connect\n   to our paid-for API at `https://edge.api.flagsmith.com/api/v1`. See the SDK documentation for the library you are\n   using.",
+      "source_content_hash": "3b2b473e07347dba66f5e5c8f8e57f531d647c0cc99cdecc3536c325cd8dd481",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 创建Postgres数据库存储Flagsmith数据\n2. 部署API并配置DNS。若启用健康检查，请确保使用`/health`作为检查端点\n3. 访问`http://<您的服务器域名:8000>/api/v1/users/config/init/`创建超级用户并为平台配置DNS信息\n4. 部署前端仪表盘并配置DNS。通过环境变量将仪表盘指向API。健康检查同样需使用`/health`端点\n5. 通过仪表盘创建新组织、项目、环境及功能开关\n6. 使用SDK时需重写默认API地址（默认指向付费API`https://edge.api.flagsmith.com/api/v1`），具体操作请参考对应SDK文档"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "## Deployment Options",
+      "source_content_hash": "c2692de12786ef71b3cc85770a58a3c9b5a66f4e18c4bf7ae9131fb92e25390e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署选项"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "We recommend running Flagsmith with [Docker](/deployment/hosting/docker). We have options to run within\n[Docker](/deployment/hosting/docker), [Kubernetes](/deployment/hosting/kubernetes) or\n[RedHat OpenShift](/deployment/hosting/openshift).",
+      "source_content_hash": "7dfbffd8f8ae59388e0cc52e0154c5c256fbfb9021d52fda70009ba2944cf490",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们推荐使用[Docker](/deployment/hosting/docker)运行Flagsmith，同时支持[Kubernetes](/deployment/hosting/kubernetes)和[RedHat OpenShift](/deployment/hosting/openshift)部署。"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "## Architecture",
+      "source_content_hash": "a7e56472b11bd3c838bc8199601f5a5527112a003c69fbf95b012bc13573a193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 系统架构"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "The Flagsmith architecture is based around a simple REST API that is accessed by both SDK clients and the Flagsmith\nDashboard Front End Web App.",
+      "source_content_hash": "4f2cef0851477e24b42b5b7bf0832d2a9209cf1aa887619c53807d42187fb230",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用基于REST API的架构，SDK客户端与仪表盘前端Web应用均通过该API进行交互。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "![Application Architecture](/img/architecture.svg)",
+      "source_content_hash": "511265a7aa814acb9a9730c79ae80a9cf4f038f9f1cff83e3fffcc2f0d12b6f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![应用架构图](/img/architecture.svg)"
+      }
+    },
+    {
+      "segment_id": "52388877",
+      "source_content": "## Dependencies",
+      "source_content_hash": "d461ba473854420e8c58aee1cda74996f20a809a2fcfdcd6c3a1673d3f1054ad",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 依赖项"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "Running the API has the following hard dependencies:",
+      "source_content_hash": "3a9e5f064f05b74c79649e75a3a18564568b3cced3d9ccf052b89ada570f4bf0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行API需要以下核心依赖："
+      }
+    },
+    {
+      "segment_id": "aa0bd54f",
+      "source_content": "- Postgres database - the main data store. We have tested and run against Postgres v11.12 but it can work for other\n  versions too.",
+      "source_content_hash": "af7671337a73f38ac012e6a4859012c53e3c9061a94556bfd1e65619a3e84db6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Postgres数据库：主数据存储。已测试兼容Postgres v11.12，其他版本亦可运行"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "The API can also optionally make use of the following 3rd party services:",
+      "source_content_hash": "1eec038d179457c20c4c1dac1daedf3f7d37fbb696d24e4d9929f502951c6d48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "API还可选集成以下第三方服务："
+      }
+    },
+    {
+      "segment_id": "ca1573da",
+      "source_content": "- Google Analytics - for API analytics\n- InfluxDB - for API analytics\n- SendGrid - for transactional email\n- AWS S3 - to store Django Static Assets\n- GitHub - oAuth provider\n- Google - oAuth provider",
+      "source_content_hash": "72b7bff010d007841f38b01c88d9183075bae1b329fdbcc9f4c7c2d1b6f8b105",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Google Analytics - 用于API分析\n- InfluxDB - 用于API分析\n- SendGrid - 用于事务性邮件\n- AWS S3 - 存储Django静态资源\n- GitHub - OAuth认证提供商\n- Google - OAuth认证提供商"
+      }
+    },
+    {
+      "segment_id": "759d12dd",
+      "source_content": "## Flag Analytics",
+      "source_content_hash": "0294994b47c4efa626c1673927a3f0396b7d24d3e8f31e7cc3aa7a1787af872d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关分析"
+      }
+    },
+    {
+      "segment_id": "74dd7937",
+      "source_content": "Flagsmith stores time series data for two use cases:",
+      "source_content_hash": "8dff807990db5cc49a5a6cc5bec7557ec9d1938526c412859be3f380a02c7cd4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith会存储两类时间序列数据："
+      }
+    },
+    {
+      "segment_id": "49f9f337",
+      "source_content": "1. Flag Analytics\n2. API traffic reporting",
+      "source_content_hash": "4750f7227fcfba05076437ad1763122f08910f6b57c8fa709f5b1a8fa8c6ea68",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 功能开关分析数据\n2. API流量报告数据"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "Flagsmith can be configured to store and process this data in one of three ways:",
+      "source_content_hash": "18bb733bb0d704310c3430540b1ff765b26647788bdd609331d4e58906740f86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过以下三种方式配置存储和处理这些数据："
+      }
+    },
+    {
+      "segment_id": "e0019b35",
+      "source_content": "1. To store it in Postgres\n2. To store it in InfluxDB\n3. To not store it at all",
+      "source_content_hash": "05365e7b1e494a323b72e9205b20bc574c69ae279db41895bd7e9c3f1882e7b2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 存储至Postgres\n2. 存储至InfluxDB\n3. 完全不存储"
+      }
+    },
+    {
+      "segment_id": "1862c5fe",
+      "source_content": "We recommend option 1.",
+      "source_content_hash": "508539b1d8b40f075457a209fa0ad65c991c49f4dda3e6b6ff5fb67f9204e0a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "推荐采用第一种方案。"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "### Time series data via Postgres",
+      "source_content_hash": "fec63bd09e233ef0d501e2d56b6227407ee44e097429d59c99c8646a4db5f5bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过Postgres存储时间序列数据"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "Add the following environment variables to the Flagsmith API service:",
+      "source_content_hash": "99a4222cbcf66c66040d2d6e4f00426feea55edc373e938e0851e9a4f6e4bcbb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需为Flagsmith API服务添加以下环境变量："
+      }
+    },
+    {
+      "segment_id": "d44e4104",
+      "source_content": "```bash\n# Set Postgres to store the data\nUSE_POSTGRES_FOR_ANALYTICS=True\n\n# Configure the postgres datastore:\n# Either\nANALYTICS_DATABASE_URL (e.g. postgresql://postgres:password@postgres:5432/flagsmith)\n# Or\nDJANGO_DB_HOST_ANALYTICS (e.g. postgres.db)\nDJANGO_DB_NAME_ANALYTICS (e.g. flagsmith)\nDJANGO_DB_USER_ANALYTICS (e.g. postgres_user)\nDJANGO_DB_PASSWORD_ANALYTICS (e.g. postgres_password)\nDJANGO_DB_PORT_ANALYTICS (e.g. 5432)\n```",
+      "source_content_hash": "2d9a5fa7aa76db95f82ffd158ee195f0941b9badd91104b4755f9ec6d1d819c2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d44e4104"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "Note that you don't have to use the same database or database server as the core Flagsmith DB.",
+      "source_content_hash": "05346dac8570a641837dfe586feb83624055566af6bb3f051d976016d4d8a7c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注意：可与核心Flagsmith数据库使用不同的数据库或数据库服务器。"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "You will also need to be running the [Task Processor](https://docs.flagsmith.com/deployment/task-processor) for\ndownsampling to work and the stats to start showing up in the dashboard. This process can take up to 1 hour.",
+      "source_content_hash": "59c1899e9e2fbf7e08e7b366632227e3faf82be42713861fc7acbf57905ae768",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时需要运行[任务处理器](https://docs.flagsmith.com/deployment/task-processor)才能实现数据降采样，并使统计数据显示在仪表盘中。此过程最长可能需要1小时。"
+      }
+    },
+    {
+      "segment_id": "47516512",
+      "source_content": "## API Telemetry",
+      "source_content_hash": "c15d4ef6752367feb1ad70056154f26444be80747e39118e03c3b1558452fd5a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API遥测"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "Flagsmith collects information about self hosted installations. This helps us understand how the platform is being used.\nThis data is _never_ shared outside of the organisation, and is anonymous by design. You can opt out of sending this\ntelemetry on startup by setting the `ENABLE_TELEMETRY` environment variable to `False`.",
+      "source_content_hash": "9a644e6bdb5bc6bebd19095884e357c5731417bdc37a232615d560841045c2d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith会收集自托管安装的相关信息，用于分析平台使用情况。这些数据_绝不会_对外共享，且设计上为匿名采集。可通过设置`ENABLE_TELEMETRY`环境变量为`False`来退出遥测数据上报。"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "We collect the following data on startup and then once every 8 hours per API server instance:",
+      "source_content_hash": "0c0537be00be652e2e3b578912101a7bc6703da399a80ac1ef9bfd8948c661ba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们会在启动时及之后每8小时（按API服务器实例）收集以下数据："
+      }
+    },
+    {
+      "segment_id": "d30a9380",
+      "source_content": "- Total number of Organisations\n- Total number of Projects\n- Total number of Environments\n- Total number of Features\n- Total number of Segments\n- Total number of Users\n- DEBUG django variable\n- ENV django variable\n- API server external IP address",
+      "source_content_hash": "ce7e41d57d2288c0735d3e333c183edcc457ce750c72b65c085db4d67684c5d5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 组织总数\n- 项目总数\n- 环境总数\n- 功能总数\n- 用户分群总数\n- 用户总数\n- Django的DEBUG变量值\n- Django的ENV变量值\n- API服务器外部IP地址"
+      }
+    },
+    {
+      "segment_id": "0d5321b7",
+      "source_content": "## Running Flagsmith on Flagsmith",
+      "source_content_hash": "76b9b8c6012bd69123be0f73e22f7eb578fde013b7822238240eb2da36e44080",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基于Flagsmith自托管Flagsmith"
+      }
+    },
+    {
+      "segment_id": "cfeb9eb1",
+      "source_content": "Flagsmith uses Flagsmith to control features on the front end dashboard. If you are self hosting the platform, you will\nsometimes see features greyed out, or you may want to disable specific features, e.g. logging in via Google and Github.\nIf you are using your own Flagsmith environment then you will need to have a replica of our flags in order to control\naccess to those features.",
+      "source_content_hash": "bc8f6a7c17d39289755855003ea4c1d558b0123ecd599404ca3b3adc2c5c9b3b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith前端仪表盘的功能由Flagsmith自身控制。自托管平台时，可能会发现某些功能显示为灰色，或需要禁用特定功能（例如通过Google/Github登录）。若使用自托管环境，需复制我们的功能开关配置才能控制这些功能。"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "To do this,firstly create a new project within your self-hosted Flagsmith application. This is the project that we will\nuse to control the features of the self-hosted Flagsmith instance. We will then point the self hosted front end\ndashboard at this Flagsmith project in order to control what features show for your self hosted Flagsmith instance.",
+      "source_content_hash": "c8424062fc1209d362de92b8d768a4ab00f3e069ee8099e6fc75b04efe53fdb7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "操作步骤：首先在自托管Flagsmith应用中新建项目，该项目将用于控制自托管实例的功能。然后将自托管前端仪表盘指向此Flagsmith项目，从而实现对功能可见性的控制。"
+      }
+    },
+    {
+      "segment_id": "4c787c52",
+      "source_content": "Once you have created the project, you need to set the following\n[Front End](https://github.com/Flagsmith/flagsmith-frontend) environment variables in order to configure this:",
+      "source_content_hash": "9de1926926cb7a4575006694370d02c4c34dbb8bc7e8fd66cc996733d5303730",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建项目后，需配置以下[前端](https://github.com/Flagsmith/flagsmith-frontend)环境变量："
+      }
+    },
+    {
+      "segment_id": "9fbd2efb",
+      "source_content": "- `FLAGSMITH_ON_FLAGSMITH_API_KEY`\n  - The Flagsmith Client-side Environment Key we use to manage features - Flagsmith runs on Flagsmith. This will be the\n    API key for the project you created as instructed above.\n- `FLAGSMITH_ON_FLAGSMITH_API_URL`\n  - The API URL which the Flagsmith front end dashboard should communicate with. This will most likely be the domain\n    name of the Flagsmith API you are self hosting: Flagsmith runs on Flagsmith. E.g. For our SaaS hosted platform, the\n    variable is `https://edge.api.flagsmith.com/api/v1/`. For example, if you were running everything locally using the\n    standard [docker-compose setup](https://github.com/Flagsmith/flagsmith-docker), you would use\n    `http://localhost:8000/api/v1/`",
+      "source_content_hash": "c5db5fcf0fd85c9c1e9fa5ce6979cc8195343f30e11b29460573fd5a44276e3f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `FLAGSMITH_ON_FLAGSMITH_API_KEY`\n  - 用于管理功能的Flagsmith客户端环境密钥（Flagsmith自托管场景）。此处填写前述步骤中创建项目的API密钥。\n- `FLAGSMITH_ON_FLAGSMITH_API_URL`\n  - 前端仪表盘应连接的API地址。通常为自托管Flagsmith API的域名，例如我们的SaaS平台使用`https://edge.api.flagsmith.com/api/v1/`。若使用标准[docker-compose方案](https://github.com/Flagsmith/flagsmith-docker)本地运行，则应设置为`http://localhost:8000/api/v1/`"
+      }
+    },
+    {
+      "segment_id": "fd7ed056",
+      "source_content": "Once you have set this up, you should see the Flagsmith front end requesting its own flags from the API (you can look in\nyour browser developer console to see this). You can now start creating flags and overriding the default behaviours of\nthe platform. For example, if you wanted to disable Google OAuth authentication, you would create a flag called\n`oauth_google` and disable it.",
+      "source_content_hash": "c35611f35e9561279fdea8a11623af5c362be6d9671f2f220ff971ccc10a391d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成上述设置后，您应该能看到Flagsmith前端从API请求自身的功能标志（可通过浏览器开发者控制台查看）。此时您可以开始创建标志并覆盖平台的默认行为。例如，若需禁用Google OAuth认证，只需创建名为`oauth_google`的标志并将其禁用。"
+      }
+    },
+    {
+      "segment_id": "6ffd1ebe",
+      "source_content": "### Current Flagsmith Feature Flags",
+      "source_content_hash": "c0328d20c150f0e9a9ef6a79820a5378b5b639bc15c681e9218df50dfe0d6ab4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 当前Flagsmith功能标志"
+      }
+    },
+    {
+      "segment_id": "89cf7bac",
+      "source_content": "The list of the flags and remote config we're currently using in production is below:",
+      "source_content_hash": "1aa18f8eac2091a5cb381ebef59590b546bdb99eee074f05e00e2699eec88537",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下列出我们当前在生产环境中使用的功能标志及远程配置："
+      }
+    },
+    {
+      "segment_id": "41321865",
+      "source_content": "| Flag Name                     | Description                                                                              | Text Value                                                                                                    |\n| ----------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |\n| `4eyes`                       | Whether to enable the [Change Requests](../advanced-use/change-requests.md) feature      | None                                                                                                          |\n| `butter_bar`                  | markdown to show at the top of the dashboard page                                        | None                                                                                                          |\n| `case_sensitive_flags`        | Enables the project setting to allow case sensitive flags                                | None                                                                                                          |\n| `compare_environments`        | Compare feature flag changes across environments                                         | None                                                                                                          |\n| `dark_mode`                   | Enables Dark Mode in UI [See Below](#dark-mode)                                          | None                                                                                                          |\n| `disable_create_org`          | Turning this on will prevent users from creating any additional organisations            | None                                                                                                          |\n| `feature_name_regex`          | Enables the project setting to add a regex matcher to validate feature names             | None                                                                                                          |\n| `flag_analytics`              | Flag usage chart - requires InfluxDB                                                     | None                                                                                                          |\n| `force_2fa`                   | Enables the organisation setting to force 2 factor authentication                        | None                                                                                                          |\n| `integration_data`            | Configures integrations                                                                  | [See Below](#integration_data)                                                                                |\n| `integrations`                | Which third party integrations are displayed                                             | `[\"amplitude\",\"datadog\",\"dynatrace\",\"heap\",\"mixpanel\",\"new-relic\",\"rudderstack\",\"segment\",\"slack\",\"webhook\"]` |\n| `oauth_github`                | Configure Github OAuth                                                                   | [See Below](#oauth_github)                                                                                    |\n| `oauth_google`                | Configure Google OAuth                                                                   | [See Below](#oauth_google)                                                                                    |\n| `rotate_api_token`            | Enables the ability to rotate a user's access token                                      | [See Below](#oauth_google)                                                                                    |\n| `saml`                        | Enables SAML authentication                                                              | [See Below](#oauth_google)                                                                                    |\n| `scaleup_audit`               | Disables audit log for anyone under scale-up plan                                        | None                                                                                                          |\n| `segment_associated_features` | Enables the ability to see features associated with a segment                            | None                                                                                                          |\n| `segment_operators`           | Determines what rules are shown when creating a segment                                  | [See Below](#segment_operators)                                                                               |\n| `serverside_sdk_keys`         | Enable Server-side Environment Keys                                                      | None                                                                                                          |\n| `sso_idp`                     | Set this to your configured SAML organisation name to automatically redirect to your IdP | None                                                                                                          |\n| `tag_environments`            | Enables an environment setting to add a UI hint to your environments (e.g. for prod)     | None                                                                                                          |\n| `try_it`                      | Whether to show the try it buttons                                                       | None                                                                                                          |\n| `usage_chart`                 | Organisation Analytics usage chart - requires InfluxDB                                   | None                                                                                                          |",
+      "source_content_hash": "511dad5903e45208f10fedcdf457ec70609e322dfe3c2cf77e4401e4c05145f2",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41321865"
+      }
+    },
+    {
+      "segment_id": "6ac93c98",
+      "source_content": "### `integration_data`",
+      "source_content_hash": "03db50f2a9330db066ad6b4b4cfbfa960073adc16fed308a4b58baa8b164a9f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### `integration_data`"
+      }
+    },
+    {
+      "segment_id": "117486ca",
+      "source_content": "```json\n{\n \"datadog\": {\n  \"perEnvironment\": false,\n  \"image\": \"/static/images/integrations/datadog.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/datadog/\",\n  \"fields\": [\n   {\n    \"key\": \"base_url\",\n    \"label\": \"Base URL\"\n   },\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   }\n  ],\n  \"tags\": [\"logging\"],\n  \"title\": \"Datadog\",\n  \"description\": \"Sends events to Datadog for when flags are created, updated and removed. Logs are tagged with the environment they came from e.g. production.\"\n },\n \"dynatrace\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/dynatrace.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/dynatrace/\",\n  \"fields\": [\n   {\n    \"key\": \"base_url\",\n    \"label\": \"Base URL\"\n   },\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   },\n   {\n    \"key\": \"entity_selector\",\n    \"label\": \"Entity Selector\"\n   }\n  ],\n  \"tags\": [\"logging\"],\n  \"title\": \"Dynatrace\",\n  \"description\": \"Sends events to Dynatrace for when flags are created, updated and removed. Logs are tagged with the environment they came from e.g. production.\"\n },\n \"slack\": {\n  \"perEnvironment\": true,\n  \"isOauth\": true,\n  \"image\": \"/static/images/integrations/slack.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/slack/\",\n  \"tags\": [\"messaging\"],\n  \"title\": \"Slack\",\n  \"description\": \"Sends messages to Slack when flags are created, updated and removed. Logs are tagged with the environment they came from e.g. production.\"\n },\n \"amplitude\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/amplitude.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/amplitude/\",\n  \"fields\": [\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Amplitude\",\n  \"description\": \"Sends data on what flags served to each identity.\"\n },\n \"new-relic\": {\n  \"perEnvironment\": false,\n  \"image\": \"/static/images/integrations/new_relic.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/newrelic\",\n  \"fields\": [\n   {\n    \"key\": \"base_url\",\n    \"label\": \"New Relic Base URL\"\n   },\n   {\n    \"key\": \"api_key\",\n    \"label\": \"New Relic API Key\"\n   },\n   {\n    \"key\": \"app_id\",\n    \"label\": \"New Relic Application ID\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"New Relic\",\n  \"description\": \"Sends events to New Relic for when flags are created, updated and removed.\"\n },\n \"segment\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/segment.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/segment\",\n  \"fields\": [\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Segment\",\n  \"description\": \"Sends data on what flags served to each identity.\"\n },\n \"rudderstack\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/rudderstack.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/rudderstack\",\n  \"fields\": [\n   {\n    \"key\": \"base_url\",\n    \"label\": \"Rudderstack Data Plane URL\"\n   },\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Rudderstack\",\n  \"description\": \"Sends data on what flags served to each identity.\"\n },\n \"webhook\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/webhooks.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/webhook\",\n  \"fields\": [\n   {\n    \"key\": \"url\",\n    \"label\": \"Your Webhook URL Endpoint\"\n   },\n   {\n    \"key\": \"secret\",\n    \"label\": \"Your Webhook Secret\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Webhook\",\n  \"description\": \"Sends data on what flags served to each identity to a Webhook Endpoint you provide.\"\n },\n \"heap\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/heap.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/heap\",\n  \"fields\": [\n   {\n    \"key\": \"api_key\",\n    \"label\": \"API Key\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Heap Analytics\",\n  \"description\": \"Sends data on what flags served to each identity.\"\n },\n \"mixpanel\": {\n  \"perEnvironment\": true,\n  \"image\": \"/static/images/integrations/mp.svg\",\n  \"docs\": \"https://docs.flagsmith.com/integrations/mixpanel\",\n  \"fields\": [\n   {\n    \"key\": \"api_key\",\n    \"label\": \"Project Token\"\n   }\n  ],\n  \"tags\": [\"analytics\"],\n  \"title\": \"Mixpanel\",\n  \"description\": \"Sends data on what flags served to each identity.\"\n }\n}\n```",
+      "source_content_hash": "9c1a2353609a96959f45a96fdec0a5b5dd8ed45b7c7d0d195a32bf7a41e28a15",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_117486ca"
+      }
+    },
+    {
+      "segment_id": "06d2929c",
+      "source_content": "### `segment_operators`",
+      "source_content_hash": "85a10dd82f97fe96e331a3b23d1831ac2b10a7205d8942c3a672fdef198ae9e1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### `segment_operators`"
+      }
+    },
+    {
+      "segment_id": "ccc51bd3",
+      "source_content": "```json\n[\n {\n  \"value\": \"EQUAL\",\n  \"label\": \"Exactly Matches (=)\"\n },\n {\n  \"value\": \"NOT_EQUAL\",\n  \"label\": \"Does not match (!=)\"\n },\n {\n  \"value\": \"PERCENTAGE_SPLIT\",\n  \"label\": \"% Split\"\n },\n {\n  \"value\": \"GREATER_THAN\",\n  \"label\": \">\"\n },\n {\n  \"value\": \"GREATER_THAN_INCLUSIVE\",\n  \"label\": \">=\"\n },\n {\n  \"value\": \"LESS_THAN\",\n  \"label\": \"<\"\n },\n {\n  \"value\": \"LESS_THAN_INCLUSIVE\",\n  \"label\": \"<=\"\n },\n {\n  \"value\": \"GREATER_THAN:semver\",\n  \"label\": \"SemVer >\",\n  \"append\": \":semver\"\n },\n {\n  \"value\": \"GREATER_THAN_INCLUSIVE:semver\",\n  \"label\": \"SemVer >=\",\n  \"append\": \":semver\"\n },\n {\n  \"value\": \"LESS_THAN:semver\",\n  \"label\": \"SemVer <\",\n  \"append\": \":semver\"\n },\n {\n  \"value\": \"LESS_THAN_INCLUSIVE:semver\",\n  \"label\": \"SemVer <=\",\n  \"append\": \":semver\"\n },\n\n {\n  \"value\": \"CONTAINS\",\n  \"label\": \"Contains\"\n },\n {\n  \"value\": \"NOT_CONTAINS\",\n  \"label\": \"Does not contain\"\n },\n {\n  \"value\": \"REGEX\",\n  \"label\": \"Matches regex\"\n },\n {\n  \"value\": \"MODULO\",\n  \"label\": \"Modulo operation\"\n },\n {\n  \"value\": \"IS_SET\",\n  \"label\": \"Is set\",\n  \"hideValue\": true\n },\n {\n  \"value\": \"IS_NOT_SET\",\n  \"label\": \"Is not set\",\n  \"hideValue\": true\n }\n]\n```",
+      "source_content_hash": "f7cdd16434925a7814ce9af1ee84f9591fe1e2a6c49e5f380ec4e8203b78f16f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ccc51bd3"
+      }
+    },
+    {
+      "segment_id": "db5f7de0",
+      "source_content": "### `oauth_github`",
+      "source_content_hash": "e0d64b930dd9b8501502e01062c97b25bb4f2abcc322a572742a2e93398684cb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### `oauth_github`"
+      }
+    },
+    {
+      "segment_id": "b13a021c",
+      "source_content": "Find instructions for GitHub Authentication [here](../deployment/configuration/authentication#github).",
+      "source_content_hash": "2aabc876a04c7bc9219b8e0f3301f76c71d4ba8eff6a93127021e9fb130dd94f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "GitHub认证配置指南请参阅[此处](../deployment/configuration/authentication#github)。"
+      }
+    },
+    {
+      "segment_id": "46a44d60",
+      "source_content": "Create an OAuth application in the GitHub Developer Console and then provide the following as the Flag value:",
+      "source_content_hash": "435af95aac0e861cff78afd3b1801addcfaa81a2e7650e978180990dd256756f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在GitHub开发者控制台创建OAuth应用后，按以下格式提供标志值："
+      }
+    },
+    {
+      "segment_id": "b4735791",
+      "source_content": "- Create the Flagsmith on Flagsmith flag as below replacing your `client_id` and `redirect_uri`",
+      "source_content_hash": "13699cef3319311aa248c05249731ed632f453d2a786fab657ca0fe809cfb944",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 按如下方式创建Flagsmith控制标志，替换您的`client_id`和`redirect_uri`"
+      }
+    },
+    {
+      "segment_id": "bed27c1d",
+      "source_content": "```json\n{\n \"url\": \"https://github.com/login/oauth/authorize?scope=user&client_id=<your client_id>&redirect_uri=<your url encoded redirect uri>\"\n}\n```",
+      "source_content_hash": "23ebd5bce477f915a4e1fb8477b390836a5b7f1f03df4147165f03315f49c0c5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bed27c1d"
+      }
+    },
+    {
+      "segment_id": "60ce13be",
+      "source_content": "For example, our SaaS value looks like this (but with our Client ID redacted)",
+      "source_content_hash": "09ac5de8be63f1c4d869b18b770ae72215aae3be27cf76497f2563b5f0f7347f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如，我们的SaaS配置值如下（客户ID已脱敏）"
+      }
+    },
+    {
+      "segment_id": "e1597388",
+      "source_content": "```json\n{\n \"url\": \"https://github.com/login/oauth/authorize?scope=user&client_id=999999999999&redirect_uri=https%3A%2F%2Fapp.flagsmith.com%2Foauth%2Fgithub\"\n}\n```",
+      "source_content_hash": "bf356a85b4234342da3e9dac301850c484eb004ee206c18adfdbf5a370c0c890",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e1597388"
+      }
+    },
+    {
+      "segment_id": "8be68b91",
+      "source_content": "### `oauth_google`",
+      "source_content_hash": "4bdfd2c228793fdb49125857fa98807a82d61e1c9dc31a80c0823df7d3459707",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### `oauth_google`"
+      }
+    },
+    {
+      "segment_id": "cb857be4",
+      "source_content": "Create an OAuth application in the Google Developer Console and then provide the following as the Flag value:",
+      "source_content_hash": "1b0973422002facad6570542eecb6ea7879a225086499f2b066cad92f14e3003",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在Google开发者控制台创建OAuth应用后，提供以下标志值："
+      }
+    },
+    {
+      "segment_id": "91d00e6b",
+      "source_content": "```json\n{\n \"clientId\": \"<Your Google oAuth Client ID>\",\n \"apiKey\": \"<Your Google oAuth Client secret>\"\n}\n```",
+      "source_content_hash": "c771808d40e7ad9f7d46f70774c86f7cf1b899a5618094691878212b0af81cf1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_91d00e6b"
+      }
+    },
+    {
+      "segment_id": "88541947",
+      "source_content": "### Dark Mode",
+      "source_content_hash": "6287d11dd5f4c548c42de5a464f4525d8bab7c83b79d2399221e8edc0e11006e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 暗黑模式"
+      }
+    },
+    {
+      "segment_id": "a1988152",
+      "source_content": "We also have a Segment that manages the ui Dark Mode:",
+      "source_content_hash": "7af942433ebc9b8be55a34d71136f19fb7fc9f676d854ed3db27fc471dad8663",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们通过以下用户分片管理UI暗黑模式："
+      }
+    },
+    {
+      "segment_id": "d85a747f",
+      "source_content": "Segment Name: `dark_mode` Segment Rules: Trait `dark_mode` EXACTLY MATCHES `True`",
+      "source_content_hash": "f88dbdbb731e96065bd6b0bc8c074b9ecb4033242b0a87bbb500de2734fb3fad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "分片名称：`dark_mode` 分片规则：特征值`dark_mode`完全匹配`True`"
+      }
+    },
+    {
+      "segment_id": "bd254bae",
+      "source_content": "Then use this rule to override the `dark_mode` Feature Flag.",
+      "source_content_hash": "d8c748f39e4cd9c548e7822b38aa9d0fb291f2dc5da1072531a68a6bd8014333",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后使用此规则覆盖`dark_mode`功能标志。"
+      }
+    },
+    {
+      "segment_id": "d88d3485",
+      "source_content": "## Integrations",
+      "source_content_hash": "ab4ce1a5301498f6747c01db0e5d40fad27d214b3daff56e0253a1f589aed962",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成配置"
+      }
+    },
+    {
+      "segment_id": "0fe0e5d6",
+      "source_content": "Some [Integrations](/integrations/overview) require additional configuration",
+      "source_content_hash": "768a43fd40644d70935d5e2600bdbaad7eb5bccc518631bcc72ace327ce6f204",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "部分[集成功能](/integrations/overview)需要额外配置"
+      }
+    },
+    {
+      "segment_id": "0d37b206",
+      "source_content": "### Slack Integration",
+      "source_content_hash": "c21adc67fc047ab0dd2ec0b75298dacec8c4e55a8a3a4e62e2e6275f32be1023",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Slack集成"
+      }
+    },
+    {
+      "segment_id": "44314141",
+      "source_content": "Create a private Slack app. You will then need to provide the following environment variables on the API side:",
+      "source_content_hash": "03941b3252323943875b8c34b4a791cf5b381d1e2f8e39f65e8c7d80dd1b5c4f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建私有Slack应用后，需在API服务端配置以下环境变量："
+      }
+    },
+    {
+      "segment_id": "79a1310d",
+      "source_content": "- `SLACK_CLIENT_ID`\n- `SLACK_CLIENT_SECRET`",
+      "source_content_hash": "2c6eb6ff861f5460b7d7c1ffb9ad53e3b82ae65d6f505115395bb6c6e7bd4ef2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `SLACK_CLIENT_ID`\n- `SLACK_CLIENT_SECRET`"
+      }
+    },
+    {
+      "segment_id": "698d0e82",
+      "source_content": "You can retrieve these values from Slack. You will also need to add the following scopes:",
+      "source_content_hash": "4ed5ba0acd26cfea80dcaa7ca9f8c8d9e88d6abad073216af89b796c1aa051e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些值可从Slack获取，同时需添加以下权限范围："
+      }
+    },
+    {
+      "segment_id": "f25390e9",
+      "source_content": "- `channels:read`\n- `chat:write`\n- `chat:write.public`",
+      "source_content_hash": "a897052f567ed4e391fcdab16a148663e509a5e2161f82e9518b66e2837b3802",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `channels:read`\n- `chat:write`\n- `chat:write.public`"
+      }
+    },
+    {
+      "segment_id": "e67afabd",
+      "source_content": "You will also need to set up the redirect URLs for your application. For more information on this see Slack's docs on\ncreating your own app, and the OAuth flow that goes along with that. The production Flagsmith App Manifest reads as\nfollows and can be used as a template:",
+      "source_content_hash": "2f4c47cbbb3adf4f7062895c2b8e3b7bc8dd363783beee5b559fee0d10aa0d4d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "还需配置应用的重定向URL。详细流程请参考Slack官方文档关于创建应用及OAuth流程的说明。以下生产环境Flagsmith应用清单可作为模板："
+      }
+    },
+    {
+      "segment_id": "eb4ec70e",
+      "source_content": "```json\n{\n \"display_information\": {\n  \"name\": \"Flagsmith Bot\",\n  \"description\": \"Get notified in Slack whenever changes are made to your Flagsmith Environments\",\n  \"background_color\": \"#000000\",\n  \"long_description\": \"Use our application for Slack to receive Flagsmith state changes directly in your Slack channels. Whenever you create, update or delete a Flag within Flagsmith, our application for Slack will send a message into a Slack channel of your choosing.\\r\\n\\r\\nFlagsmith is an open source, fully featured, Feature Flag and Remote Config service. Use our hosted API, deploy to your own private cloud, or run on-premise.\"\n },\n \"features\": {\n  \"bot_user\": {\n   \"display_name\": \"Flagsmith Bot\",\n   \"always_online\": false\n  }\n },\n \"oauth_config\": {\n  \"redirect_urls\": [\n   \"https://api.flagsmith.com/api/v1/environments\",\n   \"https://api-staging.flagsmith.com/api/v1/environments\"\n  ],\n  \"scopes\": {\n   \"bot\": [\"channels:read\", \"chat:write\", \"chat:write.public\"]\n  }\n },\n \"settings\": {\n  \"org_deploy_enabled\": false,\n  \"socket_mode_enabled\": false,\n  \"token_rotation_enabled\": false\n }\n}\n```",
+      "source_content_hash": "4925a1524231c9ef1d02a51986361a34b018a0172bbed2c3c3f17cc4e75017c9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_eb4ec70e"
+      }
+    },
+    {
+      "segment_id": "e8e93efb",
+      "source_content": "### Time series data via InfluxDB",
+      "source_content_hash": "33cc7a4ef6878449896d47580d2915b3a2d0f1a96aff51198e36d3f56403cda0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过InfluxDB存储时间序列数据"
+      }
+    },
+    {
+      "segment_id": "0ba09731",
+      "source_content": "Flagsmith has a soft dependency on InfluxDB to store time-series data. You don't need to configure Influx to run the\nplatform; by default this data will be stored in Postgres. If you are running very high traffic loads, you might be\ninterested in deploying InfluxDB.",
+      "source_content_hash": "6a73ead0a529e52c9fa4651811b70a09c4bf6fb50e50fdcbce73582b7d509282",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith对InfluxDB存在软依赖关系以存储时间序列数据。平台运行时默认将数据存入Postgres，无需强制配置InfluxDB。若您运行高流量负载，可考虑部署InfluxDB方案。"
+      }
+    },
+    {
+      "segment_id": "9b281086",
+      "source_content": "1. Create a user account in influxdb. You can visit http://localhost:8086/\n2. Go into Data > Buckets and create three new buckets called `default`, `default_downsampled_15m` and\n   `default_downsampled_1h`\n3. Go into Data > Tokens and grab your access token.\n4. Edit the `docker-compose.yml` file and add the following `environment` variables in the api service to connect the\n   api to InfluxDB:\n   - `INFLUXDB_TOKEN`: The token from the step above\n   - `INFLUXDB_URL`: `http://influxdb`\n   - `INFLUXDB_ORG`: The organisation ID - you can find it\n     [here](https://docs.influxdata.com/influxdb/v2.0/organizations/view-orgs/)\n   - `INFLUXDB_BUCKET`: `default`\n5. Restart `docker-compose`\n6. Create a new task with the following query. This will downsample your per millisecond api request data down to 15\n   minute blocks for faster queries. Set it to run every 15 minutes.",
+      "source_content_hash": "8b443d4de14a17cc7a557e1f9439f0bae563209eb6ab27e343e28759e9dc1f8e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在InfluxDB中创建用户账户。访问 http://localhost:8086/\n2. 进入 Data > Buckets 创建三个新存储桶，分别命名为 `default`、`default_downsampled_15m` 和 `default_downsampled_1h`\n3. 进入 Data > Tokens 获取访问令牌\n4. 编辑 `docker-compose.yml` 文件，在api服务中添加以下环境变量以连接InfluxDB：\n   - `INFLUXDB_TOKEN`: 上一步获取的令牌\n   - `INFLUXDB_URL`: `http://influxdb`\n   - `INFLUXDB_ORG`: 组织ID - 可在此处查找\n     [文档](https://docs.influxdata.com/influxdb/v2.0/organizations/view-orgs/)\n   - `INFLUXDB_BUCKET`: `default`\n5. 重启 `docker-compose`\n6. 创建新任务并执行以下查询。该操作会将毫秒级API请求数据降采样为15分钟区块以加速查询。设置每15分钟运行一次。"
+      }
+    },
+    {
+      "segment_id": "9a9e03c3",
+      "source_content": "```text\noption task = {name: \"Downsample (API Requests)\", every: 15m}\n\ndata = from(bucket: \"default\")\n\t|> range(start: -duration(v: int(v: task.every) * 2))\n\t|> filter(fn: (r) =>\n\t\t(r._measurement == \"api_call\"))\n\ndata\n\t|> aggregateWindow(fn: sum, every: 15m)\n\t|> filter(fn: (r) =>\n\t\t(exists r._value))\n\t|> to(bucket: \"default_downsampled_15m\")\n```",
+      "source_content_hash": "6d7512e48e693d161152c0586be7c0f7de0f88779d9ef23c0ab7360f99d25a47",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9a9e03c3"
+      }
+    },
+    {
+      "segment_id": "7c02538b",
+      "source_content": "Once this task has run you will see data coming into the Organisation API Usage area.",
+      "source_content_hash": "efff07e44b1a0deac3996176a7f458ae026d681b79e1c0e61c3461d19f6edda3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "任务运行后，您将在组织API使用情况区域看到数据流入。"
+      }
+    },
+    {
+      "segment_id": "d8b5fe3c",
+      "source_content": "7. Create another new task with the following query. This will downsample your per millisecond flag evaluation data down\n   to 15 minute blocks for faster queries. Set it to run every 15 minutes.",
+      "source_content_hash": "c66942d7dd4535c1f5b7cf4850c7b00af784f15c7c830bbd93107db21745c04f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "7. 创建另一个新任务并执行以下查询。该操作会将毫秒级功能标志评估数据降采样为15分钟区块以加速查询。设置每15分钟运行一次。"
+      }
+    },
+    {
+      "segment_id": "aa353c25",
+      "source_content": "```text\noption task = {name: \"Downsample (Flag Evaluations)\", every: 15m}\n\ndata = from(bucket: \"default\")\n\t|> range(start: -duration(v: int(v: task.every) * 2))\n\t|> filter(fn: (r) =>\n\t\t(r._measurement == \"feature_evaluation\"))\n\ndata\n\t|> aggregateWindow(fn: sum, every: 15m)\n\t|> filter(fn: (r) =>\n\t\t(exists r._value))\n\t|> to(bucket: \"default_downsampled_15m\")\n```",
+      "source_content_hash": "68d4de08cdc815a8b8c173b26b00fcb31272cc1fe2caea5cbf69c96a4e5f0fb6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_aa353c25"
+      }
+    },
+    {
+      "segment_id": "99599192",
+      "source_content": "Once this task has run, and you have made some flag evaluations with analytics enabled (see documentation\n[here](/advanced-use/flag-analytics.md) for information on this) you should see data in the 'Analytics' tab against each\nfeature in your dashboard.",
+      "source_content_hash": "9881fde0c681e9e26e170eef2342e18638eb864ac3db2f5e85a5cf5760f911e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "任务运行后，且您已启用分析功能进行标志评估（相关文档见[此处](/advanced-use/flag-analytics.md)），您将在仪表板的每个功能\"分析\"选项卡中看到数据。"
+      }
+    },
+    {
+      "segment_id": "1877cf05",
+      "source_content": "8. Create another new task with the following query. This will downsample your per millisecond api request data down to\n   1 hour blocks for faster queries. Set it to run every 1 hour.",
+      "source_content_hash": "d8b47a6c6559ecde8e4bf379974bcacb56f60692ab5d2e77873f1a0c69f0576e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "8. 创建另一个新任务并执行以下查询。该操作会将毫秒级API请求数据降采样为1小时区块以加速查询。设置每小时运行一次。"
+      }
+    },
+    {
+      "segment_id": "2c71ed3c",
+      "source_content": "```text\noption task = {name: \"Downsample API 1h\", every: 1h}\n\ndata = from(bucket: \"default\")\n\t|> range(start: -duration(v: int(v: task.every) * 2))\n\t|> filter(fn: (r) =>\n\t\t(r._measurement == \"api_call\"))\n\ndata\n\t|> aggregateWindow(fn: sum, every: 1h)\n    |> filter(fn: (r) =>\n      (exists r._value))\n\t|> to(bucket: \"default_downsampled_1h\")\n```",
+      "source_content_hash": "caefaa431fd2fd980b9f836022b5f576fb7192294337352fe7aabb35cbe173f4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2c71ed3c"
+      }
+    },
+    {
+      "segment_id": "378758c8",
+      "source_content": "9. Create another new task with the following query. This will downsample your per millisecond flag evaluation data down\n   to 1 hour blocks for faster queries. Set it to run every 1 hour.",
+      "source_content_hash": "86ed8fe1da0e6909308e488d370bbde43c86e08fc6debbbfc81a39654eaf72db",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "9. 创建另一个新任务并执行以下查询。该操作会将毫秒级功能标志评估数据降采样为1小时区块以加速查询。设置每小时运行一次。"
+      }
+    },
+    {
+      "segment_id": "2ecfedca",
+      "source_content": "```text\noption task = {name: \"Downsample API 1h - Flag Analytics\", every: 1h}\n\ndata = from(bucket: \"default\")\n\t|> range(start: -duration(v: int(v: task.every) * 2))\n\t|> filter(fn: (r) =>\n\t\t(r._measurement == \"feature_evaluation\"))\n\t|> filter(fn: (r) =>\n\t\t(r._field == \"request_count\"))\n\t|> group(columns: [\"feature_id\", \"environment_id\"])\n\ndata\n\t|> aggregateWindow(fn: sum, every: 1h)\n    |> filter(fn: (r) =>\n      (exists r._value))\n\t|> set(key: \"_measurement\", value: \"feature_evaluation\")\n\t|> set(key: \"_field\", value: \"request_count\")\n\t|> to(bucket: \"default_downsampled_1h\")\n```",
+      "source_content_hash": "6f30691bc07bf40a49d065f1bfec5e2916f6dde038d018bdc5bbe539eccc566f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2ecfedca"
+      }
+    },
+    {
+      "segment_id": "17908f94",
+      "source_content": "## Manual Installation",
+      "source_content_hash": "95a4b428862aef6a6fa35f995f02a8bb65cd9cfcccc044eac457f5b8377d890b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 手动安装"
+      }
+    },
+    {
+      "segment_id": "e9763df1",
+      "source_content": "If you want a more configurable environment, you can manually install both the Front End and the API.",
+      "source_content_hash": "07e1c19895d4b23df4437a1ddb05b91413ea545a088fc42cb9a061578e3549da",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需更可配置的环境，您可以手动安装前端和API。"
+      }
+    },
+    {
+      "segment_id": "d4ce8524",
+      "source_content": "### Server Side API",
+      "source_content_hash": "14294f12ba27a2d3fdf9c109f287446751a3c13817b0271094aa458df90cf37b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 服务端API"
+      }
+    },
+    {
+      "segment_id": "6ecf4565",
+      "source_content": "The source code and installation instructions can be found at\n[the GitHub project](https://github.com/Flagsmith/flagsmith/tree/main/api). The API is written in Python and is based on\nDjango and the Django Rest Framework. The Server side API relies on a Postgres SQL installation to store its data, and a\nRedis installation as a cache.",
+      "source_content_hash": "bafe4c7523572200d1cb08f12d7f6c2672f58deddf4554468df41b87fa222388",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "源代码和安装指南可在[GitHub项目](https://github.com/Flagsmith/flagsmith/tree/main/api)获取。该API使用Python编写，基于Django和Django Rest框架。服务端API依赖PostgreSQL存储数据，并使用Redis作为缓存。"
+      }
+    },
+    {
+      "segment_id": "05917ecd",
+      "source_content": "### Front End Website",
+      "source_content_hash": "8dc695fb977a7241ce4e19a706acbea3128673232bd18214b8b7e8e63038b23e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 前端网站"
+      }
+    },
+    {
+      "segment_id": "b846d697",
+      "source_content": "The source code and installation instructions can be found at\n[the GitHub project](https://github.com/Flagsmith/flagsmith/tree/main/frontend). The Front End Website is written in\nReact/Javascript and requires NodeJS.",
+      "source_content_hash": "d031b4d5cb2babee5663394a82c0370a05045d0c1e0a2506fcfc99db778b9f9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "源代码和安装指南可在[GitHub项目](https://github.com/Flagsmith/flagsmith/tree/main/frontend)获取。前端网站使用React/JavaScript编写，需要NodeJS环境。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/overview.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.946901+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7f049f6c2824615e74b36c69c6d2874bf005f5416f222252620b6480842aa03e"
+  }
+}

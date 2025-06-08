@@ -1,0 +1,292 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/integration-approaches.md",
+  "source_file_content_hash": "fd262200c32d6a1650333f6a66631bf9a76ae77ec2365d2a751e0a3aad04a69b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Integration Approaches\n---",
+      "source_content_hash": "f46ea30638643b91b72c86d0fe825f17af08d80e9fd70195e78efe8ff7ea238f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "We have put a lot of work into making the Flagsmith API fast, stable, reliable and fault tolerant. That being said,\nthere are some simple techniques that can be used to enhance things further and provide the best experience possible to\nyour users.",
+      "source_content_hash": "94027b7856dd855a16077aa9ef158dbeafbdf29851058cb820337f2362c490c8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们投入了大量工作以确保Flagsmith API快速、稳定、可靠且具备容错能力。尽管如此，仍有一些简单技巧可进一步提升性能，为用户提供最佳体验。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## SDK Flag endpoints are public",
+      "source_content_hash": "a8934e0a441ec2f026dd09ce23a92dd12a3f579f725264ffe03026c555a68c08",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SDK标志接口是公开的"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The API endpoints that our SDKs make calls to are all public. Your Environment API key should also be considered public.\nThink if it in the same way you would a Google Analytics key.",
+      "source_content_hash": "6e5bd90dacb0ea72d9bc2e5e12c44d03d01a8dd409e1ebd68452c8489ca1002e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有SDK调用的API端点均为公开接口。您的环境API密钥也应视为公开信息，其性质类似于Google Analytics跟踪密钥。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Flags are evaluated Server Side",
+      "source_content_hash": "cfad66905b187124ac2ac1da88e20d994d924faa51bcf8d3cb79924cb7c1ae33",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 标志在服务端评估"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Flagsmith is different to some other feature flag providers in that we evaluate your flag rules on our server. There are\nsome advantages to this approach:",
+      "source_content_hash": "d6a84d3b3ec5955b16f90d70ffec67787bfa1c9deee98bd63f9fc6e562daa972",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith与其他功能标志服务的不同之处在于，我们会在服务器端执行标志规则评估。这种设计具有以下优势："
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "### Segment and Targeting rules are not leaked to the client",
+      "source_content_hash": "bbda812981572af396cecf88c8b29c3cb6ce2064eb8f435f61e2234c18f2dd05",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户分群与定向规则不会泄露至客户端"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "If flags are evaluated within the SDK, the entire set of rules for targeting users based on Segments etc need to be sent\nto the client. Given these endpoints are public by default, we think this is a leak of potentially sensitive\ninformation. We think the best place for your flags to be evaluated is on our server.",
+      "source_content_hash": "6e66c3eede07fabf2fe0dbb492e21269d2a4c98c2eaab2163fe5dfe483486a42",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若在SDK内评估标志，则需将基于用户分群等的完整定向规则集发送至客户端。鉴于这些端点默认公开，我们认为这可能导致敏感信息泄露。标志评估的最佳场所理应是我们的服务器。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "### You can get your flags with a single HTTP GET",
+      "source_content_hash": "ddcc8c11d3d9dabd37c397c6b24a43a59963b67b6699851a7827b4dd230f9122",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过单一HTTP GET请求即可获取标志"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "You don't need to run a set of complicated rule evaluations to get your flags. Just hit our endpoint and you get your\nflags. You won't receive any information on Segments or rollout rules, and this is by design. If you want to run your\nown HTTP client within your application its just a simple HTTP GET and you're good.",
+      "source_content_hash": "961e62dc95725815a887248fa8bf66040acdd88f810d22e7057cb1b51e138cc4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您无需执行复杂的规则评估流程，仅需调用我们的端点即可获取标志。根据设计，您不会收到任何关于用户分群或灰度发布规则的信息。若需在应用中自行实现HTTP客户端，仅需发起简单的HTTP GET请求即可完成标志获取。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "### Our SDKs are super-lightweight",
+      "source_content_hash": "23e6e5e05ebb3910d9360f05b8335d7e3400e282bceb10f04845dece0191c597",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 我们的SDK极其轻量"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "We have designed our SDKs with minimal dependencies. Because we don't have to do any rule evaluation on the client, we\ncan keep the codebase for our SDKs slimmed down and without a bunch of dependencies you don't want.",
+      "source_content_hash": "96287109695373df3288947039ed13f812d3ecb193f3210ea04d86b66970fb1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们设计的SDK保持最小化依赖。由于无需在客户端执行规则评估，我们的SDK代码库得以精简，避免引入不必要的依赖项。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Sane Defaults",
+      "source_content_hash": "6e70f6d64b9d5afc6cc575c683373da78aa38fae6b47e3e5aaf0a03e9518fdd5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 合理的默认值"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "Whether your application is a mobile app or a server side rendered web platform, building with sane and safe flag\ndefaults is a good idea. There are two good ways to implement this practice.",
+      "source_content_hash": "0b13db0dc0630de749b96ee1ce9cf8480c21f86c8b198f683f7ad25580c931f7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "无论您的应用是移动应用还是服务端渲染的Web平台，采用合理且安全的标志默认值都是明智之举。以下两种实现方式值得推荐："
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Hard Coded Defaults",
+      "source_content_hash": "585436186c91094b86f14fecc62b2e2faf3fd25e64d6eb6e40bf91cc11051219",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 硬编码默认值"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Storing flag defaults in your code is the simplest way to achieve this. For example, in Java you could do something like\nthis:",
+      "source_content_hash": "4b01b2b4963be1ca5c3deedf8fe3b776e0193eb94cef5e0d90702ff16517fa0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在代码中存储标志默认值是最简单的实现方式。例如在Java中可采用如下方式："
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```java\n    public static boolean FF_FREEZE_DELINQUENT_ACCOUNTS = false;\n    public static boolean FF_KYC_BUTTON = true;\n    public static int FF_TWILIO_IMPORT_DAYS_TO_PROCESS = 45;\n    public static boolean FF_YOTI_INCLUDE_LIVENESS = true;\n    public static String FF_YOTI_UPLOAD_TYPE = \"CAMERA\";\n\n    public static void setup() {\n\n    FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n            .setApiKey(Play.configuration.getProperty(\"flagsmith.apikey\"))\n            .build();\n\n    FF_FREEZE_DELINQUENT_ACCOUNTS = flagsmithClient.hasFeatureFlag(\"freeze_delinquent_accounts\");\n    FF_KYC_BUTTON = flagsmithClient.hasFeatureFlag(\"kyc_button\");\n    FF_YOTI_INCLUDE_LIVENESS = flagsmithClient.hasFeatureFlag(\"yoti_include_liveness\");\n    FF_YOTI_UPLOAD_TYPE = flagsmithClient.getFeatureFlagValue(\"yoti_upload_type\");\n```",
+      "source_content_hash": "276dbe8843fff0338de41306f4d2e1140bf240d66eb026bc4d545370d9f3e36e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "That way, if for whatever reason the Flagsmith client is not able to reach the API, and times out, your application will\nbe able to function with sane default values.",
+      "source_content_hash": "fc9c4adae0ede90c2d730c1ce6fac48defd3029ac7d5898863f85f5b2093ef3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这样当Flagsmith客户端因故无法连接API并超时时，您的应用仍能基于合理的默认值正常运行。"
+      }
+    },
+    {
+      "segment_id": "bd92edfc",
+      "source_content": "### Build Time Flag Retrieval",
+      "source_content_hash": "89de13396be737e774c7ac21e6591201a9cda6e5ad962175c321d3e19139d372",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 构建时标志获取"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "A more advanced technique is to grab the Flag defaults from the Flagsmith API at build time and include them on your\napplication build. The steps for this might look something like this:",
+      "source_content_hash": "d03ac2cf97d5618179c6556755c67ce156445e9f79e848182e0cefbe77a68388",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更高级的技术是在构建时从Flagsmith API获取标志默认值，并将其包含在应用构建中。具体流程可能如下："
+      }
+    },
+    {
+      "segment_id": "69c1f590",
+      "source_content": "1. Push your code to your git repository.\n2. An automated build pipeline is triggered.\n3. One stage of the pipeline is to grab the current default flag states from the `/flags` endpoint and store the JSON\n   response within your application build.\n4. Upon startup of your application, read the JSON file is embedded within your application first to get sane default\n   flags and config.\n5. Asynchronously call the Flagsmith API to get the most recent Flag and Config values.",
+      "source_content_hash": "2a0dd3d6570c7926d4d7ea550515ca16ab6b0152a7791783d3d901e3f742a391",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 将代码推送至Git仓库\n2. 触发自动化构建流水线\n3. 流水线中包含从`/flags`端点获取当前默认标志状态，并将JSON响应存入应用构建的环节\n4. 应用启动时首先读取内嵌的JSON文件获取合理默认标志配置\n5. 异步调用Flagsmith API获取最新标志与配置值"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "## Caching Flags Locally",
+      "source_content_hash": "e28ab81acc9d6f4e251d7ec32f8b35792f3e7627506f83dfdf69f655819a8ea0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 本地标志缓存"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "This approach depends on whether your application has an ability to persist data to the host OS during runtime. Locally\ncaching flags within your application environment ensures that you can subsequently start your application without\nhaving to block for a call to the Flagsmith API. A common workflow would then be:",
+      "source_content_hash": "8c12722cc74aec1729facac5d4ac9a785baceb15969c9bcea8c85742b1975e28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此方案取决于应用是否具备在运行时向宿主操作系统持久化数据的能力。在应用环境中本地缓存标志可确保后续启动时无需阻塞等待Flagsmith API调用。典型工作流如下："
+      }
+    },
+    {
+      "segment_id": "e032fbc6",
+      "source_content": "1. Build your application with sane defaults.\n2. Start your app, using the sane defaults, and asynchronously call the Flagsmith API to retrieve up-to-date Flags.\n3. Once the up-to-date Flags are retrieved, store them locally.\n4. On subsequent app launches, check local storage to see if any flags are available. If they are, load them\n   immediately.\n5. Asynchronously call the Flagsmith API to retrieve the up-to-date Flags.",
+      "source_content_hash": "7038dc9dc4175f0e305400968eb2ab25312a66e0339cff8801d6d433150343c3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 使用合理默认值构建应用\n2. 启动应用时先使用默认值，同时异步调用Flagsmith API获取最新标志\n3. 获取最新标志后将其存储在本地\n4. 后续应用启动时检查本地存储是否存在可用标志，若存在则立即加载\n5. 异步调用Flagsmith API获取最新标志"
+      }
+    },
+    {
+      "segment_id": "6b77b644",
+      "source_content": "The official [Javascript Client](/clients/javascript/) offers optional caching built in to the SDK.",
+      "source_content_hash": "bba49a22c6b0c6ac1ae331d58b528e66a820b19d9bb51ea33bd552e6218fbd41",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "官方[Javascript客户端](/clients/javascript/)在SDK中内置了可选的缓存功能。"
+      }
+    },
+    {
+      "segment_id": "5baf88e2",
+      "source_content": "## Caching Flags on a Server",
+      "source_content_hash": "b45aa9546787813551b4bcd995284ba3e509ce647ac40c67645112dbb8a86acf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 在服务器端缓存功能标志"
+      }
+    },
+    {
+      "segment_id": "eb51d107",
+      "source_content": "When running the Flagsmith SDK within a Server environment, it is difficult for the SDK to ascertain what sort of\ncaching infrastructure is available to it. For this reason, caching flags in a Server Environment needs to be integrated\nby hand. However, it's pretty simple!",
+      "source_content_hash": "171b5cbeec0e7d58df4caa18c47db694ca0ee55a94cd64eff40bb0e10ce401e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当在服务器环境中运行Flagsmith SDK时，SDK难以自动判断可用的缓存基础设施类型。因此，在服务器环境中缓存功能标志需要手动集成，但实现起来相当简单："
+      }
+    },
+    {
+      "segment_id": "2d15468d",
+      "source_content": "1. When a server starts up, get the Flags from the Flagsmith API. They will now be in memory within the server runtime.\n2. If you have caching infrastructure available (for example, memcache, redis etc), you can then store the flags for\n   that environment within your caching infrastructure.\n3. You can set up a [Web Hook](/advanced-use/system-administration.md#web-hooks) within Flagsmith that sends flag change\n   events to your server infrastructure.\n4. Write an API endpoint within your infrastructure that receives flag change events and stores then in your local\n   cache.\n5. You can now rely on your local cache to get up to date flags.",
+      "source_content_hash": "eecf926d2728f22d43a2dcca59b6bb3639a5a6075de23def5cdeb2a2c9adba7a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 服务器启动时，从Flagsmith API获取功能标志。此时标志会驻留在服务器运行时内存中。\n2. 若存在缓存基础设施（如memcache、redis等），可将该环境的功能标志存储至缓存系统。\n3. 在Flagsmith中配置[Web钩子](/advanced-use/system-administration.md#web-hooks)，用于向服务器基础设施发送标志变更事件。\n4. 在基础设施中编写API端点接收标志变更事件，并将其存储至本地缓存。\n5. 此后即可依赖本地缓存获取最新功能标志。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/integration-approaches.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.926812+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "fd262200c32d6a1650333f6a66631bf9a76ae77ec2365d2a751e0a3aad04a69b"
+  }
+}

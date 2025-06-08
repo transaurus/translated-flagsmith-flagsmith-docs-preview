@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/client-side/ios.md",
+  "source_file_content_hash": "b319495e391a8c5c273fb385e6d943611c67906e4ba3e41f4d22b311f9426bbe",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith iOS/Swift SDK\nsidebar_label: iOS\ndescription: Manage your Feature Flags and Remote Config in your iOS applications.\nslug: /clients/ios\n---",
+      "source_content_hash": "40c5b10dd63f8fa5ed64262f4121da12d76ff0d08dce2e9248d3ab506941b51b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library can be used with iOS and Mac applications. The source code for the client is available on\n[Github](https://github.com/flagsmith/flagsmith-ios-client).",
+      "source_content_hash": "15160287ccf8201900704535f8d6010043de8b8cdfdf20a099ce6caff0400440",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库可用于iOS和Mac应用程序。客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-ios-client)。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "### CocoaPods",
+      "source_content_hash": "e13c9a6760bae8ccfcc945d47e6d9f5f7e7f70bba6f0cb7ee2dafd7d549fb11a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### CocoaPods"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions,\nvisit their website. To integrate Flagsmith into your Xcode project using CocoaPods, specify it in your `Podfile`:",
+      "source_content_hash": "f88011eb17ca9e68cd6d52b0e109caf95cbb8a02fadcf71867805b268405bbdc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[CocoaPods](https://cocoapods.org)是Cocoa项目的依赖管理工具。访问其官网查看使用说明。要通过CocoaPods将Flagsmith集成到Xcode项目中，请在`Podfile`中声明："
+      }
+    },
+    {
+      "segment_id": "6e5ba8fb",
+      "source_content": "```ruby\npod 'FlagsmithClient', '~> 1.0'\n```",
+      "source_content_hash": "8b3254bdbbec09bb0b5d54d610d13be4cfb74d3fba896065127484a18770f287",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6e5ba8fb"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "### Swift Package Manager",
+      "source_content_hash": "b588a6fba3c1bfe9e30f1748e33fbe22c34ee0a29a5bd7654a0c044176fbe2a5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Swift Package Manager"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift\ncompiler. You can use it to install Flagsmith by adding the description to your `Package.swift` file:",
+      "source_content_hash": "966a90b6974ec0112826e1850b06e0a153a8c6c1f6cd287a91900182183cd444",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Swift Package Manager是用于自动化分发Swift代码的工具，已集成到Swift编译器中。您可以通过在`Package.swift`文件中添加描述来安装Flagsmith："
+      }
+    },
+    {
+      "segment_id": "08021a08",
+      "source_content": "```swift\ndependencies: [\n    .package(url: \"https://github.com/Flagsmith/flagsmith-ios-client.git\", from: \"1.1.1\"),\n]\n```",
+      "source_content_hash": "9e2b92af10475bd03f0c3d18b858bd291d246ba16f1cee3e1dc8c1d692ad8f7a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_08021a08"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目的单个环境进行初始化，例如开发环境或生产环境。您可以在环境设置页面找到环境密钥。"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "![Image](/img/api-key.png)",
+      "source_content_hash": "2f8c9c0b83b22f457d85301252648e4ee57be438573461d3e6a2d30e2b49a330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Initialization",
+      "source_content_hash": "9fc59faf08c3884ab52c556806a6802d0f1eb24afdf563254578dda2459298dd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 初始化"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Within your application delegate (usually _AppDelegate.swift_) add:",
+      "source_content_hash": "495e1075ae9777633934ca6853b45ba54d512b0624e4cc715cf2998be9600ec2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用程序委托中（通常是_AppDelegate.swift_）添加："
+      }
+    },
+    {
+      "segment_id": "6648a219",
+      "source_content": "```swift\nimport FlagsmithClient\n```",
+      "source_content_hash": "e8e0656e70992b04f64a99dc118c72daedc97e9be3561b41fa760913beba9cf1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6648a219"
+      }
+    },
+    {
+      "segment_id": "229d6705",
+      "source_content": "```swift\nfunc application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {\n\nFlagsmith.shared.apiKey = \"<YOUR_API_KEY>\"\n// The rest of your launch method code\n}\n```",
+      "source_content_hash": "1a8422a2daf47e4311eabb946477c6aeb438a7a816eb2d90f4eb72474af4e272",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_229d6705"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Now you are all set to retrieve feature flags from your project. For example to list and print all flags:",
+      "source_content_hash": "15af5b0a8fe97583d1dfd0b5257cfdcca847ce8210c82405cab8c3bfc7d04e15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在您已准备好从项目中获取功能开关。例如列出并打印所有开关："
+      }
+    },
+    {
+      "segment_id": "6d254e09",
+      "source_content": "```swift\nFlagsmith.shared.getFeatureFlags() { (result) in\n    switch result {\n    case .success(let flags):\n        for flag in flags {\n            let name = flag.feature.name\n            let value = flag.value?.stringValue\n            let enabled = flag.enabled\n            print(name, \"= enabled:\", enabled, \"value:\", value ?? \"nil\")\n        }\n    case .failure(let error):\n        print(error)\n    }\n}\n```",
+      "source_content_hash": "a3a17683be7b884fa985192c38aad1bfe56b6e2575e00e6a18311dce6db42846",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6d254e09"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "Note that you can use:",
+      "source_content_hash": "18b614094949abdbc94cee1d6bd105976bb70fb0b4d82f6a0956692362abcee5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注意您可以使用："
+      }
+    },
+    {
+      "segment_id": "caffd879",
+      "source_content": "- `flag.value?.stringValue`\n- `flag.value?.intValue`\n- `flag.value?.floatValue`",
+      "source_content_hash": "e469b59d18dbee8dc3b71a1bb8f5372011f26921476ac42b88345f1bf050cbf6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `flag.value?.stringValue`\n- `flag.value?.intValue`\n- `flag.value?.floatValue`"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "Based on your desired type.",
+      "source_content_hash": "d33486eaf90a567ddbcc0884e872b93b22b81d9ebf219ec4f6799c040371b76a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据您需要的类型进行选择。"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "To retrieve a feature flag boolean value by its name:",
+      "source_content_hash": "de5db25f3321c4375f742a32b608b0e275c9544eaaa1e45896ac6552d912aa8d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过名称获取功能开关的布尔值："
+      }
+    },
+    {
+      "segment_id": "65400624",
+      "source_content": "```swift\nFlagsmith.shared.hasFeatureFlag(withID: \"test_feature1\", forIdentity: nil) { (result) in\n    print(result)\n}\n```",
+      "source_content_hash": "1ce3dbdc91844bf213d07c300b722312756846109b897d28d08dff3fef14a436",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_65400624"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "To retrieve a config value by its name:",
+      "source_content_hash": "005cdb4727f14784d82a68d6948eb75c19e6d052501c2e8be37d21bd652d18b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过名称获取配置值："
+      }
+    },
+    {
+      "segment_id": "5782e280",
+      "source_content": "```swift\nFlagsmith.shared.getFeatureValue(withID: \"test_feature2\", forIdentity: nil) { (result) in\n    switch result {\n    case .success(let value):\n        print(value ?? \"nil\")\n    case .failure(let error):\n        print(error)\n    }\n}\n```",
+      "source_content_hash": "ee4d5255e02ff68b95296f811569a38d3dca97867c91e244f437cf441a9d9bc6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5782e280"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "These methods can also specify a particular identity to retrieve the values for a user registration. See\n[Identities](https://docs.flagsmith.com/managing-identities/) , using the **forIdentity** parameter.",
+      "source_content_hash": "43ecb02f2561ca7f34f9a3db40dc2f32c1fe7a8260cc7f29c4c091afb127aa54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这些方法还可通过**forIdentity**参数为特定用户身份获取值。详见[身份管理](https://docs.flagsmith.com/managing-identities/)。"
+      }
+    },
+    {
+      "segment_id": "4be28ed1",
+      "source_content": "To retrieve a trait for a particular identity (see\n[Traits](https://docs.flagsmith.com/managing-identities/#identity-traits)):",
+      "source_content_hash": "265525bc917e6837a50ea1ab43cd08ee66120ceb504ee501bde2313824c24734",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取特定身份的特征值（参见[特征管理](https://docs.flagsmith.com/managing-identities/#identity-traits)）："
+      }
+    },
+    {
+      "segment_id": "7ded566f",
+      "source_content": "```swift\nFlagsmith.shared.getTraits(forIdentity: \"test_user@test.com\") {(result) in\n    switch result {\n    case .success(let traits):\n        for trait in traits {\n            let name = trait.key\n            let value = trait.value\n            print(name, \"=\", value)\n        }\n    case .failure(let error):\n        print(error)\n    }\n}\n```",
+      "source_content_hash": "74b144862a1c42893e262fbed2e98f7263300d303299ea4a69f1f63f687d3a65",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7ded566f"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "## Override default configuration",
+      "source_content_hash": "242d7e795c949122455c15bebd1a6da0d35e44cae8b607acd146f8b795b3b897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认配置"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "By default, the client uses a default configuration. You can override the configuration as follows:",
+      "source_content_hash": "89c1f36aae76dce9de58794127d5a38ae08b643885a0a07d92364761d568d9df",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下客户端使用标准配置。您可按如下方式覆盖配置："
+      }
+    },
+    {
+      "segment_id": "8fcdd6d4",
+      "source_content": "Override just the default API URI with your own:",
+      "source_content_hash": "d5e36eef7f1bf02df2fd0a8df159d9ee2ad1c483ff1ad2254271e6ae5afa7349",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "仅覆盖默认API地址："
+      }
+    },
+    {
+      "segment_id": "5be4f25e",
+      "source_content": "```swift\nfunc application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {\n\nFlagsmith.shared.apiKey = \"<YOUR_API_KEY>\"\nFlagsmith.shared.baseURL = \"https://<your-self-hosted-api>/api/v1/\"\n// The rest of your launch method code\n}\n```",
+      "source_content_hash": "28cd6edb7f8cbea233f955ac399f3a62d83883df148dac12631be53cb0ca2cad",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5be4f25e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/client-side/ios.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.950877+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b319495e391a8c5c273fb385e6d943611c67906e4ba3e41f4d22b311f9426bbe"
+  }
+}

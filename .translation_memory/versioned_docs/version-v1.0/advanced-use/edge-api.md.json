@@ -1,0 +1,262 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/edge-api.md",
+  "source_file_content_hash": "8ae0faf1e38b2ddada3ec50fd5641e940fcfaa69877b9101563145b8a48065f7",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Edge API",
+      "source_content_hash": "4cd42076169ed82d0060378eb2ccc5844e5a4944924c187c5ecc0c5c567bcebd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 边缘API"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "[The Flagsmith Architecture](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side) is based\naround a server-side flag engine. This comes with a number of benefits, but it can increase latency, especially when the\ncalls are being made from a location that is far from the EU; the location of our current API.",
+      "source_content_hash": "38e84ee147ec4a3e8a804aff9deaf74d45cfd7a9c3465829b622fca714e8f7a4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Flagsmith架构](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side)基于服务端标志评估引擎。这种设计带来诸多优势，但也会增加延迟——尤其是当调用方地理位置远离我们当前API所在的欧盟区域时。"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "In order to solve this problem we have developed a Global Edge API. Our aim for this API is to serve all SDK requests\nwithin 100 milliseconds, anywhere in the world. In order to achieve this, we are using the following AWS components.",
+      "source_content_hash": "f9dff7ffeb0a1683e06323915ec40ba0b93230f7b7ae6474e870b27f2c298bc3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为解决这一问题，我们开发了全球边缘API。该API旨在为全球任意位置的SDK请求提供100毫秒内的响应。为实现这一目标，我们采用了以下AWS组件："
+      }
+    },
+    {
+      "segment_id": "1cc03ec8",
+      "source_content": "## Enabling the Edge API",
+      "source_content_hash": "b6ea8df5b1a848859f2b66c99cfa50645fbdaed9453ac48316534eb230e24fe0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 启用边缘API"
+      }
+    },
+    {
+      "segment_id": "0e7eb58c",
+      "source_content": ":::tip\n\nThe Edge API is currently in beta. If you want to join the beta programme, please connect with us in\n[Discord](https://discord.gg/hFhxNtXzgm), via the chat widget at the bottom of this page or by emailing\nsupport@flagsmith.com\n\n:::",
+      "source_content_hash": "ec9481f8fc7ab0d71aed21cae5e6d9fb88dcaeb5d812e310cdbbb1e80c1c6aa7",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n边缘API目前处于测试阶段。如需加入测试计划，请通过[Discord](https://discord.gg/hFhxNtXzgm)、页面底部聊天组件或邮件support@flagsmith.com联系我们\n\n:::"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Once you have had your project added to the beta, all you will need to do is point your SDK to a new Flagsmith Edge API\nURL. This URL will point to our edge Cloudfront CDN. That's it!",
+      "source_content_hash": "f3f9406cf33570ef1992e3308c22eb4740f1f84e38d111d3e947cfe07a2b6ed7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "加入测试后，您只需将SDK指向新的Flagsmith边缘API URL（该URL将指向我们的边缘Cloudfront CDN）即可完成配置。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "So for example, in the Java SDK we just add the `withApiUrl` line:",
+      "source_content_hash": "d61923b864ed233aca8453a724b41174fb5790ace83a6606ed8e4d3c7cba0a88",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如在Java SDK中，只需添加`withApiUrl`配置："
+      }
+    },
+    {
+      "segment_id": "3569d545",
+      "source_content": "```java\nFlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()\n        .setApiKey(\"aaa\"))\n        .withApiUrl(\"https://edge.api.flagsmith.com/api/v1/\")\n        .build();\n```",
+      "source_content_hash": "0a52583e8ffcc3155e4a5d42b4f93080d22d0214bb1d5f167cbbcecbdcd9f108",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3569d545"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Check the docs for your language SDK on how to override the endpoint URL prefix.",
+      "source_content_hash": "e539995635499de346735f079ac9bf38e8b5b2b5eb0214cbe899f11fc39a2085",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "具体URL前缀覆盖方法请查阅各语言SDK文档。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## Current Caveats",
+      "source_content_hash": "502368d71f008610ccc1b170d3a2402bc20d5ad655086ede474e3b5753f232f2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 当前限制"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Whilst in beta, there are some limitations to the platform. These are being worked on and will be in place when we put\nthe Edge API into production.",
+      "source_content_hash": "1cca78e5239b588271e094b4e72986bce5d6b309e6dbf535cbdf3269db0c68bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "测试阶段平台存在以下限制，这些限制将在正式版发布前解决："
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "### Identities are only synced from Core to Edge API",
+      "source_content_hash": "0dc0f5066dc88a3eeaf413927d9a2da5121b727d98bcd6226ddc4e7136119ebe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 身份数据仅从核心API同步至边缘API"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "If you cause a write to an Identity in our Core API, we will copy it to our Edge API data store. We will NOT copy data\nin the opposite direction: writes to Edge will not be copied to Core.",
+      "source_content_hash": "42c90f1cb95925ff24246bb63b702b574242b9c9678fc0bce0680bc67c60d41d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您在核心API中写入身份数据时，该数据会同步至边缘API存储。但反向同步尚未实现：边缘API的写入操作不会同步回核心API。"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Increment and Decrement endpoints are deprecated",
+      "source_content_hash": "f458f3ecdeafbdd17fa66b6ff45b66e5f838b18da522d1ea80c454ee53372f10",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 增量/减量端点已弃用"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "You probably didn't know these existed though, right?",
+      "source_content_hash": "2e8090d8aa2c6f4aa5fb059e167410f79daa9ed080499c99a79e510b4cd01773",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "不过您可能原本就不知道这些端点的存在？"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### The API responses have been slimmed down",
+      "source_content_hash": "03c1044ba0549a5b016b038572e125f76ea84d4c7add100ae3ae5849d2c731a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### API响应已精简"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "Our core API responses are quite verbose, and the SDKs ignore a lot of the fields they receive. We've taken the\nopportunity to remove these additional, unused fields. This wont affect the SDKs but if you are using these values via\nthe REST API, things have changed. The list of removed fields is as follows:",
+      "source_content_hash": "acf92ae93ae64e082f26432363e366427fc3b8386fd78d03c79a8bbf1c692ab0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们移除了核心API响应中SDK未使用的冗余字段。虽然不影响SDK功能，但直接使用REST API时需注意以下字段变更："
+      }
+    },
+    {
+      "segment_id": "3ce8f045",
+      "source_content": "```txt\ntrait.id\nflag.feature.created_data\nflag.feature.description\nflag.feature.initial_value\nflag.feature.default_enabled\nflag.environment\nflag.identity\nflag.feature_segment\n```",
+      "source_content_hash": "00957ff3999a892be3ce5297fa81f57e68f33c521876a2992ef0a66e5905b2ea",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3ce8f045"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "## How It Works",
+      "source_content_hash": "f029fb0d33f0802e53458729c7a20710b671d86867fd9cb957609a4af8aee229",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 工作原理"
+      }
+    },
+    {
+      "segment_id": "a5a4323e",
+      "source_content": "### Lambda@Edge",
+      "source_content_hash": "c94d4354413b4dec18e1c3ad6cfeec41a083117effea5a05dc1d8adf661cf6f8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Lambda@Edge"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "Our core [Rules Engine](https://github.com/Flagsmith/flagsmith-engine) has been factored out of our REST API. This\nallows us to use it as a dependency within both the Flagsmith API, but also within a set of Lambda functions that\nservice SDK API calls. You can point your SDK clients to our global CDN `edge.api.flagsmith.com` which will serve your\nrequest using a Lambda function running in an AWS data-centre near your client. This is how we reduce latency!",
+      "source_content_hash": "055c62e47633dd0910d9171cfe6426b68e373fa9b33575f27772c64fb8145c26",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们将核心[规则引擎](https://github.com/Flagsmith/flagsmith-engine)从REST API中解耦，使其可同时作为Flagsmith API和Lambda函数的依赖组件。通过将SDK客户端指向全局CDN域名`edge.api.flagsmith.com`，您的请求将由距离最近的AWS数据中心内的Lambda函数处理，从而实现低延迟响应。"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "### DynamoDB Global Tables",
+      "source_content_hash": "cb61c19f326c921d26aabc6ce6ec8623a47ec959e396fa94ddae12c9811b8bb7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### DynamoDB全局表"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "We store state within our API - both related to the Environments for your Projects, but also for the Identities within\nthose Environments. Our Edge design sees us write this data through to DynamoDB global tables, which are replicated\nglobally.",
+      "source_content_hash": "ffd5a733576f3a2597bfb35ea7be9691a0a2c99bf90baae98bafa77386c61898",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "系统状态数据（包括项目环境配置和身份信息）存储在DynamoDB全局表中，这些表格通过全球复制实现数据同步。"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "Currently we are writing through Environment data only (see Caveat below) but we plan on writing through Identities\nsoon.",
+      "source_content_hash": "c72c5a97c85230be6259b52b99e4dee6c3b9556bc79aad0513103617b0c7452f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前仅实现环境数据的全局同步（参见前文限制说明），身份数据同步功能即将推出。"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "Our Lambda functions then connect to the nearest DynamoDB table to retrieve both Environment and Identity data.",
+      "source_content_hash": "73a1905f9d7aed0b3efbf542279881815ddba27066bbb69e57527473a6bffdce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Lambda函数会连接最近的DynamoDB表格来获取环境及身份数据。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/edge-api.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.952820+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "8ae0faf1e38b2ddada3ec50fd5641e940fcfaa69877b9101563145b8a48065f7"
+  }
+}

@@ -1,0 +1,552 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/client-side/javascript.md",
+  "source_file_content_hash": "b7746007c2c33d0eae1bc8b327d2fc65c9dc01098d01a08711bc97006712bbe8",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Javascript SDK\nsidebar_label: Javascript\ndescription: Manage your Feature Flags and Remote Config in your Javascript applications.\nslug: /clients/javascript\n---",
+      "source_content_hash": "2db3fbce043e5f66fc97e7b0e9027f5976215fba9e71b0899d8356d25a4e2ba2",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library can be used with pure Javascript, React (and all other popular frameworks/libraries) and React Native\nprojects. The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-js-client).",
+      "source_content_hash": "5147d2ff150664338835312f7f0e46575796744914a1fe4763f599fe3845a8d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库可用于纯JavaScript、React（及所有其他主流框架/库）和React Native项目。客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-js-client)。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Example applications for a variety of Javascript frameworks such as React, Vue and Angular, as well as React Native, can\nbe found here:",
+      "source_content_hash": "43140c3161cf8a9d77c3d76238fb9b2b6119d1ff515fd587f1b511f2930e3e3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下提供多种JavaScript框架的示例应用，包括React、Vue、Angular以及React Native："
+      }
+    },
+    {
+      "segment_id": "9e760345",
+      "source_content": "- [Flagsmith Framework Examples](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples)",
+      "source_content_hash": "8d46971fe37d5fd4d08cbdb7043ecd4fb6cddc5cd21d7bc91d8eefa326d7faaa",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Flagsmith框架示例](https://github.com/flagsmith/flagsmith-js-client/tree/main/examples)"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装指南"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "### NPM",
+      "source_content_hash": "1df339bc436e1ca6250e69e63b2afee2a2bd90eb657e75485ba822efeca431c1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### NPM安装"
+      }
+    },
+    {
+      "segment_id": "166426c2",
+      "source_content": "```bash\nnpm i flagsmith --save\n```",
+      "source_content_hash": "16e310fdc2b4491c1ed2478ba658af0ad4534224a4e2238bb9686b5a8059eac0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_166426c2"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### NPM for React Native",
+      "source_content_hash": "16aef8d60f0733e714545c935e4b88a4eac37ba85b618bc522a52a773a474db7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### React Native的NPM安装"
+      }
+    },
+    {
+      "segment_id": "a89b882e",
+      "source_content": "```bash\nnpm i react-native-flagsmith --save\n```",
+      "source_content_hash": "55f526d323acdfe1b9cfc8b0bc9c7b170fca1e36e01f4a08a6bbf7f4280efde7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a89b882e"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "### Via JavaScript CDN",
+      "source_content_hash": "16c57d04552a4b9f980a97f4a70debfa9efaa75da7b2f10e8fd5f455b9ee224b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过JavaScript CDN引入"
+      }
+    },
+    {
+      "segment_id": "b017063d",
+      "source_content": "```html\n<script src=\"https://cdn.jsdelivr.net/npm/flagsmith/index.js\"></script>\n```",
+      "source_content_hash": "fe5f7eff855a390276fe04b841512282e7b6a63cd5a778368f366e23a36e6e1e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b017063d"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目内的单个环境进行初始化，例如开发环境或生产环境。环境密钥可在环境设置页面获取。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![Image](/img/api-key.png)",
+      "source_content_hash": "2f8c9c0b83b22f457d85301252648e4ee57be438573461d3e6a2d30e2b49a330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Example: Initialising the SDK",
+      "source_content_hash": "ce3c783a5ac8ffebb4ba2836419e713a23e79552444615e3f9ca72a0b9100215",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：初始化SDK"
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```javascript\nimport flagsmith from 'flagsmith or react-native-flagsmith'; //Add this line if you're using flagsmith via npm\n\nflagsmith.init({\n environmentID: '<YOUR_ENVIRONMENT_KEY>',\n // api:\"http://localhost:8000/api/v1/\" set this if you are self hosting, and point it to your API\n cacheFlags: true, // stores flags in localStorage cache\n enableAnalytics: true, // See https://docs.flagsmith.com/flag-analytics/ for more info\n onChange: (oldFlags, params) => {\n  //Occurs whenever flags are changed\n  const { isFromServer } = params; //determines if the update came from the server or local cached storage\n\n  //Check for a feature\n  if (flagsmith.hasFeature('my_cool_feature')) {\n   myCoolFeature();\n  }\n\n  //Or, use the value of a feature\n  const bannerSize = flagsmith.getValue('banner_size');\n\n  //Check whether value has changed\n  const bannerSizeOld = oldFlags['banner_size'] && oldFlags['banner_size'].value;\n  if (bannerSize !== bannerSizeOld) {\n  }\n },\n});\n```",
+      "source_content_hash": "4e207d2af3b50d0c63ab124c76d3d12c350dea6bd50bbc5e08b30690e6fc9209",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "## Identifying users",
+      "source_content_hash": "1d187bfc6e3a363da645672fb5a9e09ca5066da334aac5e4a454d749eb5b2410",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 用户标识"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Identifying users allows you to target specific users from the Flagsmith dashboard and configure features and traits.\nYou can call this before or after you initialise the project, calling it after will re-fetch features from the API.",
+      "source_content_hash": "f81fc92be8b5d1c165c830d2e32f674f281715ad24f2a8dabd140e76ce748659",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标识用户可让您从Flagsmith仪表板定向特定用户，并配置功能开关和用户特征。该操作可在项目初始化前后调用，初始化后调用将重新从API获取功能开关。"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "You can identify the users as part of initialising the client or after with the function `flagsmith.identify`.",
+      "source_content_hash": "ea91bd260f18b2970219e04982008fddaa88f083f863769cd323d43c6c99a454",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过初始化客户端时或之后调用`flagsmith.identify`函数来标识用户。"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "User features can be managed by navigating to users on [https://flagsmith.com](https://flagsmith.com) for your desired\nproject. ![Image](/img/user-features.png)",
+      "source_content_hash": "791291956da44882cae1a9a1eba812e7108956dab739899521fa191b0dbb5a55",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户功能管理请访问[https://flagsmith.com](https://flagsmith.com)对应项目的用户页面。![图片](/img/user-features.png)"
+      }
+    },
+    {
+      "segment_id": "a4bf4268",
+      "source_content": "### Example: Identifying a user after initialising the client",
+      "source_content_hash": "7d1325b482089c5f57b2fa34df01cb6cd0bec31c5dab623a1fd7939e93d72af4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：初始化客户端后标识用户"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "When you initialise the client without an identity, it will fetch the flags for a given environment (unless you provide\n`preventFetch:true`).",
+      "source_content_hash": "c4987985beb178cf05507bae8ed737ec558973437178353ca8cd1409265d30b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若初始化客户端时未指定用户标识，将获取环境默认功能开关（除非设置`preventFetch:true`参数）。"
+      }
+    },
+    {
+      "segment_id": "f6563256",
+      "source_content": "```javascript\nimport flagsmith from 'flagsmith';\n\nflagsmith.init({\n environmentID: 'QjgYur4LQTwe5HpvbvhpzK',\n onChange: (oldFlags, params) => {\n  //Occurs whenever flags are changed\n\n  const { isFromServer } = params; //determines if the update came from the server or local cached storage\n\n  //Set a trait against the Identity\n  flagsmith.setTrait('favourite_colour', 'blue'); //This save the trait against the user, it can be queried with flagsmith.getTrait\n\n  //Check for a feature\n  if (flagsmith.hasFeature('my_power_user_feature')) {\n   myPowerUserFeature();\n  }\n\n  //Check for a trait\n  if (!flagsmith.getTrait('accepted_cookie_policy')) {\n   showCookiePolicy();\n  }\n\n  //Or, use the value of a feature\n  const myPowerUserFeature = flagsmith.getValue('my_power_user_feature');\n\n  //Check whether value has changed\n  const myPowerUserFeatureOld = oldFlags['my_power_user_feature'] && oldFlags['my_power_user_feature'].value;\n  if (myPowerUserFeature !== myPowerUserFeatureOld) {\n  }\n },\n});\n\n/*\nCan be called either after you're done initialising the project or in flagsmith.init with its identity and trait properties \nto prevent flags being fetched twice.\n*/\nflagsmith.identify('flagsmith_sample_user'); //This will create a user in the dashboard if they don't already exist\n```",
+      "source_content_hash": "67b68b8b09167f623cadf189b233aeba28b3018866fe60cdee6e9419fc5843cb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f6563256"
+      }
+    },
+    {
+      "segment_id": "2bb63d77",
+      "source_content": "### Example: Initialising the SDK with a user",
+      "source_content_hash": "1d587004c18ba8ea842b89d2e924b116c271565b2aa60e72b5f2030dc802c67d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例：携带用户初始化SDK"
+      }
+    },
+    {
+      "segment_id": "53aa2b95",
+      "source_content": "Initialising the client with an identity property will retrieve the user's flags instead of the environment defaults.\nYou can also specify traits at this point which could determine the flags that come back based on segment overrides.",
+      "source_content_hash": "56f9151783f5f9081f66739f16c3ed06b38bc2b54088e9ba4a613809f8e2ca9f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过identity属性初始化客户端将获取该用户专属功能开关（而非环境默认值）。此时还可指定用户特征，这些特征可能基于分段规则影响返回的功能开关。"
+      }
+    },
+    {
+      "segment_id": "136818ce",
+      "source_content": "```javascript\nimport flagsmith from 'flagsmith';\n\nflagsmith.init({\n environmentID: 'QjgYur4LQTwe5HpvbvhpzK',\n identity: 'flagsmith_sample_user',\n traits: { age: 21, country: 'England' }, // these will add to the user's existing traits\n onChange: (oldFlags, params) => {\n  //Occurs whenever flags are changed\n\n  const { isFromServer } = params; //determines if the update came from the server or local cached storage\n\n  //Set a trait against the Identity\n  flagsmith.setTrait('favourite_colour', 'blue'); //This save the trait against the user, it can be queried with flagsmith.getTrait\n\n  //Check for a feature\n  if (flagsmith.hasFeature('my_power_user_feature')) {\n   myPowerUserFeature();\n  }\n\n  //Check for a trait\n  if (!flagsmith.getTrait('accepted_cookie_policy')) {\n   showCookiePolicy();\n  }\n\n  //Or, use the value of a feature\n  const myPowerUserFeature = flagsmith.getValue('my_power_user_feature');\n\n  //Check whether value has changed\n  const myPowerUserFeatureOld = oldFlags['my_power_user_feature'] && oldFlags['my_power_user_feature'].value;\n  if (myPowerUserFeature !== myPowerUserFeatureOld) {\n  }\n },\n});\n```",
+      "source_content_hash": "7ccb2fdf479300c0654e47df97d808b284a7053be624485f07dda10df309b751",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_136818ce"
+      }
+    },
+    {
+      "segment_id": "58f98d22",
+      "source_content": "## API Reference",
+      "source_content_hash": "9ef018b6267c1dd5586ba9102e558efbee7657a0e4bf51fa059fb46092de9e89",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API参考"
+      }
+    },
+    {
+      "segment_id": "d636abf8",
+      "source_content": "See all available types [here](https://github.com/Flagsmith/flagsmith-js-client/blob/main/index.d.ts#L35).",
+      "source_content_hash": "d4e428044ecaebc329af7e72ced34c70cb9114cb3f5adb3386919b924487bd29",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整类型定义参见[此处](https://github.com/Flagsmith/flagsmith-js-client/blob/main/index.d.ts#L35)。"
+      }
+    },
+    {
+      "segment_id": "191265da",
+      "source_content": "### Initialisation options",
+      "source_content_hash": "4da919c1e1670c4a97d9e4209d409870305cddb5272fefa32abdb1ff59e660fa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 初始化选项"
+      }
+    },
+    {
+      "segment_id": "48564f44",
+      "source_content": "| Property                                                         |                                                                                                              Description                                                                                                               | Required |                     Default Value |\n| ---------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------: | --------------------------------: |\n| `environmentID: string`                                          |                                                                     Defines which project environment you wish to get flags for. _example ACME Project - Staging._                                                                     |  **YES** |                              null |\n| `onChange?: (previousFlags:IFlags, params:IRetrieveInfo)=> void` |                                     Your callback function for when the flags are retrieved `(previousFlags,{isFromServer:true/false,flagsChanged: true/false, traitsChanged:true/false})=>{...}`                                      |  **YES** |                              null |\n| `onError?: (res:{message:string}) => void`                       |                                                                                    Callback function on failure to retrieve flags. `(error)=>{...}`                                                                                    |          |                              null |\n| `asyncStorage?:any`                                              | Needed for cacheFlags option, used to tell the library what implementation of AsyncStorage your app uses, i.e. ReactNative.AsyncStorage vs @react-native-community/async-storage, for web this defaults to an internal implementation. |          |                              null |\n| `cacheFlags?: boolean`                                           |                                    Any time flags are retrieved they will be cached, flags and identities will then be retrieved from local storage before hitting the API (see cache options) ```                                     |          |                              null |\n| `cacheOptions?: {ttl?:number, skipAPI?:boolean}`                 |                                                   A ttl in ms (default to 0 which is infinite) and option to skip hitting the API in flagsmith.init if there's cache available. ```                                                    |          |            {ttl:0, skipAPI:false} |\n| `enableAnalytics?: boolean`                                      |                                                               [Enable sending flag analytics](/advanced-use/flag-analytics.md) for getValue and hasFeature evaluations.                                                                |          |                             false |\n| `enableLogs?: boolean`                                           |                                                                                                Enables logging for key Flagsmith events                                                                                                |          |                              null |\n| `defaultFlags?: IFlags`                                          |                                                                    Allows you define default features, these will all be overridden on first retrieval of features.                                                                    |          |                              null |\n| `preventFetch?: boolean`                                         |                                                                                     If you want to disable fetching flags and call getFlags later.                                                                                     |          |                             false |\n| `state?: IState`                                                 |                                                                                   Set a predefined state, useful for SSR / isomorphic applications.                                                                                    |          |                             false |\n| `api?: string`                                                   |                                                                   Use this property to define where you're getting feature flags from, e.g. if you're self hosting.                                                                    |          | https://api.flagsmith.com/api/v1/ |\n| `identity?: string`                                              |                                                                           Specifying an identity will fetch flags for that identity in the initial API call.                                                                           |  **YES** |                              null |\n| `traits?:Record<string, string or number or boolean>`            |                                                                           Specifying traits will send the traits for that identity in the initial API call.                                                                            |  **YES** |                              null |",
+      "source_content_hash": "0ec74cbea6d5204dae1013588151bdc4691f4cf59a17291c88211cf20811500a",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_48564f44"
+      }
+    },
+    {
+      "segment_id": "6d457467",
+      "source_content": "### Available Functions",
+      "source_content_hash": "f0e295f4ed940b9d8fb3957a82c3a6253d38a1beb8740bed61b6a7fb84e0d876",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 可用函数"
+      }
+    },
+    {
+      "segment_id": "144fc2d3",
+      "source_content": "| Property                                                                                                                                        |                                                                                                                                Description                                                                                                                                |\n| ----------------------------------------------------------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |\n| <code>init(initialisationOptions)=> Promise&lt;void&gt;</code>                                                                                  |                                                                                                            Initialise the sdk against a particular environment                                                                                                            |\n| <code>hasFeature(key:string)=> boolean</code>                                                                                                   |                                                                                       Get the value of a particular feature e.g. `flagsmith.hasFeature(\"powerUserFeature\") // true`                                                                                       |\n| <code>getValue<T=string&#124;number&#124;boolean&#124;null>(key:string,{ json?:boolean, fallback?:T })=> string&#124;number&#124;boolean</code> |                                                  Get the value of a particular feature e.g. `flagsmith.getValue(\"font_size\", { fallback: 12 }) // 10`, specifying json:true will automatically parse the value as JSON.                                                   |\n| <code>getTrait(key:string)=> string&#124;number&#124;boolean</code>                                                                             |                                                               Once used with an identified user you can get the value of any trait that is set for them e.g. `flagsmith.getTrait(\"accepted_cookie_policy\")`                                                               |\n| <code>getState()=>IState</code>                                                                                                                 |                                                                               Retrieves the current state of flagsmith, useful in NextJS / isomorphic applications. `flagsmith.getState()`                                                                                |\n| <code>setTrait(key:string, value:string&#124;number&#124;boolean)=> Promise&lt;IFlags&gt;</code>                                                |                                                              Once used with an identified user you can set the value of any trait relevant to them e.g. `flagsmith.setTrait(\"accepted_cookie_policy\", true)`                                                              |\n| <code>setTraits(values:Record<string, string&#124;number&#124;boolean>)=> Promise&lt;IFlags&gt;</code>                                          |                                                           Set multiple traits e.g. `flagsmith.setTraits({foo:\"bar\",numericProp:1,boolProp:true})`. Setting a value of null for a trait will remove that trait.                                                            |\n| <code>incrementTrait(key:string, value:number)=> Promise&lt;IFlags&gt;</code>                                                                   |                                                                                You can also increment/decrement a particular trait them e.g. `flagsmith.incrementTrait(\"click_count\", 1)`                                                                                 |\n| <code>startListening(ticks=1000:number)=>void</code>                                                                                            |                                                                                                               Poll the api for changes every x milliseconds                                                                                                               |\n| <code>stopListening()=>void</code>                                                                                                              |                                                                                                                           Stop polling the api                                                                                                                            |\n| <code>getFlags()=> Promise&lt;IFlags&gt;</code>                                                                                                 |                                                         Trigger a manual fetch of the environment features, if a user is identified it will fetch their features. Resolves a promise when the flags are updated.                                                          |\n| <code>identify(userId:string, traits?:Record<string, string or number or boolean>)=> Promise&lt;IFlags&gt;</code>                               | Identify as a user, optionally with traits e.g. `{foo:\"bar\",numericProp:1,boolProp:true}`. This will create a user for your environment in the dashboard if they don't exist, it will also trigger a call to `getFlags()`, resolves a promise when the flags are updated. |\n| <code>logout()=>Promise&lt;IFlags&gt;</code>                                                                                                    |                                                                                                   Stop identifying as a user, this will trigger a call to `getFlags()`                                                                                                    |",
+      "source_content_hash": "b1966986082c2dc72f6f8f3c53ca182d9d2fcc59a13b371a6ab559f83527d582",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_144fc2d3"
+      }
+    },
+    {
+      "segment_id": "4e8f71c1",
+      "source_content": "## Multiple SDK Instances",
+      "source_content_hash": "efd920392cb6ea66c771192bda9fa8ad83efc43e24035f68c6c57afed929572b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 多SDK实例"
+      }
+    },
+    {
+      "segment_id": "e4d8cd8a",
+      "source_content": "[Version 1.5 and above](https://github.com/Flagsmith/flagsmith-js-client/releases/tag/1.5.0) allows you to create\nmultiple instances of the Flagsmith SDK. This may be used when you wish to identify multiple users simultaneously within\nyour app and retain access to getValue, hasFeature etc for each user.",
+      "source_content_hash": "c766b59eb54d1cc6f1ac74dd70248771f9234e8b9c3fe6d70ca931a8e2401b8b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[1.5版本及以上](https://github.com/Flagsmith/flagsmith-js-client/releases/tag/1.5.0)支持创建多个Flagsmith SDK实例。此功能适用于需要同时标识多个用户，并保留对各用户`getValue`、`hasFeature`等方法的调用能力。"
+      }
+    },
+    {
+      "segment_id": "d75361e3",
+      "source_content": "Type:",
+      "source_content_hash": "6cc5ad2e47e3be35ccb7d354da13ebb25073fd05ad5daa216141819484207f4f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "类型声明："
+      }
+    },
+    {
+      "segment_id": "3ae81768",
+      "source_content": "```javascript\nexport function createFlagsmithInstance (): IFlagsmith\n```",
+      "source_content_hash": "df796973e18c4adc48db1161dc8fce6f066a84a74df415fecadeb99f8f2a1793",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3ae81768"
+      }
+    },
+    {
+      "segment_id": "e4945edb",
+      "source_content": "Usage:",
+      "source_content_hash": "2bad3eeaf33caffe3bc9b482b4934ed19eb4ec3614c12373e1a5c5f8948217da",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用示例："
+      }
+    },
+    {
+      "segment_id": "1be6af7b",
+      "source_content": "```javascript\nimport { createFlagsmithInstance } from 'flagsmith';\nconst flagsmith = createFlagsmithInstance();\nconst flagsmithB = createFlagsmithInstance();\n\n// now you can use flagsmith as before but in its own instance\n```",
+      "source_content_hash": "22278d12a485b1324b27c77941124834e2dab06051b5614858d47786911b5cd6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1be6af7b"
+      }
+    },
+    {
+      "segment_id": "c0f80a50",
+      "source_content": "## FAQs",
+      "source_content_hash": "3bd810b3b5e6d0ff5d76e1b6274203676713250cc2873a02e39284054734cd17",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 常见问题"
+      }
+    },
+    {
+      "segment_id": "d73903fc",
+      "source_content": "**How do I call `identify`, `setTraits` etc alongside `init`?**",
+      "source_content_hash": "382a8d30357a0b0240fd5c0b1d2fbe0118ac8a7d9c921a65293c8c48fbfc07fd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**如何协调`identify`、`setTraits`等函数与`init`的调用顺序？**"
+      }
+    },
+    {
+      "segment_id": "9ffdd332",
+      "source_content": "- `init` should be called once in your application, we recommend you call `init` before any other flagsmith call.\n- `init` retrieves flags by default, you can turn this off with the `preventFetch` option to `init`. This is useful for\n  when you know you're identifying a user straight after.",
+      "source_content_hash": "1b2a13552fb499d23e3b5412f4f45fccffede7a445d4f404aea444d858bae645",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `init`应在应用中仅调用一次，建议优先于其他flagsmith函数调用\n- `init`默认会获取功能开关，可通过`preventFetch`参数禁用此行为。这在您确定随后将立即标识用户时特别有用"
+      }
+    },
+    {
+      "segment_id": "8f4e752e",
+      "source_content": "**When does onChange callback?**",
+      "source_content_hash": "9a69f3d9529e00d9dee1164234551a64f416306da746bf64ea51c8e1bfdb9ace",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**何时触发onChange回调？**"
+      }
+    },
+    {
+      "segment_id": "f211c69a",
+      "source_content": "`onChange` calls when flags are fetched this can be a result of:",
+      "source_content_hash": "65bb33b90dd70cd33db75adad05b05dba698e812b7ae5bece538ea3a55311b73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`onChange`在以下情况触发功能开关获取时回调："
+      }
+    },
+    {
+      "segment_id": "73b95320",
+      "source_content": "- init\n- setTrait\n- incrementTrait\n- getFlags\n- identify\n- flags evaluated by local storage",
+      "source_content_hash": "33a2de6cbe69ddc040e43ea9271a3fd52a622999f141cdc7d71f8f03a6731010",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- init\n- setTrait\n- incrementTrait\n- getFlags\n- identify\n- 通过本地存储评估的flags"
+      }
+    },
+    {
+      "segment_id": "b0c30ab4",
+      "source_content": "Using onChange is best used in combination with your application's state management e.g. onChange triggering an action\nto re-evaluate flags with `hasFeature` and `getValue`.",
+      "source_content_hash": "555a7fe636374304c057c69e1c1a64bc6521647e561e62f15b0ffcd16cbf6224",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "最佳实践是将onChange与应用程序的状态管理结合使用，例如通过onChange触发一个动作来重新用`hasFeature`和`getValue`评估flags。"
+      }
+    },
+    {
+      "segment_id": "32fb7230",
+      "source_content": "However, if this does not fit in with your development pattern, all the above flagsmith functions return a promise that\nresolves when fresh flags have been retrieved.",
+      "source_content_hash": "fb4d51e5e229aa31d1e5334927126d1d075777b8bcc62dd7b368499a3e0f0a16",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但如果这与您的开发模式不符，上述所有flagsmith函数都会返回一个Promise，该Promise会在获取到最新flags时解析。"
+      }
+    },
+    {
+      "segment_id": "5d3138c7",
+      "source_content": "For example by doing the following:",
+      "source_content_hash": "29835118547d4c767c6c527f5b2cb656f64e06e7796afc7095bdaf08b273c613",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如通过以下方式："
+      }
+    },
+    {
+      "segment_id": "7b9b1777",
+      "source_content": "```javascript\nawait flagsmith.setTrait('age', 21);\nconst hasFeature = flagsmith.hasFeature('my_feature');\n```",
+      "source_content_hash": "2242402ca62e2e9bd906f178d0684cae862cb30daaf4dac61cadfd0d38ab070c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b9b1777"
+      }
+    },
+    {
+      "segment_id": "715a86e2",
+      "source_content": "On change calls back with information telling you what has changed, you can use this to prevent any unnecessary\nre-renders.",
+      "source_content_hash": "b73d58eac33cef54044130967679ad64c5028692c6f74af172e30a237442f083",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OnChange回调时会携带变更信息，您可利用此特性避免不必要的重新渲染。"
+      }
+    },
+    {
+      "segment_id": "e55bb1a1",
+      "source_content": "```javascript\nonChange(this.oldFlags, {\n isFromServer: true, // flags have come from the server or local storage\n flagsChanged: deepEqualsCheck(oldFlags, newFlags),\n traitsChanged: deepEqualsCheck(oldFlags, newFlags),\n});\n```",
+      "source_content_hash": "52ded0fc4d7cef2b1239f60e27fb6adcc9c755fc96b114e9845bb63f587a5af1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e55bb1a1"
+      }
+    },
+    {
+      "segment_id": "590d1cd9",
+      "source_content": "**How does caching flags work?**",
+      "source_content_hash": "a9ff35bc7170c210bca212cc5951236109f8bc4f97ef7070a781303af284667c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**flags缓存机制如何工作？**"
+      }
+    },
+    {
+      "segment_id": "b632973a",
+      "source_content": "If the `cacheFlags` is set to true on `init`, the SDK will cache flag evaluations in local async storage. Upon reloading\nthe browser, an onChange event will be fired immediately with the local storage flags. The flow for this is as follows",
+      "source_content_hash": "fc5f497cc2b05375bb990822eb4a748c99f3190302bdd0c30deb76c08e16fa24",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若在`init`时设置`cacheFlags`为true，SDK会将flags评估结果缓存至本地异步存储。当浏览器重新加载时，会立即触发携带本地存储flags的onChange事件。具体流程如下："
+      }
+    },
+    {
+      "segment_id": "ce3bcadf",
+      "source_content": "1. `init` is called\n\n2. if `cacheFlags` is enabled, local storage checks for any stored flags and traits.\n\n3. if flags have been found in local storage, `onChange` is triggered with the stored flags.\n\n4. at the same time, fresh flags will be retrieved which will result in another `onChange` callback.\n\n5. whenever flags have been retrieved local storage will be updated.",
+      "source_content_hash": "ad0b32f2600b67d09ced06f3caf04b9c239fcbd3740201f54d2fbf0a7649cb14",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 调用`init`\n\n2. 若启用`cacheFlags`，则检查本地存储中是否存在缓存的flags和traits\n\n3. 若发现本地存储的flags，则立即用这些flags触发`onChange`\n\n4. 同时会获取最新flags，这将导致再次触发`onChange`回调\n\n5. 每次获取到新flags时都会更新本地存储"
+      }
+    },
+    {
+      "segment_id": "7eb5b32d",
+      "source_content": "By default, these flags will be persisted indefinitely, you can clear this by removing `\"BULLET_TRAIN_DB\"` from\n`localStorage`.",
+      "source_content_hash": "d201ecb67f41e4506dbb1951d8b9bd3c8794af3e32579a93d244a66bb2fa37ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下这些flags会永久保存，您可以通过删除`localStorage`中的`\"BULLET_TRAIN_DB\"`来清除缓存。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/client-side/javascript.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.934211+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b7746007c2c33d0eae1bc8b327d2fc65c9dc01098d01a08711bc97006712bbe8"
+  }
+}

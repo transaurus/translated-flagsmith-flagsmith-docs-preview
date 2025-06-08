@@ -1,0 +1,92 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/openfeature.md",
+  "source_file_content_hash": "b60876976d5d55744f6a5901d39a18d41d280a3d6e35a372e37cb60e11eb9a9f",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: OpenFeature\n---",
+      "source_content_hash": "3ed1df53d9a33ff3fdfd9c586e11d7bf498cefac4d42606fdcf118e274969be0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "[OpenFeature](https://openfeature.dev/) is an open standard for feature flag management, created to support a robust\nfeature flag ecosystem using cloud native technologies. OpenFeature provides a unified API and SDK, and a\ndeveloper-first, cloud-native implementation, with extensibility for open source and commercial offerings.",
+      "source_content_hash": "38fa45420d04161e5fbf540b3e4871b94dc9c70cf8618479ac84d0ce71194013",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[OpenFeature](https://openfeature.dev/) 是一个用于功能特性管理的开放标准，旨在通过云原生技术构建健壮的功能开关生态系统。OpenFeature 提供了统一的API和SDK，采用开发者优先、云原生的实现方式，并支持开源与商业方案的扩展能力。"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Flagsmith is proud to contribute to this initiative, and is a governance board member of this CNCF project.",
+      "source_content_hash": "d42f17a4dedb69fb2297d7eb580f96d11966d6c4ff2d274c83864aad39af3353",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 很荣幸能参与这项倡议，并作为该CNCF项目的治理委员会成员贡献力量。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "OpenFeature is still in it's alpha stage, but we encourage anyone interested Feature Flags and Open Source to get\ninvolved! We will be adding to this page of our docs as the project progresses.",
+      "source_content_hash": "8d67a4d8ac993d3677142e7d96a66706ea8f485215f8e9319afa283a0645ff48",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "OpenFeature 目前仍处于Alpha阶段，但我们鼓励所有对功能开关和开源技术感兴趣的人参与其中！随着项目进展，我们将持续完善本文档内容。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Our goal, and that of OpenFeature, is to recommend using OpenFeature as the default SDK interface for Flagsmith\nprojects.",
+      "source_content_hash": "722643cf109ae6aa3b4d1c657c5129956e4baf718d8e552b19976652d711f444",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的目标与OpenFeature一致——推荐将OpenFeature作为Flagsmith项目的默认SDK接口方案。"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Flagsmith OpenFeature Providers",
+      "source_content_hash": "c0c5a31a1334e7de7eedb0c1fd174b079dd3c5fe94cf96a6ba6f0b142a850683",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Flagsmith的OpenFeature提供程序"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "We currently offer [OpenFeature Providers](https://docs.openfeature.dev/docs/reference/concepts/provider) for the\nfollowing languages:",
+      "source_content_hash": "7bb921031de88dcb12f72bc2d1cbe1dcedc725c84ddc51d629832e2c7d233cf4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "目前我们为以下语言提供 [OpenFeature提供程序](https://docs.openfeature.dev/docs/reference/concepts/provider)："
+      }
+    },
+    {
+      "segment_id": "da23c906",
+      "source_content": "- [Go](https://github.com/open-feature/go-sdk-contrib/tree/main/providers/flagsmith)\n- [Java](https://github.com/open-feature/java-sdk-contrib/tree/main/providers/flagsmith)",
+      "source_content_hash": "0badf2ab884d92e942fbe1f8f4552ce8a5fdc5af8a3bb05f67eb9475d6938da2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Go语言](https://github.com/open-feature/go-sdk-contrib/tree/main/providers/flagsmith)\n- [Java语言](https://github.com/open-feature/java-sdk-contrib/tree/main/providers/flagsmith)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/openfeature.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.930912+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b60876976d5d55744f6a5901d39a18d41d280a3d6e35a372e37cb60e11eb9a9f"
+  }
+}

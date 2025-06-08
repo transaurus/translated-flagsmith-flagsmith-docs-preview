@@ -1,0 +1,212 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/configuration/task-processor.md",
+  "source_file_content_hash": "c8fee6a65bd327b13a8bf489f8278d73ee2956930aca7b498f77c48ffb462f27",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Asynchronous Task Processor",
+      "source_content_hash": "7e68583b14d4dbb4e49731ed89ce0fd03ac599513e33eac8fafd749bacb9e37d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 异步任务处理器"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "Flagsmith has the ability to consume asynchronous tasks using a separate task processor service. If flagsmith is run\nwithout the asynchronous processor, the flagsmith API will run any asynchronous tasks in a separate, unmanaged thread.",
+      "source_content_hash": "ffa54e024bd7f3082e8b42fd48798f72aae84c4bea425788a0f61e0bedb732a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 具备通过独立任务处理器服务消费异步任务的能力。若未启用异步处理器，Flagsmith API 将在非托管的独立线程中运行异步任务。"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "## Running the Processor",
+      "source_content_hash": "3cf4e1708c37e96879b7881c58e3fc52fe8f832fd5d998ac17cb7f3cd49e373e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 运行处理器"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The task processor can be run using the flagsmith/flagsmith-api image with a slightly different entrypoint. It should be\npointed to the same database that the API container is using. To enable the API sending tasks to the processor, you must\nset the `TASK_RUN_METHOD` to `TASK_PROCESSOR` in the flagsmith container running the flagsmith application.",
+      "source_content_hash": "4d2f07fdb19dfc719a04acc7a8cc9683fad9333a71112757bc25256741de2ec0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "任务处理器可通过 flagsmith/flagsmith-api 镜像运行，但需使用稍有不同的入口点。其应指向与 API 容器相同的数据库。为使 API 能将任务发送至处理器，必须在运行 Flagsmith 应用的容器中设置环境变量 `TASK_RUN_METHOD` 为 `TASK_PROCESSOR`。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "A basic docker-compose setup might look like:",
+      "source_content_hash": "50c1ae9976b06510eaea9f1e507e1a0afa3aeeb6ab3580e02c80db08baaf5960",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基础的 docker-compose 配置示例如下："
+      }
+    },
+    {
+      "segment_id": "5564d81d",
+      "source_content": "```yaml\n    postgres:\n        image: postgres:11.12-alpine\n        environment:\n            POSTGRES_PASSWORD: password\n            POSTGRES_DB: flagsmith\n        container_name: flagsmith_postgres\n\n    flagsmith:\n        image: flagsmith/flagsmith-api\n        environment:\n            DJANGO_ALLOWED_HOSTS: '*'\n            DATABASE_URL: postgresql://postgres:password@postgres:5432/flagsmith\n            ENV: prod\n            TASK_RUN_METHOD: TASK_PROCESSOR\n        ports:\n            - '8000:8000'\n        depends_on:\n            - postgres\n        links:\n            - postgres\n\n   flagsmith_processor:\n       build:\n           dockerfile: api/Dockerfile\n           context: .\n       environment:\n           DATABASE_URL: postgresql://postgres:password@postgres:5432/flagsmith\n       command:\n           - \"python\"\n           - \"manage.py\"\n           - \"runprocessor\"\n       depends_on:\n           - flagsmith\n           - postgres\n```",
+      "source_content_hash": "290531a157f076d5a93478b8f4c696189f812464d1ae16134151e9699dcc143a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5564d81d"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "## Configuring the Processor",
+      "source_content_hash": "1454629e90eee3f5cd13bef21a0da9d47eff699749cfbf11425bcf255532e100",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置处理器"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "The processor exposes a number of configuration options to tune the processor to your needs / setup. These configuration\noptions are via command line arguments when starting the processor.",
+      "source_content_hash": "4f39f9a25baefe0610ba7af6c239fe90358563a2f2b518de57f632a1d6a78d0c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该处理器提供多项配置选项，可根据需求或环境进行调优。这些配置选项通过启动处理器时的命令行参数传递。"
+      }
+    },
+    {
+      "segment_id": "96b8c6f1",
+      "source_content": "| Argument            | Description                                                               | Default |\n| ------------------- | ------------------------------------------------------------------------- | ------- |\n| `--sleepintervalms` | The amount of ms each worker should sleep between checking for a new task | 2000    |\n| `--numthreads`      | The number of worker threads to run per task processor instance           | 5       |\n| `--graceperiodms`   | The amount of ms before a worker thread is considered 'stuck'.            | 3000    |",
+      "source_content_hash": "9739965967b917673d6ed7151155990963b5dbd968e46f2a3d9f1d22c844f552",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_96b8c6f1"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Monitoring",
+      "source_content_hash": "6725b673bcc7f31dff7fb1bc991f3e977ba9eebe96b9ecb0ce8a12ae93b125bc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 监控"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "There are a number of options for monitoring the task processor's health.",
+      "source_content_hash": "0e5a3a223867a9c3c3e82c9b6619dabb4ba458aa6a7cabb54d609057972a0446",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过多种方式监控任务处理器的运行状态。"
+      }
+    },
+    {
+      "segment_id": "8c6d7ee7",
+      "source_content": "### Checking Thread / Worker Health",
+      "source_content_hash": "db0fa7843dc8dc068b87599dbb070a23a3dd9546c20556806f94a004e8f7d8c6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 检查线程/工作进程健康状态"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "The task processor includes a management command which checks the health of the worker threads which are running tasks.",
+      "source_content_hash": "e94d8b8335a60ea36cb5ac7c7bdc2c40522fa830319b42a1a96754575019eaae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "任务处理器包含一个管理命令，用于检查运行任务的工作线程健康状况。"
+      }
+    },
+    {
+      "segment_id": "7d13cf22",
+      "source_content": "```\npython manage.py checktaskprocessorthreadhealth\n```",
+      "source_content_hash": "25d9665c7d962c96e848ec3e5c66a69ec2c5e9687444928d4487a714fd1d6a81",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d13cf22"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "The command will exit with either a success exit code (0) or a failure exit code (1).",
+      "source_content_hash": "7a2abf6fa39736883cc314238b2af641bb7800f7e78c4812e8d725845f409b72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该命令将以成功退出码（0）或失败退出码（1）终止。"
+      }
+    },
+    {
+      "segment_id": "b051b70c",
+      "source_content": "### API to Task Processor health",
+      "source_content_hash": "ac0e99ff7c529c626975db55146c2c519b828027c06ebe6d7a04926fbe5533a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### API 至任务处理器的健康检查"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "To monitor that the API can send tasks to the processor and that they are successfully run, there is a custom health\ncheck which can be enabled on the general health endpoint (`GET /health?format=json`). This health check needs to be\nenabled manually, which can be done by setting the `ENABLE_TASK_PROCESSOR_HEALTH_CHECK` environment variable to `True`\n(in the flagsmith application container, not the task processor). Note that this health check is not considered\n\"critical\" and hence, the endpoint will return a 200 OK regardless of whether the task processor is sucessfully\nprocessing tasks or not.",
+      "source_content_hash": "b577c86def24e3fe4e2ca65a32e51559ee4ecc73c39e088c2593e0d0a6f01c65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为监控 API 能否向处理器发送任务及任务是否成功执行，可在通用健康端点（`GET /health?format=json`）启用自定义健康检查。需手动启用此功能，通过在 Flagsmith 应用容器（非任务处理器容器）中设置环境变量 `ENABLE_TASK_PROCESSOR_HEALTH_CHECK` 为 `True`。注意此健康检查不视为\"关键\"检查，因此无论任务处理器是否成功处理任务，端点均会返回 200 OK 状态。"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "### Task statistics",
+      "source_content_hash": "5251d00c251e1b50f08d3823f039e7fcab853e74d2cc66f6b8799d0ac871566b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 任务统计"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "Within the API, there is an endpoint which returns, in JSON format, statistics about the tasks consumed / to be consumed\nby the processor. This endpoint is available at `GET /processor/monitoring`. This will respond with the following data:",
+      "source_content_hash": "80a2e1ad2da89d51dd555a7086e564c5e13a611b86d9e4b8d899196a88e42c11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "API 内提供返回处理器已消费/待消费任务统计数据的 JSON 格式端点，访问路径为 `GET /processor/monitoring`。该端点返回以下数据结构："
+      }
+    },
+    {
+      "segment_id": "7d898a0e",
+      "source_content": "```json\n{\n \"waiting\": 1\n}\n```",
+      "source_content_hash": "a9942cae02475087986bbcf3de721ef20e2e101c17ef8db300848449efe004f9",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d898a0e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/configuration/task-processor.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.939314+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c8fee6a65bd327b13a8bf489f8278d73ee2956930aca7b498f77c48ffb462f27"
+  }
+}

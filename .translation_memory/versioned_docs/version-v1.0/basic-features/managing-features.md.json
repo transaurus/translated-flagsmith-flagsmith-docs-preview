@@ -1,0 +1,302 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/basic-features/managing-features.md",
+  "source_file_content_hash": "efaeb2827197c759da147048cd5e58ddc2f89e417b3f1917b924f5e03b8a566c",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Managing Features\ndescription: Feature Flags allow you to ship code and features before they are finished.\n---",
+      "source_content_hash": "7705875c8e8b3a7c868c66ab17320c3d4b084767fd8043afda211f9e2aaa252d",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "Flags in Flagsmith are _created and shared at a Project level_, but _overridden at an Environment level_. They can also\nbe overridden on a [per Identity](/basic-features/managing-identities.md) or\n[per Segment](/basic-features/managing-segments.md) basis.",
+      "source_content_hash": "6e2db3f25c4503dcba2e70e37ca34a277f6d8ced9565fc07b781b408ad767f62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith中的功能标志_在项目级别创建和共享_，但_在环境级别可被覆盖_。它们还可以基于[单个身份](/basic-features/managing-identities.md)或[单个用户分群](/basic-features/managing-segments.md)进行覆盖。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "Flags within Flagsmith are a combination of both:",
+      "source_content_hash": "675083d2db40b7f707396245ca2847418a49d002a3b0ed84b6c5ca8a3be29170",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith中的功能标志由以下两部分组成："
+      }
+    },
+    {
+      "segment_id": "143e51c1",
+      "source_content": "- A Boolean value - the `Flag State`",
+      "source_content_hash": "7903c5bd1765301d1f81fa2e0ac9163f6ea32866448e2209c287d4a75efbf34f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 布尔值 - `标志状态`"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "and then optionally:",
+      "source_content_hash": "981771a78258d8caaac9bd4539ef5f13105ce2cc53c6c15486da4d5dcb1482ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以及可选的："
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- A String/Integer/Float value - the `Flag Value`",
+      "source_content_hash": "25aafb57a421ed89bc5d67f55aa88ca94a31b3ae65adaa5a1d24b92edf27e2b7",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 字符串/整数/浮点数值 - `标志值`"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "or",
+      "source_content_hash": "7175517a370b5cd2e664e3fd29c4ea9db5ce17058eb9772fe090a5485e49dad6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "或"
+      }
+    },
+    {
+      "segment_id": "3b695c37",
+      "source_content": "- A selected Multivariate String/Integer/Float - the `Flag Value`",
+      "source_content_hash": "448463d0b21d6a35d3e94fd19e6509bf4243973e8f64ab03328e7273777c3691",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 选定的多变量字符串/整数/浮点数 - `标志值`"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "You are free to use either the `Flag State`, or the `Flag Value` or a combination of both `Flag State` and `Flag Value`\nwithin each flag. You don't have to provide or use a `Flag Value`. If you just want a boolean flag, you can just ignore\nthe `Flag Value` altogether.",
+      "source_content_hash": "45e90264defc756680746af4a2e4ab8c747fcdf17833ed038bdb2d667f17736d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以自由选择在每个标志中使用`标志状态`、`标志值`或两者结合。您不必提供或使用`标志值`。如果只需要布尔型标志，可以完全忽略`标志值`。"
+      }
+    },
+    {
+      "segment_id": "a2f1eaea",
+      "source_content": ":::important\n\nThe maximum size of each String Value is **_20,000 bytes_**. You cannot store more data than that in a flag value, and\nthe API will return a 500 error if you try to do so.\n\n:::",
+      "source_content_hash": "500fa381c58201f76a9ece7401586f26b81f7893a3791b90f2a7d5fd8121cb64",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n每个字符串值的最大容量为**_20,000字节_**。无法在标志值中存储超过此限制的数据，尝试这样做时API将返回500错误。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Examples of Use",
+      "source_content_hash": "98c414aac6dab3b561c0685a949c8aa02e598b2a32f99d3905701968c4f64d91",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用示例"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "This allows you to use Flagsmith in the multiple ways:",
+      "source_content_hash": "6eb5a1c19ec9d85deb965a47e85b6ead82200b53493518d82577d45fcebad162",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这使您可以通过多种方式使用Flagsmith："
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "- Showing and hiding features in your application. E.g. Controlling a new User Interface element within your application\n  using the boolean `Flag State`\n- Configuring environment variables/keys in your application. E.g. Setting the database URL for your API using the\n  String `Flag Value`, or setting the Google Analytics API key in your front end.\n- Configuring String values used within your application remotely. E.g. You might want to define different colour\n  schemes for your application banner depending on the Environment.",
+      "source_content_hash": "b31120eb22fe9ede30288735f07a7a1881b6c92b09041d5f60f05c45421bd2ba",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 在应用程序中显示和隐藏功能。例如：使用布尔型`标志状态`控制应用程序中的新用户界面元素\n- 配置应用程序中的环境变量/密钥。例如：使用字符串`标志值`设置API的数据库URL，或在前端设置Google Analytics API密钥\n- 远程配置应用程序中使用的字符串值。例如：您可能希望根据不同环境为应用横幅定义不同的配色方案"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "If you provide a `Flag Value` to a flag, this will always be included and returned within the\n[Flagsmith SDKS](/clients/rest/) and API, regardless of the boolean `Flag State`.",
+      "source_content_hash": "d35e798f085d468e86a6c1d21ee87eb0354d7c5abf68609a570dd4e56eb997ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果为标志提供了`标志值`，无论布尔型`标志状态`如何，该值始终会包含在[Flagsmith SDK](/clients/rest/)和API的返回结果中。"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "## Creating a new Feature Flag",
+      "source_content_hash": "7c7e0958814f69a1ca2a3aaadaa484bf3b77d73ae568c5d488a2ab4e66b76edd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建新功能标志"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "You can create a new feature flag by going to the Flags page within any Environment and hitting the Create Feature\nbutton.",
+      "source_content_hash": "efcb7521f2b67c8316f90523b7b0d25e191016406c41c3516e039bba943b6e66",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过访问任何环境中的\"功能标志\"页面并点击\"创建功能标志\"按钮来新建功能标志。"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Flags default to On (true) or Off (false). You can also optionally store and override String and numerical (int and\nfloat) values. The Flagsmith SDKs allow you to call both `hasFeature` as well as `getValue` on the same flag. These\ncalls will retrive both the Boolean value as well as the String/Numerical value if specified. The SDKs generally return\nFalse/Null if the flag is missing or the value is not set, but there are variations between different languages.",
+      "source_content_hash": "caf8eb783f774845b21a47027b5ef560a949f950fb3295295128981ac723129a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标志默认为开启(true)或关闭(false)。您还可以选择存储和覆盖字符串及数值（整型和浮点型）。Flagsmith SDK允许您对同一标志同时调用`hasFeature`和`getValue`方法。这些调用将同时获取布尔值以及指定的字符串/数值（如果设置）。不同语言SDK的具体实现略有差异，但通常会在标志缺失或值未设置时返回False/Null。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "![Image](/img/create-feature.png)",
+      "source_content_hash": "37cef1e2f094665d985bcdfe26233cad8e6236d58aa1bc2b3e0fdd950b0e6995",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/create-feature.png)"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "## Multi-Variate Flags",
+      "source_content_hash": "62dd15252995916904fb7972128339bd877e5c7a3d2db1b26cdc889825f8f728",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 多变量功能标志"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "You can create a Multivariate Flag if you want the `Flag Value` to be one value out of a selection that you define. Each\nEnvironment within a Project can then define and select which value to return based on this list. Multivariate Flags are\nuseful in 2 core use-cases:",
+      "source_content_hash": "f916833e994f34037344bdca2be5f3501c8fe5f6b10a19281319c66405abda55",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当您希望`标志值`从预定义的选项中选择时，可以创建多变量功能标志。项目中的每个环境都可以基于此列表定义和选择返回哪个值。多变量功能标志在两种核心场景中特别有用："
+      }
+    },
+    {
+      "segment_id": "35f6931b",
+      "source_content": "1. You want to be able to control the `Flag Value` from a pre-selected list.\n2. You want to run an A/B test. [Learn more here](/advanced-use/ab-testing.md).",
+      "source_content_hash": "fb8b8f8a7242420eb5b438d59dc09294b58f0729555c3d8d8b3d035cf0981aa1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 您希望从预选列表中控制`标志值`\n2. 您希望运行A/B测试。[了解更多](/advanced-use/ab-testing.md)"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Multi-Variate Flag values are defined as a \"Control\" and \"Variations\". The Control value is always sent as the Flag\nValue when you get the Flags for the Environment without passing in a\n[User Identity](/basic-features/managing-identities.md).",
+      "source_content_hash": "a4ef759a97d481795ee824198a536ecad82b022ac945e6a11b075f6861db280d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "多变量功能标志的值被定义为\"对照组\"和\"变体组\"。当您获取环境标志且未传入[用户身份](/basic-features/managing-identities.md)时，始终会返回对照组的标志值。"
+      }
+    },
+    {
+      "segment_id": "c1d6a7ca",
+      "source_content": ":::important\n\nThe Control and Variant weightings **_only_** come into effect if you are getting the Flags for a particular Identity.\nIf you are just retrieving the flags for an Environment without passing in an Identity, you will **_always_** receive\nthe Control value.\n\n:::",
+      "source_content_hash": "efd021f3aee553c760e044ffd58a023ef9fce2abb01122657d01636afe0cb553",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n对照组和变体组的权重分配**_仅_**在您为特定身份获取标志时生效。如果仅检索环境标志而不传入身份信息，您将**_始终_**获得对照值。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "If you are getting the Flags for an Identity, the Flagsmith engine will send the value based on the defined Weightings,\nas specified within the Environment.",
+      "source_content_hash": "d8cb94d4f4b783cd87d7bdab4ce37fac6537bd74ccad4d2301a3bcb55661c5bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若为特定身份标识获取功能标志，Flagsmith引擎将根据环境中定义的权重分配返回对应值。"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "![Image](/img/multi-variate-flags.png)",
+      "source_content_hash": "37372b201c45020a75e9bbb1c0087cc4e3d819d8f374c978305231deec3a8238",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/multi-variate-flags.png)"
+      }
+    },
+    {
+      "segment_id": "fbc2db85",
+      "source_content": "In the screenshot above, roughly half our user population will receive the value `normal`, roughly one quarter (25%)\nwill receive `large` and roughly one quarter (25%) will receive `huge`. Note that you can use 100% as a weighting to\nensure all your users receive the same variant.",
+      "source_content_hash": "2c4372d7238ae8b4a3d43d3c39176ffade38ee92660d805aa57283f17bc059d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如上图所示，约半数用户将获得值`normal`，约四分之一(25%)用户获得`large`，另外四分之一(25%)获得`huge`。注意您可使用100%权重确保所有用户获得相同变体。"
+      }
+    },
+    {
+      "segment_id": "09f6e084",
+      "source_content": ":::important\n\nMulti Variate _values_ are defined at the Project level, but the _weightings_ are defined at the Environment level. Each\nvariate String Value will be the same amongst all Environments. Consequently, changing the _value_ of a variation in one\nEnvironment will change that value for all the other Environments within the Project.\n\nThe _weightings_ of each variation, on the other hand, are defined at the Environment level. Changing a Variate\nweighting in the `development` environment, for example, will not change the corresponding variation weighting in any\nother Environments within the Project.\n\n:::",
+      "source_content_hash": "faa0d9b1342e7f1f876d99a8fec62fdb341883aff4bd68086ca88862dc0c927f",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n多变量_取值_在项目级别定义，但_权重分配_在环境级别设置。所有环境中各变体的字符串值保持一致。因此，在某环境中修改变体_取值_将同步影响项目内所有其他环境。\n\n而各变体的_权重分配_则按环境独立配置。例如在`development`环境中调整变体权重，不会影响项目内其他环境的对应变体权重。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "99d0dd9b",
+      "source_content": "### Multi-Variate Flag Use Cases",
+      "source_content_hash": "5fdcbd78fa7b48238d32c2b4959704a7dca98a6ca2767baa249f514c4ec2460f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 多变量标志使用场景"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "The primary use case for using Multi-Variate flags is to drive [A/B tests](/advanced-use/ab-testing.md).",
+      "source_content_hash": "26606c3b63365d93324b96ef935704059766ebc14b0f7d468c64f31b057d19ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "多变量标志主要应用于驱动[A/B测试](/advanced-use/ab-testing.md)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/basic-features/managing-features.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.928241+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "efaeb2827197c759da147048cd5e58ddc2f89e417b3f1917b924f5e03b8a566c"
+  }
+}

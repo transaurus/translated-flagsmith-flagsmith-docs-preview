@@ -1,0 +1,412 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/edge-proxy.md",
+  "source_file_content_hash": "5c3a9df22beb968fea9dfac48ea0b083992e020434c696203805fcdd6f28bca1",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Edge Proxy",
+      "source_content_hash": "6ada349e9386686994da8dcdff72c163dcc1274d436fd466b9f3d77a2d4849ee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 边缘代理"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "The Flagsmith Edge Proxy allows you to run an instance of the Flagsmith Engine close to your servers. If you are running\nFlagsmith within a server-side environment, and you need very low latency response times, the Edge Proxy is for you!",
+      "source_content_hash": "1647ab7fba37a89882ed901e5fbedd19538aa9226d018de81044e32c9f34959b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith边缘代理允许您在靠近服务器的位置运行Flagsmith引擎实例。如果您在服务器端环境中使用Flagsmith，并且需要极低延迟的响应时间，边缘代理正是您所需的解决方案！"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "The Edge Proxy runs as a lightweight Docker container. It connects to the Flagsmith API (either powered by us at\napi.flagsmith.com or self hosted by you) to get Environment Flags and Segment rules. You can then point the Flagsmith\nSDKs to your Edge Proxy; it implements all the current SDK endpoints. This means you can serve a very large number of\nrequests close to your infrastructure and users, at very low latency. Check out the [architecture below](#architecture).",
+      "source_content_hash": "dce59b11ce1e8c4d5c2424f4043e1c8cd30b5f7faee74ebe4b36b819bcc1fcb7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理作为轻量级Docker容器运行。它会连接到Flagsmith API（由我们提供的api.flagsmith.com或您自行托管的实例）以获取环境特征标志和分段规则。随后您可以将Flagsmith SDK指向您的边缘代理；该代理实现了当前所有SDK端点。这意味着您能以极低延迟在基础设施和用户附近处理大量请求。查看下方的[架构说明](#architecture)。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The Proxy also acts as a local cache, allowing you to make requests to the Proxy without hitting the core API.",
+      "source_content_hash": "38e72c59c7874925c6e76dd629cf03e225882453ceabafc62a4d88aa807dec9b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该代理还充当本地缓存，使您无需访问核心API即可向代理发起请求。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Performance",
+      "source_content_hash": "b61a2b644e50e77bcf62c9857199cd063dccceb2c056007c9370ea1a93289c2b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 性能表现"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "The Edge Proxy can currently serve ~2,000 requests per second at a mean latency of ~7ms on a single, 4-core VM. It is\nstateless and hence close to perfectly scalable being deployed behind a load balancer.",
+      "source_content_hash": "f378aa0222e64abd6903edcfad347814261c105ea36e6501da98ac705ed7c0ca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理当前在4核虚拟机上可处理约2,000次请求/秒，平均延迟约7毫秒。由于采用无状态设计，通过负载均衡器部署后几乎可实现完美扩展。"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Configuration",
+      "source_content_hash": "37f210b46aa9013050eaa3d7a439965867d73a7f632cdfce2001f865b525946e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 配置说明"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "The Edge Proxy can be configured using a json configuration file (named `config.json` here).",
+      "source_content_hash": "604efc2c377cb0f1143f52dfa90264de41591be253603376c71586f0c58f252a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过JSON配置文件（此处命名为`config.json`）配置边缘代理。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "You can set the following configuration in `config.json` to control the behaviour of the Edge Proxy:",
+      "source_content_hash": "5e1d7c1fe16b4dc1f5ef79e8933e1dd42e8c8c976a788288d257c942d6289522",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在`config.json`中设置以下配置项来控制边缘代理行为："
+      }
+    },
+    {
+      "segment_id": "8cf6d045",
+      "source_content": "- **environment_key_pairs**: An array of environment key pair objects, e.g:\n  `\"environment_key_pairs\":[{\"server_side_key\":\"your_server_side_key\", \"client_side_key\":\"your_client_side_environment_key\"}]`\n- **[optional] api_poll_frequency(seconds)**: Control how often the Edge Proxy is going to ping the server for changes,\n  e.g: `\"api_poll_frequency\":10`\n- **[optional] api_url**: If you are running a self hosted version of flagsmith you can set the self hosted url here for\n  edge-proxy in order to connect to your server, e.g: `\"api_url\":\"https://self.hosted.flagsmith.domain/api/v1\"`",
+      "source_content_hash": "ba89e3f0b5d035be868bf43e6a91dbe033bf8aa86b9c75a068ce42c39f1f9090",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **environment_key_pairs**: 环境密钥对对象数组，例如：\n  `\"environment_key_pairs\":[{\"server_side_key\":\"您的服务端密钥\", \"client_side_key\":\"您的客户端环境密钥\"}]`\n- **[可选] api_poll_frequency(秒)**: 控制边缘代理向服务器轮询变更的频率，例如：`\"api_poll_frequency\":10`\n- **[可选] api_url**: 若运行自托管版Flagsmith，可在此设置自托管URL以便边缘代理连接您的服务器，例如：`\"api_url\":\"https://自托管.flagsmith.域名/api/v1\"`"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "After setting up the above configuration the `config.json` is going to look something like this:",
+      "source_content_hash": "3bfc05cd7b25d59fef66bbacaaa59a8646b6a7a7580d7ef6e55aec65d60ec14b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成上述配置后，`config.json`文件内容示例如下："
+      }
+    },
+    {
+      "segment_id": "a2110253",
+      "source_content": "```json\n{\n \"environment_key_pairs\": [\n  {\n   \"server_side_key\": \"your_server_side_environment_key\",\n   \"client_side_key\": \"your_client_side_environment_key\"\n  }\n ],\n \"api_poll_frequency\": 10,\n \"api_url\": \"https://api.flagsmith.com/api/v1\"\n}\n```",
+      "source_content_hash": "a96d98f93e6c038e796e418584c832193d4ac13ac891cbb4d68c1ede7b2e73f6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a2110253"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "### Environment Variables",
+      "source_content_hash": "cf47b598f19e2ab5c3a60c13e61a54b2a5a531397397306826f70b68854f94b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境变量"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "You can configure the Edge Proxy with the following Environment Variables:",
+      "source_content_hash": "c7b2f2699cda684acb99c3e245ebc39eb0fe7fadd7c2ec980f10bd1cfac74aa2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过以下环境变量配置边缘代理："
+      }
+    },
+    {
+      "segment_id": "40251870",
+      "source_content": "- `WEB_CONCURRENCY` The number of [Uvicorn](https://www.uvicorn.org/) workers. Defaults to `1`. Set to the number of\n  available CPU cores.",
+      "source_content_hash": "758ec0e8f080e1d1db333134a4e5e49574a0aa0fa2906e6d2e1f0437b3be875f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `WEB_CONCURRENCY` [Uvicorn](https://www.uvicorn.org/)工作进程数。默认为`1`。建议设置为可用CPU核心数。"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "## Running the Edge Proxy",
+      "source_content_hash": "795796543de19ba5de89e5b92206f3501f15d6195764e3d11e0c1a3b589b6a33",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 运行边缘代理"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "The Edge Proxy runs as a docker container. It is currently available at the\n[Docker Hub](https://hub.docker.com/repository/docker/flagsmith/edge-proxy).",
+      "source_content_hash": "a3058e06a04c9bc0678b16d23ed5069fe69b07248b62a1d67f57f43a21eb237b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理作为Docker容器运行，当前已发布于[Docker Hub](https://hub.docker.com/repository/docker/flagsmith/edge-proxy)。"
+      }
+    },
+    {
+      "segment_id": "1a316f80",
+      "source_content": "### With docker run",
+      "source_content_hash": "7042617d90d464242a687f3188baf8f46ee3bdc64bab15ae39c7ac77a0fc572c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用docker run运行"
+      }
+    },
+    {
+      "segment_id": "3c08ed05",
+      "source_content": "```bash\n# Download the Docker Image\ndocker pull flagsmith/edge-proxy\n\n# Run it\ndocker run \\\n    -v /<path-to-local>/config.json:/app/config.json \\\n    -p 8000:8000 \\\n    flagsmith/edge-proxy:latest\n```",
+      "source_content_hash": "a892ad7dfd6abb4e7af6ed7ff2f98e336fe0b36ac1b34b98aca6086b40f2f779",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3c08ed05"
+      }
+    },
+    {
+      "segment_id": "52388877",
+      "source_content": "### With docker compose",
+      "source_content_hash": "ed14c9629a3b0b0ab28b44aa69aeb43e96e5d0dd1654c3beb6420d03a89afd5f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用docker compose运行"
+      }
+    },
+    {
+      "segment_id": "bc137a19",
+      "source_content": "```yml\nversion: '3.9'\nservices:\n edge_proxy:\n  image: flagsmith/edge-proxy:latest\n  volumes:\n   - type: bind\n     source: ./config.json\n     target: /app/config.json\n  ports:\n   - target: 8000\n   - published: 8000\n```",
+      "source_content_hash": "2329776c08a23ae578b01d2be3a1811da244f0f72e3487ce95e607baa03c3c61",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bc137a19"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "The Proxy is now running and available on port 8000.",
+      "source_content_hash": "cde9ccafafe595b3eb0d0aa9f47c3d2d5ab0caced79d948dac28db5f28585153",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "代理现已运行并在8000端口提供服务。"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "## Consuming the Edge Proxy",
+      "source_content_hash": "e082bb84f817fed48b2ce09077fb3e3df02c8ad99c7e264c3722380bc3d9eeff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 接入边缘代理"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "The Edge Proxy provides an identical set of API methods as our Core API. This means you simply need to point your SDK to\nthe Edge Proxy domain name and you're good to go. For example, lets say you had your proxy running locally as per the\ninstructions above, you could simply do:",
+      "source_content_hash": "967effa2043b7612b287e69736f44d17c29b5dd93aa696f4eb36d467f4820303",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理提供与核心API完全相同的接口方法。这意味着您只需将SDK指向边缘代理域名即可立即使用。例如按照上述说明在本地运行代理后，您可以这样操作："
+      }
+    },
+    {
+      "segment_id": "59f28e14",
+      "source_content": "```bash\ncurl \"http://localhost:8000/api/v1/flags\" -H \"x-environment-key: 95DybY5oJoRNhxPZYLrxk4\" | jq\n\n[\n    {\n        \"enabled\": true,\n        \"feature_state_value\": 5454,\n        \"feature\": {\n            \"name\": \"feature_1\",\n            \"id\": 2,\n            \"type\": \"MULTIVARIATE\"\n        }\n    },\n    {\n        \"enabled\": true,\n        \"feature_state_value\": \"some_value\",\n        \"feature\": {\n            \"name\": \"feature_2\",\n            \"id\": 9,\n            \"type\": \"STANDARD\"\n        }\n    },\n]\n```",
+      "source_content_hash": "769f1c6d281e5de474053acc70c7625c0e22d5313339b375283c0a67441f1626",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59f28e14"
+      }
+    },
+    {
+      "segment_id": "638efb88",
+      "source_content": "## Monitoring",
+      "source_content_hash": "6725b673bcc7f31dff7fb1bc991f3e977ba9eebe96b9ecb0ce8a12ae93b125bc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 监控"
+      }
+    },
+    {
+      "segment_id": "558df877",
+      "source_content": "There are 2 health check endpoints for the Edge Proxy.",
+      "source_content_hash": "bea1842af45d0a5f5b42eca31a008e17e749beefee6a13af65fe08962dcb37c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理提供2个健康检查端点。"
+      }
+    },
+    {
+      "segment_id": "64d57278",
+      "source_content": "### SDK Proxy Health Check",
+      "source_content_hash": "39e4484cea850c0e8933d0be6c57352b2ca9116d2e3bb597f77ecea9377448a6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SDK代理健康检查"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "When making a request to `/proxy/health` the proxy will respond with a HTTP `200` and `{\"status\": \"ok\"}`. You can point\nyour orchestration health checks to this endpoint. This endpoint checks that the Environment document is not stale, and\nthat the proxy is serving SDK requests.",
+      "source_content_hash": "21aaafbb5f6438cfadf987dfedb793eab158dedce42e8c7a44236fdc3003faab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "向`/proxy/health`发起请求时，代理将返回HTTP `200`及`{\"status\": \"ok\"}`响应。您可将编排系统的健康检查指向此端点。该端点会验证环境文档未过期，且代理正在处理SDK请求。"
+      }
+    },
+    {
+      "segment_id": "4dd6a631",
+      "source_content": "### Realtime Flags/Server Sent Events Health Check",
+      "source_content_hash": "578ab04e854b0b8af427e6d4ef720f4325294d1719f09218b0fc74f7fbc6d476",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 实时标志/服务器推送事件健康检查"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "If you are using the Proxy to power Server Sent Events for realtime flag updates. When making a request to `/sse/health`\nthe proxy will respond with a HTTP `200` and `{\"status\": \"ok\"}`.",
+      "source_content_hash": "6bd301f2d26ea606851d3a39ba842fe7306280350c04d0341bd8efa2d400548e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您使用代理来支持服务器发送事件(Server Sent Events)以实现实时功能标志更新，当向`/sse/health`发起请求时，代理将返回HTTP状态码`200`及响应体`{\"status\": \"ok\"}`。"
+      }
+    },
+    {
+      "segment_id": "d53c8ed4",
+      "source_content": "## Managing Traits",
+      "source_content_hash": "3cb963b32f2b8f720dc647dba2b30e4bd7daa0cbe9b93d7f056cc10af8a769ba",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 特征管理"
+      }
+    },
+    {
+      "segment_id": "1ecf0882",
+      "source_content": "There is one caveat with the Edge Proxy. Because it is entirely stateless, it is not able to persist Trait data into any\nsort of datastore. This means that you _have_ to provide the full complement of Traits when requesting the Flags for a\nparticular Identity. Our SDKs all provide relevant methods to achieve this. An example using `curl` would read as\nfollows:",
+      "source_content_hash": "aec6bff6e5d71cf6350e731171ed676d45930207e33db3362f5201c98c3d8555",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "边缘代理存在一个注意事项：由于完全无状态设计，它无法将特征(Trait)数据持久化存储到任何数据库中。这意味着在请求特定身份(Identity)的功能标志时，必须提供完整的特征集合。我们的所有SDK都提供了相关方法来实现这一点，例如使用`curl`的示例如下："
+      }
+    },
+    {
+      "segment_id": "e908327f",
+      "source_content": "```bash\ncurl -X \"POST\" \"http://localhost:8000/api/v1/identities/?identifier=do_it_all_in_one_go_identity\" \\\n     -H 'X-Environment-Key: n9fbf9h3v4fFgH3U3ngWhb' \\\n     -H 'Content-Type: application/json; charset=utf-8' \\\n     -d $'{\n  \"traits\": [\n      {\n          \"trait_value\": 123.5,\n          \"trait_key\": \"my_trait_key\"\n      },\n      {\n          \"trait_value\": true,\n          \"trait_key\": \"my_other_key\"\n      }\n  ],\n  \"identifier\": \"do_it_all_in_one_go_identity\"\n}'\n```",
+      "source_content_hash": "cfb0a1c414abb72d4120f355a835c101ac269201a7293a6f2c348fbd8ecffdef",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e908327f"
+      }
+    },
+    {
+      "segment_id": "dce16ab4",
+      "source_content": "Note that the Edge Proxy will currently _not_ send the Trait data back to the Core API.",
+      "source_content_hash": "f925518c82f0d3892a37497c360be81e60d9e33d6af795baccd8f8095a7714d2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，当前边缘代理不会将特征数据回传至核心API。"
+      }
+    },
+    {
+      "segment_id": "7312e69e",
+      "source_content": "## Architecture",
+      "source_content_hash": "a7e56472b11bd3c838bc8199601f5a5527112a003c69fbf95b012bc13573a193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 架构设计"
+      }
+    },
+    {
+      "segment_id": "2dbfc5f7",
+      "source_content": "The standard Flagsmith architecture is very simple:",
+      "source_content_hash": "23712af94e48f1b7ecbd8e93ca163c236b0e117c2d269682052ac8313f92a1b7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标准Flagsmith架构非常简单："
+      }
+    },
+    {
+      "segment_id": "6b40e7a2",
+      "source_content": "![Image](/img/edge-proxy-existing.png)",
+      "source_content_hash": "903c24b4ac3660c2e12cb5f168d3146c6e7b91474c043b63876b1aa5a404c0fa",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/edge-proxy-existing.png)"
+      }
+    },
+    {
+      "segment_id": "39f476dc",
+      "source_content": "With the proxy added to the mix, things are still simple; they are just lower latency!",
+      "source_content_hash": "9d266424cb30e0307557081138fe18f7b5329fae2b9c3b491feabaf3e045f6ae",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "加入代理组件后，架构依然保持简洁，但显著降低了延迟："
+      }
+    },
+    {
+      "segment_id": "827eb9a3",
+      "source_content": "![Image](/img/edge-proxy-proxy.png)",
+      "source_content_hash": "9ba3c5a74afc73fc55f4e3ef508745df54a03ca0cab963e90779793e6357bcaf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/edge-proxy-proxy.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/edge-proxy.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.930019+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "5c3a9df22beb968fea9dfac48ea0b083992e020434c696203805fcdd6f28bca1"
+  }
+}

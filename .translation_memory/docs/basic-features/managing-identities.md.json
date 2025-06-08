@@ -1,0 +1,332 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/basic-features/managing-identities.md",
+  "source_file_content_hash": "72a96ce5e6a514b8f3e7a108b145990500da71ff02acd646588e9c6251fd238e",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Managing Identities\ndescription: Manage user traits and properties independently of your application.\n---",
+      "source_content_hash": "2ab6c8fb5b7127bc83df9b05c6ca91bc984d8e64fc7bd46164179ee560bbdcd7",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "bb42506b",
+      "source_content": "Feature flags are great, but they can be a very blunt tool, only allowing you to enable or disable flags across your\nentire user base. In order to target users more precisely, and to be able to perform\n[staged feature roll-outs](/guides-and-examples/staged-feature-rollouts.md) or\n[A/B and multi-variate tests](/advanced-use/ab-testing.md), you need to _Identify your Users_.",
+      "source_content_hash": "06eb9db70d0b379a03814f3443c45df75b419a95a173c1d5b38cb62ee20fe0de",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志虽好，但往往过于简单粗暴，仅能对整个用户群体进行全局启用或禁用。若想实现更精准的用户定向、执行[分阶段功能发布](/guides-and-examples/staged-feature-rollouts.md)或进行[A/B测试与多变量测试](/advanced-use/ab-testing.md)，您需要对用户进行身份标识。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Identities are created within Flagsmith automatically the first time they are identified from your client SDKs.\nGenerally you'd make a call to identify a user with a unique string/id whenever they log into your app/site. The SDK\nwill then send an API message to the Flagsmith API, with the relevant Identity information.",
+      "source_content_hash": "0e477662ff3b5e134993188656e00c4791e2604058a68e11e7904df9aa1e6319",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份标识会在客户端SDK首次识别用户时自动创建。通常当用户登录您的应用/网站时，您会调用一个包含唯一字符串/ID的标识方法。随后SDK将向Flagsmith API发送包含相关身份信息的请求。"
+      }
+    },
+    {
+      "segment_id": "ac44a45c",
+      "source_content": ":::tip\n\nThe SDK part of the Flagsmith API is public by design. The Environment Key is designed to be public and is easy to\nview/find when building a client integration. When identifying users, it is important to use an Identity value that is\nnot easy to guess. For example, if you used an incrementing integer to identify your users, it would be trivial to\nrequest Identities by enumerating this integer. This would effectively give public access to any user traits that are\nassociated with users.\n\nWe strongly recommend using an unguessable, unidentifiable Identity Key, such as a\n[GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier), when identifying your users, to prevent\nunintentionally leaking Identity trait data.\n\n:::",
+      "source_content_hash": "b32bf184be29fbdb67f2715aaf6ccdea9597ead3fc84cdce84484f4fe07e78bc",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nFlagsmith API的SDK部分设计为公开访问。环境密钥本身是公开可查的，这在客户端集成时很容易获取。因此标识用户时，务必使用不易被猜测的身份值。例如，若使用自增整数作为用户标识，攻击者只需枚举该整数即可获取所有用户身份，这将导致与用户关联的所有特征数据意外泄露。\n\n我们强烈建议采用不可预测且无关联性的标识键（如[GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)）来标识用户，以防止身份特征数据意外泄露。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Identity Overrides",
+      "source_content_hash": "39eaa0ea0cf77f9f3381ccf7a5d466a0196724563945ac09381ae1dc8ac0aec7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份覆盖规则"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Once you have uniquely identified a user, you can then override features for that user from your environment defaults.\nFor example, you've pushed a feature into production, but the relevant feature flag is still hiding that feature to all\nof your users. You can now override that flag for your own user, and test that feature. Once you are happy with\neverything, you can roll that feature out to all of your users by enabling the flag itself.",
+      "source_content_hash": "e673cca39dc72efd47dddea23621135643c9390114e68e90a327b36cd7f84c5e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当用户被唯一标识后，您可以针对该用户覆盖环境默认的功能配置。例如：您已将新功能部署至生产环境，但相关功能标志仍对全体用户隐藏。此时您可以为自己账号单独启用该功能进行测试。验证无误后，再通过启用全局标志向所有用户开放该功能。"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Identities are specific and individual for each Environment within your project. For example, joe@yourwebsite.com would\nbe a different identity in your development environment to the one in production, and they can have different features\nenabled for each environment.",
+      "source_content_hash": "004f106b26d475310eec8562b2668cf3a1a4ccc0df526477cbb9dd9578f5c6d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份标识在项目内的每个环境中都是独立存在的。例如joe@yourwebsite.com在开发环境和生产环境中会被视为不同身份，可以为每个环境分别配置不同的功能开关。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Identity Feature Flags",
+      "source_content_hash": "839d62525898014b461351ea0dc70f9ae08ead6a79c3c79bdb023749efc9ada3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份级功能标志"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "By default, Identities receive the default flags for their environment. The main use-case for identities is to be able\nto override flags and configs on a per-identity basis. You can do this by navigating to the Users page, finding the User\nand modifying their Flags.",
+      "source_content_hash": "bfb758e49a47e676d8e3ce6d7647a0d005e42fb435ca6d53cc790dc848bf1284",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "默认情况下，身份标识会继承所属环境的默认标志。其主要用途在于支持按身份覆盖标志配置。您可以通过\"用户管理\"页面定位目标用户，并修改其专属标志配置。"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## Identity Traits",
+      "source_content_hash": "9f8a0be430cd74975eec8574b49ea9d76be86c2e02665a28eef78f70bfef29d6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份特征"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "You can also use Flagsmith to store 'Traits' against identities. Traits are simply key/value pairs that are associated\nwith individual Identities for a particular Environment. Traits have two purposes outlined below, but the main use case\nis to drive [Segments](managing-segments.md).",
+      "source_content_hash": "852327e75e97196d1148a68aec496dee1f3ee0d08f01c45cb2f8194ef658add6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以使用Flagsmith存储身份相关的\"特征\"数据。特征即与特定环境下单个身份关联的键值对，主要有两大用途（详见下文），但核心应用场景是驱动[用户分群](managing-segments.md)。"
+      }
+    },
+    {
+      "segment_id": "a646eac9",
+      "source_content": ":::important\n\nThe maximum size of each individual Trait Value is **_2000 bytes_**. You cannot store more data than that in a single\ntrait, and the API will return a 500 error if you try to do so.\n\n:::",
+      "source_content_hash": "42bc190e190567f6285e583b37e4e8c1d6507e6b74102daf4413cb3f2f5ae0dd",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n每个特征值的最大存储容量为**_2000字节_**。若尝试存储超过此限制的数据，API将返回500错误。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "### Using Traits to drive Segments",
+      "source_content_hash": "dfc9e97e38436e26b1aa00dcad70293ceef6f227c3131183dbdb6f5efa9f3e2d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用特征驱动分群"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "Let's say you are working on a mobile app, and you want to control a feature based on the version of the application\nthat the Identity is using. When you integrate the Flagsmith SDK, you would pass the application version number to the\nFlagsmith platform as a trait key/value pair:",
+      "source_content_hash": "258baac10d29699e16410536b1fac82ef159852c1ca0258debd2e34e892ccaba",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设您正在开发移动应用，需要根据用户使用的应用版本控制功能。集成Flagsmith SDK时，您可以将应用版本号作为特征键值对传递给平台："
+      }
+    },
+    {
+      "segment_id": "7a577a50",
+      "source_content": "```java\nFeatureUser user = new FeatureUser();\nuser.setIdentifier(\"user_512356\");\n\nFlagsAndTraits flagsAndTraits = flagsmithClient.identifyUserWithTraits(FeatureUser user, Arrays.asList(\n    trait(null, \"app_version\", Application.getVersion());\n```",
+      "source_content_hash": "40694dbde8b29abaafc4f24acf36d80292e625c3547d244e34e4ec23f3101a85",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7a577a50"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "Here we are setting the trait key `app_version` with the value of `Application.getVersion()`.You can now create a\n[Segment](managing-segments.md) that is based on the application version and manage features based on the application\nversion.",
+      "source_content_hash": "e0d3fdc66dbaaeea15e4b3e32a9b4633f8a24da68ba1432b97b429485deb7b45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这里我们设置特征键`app_version`的值为`Application.getVersion()`。随后您可创建基于应用版本的[分群](managing-segments.md)，实现按版本号管理功能。"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "Traits are completely freeform. You can store any number of traits, with any relevant information you see fit, in the\nplatform and then use Segments to control features based on these Trait values.",
+      "source_content_hash": "697b5c4dba0bea418f9cf0a80cd90c2c5cb2ade0420a8fe83e2bd329a7d06417",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "特征数据完全自由格式。您可以在平台中存储任意数量的特征及其关联信息，并通过分群机制基于这些特征值控制功能。"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "### Using Traits as a data-store",
+      "source_content_hash": "9ee74e6e60187f7ae4dc40f6f09f55d30c841517f56e136baa88f306d2c4054e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 将特征作为数据存储"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Traits can also be used to store additional data about your users that would be cumbersome to store within your\napplication. Some possible uses for traits could be:",
+      "source_content_hash": "1ced5018b8c33585a5cf7ae8e5d4201029f075e02f9bf6ab3b31b0bf07531fb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "特征还可用于存储那些在应用主数据库中维护成本较高的用户附加数据。典型应用场景包括："
+      }
+    },
+    {
+      "segment_id": "5dbc17cf",
+      "source_content": "- Storing whether the user has accepted a new set of terms and conditions.\n- Storing the last viewed page of the application so that you can resume the users place later, across any device.",
+      "source_content_hash": "371ea47243f6026bb52c7edb5c3cb2115571f56e594db10726d0147c1a89b19b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 存储用户是否已接受新版服务条款\n- 存储应用最后浏览页面，实现跨设备续览功能"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "Generally if they are lower-value pieces of information about your user, it might be simpler/easier to store them in\nFlagsmith rather than in your core application.",
+      "source_content_hash": "07f0915d133ef1aa68dfcb7438681bcc449d4bbfa0e3c98f70d7dd0c42cc0299",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常对于用户非核心的低价值信息，存储在Flagsmith中比存入主应用更为简便"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "Traits are stored natively as either numbers, strings or booleans.",
+      "source_content_hash": "a258d5bbad515b5f6c6f01f1a1d0b53d2feae0a6a0d6448ce80831787bf546a6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "特征值原生支持三种数据类型：数值型、字符串型或布尔型"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "![Image](/img/identity-details.png)",
+      "source_content_hash": "f5ac3210fef1e5737055b0007e25b94850df0943e12ce200b4fb931bd98550d3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/identity-details.png)"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "## Traits powering Segments",
+      "source_content_hash": "9855401cbc55b1e6dcd91fafd955514f7e341fd886d8eae2f9bc878a8458308c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 驱动用户分群的特征"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Traits can be used within your application, but they also be used to power\n[Segments](/basic-features/managing-segments.md).",
+      "source_content_hash": "11d58708bd1ec16b62aef3c084b4bbda86ee8ffd9c9ce866168264fd84cd7b51",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "特征值既可在应用内使用，也可用于驱动[用户分群](/basic-features/managing-segments.md)功能"
+      }
+    },
+    {
+      "segment_id": "c19de48a",
+      "source_content": "## Trait Value Data Types",
+      "source_content_hash": "d9068da8f3afe7a75ea8c24999f0cf806d324e3045e2ecdcd13941e5b7539c67",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 特征值数据类型"
+      }
+    },
+    {
+      "segment_id": "6ca4479f",
+      "source_content": "Trait values can be stored as one of four different data types:",
+      "source_content_hash": "acd1ed123fa5b4091c5ff4af6835f828b03c8e9eab34f1cb568d83a66157fe13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "特征值支持以下四种数据类型存储："
+      }
+    },
+    {
+      "segment_id": "936011bd",
+      "source_content": "- Boolean\n- String (max length 2000 bytes)\n- Int (32 bit signed)\n- Float (typically has a range of around 1E-307 to 1E+308 with a precision of at least 15 digits)",
+      "source_content_hash": "adc575dfb111dd8993ba18287feab5d19338a810251b5f831e03653c19adfe78",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 布尔型\n- 字符串型（最大长度2000字节）\n- 整型（32位有符号）\n- 浮点型（典型取值范围1E-307至1E+308，精度至少15位）"
+      }
+    },
+    {
+      "segment_id": "0e80209e",
+      "source_content": "If you need to store 64 bit integers or very high precision floats we suggest storing them as Strings and then doing the\ntype conversion within the SDK.",
+      "source_content_hash": "e0759801a3d1688e4b16b8f3b2f85d47e51fb8d49c793f207f03a786e9203607",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需存储64位整数或高精度浮点数，建议转为字符串存储，通过SDK进行类型转换"
+      }
+    },
+    {
+      "segment_id": "722e4930",
+      "source_content": "## Bulk Uploading Identities and Traits",
+      "source_content_hash": "c1093a97443c20f37592ebaee519178c73658d0db91abaca57e9a9d8f9693846",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 批量导入用户与特征"
+      }
+    },
+    {
+      "segment_id": "3c19e221",
+      "source_content": "Identities are lazily created within Flagsmith. There might be instances where you want to push Identity and Trait data\ninto the platform outside of a user session. You can achieve this with a `POST` to the `identities` endpoint:",
+      "source_content_hash": "ee915e2dac3ddaa8f9cbb796b4edc2e22bce5756b355af8195f5ab0389487091",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用延迟创建用户机制。若需在非用户会话场景导入数据，可通过`POST`请求调用`identities`接口实现："
+      }
+    },
+    {
+      "segment_id": "342e4d80",
+      "source_content": "```bash\ncurl -X \"POST\" \"https://edge.api.flagsmith.com/api/v1/identities/?identifier=<identity_id>\" \\\n     -H 'X-Environment-Key: <Your Environment Key>' \\\n     -H 'Content-Type: application/json; charset=utf-8' \\\n     -d $'{\n  \"traits\":   \"traits\": [\n    {\n      \"trait_key\": \"this_key\",\n      \"trait_value\": \"this_value\"\n    },\n    {\n      \"trait_key\": \"this_key2\",\n      \"trait_value\": \"this_value2\"\n    }\n  ],\n  \"identifier\": \"<identity_id>\"\n}'\n```",
+      "source_content_hash": "e1e1c8b66c37cd62305960938f69bdc0d88bdb797be7ee7d60578122eca525ed",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_342e4d80"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/basic-features/managing-identities.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.932343+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "72a96ce5e6a514b8f3e7a108b145990500da71ff02acd646588e9c6251fd238e"
+  }
+}

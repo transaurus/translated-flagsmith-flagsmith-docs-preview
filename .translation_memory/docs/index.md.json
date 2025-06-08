@@ -1,0 +1,172 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/index.md",
+  "source_file_content_hash": "2c2424594df4ef3605698cc7424aac96e9e0d1e7123e06d79142bb9aba54fc1f",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nid: intro\nslug: /\ntitle: Welcome to the Flagsmith Docs\nsidebar_position: 1\nsidebar_label: Overview\n---",
+      "source_content_hash": "ea50e3b97b1c7cd726b56bc5085a40dfdb135ed2a7ebfd4418e8568d03fbd084",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "[Flagsmith](https://flagsmith.com/) lets you manage features across web, mobile and server side applications.",
+      "source_content_hash": "c2851b47ec083ff6bd30b5aea0a9e3fc8154f690ef79816a4c3e3c9f08814e3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Flagsmith](https://flagsmith.com/) 让您能够跨网页、移动端及服务端应用程序管理功能特性。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "[Flagsmith is Open Source](https://github.com/Flagsmith). Host yourself or let us take care of the hosting.",
+      "source_content_hash": "6a716eb09c15481de14ef032a94eb9a76228e51a0decc619a1befb5fbb578ba4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Flagsmith 是开源的](https://github.com/Flagsmith)。您可以选择自行托管或让我们提供托管服务。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速入门"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "If you're new to Flagsmith or Feature Flags in general we would recommend:",
+      "source_content_hash": "1816fe2d05ed3096d0653ffba1daf7bfacf63b2de92a1a1702d8c34944b20c19",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您是 Flagsmith 或功能开关的新手，我们建议您："
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "- [Signing up for a free account on our SaaS platform](https://app.flagsmith.com/signup)\n- [Go through our 5 minute Quickstart Guide](quickstart.md)\n- [Set up an SDK for your Project](clients/overview.md)\n- [Dive into the Docs](basic-features/overview.md)",
+      "source_content_hash": "e931a6202c92902b0a3adc213f397a9c332329cdb32408896340f46220192f44",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [注册我们的 SaaS 平台免费账户](https://app.flagsmith.com/signup)\n- [完成5分钟快速入门指南](quickstart.md)\n- [为项目设置 SDK](clients/overview.md)\n- [深入阅读文档](basic-features/overview.md)"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Digging Deeper",
+      "source_content_hash": "c13b6b4bbe3a6b40e67f9390336f9780d56c636d4e37f80a88d00c7b4d76e82d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 深入探索"
+      }
+    },
+    {
+      "segment_id": "8cf6d045",
+      "source_content": "- [View our SaaS Features and how SaaS compares to Self Hosted](version-comparison.md)\n- [Learn about our globally distributed Edge API](advanced-use/edge-api.md)\n- [Use Flagsmith to run A/B and Multivariate Tests](advanced-use/ab-testing.md)\n- [Integrate with 3rd party applications](integrations/overview.md)\n- [Use Change Requests and Scheduled Flags to manage your workflows](advanced-use/change-requests.md)",
+      "source_content_hash": "2cc1486b687b032e8b9bac132765655ce0f991b86f890367466624ca7be6aa38",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [查看我们的 SaaS 功能及与自托管的对比](version-comparison.md)\n- [了解全球分布式边缘 API](advanced-use/edge-api.md)\n- [使用 Flagsmith 进行 A/B 测试和多变量测试](advanced-use/ab-testing.md)\n- [与第三方应用集成](integrations/overview.md)\n- [通过变更请求和定时功能开关管理工作流](advanced-use/change-requests.md)"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Check out our SDKs",
+      "source_content_hash": "cbcae3ad3ed9cf26b5cbc64af24ad3d2c7928ceb88f366981eb60eb68232c6f0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 查看我们的 SDK"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Client Side SDKs",
+      "source_content_hash": "a51bcda4f728409dcef990d139718307f6730cf8005511ef8c4e1e1109fc1077",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 客户端 SDK"
+      }
+    },
+    {
+      "segment_id": "f2c8a42b",
+      "source_content": "- [Javascript](/clients/javascript)\n- [Android/Kotlin](/clients/android)\n- [Flutter](/clients/flutter)\n- [iOS/Swift](/clients/ios)\n- [React & React Native](/clients/react)\n- [Next.js, Svelte and SSR](/clients/next-ssr)",
+      "source_content_hash": "63b6cc83ea185981eb1380fd3efaf043833ac4a2f9fe4c354c332fa0fad33517",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [JavaScript](/clients/javascript)\n- [Android/Kotlin](/clients/android)\n- [Flutter](/clients/flutter)\n- [iOS/Swift](/clients/ios)\n- [React & React Native](/clients/react)\n- [Next.js、Svelte 和 SSR](/clients/next-ssr)"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "### Server Side SDKs",
+      "source_content_hash": "34a30578f9c65d86bceea0915193aaeefebae8c3d0a46d394ecb0a1d1d6ff6fd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 服务端 SDK"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "Check out our [Server Side SDK architecture first!](clients/overview.md)",
+      "source_content_hash": "33ad2de8b911c0443883db97f4094408ae11bd8540b8fb51716e28f4ed5ea35f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请先阅读我们的[服务端 SDK 架构说明](clients/overview.md)"
+      }
+    },
+    {
+      "segment_id": "4c077b92",
+      "source_content": "- [Node.js](/clients/server-side)\n- [Java](/clients/server-side)\n- [.Net](/clients/server-side)\n- [Python](/clients/server-side)\n- [PHP](/clients/server-side)\n- [Ruby](/clients/server-side)\n- [Rust](/clients/server-side)\n- [Go](/clients/server-side)\n- [Elixir](/clients/server-side)",
+      "source_content_hash": "06b0a138c09d80255870b380c401522cb70a095546a3d44e405e704549365272",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Node.js](/clients/server-side)\n- [Java](/clients/server-side)\n- [.Net](/clients/server-side)\n- [Python](/clients/server-side)\n- [PHP](/clients/server-side)\n- [Ruby](/clients/server-side)\n- [Rust](/clients/server-side)\n- [Go](/clients/server-side)\n- [Elixir](/clients/server-side)"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "## Open Source vs SaaS vs Enterprise",
+      "source_content_hash": "250332538191095454c27852e83cdd2aa56f946401c6cc41e91ab9ad3e22278e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开源版 vs SaaS版 vs 企业版"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Learn more about the [different ways you can run Flagsmith](version-comparison.md).",
+      "source_content_hash": "d67effd74d9ac8d938280c0df889bb0b2b8afce3c524d8bc8894eead246fa398",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "了解更多关于[运行 Flagsmith 的不同方式](version-comparison.md)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/index.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.947759+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2c2424594df4ef3605698cc7424aac96e9e0d1e7123e06d79142bb9aba54fc1f"
+  }
+}

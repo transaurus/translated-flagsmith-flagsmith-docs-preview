@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/integrations/terraform.md",
+  "source_file_content_hash": "c8b73fb8747dcc9d16f9ed1517ddaac45b4e6cbeefcc0e4dd03bf3b8b7b25623",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Terraform Provider\nsidebar_label: Terraform\nhide_title: true\n---",
+      "source_content_hash": "107232a1fa2efa7d84013d76fe8887f7c29cf75072d60e881fc42355893cfe56",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "![Terraform](/img/integrations/terraform/terraform-logo.svg)",
+      "source_content_hash": "6cada93c5d181baa0422f6971dfbee4e7945f3255616a0e2f529c1d4586a07a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Terraform](/img/integrations/terraform/terraform-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "You can integrate Flagsmith with Terraform. Use our\n[Terraform provider](https://registry.terraform.io/providers/Flagsmith/flagsmith) to drive flag management as part of\nyour Infrastructure as Code tooling.",
+      "source_content_hash": "f141c736e091615067f347eb15423520996c69e1eaab9be803d2db773a0e1fee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与Terraform集成。使用我们的\n[Terraform provider](https://registry.terraform.io/providers/Flagsmith/flagsmith) 将功能标志管理纳入您的基础设施即代码工具链中。"
+      }
+    },
+    {
+      "segment_id": "2e76584d",
+      "source_content": ":::tip\n\nYou can find the latest Hashicorp docs for using the Flagsmith provider\n[here](https://registry.terraform.io/providers/Flagsmith/flagsmith/latest/docs).\n\n:::",
+      "source_content_hash": "18beb2084c5f323edd9d4f084ad8879316c00e495c2ec8a7922fff490db62cb8",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n您可以在Hashicorp官方文档中查阅Flagsmith提供商的最新使用指南\n[此处](https://registry.terraform.io/providers/Flagsmith/flagsmith/latest/docs)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "80e6256a",
+      "source_content": ":::tip\n\nSome API actions require object UUIDs/IDs to be referenced. You can enable the [JSON View](../clients/rest.md#json-view)\nfrom your account settings page which will help you access these variables.\n\n:::",
+      "source_content_hash": "626894a496bde1c6bab3bee51ad3a7dac0b88bcd128742650e51578d1a16f088",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n部分API操作需要引用对象的UUID/ID。您可以通过账户设置页面启用[JSON视图](../clients/rest.md#json-view)功能，这将帮助您获取这些变量。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Prerequisite",
+      "source_content_hash": "438acfea1c1f29c45c37b919f392bfc3b3a0c4062f913ecb9cf0aceaf68816ff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 前提条件"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "### [Terraform API Key](../advanced-use/system-administration.md#terraform-api-keys-for-organisations):",
+      "source_content_hash": "e96296c3bc503d7a5eb8f8db62da3ef34e877ad51bf38525d175978524c7458d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### [Terraform API密钥](../advanced-use/system-administration.md#terraform-api-keys-for-organisations):"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "In order to configure the Flagsmith Terraform provider we are going to need an API key. To generate that head over to\nthe Organisation Settings page, and click on `Create Terraform API Key`.",
+      "source_content_hash": "0673e3e582e928a1233082337096c22e0c56a2ea031c2aa90bdc163a40d613f9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置Flagsmith Terraform提供商需要API密钥。请前往组织设置页面，点击`创建Terraform API密钥`生成密钥。"
+      }
+    },
+    {
+      "segment_id": "b56ef571",
+      "source_content": ":::info\n\nOrganisation Administrator permission is required to generate Terraform API Key.\n\n:::",
+      "source_content_hash": "00b1f8723f6023bfe679f7bd6cb163274c43b0c4a53485747abbda6b1ae2e86a",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n生成Terraform API密钥需要具备组织管理员权限。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Using the Flagsmith Terraform Provider",
+      "source_content_hash": "3e7b140ae3ffbfa51019a43e5dd95ce19a7314242a28f1796bddb676b215deea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用Flagsmith Terraform提供商"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "Once you have the Terraform Provider key you can go ahead and create a Terraform config file, which will look something\nlike this:",
+      "source_content_hash": "118255b8091b297ef5c6d174a66306d94b113fb887ac4dbf95081daf8dc1fef6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取Terraform提供商密钥后，您可以创建如下所示的Terraform配置文件："
+      }
+    },
+    {
+      "segment_id": "6648a219",
+      "source_content": "```hcl\nterraform {\n  required_providers {\n    flagsmith = {\n      source = \"Flagsmith/flagsmith\"\n      version = \"0.3.0\" # or whatever the latest version is\n    }\n  }\n}\n\nprovider \"flagsmith\" {\n  # or omit this for master_api_key to be read from environment variable\n  master_api_key = \"<Your Terraform API Key>\"\n}\n\n# the feature that you want to manage\nresource \"flagsmith_feature\" \"new_standard_feature\" {\n  feature_name = \"new_standard_feature\"\n  project_uuid = \"10421b1f-5f29-4da9-abe2-30f88c07c9e8\"\n  description  = \"This is a new standard feature\"\n  type         = \"STANDARD\"\n}\n\n```",
+      "source_content_hash": "12565762ea0899e5f6a02df1ff4b54ebf13cc679747df24b7390f069e8d1c5e0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6648a219"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Now, to create the feature all you have to do is run `terraform apply`.",
+      "source_content_hash": "36ae54844ed8cf3ed0546e44c9bc3c885de559e968d9f605d535c0e334987d09",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在只需运行`terraform apply`命令即可创建功能。"
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```bash\nTerraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:\n  + create\n\nTerraform will perform the following actions:\n\n  # flagsmith_feature.new_standard_feature will be created\n  + resource \"flagsmith_feature\" \"new_standard_feature\" {\n      + default_enabled = (known after apply)\n      + description     = \"This is a new standard feature\"\n      + feature_name    = \"new_standard_feature\"\n      + id              = (known after apply)\n      + initial_value   = (known after apply)\n      + is_archived     = (known after apply)\n      + project_id      = (known after apply)\n      + project_uuid    = \"10421b1f-5f29-4da9-abe2-30f88c07c9e8\"\n      + type            = \"STANDARD\"\n      + uuid            = (known after apply)\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\n\nDo you want to perform these actions?\n  Terraform will perform the actions described above.\n  Only 'yes' will be accepted to approve.\n\n  Enter a value: yes\n\nflagsmith_feature.new_standard_feature: Creating...\nflagsmith_feature.new_standard_feature: Creation complete after 2s\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n```",
+      "source_content_hash": "ca55a7d7db44c22b89b0a60c1336a96b171bc10c827538e6cf9a910351556411",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "Next, let's say you want to update the description of the feature:",
+      "source_content_hash": "a668d409962981a187ba20287f1611dbf967facd365f0bb482b024ba909360e6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设您需要更新功能描述："
+      }
+    },
+    {
+      "segment_id": "c4c0fc07",
+      "source_content": "```hcl\n# the feature that you want to manage\nresource \"flagsmith_feature\" \"new_standard_feature\" {\n  feature_name = \"new_standard_feature\"\n  project_uuid = \"10421b1f-5f29-4da9-abe2-30f88c07c9e8\"\n  description  = \"New description\"\n  type         = \"STANDARD\"\n}\n```",
+      "source_content_hash": "3de917746449c8cdd21d6352875c223ae83f137dafd132871e8c6169d1733ed5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c4c0fc07"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "Now, to apply the changes just run `terraform apply`:",
+      "source_content_hash": "6bfb1fcd983942f2ac61566652a71b7370ef9111a29d62baaae12fd229672627",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行`terraform apply`命令应用变更："
+      }
+    },
+    {
+      "segment_id": "353ca453",
+      "source_content": "```bash\nTerraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:\n  ~ update in-place\n\nTerraform will perform the following actions:\n\n  # flagsmith_feature.new_standard_feature will be updated in-place\n  ~ resource \"flagsmith_feature\" \"new_standard_feature\" {\n      ~ description     = \"This is a new standard feature\" -> \"New description\"\n        id              = 574\n        # (7 unchanged attributes hidden)\n    }\n\nPlan: 0 to add, 1 to change, 0 to destroy.\n\nDo you want to perform these actions?\n  Terraform will perform the actions described above.\n  Only 'yes' will be accepted to approve.\n\n  Enter a value: yes\n\nflagsmith_feature.new_standard_feature: Modifying...\nflagsmith_feature.new_standard_feature: Modifications complete after 1s\n\nApply complete! Resources: 0 added, 1 changed, 0 destroyed.\n```",
+      "source_content_hash": "1014bad5ca449755642d20cefee346dcff36b666eb99c0c9c6e69b1f533c552f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_353ca453"
+      }
+    },
+    {
+      "segment_id": "681ef526",
+      "source_content": "To bring an existing Flagsmith feature into Terraform (and start tracking it's state) you can go ahead and\n[import](https://registry.terraform.io/providers/Flagsmith/flagsmith/latest/docs/resources/feature#import) it.",
+      "source_content_hash": "118d69a0af45120c64ec1be30dc661065563b5115c1691a30e259246a5120718",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要将现有的Flagsmith功能导入Terraform（并开始跟踪其状态），您可以[导入](https://registry.terraform.io/providers/Flagsmith/flagsmith/latest/docs/resources/feature#import)该资源。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/integrations/terraform.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.940783+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c8b73fb8747dcc9d16f9ed1517ddaac45b4e6cbeefcc0e4dd03bf3b8b7b25623"
+  }
+}

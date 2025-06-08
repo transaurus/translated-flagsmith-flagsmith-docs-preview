@@ -1,0 +1,402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/basic-features/managing-segments.md",
+  "source_file_content_hash": "bdb74b0dec54197bdda7dc3062a8289f05f7a0191b1ac5bff91e8ca5301097ac",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Group your users based on a set of rules, then control Feature Flags and Remote Config for those groups.\n---",
+      "source_content_hash": "b498c34b28517de2b41a8f694acd3d44a731901566a000f74ce1dab8bca216b6",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "# Managing Segments",
+      "source_content_hash": "7e572c267c95f07cf612c66e80820978b5285ad9459fa34bc483d6f8962c08db",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 管理用户分群"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Segments allow you to group your users based on a set of rules, and then control Feature Flags and Remote Config for\nthose groups. You can create a Segment and then override a Feature Flag state or Remote Config value for that segment of\nusers.",
+      "source_content_hash": "11a4d7acb9bf52dde2487de83f90a07d0c2e423cda7da505a45cedb8c75b5dc7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "用户分群功能允许您基于一组规则对用户进行分组，进而针对这些分组控制功能开关和远程配置。您可以创建分群规则，然后为该分群用户覆盖功能开关状态或远程配置值。"
+      }
+    },
+    {
+      "segment_id": "bb849aa9",
+      "source_content": ":::important\n\nSegment definitions are shared amongst your Project's Environments. If you modify a Segment in one Environment, that\nchange will reflect in all the Environments for that Project.\n\n:::",
+      "source_content_hash": "637f4cad7041524b6ccfbcc173e4da525b43fdac78e0b7d4c39d725a47b8794a",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n分群定义在项目环境间共享。若在某环境中修改分群规则，该变更将同步至该项目所有环境。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "Segments for Flags and Config are overridden at the Environment level, meaning that different Environments can define\ntheir own Segment overrides.",
+      "source_content_hash": "575025e40957be0f6a768556453c02bd79d22fa4af5d91a3002f33ec52b90366",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能开关和配置的分群覆盖在环境级别生效，这意味着不同环境可以定义各自的分群覆盖规则。"
+      }
+    },
+    {
+      "segment_id": "cac45343",
+      "source_content": ":::tip\n\nSegments are _not_ sent back to client SDKs. They are used to override flag values within the dashboard, but they are\nnever sent back to our SDKs from the API.\n[Learn more about our architecture](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side).\n\n:::",
+      "source_content_hash": "c3bece3f45035a20fda3fd64210ab2aa65c5d34b6b786fbce920c04b5735bae9",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n分群数据_不会_回传至客户端SDK。它们仅用于在仪表盘中覆盖开关值，API永远不会将分群信息返回给SDK。\n[了解架构详情](/guides-and-examples/integration-approaches#flags-are-evaluated-server-side)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "f2f30ae8",
+      "source_content": "## Example - Beta Users",
+      "source_content_hash": "026ef63ebabf43b79598e48080f65d6526cd023f72d8144a321ae5cbe1c99eb6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 示例 - 测试版用户"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Let's say that you want all your team to automatically be defined as `Beta Users`. Right now, all your logged in users\nare [identified](/basic-features/managing-identities.md) with their email address along with some other\n[traits](/basic-features/managing-identities.md#identity-traits).",
+      "source_content_hash": "083bbf3a47f0803ffd7a77f61432f963198b577195e4d99ce334829b3d73f291",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设您希望将所有团队成员自动归为`测试版用户`。当前所有登录用户都通过[身份标识](/basic-features/managing-identities.md)功能，使用电子邮件地址及某些[特征值](/basic-features/managing-identities.md#identity-traits)进行识别。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "You create a new Segment, call it `Beta Users`, and define a single rule:",
+      "source_content_hash": "ba1b55263e2f92a049687a12c2d81e3fd2ededff61a83aa53911f26d263b62a0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以新建名为`测试版用户`的分群，并定义如下规则："
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "- `email_address` contains `@flagsmith.com`",
+      "source_content_hash": "c2d7bf57b4b7eb915eadf8faa3562456ad40f1e3ab2867a8431617c020e24b00",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `email_address` 包含 `@flagsmith.com`"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "![Image](/img/edit-segment.png)",
+      "source_content_hash": "19853b564802a7a94b049ad8e48af1d683875d3bf33ef3404e309fc6ec84ea59",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/edit-segment.png)"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Once the Segment has been defined, you can then associate that Segment with a specific Feature Flag. To do this, edit\nthe Feature Flag that you want to connect our Segment to. You then have the option of connecting a Segment to the\nFeature. If the Identified user is a member of that Segment, the flag will be overridden.",
+      "source_content_hash": "00c7dc5908989b0898336bc8adc1e6d1c5dcd68cab13c317d30b3c8d6219ffb0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "定义分群后，可将其关联至特定功能开关。编辑目标功能开关时，在\"分群覆盖\"下拉菜单中选择该分群。当识别用户属于该分群时，开关值将被覆盖。"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "![Image](/img/edit-feature-with-segment.png)",
+      "source_content_hash": "05099a66b647eb8a4ca6e4bad58fd4c94143883a96357d9f596af1bdeb17154c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/edit-feature-with-segment.png)"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "For all the Feature Flags that relate to Beta features, you can associate this `Beta Users` segment with each Flag, and\nset the Flag value to `true` for that Segment. To do this, edit the Feature Flag and select the segment in the 'Segment\nOverrides' drop down.",
+      "source_content_hash": "13196ea8cae7c557737f4f87a69741f44c9bfbf47da4a9784fc0fd727b41177a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "对于所有测试版相关功能开关，您可将`测试版用户`分群与每个开关关联，并为该分群设置开关值为`true`。通过编辑功能开关，在\"分群覆盖\"下拉菜单中选定分群即可实现。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "At this point, all users who log in with an email address that contains `@flagsmith.com` will have all Beta features\nenabled.",
+      "source_content_hash": "99097f37c7d943da446df104ca9816821634b05bb9b5cb141ebf06e2cd99b91b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，所有使用含`@flagsmith.com`邮箱登录的用户都将启用全部测试功能。"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "Let's say that you then partner with another company who need access to all Beta features. You can then simply modify\nthe Segment rules:",
+      "source_content_hash": "a65848d314951ee4acb62df8102b69f73cd38a5452fb2477db41d2d075aa63cf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设您需要与另一家公司合作，为其开放测试功能访问权限。只需修改分群规则："
+      }
+    },
+    {
+      "segment_id": "36ab8340",
+      "source_content": "- `email_address` contains `@flagsmith.com`\n- `email_address` contains `@solidstategroup.com`",
+      "source_content_hash": "6aa4c100f8739d782b8a49d0f8b5717b596402dc2e912a9223b6342c99777fa9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `email_address` 包含 `@flagsmith.com`\n- `email_address` 包含 `@solidstategroup.com`"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "Now all users who log in with a `@solidstategroup.com` email address are automatically included in beta features.",
+      "source_content_hash": "9ffc24d2e23d9134b5493d667a27fcbb82fde8ac529d1c7bfbf55c2af36f71cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在所有使用`@solidstategroup.com`邮箱登录的用户将自动获得测试功能权限。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Rules Operators",
+      "source_content_hash": "3ca77cae9955046b0bd270b3e044009fef5f75fbc3515c76e7987bc2cf2f2196",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 规则运算符"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "The full set of Flagsmith rule operators are as follows:",
+      "source_content_hash": "de8c5606c89fdfdf14cfbdd230ef15bab014bd0968be77ce77f3e3748e6829a2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith支持的完整运算符集合如下："
+      }
+    },
+    {
+      "segment_id": "2eb5ba30",
+      "source_content": "- `Exactly Matches (=)`\n- `Does Not Match (!=)`\n- `% Split`\n- `>`\n- `>=`\n- `<`\n- `<=`\n- `Contains`\n- `Does Not Contain`\n- `Matches Regex`",
+      "source_content_hash": "351dfc4abae6cbef0c7e17bbabdd2b079ccaa9893be6a56af4e8b70d94272438",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `完全匹配 (=)`\n- `不匹配 (!=)`\n- `百分比分割 (%)`\n- `大于 (>)`\n- `大于等于 (>=)`\n- `小于 (<)`\n- `小于等于 (<=)`\n- `包含`\n- `不包含`\n- `正则匹配`"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "All of the operators act as you would expect. Some of the operators also have special powers!",
+      "source_content_hash": "78903614f0b93abeaab0d47d51ad0f09a95dba52ccdaca012e77e102bf4a1619",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有运算符行为均符合常规预期，部分运算符还具备特殊能力！"
+      }
+    },
+    {
+      "segment_id": "58ed925f",
+      "source_content": "### SemVer-aware operators",
+      "source_content_hash": "7c95bc5c40fcec34029eb1708e6c356653e05504f67be7cad7d57cdc1fc9c773",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 语义化版本感知运算符"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "The following [SemVer](https://semver.org/) operators are also available:",
+      "source_content_hash": "a311e2e56ade69b276f0fbde466e7455f399129b50902f54902bc004075af233",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时支持以下[语义化版本](https://semver.org/)运算符："
+      }
+    },
+    {
+      "segment_id": "536b7b6b",
+      "source_content": "- `SemVer >`\n- `SemVer >=`\n- `SemVer <`\n- `SemVer <=`",
+      "source_content_hash": "775a318de905599e88f366052dea990feb20530d12749d03cc73599181a8fcbf",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `语义版本 >`\n- `语义版本 >=`\n- `语义版本 <`\n- `语义版本 <=`"
+      }
+    },
+    {
+      "segment_id": "2547a6bb",
+      "source_content": "For example, if you are using the SemVer system to version your application, you can store the version as a `Trait` in\nFlagsmith and then create a rule that looks like, for example:",
+      "source_content_hash": "325202897ad597ff04c448ec852bc0f788a15df48bcff330e13777919afa4e3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如，若您采用语义化版本控制系统管理应用版本，可将版本号作为`特征值`存储在Flagsmith中，然后创建如下规则："
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "`version` `SemVer >=` `4.2.52`",
+      "source_content_hash": "d89507a739bb2dc9799294f3b95b2f7eb6855784f724ed2194eba143d7095106",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`version` `语义版本 >=` `4.2.52`"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "This Segment rule will include all users running version `4.2.52` or greater of your application.",
+      "source_content_hash": "ae41c7a2af628393ebf09f5531adaf6480cd86713d0f725021bf09c36f5e1362",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该分群规则将包含所有运行4.2.52及以上版本应用的用户。"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "### Percentage Split Operator",
+      "source_content_hash": "021b607cbc2a70a387f5a8c245c55b25fabaa932c97ad308794dc389eaff7cea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 百分比分割运算符"
+      }
+    },
+    {
+      "segment_id": "29662466",
+      "source_content": ":::important\n\nThe percentage split operator **_only_** comes into effect if you are getting the Flags for a particular Identity. If\nyou are just retrieving the flags for an Environment without passing in an Identity, your user will **_never_** be\nincluded in the percentage split segment.\n\n:::",
+      "source_content_hash": "7565ab87b53e3797ac7ddc0ad2aa2fab73eb0b2d6b93c1b63449c3bfe59935e3",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n百分比分割运算符 **_仅_** 在针对特定身份获取功能标志时生效。如果仅针对环境检索标志而未传入身份标识，您的用户将 **_永远不会_** 被包含在百分比分割的区段中。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "2838eb68",
+      "source_content": "This is the only operator that does not require a Trait. You can use the percentage split operator to drive\n[A/B tests](/advanced-use/ab-testing) and\n[staged feature rollouts](/guides-and-examples/staged-feature-rollouts#creating-staged-rollouts).",
+      "source_content_hash": "6583ed7caa168630681d42168c96ce50f6ed85d80e4cf5004cca1240619fcf79",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这是唯一不需要特征的运算符。您可以使用百分比分割运算符来驱动\n[A/B测试](/advanced-use/ab-testing) 和\n[分阶段功能发布](/guides-and-examples/staged-feature-rollouts#creating-staged-rollouts)。"
+      }
+    },
+    {
+      "segment_id": "f947c8e4",
+      "source_content": "## Feature Flag and Remote Config Precedence",
+      "source_content_hash": "23af428b946b2ebef2678404ab11d77e400c39ed4ab527efeb1f09240e5f0cb8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能标志与远程配置的优先级"
+      }
+    },
+    {
+      "segment_id": "7bc8bb24",
+      "source_content": "Feature Flag states and Remote Config values can be defined in 3 different places:",
+      "source_content_hash": "e1c975647aed7f63929f786af706983b44f7598ce8c3c1c746ee0635e4cc5f0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志状态和远程配置值可在三个不同位置定义："
+      }
+    },
+    {
+      "segment_id": "b0465fca",
+      "source_content": "1. The default Flag/Config value itself\n2. The Segment associated with the Flag/Config\n3. Overridden at an Identity level",
+      "source_content_hash": "48fa6ba5e6f7a00b44ab84ea2fc8b755a3fca235d693753860af5cf674446856",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 标志/配置本身的默认值\n2. 与标志/配置关联的区段\n3. 在身份级别覆盖的值"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "For example, a Feature Flag `Show Paypal Checkout` could be set to `false` on the Flag itself, `true` in the Beta Users\nsegment, and then overridden as `false` for a specific Identity.",
+      "source_content_hash": "34e1ddc8be3741a571ebb9f4cd5a85f793092b270e9dc3d1cb1536b0fa7a6ea4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如，功能标志`显示PayPal结账`可能在标志本身设为`false`，在\"Beta用户\"区段设为`true`，然后针对特定身份覆盖为`false`。"
+      }
+    },
+    {
+      "segment_id": "396efb28",
+      "source_content": "In order to deal with this situation, there is an order of priority:",
+      "source_content_hash": "cd1324aadd99f1e8b371918873bda324c634dec386e28fbaf1151e3a08ed6bdb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为处理这种情况，存在以下优先级顺序："
+      }
+    },
+    {
+      "segment_id": "10e4f9ca",
+      "source_content": "1. If the Identity has an override value, this is returned ahead of Segments and Flags/Config\n2. If there's no Identity override, the Segment is checked and returned if valid\n3. If no Identity or Segment overrides the value, the default Flag/Config value is used",
+      "source_content_hash": "3931055c50e2f6cf48f06215e2a79c4cd3f0c408c5a7ee1e7a5c51be050bda74",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 若身份存在覆盖值，则优先返回该值（高于区段和标志/配置）\n2. 若无身份覆盖，则检查并返回有效的区段值\n3. 若既无身份也无区段覆盖，则使用默认的标志/配置值"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "More simply, the order of precedence is:",
+      "source_content_hash": "b113d5c51bb1d60d8e700a88e4e72d21fd64275351bc7eb3cc9a23a6bfb1702e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "简而言之，优先级顺序为："
+      }
+    },
+    {
+      "segment_id": "683a33d9",
+      "source_content": "1. Identity\n2. Segment\n3. Flag",
+      "source_content_hash": "d850439835ed15030adc75f064d4ed042b6153ee5177e68a70a9d2f06a1b8424",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 身份\n2. 区段\n3. 标志"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/basic-features/managing-segments.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.933815+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "bdb74b0dec54197bdda7dc3062a8289f05f7a0191b1ac5bff91e8ca5301097ac"
+  }
+}

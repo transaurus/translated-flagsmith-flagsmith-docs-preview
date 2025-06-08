@@ -1,0 +1,142 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/sizing-and-scaling.md",
+  "source_file_content_hash": "14d6317eb8816d4a0a4dbdf275c4747519bdb80f9dd465e5913a3d348a6ba326",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Sizing and Scaling\ndescription: Sizing and Scaling Flagsmith\nsidebar_position: 80\n---",
+      "source_content_hash": "4e0507823011938ce93f91da3ccbdfeac5c414f8b04d4331050d1931e561577d",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Flagsmith has a very simple architecture, making it well understood when it comes to serving high loads.",
+      "source_content_hash": "5464aa7891af7723a679e43339ffb8c72275af2de098090cae9811967519c804",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用极简架构设计，在高负载场景下仍能保持清晰可控的服务能力。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Frontend Dashboard",
+      "source_content_hash": "ecacaeb7a9182e2c839d9252f6896d9b4fcc69af0b4e3fa5d8c4a41397a64082",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 前端仪表盘"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Generally this component is not put under any sort of significant load. It can be load balanced if required. It does not\nrequire sticky-sessions.",
+      "source_content_hash": "c86e577067dafd018fb83646e2338d844988950ab53f46bc3ad472643ed52be7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该组件通常不会承受高负载压力。如需扩展可通过负载均衡实现，且无需会话保持功能。"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## API",
+      "source_content_hash": "40caf66c4de56e46b72485c47adff4916c4bc7e563ecd9f7278e9dcaf92d1cad",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API服务"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "The API is completely stateless. This means it can scale out behind a load balancer almost perfectly. As an example,\nwhen running on AWS ECS/Fargate we run with:",
+      "source_content_hash": "1bbae9b8061076ef6cb79c41f40854ca62f7599335cdbd420e3303f5152c663c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "API服务采用完全无状态设计，可完美配合负载均衡横向扩展。例如在AWS ECS/Fargate环境运行时我们采用以下配置："
+      }
+    },
+    {
+      "segment_id": "0787cf7f",
+      "source_content": "- `cpu=1024`\n- `memory=2048`",
+      "source_content_hash": "bb82f9a85f20e6e4beefdf87079b49746416b2fd8827927e55b0c781cb3e188c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `cpu=1024`\n- `memory=2048`"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "In terms of auto scaling, we recommend basing the autoscaling off the `ECSServiceAverageCPUUtilization` metric, with a\n`target_value` of `50` and a 30 second cool-down timeout.",
+      "source_content_hash": "22c1341baedad917e555290e0f5704b0290f67e4c8626aa726f714c0bf7f8e0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "关于自动扩展策略，建议基于`ECSServiceAverageCPUUtilization`监控指标，设置`target_value`为`50`并配置30秒冷却时长。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Database",
+      "source_content_hash": "bcc6e0661e13f97f0e6635b9ee74f51ccdb3d63e8754adc9d95aa64f8a0b94a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据库"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Our recommendation is to first scale the database up with a more powerful single server.",
+      "source_content_hash": "1f479d3d27609e900db9c92dc0324cab8385bd6e99ba5b6d9b479a9237c90166",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们建议首先通过升级单机配置进行垂直扩展。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "Once the database connections have been saturated by the API cluster, adding read replicas to the database solves the\nnext bottleneck of database connections.",
+      "source_content_hash": "4c13c5e623b462aaabe0ce854a62e4f908d8c10e4986d5378e3555a18dbd7e72",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当API集群占满数据库连接数后，可通过添加只读副本来解决数据库连接瓶颈问题。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "We would also recommend testing [pgBouncer](https://www.pgbouncer.org/) in your environment as it generally optimises\ndatabase connections and reduces the load on the database.",
+      "source_content_hash": "6a9d8a93b44e65809791a66d29c818307f945091d7aa4e796cf9110b69a03542",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时推荐在环境中测试使用[pgBouncer](https://www.pgbouncer.org/)，该工具能有效优化数据库连接管理并降低数据库负载。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/sizing-and-scaling.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.932554+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "14d6317eb8816d4a0a4dbdf275c4747519bdb80f9dd465e5913a3d348a6ba326"
+  }
+}

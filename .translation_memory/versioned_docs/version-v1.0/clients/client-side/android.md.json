@@ -1,0 +1,42 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/client-side/android.md",
+  "source_file_content_hash": "ecfa43056e52f32ebe5862f1c0028890092a1cf3097990be847abf12043d0fe2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Android/Kotlin SDK\nsidebar_label: Android\ndescription: Manage your Feature Flags and Remote Config in your Android applications.\nslug: /clients/android\n---",
+      "source_content_hash": "24142a1ed9db500a29ad0ffc8b62eb794501d8484289dc93b25b2e242df13ecd",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "You can use the [Java Client](/v1.0/clients/java/) to run Flagsmith within native Android applications.",
+      "source_content_hash": "1013789e6a99126808af92c0491be539e1bcd1e3c2c6cbde23a779511c1af41c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用[Java客户端](/v1.0/clients/java/)在原生Android应用中运行Flagsmith。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "We are working on a [Kotlin Client](https://github.com/Flagsmith/flagsmith-kotlin-client)!",
+      "source_content_hash": "d896b262eacf80564029ecd6312ce18eb1153f0f75c8e0a9c554e9273a9899ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们正在开发[Kotlin客户端](https://github.com/Flagsmith/flagsmith-kotlin-client)！"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/client-side/android.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.925677+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ecfa43056e52f32ebe5862f1c0028890092a1cf3097990be847abf12043d0fe2"
+  }
+}

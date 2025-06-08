@@ -1,0 +1,252 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/hosting/docker.md",
+  "source_file_content_hash": "7b8f1b5bb4a7d8f1d4e87c3d5613f76802884cbac55e617f9068aac81e411f9d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Getting Started with Flagsmith on Docker\nsidebar_position: 40\n---",
+      "source_content_hash": "55ef3e9e6ecf6cd3ea30a9db59896d0eafa679458d347a623391ca42d73a293a",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Docker",
+      "source_content_hash": "b777f53739c6a7bc0c554cc5eb2fcf159e9c60892c822bfe097dbcced92462c5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Docker 部署"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "You can use docker to set up an entire [Flagsmith Feature Flag](https://www.flagsmith.com) environment locally. Just\nclone the [docker repository](https://github.com/Flagsmith/self-hosted) and run docker-compose:",
+      "source_content_hash": "0f82e43c1f226f9eb26f40276f1738e3e561e1da20ae25f4aa047ea0a0e90030",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用 Docker 在本地搭建完整的 [Flagsmith 功能标志](https://www.flagsmith.com) 环境。只需克隆 [docker 代码库](https://github.com/Flagsmith/self-hosted) 并运行 docker-compose："
+      }
+    },
+    {
+      "segment_id": "43a8bc7e",
+      "source_content": "```bash\ngit clone https://github.com/Flagsmith/self-hosted.git\ncd self-hosted\ndocker-compose up\n```",
+      "source_content_hash": "0da26a6925beba29c7b22867b15119cb75f30edad806d7440dbe459e19d3da8e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_43a8bc7e"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Wait for the images to download and run, then visit `http://localhost:8000/`. As a first step, you will need to create a\nnew account at [http://localhost:8000/signup](http://localhost:8000/signup)",
+      "source_content_hash": "ad374c5406c63d2ea7a29308d43a019d91c81c6098afe27f76b714b885fa392e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "等待镜像下载并运行后，访问 `http://localhost:8000/`。首先您需要在 [http://localhost:8000/signup](http://localhost:8000/signup) 创建新账户"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## Environment Variables",
+      "source_content_hash": "66baf6a5eea36889cda747ee8bd898452b11c5f0336a0df2ed10f9e3b9d43415",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境变量"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "As well as the Environment Variables specified in the [API](/deployment/hosting/locally-api#environment-variables) and\n[Front End](/deployment/hosting/locally-frontend#environment-variables) you can also specify the following:",
+      "source_content_hash": "16e6b1bf77e0d993d78b21abb9232002f9d3f43853e27805064fc3a034821e86",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除了 [API](/deployment/hosting/locally-api#environment-variables) 和 [前端](/deployment/hosting/locally-frontend#environment-variables) 中指定的环境变量外，您还可以配置以下参数："
+      }
+    },
+    {
+      "segment_id": "44d89370",
+      "source_content": "- `GUNICORN_WORKERS`: The number of [Gunicorn Workers](https://docs.gunicorn.org/en/stable/settings.html#workers) that\n  are created\n- `GUNICORN_THREADS`: The number of\n  [Gunicorn Threads per Worker](https://docs.gunicorn.org/en/stable/settings.html#threads)\n- `GUNICORN_TIMEOUT`: The number of seconds before the\n  [Gunicorn times out](https://docs.gunicorn.org/en/stable/settings.html#timeout)\n- `ACCESS_LOG_LOCATION`: The location to write access logs to",
+      "source_content_hash": "5a3d586415f1c655e59f0fcb6c24fed20b6e3b3752fcbff6e4609264311dcf6c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `GUNICORN_WORKERS`: 创建的 [Gunicorn 工作进程](https://docs.gunicorn.org/en/stable/settings.html#workers) 数量\n- `GUNICORN_THREADS`: 每个工作进程的 [Gunicorn 线程数](https://docs.gunicorn.org/en/stable/settings.html#threads)\n- `GUNICORN_TIMEOUT`: [Gunicorn 超时](https://docs.gunicorn.org/en/stable/settings.html#timeout) 秒数\n- `ACCESS_LOG_LOCATION`: 访问日志写入路径"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Platform Architectures",
+      "source_content_hash": "97e718fa7685b05fb598ea78aa47acecd5bf4392f8a88d0eab93bdfdc75e01f6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 平台架构支持"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Our Docker images are built against the following CPU architectures:",
+      "source_content_hash": "cb96e0447fd4b5ea295ef8fee99ab1500309ea85b402ef1fe16365713a4d53b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们的 Docker 镜像支持以下 CPU 架构："
+      }
+    },
+    {
+      "segment_id": "5d66c9dc",
+      "source_content": "- `amd64`\n- `linux/arm64`\n- `linux/arm/v7`",
+      "source_content_hash": "d8a4ee4f88959f97b213df86d9e1b874734c278aed61a6e8b59572c542c522ef",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `amd64`\n- `linux/arm64`\n- `linux/arm/v7`"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## Architecture",
+      "source_content_hash": "a7e56472b11bd3c838bc8199601f5a5527112a003c69fbf95b012bc13573a193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 架构说明"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "The docker-compose file runs the following containers:",
+      "source_content_hash": "29c85537d37c9d40e4ba7617d7890ac4063d9fe8dfba295bd91c67c7c8b62ee6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "docker-compose 文件会运行以下容器："
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "### Front End Dashboard and REST API combined - Port 8000",
+      "source_content_hash": "b29faadc6c70f9675c39d139f54cf0a771384ee0c59f061780434605f70a590e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 前端仪表盘与 REST API 整合服务 - 端口 8000"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "The Web user interface allows you to create accounts and manage your flags. The front end is written in node.js and\nReact.",
+      "source_content_hash": "d39d4d5d6056c1662a93a9b06987fa358f73782f7227bc0f14c1453567426bb0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "网页用户界面采用 node.js 和 React 开发，用于创建账户和管理功能标志。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "The web user interface communicates via REST to the API that powers the application. The SDK clients also connect to\nthis API. The API is written in Django and the Django REST Framework.",
+      "source_content_hash": "4bc6daf68abf907c106daab2f3ac9f83bad11eeb944c0a74a7c3508258da4347",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "网页界面通过 REST 与驱动应用的 API 通信，SDK 客户端也连接至此 API。该 API 使用 Django 和 Django REST 框架开发。"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Once you have created an account and some flags, you can then start using the API with one of the\n[Flagsmith Client SDKs](https://github.com/Flagsmith?q=client&type=&language=). You will need to override the API\nendpoint for each SDK to point to [http://localhost:8000/api/v1/](http://localhost:8000/api/v1/).",
+      "source_content_hash": "d29c917877022928901ac9458e85514c48522a9989363a137e1a28457d017ea1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建账户和功能标志后，您可以使用任一 [Flagsmith 客户端 SDK](https://github.com/Flagsmith?q=client&type=&language=) 接入 API。需要将每个 SDK 的 API 端点覆盖指向 [http://localhost:8000/api/v1/](http://localhost:8000/api/v1/)。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "You can access the Django Admin console to get CRUD access to some of the core tables within the API. You will need to\ncreate a super user account first with the following command:",
+      "source_content_hash": "04da3eec56db07b1c3d8ea3f519d0d15e5b0396c035872f582152c42a1404ff7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以访问 Django 管理控制台获取对 API 核心表的 CRUD 权限。首先需要执行以下命令创建超级用户账户："
+      }
+    },
+    {
+      "segment_id": "3c08ed05",
+      "source_content": "```bash\n# Make sure you are in the root directory of this repository\ndocker-compose run --rm --entrypoint \"python manage.py createsuperuser\" api\n```",
+      "source_content_hash": "6fc384f9fc010af71627e3ca2aaa67c7597737fd4f7d433da5ab1bc090c7d4d8",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3c08ed05"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "You can then access the admin dashboard at [http://localhost:8000/admin/](http://localhost:8000/admin/)",
+      "source_content_hash": "afe2491da66cf9510aa504d6c26ed4c1d52570e3b7a04e434f327c24edef8a2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "然后即可通过 [http://localhost:8000/admin/](http://localhost:8000/admin/) 访问管理仪表盘"
+      }
+    },
+    {
+      "segment_id": "a5a4323e",
+      "source_content": "### Postgres Database",
+      "source_content_hash": "7e5ad0459cb63e7c92ea8ec1da440051c834065b8d1827c3764367ac81128b77",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Postgres 数据库"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "The REST API stores all its data within a Postgres database. Schema changes will be carried out automatically when\nupgrading using Django Migrations.",
+      "source_content_hash": "926e0792fea31b5632842f25098a9d66e78329861f31525515f420539803dc13",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "REST API 将所有数据存储在 Postgres 数据库中。升级时会通过 Django Migrations 自动执行架构变更。"
+      }
+    },
+    {
+      "segment_id": "047c2395",
+      "source_content": "## Access Flagsmith Remotely",
+      "source_content_hash": "1763d9b7a2b1df3a6af133c7ea3462d026c383929f28eaceda2baef60c1b4d5e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 远程访问 Flagsmith"
+      }
+    },
+    {
+      "segment_id": "883231d4",
+      "source_content": "You will need to either open ports into your docker host or set up a reverse proxy to access the two Flagsmith services\n(dashboard and API). You will also need to configure the dashboard environment variable `API_URL`, which tells the\ndashboard where the REST API is located.",
+      "source_content_hash": "5e132f377cf900e8ccaa6198e716e9a495ba3982774116a34e054c1d581ad9ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要开放 Docker 主机的端口或设置反向代理来访问两项 Flagsmith 服务（仪表盘和 API）。同时需要配置仪表盘环境变量 `API_URL`，该变量用于指定 REST API 的位置。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/hosting/docker.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.951119+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "7b8f1b5bb4a7d8f1d4e87c3d5613f76802884cbac55e617f9068aac81e411f9d"
+  }
+}

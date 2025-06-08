@@ -1,0 +1,342 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/client-side/react.md",
+  "source_file_content_hash": "30cb9ec1c813cea0273060081abea325da975bfae30867718b33653b8834764d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith React SDK\nsidebar_label: React and React Native\ndescription: Manage your Feature Flags and Remote Config with React and React Native Hooks.\nslug: /clients/react\n---",
+      "source_content_hash": "fc0c011b09fb0c975215e21f31cc7cf77a2cbd748ee54b0a1aef83cc4461b718",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This library includes React/React Native Hooks allowing you to query individual features and flags that limit\nre-renders.",
+      "source_content_hash": "184d383b38ff24c61cfe0e7e550638952ecbc83b2dfb29b2d1961794e53a2b24",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该库包含React/React Native Hooks，允许您查询单个功能标记并限制重新渲染。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Example applications for a variety of React, React Native and Next.js can be found here:",
+      "source_content_hash": "0f0fd375c0de5515355556242a74cfccfe7082a4e4f48a9f3fb2509baad0b81f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下提供多种React、React Native和Next.js的示例应用："
+      }
+    },
+    {
+      "segment_id": "730c423c",
+      "source_content": "- [Usage with React](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/react)\n- [Usage with React Native](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/react)\n- [Usage with Next.js](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/nextjs)",
+      "source_content_hash": "65feedd051b1b7317187793081c8e5cc684377af8e716f19d3bdeaf26e5880d2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [React应用示例](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/react)\n- [React Native应用示例](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/react)\n- [Next.js应用示例](https://github.com/Flagsmith/flagsmith-js-client/tree/main/examples/nextjs)"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装指南"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "### NPM",
+      "source_content_hash": "1df339bc436e1ca6250e69e63b2afee2a2bd90eb657e75485ba822efeca431c1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### NPM安装"
+      }
+    },
+    {
+      "segment_id": "cac45343",
+      "source_content": ":::tip\n\nWe also have flagsmith-es if you'd prefer to use [ES](https://262.ecma-international.org/6.0/) modules.\n\n:::",
+      "source_content_hash": "605ef3167e2ccef998a85c19f25a9779880f17c21088bc748d8acd01ba200bcc",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n我们还提供flagsmith-es模块，适用于需要使用[ES模块](https://262.ecma-international.org/6.0/)的用户。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "08021a08",
+      "source_content": "```bash\nnpm i flagsmith --save\n```",
+      "source_content_hash": "16e310fdc2b4491c1ed2478ba658af0ad4534224a4e2238bb9686b5a8059eac0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_08021a08"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "### NPM for React Native",
+      "source_content_hash": "16aef8d60f0733e714545c935e4b88a4eac37ba85b618bc522a52a773a474db7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### React Native的NPM安装"
+      }
+    },
+    {
+      "segment_id": "8a66e580",
+      "source_content": ":::tip\n\nThe ReactNative SDK shares the exact same implementation of Flagsmith, however, the defaults for some underlying\nlibraries (e.g. AsyncStorage) use React Native compatible implementations.\n\n:::",
+      "source_content_hash": "9f2a2d6eb0e37b81d0af34eb933f85bff61c000bbeea3b11a354c825842fbb29",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nReactNative SDK与Flagsmith核心实现完全一致，但部分底层库（如AsyncStorage）默认使用React Native兼容版本。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "a11df754",
+      "source_content": "```bash\nnpm i react-native-flagsmith --save\n```",
+      "source_content_hash": "55f526d323acdfe1b9cfc8b0bc9c7b170fca1e36e01f4a08a6bbf7f4280efde7",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a11df754"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "### Via JavaScript CDN",
+      "source_content_hash": "16c57d04552a4b9f980a97f4a70debfa9efaa75da7b2f10e8fd5f455b9ee224b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过JavaScript CDN引入"
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```html\n<script src=\"https://cdn.jsdelivr.net/npm/flagsmith/index.js\"></script>\n```",
+      "source_content_hash": "fe5f7eff855a390276fe04b841512282e7b6a63cd5a778368f366e23a36e6e1e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example, the Development or Production environment. ![Image](/img/api-key.png)",
+      "source_content_hash": "2b632f469475a97ab0914d01ae880e0abcc751e09ca9f5454ee4519fea59b5a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目的特定环境（如开发或生产环境）进行初始化。![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "af52d59d",
+      "source_content": "### Step 1: Wrapping your application with Flagsmith Provider",
+      "source_content_hash": "f388731a81f18e3c45f0169ec1f9ba174a7e362e84faa0cb268bc5800334bb88",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 第一步：用Flagsmith Provider包裹应用"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "Wrapping your application with our FlagsmithProvider component provides a React Context throughout your application so\nthat you can use the hooks `useFlagsmith` and `useFlags`.",
+      "source_content_hash": "338cb5b1fe3f319b14acf9da39ecd8b2fef7b1d5005f3e0f8ab3a02e93810c20",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用FlagsmithProvider组件包裹应用后，可通过`useFlagsmith`和`useFlags`钩子在全局获取React Context。"
+      }
+    },
+    {
+      "segment_id": "3c08ed05",
+      "source_content": "```javascript\nimport flagsmith from 'flagsmith'\nimport {FlagsmithProvider} from 'flagsmith/react'\n\nexport function AppRoot() {\n  <FlagsmithProvider options={{\n      environmentID: \"<YOUR_ENVIRONMENT_KEY>\",\n  }} flagsmith={flagsmith}>\n    {...}\n  </FlagsmithProvider>\n};\n```",
+      "source_content_hash": "f16aa15cf969ef4c43bfeed192f5d96b400437bbf1547f7c01b2bb96a672b808",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3c08ed05"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "Providing options to the Flagsmith provider will initialise the client, the API reference for these options can be found\n[here](/clients/javascript#initialisation-options).",
+      "source_content_hash": "abab75dbbc4d2ff98384e4729a2ad47e61125cc546b95a412f7e9954ddad55b0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "向Flagsmith provider传递配置选项将初始化客户端，具体API参数参考[此处](/clients/javascript#initialisation-options)。"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "**Advanced usage: Initialising before rendering the FlagsmithProvider**",
+      "source_content_hash": "837c2a516ad3eb1ba698fe36b9b7151ec639c7787d69fd46caae0a93ec3d77b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**高级用法：在渲染FlagsmithProvider前初始化**"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "If you wish to initialise the Flagsmith client before React rendering (e.g. in redux, or SSR) you can do so by calling\n[flagsmith.init](https://docs.flagsmith.com/clients/javascript#example-initialising-the-sdk) and provide no options\nproperty to the FlagsmithProvider component.",
+      "source_content_hash": "f8f78f238c9dfd4187bbe34e96384ba96161a206086557b46a8857095cd78bfb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若需在React渲染前初始化客户端（如Redux或SSR场景），可调用[flagsmith.init](https://docs.flagsmith.com/clients/javascript#example-initialising-the-sdk)方法，且不在FlagsmithProvider组件中传递options属性。"
+      }
+    },
+    {
+      "segment_id": "8a9b6c26",
+      "source_content": "### Step 2: Using useFlags to access feature values and enabled state",
+      "source_content_hash": "aafda0396b542613770503be45ffb8d513699b0c2a46c736bc4fea9c4d4a9f00",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 第二步：使用useFlags获取功能值及启用状态"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "Components that have been wrapped in a FlagsmithProvider will be able to evaluate feature values and enabled state as\nwell as user traits via the `useFlags` hook.",
+      "source_content_hash": "096a0323d64ab59c2b6c9f8231bd099ef6dd9f264056c3a5404d2c536662fc3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "被FlagsmithProvider包裹的组件可通过`useFlags`钩子获取功能值、启用状态及用户特征。"
+      }
+    },
+    {
+      "segment_id": "b73a4a7a",
+      "source_content": "```javascript\nimport { useFlags } from 'flagsmith/react';\n\nexport function MyComponent() {\n const flags = useFlags(['font_size'], ['example_trait']); // only causes re-render if specified flag values / traits change\n return (\n  <div className=\"App\">\n   font_size: {flags.font_size.value}\n   example_trait: {flags.example_trait}\n  </div>\n );\n}\n```",
+      "source_content_hash": "fb7c4d278ffba13eb57da8dbd381de5f30ce651dcde477cb7f5cde50da9456d0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b73a4a7a"
+      }
+    },
+    {
+      "segment_id": "99d0dd9b",
+      "source_content": "## useFlags API Reference",
+      "source_content_hash": "fd7861d8363f7b3d70948cb71b18613edb63ced08841959bbd8bbc1db1eb4d05",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## useFlags API参考"
+      }
+    },
+    {
+      "segment_id": "cae897fb",
+      "source_content": "```javascript\nuseFlags(requiredFlags:string[], requiredTraits?:string[])=> {[key:string]: IFlagsmithTrait  or IFlagsmithFeature}\n```",
+      "source_content_hash": "862cf27fdb36259e8bfae67fcfb1dd3b8d8383dedb8717559b88c8e1eea41926",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cae897fb"
+      }
+    },
+    {
+      "segment_id": "42a5832e",
+      "source_content": "## FlagsmithProvider API Reference",
+      "source_content_hash": "de91e5eb3c7c7d07908ca492c1d06a2018e22bf41d2f85b33d11c6d6d7d3ac60",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## FlagsmithProvider API参考"
+      }
+    },
+    {
+      "segment_id": "23a4fc3e",
+      "source_content": "| Property                 |                                                  Description                                                   | Required | Default Value |\n| ------------------------ | :------------------------------------------------------------------------------------------------------------: | -------: | ------------: |\n| `flagsmith: IFlagsmith`  |                           Defines the flagsmith instance that the provider will use.                           |  **YES** |          null |\n| `options?: ` IInitConfig |    Initialisation options to use. If you don't provide this you will have to call flagsmith.init elsewhere.    |          |          null |\n| `serverState?: IState`   | Used to pass an initial state, in most cases as a result of SSR flagsmith.getState(). See [Next.js and SSR](/) |          |          null |",
+      "source_content_hash": "e5df529db99cba394b91a635eb27f59e3a4ec897e0c5f075a76930e694739fa6",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_23a4fc3e"
+      }
+    },
+    {
+      "segment_id": "8172a0a5",
+      "source_content": "### Step 3: Using useFlagsmith to access the Flagsmith instance",
+      "source_content_hash": "aa4281d6ce12a27efd6fa575174089e0beacde9311bffc7355b7e79cc09cd6d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 第三步：使用useFlagsmith访问Flagsmith实例"
+      }
+    },
+    {
+      "segment_id": "1b4de6df",
+      "source_content": "Components that have been wrapped in a FlagsmithProvider will be able to access the instance of Flagsmith via the\n`useFlagsmith` hook.",
+      "source_content_hash": "1999e674df7525406fb984e675b9b5cfa8a75e0e14ad9a00d94f8d9a3c4be9eb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "被FlagsmithProvider包裹的组件可通过`useFlagsmith`钩子访问Flagsmith实例。"
+      }
+    },
+    {
+      "segment_id": "353ca453",
+      "source_content": "```javascript\nimport React from 'react';\nimport { useFlags, useFlagsmith } from 'flagsmith/react';\n\nexport function MyComponent() {\n const flags = useFlags(['font_size'], ['example_trait']); // only causes re-render if specified flag values / traits change\n const flagsmith = useFlagsmith();\n const identify = () => {\n  // This will re-render the component if the user has the trait example_trait or they have a different feature value for font_size\n  flagsmith.identify('flagsmith_sample_user');\n };\n const logout = () => {\n  // This will re-render the component if the user has the trait example_trait or they have a different feature value for font_size\n  flagsmith.logout();\n };\n return (\n  <div className=\"App\">\n   font_size: {flags.font_size?.value}\n   example_trait: {flags.example_trait}\n   {flagsmith.identity ? <button onClick={logout}>Logout</button> : <button onClick={identify}>Identify</button>}\n  </div>\n );\n}\n```",
+      "source_content_hash": "c07f8b9faba3b54fc357d6aad3b44602b88668141bc874e7c6daf1cc8b7e9db0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_353ca453"
+      }
+    },
+    {
+      "segment_id": "af843cee",
+      "source_content": "## useFlagsmith API Reference",
+      "source_content_hash": "0b429974598bc5d54604d3526ee992c2134722dc24da889e8e982208bd8f1806",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## useFlagsmith API参考"
+      }
+    },
+    {
+      "segment_id": "a4a107b4",
+      "source_content": "```javascript\nuseFlagsmith()=> IFlagsmith\n```",
+      "source_content_hash": "ee615a99229156c2b014bf8b25cf88dde66449e2f9971905a5e0fe6486652209",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a4a107b4"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/client-side/react.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.957337+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "30cb9ec1c813cea0273060081abea325da975bfae30867718b33653b8834764d"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/flag-management.md",
+  "source_file_content_hash": "1391c08cae66b3bb9fda1a135e02972b45280da836c151608662bbded8f8bb13",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Flag Management",
+      "source_content_hash": "b1943cc33ced9d01c14636b8b10e7cf509edf3875c456a65c4dcd9ee08c635bd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 功能开关管理"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "Managing larger numbers of flags is easy using some of the tools built into Flagsmith.",
+      "source_content_hash": "f184c9e8eb9f2f888c6cea4b157a0e5e0b9c8d7b71ba248580c365636d38834a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过Flagsmith内置的工具，可以轻松管理大量功能开关。"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "![Image](/img/flag-settings.png)",
+      "source_content_hash": "d6f49862ba189c1fe0fe8dab4a99a1b701bbfb4dbc488be74414184e26411ae8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-settings.png)"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Tagging",
+      "source_content_hash": "0714d8fd587dd33d23783b2824afb461989a5b7afbd1b06974260cfea027cfbe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 标签管理"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "You can create tags within Flagsmith and tag Flags in order to organise them. Tags can also be used to filter the list\nof Flags in the event that you have a large number.",
+      "source_content_hash": "e220eed86cb483a40175b3ba41a69a57145613a3a1b711870ccd3f86af9dd763",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在Flagsmith中创建标签并对功能开关进行标记分类。当存在大量功能开关时，标签还可用于筛选列表。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "![Image](/img/flag-tags.png)",
+      "source_content_hash": "d3ff8ebc4e382735270433b32bacfc8a10140a81f6f32142f301994d9da401fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Image](/img/flag-tags.png)"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Flag Archiving",
+      "source_content_hash": "9feacfc539c83bad97006f69dadcc265f6b400fae0fbba9f23f8b0c61daa9734",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关归档"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "You can also archive Flags within Flagsmith. Archived flags will continue to be sent to your SDKs when you get the flags\nfor your Environment, but by default they are hidden from the main list of flags.",
+      "source_content_hash": "19f5c8732e6f3367f57f70daf6d0514e74d59b1c5bb0b4c016310b57be06d31f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以在Flagsmith中对功能开关进行归档。归档后的开关仍会随环境配置下发至SDK，但默认会从主列表中隐藏。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "You can set a Flag as Archived from the Flag settings tab.",
+      "source_content_hash": "3a03302731f81ec323304c0a0e95f47917bc56fd41e87b19ed9f69d3865d7e2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过功能开关设置选项卡即可将其标记为归档状态。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Archived flags are often used when you have customers running older versions of your mobile app. You may well have\nfinished with a flag, but you cant remove it as there are still some older versions of your app out there that depend on\nthat flag. Archiving the flag helps to keep your main list of flags under control.",
+      "source_content_hash": "5a92e80d764ed46b9fabfc9ab741db89a8e11cb0e9dfd83468333e0d7ec13eaf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当存在运行旧版移动应用的客户时，归档功能尤为实用。某些功能开关虽已完成使命，但因旧版本应用仍依赖该开关而无法删除。归档功能可帮助保持主列表的整洁。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Flag Owners",
+      "source_content_hash": "df6b72404b275ccd44b92da51a7ea2d422688f95e0032486d3db141841ebe193",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关负责人"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "You can specify members of your team as owners of individual Flags. This helps in larger teams when you need to identify\nwho is responsible for a particular flag.",
+      "source_content_hash": "c8363c0c78cfc4cc0ea791f0e2cfa7eb79037f9ceafbde33fbcc6f8c53ec5331",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以为每个功能开关指定团队负责人。这在大型团队中特别有助于明确功能开关的维护责任。"
+      }
+    },
+    {
+      "segment_id": "599822a5",
+      "source_content": "<img width=\"75%\" src=\"/img/flag-owners.png\"/>",
+      "source_content_hash": "c322b8428629859a17df2252fdf7f181724fb4077cdffaf06bc405daedbf9838",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_599822a5"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/flag-management.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.930452+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "1391c08cae66b3bb9fda1a135e02972b45280da836c151608662bbded8f8bb13"
+  }
+}

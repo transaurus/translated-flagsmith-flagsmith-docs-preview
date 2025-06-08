@@ -1,0 +1,232 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/system-administration.md",
+  "source_file_content_hash": "aaed6d84d9b1b23e3543e63370028ed1cd333c28943bda5927f960ddd3f21035",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: System Administration\n---",
+      "source_content_hash": "06a4e6b5aa03feb97d07202913f0c8e39858656b4bb9513ddabef71e746d66fd",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Audit Logs",
+      "source_content_hash": "9d5e16ed194742f14c5156b94381e5b989a9ca2516cc89b829154d6dec11b94e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Every action taken within the Flagsmith administration application is tracked and logged. This allows you to easily\nretrace the events and values that flags, identities and segments have taken over time.",
+      "source_content_hash": "29edcd93d5d9f8489a55927fed7f84695278e5738040a496267f434dfcfcf667",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith管理后台的每个操作都会被追踪记录。这使您能够轻松追溯功能开关、用户身份和细分群体随时间推移的状态变更历史。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "You can view the Audit Log within the Flagsmith application, and filter it in order to find the information you are\nafter.",
+      "source_content_hash": "0202d3aa91c3e005e7ce67cfa0cdaf8eef12b3fd773c49c44e0934dc1d6004d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在Flagsmith应用中查看审计日志，并通过筛选快速定位所需信息。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "You can also stream your Audit Logs into your own infrastructure using [Audit Log Webhooks](#audit-log-webhooks).",
+      "source_content_hash": "fb65df59f013ee597669660d30250fe010bc2e1d731dd89609113fbdc27ccc78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以通过[审计日志Webhook](#audit-log-webhooks)将审计日志实时同步到自有基础设施。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Audit Log Webhooks",
+      "source_content_hash": "08a8cb85408e668d3ee3e9c12ae6c5e13cd2ce9749cf82eec39b06a7057232e1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志Webhook"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "You can use Audit Log Webhooks to stream your Organisation's Audit Log into your own infrastructure. This can be useful\nfor compliance or to reference against local CI/CD infrastructure.",
+      "source_content_hash": "d6f79b4cf0efa616ceb56b708d55de5f227e6e727c77dfda9886c21383dc95d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过审计日志Webhook，您可以将组织的审计日志流式传输到自有基础设施。这对合规审查或与本地CI/CD系统进行交叉验证非常有用。"
+      }
+    },
+    {
+      "segment_id": "166426c2",
+      "source_content": "```json\n{\n \"created_date\": \"2020-02-23T17:30:57.006318Z\",\n \"log\": \"New Flag / Remote Config created: my_feature\",\n \"author\": {\n  \"id\": 3,\n  \"email\": \"user@domain.com\",\n  \"first_name\": \"Kyle\",\n  \"last_name\": \"Johnson\"\n },\n \"environment\": null,\n \"project\": {\n  \"id\": 6,\n  \"name\": \"Project name\",\n  \"organisation\": 1\n },\n \"related_object_id\": 6,\n \"related_object_type\": \"FEATURE\"\n}\n```",
+      "source_content_hash": "c0c2f8a728fbf6dded66b9549277e88fa745f221a57afa1c6cd63bf8647dd30d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_166426c2"
+      }
+    },
+    {
+      "segment_id": "9f9e64f5",
+      "source_content": "## Web Hooks",
+      "source_content_hash": "34fc3be1b191a2ab62a7b74fb1faa963bd4845c00c27b9ca7ae583c5da2b82fe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "You can use the Web Hooks to send events from Flagsmith into your own infrastructure. Web Hooks are managed at an\nEnvironment level, and can be configured in the Environment settings page.",
+      "source_content_hash": "a98a940238fc59d5a90083883e093d4c19ab2fa9795a54916ae866ce66c5955c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过Webhook功能，您可以将Flagsmith中的事件推送到自有基础设施。Webhook在环境级别进行管理，可在环境设置页面配置。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "![Image](/img/add-webhook.png)",
+      "source_content_hash": "f6fe86095f2853cc2f84f98e1a48d0b50c9b03f04be6911f12caf301741f1aa6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/add-webhook.png)"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "Currently the following events will generate a Web Hook action:",
+      "source_content_hash": "6e62aab572867f4dbb76bb8ca19af53cf284cfd4bdd712ca5def8d72e1335fcd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前以下事件会触发Webhook动作："
+      }
+    },
+    {
+      "segment_id": "40251870",
+      "source_content": "- Creating Features (Sent as event_type `FLAG_UPDATED`)\n- Updating Feature value / state in an Environment (Sent as event_type `FLAG_UPDATED`)\n- Overriding a Feature for an Identity (Sent as event_type `FLAG_UPDATED`)\n- Overriding a Feature for a Segment (Sent as event_type `FLAG_UPDATED`)",
+      "source_content_hash": "b3cd24a4457cb93b0e5270f0a39d8b32915fce9fc9991820ea7ca478b3fa4f4c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 创建功能开关（事件类型为`FLAG_UPDATED`）\n- 更新环境中的功能开关值/状态（事件类型为`FLAG_UPDATED`）\n- 为用户身份覆盖功能开关（事件类型为`FLAG_UPDATED`）\n- 为细分群体覆盖功能开关（事件类型为`FLAG_UPDATED`）"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "You can define any number of Web Hook endpoints per Environment. Web Hooks can be managed from the Environment settings\npage.",
+      "source_content_hash": "efdd9a36454b5891b8ee899ace3b7d8ad8451bbcf4092dc8604067c6478a776c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每个环境可配置任意数量的Webhook端点。Webhook管理入口位于环境设置页面。"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "A typical use case for Web Hooks is if you want to cache flag state locally within your server environment.",
+      "source_content_hash": "6b519b6e6a6843193ea037c8cc579752c31af3d927fa7a11ed9ec6ef4da04686",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Webhook的典型使用场景包括在服务器环境中本地缓存功能开关状态。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "Each event generates an HTTP POST with the following body payload to each of the Web Hooks defined within that\nEnvironment:",
+      "source_content_hash": "d1e8483b986175e3fdc295cab867a55ea009a01bc09ef9eef750bc63d8c921d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每个事件都会向该环境配置的所有Webhook端点发送HTTP POST请求，请求体包含以下载荷结构："
+      }
+    },
+    {
+      "segment_id": "750e2f7e",
+      "source_content": "```json\n{\n \"data\": {\n  \"changed_by\": \"Ben Rometsch\",\n  \"new_state\": {\n   \"enabled\": true,\n   \"environment\": {\n    \"id\": 23,\n    \"name\": \"Development\"\n   },\n   \"feature\": {\n    \"created_date\": \"2021-02-10T20:03:43.348556Z\",\n    \"default_enabled\": false,\n    \"description\": \"Show markdown in a butter bar for certain users\",\n    \"id\": 7168,\n    \"initial_value\": null,\n    \"name\": \"butter_bar\",\n    \"project\": {\n     \"id\": 12,\n     \"name\": \"Flagsmith Website\"\n    },\n    \"type\": \"CONFIG\"\n   },\n   \"feature_segment\": null,\n   \"feature_state_value\": \"<strong>\\nYou are using the develop environment.\\n</strong>\",\n   \"identity\": null,\n   \"identity_identifier\": null\n  },\n  \"previous_state\": {\n   \"enabled\": false,\n   \"environment\": {\n    \"id\": 23,\n    \"name\": \"Development\"\n   },\n   \"feature\": {\n    \"created_date\": \"2021-02-10T20:03:43.348556Z\",\n    \"default_enabled\": false,\n    \"description\": \"Show markdown in a butter bar for certain users\",\n    \"id\": 7168,\n    \"initial_value\": null,\n    \"name\": \"butter_bar\",\n    \"project\": {\n     \"id\": 12,\n     \"name\": \"Flagsmith Website\"\n    },\n    \"type\": \"CONFIG\"\n   },\n   \"feature_segment\": null,\n   \"feature_state_value\": \"<strong>\\nYou are using the develop environment.\\n</strong>\",\n   \"identity\": null,\n   \"identity_identifier\": null\n  },\n  \"timestamp\": \"2021-06-18T07:50:26.595298Z\"\n },\n \"event_type\": \"FLAG_UPDATED\"\n}\n```",
+      "source_content_hash": "3958745189a662bf70f20e19e1683f8d6139fecbb855d0cd77ef9dac978ad91b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_750e2f7e"
+      }
+    },
+    {
+      "segment_id": "c7fa1e8d",
+      "source_content": "## Webhook Signature",
+      "source_content_hash": "b9d2750f144b54e912087e6d43b96db6d36b886b2bd6dc2914ec3caf10764c49",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook签名"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "When your webhook secret is set, Flagsmith uses it to create a hash signature with each payload. This hash signature is\npassed with each request under the X-Flagsmith-Signature header that you need to validate at your end",
+      "source_content_hash": "8b17bf9aa3c8894cd3a9414bf5ba969e0aa59f98b6aa40d66689b172075958c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当设置Webhook密钥后，Flagsmith会使用该密钥为每个载荷生成哈希签名。该签名会通过X-Flagsmith-Signature请求头发送，您需要在接收端进行验证。"
+      }
+    },
+    {
+      "segment_id": "47516512",
+      "source_content": "### Validating Signature",
+      "source_content_hash": "53c4e1362f2aa49c51236ee8b342993849ec88294e295f496ceee51d6698e3b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 签名验证"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "Compute an HMAC with the SHA256 hash function. Use request body (raw utf-8 encoded string) as the message and secret\n(utf8 encoded) as the Key. Here is one example in Python:",
+      "source_content_hash": "aa73d4679af12a1f9be87afe53a13f0d85b8f2e7e4998c2ecab4be295b47d03c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用SHA256哈希函数计算HMAC。将请求体（原始utf-8编码字符串）作为消息，密钥（utf8编码）作为Key。以下是Python示例："
+      }
+    },
+    {
+      "segment_id": "5be4f25e",
+      "source_content": "```python\nimport hmac\n\nsecret = \"my shared secret\"\n\nexpected_signature = hmac.new(\n    key=secret.encode(),\n    msg=request_body,\n    digestmod=hashlib.sha256,\n).hexdigest()\n\nreceived_signature = request[\"headers\"][\"x-flagsmith-signature\"]\nhmac.compare_digest(expected_signature, received_signature) is True\n```",
+      "source_content_hash": "0ead67595198eed8e0b554237d5f1ef28c6705196968bac0092eb515fd9e4209",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_5be4f25e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/system-administration.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.945873+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "aaed6d84d9b1b23e3543e63370028ed1cd333c28943bda5927f960ddd3f21035"
+  }
+}

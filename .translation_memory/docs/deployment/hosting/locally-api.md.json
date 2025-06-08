@@ -1,0 +1,1102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/hosting/locally-api.md",
+  "source_file_content_hash": "27962e5307d6cb73c4cee303a62b34f326ca2644614ccb4425f96db318aa7640",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_label: API\ntitle: Flagsmith REST API\nsidebar_position: 10\n---",
+      "source_content_hash": "6fa4b7a85c652e398650680d3b430694195be29f9bae9769bbfbb723e429415c",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Setting Up",
+      "source_content_hash": "74cd0f7d788ce9bde9d49e7b08f64aebb638471f6b4268589a2bc6bced8b95bf",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 初始设置"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Before running the application, you'll need to configure a database for the application. The steps to do this can be\nfound in the following section entitled 'Databases'.",
+      "source_content_hash": "1d0f0ed299fff40c36e952f1f8bdf4ccc96611fb07b78525a7d016ff25fcec73",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在运行应用程序之前，您需要为其配置数据库。具体操作步骤请参阅下文\"数据库配置\"章节。"
+      }
+    },
+    {
+      "segment_id": "ee201347",
+      "source_content": "```bash\nvirtualenv .venv\nsource .venv/bin/activate\npip install pip-tools\ncd api\npip-sync requirements.txt requirements-dev.txt\npython manage.py migrate\npython manage.py createcachetable\npython manage.py runserver --nostatic\n```",
+      "source_content_hash": "683b2d5dd78d000124fa7961193bf7afddbec7543cb17223364db29a1846e18e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ee201347"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "You can now visit `http://<your-server-domain:8000>/api/v1/users/config/init/` to create an initial Superuser and\nprovide DNS settings for your installation.",
+      "source_content_hash": "5416f53a36b2173826d6dda8933029613fe95239f12686298128f7c5869518e8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成配置后，您可以通过访问`http://<您的服务器域名:8000>/api/v1/users/config/init/`来创建初始超级用户并为安装配置DNS设置。"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "Note: if you're running on on MacOS and you find some issues installing the dependencies (specifically around pyre2),\nyou may need to run the following:",
+      "source_content_hash": "ae7ba00e4b96650d7df8c68e7dd7607836dfd6c21e78617b8f5e5164f7b64b45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注意：如果在MacOS系统上安装依赖时遇到问题（特别是pyre2相关），可能需要执行以下命令："
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```bash\nbrew install cmake re2\n```",
+      "source_content_hash": "8534364fef303247ce61082aea995213254d4875c5cea97010691514853f9843",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "The application can also be run locally using Docker Compose if required, however, it's beneficial to run locally using\nthe above steps as it gives you hot reloading. To run using docker compose, simply run the following command from the\nproject root:",
+      "source_content_hash": "61676bc8ead7d55419a24400bfe92e1b707223992f45bfbe27728ec7611d9141",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然推荐使用上述方式实现热重载，但您也可以选择使用Docker Compose在本地运行应用。只需在项目根目录下执行："
+      }
+    },
+    {
+      "segment_id": "be2d5397",
+      "source_content": "```bash\ngit clone https://github.com/Flagsmith/self-hosted.git\ncd self-hosted\ndocker-compose up\n```",
+      "source_content_hash": "0da26a6925beba29c7b22867b15119cb75f30edad806d7440dbe459e19d3da8e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_be2d5397"
+      }
+    },
+    {
+      "segment_id": "06c0f776",
+      "source_content": "## Databases",
+      "source_content_hash": "31b73f1b7d7360e90a65e83e60c6109a7ea44a3af5e90e68533a5b2bae08d143",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 数据库配置"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "Databases are configured in app/settings/\\<env\\>.py",
+      "source_content_hash": "53389a0f5bc2ae536dd831ea9b8689731c4cce88665e5030cdc924de9358ad6e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "数据库配置位于app/settings/\\<环境\\>.py文件中"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "The app is configured to use PostgreSQL for all environments.",
+      "source_content_hash": "32b35cba3af78eff94b53bd28aec86b768e89f8258132d58ea945e631a532d57",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本应用在所有环境中均使用PostgreSQL数据库。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "When running locally, you'll need a local instance of postgres running. The easiest way to do this is to use docker\nwhich is achievable with the following command:",
+      "source_content_hash": "fde22038e0e32a33e328544e2d0fd18b2dd6806ecea617186fbb7c2fd15371db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本地开发时需运行PostgreSQL实例，最简单的方式是使用Docker命令："
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "`docker-compose -f docker/db.yaml up -d`",
+      "source_content_hash": "51ecb86e4bde46c182c0aa2b3b243f0292e32f6b10e5fae54ab048ef102e4f65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`docker-compose -f docker/db.yaml up -d`"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "You'll also need to ensure that you have a value for POSTGRES_PASSWORD set as an environment variable on your\ndevelopment machine.",
+      "source_content_hash": "8cab5f3b994a7574ea52ba55ef3d118e3febf133ec367b7a36b9e77ae8221a8b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "同时请确保开发机已设置POSTGRES_PASSWORD环境变量。"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "When running on a Heroku-ish platform, the application reads the database connection in production from an environment\nvariable called `DATABASE_URL`. This should be configured in the Heroku-ish application configuration.",
+      "source_content_hash": "b2e117ced70738ef0ed0720b8fd5662c95bf2c313de0819884cba05645fe1e6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在Heroku类平台上运行时，应用会从名为`DATABASE_URL`的环境变量读取生产环境数据库连接，该变量应在平台应用配置中设置。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "When running the application using Docker, it reads the database configuration from the settings located in\n`app.settings.production`",
+      "source_content_hash": "1224059ccd472d61d0faf6350b586abe3d7d9b17c80f9b95d39e9cc0248d8261",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用Docker运行时，应用会读取`app.settings.production`中的数据库配置。"
+      }
+    },
+    {
+      "segment_id": "9e95fc4a",
+      "source_content": "### Replication",
+      "source_content_hash": "e0ae5dc3190e039c1b93bb189532dbdb28f8995aa16ffa6f8b1b888c10ecb484",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 读写分离"
+      }
+    },
+    {
+      "segment_id": "5dae11e3",
+      "source_content": "Flagsmith can be set up to handle as many read replicas as needed. To add replicas, you'll need to set the\n`REPLICA_DATABASE_URLS` environment variable with a comma separated list of database urls.",
+      "source_content_hash": "b0fabb2171fb06f4bc6e62dbb62ae4afe141a111ca744ce85f3a93c663435468",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith支持配置任意数量的只读副本。需通过设置`REPLICA_DATABASE_URLS`环境变量（包含以逗号分隔的数据库URL列表）来添加副本。"
+      }
+    },
+    {
+      "segment_id": "06e24cc0",
+      "source_content": "Example:",
+      "source_content_hash": "872887e563e75957ffc20b021332504f2ddd0a8f3964cb93070863bfaf13cdad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例："
+      }
+    },
+    {
+      "segment_id": "7d13cf22",
+      "source_content": "```\nREPLICA_DATABASE_URLS: postgres://user:password@replica1.database.host:5432/flagsmith,postgres://user:password@replica2.database.host:5432/flagsmith\n```",
+      "source_content_hash": "2bac100ab6046042139baa2df662d54e73a4df73c5ebeaebe65f8bf9587a2818",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d13cf22"
+      }
+    },
+    {
+      "segment_id": "07837485",
+      "source_content": ":::tip\n\nUse the `REPLICA_DATABASE_URLS_DELIMITER` environment variable if you are using any `,` characters in your passwords.\n\n:::",
+      "source_content_hash": "ff84808246ea4885d38ba6876de64a68dfddf8dc4bbec932fb1ef19779179e34",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n若密码中包含逗号字符，请使用`REPLICA_DATABASE_URLS_DELIMITER`环境变量指定分隔符。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "2fd0be2a",
+      "source_content": "## Initialising",
+      "source_content_hash": "ceb8a2b69e2ad9af3da24a6ede5c8e5e7dacc92ace053ae66752d7b5923ad7dd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 初始化"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "The application is built using django which comes with a handy set of admin pages available at `/admin/`. To access\nthese, you'll need to create a super user. This user can also be used to access the admin pages or the application\nitself if you have the frontend application running as well. This user can be created using the instructions below\ndependent on your installation:",
+      "source_content_hash": "59677346c1f854f517b1bd163087d0e982382edee0425ce6e9f1dbff8c905295",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本应用基于Django框架构建，内置管理后台（可通过`/admin/`访问）。您需要创建超级用户来访问管理界面或应用前端。根据部署方式选择以下创建方法："
+      }
+    },
+    {
+      "segment_id": "759d12dd",
+      "source_content": "### Locally",
+      "source_content_hash": "8481655854556c2b1ed16243de4fc4fcf9900844098673398ef22c1a50206aca",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 本地环境"
+      }
+    },
+    {
+      "segment_id": "f6563256",
+      "source_content": "```bash\ncd api\npython manage.py createsuperuser\n```",
+      "source_content_hash": "8935bf4ac1cda9f053b46d507a302e41746db39e24de0fba335d9435e7d16e87",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f6563256"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "### Environments with no direct console access (e.g. Heroku, ECS)",
+      "source_content_hash": "665cfb1302adb19ac0576b5e4102aecba44a6082a08372ee17d1f438896b3d3a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 无直接控制台访问的环境（如Heroku、ECS）"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "Once the app has been deployed, you can initialise your installation by accessing `/api/v1/users/config/init/`. This\nwill show a page with a basic form to set up some initial data for the platform. Each of the parameters in the form are\ndescribed below.",
+      "source_content_hash": "f5634db47236b5c07f69d254aaf9484b06abb76a171d1dac009b44f89ee2d891",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用部署后，访问`/api/v1/users/config/init/`可通过表单初始化平台数据。表单各字段说明如下："
+      }
+    },
+    {
+      "segment_id": "cff3f5e4",
+      "source_content": "| Parameter name  | Description                                                                                                                      |\n| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |\n| Username        | A unique username to give the installation super user                                                                            |\n| Email           | The email address to give the installation super user                                                                            |\n| Password        | The password to give the installation super user                                                                                 |\n| Site name       | A human readable name for the site, e.g. 'Flagsmith'                                                                             |\n| Site domain[^1] | The domain that the FE of the site will be running on, e.g. app.flagsmith.com. This will be used for e.g. password reset emails. |",
+      "source_content_hash": "579d6dee8ae6468d01f27cb41b9424780159bede5e91a4ae3173cd2ed6b51cc1",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_cff3f5e4"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "Once you've created the super user, you can use the details to log in at `/admin/`. From here, you can create an\norganisation and either create another user or simply assign the organisation to your admin user to begin using the\napplication.",
+      "source_content_hash": "4b866625f692a09d11ff5feca360ce77df80df6ebe21e7f41c9569698d66cc54",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建超级用户后，可通过`/admin/`登录管理后台，创建组织并将组织分配给管理员用户以开始使用应用。"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "Further information on the admin pages can be found [here](/deployment/configuration/django-admin).",
+      "source_content_hash": "ea517418ea5e7d8bada10ac7cfb094cf16256c32ccf05232e2df86b71ab1f119",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更多管理后台使用说明请参阅[此文档](/deployment/configuration/django-admin)。"
+      }
+    },
+    {
+      "segment_id": "00869738",
+      "source_content": "[^1]:\n    Your Flagsmith's domain can also be configured via the `FLAGSMITH_DOMAIN` environment variable. See the\n    [full list](#application-environment-variables) of variables used for configuration.",
+      "source_content_hash": "6c39dd75e952a1bd03433768efb3325668fd834ca2f037f7cdfb9b14b489e81c",
+      "node_type": "footnoteDefinition",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[^1]:\n    也可通过`FLAGSMITH_DOMAIN`环境变量配置域名，完整配置变量列表请参见[应用环境变量](#application-environment-variables)章节。"
+      }
+    },
+    {
+      "segment_id": "f8614e13",
+      "source_content": "## Deploying",
+      "source_content_hash": "ff96d35008f56060f8c923806638c98f7cd70de5be8adff23189fc078d56d99e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 部署指南"
+      }
+    },
+    {
+      "segment_id": "638efb88",
+      "source_content": "### Using Heroku-ish Platform (e.g. Heroku, Dokku, Flynn)",
+      "source_content_hash": "a09acb1ce4b0607b790d62829faf352d65d82d0381fc9a9b70b57df3a2c68b75",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用Heroku类平台（如Heroku、Dokku、Flynn）"
+      }
+    },
+    {
+      "segment_id": "558df877",
+      "source_content": "The application should run on any Heroku-ish platform (e.g. Dokku, Flynn) by simply adding the required git repo and\npushing the code. The code for running the app is contained in the Procfile.",
+      "source_content_hash": "83eb18c8247698439e6c43c9377c32fbda56e7aa1beb7f7d75e3c595dc8a4efd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该应用程序应能在任何类Heroku平台（如Dokku、Flynn）上运行，只需添加所需的Git仓库并推送代码即可。运行应用的代码包含在Procfile中。"
+      }
+    },
+    {
+      "segment_id": "b6152880",
+      "source_content": "To get it running, you'll need to add the necessary config variables as outlined below.",
+      "source_content_hash": "3adb69210fb9d3ce2e9a997f1d8def3d11faf82c439c490be87863f3d9055a0a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要使其正常运行，您需要添加如下所述的必要配置变量。"
+      }
+    },
+    {
+      "segment_id": "23b96cc0",
+      "source_content": "### Using ElasticBeanstalk",
+      "source_content_hash": "68220df5df4297269cc22deeb399cf1e02c0a95e1ddcccb48dd55457b293f872",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用ElasticBeanstalk"
+      }
+    },
+    {
+      "segment_id": "8fcdd6d4",
+      "source_content": "The application will run within ElasticBeanstalk using the default Python setup. We've included the .ebextensions/ and\n.elasticbeanstalk/ directories which will run on ElasticBeanstalk.",
+      "source_content_hash": "bedf620ddf82054872c4c147c9257a114115945ad247a8652e379aef8cd6c91e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该应用程序可在ElasticBeanstalk中使用默认的Python设置运行。我们已包含.ebextensions/和.elasticbeanstalk/目录，这些将在ElasticBeanstalk上运行。"
+      }
+    },
+    {
+      "segment_id": "f45239ba",
+      "source_content": "The changes required to run in your environment will be as follows",
+      "source_content_hash": "09f09035e3288b75608da7e58eb805ada4a6cf83a2f96b763c86a7b3eac0298a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在您的环境中运行所需的更改如下："
+      }
+    },
+    {
+      "segment_id": "692c6053",
+      "source_content": "`.elasticbeanstalk/config.yml` - update application_name and default_region to the relevant variables for your setup.",
+      "source_content_hash": "588d45bcdf92582f9c177c144c1fa5e34547fe6411ecb6b7a2efec30ee01c5ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`.elasticbeanstalk/config.yml` - 更新application_name和default_region为与您的设置相关的变量。"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "`.ebextensions/options.config` - within the root of the project `generate.sh` will add in all environment variables that\nare required using your chosen CI/CD. Alternatively, you can add your own `options.config`.",
+      "source_content_hash": "7c88f2c05a9b3711ada7676b83d3f8a887a58e21f3c55f99c901cce2df43ef11",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`.ebextensions/options.config` - 在项目根目录中，`generate.sh`将使用您选择的CI/CD添加所有所需的环境变量。或者，您可以添加自己的`options.config`。"
+      }
+    },
+    {
+      "segment_id": "c6868a9f",
+      "source_content": "### Using Docker",
+      "source_content_hash": "fe5d06c04077cd59eb1b37bf4c918af02409266bf43e2ac5c4c03263d7f341ac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用Docker"
+      }
+    },
+    {
+      "segment_id": "bb1346b6",
+      "source_content": "If you want to run the entire Flagsmith platform, including the front end dashboard, take a look at our\n[Flagsmith Docker repository](https://github.com/Flagsmith/self-hosted).",
+      "source_content_hash": "c31bcd503269017af5486f5029c1f0593bae7ee45178aad4fea1deba142799e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果您想运行整个Flagsmith平台，包括前端仪表板，请查看我们的[Flagsmith Docker仓库](https://github.com/Flagsmith/self-hosted)。"
+      }
+    },
+    {
+      "segment_id": "a9c2a503",
+      "source_content": "The application can be configured to run using docker with simply by running the following command:",
+      "source_content_hash": "033f1b65faa25c8e9369cd680229d2e2b8fac22d7ad40670aa093874c5e36ce2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "只需运行以下命令，即可配置应用程序使用Docker运行："
+      }
+    },
+    {
+      "segment_id": "4fe849d4",
+      "source_content": "```bash\ngit clone https://github.com/Flagsmith/self-hosted.git\ncd self-hosted\ndocker-compose up\n```",
+      "source_content_hash": "0da26a6925beba29c7b22867b15119cb75f30edad806d7440dbe459e19d3da8e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fe849d4"
+      }
+    },
+    {
+      "segment_id": "719d3997",
+      "source_content": "This will use some default settings created in the `docker-compose.yml` file located in the root of the project. These\nshould be changed before using in any production environments.",
+      "source_content_hash": "03b5a1c9568cdb68999147809159d80a8dda68349d60c4454a843515d830cba7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这将使用项目根目录中`docker-compose.yml`文件创建的一些默认设置。这些设置应在任何生产环境中使用前进行更改。"
+      }
+    },
+    {
+      "segment_id": "4c787c52",
+      "source_content": "The docker container also accepts an argument that sets the access log file location for gunicorn. By default this is\nset to /dev/null to maintain the default behaviour of gunicorn. It can either be set to `\"-\"` to redirect the logs to\nstdout or to a location on the file system as required.",
+      "source_content_hash": "7e635edd1b340587d1b00ed85b3e2eeda17b27fe8bb19ae80c87d9bf9d00bf28",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Docker容器还接受一个参数，用于设置gunicorn的访问日志文件位置。默认情况下，此参数设置为/dev/null以保持gunicorn的默认行为。可以将其设置为`\"-\"`以将日志重定向到stdout，或根据需要设置为文件系统上的某个位置。"
+      }
+    },
+    {
+      "segment_id": "c6b2ca77",
+      "source_content": "### Environment Variables",
+      "source_content_hash": "cf47b598f19e2ab5c3a60c13e61a54b2a5a531397397306826f70b68854f94b2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境变量"
+      }
+    },
+    {
+      "segment_id": "dce16ab4",
+      "source_content": "The application relies on the following environment variables to run:",
+      "source_content_hash": "e0dc2124f6cab9742791e0543f4295db06f3131d9e333a2784ef56d48c488619",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用程序依赖以下环境变量运行："
+      }
+    },
+    {
+      "segment_id": "7312e69e",
+      "source_content": "#### Database Environment Variables",
+      "source_content_hash": "817457e3336f374c483eade86f7c1442460ec8b20911df3c2b937c7b747b8d18",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 数据库环境变量"
+      }
+    },
+    {
+      "segment_id": "25215977",
+      "source_content": "- `DATABASE_URL`: (required) configure the database to connect to. Should be a standard format database url e.g.\n  postgres://user:password@host:port/db_name\n- `REPLICA_DATABASE_URLS`: (optional) configure an optional number of read replicas. Should be a comma separated list of\n  standard format database urls. e.g.\n  postgres://user:password@replica1.db.host/flagsmith,postgres://user:password@replica2.db.host/flagsmith\n- `REPLICA_DATABASE_URLS_DELIMITER`: (optional) set the delimiter to use for separating replica database urls when using\n  `REPLICA_DATABASE_URLS` variable. Defaults to `,`. This is useful if, for example, the comma character appears in one\n  or more passwords.",
+      "source_content_hash": "b5f3d2cc10e280287bc10f2e396d246ded44ec2d3a4428f7992a23073c3bc6f5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `DATABASE_URL`: (必填) 配置要连接的数据库。应为标准格式的数据库URL，例如postgres://user:password@host:port/db_name\n- `REPLICA_DATABASE_URLS`: (可选) 配置任意数量的只读副本。应为标准格式的数据库URL的逗号分隔列表。例如postgres://user:password@replica1.db.host/flagsmith,postgres://user:password@replica2.db.host/flagsmith\n- `REPLICA_DATABASE_URLS_DELIMITER`: (可选) 设置在使用`REPLICA_DATABASE_URLS`变量时用于分隔副本数据库URL的分隔符。默认为`,`。这在例如密码中包含逗号字符时非常有用。"
+      }
+    },
+    {
+      "segment_id": "99840f13",
+      "source_content": "You can also provide individual variables as below. Note that if a `DATABASE_URL` is defined, it will take precedent and\nthe below variables will be ignored.",
+      "source_content_hash": "3170a65448394b43af466575a4560829562daff097061f0782b6228065d77aeb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以提供如下所示的单独变量。请注意，如果定义了`DATABASE_URL`，它将优先，以下变量将被忽略。"
+      }
+    },
+    {
+      "segment_id": "ebb827a7",
+      "source_content": "- `DJANGO_DB_HOST`: Database hostname\n- `DJANGO_DB_NAME`: Database name\n- `DJANGO_DB_USER`: Database username\n- `DJANGO_DB_PASSWORD`: Database password\n- `DJANGO_DB_PORT`: Database port",
+      "source_content_hash": "144982574c413d933d2f47448ab58b7270b9fd500582961763c37c878fded025",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `DJANGO_DB_HOST`: 数据库主机名\n- `DJANGO_DB_NAME`: 数据库名称\n- `DJANGO_DB_USER`: 数据库用户名\n- `DJANGO_DB_PASSWORD`: 数据库密码\n- `DJANGO_DB_PORT`: 数据库端口"
+      }
+    },
+    {
+      "segment_id": "8d279c43",
+      "source_content": "#### GitHub Auth Environment Variables",
+      "source_content_hash": "e5bc31307c53632f4a5e407c08ec9a9d01578ad2e27e6e5f833312d3d9261965",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### GitHub认证环境变量"
+      }
+    },
+    {
+      "segment_id": "b7b9c9f6",
+      "source_content": "- `GITHUB_CLIENT_ID`: Used for GitHub OAuth configuration, provided in your **OAuth Apps** settings.\n- `GITHUB_CLIENT_SECRET`: Used for GitHub OAuth configuration, provided in your **OAuth Apps** settings.",
+      "source_content_hash": "17dcb0237351712765a27b36dce68f9a5590061788a51cb5356efd788832ef41",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `GITHUB_CLIENT_ID`: 用于GitHub OAuth配置，在您的**OAuth Apps**设置中提供。\n- `GITHUB_CLIENT_SECRET`: 用于GitHub OAuth配置，在您的**OAuth Apps**设置中提供。"
+      }
+    },
+    {
+      "segment_id": "e63d69ef",
+      "source_content": "#### Application Environment Variables",
+      "source_content_hash": "a86396103f1ab170da55c7c919f65b7fa208ed08ac1a23de259a984082c4c572",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 应用程序环境变量"
+      }
+    },
+    {
+      "segment_id": "92dd525e",
+      "source_content": "- `ENV`: string representing the current running environment, e.g. 'local', 'dev', 'prod'. Defaults to 'local'\n- `DJANGO_SECRET_KEY`: secret key required by Django, if one isn't provided one will be created using\n  `django.core.management.utils.get_random_secret_key`. WARNING: If running multiple API instances, its vital that you\n  define a shared DJANGO_SECRET_KEY.\n- `LOG_LEVEL`: DJANGO logging level. Can be one of `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`\n- `ACCESS_LOG_LOCATION`: The location to store web logs generated by gunicorn if running as a Docker container. If not\n  set, no logs will be stored. If set to `-` the logs will be sent to `stdout`.\n- `DJANGO_SETTINGS_MODULE`: python path to settings file for the given environment, e.g. \"app.settings.develop\"\n- `ENABLE_GZIP_COMPRESSION`: If Django should gzip compress HTTP responses. Defaults to `False`.\n- `GOOGLE_ANALYTICS_KEY`: if google analytics is required, add your tracking code\n- `GOOGLE_SERVICE_ACCOUNT`: service account json for accessing the google API, used for getting usage of an\n  organisation - needs access to analytics.readonly scope\n- `INFLUXDB_TOKEN`: If you want to send API events to InfluxDB, specify this write token.\n- `INFLUXDB_URL`: The URL for your InfluxDB database\n- `INFLUXDB_ORG`: The organisation string for your InfluxDB API call.\n- `GA_TABLE_ID`: GA table ID (view) to query when looking for organisation usage\n- `USER_CREATE_PERMISSIONS`: set the permissions for creating new users, using a comma separated list of djoser or\n  rest_framework permissions. Use this to turn off public user creation for self hosting. e.g.\n  `'djoser.permissions.CurrentUserOrAdmin'` Defaults to `'rest_framework.permissions.AllowAny'`.\n- `ALLOW_REGISTRATION_WITHOUT_INVITE`: Determines whether users can register without an invite. Defaults to True. Set to\n  False or 0 to disable. Note that if disabled, new users must be invited via email.\n- `ENABLE_EMAIL_ACTIVATION`: new user registration will go via email activation flow, default False\n- `SENTRY_SDK_DSN`: If using Sentry, set the project DSN here.\n- `SENTRY_TRACE_SAMPLE_RATE`: Float. If using Sentry, sets the trace sample rate. Defaults to 1.0.\n- `DEFAULT_ORG_STORE_TRAITS_VALUE`: Boolean. Set this flag to ensure new organisations default to not persisting traits.\n  Useful for data sensitive installations that don't want persistent traits.\n- `OAUTH_CLIENT_ID`: Google OAuth Client ID to enable accessing django admin pages via Google OAuth. See the\n  [Django Admin SSO package](https://pypi.org/project/django-admin-sso/) for information on how to set users up to\n  access the admin pages via SSO.\n- `OAUTH_CLIENT_SECRET`: Google OAuth Secret to enable accessing django admin pages via Google OAuth.\n- `ENABLE_ADMIN_ACCESS_USER_PASS`: Boolean. Set this flag to enable login to admin panel using username and password.\n- `USE_X_FORWARDED_HOST`: Boolean. Default `False`. Specifies whether to use the X-Forwarded-Host header in preference\n  to the Host header. This should only be enabled if a proxy which sets this header is in use.\n  [More Info](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-USE_X_FORWARDED_HOST).\n- `SECURE_PROXY_SSL_HEADER_NAME`: String. The name of the header looked for by Django's\n  [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-proxy-ssl-header). Defaults to\n  `HTTP_X_FORWARDED_PROTO`.\n- `SECURE_PROXY_SSL_HEADER_VALUE`: String. The value of the header looked for by Django's\n  [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-proxy-ssl-header). Defaults to\n  `https`.\n- `DJANGO_SECURE_REDIRECT_EXEMPT`: List. Passthrough of Django's\n  [`SECURE_REDIRECT_EXEMPT`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-redirect-exempt). Defaults to an\n  empty list `[]`.\n- `DJANGO_SECURE_REFERRER_POLICY`: String. Passthrough of Django's\n  [`SECURE_REFERRER_POLICY`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-referrer-policy). Defaults to\n  `same-origin`.\n- `DJANGO_SECURE_SSL_HOST`: String. Passthrough of Django's\n  [`SECURE_SSL_HOST`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-ssl-host). Defaults to `None`.\n- `DJANGO_SECURE_SSL_REDIRECT`: Boolean. Passthrough of Django's\n  [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-ssl-redirect). Defaults to `False`.\n- [`APPLICATION_INSIGHTS_CONNECTION_STRING`](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview).\n  String. Connection string to set up Flagsmith to send telemetry to Azure Application Insights.\n- [`OPENCENSUS_SAMPLING_RATE`](https://opencensus.io/tracing/sampling/probabilistic/): Float. The tracer sample rate.\n- `RESTRICT_ORG_CREATE_TO_SUPERUSERS`: Restricts all users from creating organisations unless they are\n  [marked as a superuser](/deployment/configuration/django-admin#Authentication).\n- `FLAGSMITH_CORS_EXTRA_ALLOW_HEADERS`: Comma separated list of extra headers to allow when operating across domains.\n  e.g. `'my-custom-header-1,my-custom-header-2'`. Defaults to `'sentry-trace,'`.\n- `FLAGSMITH_DOMAIN`: A custom domain for URLs pointing to your Flagsmith instance in email notifications. Note: if set,\n  the domain provided during [initial configuration](#environments-with-no-direct-console-access-eg-heroku-ecs) will be\n  ignored.",
+      "source_content_hash": "71b2e8ebabfcfe14fe86750e456d60520ef9b354e295d35efedd6b4e7de5b14c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `ENV`: 表示当前运行环境的字符串，例如 'local'、'dev'、'prod'，默认为 'local'\n- `DJANGO_SECRET_KEY`: Django 所需的密钥，若未提供将使用 `django.core.management.utils.get_random_secret_key` 自动生成。警告：若运行多个 API 实例，必须定义共享的 DJANGO_SECRET_KEY\n- `LOG_LEVEL`: Django 日志级别，可选值为 `DEBUG`、`INFO`、`WARNING`、`ERROR`、`CRITICAL`\n- `ACCESS_LOG_LOCATION`: 当以 Docker 容器运行时，存储 gunicorn 生成 web 日志的位置。若未设置则不存储日志。设为 `-` 时日志将输出到 `stdout`\n- `DJANGO_SETTINGS_MODULE`: 当前环境对应的 settings 文件 Python 路径，例如 \"app.settings.develop\"\n- `ENABLE_GZIP_COMPRESSION`: 是否启用 Django 的 HTTP 响应 GZIP 压缩，默认为 `False`\n- `GOOGLE_ANALYTICS_KEY`: 如需 Google Analytics 支持，请填入跟踪代码\n- `GOOGLE_SERVICE_ACCOUNT`: 用于访问 Google API 的服务账户 JSON 文件，需具备 analytics.readonly 权限范围\n- `INFLUXDB_TOKEN`: 如需将 API 事件发送至 InfluxDB，请指定写入令牌\n- `INFLUXDB_URL`: InfluxDB 数据库的 URL\n- `INFLUXDB_ORG`: InfluxDB API 调用的组织字符串\n- `GA_TABLE_ID`: 查询组织使用情况时的 GA 表格 ID（视图）\n- `USER_CREATE_PERMISSIONS`: 使用逗号分隔的 djoser 或 rest_framework 权限列表设置新用户创建权限。可用于关闭自托管平台的公开用户注册。例如 `'djoser.permissions.CurrentUserOrAdmin'`，默认为 `'rest_framework.permissions.AllowAny'`\n- `ALLOW_REGISTRATION_WITHOUT_INVITE`: 是否允许无邀请注册用户，默认为 True。设为 False 或 0 禁用。注意禁用时新用户必须通过邮件邀请注册\n- `ENABLE_EMAIL_ACTIVATION`: 新用户注册是否启用邮件激活流程，默认为 False\n- `SENTRY_SDK_DSN`: 使用 Sentry 时，请在此设置项目 DSN\n- `SENTRY_TRACE_SAMPLE_RATE`: 浮点数。使用 Sentry 时设置追踪采样率，默认为 1.0\n- `DEFAULT_ORG_STORE_TRAITS_VALUE`: 布尔值。设置此标志可使新组织默认不持久化特征值，适用于对数据敏感且不需要持久化特征的部署场景\n- `OAUTH_CLIENT_ID`: Google OAuth 客户端 ID，用于通过 Google OAuth 访问 Django 管理页面。详见 [Django Admin SSO 包](https://pypi.org/project/django-admin-sso/) 了解如何通过 SSO 设置用户访问管理页面\n- `OAUTH_CLIENT_SECRET`: Google OAuth 密钥，用于通过 Google OAuth 访问 Django 管理页面\n- `ENABLE_ADMIN_ACCESS_USER_PASS`: 布尔值。设置此标志可启用使用用户名密码登录管理面板\n- `USE_X_FORWARDED_HOST`: 布尔值，默认为 `False`。指定是否优先使用 X-Forwarded-Host 头而非 Host 头。仅在使用设置此头的代理时启用。[更多信息](https://docs.djangoproject.com/en/4.0/ref/settings/#std:setting-USE_X_FORWARDED_HOST)\n- `SECURE_PROXY_SSL_HEADER_NAME`: 字符串。Django [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-proxy-ssl-header) 所查找的头部名称，默认为 `HTTP_X_FORWARDED_PROTO`\n- `SECURE_PROXY_SSL_HEADER_VALUE`: 字符串。Django [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-proxy-ssl-header) 所查找的头部值，默认为 `https`\n- `DJANGO_SECURE_REDIRECT_EXEMPT`: 列表。Django [`SECURE_REDIRECT_EXEMPT`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-redirect-exempt) 的透传，默认为空列表 `[]`\n- `DJANGO_SECURE_REFERRER_POLICY`: 字符串。Django [`SECURE_REFERRER_POLICY`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-referrer-policy) 的透传，默认为 `same-origin`\n- `DJANGO_SECURE_SSL_HOST`: 字符串。Django [`SECURE_SSL_HOST`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-ssl-host) 的透传，默认为 `None`\n- `DJANGO_SECURE_SSL_REDIRECT`: 布尔值。Django [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/4.0/ref/settings/#secure-ssl-redirect) 的透传，默认为 `False`\n- [`APPLICATION_INSIGHTS_CONNECTION_STRING`](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview): 字符串。将 Flagsmith 遥测数据发送至 Azure Application Insights 的连接字符串\n- [`OPENCENSUS_SAMPLING_RATE`](https://opencensus.io/tracing/sampling/probabilistic/): 浮点数。追踪器采样率\n- `RESTRICT_ORG_CREATE_TO_SUPERUSERS`: 限制所有用户创建组织，除非其被[标记为超级用户](/deployment/configuration/django-admin#Authentication)\n- `FLAGSMITH_CORS_EXTRA_ALLOW_HEADERS`: 跨域操作时允许的额外头部逗号分隔列表。例如 `'my-custom-header-1,my-custom-header-2'`，默认为 `'sentry-trace,'`\n- `FLAGSMITH_DOMAIN`: 邮件通知中指向 Flagsmith 实例的自定义域名。注意：若设置此值，[初始配置](#environments-with-no-direct-console-access-eg-heroku-ecs) 中提供的域名将被忽略"
+      }
+    },
+    {
+      "segment_id": "accb07e1",
+      "source_content": "#### Security Environment Variables",
+      "source_content_hash": "a3a9127f8aa83aace667bda78cd563c3d06c791ed1ba56bf9ae73a49b1a3287a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 安全相关环境变量"
+      }
+    },
+    {
+      "segment_id": "5257b095",
+      "source_content": "- `ALLOWED_ADMIN_IP_ADDRESSES`: restrict access to the django admin console to a comma separated list of IP addresses\n  (e.g. `127.0.0.1,127.0.0.2`)\n- `DJANGO_ALLOWED_HOSTS`: comma separated list of hosts the application will run on in the given environment\n- `DJANGO_CSRF_TRUSTED_ORIGINS`: comma separated list of hosts to allow unsafe (POST, PUT) requests from. Useful for\n  allowing localhost to set traits in development.\n- `AXES_ONLY_USER_FAILURES`: If True, only lock based on username, and never lock based on IP if attempts exceed the\n  limit. Otherwise utilize the existing IP and user locking logic. Defaults to `True`.\n- `AXES_FAILURE_LIMIT`: The integer number of login attempts allowed before a record is created for the failed logins.\n  Defaults to `10`.",
+      "source_content_hash": "39a9fe00f6a06b8f672b9d1bbd59dad4f67eda933016fa0ede7ca70dcd41a964",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `ALLOWED_ADMIN_IP_ADDRESSES`: 限制访问Django管理控制台的IP地址列表（以逗号分隔，例如`127.0.0.1,127.0.0.2`）\n- `DJANGO_ALLOWED_HOSTS`: 以逗号分隔的允许运行应用程序的主机列表\n- `DJANGO_CSRF_TRUSTED_ORIGINS`: 以逗号分隔的允许不安全请求（POST、PUT）的主机列表。可用于在开发环境中允许localhost设置特征值\n- `AXES_ONLY_USER_FAILURES`: 若为True，仅基于用户名锁定，当尝试次数超过限制时不会基于IP锁定。否则使用现有的IP和用户锁定逻辑。默认为`True`\n- `AXES_FAILURE_LIMIT`: 允许的登录尝试次数整数阈值，超过后将创建失败登录记录。默认为`10`"
+      }
+    },
+    {
+      "segment_id": "90032345",
+      "source_content": "#### Email Environment Variables",
+      "source_content_hash": "f5ba6d0b06866f608c14439720d4cc44321581c0a3db3a6570ec8db569444493",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "#### 邮件相关环境变量"
+      }
+    },
+    {
+      "segment_id": "d8378e81",
+      "source_content": ":::note\n\nYou can self host Flagsmith without setting up an email server/gateway. You can invite additional users to the platform\nusing invitation links, and the platform will run fine without email.\n\n:::",
+      "source_content_hash": "af6903408379cecd9fc77af2dc680b36ecc1a24e0f0c4014cc7ac53a23cdf539",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\n您可以不设置邮件服务器/网关而自托管Flagsmith。通过邀请链接即可邀请其他用户加入平台，系统在没有邮件功能的情况下也能正常运行。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "8d11bbb6",
+      "source_content": ":::tip\n\nFlagsmith makes use of the `django_site` table to provide the domain name for email template links. You will need to\nconfigure the record in this table to point to your domain for email links to work.\n\n:::",
+      "source_content_hash": "53b2fb14a05195450fe3d2c41463e1a9cef6a2b7251d0ce837bafce0cb802f78",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nFlagsmith使用`django_site`表提供邮件模板链接的域名。您需要配置该表中的记录指向您的域名，邮件链接才能正常工作。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "a8490b9a",
+      "source_content": "- `SENDER_EMAIL`: Email address from which emails are sent\n- `EMAIL_BACKEND`: One of:\n  - `django.core.mail.backends.smtp.EmailBackend`\n  - `sgbackend.SendGridBackend`\n  - `django_ses.SESBackend`",
+      "source_content_hash": "28d65f6e9f24f0548cdb496e3b4374ad1b968ea81030bdc013118c73a28efe67",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `SENDER_EMAIL`: 发送邮件的发件人地址\n- `EMAIL_BACKEND`: 可选以下之一：\n  - `django.core.mail.backends.smtp.EmailBackend`\n  - `sgbackend.SendGridBackend`\n  - `django_ses.SESBackend`"
+      }
+    },
+    {
+      "segment_id": "740d2e67",
+      "source_content": "If using `django.core.mail.backends.smtp.EmailBackend` you will need to configure:",
+      "source_content_hash": "8e812fd7724e73b573c294ce93f4d52afe20bc09aeba1f719b3cd8f2b7dd1861",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若使用`django.core.mail.backends.smtp.EmailBackend`需配置："
+      }
+    },
+    {
+      "segment_id": "9de5fef5",
+      "source_content": "- `EMAIL_HOST` = env(\"EMAIL_HOST\", default='localhost')\n- `EMAIL_HOST_USER` = env(\"EMAIL_HOST_USER\", default=None)\n- `EMAIL_HOST_PASSWORD` = env(\"EMAIL_HOST_PASSWORD\", default=None)\n- `EMAIL_PORT` = env(\"EMAIL_PORT\", default=587)\n- `EMAIL_USE_TLS` = env.bool(\"EMAIL_USE_TLS\", default=True)",
+      "source_content_hash": "2f10f4d12f1cdd733052929e0169982417ffbaa43e8cc3a8a7211ba0a5548586",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `EMAIL_HOST` = env(\"EMAIL_HOST\", default='localhost')\n- `EMAIL_HOST_USER` = env(\"EMAIL_HOST_USER\", default=None)\n- `EMAIL_HOST_PASSWORD` = env(\"EMAIL_HOST_PASSWORD\", default=None)\n- `EMAIL_PORT` = env(\"EMAIL_PORT\", default=587)\n- `EMAIL_USE_TLS` = env.bool(\"EMAIL_USE_TLS\", default=True)"
+      }
+    },
+    {
+      "segment_id": "850ec775",
+      "source_content": "If using `sgbackend.SendGridBackend` you will need to configure:",
+      "source_content_hash": "ff7aa72948bc5fccccccbce49b885fc48b4baf25ab10ca2d2586914d93fa9bbf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若使用`sgbackend.SendGridBackend`需配置："
+      }
+    },
+    {
+      "segment_id": "9873f94c",
+      "source_content": "- `SENDGRID_API_KEY`: API key for the Sendgrid account",
+      "source_content_hash": "c290bdf7ed42e45fb7e6e1b74e54602ea404066d8b21595106db0ac7773f46f1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `SENDGRID_API_KEY`: Sendgrid账户的API密钥"
+      }
+    },
+    {
+      "segment_id": "c95293b9",
+      "source_content": "If using AWS SES you will need to configure:",
+      "source_content_hash": "03bb4e5cb2c5634484ca55b0df749203997654458fb2d4dca9e50b200422965a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若使用AWS SES需配置："
+      }
+    },
+    {
+      "segment_id": "3d08375e",
+      "source_content": "- `AWS_SES_REGION_NAME`: If using Amazon SES as the email provider, specify the region (e.g. eu-central-1) that contains\n  your verified sender e-mail address. Defaults to us-east-1\n- `AWS_SES_REGION_ENDPOINT`: ses region endpoint, e.g. email.eu-central-1.amazonaws.com. Required when using SES.\n- `AWS_ACCESS_KEY_ID`: If using Amazon SES, these form part of your SES credentials.\n- `AWS_SECRET_ACCESS_KEY`: If using Amazon SES, these form part of your SES credentials.",
+      "source_content_hash": "f7357eb4afe60a9c857aa640a6fc51ecd9233d2f9d0065db3f4d9d450f8ee4df",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `AWS_SES_REGION_NAME`: 使用Amazon SES作为邮件提供商时，指定包含已验证发件人邮箱的区域（如eu-central-1）。默认为us-east-1\n- `AWS_SES_REGION_ENDPOINT`: SES区域端点，如email.eu-central-1.amazonaws.com。使用SES时必须配置\n- `AWS_ACCESS_KEY_ID`: 使用Amazon SES时，作为SES凭证的一部分\n- `AWS_SECRET_ACCESS_KEY`: 使用Amazon SES时，作为SES凭证的一部分"
+      }
+    },
+    {
+      "segment_id": "7f0accbb",
+      "source_content": "### API Telemetry",
+      "source_content_hash": "9c98d364d7047dc881165b383a0b3072286a59bb9d4192addfcfc28090250dcd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### API遥测"
+      }
+    },
+    {
+      "segment_id": "130e2dfb",
+      "source_content": "Flagsmith collects information about self hosted installations. This helps us understand how the platform is being used.\nThis data is _never_ shared outside of the organisation, and is anonymous by design. You can opt out of sending this\ntelemetry on startup by setting the `ENABLE_TELEMETRY` environment variable to `False`.",
+      "source_content_hash": "9a644e6bdb5bc6bebd19095884e357c5731417bdc37a232615d560841045c2d6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith会收集自托管安装的相关信息，这有助于我们了解平台使用情况。这些数据_绝不会_在组织外共享，且设计上保持匿名。您可以通过设置`ENABLE_TELEMETRY`环境变量为`False`来选择退出发送这些遥测数据。"
+      }
+    },
+    {
+      "segment_id": "b2ffb658",
+      "source_content": "We collect the following data on startup per API server instance:",
+      "source_content_hash": "b4463f7b32403291e6adaea23118ac4f25e3a85f919c7e3653bdb3c7d8874b62",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们在每个API服务器实例启动时收集以下数据："
+      }
+    },
+    {
+      "segment_id": "b62fa668",
+      "source_content": "- Total number of Organisations\n- Total number of Projects\n- Total number of Environments\n- Total number of Features\n- Total number of Segments\n- Total number of Users\n- DEBUG django variable\n- ENV django variable\n- API server external IP address",
+      "source_content_hash": "ce7e41d57d2288c0735d3e333c183edcc457ce750c72b65c085db4d67684c5d5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 组织总数\n- 项目总数\n- 环境总数\n- 功能总数\n- 细分总数\n- 用户总数\n- Django的DEBUG变量\n- Django的ENV变量\n- API服务器外部IP地址"
+      }
+    },
+    {
+      "segment_id": "5cd80849",
+      "source_content": "### Creating a secret key",
+      "source_content_hash": "ca1f8b12622ec5977729bd31c6cecf2256d364c57cd4f31c9187221e1c4412f2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建密钥"
+      }
+    },
+    {
+      "segment_id": "8862791b",
+      "source_content": "It is important to also set an environment variable on whatever platform you are using for `DJANGO_SECRET_KEY`. If one\nis not set then Django will create one for you each time the application starts up, however, this will cause unexpected\nbehaviour as it is used by Django for encryption of e.g. session tokens, etc. To avoid these issues, please create set\nthe `DJANGO_SECRET_KEY` variable. Django recommends that this key should be at least 50 characters in length, however,\nit is up to you to configure the key how you wish. Check the `get_random_secret_key()` method in the Django source code\nif you want more information on what the key should look like.",
+      "source_content_hash": "af1939ad12bd07245b496e94850cc48eb41811873758450fd68a6f9ac789a5a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "务必在您使用的平台上设置 `DJANGO_SECRET_KEY` 环境变量。若未设置，Django 会在每次应用启动时自动生成一个密钥，但这会导致意外行为，因为该密钥被 Django 用于会话令牌等数据的加密。为避免此类问题，请创建并设置 `DJANGO_SECRET_KEY` 变量。Django 建议该密钥长度至少为 50 个字符，但具体配置方式由您决定。如需了解密钥格式详情，可参考 Django 源码中的 `get_random_secret_key()` 方法。"
+      }
+    },
+    {
+      "segment_id": "c48a3f55",
+      "source_content": "### StatsD Integration",
+      "source_content_hash": "684b964f1e816bdceb3a211f501d1616d1137138afb745384dd97e8aa603004a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### StatsD 集成"
+      }
+    },
+    {
+      "segment_id": "d6c9e4cd",
+      "source_content": "The application is run using python's gunicorn. As such, we are able to tell it to send statsd metrics to a given host\nfor monitoring purposes. Using our docker image, this can be done and configured by providing the following environment\nvariables.",
+      "source_content_hash": "76d6743d2c2d3ab2614d45405753222d22869f1a969a0914a2114099dd492b3c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用通过 Python 的 gunicorn 运行，因此可配置其将 statsd 指标发送至指定主机用于监控。使用我们的 Docker 镜像时，可通过以下环境变量进行配置："
+      }
+    },
+    {
+      "segment_id": "cca16198",
+      "source_content": "- `STATSD_HOST`: the URL of the host that will collect the statsd metrics\n- `STATSD_PORT`: optionally define the port on the host which is listening for statsd metrics (default: 8125)\n- `STATSD_PREFIX`: optionally define a prefix for the statsd metrics (default: flagsmith.api)",
+      "source_content_hash": "eb94c3e08050dd047f6433dd83b4a85aec105ba7be99c13624af282c661373a5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `STATSD_HOST`: 接收 statsd 指标的主机 URL\n- `STATSD_PORT`: 可选定义主机监听 statsd 指标的端口（默认：8125）\n- `STATSD_PREFIX`: 可选定义 statsd 指标的前缀（默认：flagsmith.api）"
+      }
+    },
+    {
+      "segment_id": "647ea627",
+      "source_content": "Below is an example docker compose setup for using statsd with datadog. Note that it's important to set the\n`DD_DOGSTATSD_NON_LOCAL_TRAFFIC` environment variable to `true` to ensure that your datadog agent is able to accept\nmetrics from external services.",
+      "source_content_hash": "1790fb3cdd4725704c71294038a449565cc7936c4ad58b672cac9c075d3527fc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是配合 Datadog 使用 statsd 的 Docker Compose 配置示例。注意必须将 `DD_DOGSTATSD_NON_LOCAL_TRAFFIC` 环境变量设为 `true`，以确保 Datadog 代理能接收外部服务的指标。"
+      }
+    },
+    {
+      "segment_id": "7867f12c",
+      "source_content": "```yaml\nversion: '3'\nservices:\n postgres:\n  image: postgres:11.12-alpine\n  environment:\n   POSTGRES_PASSWORD: password\n   POSTGRES_DB: flagsmith\n  container_name: flagsmith_postgres\n api:\n  build:\n   dockerfile: Dockerfile\n   context: ../../api\n  environment:\n   DATABASE_URL: postgres://postgres:password@postgres:5432/flagsmith\n   DJANGO_SETTINGS_MODULE: app.settings.local\n   STATSD_HOST: datadog\n  ports:\n   - '8000:8000'\n  depends_on:\n   - postgres\n  links:\n   - postgres\n   - datadog\n datadog:\n  image: gcr.io/datadoghq/agent:7\n  environment:\n   - DD_API_KEY=<API KEY>\n   - DD_SITE=datadoghq.eu\n   - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true\n  volumes:\n   - /var/run/docker.sock:/var/run/docker.sock\n   - /proc/:/host/proc/:ro\n   - /sys/fs/cgroup:/host/sys/fs/cgroup:ro\n   - /var/lib/docker/containers:/var/lib/docker/containers:ro\n```",
+      "source_content_hash": "795f36c9178a9ad6de1f996e588484b0678913c581549f4a327b203106de00b1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7867f12c"
+      }
+    },
+    {
+      "segment_id": "475959f2",
+      "source_content": "If not running our application via docker, you can find gunicorn's documentation on statsd instrumentation\n[here](https://docs.gunicorn.org/en/stable/instrumentation.html)",
+      "source_content_hash": "a9333dfefd4ac96ee03979426c153acffc5e177381b36b5a9bdacdf7f852200c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若非通过 Docker 运行应用，可参阅 gunicorn 的 [statsd 指标文档](https://docs.gunicorn.org/en/stable/instrumentation.html)"
+      }
+    },
+    {
+      "segment_id": "b98aff93",
+      "source_content": "## Caching",
+      "source_content_hash": "662dcec212d64216418e4285034eda4d5cd40aea26d13a431f995130322cb514",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 缓存机制"
+      }
+    },
+    {
+      "segment_id": "79496df8",
+      "source_content": "The application makes use of caching in a couple of locations:",
+      "source_content_hash": "68906279f1e7a500bdf7cfd878fd02c2057deea7c838199637b7f0211573307d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "应用在以下场景使用缓存："
+      }
+    },
+    {
+      "segment_id": "84c2bceb",
+      "source_content": "1. Environment authentication - the application utilises caching for the environment object on all endpoints that use\n   the X-Environment-Key header. By default, this is configured to use an in-memory cache. This can be configured using\n   the options defined below.\n2. Environment flags - the application utilises an in memory cache for the flags returned when calling /flags. The\n   number of seconds this is cached for is configurable using the environment variable `\"CACHE_FLAGS_SECONDS\"`\n3. Project Segments - the application utilises an in memory cache for returning the segments for a given project. The\n   number of seconds this is cached for is configurable using the environment variable\n   `\"CACHE_PROJECT_SEGMENTS_SECONDS\"`.\n4. Flags and Identities endpoint caching - the application provides the ability to cache the responses to the GET /flags\n   and GET /identities endpoints. The application exposes the configuration to allow the caching to be handled in a\n   manner chosen by the developer. The configuration options are explained in more detail below.",
+      "source_content_hash": "3581b63c928d606ae48fe3e10a039594ee124893a0d86d327bb0e5c9dccde295",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 环境认证 - 所有使用 X-Environment-Key 请求头的端点会缓存环境对象，默认使用内存缓存。可通过下文配置项调整。\n2. 环境特征标志 - 调用 /flags 接口时，返回的特征标志会缓存在内存中，缓存时长通过 `\"CACHE_FLAGS_SECONDS\"` 环境变量配置。\n3. 项目细分 - 项目细分数据会缓存在内存中，缓存时长通过 `\"CACHE_PROJECT_SEGMENTS_SECONDS\"` 环境变量配置。\n4. 特征标志与身份端点缓存 - 支持缓存 GET /flags 和 GET /identities 接口响应，具体缓存策略配置详见下文。"
+      }
+    },
+    {
+      "segment_id": "20ca1bf3",
+      "source_content": "### Flags & Identities endpoint caching",
+      "source_content_hash": "3a37cdd3770b1345f7b77e3f71868a88bd2b103044c2c6d07fd0dc8d37240c8d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 特征标志与身份端点缓存"
+      }
+    },
+    {
+      "segment_id": "7ba83bb3",
+      "source_content": "To enable caching on the flags and identities endpoints (GET requests only), you must set the following environment\nvariables:",
+      "source_content_hash": "594d4c0682127444b48cc6ae9177fcac189f8c3f3831e7bbda4338a70c20baf0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要启用这两个端点（仅 GET 请求）的缓存，需设置以下环境变量："
+      }
+    },
+    {
+      "segment_id": "71985cbd",
+      "source_content": "| Environment Variable                                               | Description                                                                                                                    | Example value                                          | Default                                       |\n| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | --------------------------------------------- |\n| <code>GET\\_[FLAGS&#124;IDENTITIES]\\_ENDPOINT_CACHE_SECONDS</code>  | Number of seconds to cache the response to `GET /api/v1/flags`                                                                 | `60`                                                   | `0`                                           |\n| <code>GET\\_[FLAGS&#124;IDENTITIES]\\_ENDPOINT_CACHE_BACKEND</code>  | Python path to the django cache backend chosen. See documentation [here](https://docs.djangoproject.com/en/3.2/topics/cache/). | `django.core.cache.backends.memcached.PyMemcacheCache` | `django.core.cache.backends.dummy.DummyCache` |\n| <code>GET\\_[FLAGS&#124;IDENTITIES]\\_ENDPOINT_CACHE_LOCATION</code> | The location for the cache. See documentation [here](https://docs.djangoproject.com/en/3.2/topics/cache/).                     | `127.0.0.1:11211`                                      | `get_flags_endpoint_cache`                    |",
+      "source_content_hash": "3ba2edfa728c325cbfcb1aa5f7ecc3ef2ca0bc601ea0de67c7924fe4ca0d266b",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_71985cbd"
+      }
+    },
+    {
+      "segment_id": "a24efd7d",
+      "source_content": "An example configuration to cache both flags and identities requests for 30 seconds in a memcached instance hosted at\n`memcached-container`:",
+      "source_content_hash": "eefb1331168b5e00e4372f5fe42fb34a7b3ef50ac00f7746ece7d99c01fe5c5e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "示例配置：在位于 `memcached-container` 的 memcached 实例中缓存特征标志和身份请求 30 秒："
+      }
+    },
+    {
+      "segment_id": "9f4bf2e5",
+      "source_content": "```\nGET_FLAGS_ENDPOINT_CACHE_SECONDS: 30\nGET_FLAGS_ENDPOINT_CACHE_BACKEND: django.core.cache.backends.memcached.PyMemcacheCache\nGET_FLAGS_ENDPOINT_CACHE_LOCATION: memcached-container:11211\nGET_IDENTITIES_ENDPOINT_CACHE_SECONDS: 30\nGET_IDENTITIES_ENDPOINT_CACHE_BACKEND: django.core.cache.backends.memcached.PyMemcacheCache\nGET_IDENTITIES_ENDPOINT_CACHE_LOCATION: memcached-container:11211\n```",
+      "source_content_hash": "abb566f39bfc060b92be3b3a7f4e04e5b8efd51be6ce0d872a1abc8c15761a04",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9f4bf2e5"
+      }
+    },
+    {
+      "segment_id": "407ddf18",
+      "source_content": "### Environment authentication caching",
+      "source_content_hash": "bdc1c2e85499ade6e143163e610428057a6ca1b3e3138cbaad05bc4c3846b58d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境认证缓存"
+      }
+    },
+    {
+      "segment_id": "a2532daf",
+      "source_content": "On each request using the X-Environment-Key header, the flagsmith application retrieves the environment to perform the\nrelevant caching. This can be configured using environment variables to create a shared cache with a longer timeout. The\ncache will be cleared automatically by certain actions in the platform when the environment changes.",
+      "source_content_hash": "08f71babc214f449a257981aa4b0d03827fe6b3f58df7544e2158e3eec9eea80",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每次使用 X-Environment-Key 请求头时，Flagsmith 会检索环境对象进行缓存。可通过环境变量配置共享缓存及更长超时时间。当平台中环境发生变更时，缓存会自动清除。"
+      }
+    },
+    {
+      "segment_id": "9736b904",
+      "source_content": "| Environment Variable         | Description                                                                                                                    | Example value                                          | Default                                       |\n| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ | --------------------------------------------- |\n| `ENVIRONMENT_CACHE_SECONDS`  | Number of seconds to cache the environment for                                                                                 | `60`                                                   | `86400` ( = 24h)                              |\n| `ENVIRONMENT_CACHE_BACKEND`  | Python path to the django cache backend chosen. See documentation [here](https://docs.djangoproject.com/en/3.2/topics/cache/). | `django.core.cache.backends.memcached.PyMemcacheCache` | `django.core.cache.backends.dummy.DummyCache` |\n| `ENVIRONMENT_CACHE_LOCATION` | The location for the cache. See documentation [here](https://docs.djangoproject.com/en/3.2/topics/cache/).                     | `127.0.0.1:11211`                                      | `environment-objects`                         |",
+      "source_content_hash": "0e19b23efdbd2eec6e03426c4dbf946e1d168819cb24f7e504c4c15d06e0a04b",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9736b904"
+      }
+    },
+    {
+      "segment_id": "4692a8bd",
+      "source_content": "## Unified Front End and Back End Build",
+      "source_content_hash": "a65b269653d8405ff75b3ad0b5e0b75d37cf02532996a8ee9ac9141ce6da65a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 前后端统一构建"
+      }
+    },
+    {
+      "segment_id": "a5a5c34e",
+      "source_content": "You can run Flagsmith as a single application/docker container using our unified builds. These are available on\n[Docker Hub](https://hub.docker.com/repository/docker/flagsmith/flagsmith) but you can also run the front end as part of\nthe Django Application. Steps to do this:",
+      "source_content_hash": "51bf2f32212250fb346c5e81623970ecf76556b46e6362bcb69e28ec7055e276",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过统一构建将 Flagsmith 作为单一应用/Docker 容器运行。这些构建版本已在 [Docker Hub](https://hub.docker.com/repository/docker/flagsmith/flagsmith) 发布，也可按以下步骤将前端集成到 Django 应用中运行："
+      }
+    },
+    {
+      "segment_id": "efb5ceec",
+      "source_content": "1. `cd frontend; npm run bundledjango`\n2. `cd ../api; python manage.py collectstatic`\n3. `python manage.py runserver`",
+      "source_content_hash": "fb4be7c0f8c15d45906a1a3520a8ed6baffc942fe2c4a58c0b97874c37657be5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. `cd frontend; npm run bundledjango`\n2. `cd ../api; python manage.py collectstatic`\n3. `python manage.py runserver`"
+      }
+    },
+    {
+      "segment_id": "6bb40e64",
+      "source_content": "### How it works",
+      "source_content_hash": "14b51d1baabe63d7520dbb80d1ae75de1b0418131ca5b43e7605277817d59c44",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 工作原理"
+      }
+    },
+    {
+      "segment_id": "40e5a2ef",
+      "source_content": "Webpack compiles a front end build, sourcing `api/app/templates/index.html`. It places the compiled JS and CSS assets to\n`api/static` then copies the annotated `index.html` page to `api/app/templates/webpack/index.html`.",
+      "source_content_hash": "7b631ff54af13d564866d4f6f2bfc74074366f0ff6229f439c5506e4f94dc8a1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Webpack会编译前端构建，从`api/app/templates/index.html`获取源文件。它将编译后的JS和CSS资源放置到`api/static`目录下，然后将带注释的`index.html`页面复制到`api/app/templates/webpack/index.html`。"
+      }
+    },
+    {
+      "segment_id": "ec3c0760",
+      "source_content": "The Django `collectstatic` command then copies all the additional static assets that Django needs, including\n`api/app/templates/webpack/index.html`, into `api/static`.",
+      "source_content_hash": "ca1f7a59b6ff4156f93a07cabb7ace88be1714d59560dfd0029d10d10ab97526",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接着，Django的`collectstatic`命令会复制Django所需的所有其他静态资源，包括`api/app/templates/webpack/index.html`，到`api/static`目录中。"
+      }
+    },
+    {
+      "segment_id": "db5f7de0",
+      "source_content": "## Information for Developers working on the project",
+      "source_content_hash": "98fedc497821b13cec27e5b2197cfbfe896eb120691e7ac566daf576ac333bf6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 项目开发人员须知"
+      }
+    },
+    {
+      "segment_id": "e60b0fa0",
+      "source_content": "### Stack",
+      "source_content_hash": "939167851ea78173e72bbc4aee68d4327b3095ebefefba3cf26aa7d36632e8cd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 技术栈"
+      }
+    },
+    {
+      "segment_id": "01279a90",
+      "source_content": "- Python\n- Django\n- Django Rest Framework",
+      "source_content_hash": "7859918e7728bbf7fe7f007fa99f43b48ff28a59800a2585a90bc2d3997d611a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Python\n- Django\n- Django Rest Framework"
+      }
+    },
+    {
+      "segment_id": "486ab0ab",
+      "source_content": "### Development Environment for Contributers",
+      "source_content_hash": "fa3a3caf623fac7c489df1ff40caa45e0d7d50df33819eb72147aad6f9dfbbfc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 贡献者开发环境"
+      }
+    },
+    {
+      "segment_id": "8be3f6dc",
+      "source_content": "We're using [pip-tools](https://github.com/jazzband/pip-tools) to manage packages and dependencies.",
+      "source_content_hash": "85ab9c0f87432b9b0cc0d90a26c7160d4fe6bf02396cefabe3e45870b7543502",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们使用[pip-tools](https://github.com/jazzband/pip-tools)来管理包和依赖项。"
+      }
+    },
+    {
+      "segment_id": "ceff655b",
+      "source_content": "To upgrade packages or add new ones:",
+      "source_content_hash": "12d39a4ac2f6a9aa2f6439c9fb21708c6401891a31eb8ccd03da2b0db6d39ade",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "升级包或添加新包的方法："
+      }
+    },
+    {
+      "segment_id": "a9640887",
+      "source_content": "```bash\npip install -r requirements-dev.txt\npip-compile\n```",
+      "source_content_hash": "5ae41032b96fd32e06f3e61ec34bd1cfca4a8d354fd1bd525b9faf7c76bb69bd",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a9640887"
+      }
+    },
+    {
+      "segment_id": "714a0305",
+      "source_content": "### Requirements with pip-tools",
+      "source_content_hash": "c36852035d466d0b040256818a81393288e1c2a1801a4723767ff449b298d387",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 使用pip-tools管理依赖"
+      }
+    },
+    {
+      "segment_id": "b136c0e9",
+      "source_content": "We are using [pip-tools](https://github.com/jazzband/pip-tools) to manage dependencies.",
+      "source_content_hash": "d89d0eac9d53687018b2bbdb2a0a78109d6ce7e77f8ccf78cbac9c426c8103c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们使用[pip-tools](https://github.com/jazzband/pip-tools)来管理依赖项。"
+      }
+    },
+    {
+      "segment_id": "96bae975",
+      "source_content": "To add a new library to the project, edit requirements.in, then:",
+      "source_content_hash": "dcd48ee509b17fb10ab1ad8a0cc57a3bf43b8428436c35b363af667c9ac8e5b0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要向项目添加新库，请编辑requirements.in文件，然后执行："
+      }
+    },
+    {
+      "segment_id": "b4347cec",
+      "source_content": "```bash\n# This step will overwrite requirements.txt\npip-compile requirements.in\npip install -r requirements.txt\n```",
+      "source_content_hash": "a8dc7230483f09b4c6a9140c819d882c1b5a177d533f74ab0c540356d992638a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b4347cec"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/hosting/locally-api.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.932743+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "27962e5307d6cb73c4cee303a62b34f326ca2644614ccb4425f96db318aa7640"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/google-cloud.md",
+  "source_file_content_hash": "6a7edc8816421a83934291662536f0de6c3718e1f628fd553021511553f60396",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Deploying Flagsmith on Google Cloud\nsidebar_label: Google Cloud\nsidebar_position: 75\n---",
+      "source_content_hash": "163771cb64003cf21d1fb6baa5035a666f0ce6b0673c8339ad7c565b6029595b",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "We recommend running Flagsmith on Google Cloud Platform using the following services:",
+      "source_content_hash": "d8577870aa3593a313bc1fa9b66948878813373b29ca464e676c66124931a392",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们推荐使用以下Google云平台服务运行Flagsmith："
+      }
+    },
+    {
+      "segment_id": "be33979e",
+      "source_content": "- [Cloud Run](https://cloud.google.com/run) for the application server\n- [Cloud SQL/Postgres](https://cloud.google.com/sql/postgresql) for the database",
+      "source_content_hash": "cdfe20349fb52def408bbd7ab3720551e5b85e450b3399243d27565a07529ac1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Cloud Run](https://cloud.google.com/run) 作为应用服务器\n- [Cloud SQL/Postgres](https://cloud.google.com/sql/postgresql) 作为数据库"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## Cloud Run",
+      "source_content_hash": "c34ba93b9f95e4beffbb10fc7c41b350f25729f667f7c07204e8335d492c2384",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Cloud Run"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Unless you have specific requirements, we recommend running the\n[unified Docker image](https://hub.docker.com/repository/docker/flagsmith/flagsmith).",
+      "source_content_hash": "072f6250586c77eeee3aa8592183c59d4984eb4a5ee8cab62002747f06db8754",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除非有特殊需求，我们建议运行[统一Docker镜像](https://hub.docker.com/repository/docker/flagsmith/flagsmith)。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "It's best to study our [docker-compose file](https://github.com/Flagsmith/self-hosted/blob/main/docker-compose.yml) in\norder to set up the base environment variables. Further environment variables are\n[described here](locally-api.md#environment-variables).",
+      "source_content_hash": "574a08dcf82c8c86c9232044b868a543238d1f7c04496e23c8957758602c2885",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "建议参考我们的[docker-compose文件](https://github.com/Flagsmith/self-hosted/blob/main/docker-compose.yml)来配置基础环境变量，更多环境变量配置可[参阅此处](locally-api.md#environment-variables)。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "Run a single Cloud Run service with at least two container instances running for failover. For more info on sizing, see\nour [scaling page](/deployment/configuration/sizing-and-scaling). We recommend running with at least\n[2 minimum instances](https://cloud.google.com/run/docs/configuring/min-instances) to avoid cold starts particularly in\norder to serve low-latency requests to the SDKs.",
+      "source_content_hash": "e0a151828cf4e47af3b8468230a949e870edecee660a03661bcf106acffde96d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行单个Cloud Run服务时，建议至少保持两个容器实例以实现故障转移。关于容量规划详情，请参阅我们的[扩展指南](/deployment/configuration/sizing-and-scaling)。为规避冷启动问题（特别是需要为SDK提供低延迟响应时），建议配置至少[2个最小实例](https://cloud.google.com/run/docs/configuring/min-instances)。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "If you are using health-checks, make sure to use `/health` as the health-check endpoint for both the API and the Front\nEnd.",
+      "source_content_hash": "a52ea66a1ed3c78a39763245cbb99172026156f5d99f9f90906ad6b6bf42df78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若启用健康检查，请确保对API和前端均使用`/health`作为健康检查端点。"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Cloud SQL/Postgres",
+      "source_content_hash": "ed590295c35d1c17feeb1759feb0b64c1363cb7e591c56fb8ef655f1bf6caf97",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Cloud SQL/Postgres"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "We support Postgres versions `11+`. Our SaaS platform runs in production on PostgreSQL version `11`. When starting for\nthe first time, the application will create that database schema automatically. Schema upgrades will also happen\nseamlessly during application server upgrades.",
+      "source_content_hash": "93165024e64e1a5905e7afb95d6c267ffe817ba7d8a81a30ca429909f9086602",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们支持Postgres `11+`版本。SaaS生产环境运行于PostgreSQL 11版本。初次启动时，应用将自动创建数据库模式，后续应用服务器升级时模式变更也将自动完成。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/google-cloud.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.934030+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "6a7edc8816421a83934291662536f0de6c3718e1f628fd553021511553f60396"
+  }
+}

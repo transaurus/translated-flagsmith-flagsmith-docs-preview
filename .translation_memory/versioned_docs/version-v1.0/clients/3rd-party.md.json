@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/3rd-party.md",
+  "source_file_content_hash": "14625f387912913c9e2b898b713b5be20d80853f920e1663e9b1bbc1507e5900",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Flagsmith 3rd Party Client SDKs\nsidebar_label: 3rd Party\nsidebar_position: 6\n---",
+      "source_content_hash": "b2e3a74838134e97a139f544534c51265cbcd62d12c8a213238db96a11155b0f",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# 3rd Party SDKs",
+      "source_content_hash": "300cbc27f2dff0f10625e37dfd649db75c362ecf9b0f182a9834e89ae344d652",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 第三方 SDK"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Community members have worked on their own SDKs which we have listed below. If you've written an SDK and want it listed\nhere please get in touch!",
+      "source_content_hash": "46d49dde9ae060ffc76adeecb78c3f2428a857cdc928301b8801df902d2a7db9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "社区成员开发了以下列出的自有 SDK。如果您编写了 SDK 并希望在此列出，请联系我们！"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Vue",
+      "source_content_hash": "5cf135fafcc4f34ed44373bbf361a5c8bf832311f5cf17d3dd216d290997d8b7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Vue"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "[Flagsmith client for Vue applications](https://github.com/mstfymrtc/flagsmith-vue-client).",
+      "source_content_hash": "976209f03414fa3d593ec7cb54f5f1b3ff479477f581d74d919284e65bcbea52",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Vue 应用专用的 Flagsmith 客户端](https://github.com/mstfymrtc/flagsmith-vue-client)"
+      }
+    },
+    {
+      "segment_id": "cbe57f9d",
+      "source_content": "## Clojure",
+      "source_content_hash": "5e9ff4161e05247ea84eb2c9956dbf1f32ef967628400f9934509947652973bd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Clojure"
+      }
+    },
+    {
+      "segment_id": "39b3772c",
+      "source_content": "[A Clojure wrapper around the Flagsmith Java SDK](https://github.com/Global-Online-Health/flagsmith-clj).",
+      "source_content_hash": "e05440c3edb467955d88453c91933ab8b3ba33d72af851b74cbf1cfc047f743f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[基于 Flagsmith Java SDK 的 Clojure 封装](https://github.com/Global-Online-Health/flagsmith-clj)"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## Laravel",
+      "source_content_hash": "45c29586c0ad555e905dfd02040ea143557c2237faaa254d3ea098a4333738ba",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Laravel"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "[A PHP/Laravel Framework library](https://github.com/clearlyip/laravel-flagsmith)",
+      "source_content_hash": "93c7b3761e102e5a15e61803713d79beb4f8acd286b4d258ae07a05225a65d45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[PHP/Laravel 框架库](https://github.com/clearlyip/laravel-flagsmith)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/3rd-party.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.926314+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "14625f387912913c9e2b898b713b5be20d80853f920e1663e9b1bbc1507e5900"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/micro-service-architectures.md",
+  "source_file_content_hash": "3bf51ce07830e1905c6e438c7a0af8129ea5ca0d55bfb2bfcd0211dffb56e9f9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Feature Flags and the Micro-Service Architecture\n---",
+      "source_content_hash": "009b0358a359125f398d9681fdf37210d18dfd2e6e65788871ca6d51e46e94af",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## The Problem",
+      "source_content_hash": "951ec64cc337cc0aaf9d99c8b2b144cb5e66e92fcf63c9f37a75f1454d6f3e70",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 问题背景"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Sometimes it can be tricky to figure out how to map Flagsmith Projects to your own Applications. When you are working on\nan application that has 1 core server-side service, it's generally fairly obvious to map 1 Flagsmith Project to your\nserver-side application.",
+      "source_content_hash": "3e4f8a72f9f11bf581b6314c9c598f9c119147e29504fc22c244ca5df9a7a3b4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "有时很难确定如何将Flagsmith项目映射到您自己的应用程序。当您开发一个具有单一核心服务器端服务的应用时，通常很明显可以将1个Flagsmith项目对应到您的服务器端应用。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "Things get a bit more tricky when you start working with a micro-service architecture. Let's say you have 5\nmicro-services that are all employed to power your front end application. Should you create a single Flagsmith Project\nto cover all 5 services? Or 5 Projects, one for each service? Or maybe some number in between?",
+      "source_content_hash": "9aa1b2cd1d3d7d318e678311eae93f6585e0c70012793a57bb7539386a2d263d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "但当您开始使用微服务架构时，情况会变得复杂。假设您有5个微服务共同支撑前端应用，这时应该为所有5个服务创建单个Flagsmith项目？还是为每个服务创建5个独立项目？亦或是折中方案？"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## The Solution",
+      "source_content_hash": "85aef9fe7503ca480a1dbc8de4cdd0317c4517f3d1969ca7572a8ce8e13eb16b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 解决方案"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "Like a lot of problems in Software Engineering, the right answer is \"it depends\". Maybe not the most helpful answer, but\neasily the most accurate! What it boils down to is coupling.",
+      "source_content_hash": "490c9e7eade4454bbe40ea083fca1da912fc9ee9288a3cf7ed9c81baac4b1e1e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "正如软件工程中的许多问题，正确答案是\"视情况而定\"。这个回答可能不够具体，但绝对是最准确的！核心问题在于耦合度。"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Generally if we are looking at a collection of micro-services that are tightly coupled, they may well be a good\ncandidate for sharing a single Flagsmith project. On the other had, if your services are loosely coupled with will\ndefined interface boundaries, you will probably want to go with mapping 1 Flagsmith project to 1 micro-service.",
+      "source_content_hash": "bda3b59788e6937d5c5a54e222f3dd84728895cbdf961efdbf889aba9812a714",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通常，如果一组微服务是紧密耦合的，它们可能适合共享单个Flagsmith项目。反之，如果服务间是松耦合且具有明确定义的接口边界，则建议采用1个Flagsmith项目对应1个微服务的模式。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "### Why though?",
+      "source_content_hash": "cb2a1b35bbf0a8323157ace55760ae0f72006cda59829218fe820d0bb7fe8742",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 原因何在？"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "It really boils down to interface boundaries. If you are writing a service that has an agreed upon, established API\ninterface, the services consuming your API really don't care too much about your implementation. That being the case, by\ndefinition they shouldn't really care about your feature flags either. Why would they?",
+      "source_content_hash": "3f26fc304f61be2b3ccf6ee7a781292cbe92e569617c54b45f7ab80afa337ab9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这本质上取决于接口边界。如果您开发的服务具有已达成共识的API接口，那么消费该API的服务并不需要过多关注实现细节。既然如此，它们也不应该过度关注您的功能开关，这合情合理。"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "On the other hand, if you are working on a service that is tightly coupled with another, you probably do care about\ntheir flags. Let's take an example. Imagine three micro-services that share a common database. You want to make a schema\nchange to the database, but that means coordinating the new schema code amongst your 3 services. Coordinating\ndeployments is fraught with danger, but using feature flags is a great solution to this problem. In this case, having\nthe 3 micro-services sharing the 1 flagsmith project is really helpful",
+      "source_content_hash": "82b802496fc84aa1cdd0cc33db0cfaf1735847523106932ee0b08217eb8818e9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一方面，如果您开发的服务与其他服务紧密耦合，您确实需要关注它们的开关状态。举例说明：假设三个微服务共享同一个数据库，当您需要修改数据库schema时，必须协调三个服务同步更新schema代码。这种部署协调充满风险，而使用功能开关就能优雅解决这个问题。这种情况下，让三个微服务共享同一个Flagsmith项目就非常实用。"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "### Other things to consider",
+      "source_content_hash": "b193d219bb9f3730083a5c0b4bd013be65a7fbf84a0c300c79fb7ea343495448",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 其他考量因素"
+      }
+    },
+    {
+      "segment_id": "135468ee",
+      "source_content": "If you have a single Flagsmith project powering several micro-services, you need to be aware of the following aspects.",
+      "source_content_hash": "3ce01966335344645d85f709338ac603e981ba4e40175d1b638fd3cd65c602d7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若使用单个Flagsmith项目支撑多个微服务，您需要注意以下方面："
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "All the team members of the project will have access to your flags. If an engineer on another team doesn't really have\nany business managing your production flags, it might be a sign to split out into 2 Flagsmith projects.",
+      "source_content_hash": "c3c6b78c1d238de2f98e8f1e9a1358e41109aa9d184c4012af8a29d064eab791",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目所有成员都将拥有功能开关的管理权限。如果其他团队的工程师无需操作您的生产环境开关，这可能意味着需要拆分为独立的Flagsmith项目。"
+      }
+    },
+    {
+      "segment_id": "1042b50d",
+      "source_content": "It can be helpful for segment definitions to be shared amongst micro-services. That would point to having a single\nFlagsmith project. If the context that your users access your service is the same/similar, sharing segments makes a lot\nof sense.",
+      "source_content_hash": "e4f848019ba205723c53ad88e8b3bfe995a73daadc449a8bb515f7304a217ff0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当微服务之间需要共享用户分群定义时，采用单一Flagsmith项目会更具优势。如果用户访问不同服务的上下文相似，共享分群逻辑就非常合理。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/micro-service-architectures.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.945397+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3bf51ce07830e1905c6e438c7a0af8129ea5ca0d55bfb2bfcd0211dffb56e9f9"
+  }
+}

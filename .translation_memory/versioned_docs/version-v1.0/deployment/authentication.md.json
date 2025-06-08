@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/authentication.md",
+  "source_file_content_hash": "93cf9955a6d93533810f0f054e3d39d8be7645107eefa8c15c4d22eb818f39d6",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Authentication\nsidebar_label: Authentication\nsidebar_position: 78\n---",
+      "source_content_hash": "600a29264ca22028d1d6da695ff2280d17934b39a8c37f1869e42f04c06a6bc0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## SAML",
+      "source_content_hash": "81ea58ec59fc6890cf1f19e5e6fdfdb2003d86954e948b236e1855aa19b64115",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## SAML配置"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "To allow an Organisation on the Flagsmith platform to login using SAML authentication, you'll need to access the admin\ninterface. Instructions on how to access the admin interface can be found\n[here](https://docs.flagsmith.com/deployment/configuration/django-admin).",
+      "source_content_hash": "3f4ca3c19ac31be25bd0474e7114249b4aa5e2a86b2eda1958f2dfcd2a2a079e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要为Flagsmith平台上的组织启用SAML认证登录，您需要访问管理界面。具体访问方法可参考[此处文档](https://docs.flagsmith.com/deployment/configuration/django-admin)。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "Once you've logged into the django admin interface, you'll need to click on the 'Saml Configurations' option in the menu\non the left. From here, you should see a list of existing SAML configuration entities. To create a new one, click on the\n'ADD SAML CONFIGURATION' button in the top right corner of the screen.",
+      "source_content_hash": "56b7a655789ed7a905781c8999e320ea8e97a4f26c2750969c05972ab702244e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "登录Django管理界面后，需点击左侧菜单中的'Saml Configurations'选项。此处将显示现有SAML配置实体列表。如需新建配置，请点击屏幕右上角的'ADD SAML CONFIGURATION'按钮。"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "You should see a screen similar to the following.",
+      "source_content_hash": "5646b1ed9531d5ef691d7b0d8602a813d58bff139d87b02a2651a43c4fa90c69",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您将看到类似下图的界面。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "![SAML Auth Setup](/img/saml-auth-setup.png)",
+      "source_content_hash": "a751048b1fc272b870b3c4714ded2b0d32a8ec645e31d6e728698049f0fe62c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![SAML认证设置](/img/saml-auth-setup.png)"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "From the drop down next to **Organisation**, select the organisation in the Flagsmith platform that you want to\nconfigure for SAML authentication.",
+      "source_content_hash": "e49d76618d65056f7ed31a7dd9ee2a04aaa531dba513fb8c88bb590664028c9b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**Organisation**下拉菜单中，选择需要配置SAML认证的Flagsmith平台组织。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Next to **Organisation name**, add a name without any spaces that identifies the organisation uniquely for the\ninstallation of Flagsmith you're working on. This is what users will provide when authenticating with SAML so that the\nplatform knows where to redirect them.",
+      "source_content_hash": "33b949851851b88ca780e91a0dc0ab143fa8a6693b5737abb2e68bf677175923",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**Organisation name**旁输入不含空格的唯一标识名称。用户将通过该名称进行SAML认证，平台据此确定重定向目标。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Next to **Frontend url**, add in the URL at which your Frontend application is running. This is where users will be\nredirected to on a successful SAML authentication.",
+      "source_content_hash": "a66bfe3f237d713f0cc9b054ad5b30ac16c7250bab15c90a3f2ead9472252768",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在**Frontend url**字段填入前端应用运行地址，用户完成SAML认证后将重定向至此。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "For now, we'll leave **Idp metadata xml** empty.",
+      "source_content_hash": "831e527c14644051a755937fd1bac95d762be943071af93d6cc7250fcc4feb10",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "暂时保持**Idp metadata xml**字段为空。"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Once you've completed these fields, hit the **Save** button to create the SAML configuration.",
+      "source_content_hash": "17ff5b280387cf391a6e3321afd5a2b1d9e7dec16d146ba17519c9fda9e1e28a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成上述字段填写后，点击**Save**按钮创建SAML配置。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Now, we need to grab the Flagsmith service provider metadata to configure the integration on your IDP. To do this, open\na new browser tab and head to [https://api.flagsmith.com/api/v1/auth/saml/\\<organisation\nname\\>/metadata/](https://api.flagsmith.com/api/v1/auth/saml/\\<organisation name\\>/metadata/) where _\\<organisation\nname\\>_ is the name you provided above. From here, copy and paste what you see in the web page into a new text file and\nsave that file as `flagsmith-sp-metadata.xml` or similar.",
+      "source_content_hash": "eb02b0b68c0a2ca2ff17e0290627bfd232cd63121698e05e26d89b3c8707eb02",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "接下来需要获取Flagsmith服务提供者元数据以配置身份提供商(IDP)集成。新建浏览器标签页访问[https://api.flagsmith.com/api/v1/auth/saml/\\<组织名称\\>/metadata/](https://api.flagsmith.com/api/v1/auth/saml/\\<组织名称\\>/metadata/)，其中_\\<组织名称\\>_即前文填写的名称。将网页内容复制保存为`flagsmith-sp-metadata.xml`文本文件。"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "Note: do not use 'save page as' from your browser as this will likely result in the metadata being incorrect and the\nintegration will not work.",
+      "source_content_hash": "5e6bd7edc65bdb604613d059a7e41d966a30135c96f36355ce4834876350221a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "注意：请勿使用浏览器\"另存为\"功能，否则可能导致元数据错误致使集成失效。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Now you can use this XML metadata to create the integration on your IDP. Once created on the IDP, you can add the IDP\nmetadata into the **Idp metadata xml** field that we left blank earlier.",
+      "source_content_hash": "3ee5a884e1f9d3540b4c1dc4ccae8102ee0ea30d112b3b80beb90bcbb37a7c49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在可使用该XML元数据在IDP创建集成。IDP端配置完成后，将IDP元数据填入先前留空的**Idp metadata xml**字段。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/authentication.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.938802+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "93cf9955a6d93533810f0f054e3d39d8be7645107eefa8c15c4d22eb818f39d6"
+  }
+}

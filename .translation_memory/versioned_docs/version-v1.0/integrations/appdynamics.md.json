@@ -1,0 +1,172 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/integrations/appdynamics.md",
+  "source_file_content_hash": "f7de919088164f1667df21bb9e4a34f667e17ee024ffc419e34d52c0e72d8161",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: AppDynamics Integration\nsidebar_label: AppDynamics\nhide_title: true\n---",
+      "source_content_hash": "2c80ee03cbdafabc2f9f3cf58e8cae60b4d7b6c5ec74e1d9afd617b3cccb5097",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "![Amplitude](/img/integrations/appdynamics/appdynamics-logo.svg)",
+      "source_content_hash": "22a84bb386cf6a13dc4acc5fdefa26dcf900850950846df766128ad4a4e82297",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Amplitude](/img/integrations/appdynamics/appdynamics-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "You can integrate Flagsmith with AppDynamics. This integration is helpful if you are self hosting and wanting to analyse\nthe performance of Flagsmith in more detail.",
+      "source_content_hash": "6ae117be5c3290eb6047548807b7d5cd3a2fd1aff3238ed3c7e06d339086e5a9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与AppDynamics集成。此集成适用于自托管场景，可帮助您更详细地分析Flagsmith的性能表现。"
+      }
+    },
+    {
+      "segment_id": "0e7eb58c",
+      "source_content": ":::note\n\nAppDynamics is an Enterprise-only integration.\n\n:::",
+      "source_content_hash": "309be7da3321f8f05ce900994531f23d64fd34dd57f66c97e054735144185a65",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::note\n\nAppDynamics是一项仅限企业版的集成功能。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Setup",
+      "source_content_hash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 设置指南"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "The application supports the use of AppDynamics for monitoring purposes. In order to setup AppDynamics for your\nenvironment follow the steps below:",
+      "source_content_hash": "f2bc2782da1a95c62d1d130cde24a73a388c16f1a829bcbc68f8b10efe61b5ea",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本应用支持使用AppDynamics进行监控。请按以下步骤配置您的环境："
+      }
+    },
+    {
+      "segment_id": "1b8c1887",
+      "source_content": "1. Set up your application in your AppDynamics dashboard using the \"Getting Started Wizard - Python\".\n2. In the wizard you will need to select the \"uWSGI with Emperor: Module Directive\" when choosing a deployment method\n3. On completing the wizard you will be provided with a configuration file named something like\n   `appdynamics.template.cfg` provided, except with your application information. Make a copy of this information a\n   place it in a file at the root of this repository called `appdynamics.cfg`. _Note_: there is a bug in the AppDynamics\n   wizard that sets the value `ssl = (on)` which needs to be changed to `ssl = on`",
+      "source_content_hash": "795f03e2093c4b70ccadbb9974c8219217c0eab7ea597b70896442d0f5cb9d70",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在AppDynamics控制台使用\"Getting Started Wizard - Python\"向导创建应用\n2. 在部署方式选择环节，请选择\"uWSGI with Emperor: Module Directive\"模式\n3. 完成向导后，您将获得名为类似`appdynamics.template.cfg`的配置文件（包含您的应用信息）。请复制这些配置信息，并在代码库根目录创建名为`appdynamics.cfg`的文件。_注意_：AppDynamics向导存在一个bug，会将`ssl = (on)`错误配置，需手动改为`ssl = on`"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "## Running with docker-compose",
+      "source_content_hash": "c751e57174a93197b7014fef28e7378d126437d307756d3c0b3aad7a539b6bb2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 通过docker-compose运行"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "When running with the `docker-compose.yml` file provided ensure the `APP_DYNAMICS` argument is set to `on` as seen\nbelow:",
+      "source_content_hash": "9e74423a8d44290bcbc13d8d5af5ad7a7eda5f8baf7731045b1963c5e9cbe979",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用提供的`docker-compose.yml`文件运行时，请确保`APP_DYNAMICS`参数设置为`on`，如下所示："
+      }
+    },
+    {
+      "segment_id": "ef6eebef",
+      "source_content": "```yaml\napi:\n build:\n context: .\n dockerfile: docker/Dockerfile\n args:\n  APP_DYNAMICS: 'on'\n```",
+      "source_content_hash": "6ae02ce346a4419390b79f8384a2d1adb84d0893464d0140cdf4528e396ded5e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ef6eebef"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Running the command below will build the docker image with all the AppDynamics config included",
+      "source_content_hash": "2942016c4debc594f49aacee07ee23f63a68fa4307ab9567135ed00a2901775e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "执行以下命令将构建包含所有AppDynamics配置的Docker镜像"
+      }
+    },
+    {
+      "segment_id": "4ec2920d",
+      "source_content": "```bash\ndocker-compose -f docker-compose.yml build\n```",
+      "source_content_hash": "a3b894eef285ae94710c431aa24f506c37d2f32b71fa928a22ca595e3d5fe286",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4ec2920d"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "This image can then be run locally using the docker-compose `up` command as seen below",
+      "source_content_hash": "304f98ef7c8ffa55598a4ffd2f256b2618e681c64ae7b18d48f5a7751f0450d9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "随后可通过docker-compose的`up`命令在本地运行该镜像，如下所示"
+      }
+    },
+    {
+      "segment_id": "64b6f348",
+      "source_content": "```bash\ndocker-compose -f docker-compose.yml up\n```",
+      "source_content_hash": "327931511ee5f4503090cc74302bc4c88292a00f05f294efbc9be7067782480e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64b6f348"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "## Additional Settings",
+      "source_content_hash": "d8dfa6498cdc98d8acc296fe375804bbb6b20c152e67c803d799032f3ca11eee",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 其他配置选项"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "If you need additional AppDynamics setup options you can find the other environment variables you can set\n[here](https://docs.appdynamics.com/display/PRO21/Python+Agent+Settings).",
+      "source_content_hash": "1b8a4ffa32591a904f75217d3a13cc0e0637ced95f6bfb37c6e4ed33a81c51d8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如需更多AppDynamics设置选项，可参考[此处](https://docs.appdynamics.com/display/PRO21/Python+Agent+Settings)列出的环境变量配置说明。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/integrations/appdynamics.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.939568+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f7de919088164f1667df21bb9e4a34f667e17ee024ffc419e34d52c0e72d8161"
+  }
+}

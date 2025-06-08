@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/integrations/datadog.md",
+  "source_file_content_hash": "e8946ff0e867aaf8e982309dfaf0269be8d15c12b8c59599e38d97d633285689",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Datadog Integration\nsidebar_label: Datadog\nhide_title: true\n---",
+      "source_content_hash": "d5eaa6f68f0a3ecc0471dfec4ccdf2f710903ce80002ed93c1a363cc45934224",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-logo.svg)",
+      "source_content_hash": "5ca0215fd318e6c5a3246cf68c415d669157d8679b0742b01beaa5b9b0278157",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-logo.svg)"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "You can integrate Flagsmith with Datadog. Send flag change events from Flagsmith into your Datadog event stream.",
+      "source_content_hash": "3852fe5370995e992ccf1ed0471e0257e738f015dcb288d74401a8ff5056d788",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以将Flagsmith与Datadog集成，将功能标志变更事件从Flagsmith发送至Datadog事件流。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Integration Setup",
+      "source_content_hash": "42eeb793ab64304e5c9607a7548631a7e61c3a4aa782d56d87f97c42e486f90f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 集成设置"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-3.png)",
+      "source_content_hash": "3ef4af1bd5ac29216390cf548d9bbd138d170223a645118f1505fc6dc6bc23e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-3.png)"
+      }
+    },
+    {
+      "segment_id": "4269e691",
+      "source_content": "1. Log into Datadog and go to Integrations > API\n2. Generate an API key\n3. Add the Datadog API key into Flagsmith (Integrations > Add Datadog Integration)\n4. Add the Datadog URL into Flagsmith - (This is either `https://api.datadoghq.com/` or `https://api.datadoghq.eu/`)",
+      "source_content_hash": "8c2431a39276eaf4520168283f5a2008bc40744df41192685ac1bd8449acf472",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 登录Datadog并进入 集成 > API\n2. 生成一个API密钥\n3. 将Datadog API密钥填入Flagsmith（集成 > 添加Datadog集成）\n4. 在Flagsmith中配置Datadog URL（可选`https://api.datadoghq.com/`或`https://api.datadoghq.eu/`）"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-1.png)",
+      "source_content_hash": "b988ebbfa89b5bf11fe2fcb35fb54e086074f32bf4b6864de0e8ac46deb2e7f4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-1.png)"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "![Datadog](/img/integrations/datadog/datadog-2.png)",
+      "source_content_hash": "1b9d8121c081f4d756c0a40ef0bcdfd4e02f7fd1db6ff68d196816c6e586605c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![Datadog](/img/integrations/datadog/datadog-2.png)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Flag change events will now be sent to Datadog.",
+      "source_content_hash": "a37bdb68f6e06a4f5a9e2eb2d7c2e2f9efd77fd629edaf990531873370b3a5d4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志变更事件现在将自动推送至Datadog。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/integrations/datadog.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.928491+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "e8946ff0e867aaf8e982309dfaf0269be8d15c12b8c59599e38d97d633285689"
+  }
+}

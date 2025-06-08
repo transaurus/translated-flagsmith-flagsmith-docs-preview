@@ -1,0 +1,252 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/rest.md",
+  "source_file_content_hash": "28b32612fcfaf8e7da89de81857dd8b09db5e766cb43249250e7bbfa1ce98dc1",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Manage your Feature Flags and Remote Config in your REST APIs.\nsidebar_label: REST\nsidebar_position: 1\n---",
+      "source_content_hash": "0095184881bc620ea9f41f57c04d1d6d5199a25cdba33698d1165717d75830b3",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Direct API Access",
+      "source_content_hash": "904d6ab25b272f7ae8aa42a86024a78c1a8df60238989ee63dbf40c025ccb40e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 直接访问API"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Flagsmith is built around a client/server architecture. The REST API server is accessible from SDK clients as well as\nthe administration front end. This decoupling means that you can programmatically access the entire API if you wish.",
+      "source_content_hash": "d96153d79ee6e5a9b90f429fe6c63db4d5c94ab2892a747624250e4c5741cc50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用客户端/服务器架构设计。REST API服务器不仅可通过管理前端访问，也支持SDK客户端调用。这种解耦设计使您能够按需以编程方式访问完整API功能。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "We have a [Postman Collection](https://www.postman.com/flagsmith/workspace/flagsmith/overview) that you can use to play\naround with the API and get a feel for how it works.",
+      "source_content_hash": "c302a82714f21edec12d69232fe505a204b123b0741f56fd35fb6391f0daab12",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们提供[Postman集合](https://www.postman.com/flagsmith/workspace/flagsmith/overview)，您可通过该集合体验API操作并熟悉其工作原理。"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa?action=collection%2Ffork&collection-url=entityId%3D14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa%26entityType%3Dcollection%26workspaceId%3D452554eb-f581-4754-b5b8-0deabdce9f4b#?env%5BFlagsmith%20Environment%5D=W3sia2V5IjoiRmxhZ3NtaXRoIEVudmlyb25tZW50IEtleSIsInZhbHVlIjoiOEt6RVRkRGVNWTd4a3FrU2tZM0dzZyIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxhZ3NtaXRoLmNvbS9hcGkvdjEvIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJJZGVudGl0eSIsInZhbHVlIjoicG9zdG1hbl91c2VyXzEyMyIsImVuYWJsZWQiOnRydWV9XQ==)",
+      "source_content_hash": "e4d2cc5508e6a5bb849b5e894377b60aad6a13433764d4301078db4ae74b3c22",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![在Postman中运行](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa?action=collection%2Ffork&collection-url=entityId%3D14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa%26entityType%3Dcollection%26workspaceId%3D452554eb-f581-4754-b5b8-0deabdce9f4b#?env%5BFlagsmith%20Environment%5D=W3sia2V5IjoiRmxhZ3NtaXRoIEVudmlyb25tZW50IEtleSIsInZhbHVlIjoiOEt6RVRkRGVNWTd4a3FrU2tZM0dzZyIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxhZ3NtaXRoLmNvbS9hcGkvdjEvIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJJZGVudGl0eSIsInZhbHVlIjoicG9zdG1hbl91c2VyXzEyMyIsImVuYWJsZWQiOnRydWV9XQ==)"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "You can also access the API directly with tools like [curl](https://curl.haxx.se/) or [httpie](https://httpie.org/), or\nwith clients for languages that we do not currently have SDKs for.",
+      "source_content_hash": "ec8849cd8b27b28d5be072688b88d0a86604ac17712385b2a99344d33fa8e2c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以使用[curl](https://curl.haxx.se/)或[httpie](https://httpie.org/)等工具直接调用API，或者通过我们尚未提供官方SDK的编程语言客户端进行访问。"
+      }
+    },
+    {
+      "segment_id": "bc633244",
+      "source_content": "## API Explorer",
+      "source_content_hash": "b76bdb09ea6d813c68a10b6dabfb3449d9de1e884fa21d574cedd8bb52a8fb81",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API浏览器"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "You can view the API via Swagger at [https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/) or\nget OpenAPI as [JSON](https://api.flagsmith.com/api/v1/docs/?format=.json) or\n[YAML](https://api.flagsmith.com/api/v1/docs/?format=.yaml).",
+      "source_content_hash": "b7fa4cd583ea0b31d12999ef3612ee84c6fb27277ebd84cf9ae96d70fe82558b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "可通过Swagger查看API文档：[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/)，或获取OpenAPI格式的[JSON](https://api.flagsmith.com/api/v1/docs/?format=.json)及[YAML](https://api.flagsmith.com/api/v1/docs/?format=.yaml)文件。"
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "## Environment Key",
+      "source_content_hash": "2ab6a9f40cba924d3ad42a442833d6d2a6abd9bc5de2951794625763d41b66de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境密钥"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Publicly accessible API calls need to have an environment key supplied with each request. This is provided as an HTTP\nheader, with the name `X-Environment-Key` and the value of the environment API key that you can find within the\nFlagsmith administrative area.",
+      "source_content_hash": "f724b8e93a3d5a9791cd58476e301ab3b62610316d83f74015adebe5a104c845",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "公开API调用需在每次请求中提供环境密钥。该密钥需通过HTTP头部传递，头部名称为`X-Environment-Key`，值为您可在Flagsmith管理界面找到的环境API密钥。"
+      }
+    },
+    {
+      "segment_id": "b25f21be",
+      "source_content": "### Curl Example",
+      "source_content_hash": "185edb7d4cdbca563b23071a6ff99d20d595dd66111587d8c2a91dae7d965a8f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Curl示例"
+      }
+    },
+    {
+      "segment_id": "6543a19e",
+      "source_content": "```bash\ncurl 'https://api.flagsmith.com/api/v1/flags/' -H 'X-Environment-Key: TijpMX6ajA7REC4bf5suYg'\n```",
+      "source_content_hash": "fd7dc7ae57e8e8628ecc24601715a97032eb90329b7d428950e0bdd460c1a678",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6543a19e"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "### httpie Example",
+      "source_content_hash": "8a0d161581ba369e82cde9004b6051b39628cac92c32f171c0143c28523b49c1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### httpie示例"
+      }
+    },
+    {
+      "segment_id": "a11df754",
+      "source_content": "```bash\nhttp GET 'https://api.flagsmith.com/api/v1/flags/' 'X-Environment-Key':'TijpMX6ajA7REC4bf5suYg'\n```",
+      "source_content_hash": "723d6b4278d8b50ccc110f72668606a549c9f344f658101f9eb462104d20191f",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a11df754"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Private Endpoints",
+      "source_content_hash": "01855875abe65bee657168466ed5ce48abfb765f272b958924698ca1eae224ab",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 私有端点"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "You can also do things like create new flags, environments, toggle flags or indeed anything that is possible from the\nadministrative front end via the API.",
+      "source_content_hash": "3a2c69437d342480739cfa476d74fee9c45cc74fcb674903d5042839bcd9a5c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过API您可以执行包括创建新功能开关、环境配置、切换功能状态等所有管理前端支持的操作。"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "To authenticate, you can use the token associated with your account. This can be found in the \"Account\" page from the\ntop right navigation panel. Use this token for API calls. For example, to create a new evironment:",
+      "source_content_hash": "04a2dd40982ca9b415ed7083f5d0e15c5f9ec2ff3cb3cf5ea2bca6d3e4208f03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "认证需使用账户关联的令牌。该令牌可在右上角导航面板的\"账户\"页面获取。以下示例展示如何通过API创建新环境："
+      }
+    },
+    {
+      "segment_id": "64b6f348",
+      "source_content": "```bash\ncurl 'https://api.flagsmith.com/api/v1/environments/' \\\n    -H 'content-type: application/json' \\\n    -H 'authorization: Token <TOKEN FROM PREVIOUS STEP>' \\\n    --data-binary '{\"name\":\"New Environment\",\"project\":\"<Project ID>\"}'\n```",
+      "source_content_hash": "4bc8d15cbb0deac45218025e0aa2757ce43dd705f967659f00a4852f70f94b83",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_64b6f348"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "You can find a complete list of endpoints via the Swagger REST API at\n[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/).",
+      "source_content_hash": "75f1739da42ba5281da3822a90003b6e94b421737dd53ad75a4004e30f389a31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整端点列表可通过Swagger REST API查看：[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/)。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Useful SDK Endpoints",
+      "source_content_hash": "ab6bc379b38db642be3cee44a33d8532b870b40ef6d322a1a15267510257eec0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 常用SDK端点"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### Send Identity with Traits and receive Flags",
+      "source_content_hash": "e7358ee714ada0e8d3529db77800d1424a7646e8d366e23358497a5cf7280717",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 提交带特征的标识并获取功能开关"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "This `curl` command below will perform the entire SDK workflow in a single call:",
+      "source_content_hash": "d0c51d7d51ecacd295fa916a7b125e6c8e8852c90bc28aa6502d2157b8f9f31d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下`curl`命令可一次性完成完整的SDK工作流程："
+      }
+    },
+    {
+      "segment_id": "645e08e3",
+      "source_content": "1. Creating an Identity\n2. Setting Traits for the Identity\n3. Receiving the Flags for that Identity",
+      "source_content_hash": "4a7711ab91b2496e276536f40c8504e82f5ae8e365ea785140572c015cdac444",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 创建用户身份\n2. 为该身份设置特征值\n3. 获取该身份对应的功能开关配置"
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```bash\ncurl --request POST 'https://api.flagsmith.com/api/v1/identities/' \\\n--header 'X-Environment-Key: <Your Env Key>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\":\"identifier_5\",\n    \"traits\": [\n        {\n            \"trait_key\": \"my_trait_key\",\n            \"trait_value\": 123.5\n        },\n        {\n            \"trait_key\": \"my_other_key\",\n            \"trait_value\": true\n        }\n    ]\n}'\n```",
+      "source_content_hash": "aa64f2366a21fb650b2873cb4b7d2ebc138a8eee441313795eff08797c71439c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/rest.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.923400+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "28b32612fcfaf8e7da89de81857dd8b09db5e766cb43249250e7bbfa1ce98dc1"
+  }
+}

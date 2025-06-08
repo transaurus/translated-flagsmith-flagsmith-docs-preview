@@ -1,0 +1,300 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/hosting/locally-frontend.md",
+  "source_file_content_hash": "5a9c79e2eeb2d6da0760ba82ce48f204fde584e3709995b21b6ce12ae9d56b72",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_label: Frontend\ntitle: Flagsmith Frontend\nsidebar_position: 20\n---",
+      "source_content_hash": "6ee1f5ba625a1972a5b6f5c53ccfbfd42233478cdaccbdca9803bd27252eeba0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 入门指南"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "These instructions will get you a copy of the project front end up and running on your local machine for development and\ntesting purposes. See running in production for notes on how to deploy the project on a live system.",
+      "source_content_hash": "31fcd1a2c5ac1a8af3a52f817e2f331539a500e7585dbbe17ed4c6fa59d3ca6d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下说明将帮助您在本地机器上获取项目前端副本并运行，用于开发和测试目的。有关在生产环境部署项目的注意事项，请参阅运行生产环境部分。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Prerequisites",
+      "source_content_hash": "bbd3d4949a6f237efd8d4ff5c7c5f30d968e7a989ad12f3d7dcef69c98053912",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 先决条件"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "What things you need to install the software and how to install them. Installing nvm and their bash script will ensure\ndevelopers are on the same NodeJS version.",
+      "source_content_hash": "13e8d51b6d47f9062d29c51142b3d6b7d4f5af93f1546f024ea51efd4830be1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "安装软件所需的工具及其安装方法。安装nvm及其bash脚本可确保开发者使用相同的NodeJS版本。"
+      }
+    },
+    {
+      "segment_id": "ac7ef717",
+      "source_content": "| Location                                                                | Suggested Version |\n| ----------------------------------------------------------------------- | :---------------: |\n| <a href=\"https://nodejs.org/en/\">NodeJS</a>                             |     >= 16.0.0     |\n| <a href=\"https://nodejs.org/en/\">npm</a>                                |     >= 8.0.0      |\n| <a href=\"https://github.com/nvm-sh/nvm#installing-and-updating\">nvm</a> |     >= 0.39.0     |\n| <a href=\"https://github.com/nvm-sh/nvm#zsh\">nvm zshrc setup</a>         |        n/a        |",
+      "source_content_hash": "27cdbf82fdc2f69ba79b8a49426bc0fd8d17041200e7e83d11e7e3d2c9efb3e7",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ac7ef717"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Installing",
+      "source_content_hash": "a0354fdd247f6a2a869700b731890a6eec3fc4a5a00efad493609d361813c60e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装步骤"
+      }
+    },
+    {
+      "segment_id": "a89b882e",
+      "source_content": "```bash\ncd frontend\nnpm i\n```",
+      "source_content_hash": "6f72bc7f36ec5179598e8bf412b6ec5b9f3db1211f16fd66ae6c8a43692421fa",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a89b882e"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Running the Front End",
+      "source_content_hash": "c1cdcf51c3511259ed1283e13d240e8129209290ae9d7160d0bed7fd817d0cd2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 运行前端"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "### Development",
+      "source_content_hash": "c74e0407b065bcc48aa1bbefc1b3e525fc5b8d395afa9b7a0210eca6a5bf5055",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开发模式"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Hot reloading for client / server",
+      "source_content_hash": "adf8bfe55b2115b94723a13c8a3125ccebff837a8b575039c575249055daed84",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "支持客户端/服务器的热重载"
+      }
+    },
+    {
+      "segment_id": "be2d5397",
+      "source_content": "```bash\ncd frontend\nnpm run dev\n```",
+      "source_content_hash": "fd7eab8fc0cdc667f2b2b22ce696d1184f2a8c2c9f55118ae0542c198ba4426e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_be2d5397"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "### Production",
+      "source_content_hash": "44533ec7d52c1c8d5d4a325711f91d694914db09aac2f13737c3395346a85d5c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 生产模式"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "You can deploy this application on [Heroku](https://www.heroku.com/) and [Dokku](http://dokku.viewdocs.io/dokku/)\nwithout making any changes, other than the API URL in '/frontend/env/project_prod.js'",
+      "source_content_hash": "a689183e921948f207810b73482553d31c7ede1bf85b1f05d674d2cd8e9180f1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在[Heroku](https://www.heroku.com/)和[Dokku](http://dokku.viewdocs.io/dokku/)上部署此应用而无需修改代码，只需更改'/frontend/env/project_prod.js'中的API URL即可"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Bundles, minifies and cache busts the project to a build folder and runs node in production. This can be used as part of\nyour deployment script.",
+      "source_content_hash": "9cf8be9842609ff87a4ec6eb3ea6c956ab86e59ef1a69d04867f00a293c24cb5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将项目打包、压缩并进行缓存破坏后输出至构建文件夹，并以生产模式运行node。此操作可作为部署脚本的一部分使用。"
+      }
+    },
+    {
+      "segment_id": "95318d95",
+      "source_content": "```bash\ncd frontend\nnpm run bundle\nnpm start\n```",
+      "source_content_hash": "efbe219caf2ad2651eb8cb6975aaa932b72038c4309c43bd7ba43366b829ea18",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_95318d95"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "## Environment Variables",
+      "source_content_hash": "66baf6a5eea36889cda747ee8bd898452b11c5f0336a0df2ed10f9e3b9d43415",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境变量"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "Variables that differ per environment are exported globally to `window.Project in` 'frontend/common/project.js', this\nfile gets replaced by a project.js located in 'frontend/env' by webpack based on what is set to the \"ENV\" environment\nvariable (e.g. ENV=prod).",
+      "source_content_hash": "4af128fd5222bda07dfca7cd5eb0f377c95ef14cd06af6de04088c1ba2bc0dee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "不同环境特有的变量会通过`window.Project`全局导出到'frontend/common/project.js'中。该文件会被webpack根据\"ENV\"环境变量（例如ENV=prod）替换为'frontend/env'目录下对应的project.js文件。"
+      }
+    },
+    {
+      "segment_id": "6ea4c715",
+      "source_content": "You can override each variable individually or add more by editing 'frontend/bin/env.js'.",
+      "source_content_hash": "729e2cb81292c72efade74e45848164e956a4ec8c292a5d19db6defe8c411a38",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过编辑'frontend/bin/env.js'来单独覆盖每个变量或添加更多变量。"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Current variables used between 'frontend/environment.js' and 'frontend/common/project.js':",
+      "source_content_hash": "84f8f39be73573df05e12c181ee39c2e52febe9082c73720a80448c8b7e1f330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前在'frontend/environment.js'和'frontend/common/project.js'之间使用的变量："
+      }
+    },
+    {
+      "segment_id": "2eb5ba30",
+      "source_content": "- `FLAGSMITH_API_URL`: The API to hit for requests. E.g. `https://edge.api.flagsmith.com/api/v1/`\n- `FLAGSMITH_ON_FLAGSMITH_API_KEY`: The flagsmith environment key we use to manage features -\n  [Flagsmith runs on Flagsmith](/deployment/overview#running-flagsmith-on-flagsmith).\n- `FLAGSMITH_ON_FLAGSMITH_API_URL`: The API URL which the flagsmith client should communicate with. Flagsmith runs on\n  flagsmith. E.g. `https://edge.api.flagsmith.com/api/v1/`. If you are self hosting and using your own Flagsmith\n  instance to manage its own features, you would generally point this to the same domain name as your own Flagsmith\n  instance.\n- `ENABLE_INFLUXDB_FEATURES`: Enables any features that rely on influxdb. API Usage charts, flag analytics. E.g.\n  `ENABLE_INFLUXDB_FEATURES=1`.\n- `ENABLE_FLAG_EVALUATION_ANALYTICS`: Determines if the flagsmith sdk should send usage analytics, if you want to enable\n  Flag Analytics, set this. E.g. `ENABLE_FLAG_EVALUATION_ANALYTICS=1`.\n- `PROXY_API_URL`: Proxies the API via this application. Set this to the hostname of the API being proxied. Proxies\n  `/api/v1/` through to `PROXY_API_URL`. If you are using this, any setting to `FLAGSMITH_API_URL` will be ignored and\n  the browser will use the front end node server to send API requests. Do not prepend `api/v1/` - it will be added\n  automatically.\n- `GOOGLE_ANALYTICS_API_KEY`: Google Analytics key to track API usage.\n- `CRISP_WEBSITE_ID`: Crisp Chat widget Website key.\n- `ALLOW_SIGNUPS`: **DEPRECATED in favour of PREVENT_SIGNUP** Determines whether to prevent manual signups without\n  invites. Set it to any value to allow signups.\n- `PREVENT_SIGNUP`: Determines whether to prevent manual signups without invites. Set it to any value to prevent\n  signups.\n- `PREVENT_FORGOT_PASSWORD`: Determines whether to prevent forgot password functionality, useful for LDAP/SAML. Set it\n  to any value to prevent forgot password functionality.\n- `ENABLE_MAINTENANCE_MODE`: Puts the site into maintenance mode. Set it to any value to enable maintenance.\n- `AMPLITUDE_API_KEY`: The Amplitude key to use for behaviour tracking.\n- `MIXPANEL_API_KEY`: Mixpanel analytics key to use for behaviour tracking.\n- `SENTRY_API_KEY`: Sentry key for error reporting.\n- `STATIC_ASSET_CDN_URL`: Used for replacing local static paths with a cdn, .e.g https://cdn.flagsmith.com. Defaults to\n  `/`, i.e. no CDN.\n- `BASE_URL`: Used for specifying a base url path that's ignored during routing if serving from a subdirectory.",
+      "source_content_hash": "9f461b08c4aff2918a01433339beb5b1fb0a4fa72ccd4aac9e0a5fbda027aab3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `FLAGSMITH_API_URL`: 用于请求的API地址。例如 `https://edge.api.flagsmith.com/api/v1/`\n- `FLAGSMITH_ON_FLAGSMITH_API_KEY`: 用于管理功能特性的Flagsmith环境密钥 - [Flagsmith运行在Flagsmith之上](/deployment/overview#running-flagsmith-on-flagsmith)\n- `FLAGSMITH_ON_FLAGSMITH_API_URL`: Flagsmith客户端应通信的API URL。Flagsmith运行在Flagsmith上。例如 `https://edge.api.flagsmith.com/api/v1/`。如果您自托管并使用自己的Flagsmith实例来管理其功能特性，通常应将其指向您自己的Flagsmith实例的域名。\n- `ENABLE_INFLUXDB_FEATURES`: 启用依赖InfluxDB的功能。API使用图表、功能标志分析。例如 `ENABLE_INFLUXDB_FEATURES=1`\n- `ENABLE_FLAG_EVALUATION_ANALYTICS`: 确定Flagsmith SDK是否发送使用分析数据。如需启用功能标志分析，请设置此变量。例如 `ENABLE_FLAG_EVALUATION_ANALYTICS=1`\n- `PROXY_API_URL`: 通过此应用程序代理API。设置为被代理API的主机名。将`/api/v1/`代理到`PROXY_API_URL`。如果使用此设置，任何对`FLAGSMITH_API_URL`的设置将被忽略，浏览器将通过前端Node服务器发送API请求。不要添加`api/v1/`前缀 - 它会自动添加。\n- `GOOGLE_ANALYTICS_API_KEY`: 用于跟踪API使用的Google Analytics密钥。\n- `CRISP_WEBSITE_ID`: Crisp聊天小部件的网站密钥。\n- `ALLOW_SIGNUPS`: **已弃用，推荐使用PREVENT_SIGNUP** 确定是否允许无邀请的手动注册。设置为任意值以允许注册。\n- `PREVENT_SIGNUP`: 确定是否阻止无邀请的手动注册。设置为任意值以阻止注册。\n- `PREVENT_FORGOT_PASSWORD`: 确定是否阻止忘记密码功能，对LDAP/SAML有用。设置为任意值以阻止忘记密码功能。\n- `ENABLE_MAINTENANCE_MODE`: 将站点置于维护模式。设置为任意值以启用维护。\n- `AMPLITUDE_API_KEY`: 用于行为跟踪的Amplitude密钥。\n- `MIXPANEL_API_KEY`: 用于行为跟踪的Mixpanel分析密钥。\n- `SENTRY_API_KEY`: 用于错误报告的Sentry密钥。\n- `STATIC_ASSET_CDN_URL`: 用于替换本地静态路径的CDN地址，例如https://cdn.flagsmith.com。默认为`/`，即不使用CDN。\n- `BASE_URL`: 用于指定在路由时忽略的基本URL路径，如果从子目录提供服务。"
+      }
+    },
+    {
+      "segment_id": "b10963d7",
+      "source_content": "## E2E testing",
+      "source_content_hash": "82ec589e834919fcafbd56aab1c15dce4a612a2ae56e355c2b420c8f4a49b419",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 端到端测试"
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "This project uses [Test Cafe](https://testcafe.io/) for automated end to end testing with Chromedriver.",
+      "source_content_hash": "58daa5c82a566ea6b1dc2fb2fcd02f7375495b0c64ab7f1fdc5027c61845c8b5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本项目使用[Test Cafe](https://testcafe.io/)与Chromedriver进行自动化端到端测试。"
+      }
+    },
+    {
+      "segment_id": "efbe5e3f",
+      "source_content": "```bash\nnpm test\n```",
+      "source_content_hash": "b6fa77a637389e1a27b4c61af2ff778285e565c9bb937afadec86fcec4bd19a2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {}
+    },
+    {
+      "segment_id": "54bafb10",
+      "source_content": "## Built With",
+      "source_content_hash": "2840a971eb32686cb6b2d4c99888268104817100f97e3ff9c6024851abe10db3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 构建工具"
+      }
+    },
+    {
+      "segment_id": "f6db2c30",
+      "source_content": "- React\n- Webpack\n- Node",
+      "source_content_hash": "ed33542754e8db0101bf277fe8320401192762d3e0523758892c0a6543fa3204",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- React\n- Webpack\n- Node"
+      }
+    },
+    {
+      "segment_id": "d1f76d04",
+      "source_content": "## Running locally against your own Flagsmith API instance",
+      "source_content_hash": "f7aa55f33e85e36b7422bd513332e85605a162bf3967f11c3ac5b97eb8aa4b41",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 针对您自己的Flagsmith API实例本地运行"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "We use Flagsmith to manage features we rollout, if you are using your own Flagsmith environment (i.e. by editing\nproject_x.js-> flagsmith) then you will need to have a replica of our flags.",
+      "source_content_hash": "b16fafca63daed8eecd411de13fb4e79c186144b83bb339dcc543daed8a269c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们使用Flagsmith来管理推出的功能特性，如果您使用自己的Flagsmith环境（即通过编辑project_x.js->flagsmith），则需要复制我们的功能标志。"
+      }
+    },
+    {
+      "segment_id": "d21af28f",
+      "source_content": "A list of the flags and remote config we're currently using in production can be\n[found here](/deployment/overview#current-flagsmith-feature-flags).",
+      "source_content_hash": "c057469de26fc1d37519ed8cfd0a867f6e7fedd94767480131c15c8ad474fc20",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们在生产环境中当前使用的功能标志和远程配置列表可[在此找到](/deployment/overview#current-flagsmith-feature-flags)。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/hosting/locally-frontend.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.941024+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "5a9c79e2eeb2d6da0760ba82ce48f204fde584e3709995b21b6ce12ae9d56b72"
+  }
+}

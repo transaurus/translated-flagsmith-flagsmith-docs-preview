@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/flag-lifecycle.md",
+  "source_file_content_hash": "92436313abd65e86935d9aa09af021fe18bf1691e64da05e9dc6f12ad75a4f12",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Feature Flags Lifecycles\n---",
+      "source_content_hash": "2b52bc95e25239e73e0377503ca530615bad502995e3b1fe97eb1dd759d5a1d0",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "e7ec8f99",
+      "source_content": "Feature Flags generally have two lifecycles:",
+      "source_content_hash": "a0eed2f91cafe31cc11592e2eb892fb225d7f141689df2ff372e336f97d89495",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志通常具有两种生命周期："
+      }
+    },
+    {
+      "segment_id": "57e757df",
+      "source_content": "1. Short-Lived Flags\n2. Long-Lived Flags",
+      "source_content_hash": "52e37f96643f13765ef264708be0c8c88b6b7ec0ef3065e0b409541e7abafac9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 短期标志\n2. 长期标志"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "Lets go over each type in detail.",
+      "source_content_hash": "2ce4187e6ae3a52ababd648de82db8bbaba88eceff6954172e2b78a56b342f19",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们详细探讨每种类型。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Short-Lived Flags",
+      "source_content_hash": "cda6a802fe6835365291d802e12c323eb3929fe435c789d68c3aff15423b27dc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 短期标志"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Short-lived flags are designed to be removed from your code and from Flagsmith at some point in the future. Their\ntypical lifecycle is normally something like:",
+      "source_content_hash": "8c61089c09e3d3d12bad3a4480a27c0c52d0b48792a06a2f17d64caff381afa2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "短期标志设计为在未来某个时间点从代码和Flagsmith中移除。其典型生命周期通常如下："
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "1. Create flag in Flagsmith.\n2. Add the flag to your application code.\n3. Toggle the flag and/or apply Segment overrides to control your application behaviour.\n4. Once you are finished with the flag, remove the flag from your codebase.\n5. Deploy your application, so that there is no reference to the flag.\n6. Remove the flag from Flagsmith.",
+      "source_content_hash": "2c91bbf17adfe9749bf4e8e53e268600f1080489389d7dd01ca6fcfb695ed1d6",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在Flagsmith中创建标志。\n2. 将标志添加到应用程序代码中。\n3. 切换标志和/或应用分段覆盖以控制应用程序行为。\n4. 完成标志使用后，从代码库中移除该标志。\n5. 部署应用程序，确保代码中不再引用该标志。\n6. 从Flagsmith中删除该标志。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Short lived flags are typically used for the following use-cases:",
+      "source_content_hash": "7a1221f98b8e2c43c11f4643cee46214ed42ce28cac15c5cb41e448fb5a3fe2f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "短期标志通常用于以下场景："
+      }
+    },
+    {
+      "segment_id": "79b2d0b9",
+      "source_content": "### Feature Roll-Outs",
+      "source_content_hash": "4435bc5dd2f07fff0b054de6b314b3eeb58b5d9a2ca8a40123c9b6e881a38c3d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 功能灰度发布"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "The most common use of flags in general is to decouple the deployment of a feature from it's release. When using a flag\nto achieve this, you will generally remove the flag from your code and from Flagsmith once you are happy with the\nfeature and it is rolled out to your entire user population.",
+      "source_content_hash": "31c334f2218ac182b77b7db904c825477aaac5ec0b5cbc18764379930c8a46d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标志最常见的用途是将功能部署与发布解耦。当使用标志实现这一目的时，通常会在功能验证通过并全面推送给所有用户后，从代码和Flagsmith中移除该标志。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Once this is the case, there is no reason to have the flag exist either in Flagsmith or your code, hence it is\nconsidered good practise to remove it from both.",
+      "source_content_hash": "234e939b8d0e97849334e918425baf7e1670d837626786a5c1c3c6fd0fe9c84e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这种情况下，标志既没有理由存在于Flagsmith中，也没有理由存在于代码中，因此最佳实践是从两者中移除。"
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "### Experimentation",
+      "source_content_hash": "57f15f357ff21289408ca5ed5313b4cabf39ba6648c53cc63ea67845c3e4a292",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 实验测试"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "You can use Multi-variate flags to drive [A/B and multivariate tests](../advanced-use/ab-testing.md). Once your\nexperiment is complete, there is typically no need for the flag to remain, and hence it can be removed.",
+      "source_content_hash": "bb894c9538771961e403bfd35251783a2f576556531377a88fd64d94222f8679",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用多变量标志驱动[A/B测试和多变量测试](../advanced-use/ab-testing.md)。实验完成后，通常不再需要保留该标志，因此可以将其移除。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## Long-Lived Flags",
+      "source_content_hash": "1628039a886d4bdd156df26807b76f9ca2149df9496b0e0d7463f6ff36580915",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 长期标志"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "Conversely, sometimes you will create flags that are long-lived - quite possibly for the lifetime of the application.\nHere are a few use cases where this approach can be used.",
+      "source_content_hash": "596c709dafce2c5cbec821583280889e971594a913c17b1fdeeec946fe28391e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "相反，有时您会创建长期存在的标志——甚至可能伴随应用程序的整个生命周期。以下是这种方法的几个应用场景。"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "### Kill Switches",
+      "source_content_hash": "c766b231a51c7bf3f8e997ce0e3a78a4fa31e1e995a8b614c10062bdd3287bbb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 紧急开关"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "There are often times where you need to be able remotely remove a feature, area of your application or sometimes the\napplication as a whole (in the event of a large deployment, for example). In these instances, flags can be used as 'kill\nswitches' to remove a feature altogether, or maybe to prevent users from using the application in the event of downtime.",
+      "source_content_hash": "d951f22a2fb1bc52a83a0278b9d3f76d24cb1376df1e2b648f5bdd862d82da91",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在某些情况下，您需要能够远程禁用某个功能、应用程序的某个区域，有时甚至是整个应用程序（例如在重大部署期间）。这时可以使用标志作为\"紧急开关\"来完全关闭某个功能，或在停机期间阻止用户使用应用程序。"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "Kill switches are generally long-lived; they often exist in the event of an unexpected event or error, and so they need\nto be long-lived in case they need to be put to use.",
+      "source_content_hash": "ad5c73bbee0ca4b9e418ccf7ccc1f96f62c129010b1de41a90d2fb645f8855ed",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "紧急开关通常是长期存在的；它们往往用于应对意外事件或错误，因此需要长期保留以备不时之需。"
+      }
+    },
+    {
+      "segment_id": "60410af6",
+      "source_content": "### Feature Management Flags",
+      "source_content_hash": "e9d15e4573edb84a3ab650570bf079ec9bfdd6fbad12a42e5134e5391dc1819c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 功能管理标志"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "You can make use of [Segments](../basic-features/managing-segments.md) and Flags to control how different features are\nenabled or disabled depending on the user. For example, you can send a Trait `plan` with the relevant user value (e.g.\n`scale-up`) to Flagsmith, then create a Segment that defines all users on the `scale-up` plan. You can then show or hide\nfeatures based on this Segment and plan.",
+      "source_content_hash": "2020dc5ef6e2d15613a98a3df6a4119be0a1ba7485fde423d721fc8a623ea2c4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以利用[用户分段](../basic-features/managing-segments.md)和标志来控制不同功能的启用或禁用。例如，向Flagsmith发送包含用户属性`plan`（如`scale-up`）的特征值，然后创建一个定义所有`scale-up`套餐用户的分段，最后根据该分段和套餐显示或隐藏相应功能。"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "When employing feature flags in this manner, generally you would never remove this Flag or Segment, as you are using\nthem to drive platform features for the lifetime of the application.",
+      "source_content_hash": "ebe59d8aa4bd85b73feb06072fb490f6216f42d4487fca51c471dfde65c2300f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当以这种方式使用功能标志时，通常永远不会移除该标志或分段，因为它们在整个应用程序生命周期中都用于驱动平台功能。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/flag-lifecycle.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.950638+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "92436313abd65e86935d9aa09af021fe18bf1691e64da05e9dc6f12ad75a4f12"
+  }
+}

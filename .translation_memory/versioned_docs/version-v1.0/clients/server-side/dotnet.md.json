@@ -1,0 +1,372 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/dotnet.md",
+  "source_file_content_hash": "c4b5424838a2fd55319b512e00746d442f58b2dff2707d696949097c710c8636",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith .Net SDK\nsidebar_label: .Net\ndescription: Manage your Feature Flags and Remote Config in your .Net applications.\nslug: /clients/dotnet\n---",
+      "source_content_hash": "ea672ee44a6af59fdd1d80d6110f393f03599809a5771a50044b24283bae94c1",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This SDK can be used for .NET Core, .NET Framework, Mono, Xamarin and Universal Windows Platform applications.",
+      "source_content_hash": "22164a26d9d9fac8568fca58f3af7fe598248d007287d144f3f54355b99574d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该SDK可用于.NET Core、.NET Framework、Mono、Xamarin以及通用Windows平台应用程序。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-dotnet-client).",
+      "source_content_hash": "62e90ff22ff3a0adc22e7356851b9003b1c0bcd56ae11222db6e4bb36971662f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端源代码托管于[Github](https://github.com/flagsmith/flagsmith-dotnet-client)。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## Getting Started",
+      "source_content_hash": "c6144136c5fdde00c066bed01a81aecaf8f239036f9ecabc432e5386d5b7a49a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 快速入门"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The client library is available from NuGet and can be added to your project by many tools. You can find the package here\n[https://www.nuget.org/packages/Flagsmith/](https://www.nuget.org/packages/Flagsmith/)",
+      "source_content_hash": "22a474be7a7f3e4304837c241f654158b102bade102a9a3b86682318b0c2422a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端库可通过NuGet获取，支持多种工具添加到项目中。包地址详见  \n[https://www.nuget.org/packages/Flagsmith/](https://www.nuget.org/packages/Flagsmith/)"
+      }
+    },
+    {
+      "segment_id": "3daf1b88",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目的单个环境（如开发环境或生产环境）进行初始化。环境密钥可在环境设置页面获取。"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "![API Key](/img/api-key.png)",
+      "source_content_hash": "63fc462a78f011a99f44055dd4364789086c3b250ee6096e21f73f70b29dbb7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API密钥](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "## Usage",
+      "source_content_hash": "63bfd61a0561b255a2caa0a2e3add091ca7e327f2fa06a407cbb2ff341b858d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用指南"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目功能开关"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Sign Up and create account at [https://flagsmith.com/](https://www.flagsmith.com/)",
+      "source_content_hash": "02ed23faa0d80d62463c13b43d07ee95abb457efb9d39a9353d803042b70758d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请先注册并创建账号：[https://flagsmith.com/](https://www.flagsmith.com/)"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "In your application initialise the Flagsmith client once with your environment API key and API URL.",
+      "source_content_hash": "c7a16b115c26f750492e1f3b63d52c33416e9b229aa63fad790a23d7ef405cdf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用程序中，使用您的环境API密钥和API URL初始化Flagsmith客户端。"
+      }
+    },
+    {
+      "segment_id": "a2110253",
+      "source_content": "```dotnet\nFlagsmithConfiguration configuration = new FlagsmithConfiguration()\n{\n    ApiUrl = \"https://api.flagsmith.com/api/v1/\",\n    EnvironmentKey = \"env-key-goes-here\"\n};\n\nFlagsmithClient client = new FlagsmithClient(configuration);\n\n```",
+      "source_content_hash": "3f91b75206b0631aa438526eff912ecc8b0d1c8d0cddc747618e502947f86cf1",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a2110253"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "You can then use the `instance` static variable on `FlagsmithClient` anywhere within your app.",
+      "source_content_hash": "aca653c3a4c7def2e1bc003f9b28db5202871c2e790c8ba9dc3cdbab751f0b3a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此后即可通过`FlagsmithClient`类的静态变量`instance`在应用任意位置调用。"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "To check if a feature flag exists and is enabled:",
+      "source_content_hash": "2d71f5e6484a76e4b0dca71d1f9380e67621196b6aa12ab0561d102f844c2571",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在并启用："
+      }
+    },
+    {
+      "segment_id": "48ec8149",
+      "source_content": "```dotnet\nfeatureEnabled = (bool)FlagsmithClient.instance.HasFeatureFlag(\"my_test_feature\").GetAwaiter().GetResult();\nif (featureEnabled) {\n    // run the code to execute enabled feature\n} else {\n    // run the code if feature switched off\n}\n```",
+      "source_content_hash": "3920235a018b0f69e02039ff80bbb6401f1e7640502036277274b9ccc88cc2a6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_48ec8149"
+      }
+    },
+    {
+      "segment_id": "4d52a261",
+      "source_content": "To get a remote config feature value:",
+      "source_content_hash": "acb24ad7f210febac67bd45bb5ce8959a4e0076bb6bf0365c9794a6086318440",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取远程配置参数值："
+      }
+    },
+    {
+      "segment_id": "6d254e09",
+      "source_content": "```dotnet\nstring myRemoteConfig = FlagsmithClient.instance.GetFeatureValue(\"my_test_feature\").GetAwaiter().GetResult();\nif (myRemoteConfig != null) {\n    // run the code to use remote config value\n} else {\n    // run the code without remote config\n}\n```",
+      "source_content_hash": "3912ecc5140733aaa921923833357d69e2c3f478ca06310943b2d00a9c960aba",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6d254e09"
+      }
+    },
+    {
+      "segment_id": "bd92edfc",
+      "source_content": "### Identifying Users",
+      "source_content_hash": "048f00aedc13469300a2bdf8ebc68457acd87a0d27750225a3395e03d9adb2d4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户标识"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "Identifying users allows you to target specific users from the [Flagsmith dashboard](https://www.flagsmith.com/).",
+      "source_content_hash": "150b39018b72cca0decf1264c91605e268c0bc553e834949cf5c81eac9aac80d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "标识用户后，您可通过[Flagsmith控制台](https://www.flagsmith.com/)定向特定用户。"
+      }
+    },
+    {
+      "segment_id": "147e8550",
+      "source_content": "To check if a feature exists and is enabled for a specific user:",
+      "source_content_hash": "3719cb1dd96aa921a383c7a16a096f5ea9a2952377999efeabde6692242d21d7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查针对特定用户的功能开关状态："
+      }
+    },
+    {
+      "segment_id": "af983f82",
+      "source_content": "```dotnet\nfeatureEnabled = (bool)FlagsmithClient.instance.HasFeatureFlag(\"my_test_feature\", \"my_user_id\").GetAwaiter().GetResult();\nif (featureEnabled) {\n    // run the code to execute enabled feature for given user\n} else {\n    // run the code when feature switched off\n}\n```",
+      "source_content_hash": "02d0ff12313053180e8e475bb8091c108be967403f6d267f1af211894ce4f0ea",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_af983f82"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "To get a remote config value for specific user:",
+      "source_content_hash": "f87d5fad1dfeff8375af2735ad360e41fa54e21658ab6084085a984fc00106cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取特定用户的远程配置值："
+      }
+    },
+    {
+      "segment_id": "65400624",
+      "source_content": "```dotnet\n\nstring myRemoteConfig = FlagsmithClient.instance.GetFeatureValue(\"my_test_feature\", \"my_user_id\").GetAwaiter().GetResult();\nif (myRemoteConfig != null) {\n    // run the code to use remote config value\n} else {\n    // run the code without remote config\n}\n```",
+      "source_content_hash": "107d138a9332881c025c9a7de0cc7e152189eca6d7171e0ceb2e8f05a9e41408",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_65400624"
+      }
+    },
+    {
+      "segment_id": "785750ac",
+      "source_content": "To get user traits:",
+      "source_content_hash": "5b6401d02e13caa6a88f5c04c088115cde604eef3e6f249b0d6a7f9891cc0d26",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取用户特征："
+      }
+    },
+    {
+      "segment_id": "ec99e704",
+      "source_content": "```dotnet\nList<Trait> userTraits = FlagsmithClient.instance.GetTraits(\"my_user_id\").GetAwaiter().GetResult();\nif (userTraits != null && userTraits) {\n    // run the code to use user traits\n} else {\n    // run the code without user traits\n}\n```",
+      "source_content_hash": "dd2523b6abaf69b953d8851f69c5206812b336c19e0d03a663cc6ba6b4736a38",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ec99e704"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "To get a specific user trait:",
+      "source_content_hash": "45f5d4c0cff3e7529c58a83c05ec1594b2bf1c7d6cb1f8187c1b71200227b6c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取特定用户特征："
+      }
+    },
+    {
+      "segment_id": "c4c0fc07",
+      "source_content": "```dotnet\n\nstring userTrait = FlagsmithClient.instance.GetTrait(\"my_user_id\", \"my_user_trait\").GetAwaiter().GetResult();\nbool userTrait = FlagsmithClient.instance.GetTrait(\"my_user_id\", \"my_user_bool_trait\").GetAwaiter().GetResult();\nint userTrait = FlagsmithClient.instance.GetTrait(\"my_user_id\", \"my_user_number_trait\").GetAwaiter().GetResult();\n```",
+      "source_content_hash": "56c75cc5d90cd8a30e600d021a855efb623c61aa0fbe39fa38708a9b0fd06ee0",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c4c0fc07"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "To get filtered user traits:",
+      "source_content_hash": "c1523f3c19731096055c79817611eb38736d35de839d1fc3b6da5f940e091a33",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取筛选后的用户特征："
+      }
+    },
+    {
+      "segment_id": "342e4d80",
+      "source_content": "```dotnet\nList<Trait> userTraits = await FlagsmithClient.instance.GetTrait(\"my_user_id\", new List<string> { \"specific_key\", /* rest of elements */ });\nif (userTraits != null) {\n    // run the code to use user traits\n} else {\n    // run the code without user traits\n}\n```",
+      "source_content_hash": "43969ffd736c23f0242191b2ec9b0bc323660d10a8db877f2c26bedf7a311823",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_342e4d80"
+      }
+    },
+    {
+      "segment_id": "5f82a1e9",
+      "source_content": "To set or update a user trait:",
+      "source_content_hash": "d98fc493a18fa36116bfd4daa7b9bc614ec35bf7054307953f5a311d41766fe1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "设置或更新用户特征："
+      }
+    },
+    {
+      "segment_id": "1ae0b80d",
+      "source_content": "```dotnet\nTrait userTrait = await FlagsmithClient.instance.SetTrait(\"my_user_id\", \"my_user_trait\", \"blue\");\nTrait userTrait = await FlagsmithClient.instance.SetTrait(\"my_user_id\", \"my_user_number_trait\", 4);\nTrait userTrait = await FlagsmithClient.instance.SetTrait(\"my_user_id\", \"my_user_bool_trait\", true);\n```",
+      "source_content_hash": "e896b5378630f2945d61cd22ffbfe7d8537dac48a530ae8643f9a069e99b4419",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1ae0b80d"
+      }
+    },
+    {
+      "segment_id": "692c6053",
+      "source_content": "To increment a numeric user trait:",
+      "source_content_hash": "7f5db7fa99ba0a3c657d51facb3879c0b12c0e0020b2435e70a6215898c09895",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "递增数值型用户特征："
+      }
+    },
+    {
+      "segment_id": "601bdf38",
+      "source_content": "```dotnet\nTrait userTrait = await FlagsmithClient.instance.IncrementTrait(\"my_user_id\", \"my_user_number_trait\", 1);\n```",
+      "source_content_hash": "55fc65df9369b7fdac063efbfd64df6bc0c82dd500fe05296aa560bf60db2583",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_601bdf38"
+      }
+    },
+    {
+      "segment_id": "e478ec2c",
+      "source_content": "To retrieve a user identity (both features and traits):",
+      "source_content_hash": "89b21cd0854016157c1a8dfec56359c41113d775852f57d1badb97da7a73ac8a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检索用户身份信息（包含功能开关及特征）："
+      }
+    },
+    {
+      "segment_id": "e908327f",
+      "source_content": "```dotnet\nIdentity userIdentity = await FlagsmithClient.instance.GetUserIdentity(\"my_user_id\");\nif (userIdentity != null) {\n  // Run the code to use user identity i.e. userIdentity.flags or userIdentity.traits\n}\n```",
+      "source_content_hash": "04fd58d7d6e7f2c41292d73355bc8b699659ff747f7c39a08876f3cf7a6dc95e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e908327f"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/dotnet.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.946099+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c4b5424838a2fd55319b512e00746d442f58b2dff2707d696949097c710c8636"
+  }
+}

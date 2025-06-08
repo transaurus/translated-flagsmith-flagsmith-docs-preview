@@ -1,0 +1,402 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/overview.md",
+  "source_file_content_hash": "d1645844867cc939e145dc1564ed960c169cb17c51316e8713e678f31de796cb",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Manage your Feature Flags and Remote Config in your REST APIs.\nsidebar_label: Overview\nsidebar_position: 1\n---",
+      "source_content_hash": "e8148efab8fe795508735fe119cdc504dfafc6c5f8937cd9389f8e82b7abafbb",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# SDKs Overview",
+      "source_content_hash": "8683412bc4ca8c207dd5fa173d58ca378e2e6e12ec1a40d4223a14b524133c36",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# SDK概览"
+      }
+    },
+    {
+      "segment_id": "53eaf0e1",
+      "source_content": "Flagsmith ships with SDKs for a bunch of different programming languages. We also have a [REST API](rest.md) that you\ncan use if you want to consume the API directly.",
+      "source_content_hash": "8c7d93d817643fd76c7e4d1c2df6be497778ffcdcab29b6d72be404cf0dad1cd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith提供多种编程语言的SDK。如果您希望直接调用API，我们还提供[REST API](rest.md)接口。"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "The SDKs are split into two different types: **Client-side** and **Server-side** sdks. These SDKs have different methods\nof operation due to the differences in their operating environment.",
+      "source_content_hash": "5022b9f0579d52fea051eb3dab1134ab783e7aa9db401115dd46cf7d76f33507",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK分为两种类型：**客户端**和**服务端**SDK。由于运行环境差异，这两类SDK采用不同的工作模式。"
+      }
+    },
+    {
+      "segment_id": "ac44a45c",
+      "source_content": ":::tip\n\n**Environment Keys** come in two different types: Client-side and Server-side keys. Make sure you use the correct key\ndepending on the SDK you are using.\n\n:::",
+      "source_content_hash": "d9df06571f64c582665f9117929f8e9128664c28314ef12264d5b6c9bea6b4bf",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n**环境密钥**分为客户端和服务端两种类型。请根据所用SDK类型确保使用正确的密钥。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## Client-side SDKS",
+      "source_content_hash": "3d1fca722ce5a8036bf99b81b6412f5d064ad7b7559bc96c85c176ed8a3ac5db",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 客户端SDK"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Client-side SDKs run in web browsers or on mobile devices. These runtimes execute within _untrusted environments_.\nAnyone using the Javascript SDK in a web browser, for example, can find the Client-side SDK, create a new Identity, look\nat their flags and\n[potentially write Traits to the Identity](../advanced-use/system-administration.md#preventing-client-sdks-to-set-traits).",
+      "source_content_hash": "ceff7aa78732001dedcebfe99bc2baab98dbbe96df378460ef6312615d24fc1a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端SDK运行在浏览器或移动设备等不可信环境中。例如使用Javascript SDK的网页用户可创建新身份标识、查看功能开关，甚至可能[向身份标识写入特征值](../advanced-use/system-administration.md#preventing-client-sdks-to-set-traits)。"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Client-side SDKs are also limited to the\n[types of data that they have access to](/guides-and-examples/integration-approaches#segment-and-targeting-rules-are-not-leaked-to-the-client).",
+      "source_content_hash": "3cbf6d0d54ca4a32b8e495d351a793e54f450d9a6128420ee35c224a54639db1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端SDK还受限于[可访问的数据类型](/guides-and-examples/integration-approaches#segment-and-targeting-rules-are-not-leaked-to-the-client)。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Client-side Environment keys are designed to be shared publicly, for example in your HTML/JS code that is sent to a web\nbrowser.",
+      "source_content_hash": "9d5dffa6eb4d73bf347c83ae9904739773689a44fe15c639c73de026f31126d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端环境密钥设计为公开共享，例如可嵌入发送给浏览器的HTML/JS代码中。"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Client-side SDKs hit our [Edge API](../advanced-use/edge-api.md) directly to retrieve their flags.",
+      "source_content_hash": "3550c815d1a08e9a8dc0b0bf1867de54370d38e6f15584242067b50363729f15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端SDK直接调用我们的[边缘API](../advanced-use/edge-api.md)获取功能开关。"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Read more about our Client-Side SDKs for your language/platform:",
+      "source_content_hash": "4891eb2d64885d0e19a5ca0baa4ba5d56183aa434b14cce729621ec72b7edc50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "各平台客户端SDK文档："
+      }
+    },
+    {
+      "segment_id": "33808f76",
+      "source_content": "- [Javascript](/clients/javascript)\n- [Android/Kotlin](/clients/android)\n- [Flutter](/clients/flutter)\n- [iOS/Swift](/clients/ios)\n- [React & React Native](/clients/react)\n- [Next.js, Svelte and SSR](/clients/next-ssr)",
+      "source_content_hash": "63b6cc83ea185981eb1380fd3efaf043833ac4a2f9fe4c354c332fa0fad33517",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [Javascript](/clients/javascript)\n- [Android/Kotlin](/clients/android)\n- [Flutter](/clients/flutter)\n- [iOS/Swift](/clients/ios)\n- [React & React Native](/clients/react)\n- [Next.js, Svelte与SSR](/clients/next-ssr)"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## Server-side SDKs",
+      "source_content_hash": "213c6ae05b38de79724cd7965d248b59774876a11a30ae3404cc7c0fb184e44b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 服务端SDK"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "[Server-side SDKs](/clients/server-side.md) run within _trusted environments_ - typically the server infrastructure that\nyou have control over. Because of this you need to should not share your Server-side Environment keys publicly - they\nshould be treated as secrets.",
+      "source_content_hash": "f1953c519918cc47aa7593d618810eb8f855bc1fbf28f04f39a59c1e42191835",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[服务端SDK](/clients/server-side.md)运行在可信环境中（通常为您控制的服务器基础设施）。因此服务端环境密钥应视为机密信息，不可公开共享。"
+      }
+    },
+    {
+      "segment_id": "a646eac9",
+      "source_content": ":::tip\n\nThe Server Side SDKs can operate in 2 different modes:\n\n1. `Remote Evaluation`\n2. `Local Evaluation`\n\nIt's important to understand which mode is right for your use case, and what the pros and cons of each one are. This is\ndetailed below.\n\n:::",
+      "source_content_hash": "ba590e431eda0243b0e938601cde93d5ff19696ee679f96371dfb99150ea8c36",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n服务端SDK支持两种工作模式：\n\n1. `远程评估`\n2. `本地评估`\n\n请根据使用场景选择合适模式，下文将详细说明各模式的优缺点。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "c315c636",
+      "source_content": "### 1 - Remote Evaluation",
+      "source_content_hash": "28a1e8370e4dd4d014051fedde060fb3a327db8e20cbd15d51dcad4ada00238c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 1 - 远程评估"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "In this mode, every time the SDK needs to get Flags, it will make a request to the Flagsmith API to get the Flags for\nthe particular request.",
+      "source_content_hash": "fbcb99b4720291a8169b18e802ff0c6273e025842263ed88923828cee4667367",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该模式下，每次获取功能开关时SDK都会向Flagsmith API发起请求。"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "![Remote Evaluation Diagram](/img/sdk-remote-evaluation.svg)",
+      "source_content_hash": "5624ca5df05b596a78eae5a2d11eaa8117356fc79e0e1088a27ffcca1c0d4474",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![远程评估示意图](/img/sdk-remote-evaluation.svg)"
+      }
+    },
+    {
+      "segment_id": "e7772088",
+      "source_content": "`Remote Evaluation` is the default mode; simply initialise the SDK and you will be running in `Remote Evaluation` mode.",
+      "source_content_hash": "7355d855993b6e86c16f63d0d11a07205f01e6483a57607bcefab05a7b3b9e65",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "`远程评估`是默认模式，初始化SDK后即自动启用该模式。"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "This is the same way that the [Client Side SDKs](#client-side-sdks) work.",
+      "source_content_hash": "dd4cff45076d65e5a79e9a65dd9c34a8dfeace39112fc576b168f6228d48d6c1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此模式与[客户端SDK](#client-side-sdks)的工作机制相同。"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "### 2 - Local Evaluation",
+      "source_content_hash": "56aee635ffe92f0bf23419b075a5ab4e621e75793a145c7dfb6703940f1e5752",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 2 - 本地评估"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "In this mode, all flag values are calculated locally, on your server. The Flagsmith SDK includes an implementation of\nthe Flag Engine, and the engine runs within your server environment within the Flagsmith SDK.",
+      "source_content_hash": "8723164dd28b05aab9aed95377c3d9274d70210a1da7f436d762f10125ccde99",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该模式下所有功能开关都在您的服务器本地计算。Flagsmith SDK内置了开关引擎实现，可在您的服务器环境中运行。"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "![Local Evaluation Diagram](/img/sdk-local-evaluation.svg)",
+      "source_content_hash": "b39c62a8c277ab43e5e741be621cfd0aa7f2b9b07223afdee51048c7c32ebe07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![本地评估示意图](/img/sdk-local-evaluation.svg)"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "You have to configure the SDK to run in `Local Evaluation` mode. See the\n[SDK configuration options](server-side.md#configuring-the-sdk) for details on how to do that in your particular\nlanguage.",
+      "source_content_hash": "5dae94d7b288ccdfc8c229c7f836347a8c7c678c95364333667498526543119e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需手动配置SDK以启用`本地评估`模式。具体配置方法请参考[SDK配置选项](server-side.md#configuring-the-sdk)中对应语言的说明。"
+      }
+    },
+    {
+      "segment_id": "ec619944",
+      "source_content": "When the SDK is initialised in `Local Evaluation` mode, it will grab the entire set of details about the Environment\nfrom the Flagsmith API. This will include all the Flags, Flag values, Segment rules, Segment overrides etc for that\nEnvironment. This full complement of data about the Environment enables the Flagsmith SDK to run the Flag Engine\n_locally_ and _natively_ within your server infrastructure.",
+      "source_content_hash": "5aba2dc4f58a33d9349d24b0964238af20cf6915348d30afcca741e8284ae599",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当SDK以`本地评估(Local Evaluation)`模式初始化时，它会从Flagsmith API获取该环境的所有相关数据。这包括该环境下的所有功能开关(Flags)、开关值、细分规则(Segment Rules)、细分覆盖(Segment Overrides)等。这些完整的环境数据使得Flagsmith SDK能够在您的服务器基础设施中_本地_且_原生_地运行功能开关引擎(Flag Engine)。"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "The benefits to doing this are mainly one of latency and performance. Your server side code does not need to hit the\nFlagsmith API each time a user requests their flags - the flags can be computed locally. Hence it does not need to block\nand wait for a response back from the Flagsmith API.",
+      "source_content_hash": "c2c1578e5a1f47e19c55b68ffb20b26b7f0ffa7755e27e8dbde958c67fc5639d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这种模式的主要优势在于降低延迟并提升性能。您的服务端代码无需在每次用户请求功能开关时访问Flagsmith API——所有开关都可以在本地计算得出，因此无需阻塞等待Flagsmith API的响应。"
+      }
+    },
+    {
+      "segment_id": "8a58dc39",
+      "source_content": ":::tip\n\nThe SDK has to request all of the data about an Environment in order to run. Because some of this data could be\nsensitive (for example, your Segment Rules), the SDK requires a specific `Server-side Environment Key`. This is\ndifferent to the regular `Client-side Environment Key`. The `Server-side Environment Key` should _not_ be shared, and\nshould be considered sensitive data.\n\n:::",
+      "source_content_hash": "48d2fbe09fca73e84a51349660bf5e9d3db7830c44847639bfb000646be2200e",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\nSDK需要请求环境的所有数据才能运行。由于部分数据可能涉及敏感信息（例如细分规则），SDK需要使用特定的`服务端环境密钥(Server-side Environment Key)`。这与常规的`客户端环境密钥(Client-side Environment Key)`不同。`服务端环境密钥`属于敏感数据，_严禁_对外共享。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "In order to keep their Environment data up-to-date, SDKs running in `Local Evaluation` mode will poll the Flagsmith API\nregularly and update their local Environment data with any changes from the Flagsmith API. By default the SDK will poll\nthe Flagsmith every `60` seconds; this rate is configurable within each SDK.",
+      "source_content_hash": "ee1687fa68ac1e47ba64132aa338d33ad5178ac33ed2f315f1cd8772415bc97c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "为了保持环境数据的实时性，运行在`本地评估`模式的SDK会定期轮询Flagsmith API，并使用API的变更更新本地环境数据。默认情况下SDK每`60`秒轮询一次，该频率可在各语言SDK中配置。"
+      }
+    },
+    {
+      "segment_id": "f0984c2a",
+      "source_content": "It's important to understand the [pros and cons](#pros-cons-and-caveats) for running `Local Evaluation`.",
+      "source_content_hash": "75805e2aba4d13e1d7f8e4aa7885abe20357159acd3d422bb3a7c803a93c9cca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "理解[本地评估模式的优缺点](#pros-cons-and-caveats)非常重要。"
+      }
+    },
+    {
+      "segment_id": "56bc971f",
+      "source_content": "### Client Side SDKs",
+      "source_content_hash": "a51bcda4f728409dcef990d139718307f6730cf8005511ef8c4e1e1109fc1077",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 客户端SDK"
+      }
+    },
+    {
+      "segment_id": "0801d969",
+      "source_content": "All our Client Side SDKs run in `Remote Evaluation` mode only; they cannot run in `Local Evaluation mode`. The reason\nfor this is down to data sensitivity. Because some of this data could be sensitive (for example, your Segment Rules), we\nonly allow Client Side SDKs to run in `Remote Evaluation` mode.",
+      "source_content_hash": "1255ce374204d558049df759e49901af1c4d477eafe39f2b3abb69713947fce5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "所有客户端SDK仅支持`远程评估(Remote Evaluation)`模式，无法运行在`本地评估模式`。这主要基于数据敏感性考虑。由于部分数据可能涉及敏感信息（例如细分规则），我们仅允许客户端SDK运行在`远程评估`模式。"
+      }
+    },
+    {
+      "segment_id": "5b81fcd1",
+      "source_content": ":::info\n\nBecause Clients are almost always operating remotely from your server infrastructure, there is little benefit to them\nrunning in `Local Evaluation` mode.\n\n:::",
+      "source_content_hash": "c46faefdc0f2c059f317845d706355cd54a69acec7886ad0a574c56cbcbbb20a",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::info\n\n由于客户端几乎总是远离您的服务器基础设施运行，采用`本地评估`模式几乎不会带来性能优势。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "b9b8694c",
+      "source_content": "## Pros, Cons and Caveats",
+      "source_content_hash": "cbe75e0a5919a78740421abf46f9d53f9edf156b349904f3cedf5cfdd1fdeb21",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 优缺点与注意事项"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "### Remote Evaluation Mode",
+      "source_content_hash": "76284004e408767c22875218f26c70cac1fa747f8028bdba8d4f45eac1c985e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 远程评估模式"
+      }
+    },
+    {
+      "segment_id": "40a587f3",
+      "source_content": "- Identities are persisted within the Flagsmith Datastore.\n- Identity overrides specified within the Dashboard.\n- All Integrations work as designed.",
+      "source_content_hash": "3437646f943304b80883863587009b205748bed3268bfa7d3cc6ed5e091c205d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户身份(Identities)会持久化存储在Flagsmith数据库中\n- 支持通过仪表盘配置的身份覆盖(Identity Overrides)\n- 所有集成功能均可正常使用"
+      }
+    },
+    {
+      "segment_id": "c35e5786",
+      "source_content": "### Local Evaluation Mode",
+      "source_content_hash": "e8466e322e24eef0dd3d6b110a6c47c29a35a948a0160350985dec047d83b1ff",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 本地评估模式"
+      }
+    },
+    {
+      "segment_id": "d8460b5b",
+      "source_content": "- Identities are _not_ sent to the API and so are not persisted in the datastore.\n- Because Local mode does not connect to the datastore for each Flag request, it is not able to read the Trait data of\n  Identities from the API. This means that you have to provide the full complement of Traits when requesting the Flags\n  for a particular Identity. Our SDKs all provide relevant methods to achieve this.\n- [Identity overrides](../basic-features/managing-identities#identity-overrides) do not operate at all.\n- Analytics-based Integrations do not run.",
+      "source_content_hash": "7a3f4e3c711c81efcaf096cb457554a8871b6969bf5cf4b17ff9ca41045a74a1",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户身份_不会_发送至API，因此不会被持久化存储\n- 由于本地模式不会为每个功能开关请求连接数据库，因此无法从API读取用户特征的完整数据。这意味着您必须为特定身份请求功能开关时提供完整的特征数据(Traits)。我们的各语言SDK都提供了相应方法来实现这一点\n- [身份覆盖](../basic-features/managing-identities#identity-overrides)功能完全失效\n- 基于分析数据的集成功能无法运行"
+      }
+    },
+    {
+      "segment_id": "e478ec2c",
+      "source_content": "The benefit of running in Local Evaluation mode is that you can process flag evaluations much more efficiently as they\nare all computed locally.",
+      "source_content_hash": "d20b982366fdc063c374d63bec1bdc82c2ed049fc76b24b83e58b48377d813f0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "本地评估模式的优势在于能够更高效地处理功能开关评估，因为所有计算都在本地完成。"
+      }
+    },
+    {
+      "segment_id": "a3f69fad",
+      "source_content": ":::tip\n\nIn circumstances where you need to target a specific identity, you can do this by creating a segment to target that\nspecific user and subsequently adding a segment override for that segment.\n\n:::",
+      "source_content_hash": "e5c4c9d7a8c3c44e34d1b73a209253966b0f742be503e00f5142d16d7c087ea9",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n当需要针对特定身份进行定向时，您可以通过创建针对该用户的细分(Segment)，并为该细分添加覆盖规则来实现。\n\n:::"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/overview.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.950145+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "d1645844867cc939e145dc1564ed960c169cb17c51316e8713e678f31de796cb"
+  }
+}

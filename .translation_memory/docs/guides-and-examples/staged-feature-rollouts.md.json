@@ -1,0 +1,192 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/guides-and-examples/staged-feature-rollouts.md",
+  "source_file_content_hash": "b44082aaa0919a4c801e2ebb642e97fd89f7f2383d86175578f02c4f0577b84a",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Staged Feature Rollouts\n---",
+      "source_content_hash": "1468eb7b760b6a4adf2c403bfeb670be382fecfbaf8b53384eeccdecb0b48516",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## What are Staged Feature Rollouts",
+      "source_content_hash": "0a4dd5081e0f5c0678b52cd6c06bafc1029e9a989c1cdf265b0f0f941536ee6f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 什么是分阶段功能发布"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Staged Feature Rollouts allow you to test a new feature with a small subset of your user base. If you are happy with the\nfeature, you can increase the percentage of users that see the feature until it is available to your entire user base.",
+      "source_content_hash": "ec5623a4a784391005587d0f8249b45f8331b872d78ccbff330abcb7dc175c9f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "分阶段功能发布允许您在小部分用户群体中测试新功能。如果功能表现良好，您可以逐步增加可见该功能的用户比例，直至覆盖全部用户群。"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "This method can increase your confidence in rolling out a new feature. If there are issues with the rollout, you can\nsimply disable the Feature Flag, thus hiding the feature within your application.",
+      "source_content_hash": "9ae04ebdf5c2e428f26805a9f7de317df75755c8d418ddac02b57a0ecae1d5e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这种方法能提升新功能发布的信心。若发布过程中出现问题，只需禁用功能开关即可在应用中隐藏该功能。"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "## Creating Staged Rollouts",
+      "source_content_hash": "d3e619ce3fa3a3c2b6c3996dc0fad50becff3fcac36e3e786464d25ef65d4ecd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建分阶段发布"
+      }
+    },
+    {
+      "segment_id": "ac44a45c",
+      "source_content": ":::important\n\nStaged Rollouts **_only_** come into effect if you are getting the Flags for a particular Identity. If you are just\nretrieving the flags for an Environment without passing in an Identity, your user will never be included in the \"%\nSplit% Segment.\n\n:::",
+      "source_content_hash": "c6b43cab7cdb39ed85db43313a6335e19488401b94976decd786f78f4033cc7c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::important\n\n分阶段发布**_仅_**在针对特定身份获取功能开关时生效。如果仅获取环境级别的开关而未传入身份标识，用户将永远不会被包含在\"百分比分割\"的区段中。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "You can achieve staged rollouts by creating a [Segment](/basic-features/managing-segments.md) and adding a rule defined\nwith the \"% Split\" condition. Specifying a \"% Split\" value between 1 and 100 then defines what percentage of your user\nbase are included within this Segment.",
+      "source_content_hash": "d753a97fe8c4340f085dce7ad03c4ad58d74da6fca34f223622a4ad0e3f500ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过创建[区段](/basic-features/managing-segments.md)并添加定义为\"百分比分割\"条件的规则来实现分阶段发布。设置1到100之间的百分比值，即可定义用户群中被包含在该区段的比例。"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "![Image](/img/percent-rollout.png)",
+      "source_content_hash": "a5fdd0b228b0bc1c645b98eef4530d2679d1baefb934501284ff6180b119227c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图示](/img/percent-rollout.png)"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Once you have created the Segment, you can then go ahead and connect it up to a Feature Flag as per regular\n[Segments](/basic-features/managing-segments.md).",
+      "source_content_hash": "856d4cf4c9df9d8b6e53e249596d403f30f9baa9e18fc0d8ee906145ac1f7a50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "创建区段后，您可以按照常规[区段](/basic-features/managing-segments.md)操作将其关联到功能开关。"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "Note that you can include the \"% Split\" rule alongside other Segment rules if you wish.",
+      "source_content_hash": "d0db1e15002a83d071591bef3133cc999ea6dc0277638b1fb2c291a2c509d535",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "请注意，\"百分比分割\"规则可以与其他区段规则组合使用。"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## How does it work",
+      "source_content_hash": "a475fc18fc36f0929a0814a24ccd7b46c365963f982dd286fb6718e9cb64f5f1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 工作原理"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Each Identity and Segment has a unique identifier. These two pieces of data are merged then hashed, and a floating point\nvalue between 0.0 and 1.0 is generated from this hash. This value is then evaluated against the \"% Split\" rule.",
+      "source_content_hash": "4cbf301a4c49c626eba59f128b7a1bf9590cf110cc01b5e35eb4f1537e070cef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每个身份标识和区段都有唯一ID。这两组数据经合并哈希后，会生成一个0.0到1.0之间的浮点值。该数值将与\"百分比分割\"规则进行比对。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "### An Example",
+      "source_content_hash": "30ebe24d0aaca45f1062bd5b700130b2524b0bdf7a268102d6e15041d4a22d51",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 示例说明"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "So to take an example. For a single Identity, we perform the following steps:",
+      "source_content_hash": "9a4eb3cf155b273e46eaf0125a3819d235504c3acd1f5d4778bde5d303403053",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "举例来说，对于单个身份标识的处理流程如下："
+      }
+    },
+    {
+      "segment_id": "bdfae007",
+      "source_content": "1. Take the internal Segment ID and their internal Identity ID and combine them into a single string\n2. We then hash that string\n3. We then generate a float value between 0 and 1 based on that hash",
+      "source_content_hash": "edafccb8a1d9bb4215abfff0c47a60917d5d32c3d3313d217beca67520594e71",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 获取内部区段ID和身份ID并合并为字符串\n2. 对该字符串进行哈希运算\n3. 基于哈希值生成0到1之间的浮点数"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "So for every Segment/Identity combination, a value of between 0 and 1 is generated. Due to the hashing algorithm used,\nwe ensure a consistent spread of values from 0 to 1.",
+      "source_content_hash": "f5d870bfd9d9f35795a86adcd27f04e1a896722364591353ce47bb3c85a9e9f5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "因此每个区段/身份组合都会生成0到1之间的值。通过采用的哈希算法，我们确保数值在0到1区间内均匀分布。"
+      }
+    },
+    {
+      "segment_id": "a44047a5",
+      "source_content": "So lets say that number comes out at 0.351 for a particular Identity. If you create a Segment % split to be 30%, that\nIdentity will not be included in that Segment because 0.351 is great than 0.3 (30%). If you then modify the Segment to\nbe a 40% split, the Identity WILL be in that Segment because 0.4 > 0.351. That way you get a consistent experience as an\nend-user. This works because the ID of a Segment doesn't change after it has been created.",
+      "source_content_hash": "24d8256d01f41013c560165bc981797a1fb551f5a96d697a99050d43cf4137d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "假设某身份标识的哈希值为0.351。若创建30%分割的区段，该身份将不被包含（因为0.351 > 0.3）。当将区段调整为40%分割时，该身份就会被包含（0.4 > 0.351）。由于区段ID创建后不变，终端用户能获得一致的体验。"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "A second Identity might have their value hash be equal to 0.94. In that case, they would not be in the Segment with the\nsplit at either 30% of 40%.",
+      "source_content_hash": "8b693b7eba3c77b3ceec38d0773b7920b9091b275b96e466ee6f0e8369abda05",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "另一个身份标识的哈希值可能是0.94。这种情况下，无论是30%还是40%的分割设置，该身份都不会被包含在目标区段中。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/guides-and-examples/staged-feature-rollouts.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.947522+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b44082aaa0919a4c801e2ebb642e97fd89f7f2383d86175578f02c4f0577b84a"
+  }
+}

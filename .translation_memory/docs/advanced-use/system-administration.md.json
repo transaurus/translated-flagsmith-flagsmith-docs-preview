@@ -1,0 +1,492 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/advanced-use/system-administration.md",
+  "source_file_content_hash": "ddb3a17b5f9af1ca8a67b3d3e95c1839cbf8cc7be27959d1c3eeefcb922c934d",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: System Administration\n---",
+      "source_content_hash": "06a4e6b5aa03feb97d07202913f0c8e39858656b4bb9513ddabef71e746d66fd",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "f85bbfb4",
+      "source_content": "## Authentication",
+      "source_content_hash": "df96773c8abc735dd4f21f5ff9ce623e4d544cd60d025eeba0e89dca1e0f9238",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 身份验证"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Flagsmith supports a variety of Authentication methods for logging into the dashboard.",
+      "source_content_hash": "8572884b6c35aa03061f0a49a987af61b6a169248494456ac4ff57f56edfec75",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 仪表板支持多种身份验证登录方式。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "### Open Source Version",
+      "source_content_hash": "0c79ce3e0d45f0d88a952874a639dbc404cde4f994e7d05cfbeaeac07300b503",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 开源版本"
+      }
+    },
+    {
+      "segment_id": "be33979e",
+      "source_content": "- Username and Password\n- Github OAuth (with configuration)\n- Google OAuth (with configuration)",
+      "source_content_hash": "3d64bb7e45114e6396c9b7dfafdebe6b0a2d9ea964c30e0c56350e8b8cf7d6bb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户名和密码\n- Github OAuth（需配置）\n- Google OAuth（需配置）"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "### SaaS, Free and Startup Plans",
+      "source_content_hash": "4b42e87c3893066ceeea27b374e9ab468d4e82e8256f40d6c891f4d12fdfb627",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SaaS免费版及初创计划"
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "- Username and Password\n- Github OAuth (with configuration)\n- Google OAuth (with configuration)",
+      "source_content_hash": "3d64bb7e45114e6396c9b7dfafdebe6b0a2d9ea964c30e0c56350e8b8cf7d6bb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户名和密码\n- Github OAuth（需配置）\n- Google OAuth（需配置）"
+      }
+    },
+    {
+      "segment_id": "418617bd",
+      "source_content": "### SaaS, Scale-Up Plan",
+      "source_content_hash": "49575131c8cc58130e7b1b2ad5ccf71e9cd05eea478f87e5cdaf8021f6c4c0df",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### SaaS扩容计划"
+      }
+    },
+    {
+      "segment_id": "2fdadb08",
+      "source_content": "2FA can also be enabled with this plan.",
+      "source_content_hash": "94c086f1d4875feb3515b56d72306b7f9ee3e9b84b08c6aa0634db1b27263846",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该计划支持启用双重认证(2FA)。"
+      }
+    },
+    {
+      "segment_id": "44d89370",
+      "source_content": "- Username and Password\n- Github OAuth (with configuration)\n- Google OAuth (with configuration)\n- SAML",
+      "source_content_hash": "61bb977a299aa3ee80cba0bc1c4bfb4781bf900000cdce87a9f04edb8204326d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户名和密码\n- Github OAuth（需配置）\n- Google OAuth（需配置）\n- SAML"
+      }
+    },
+    {
+      "segment_id": "d06306f7",
+      "source_content": "### Enterprise Plan (SaaS, On Prem or Private Cloud)",
+      "source_content_hash": "61e45fe7e7fc2929368f2b291a6b215b083ecb047311010dc89082029d4291dc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 企业计划（SaaS/本地部署/私有云）"
+      }
+    },
+    {
+      "segment_id": "73ab96a3",
+      "source_content": "2FA can also be enabled with this plan.",
+      "source_content_hash": "94c086f1d4875feb3515b56d72306b7f9ee3e9b84b08c6aa0634db1b27263846",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该计划支持启用双重认证(2FA)。"
+      }
+    },
+    {
+      "segment_id": "7499a4e7",
+      "source_content": "Enterprise plans also allows for restrictions to lock down Organisation logins to specific authentication methods.",
+      "source_content_hash": "58f0fe2f279b7773dc02f51a8e06df1676729d62a2c52bf4521e94807009c25d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "企业版还可限制组织仅通过特定认证方式登录。"
+      }
+    },
+    {
+      "segment_id": "7a2e981c",
+      "source_content": "- Username and Password\n- Github OAuth (with configuration)\n- Google OAuth (with configuration)\n- SAML\n- Okta\n- LDAP\n- Microsoft ADFS",
+      "source_content_hash": "13beb95fe41dabe47c49a5c358d5564627b4dfba532de34119e7a16a4a33d141",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户名和密码\n- Github OAuth（需配置）\n- Google OAuth（需配置）\n- SAML\n- Okta\n- LDAP\n- Microsoft ADFS"
+      }
+    },
+    {
+      "segment_id": "54268405",
+      "source_content": "## Terraform API Keys for Organisations",
+      "source_content_hash": "291b5b59794f57398ba900ed38f70f25ebc0d7ba2b358277c0d5ac36a1a0eed2",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 组织的Terraform API密钥"
+      }
+    },
+    {
+      "segment_id": "8af76f3d",
+      "source_content": "You can create Terraform API Keys from the Organisation Settings page. These are currently used with our\n[Terraform Provider](../integrations/terraform.md). You can create Terraform API Keys that have access over your entire\nOrganisation for the endpoints required by Terraform to operate.",
+      "source_content_hash": "99ed541f8471506e9c00740bd08cd6dc7ff931568178a62740bb2f588dafae50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在组织设置页面创建Terraform API密钥，当前用于我们的[Terraform Provider](../integrations/terraform.md)。可创建具有组织全局访问权限的密钥，以满足Terraform运行所需的端点调用。"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## Preventing Client SDKS from setting Traits",
+      "source_content_hash": "655ee88dcdd3c72b950a0ec6f853ac1ab6c49ea45f2ce6167b2ce40c7ae4985f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 禁止客户端SDK设置用户特征"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "There may be use-cases where you want to prevent client-side SDKs from setting traits of users. For example, if you are\nsetting `plan=silver` as a trait, and then enabling/disabling features based on that plan, a malicious user could, with\na client-side SDK, update their trait to `plan=gold` and unlock features they have not paid for.",
+      "source_content_hash": "53654ec751fdd245871d2d055cd1c980173a070795974d623517fb14af3185cc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "某些场景下可能需要禁止客户端SDK设置用户特征。例如：当您通过特征`plan=silver`控制功能开关时，恶意用户可能通过客户端SDK将特征篡改为`plan=gold`来解锁未付费功能。"
+      }
+    },
+    {
+      "segment_id": "b9aaa519",
+      "source_content": "You can prevent this by disabling the \"Allow client SDKs to set user traits\" option. This option defaults to \"On\".\nTurning it \"Off\" will not allow client-side SDKs to write Traits to Flagsmith. In order to write traits, you will need\nto use a [server-side SDK and server-side Key](../clients/overview.md).",
+      "source_content_hash": "29e5eeceb37288668de0f3037f6d7380b5dd683814a15ddedb7fc2859afca529",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可通过关闭\"允许客户端SDK设置用户特征\"选项来防范（默认开启）。关闭后，必须使用[服务端SDK及服务端密钥](../clients/overview.md)才能写入特征。"
+      }
+    },
+    {
+      "segment_id": "40158b4b",
+      "source_content": "This is a per-Environment setting.",
+      "source_content_hash": "23ac32e2b890e1b691fd23ab8e8d02f96ea1366deafc6f40f9310480d94e782f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此为按环境配置的选项。"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## API Usage",
+      "source_content_hash": "60bf64b698a212b786a7acb303a2a85afa1a9015031300735adf336fe1bba5f1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API使用统计"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "Flagsmith will track API calls made by the SDKS and store them in its data-store. You can view this data by going to the\nOrganisation settings page and clicking on **Usage**. You can also drill down into Projects and Environments. Flagsmith\ntracks the following request types:",
+      "source_content_hash": "71c5e670112f63b2d04d62f328e0095af75797c20d9eea5a64fed499bde48574",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith会追踪SDK发起的API调用并存储统计数据。您可以在组织设置页面的**使用情况**中查看，也可下钻到具体项目和环境。系统追踪以下请求类型："
+      }
+    },
+    {
+      "segment_id": "645e08e3",
+      "source_content": "1. Get Flags\n2. Get Identity Flags\n3. Set Identity Traits\n4. Get Environment Document (for local evaluation SDKs)",
+      "source_content_hash": "df12db3a474a52ab4250cea26251be04e3491053d8e6db4de95e9f4a43b069e9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 获取功能开关\n2. 获取身份特征开关\n3. 设置身份特征\n4. 获取环境文档（用于本地评估型SDK）"
+      }
+    },
+    {
+      "segment_id": "eab056be",
+      "source_content": "![API Usage](/img/api-usage.png)",
+      "source_content_hash": "83b95b5ef743aa515c1c3405815b5c7b949eab046edcae3a013f5f74d6cd4e26",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API使用统计](/img/api-usage.png)"
+      }
+    },
+    {
+      "segment_id": "b1cbdb65",
+      "source_content": "## Audit Logs",
+      "source_content_hash": "9d5e16ed194742f14c5156b94381e5b989a9ca2516cc89b829154d6dec11b94e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志"
+      }
+    },
+    {
+      "segment_id": "afa378f7",
+      "source_content": "Every action taken within the Flagsmith administration application is tracked and logged. This allows you to easily\nretrace the events and values that flags, identities and segments have taken over time.",
+      "source_content_hash": "29edcd93d5d9f8489a55927fed7f84695278e5738040a496267f434dfcfcf667",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith管理端的所有操作都会被追踪记录，便于追溯功能开关、身份特征和用户分群的历史变更。"
+      }
+    },
+    {
+      "segment_id": "7736989b",
+      "source_content": "You can view the Audit Log within the Flagsmith application, and filter it in order to find the information you are\nafter.",
+      "source_content_hash": "0202d3aa91c3e005e7ce67cfa0cdaf8eef12b3fd773c49c44e0934dc1d6004d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可在应用内查看审计日志，并通过筛选定位所需信息。"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "You can also stream your Audit Logs into your own infrastructure using [Audit Log Webhooks](#audit-log-webhooks).",
+      "source_content_hash": "fb65df59f013ee597669660d30250fe010bc2e1d731dd89609113fbdc27ccc78",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "还支持通过[审计日志Webhook](#audit-log-webhooks)将日志流式传输至自有基础设施。"
+      }
+    },
+    {
+      "segment_id": "0a103a02",
+      "source_content": "## Audit Log Webhooks",
+      "source_content_hash": "08a8cb85408e668d3ee3e9c12ae6c5e13cd2ce9749cf82eec39b06a7057232e1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 审计日志Webhook"
+      }
+    },
+    {
+      "segment_id": "8126f763",
+      "source_content": "You can use Audit Log Webhooks to stream your Organisation's Audit Log into your own infrastructure. This can be useful\nfor compliance or to reference against local CI/CD infrastructure.",
+      "source_content_hash": "d6f79b4cf0efa616ceb56b708d55de5f227e6e727c77dfda9886c21383dc95d1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过审计日志Webhook可将组织级审计日志流式传输至自有基础设施，适用于合规审查或与本地CI/CD系统对接。"
+      }
+    },
+    {
+      "segment_id": "7d898a0e",
+      "source_content": "```json\n{\n \"created_date\": \"2020-02-23T17:30:57.006318Z\",\n \"log\": \"New Flag / Remote Config created: my_feature\",\n \"author\": {\n  \"id\": 3,\n  \"email\": \"user@domain.com\",\n  \"first_name\": \"Kyle\",\n  \"last_name\": \"Johnson\"\n },\n \"environment\": null,\n \"project\": {\n  \"id\": 6,\n  \"name\": \"Project name\",\n  \"organisation\": 1\n },\n \"related_object_id\": 6,\n \"related_object_type\": \"FEATURE\"\n}\n```",
+      "source_content_hash": "c0c2f8a728fbf6dded66b9549277e88fa745f221a57afa1c6cd63bf8647dd30d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7d898a0e"
+      }
+    },
+    {
+      "segment_id": "d1f76d04",
+      "source_content": "## Web Hooks",
+      "source_content_hash": "34fc3be1b191a2ab62a7b74fb1faa963bd4845c00c27b9ca7ae583c5da2b82fe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "You can use the Web Hooks to send events from Flagsmith into your own infrastructure. Web Hooks are managed at an\nEnvironment level, and can be configured in the Environment settings page.",
+      "source_content_hash": "a98a940238fc59d5a90083883e093d4c19ab2fa9795a54916ae866ce66c5955c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "通过Webhook可将Flagsmith事件推送至自有基础设施。Webhook在环境级别进行管理，配置入口位于环境设置页面。"
+      }
+    },
+    {
+      "segment_id": "d21af28f",
+      "source_content": "![Image](/img/add-webhook.png)",
+      "source_content_hash": "f6fe86095f2853cc2f84f98e1a48d0b50c9b03f04be6911f12caf301741f1aa6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图示](/img/add-webhook.png)"
+      }
+    },
+    {
+      "segment_id": "44aaa880",
+      "source_content": "Currently the following events will generate a Web Hook action:",
+      "source_content_hash": "6e62aab572867f4dbb76bb8ca19af53cf284cfd4bdd712ca5def8d72e1335fcd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当前以下事件会触发Web Hook动作："
+      }
+    },
+    {
+      "segment_id": "2a1e835c",
+      "source_content": "- Creating Features (Sent as event_type `FLAG_UPDATED`)\n- Updating Feature value / state in an Environment (Sent as event_type `FLAG_UPDATED`)\n- Overriding a Feature for an Identity (Sent as event_type `FLAG_UPDATED`)\n- Overriding a Feature for a Segment (Sent as event_type `FLAG_UPDATED`)",
+      "source_content_hash": "b3cd24a4457cb93b0e5270f0a39d8b32915fce9fc9991820ea7ca478b3fa4f4c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 创建功能开关（事件类型为`FLAG_UPDATED`）\n- 在环境中更新功能开关的值/状态（事件类型为`FLAG_UPDATED`）\n- 为特定身份覆盖功能开关（事件类型为`FLAG_UPDATED`）\n- 为特定用户群组覆盖功能开关（事件类型为`FLAG_UPDATED`）"
+      }
+    },
+    {
+      "segment_id": "b6152880",
+      "source_content": "You can define any number of Web Hook endpoints per Environment. Web Hooks can be managed from the Environment settings\npage.",
+      "source_content_hash": "efdd9a36454b5891b8ee899ace3b7d8ad8451bbcf4092dc8604067c6478a776c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以为每个环境定义任意数量的Web Hook端点。Web Hook可通过环境设置页面进行管理。"
+      }
+    },
+    {
+      "segment_id": "6fc234cf",
+      "source_content": "A typical use case for Web Hooks is if you want to cache flag state locally within your server environment.",
+      "source_content_hash": "6b519b6e6a6843193ea037c8cc579752c31af3d927fa7a11ed9ec6ef4da04686",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Web Hook的典型使用场景是：如果您希望在服务器环境中本地缓存功能开关状态。"
+      }
+    },
+    {
+      "segment_id": "c364340c",
+      "source_content": "Each event generates an HTTP POST with the following body payload to each of the Web Hooks defined within that\nEnvironment:",
+      "source_content_hash": "d1e8483b986175e3fdc295cab867a55ea009a01bc09ef9eef750bc63d8c921d5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "每个事件都会向该环境中定义的所有Web Hook端点发送HTTP POST请求，请求体包含以下载荷："
+      }
+    },
+    {
+      "segment_id": "18fb666f",
+      "source_content": "```json\n{\n \"data\": {\n  \"changed_by\": \"Ben Rometsch\",\n  \"new_state\": {\n   \"enabled\": true,\n   \"environment\": {\n    \"id\": 23,\n    \"name\": \"Development\"\n   },\n   \"feature\": {\n    \"created_date\": \"2021-02-10T20:03:43.348556Z\",\n    \"default_enabled\": false,\n    \"description\": \"Show html in a butter bar for certain users\",\n    \"id\": 7168,\n    \"initial_value\": null,\n    \"name\": \"butter_bar\",\n    \"project\": {\n     \"id\": 12,\n     \"name\": \"Flagsmith Website\"\n    },\n    \"type\": \"CONFIG\"\n   },\n   \"feature_segment\": null,\n   \"feature_state_value\": \"<strong>\\nYou are using the develop environment.\\n</strong>\",\n   \"identity\": null,\n   \"identity_identifier\": null\n  },\n  \"previous_state\": {\n   \"enabled\": false,\n   \"environment\": {\n    \"id\": 23,\n    \"name\": \"Development\"\n   },\n   \"feature\": {\n    \"created_date\": \"2021-02-10T20:03:43.348556Z\",\n    \"default_enabled\": false,\n    \"description\": \"Show html in a butter bar for certain users\",\n    \"id\": 7168,\n    \"initial_value\": null,\n    \"name\": \"butter_bar\",\n    \"project\": {\n     \"id\": 12,\n     \"name\": \"Flagsmith Website\"\n    },\n    \"type\": \"CONFIG\"\n   },\n   \"feature_segment\": null,\n   \"feature_state_value\": \"<strong>\\nYou are using the develop environment.\\n</strong>\",\n   \"identity\": null,\n   \"identity_identifier\": null\n  },\n  \"timestamp\": \"2021-06-18T07:50:26.595298Z\"\n },\n \"event_type\": \"FLAG_UPDATED\"\n}\n```",
+      "source_content_hash": "c6e13d2b680dfefe2878948c10c32743f2dbc43d823582f31c8047d3857e53f4",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_18fb666f"
+      }
+    },
+    {
+      "segment_id": "af250a10",
+      "source_content": "## Webhook Signature",
+      "source_content_hash": "b9d2750f144b54e912087e6d43b96db6d36b886b2bd6dc2914ec3caf10764c49",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Webhook签名验证"
+      }
+    },
+    {
+      "segment_id": "295367fa",
+      "source_content": "When your webhook secret is set, Flagsmith uses it to create a hash signature with each payload. This hash signature is\npassed with each request under the X-Flagsmith-Signature header that you need to validate at your end",
+      "source_content_hash": "8b17bf9aa3c8894cd3a9414bf5ba969e0aa59f98b6aa40d66689b172075958c2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当设置Webhook密钥后，Flagsmith会使用该密钥为每个载荷创建哈希签名。该签名会通过X-Flagsmith-Signature请求头随每次请求发送，您需要在接收端进行验证。"
+      }
+    },
+    {
+      "segment_id": "de588fa2",
+      "source_content": "### Validating Signature",
+      "source_content_hash": "53c4e1362f2aa49c51236ee8b342993849ec88294e295f496ceee51d6698e3b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 签名验证方法"
+      }
+    },
+    {
+      "segment_id": "3799844b",
+      "source_content": "Compute an HMAC with the SHA256 hash function. Use request body (raw utf-8 encoded string) as the message and secret\n(utf8 encoded) as the Key. Here is one example in Python:",
+      "source_content_hash": "aa73d4679af12a1f9be87afe53a13f0d85b8f2e7e4998c2ecab4be295b47d03c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "使用SHA256哈希函数计算HMAC。将请求体（原始utf-8编码字符串）作为消息，密钥（utf8编码）作为密钥。以下是Python示例："
+      }
+    },
+    {
+      "segment_id": "46dadadd",
+      "source_content": "```python\nimport hmac\n\nsecret = \"my shared secret\"\n\nexpected_signature = hmac.new(\n    key=secret.encode(),\n    msg=request_body,\n    digestmod=hashlib.sha256,\n).hexdigest()\n\nreceived_signature = request[\"headers\"][\"x-flagsmith-signature\"]\nhmac.compare_digest(expected_signature, received_signature) is True\n```",
+      "source_content_hash": "0ead67595198eed8e0b554237d5f1ef28c6705196968bac0092eb515fd9e4209",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46dadadd"
+      }
+    },
+    {
+      "segment_id": "49007f24",
+      "source_content": "## Environment Banners",
+      "source_content_hash": "b5e40e61142965a5d9b28fd9f296f59bd7cb40ba3a7cf77966017178de4dcb84",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境标识横幅"
+      }
+    },
+    {
+      "segment_id": "be0f7233",
+      "source_content": "You can optionally provide a coloured banner for your Environments in each Environment Settings page. This helps you\nidentify sensitive Environments before toggling flags!",
+      "source_content_hash": "87d210581e679570b04d1def8732bd9f1ca1a3ebd551db3a18039af245688bce",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在每个环境设置页面中为环境配置彩色标识横幅。这有助于您在切换功能开关前识别敏感环境！"
+      }
+    },
+    {
+      "segment_id": "5eedf0a1",
+      "source_content": "![Environment Banners](/img/environment-banner.png)",
+      "source_content_hash": "6ee3431d6b6022985bf9f866b2de58a354308352920daa60925aa743ae8e6cb1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![环境标识横幅](/img/environment-banner.png)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/advanced-use/system-administration.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.933351+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ddb3a17b5f9af1ca8a67b3d3e95c1839cbf8cc7be27959d1c3eeefcb922c934d"
+  }
+}

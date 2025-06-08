@@ -1,0 +1,102 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/troubleshooting.md",
+  "source_file_content_hash": "2af5d1bdb0dbd1b3c9221e245f955167bbd641e31e41852895938215e8ab3aa9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Troubleshooting\nsidebar_label: Troubleshooting\nsidebar_position: 90\n---",
+      "source_content_hash": "272268dfff4619e9a5b8bb637c3fb52b80ecccfb5026715c13b518adbb605b06",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Here are some common issues encountered when trying to set up Flagsmith in a self hosted environment.",
+      "source_content_hash": "84e5c86d1512decf514d2770e074eba713736663c4dd00415cb1a546b809165a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是在自托管环境中设置Flagsmith时常见的一些问题。"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Health Checks",
+      "source_content_hash": "cbb4de9d20791328e057a5e5948c86bc2709682870b51297b380bee6a44f3ab9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 健康检查"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "If you are using health-checks, make sure to use `/health` as the health-check endpoint for both the API and the Front\nend.",
+      "source_content_hash": "e0c51b088f089630c1b280ae5097c66ea9b3b82234ddfbb8338765b69ac4e8f8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果使用健康检查，请确保为API和前端都使用`/health`作为健康检查端点。"
+      }
+    },
+    {
+      "segment_id": "70153c6e",
+      "source_content": "## API and Database connectivity",
+      "source_content_hash": "a779810dc20143ba3480b49dcc20acdcf8dd2addb20605199773acb26b960683",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API与数据库连接"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "The most common cause of issue when setting things up in AWS with an RDS database is missing Security Group permissions\nbetween the API application and the RDS database. You need to ensure that the attached security groups for\nECS/Fargate/EC2 allow access to the RDS database.\n[AWS provide more detail about this here](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-task-connect-rds-database/)\nand [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html).",
+      "source_content_hash": "38a7d9304cf8f82eb43b12a269237f04e5ebefb0a8a1eaad4f35c3dc6e37e788",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在AWS中使用RDS数据库设置时最常见的问题是API应用与RDS数据库之间缺少安全组权限。您需要确保ECS/Fargate/EC2附加的安全组允许访问RDS数据库。\n[AWS在此处](https://aws.amazon.com/premiumsupport/knowledge-center/ecs-task-connect-rds-database/)和[此处](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html)提供了更多详细信息。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "Make sure you have a `DATABASE_URL` environment variable set within the API application.",
+      "source_content_hash": "797d3023cda2d2002761ca575dc5c2b2ffa9d1974f5b3f475742f9351e16f0d8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "确保在API应用中设置了`DATABASE_URL`环境变量。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Frontend > API DNS Setup",
+      "source_content_hash": "6d2dfa8e9a2940752246bd9a58c13f8f34c92e23067632813ea2b69e5a5fe0d1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 前端>API DNS设置"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "If you are running the API and the Front end as separate applications, you need to make sure that the Front end is\npointing to the API. Check the\n[Front end environment variables](/deployment/hosting/locally-frontend#environment-variables), particularly `API_URL`.",
+      "source_content_hash": "eec6856b85c3eec3beffbe22028b9a63c3a4160849102dc8edb29b05ced3eddc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果将API和前端作为独立应用运行，需要确保前端指向API。检查[前端环境变量](/deployment/hosting/locally-frontend#environment-variables)，特别是`API_URL`。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/troubleshooting.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.930251+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "2af5d1bdb0dbd1b3c9221e245f955167bbd641e31e41852895938215e8ab3aa9"
+  }
+}

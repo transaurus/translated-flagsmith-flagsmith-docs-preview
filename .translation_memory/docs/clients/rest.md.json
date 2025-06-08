@@ -1,0 +1,412 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/rest.md",
+  "source_file_content_hash": "69b959c9ec2ba0edd7bd6aea3dc6566456d8199c3d6b620aeea538fba99737f2",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ndescription: Manage your Feature Flags and Remote Config in your REST APIs.\nsidebar_label: REST\nsidebar_position: 2\n---",
+      "source_content_hash": "d661b885829042e74575bb7e73f1333dd03ce22ed6cb9dc540c770e7e07becf4",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "a703643c",
+      "source_content": "# Direct API Access",
+      "source_content_hash": "904d6ab25b272f7ae8aa42a86024a78c1a8df60238989ee63dbf40c025ccb40e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 直接访问API"
+      }
+    },
+    {
+      "segment_id": "0d5e1c45",
+      "source_content": ":::tip\n\nSome API actions require object UUIDs/IDs to be referenced. You can enable the [JSON View](#json-view) from your account\nsettings page which will help you access these variables.\n\n:::",
+      "source_content_hash": "53270ec493079919b0c34cbda4a9075ba48974118cc9012a9d515951fc29602b",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n部分API操作需要引用对象的UUID/ID。您可以在账户设置页面启用[JSON视图](#json-view)，这将帮助您获取这些变量。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "Flagsmith is built around a client/server architecture. The REST API server is accessible from SDK clients as well as\nthe administration front end. This decoupling means that you can programmatically access the entire API if you wish.",
+      "source_content_hash": "d96153d79ee6e5a9b90f429fe6c63db4d5c94ab2892a747624250e4c5741cc50",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith采用客户端/服务器架构设计。REST API服务器既可供SDK客户端访问，也可供管理前端调用。这种解耦设计意味着您可以根据需要以编程方式访问完整API。"
+      }
+    },
+    {
+      "segment_id": "f6168993",
+      "source_content": "We have a [Postman Collection](https://www.postman.com/flagsmith/workspace/flagsmith/overview) that you can use to play\naround with the API and get a feel for how it works.",
+      "source_content_hash": "c302a82714f21edec12d69232fe505a204b123b0741f56fd35fb6391f0daab12",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们提供了[Postman集合](https://www.postman.com/flagsmith/workspace/flagsmith/overview)，您可以通过该集合体验API功能并了解其工作原理。"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa?action=collection%2Ffork&collection-url=entityId%3D14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa%26entityType%3Dcollection%26workspaceId%3D452554eb-f581-4754-b5b8-0deabdce9f4b#?env%5BFlagsmith%20Environment%5D=W3sia2V5IjoiRmxhZ3NtaXRoIEVudmlyb25tZW50IEtleSIsInZhbHVlIjoiOEt6RVRkRGVNWTd4a3FrU2tZM0dzZyIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxhZ3NtaXRoLmNvbS9hcGkvdjEvIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJJZGVudGl0eSIsInZhbHVlIjoicG9zdG1hbl91c2VyXzEyMyIsImVuYWJsZWQiOnRydWV9XQ==)",
+      "source_content_hash": "e4d2cc5508e6a5bb849b5e894377b60aad6a13433764d4301078db4ae74b3c22",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[![在Postman中运行](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa?action=collection%2Ffork&collection-url=entityId%3D14712118-a638325a-f1f4-4570-8b4d-fd2841218dfa%26entityType%3Dcollection%26workspaceId%3D452554eb-f581-4754-b5b8-0deabdce9f4b#?env%5BFlagsmith%20Environment%5D=W3sia2V5IjoiRmxhZ3NtaXRoIEVudmlyb25tZW50IEtleSIsInZhbHVlIjoiOEt6RVRkRGVNWTd4a3FrU2tZM0dzZyIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuZmxhZ3NtaXRoLmNvbS9hcGkvdjEvIiwiZW5hYmxlZCI6dHJ1ZX0seyJrZXkiOiJJZGVudGl0eSIsInZhbHVlIjoicG9zdG1hbl91c2VyXzEyMyIsImVuYWJsZWQiOnRydWV9XQ==)"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "You can also access the API directly with tools like [curl](https://curl.haxx.se/) or [httpie](https://httpie.org/), or\nwith clients for languages that we do not currently have SDKs for.",
+      "source_content_hash": "ec8849cd8b27b28d5be072688b88d0a86604ac17712385b2a99344d33fa8e2c6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您也可以直接使用[curl](https://curl.haxx.se/)或[httpie](https://httpie.org/)等工具访问API，或者通过我们尚未提供SDK支持的语言客户端进行调用。"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## API Explorer",
+      "source_content_hash": "b76bdb09ea6d813c68a10b6dabfb3449d9de1e884fa21d574cedd8bb52a8fb81",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## API浏览器"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "You can view the API via Swagger at [https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/) or\nget OpenAPI as [JSON](https://api.flagsmith.com/api/v1/docs/?format=.json) or\n[YAML](https://api.flagsmith.com/api/v1/docs/?format=.yaml).",
+      "source_content_hash": "b7fa4cd583ea0b31d12999ef3612ee84c6fb27277ebd84cf9ae96d70fe82558b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过Swagger查看API文档：[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/)，或获取OpenAPI格式的[JSON](https://api.flagsmith.com/api/v1/docs/?format=.json)和[YAML](https://api.flagsmith.com/api/v1/docs/?format=.yaml)文件。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## Environment Key",
+      "source_content_hash": "2ab6a9f40cba924d3ad42a442833d6d2a6abd9bc5de2951794625763d41b66de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 环境密钥"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "Publicly accessible API calls need to have an environment key supplied with each request. This is provided as an HTTP\nheader, with the name `X-Environment-Key` and the value of the Environment Key that you can find within the Flagsmith\nadministrative area.",
+      "source_content_hash": "e7371f5ab3428e866220eb9571ca42865814f4d9969d40e526b921e8cff844ee",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "公开访问的API调用需要在每个请求中提供环境密钥。该密钥通过HTTP标头传递，标头名称为`X-Environment-Key`，值为您可以在Flagsmith管理界面找到的环境密钥。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Curl Examples",
+      "source_content_hash": "9fd39a11289b0fd4a666846ffd7347d110de23011959193955fe46cce1f7b36f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Curl示例"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "These are the two main endpoints that you need to consume the SDK aspect of the API.",
+      "source_content_hash": "e232dd46ad4bc43f040dad61a8d4ca2b738c48e921b47abc862d518df1b97fb2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是使用API实现SDK功能所需调用的两个主要端点。"
+      }
+    },
+    {
+      "segment_id": "06c0f776",
+      "source_content": "### Get Environment Flags",
+      "source_content_hash": "1fe2b532e01af39583ec0e83f9bd5aeddedf04b7ea4e933c472eeeef0d81edd7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取环境特征开关"
+      }
+    },
+    {
+      "segment_id": "6648a219",
+      "source_content": "```bash\ncurl 'https://edge.api.flagsmith.com/api/v1/flags/' -H 'X-Environment-Key: <Your Env Key>'\n```",
+      "source_content_hash": "c6bf165a36e5fe4e76f96216d08d7e735256ad4fef6b2b4a72a0c34278a9ac6e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6648a219"
+      }
+    },
+    {
+      "segment_id": "6f930b2f",
+      "source_content": "### Send Identity with Traits and receive Flags",
+      "source_content_hash": "e7358ee714ada0e8d3529db77800d1424a7646e8d366e23358497a5cf7280717",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 提交带有特征的标识并获取特征开关"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "This command will perform the entire SDK Identity workflow in a single call:",
+      "source_content_hash": "c3683cc1054b10f3bb44ec30adc58e16c62add813b84ad2f8b72d4204f177c2d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该命令将通过单次调用完成完整的SDK标识工作流："
+      }
+    },
+    {
+      "segment_id": "310e47b7",
+      "source_content": "1. Lazily create an Identity\n2. Setting Traits for the Identity\n3. Receiving the Flags for that Identity",
+      "source_content_hash": "d2b01f5807c76b0757c1c349601d6df5d751772101a5e3d7be6cb7a7b8f1f03f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 惰性创建标识\n2. 设置标识特征\n3. 获取该标识的特征开关"
+      }
+    },
+    {
+      "segment_id": "c3955998",
+      "source_content": "```bash\ncurl --request POST 'https://edge.api.flagsmith.com/api/v1/identities/' \\\n--header 'X-Environment-Key: <Your Env Key>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"identifier\":\"identifier_5\",\n    \"traits\": [\n        {\n            \"trait_key\": \"my_trait_key\",\n            \"trait_value\": 123.5\n        },\n        {\n            \"trait_key\": \"my_other_key\",\n            \"trait_value\": true\n        }\n    ]\n}'\n```",
+      "source_content_hash": "a73fae9c99c284c2c70c181485c343fdd4e50164575a34c1a3a9e5514b458fb5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c3955998"
+      }
+    },
+    {
+      "segment_id": "b051b70c",
+      "source_content": "## Private Endpoints",
+      "source_content_hash": "01855875abe65bee657168466ed5ce48abfb765f272b958924698ca1eae224ab",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 私有端点"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "You can also do things like create new flags, environments, toggle flags or indeed anything that is possible from the\nadministrative front end via the API.",
+      "source_content_hash": "3a2c69437d342480739cfa476d74fee9c45cc74fcb674903d5042839bcd9a5c7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您还可以通过API执行诸如创建新特征开关、环境配置、切换特征状态等操作，实际上管理前端支持的所有功能都可以通过API实现。"
+      }
+    },
+    {
+      "segment_id": "463ed165",
+      "source_content": "To authenticate, you can use the token associated with your account. This can be found in the \"Account\" page from the\ntop right navigation panel. Use this token for API calls. For example, to create a new evironment:",
+      "source_content_hash": "04a2dd40982ca9b415ed7083f5d0e15c5f9ec2ff3cb3cf5ea2bca6d3e4208f03",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "要进行身份验证，您可以使用账户关联的令牌。该令牌可在右上角导航面板的\"账户\"页面中找到。将此令牌用于API调用。例如，要创建新环境："
+      }
+    },
+    {
+      "segment_id": "d8159289",
+      "source_content": "```bash\ncurl 'https://api.flagsmith.com/api/v1/environments/' \\\n    -H 'content-type: application/json' \\\n    -H 'authorization: Token <TOKEN FROM PREVIOUS STEP>' \\\n    --data-binary '{\"name\":\"New Environment\",\"project\":\"<Project ID>\"}'\n```",
+      "source_content_hash": "4bc8d15cbb0deac45218025e0aa2757ce43dd705f967659f00a4852f70f94b83",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d8159289"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "You can find a complete list of endpoints via the Swagger REST API at\n[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/).",
+      "source_content_hash": "75f1739da42ba5281da3822a90003b6e94b421737dd53ad75a4004e30f389a31",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以通过Swagger REST API在[https://api.flagsmith.com/api/v1/docs/](https://api.flagsmith.com/api/v1/docs/)查看完整的端点列表。"
+      }
+    },
+    {
+      "segment_id": "f6b04a59",
+      "source_content": "## JSON View",
+      "source_content_hash": "16beec5d63d088e83aaba169e5fb7fca48f36fa9c951f02cf4ac033a84a3d0ab",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## JSON视图"
+      }
+    },
+    {
+      "segment_id": "a311e967",
+      "source_content": "You can enable the JSON view in your account settings page. This will then give you access to relevant object meta data\nin the Flag area of the dashboard:",
+      "source_content_hash": "54cc7b4cae1f86af72d47edbf1b467a19f4d14b11f879ef5e2be8ad8b4a7e0e4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在账户设置页面启用JSON视图。这将使您能够在仪表板的Flag区域访问相关对象元数据："
+      }
+    },
+    {
+      "segment_id": "2822251a",
+      "source_content": "![JSON View](/img/json-view.png)",
+      "source_content_hash": "503e13da1278c8915ddc6ad27c47a8af432a7fbedea671468f8f97a20064fa9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![JSON视图](/img/json-view.png)"
+      }
+    },
+    {
+      "segment_id": "99d0dd9b",
+      "source_content": "## Code Examples",
+      "source_content_hash": "ceeccc09dba01439e718eff231b48d75c6755e4c5f8213720a265b3c15af8d84",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 代码示例"
+      }
+    },
+    {
+      "segment_id": "d79a4831",
+      "source_content": "Below are some simple examples for achieving certain actions with the REST API, using python.",
+      "source_content_hash": "76e77504039983dcbe779354b7bf6617ad94b0fabc6858d14a001d0fe3d45e05",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是一些使用Python通过REST API实现特定操作的简单示例。"
+      }
+    },
+    {
+      "segment_id": "54bafb10",
+      "source_content": "### Create a feature",
+      "source_content_hash": "501673ee6a89d8b944ecc0552dd07db524f828c3146968ae03578999a842a947",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建功能"
+      }
+    },
+    {
+      "segment_id": "de26f08a",
+      "source_content": "```python\nimport os\n\nfrom requests import Session\n\nAPI_URL = os.environ.get(\"API_URL\", \"https://api.flagsmith.com/api/v1\")  # update this if self-hosting\nPROJECT_ID = os.environ[\"PROJECT_ID\"]  # obtain this from the URL on your dashboard\nTOKEN = os.environ[\"API_TOKEN\"]  # obtain this from the account page in your dashboard\nFEATURE_NAME = os.environ[\"FEATURE_NAME\"]  # name of the feature to create\n\nsession = Session()\nsession.headers.update({\"Authorization\": f\"Token {TOKEN}\"})\n\ncreate_feature_url = f\"{API_URL}/projects/{PROJECT_ID}/features/\"\ndata = {\"name\": FEATURE_NAME}\nresponse = session.post(create_feature_url, json=data)\n```",
+      "source_content_hash": "fd988678dbb0fbda39b75fc08b5c1967e0468de1a58236e26e450a1d8f75fb3d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_de26f08a"
+      }
+    },
+    {
+      "segment_id": "ed644f52",
+      "source_content": "### Update the value / state of a feature in an environment",
+      "source_content_hash": "b5aea8e1591e6b598378de961d8001c4529443fcfcc3b9c3523c62a7538d7e14",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 更新环境中功能的值/状态"
+      }
+    },
+    {
+      "segment_id": "4e583d18",
+      "source_content": "```python\nimport json\nimport os\n\nimport requests\n\nTOKEN = os.environ.get(\"API_TOKEN\")  # obtained from Account section in dashboard\nENV_KEY = os.environ.get(\"ENV_KEY\")  # obtained from environment settings in dashboard\nBASE_URL = \"https://api.flagsmith.com/api/v1\"  # update this if self hosting\nFEATURE_STATES_URL = f\"{BASE_URL}/environments/{ENV_KEY}/featurestates\"\nFEATURE_NAME = os.environ.get(\"FEATURE_NAME\")\n\nsession = requests.Session()\nsession.headers.update(\n    {\"Authorization\": f\"Token {TOKEN}\", \"Content-Type\": \"application/json\"}\n)\n\n# get the existing feature state id based on the feature name\nget_feature_states_response = session.get(\n    f\"{FEATURE_STATES_URL}/?feature_name={FEATURE_NAME}\"\n)\nfeature_state_id = get_feature_states_response.json()[\"results\"][0][\"id\"]\n\n# update the feature state\ndata = {\"enabled\": True, \"feature_state_value\": \"new value\"}  # `feature_state_value` can be str, int, bool or float\nupdate_feature_state_response = session.patch(\n    f\"{FEATURE_STATES_URL}/{feature_state_id}/\", data=json.dumps(data)\n)\n```",
+      "source_content_hash": "92c20d54e9cf1e37a23af53559690294a67374aefbbb956018bb08210da17ef6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4e583d18"
+      }
+    },
+    {
+      "segment_id": "b50cf7ff",
+      "source_content": "### Create a segment and segment override",
+      "source_content_hash": "5d35023d150497da408a50d92ab260498bd75337b725fbadcf442cc458e0838e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 创建分段和分段覆盖"
+      }
+    },
+    {
+      "segment_id": "e9921a93",
+      "source_content": "```python\nimport os\n\nfrom requests import Session\n\nAPI_URL = os.environ.get(\"API_URL\", \"https://api.flagsmith.com/api/v1\")  # update this if self-hosting\nSEGMENT_NAME = os.environ[\"SEGMENT_NAME\"]  # define the name of the segment here\nPROJECT_ID = os.environ[\"PROJECT_ID\"]  # obtain this from the URL on your dashboard\nTOKEN = os.environ[\"API_TOKEN\"]  # obtain this from the account page in your dashboard\nFEATURE_ID = os.environ.get(\"FEATURE_ID\")  # obtain this from the URL on your dashboard when viewing a feature\nIS_FEATURE_SPECIFIC = os.environ.get(\"IS_FEATURE_SPECIFIC\", default=False) == \"True\"  # set this to True to create a feature specific segment\nENVIRONMENT_ID = os.environ[\"ENVIRONMENT_ID\"]  # must (currently) be obtained by inspecting the request to /api/v1/environments in the network console\n\n# set these values to create a segment override for the segment, feature, environment combination\nENABLE_FOR_SEGMENT = os.environ.get(\"ENABLE_FOR_SEGMENT\", default=False) == \"True\"\nVALUE_FOR_SEGMENT = os.environ.get(\"VALUE_FOR_SEGMENT\")\n\nSEGMENT_DEFINITION = {\n    \"name\": SEGMENT_NAME,\n    \"feature\": FEATURE_ID if IS_FEATURE_SPECIFIC else None,\n    \"project\": PROJECT_ID,\n    \"rules\": [\n        {\n            \"type\": \"ALL\",\n            \"rules\": [  # add extra rules here to build up 'AND' logic\n                {\n                    \"type\": \"ANY\",\n                    \"conditions\": [  # add extra conditions here to build up 'OR' logic\n                        {\n                            \"property\": \"my_trait\",  # specify a trait key that you want to match on, e.g. organisationId\n                            \"operator\": \"EQUAL\",  # specify the operator you want to use (one of EQUAL, NOT_EQUAL, GREATER_THAN, LESS_THAN, GREATER_THAN_INCLUSIVE, LESS_THAN_INCLUSIVE, CONTAINS, NOT_CONTAINS, REGEX, PERCENTAGE_SPLIT, IS_SET, IS_NOT_SET)\n                            \"value\": \"my-value\"  # the value to match against, e.g. 103\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}\n\nsession = Session()\nsession.headers.update({\"Authorization\": f\"Token {TOKEN}\"})\n\n# first let's create the segment\ncreate_segment_url = f\"{API_URL}/projects/{PROJECT_ID}/segments/\"\ncreate_segment_response = session.post(create_segment_url, json=SEGMENT_DEFINITION)\nassert create_segment_response.status_code == 201\nsegment_id = create_segment_response.json()[\"id\"]\n\nif not any(key in os.environ for key in (\"ENABLE_FOR_SEGMENT\", \"VALUE_FOR_SEGMENT\")):\n    print(\"Segment created! Not creating an override as no state / value defined.\")\n    exit(0)\n\n# next we need to create a feature segment (a flagsmith internal entity)\ncreate_feature_segment_url = f\"{API_URL}/features/feature-segments/\"\nfeature_segment_data = {\n    \"feature\": FEATURE_ID,\n    \"segment\": segment_id,\n    \"environment\": ENVIRONMENT_ID\n}\ncreate_feature_segment_response = session.post(create_feature_segment_url, json=feature_segment_data)\nassert create_feature_segment_response.status_code == 201\nfeature_segment_id = create_feature_segment_response.json()[\"id\"]\n\n# finally, we can create the segment override\ncreate_segment_override_url = f\"{API_URL}/features/featurestates/\"\nfeature_state_data = {\n    \"feature\": FEATURE_ID,\n    \"feature_segment\": feature_segment_id,\n    \"environment\": ENVIRONMENT_ID,\n    \"enabled\": ENABLE_FOR_SEGMENT,\n    \"feature_state_value\": {\n        \"type\": \"unicode\",\n        \"string_value\": VALUE_FOR_SEGMENT\n    }\n}\ncreate_feature_state_response = session.post(create_segment_override_url, json=feature_state_data)\nassert create_feature_state_response.status_code == 201\n```",
+      "source_content_hash": "0daca7bc369e8963e60922cce3225139cc5ed728b27113f3edffea5b1cf2755a",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e9921a93"
+      }
+    },
+    {
+      "segment_id": "7eac7922",
+      "source_content": "### Update a segment's rules",
+      "source_content_hash": "b3d363d40b36785e8303a7d1273784434465dc303860d399450198243cba0430",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 更新分段规则"
+      }
+    },
+    {
+      "segment_id": "bce471ae",
+      "source_content": "```python\nimport os\n\nfrom requests import Session\n\nAPI_URL = os.environ.get(\"API_URL\", \"https://api.flagsmith.com/api/v1\")  # update this if self-hosting\nPROJECT_ID = os.environ[\"PROJECT_ID\"]  # obtain this from the URL on your dashboard\nTOKEN = os.environ[\"API_TOKEN\"]  # obtain this from the account page in your dashboard\nSEGMENT_ID = os.environ.get(\"SEGMENT_ID\")  # obtain this from the URL on your dashboard when viewing a segment\n\nSEGMENT_RULES_DEFINITION = {\n    \"rules\": [\n        {\n            \"type\": \"ALL\",\n            \"rules\": [\n                {\n                    \"type\": \"ANY\",\n                    \"conditions\": [  # add as many conditions here to build up a segment\n                        {\n                            \"property\": \"my_trait\",  # specify a trait key that you want to match on, e.g. organisationId\n                            \"operator\": \"EQUAL\",  # specify the operator you want to use (one of EQUAL, NOT_EQUAL, GREATER_THAN, LESS_THAN, GREATER_THAN_INCLUSIVE, LESS_THAN_INCLUSIVE, CONTAINS, NOT_CONTAINS, REGEX, PERCENTAGE_SPLIT, IS_SET, IS_NOT_SET)\n                            \"value\": \"my-value\"  # the value to match against, e.g. 103\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}\n\nsession = Session()\nsession.headers.update({\"Authorization\": f\"Token {TOKEN}\"})\n\nupdate_segment_url = f\"{API_URL}/projects/{PROJECT_ID}/segments/{SEGMENT_ID}/\"\nsession.patch(update_segment_url, json=SEGMENT_RULES_DEFINITION)\n```",
+      "source_content_hash": "d64c2e506d3ffd643bc05180d9cb8a0365b0d518ecb4259d6138437f40c1543c",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_bce471ae"
+      }
+    },
+    {
+      "segment_id": "92505e51",
+      "source_content": "### Iterate over Identities",
+      "source_content_hash": "a6aad735a1455b318f7018f78306444d9c420a3bd2a3fbf215a804fa49e4ca27",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 遍历身份标识"
+      }
+    },
+    {
+      "segment_id": "2f8456b2",
+      "source_content": "Sometimes it can be useful to iterate over your Identities to check things like Segment overrides.",
+      "source_content_hash": "7b6c84d5fc4951a61ac0c0c8238b33c263971093f75b91cc9defcebd0f196f5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "有时遍历您的身份标识以检查分段覆盖等情况会很有用。"
+      }
+    },
+    {
+      "segment_id": "37cbaa50",
+      "source_content": "```python\nimport os\n\nimport requests\n\nTOKEN = os.environ.get(\"API_TOKEN\")  # obtained from Account section in dashboard\nENV_KEY = os.environ.get(\"ENV_KEY\")  # obtained from Environment settings in dashboard\nBASE_URL = \"https://api.flagsmith.com/api/v1\"  # update this if self hosting\nIDENTITIES_PAGE_URL = f\"{BASE_URL}/environments/{ENV_KEY}/edge-identities/?page_size=20\"\n\nsession = requests.Session()\nsession.headers.update(\n    {\"Authorization\": f\"Token {TOKEN}\", \"Content-Type\": \"application/json\"}\n)\n\n# get the existing feature state id based on the feature name\npage_of_identities = session.get(f\"{IDENTITIES_PAGE_URL}\")\nprint(page_of_identities.json())\n\nfor identity in page_of_identities.json()['results']:\n    print(str(identity))\n    IDENTITY_UUID = identity['identity_uuid']\n    IDENTITY_URL = f\"{BASE_URL}/environments/{ENV_KEY}/edge-identities/{IDENTITY_UUID}/edge-featurestates/all/\"\n    identity_data = session.get(f\"{IDENTITY_URL}\")\n    print(identity_data.json())\n```",
+      "source_content_hash": "c0fc315a46d6838385de8a1bd0e9dddde9029e507428c32c21b7fb43267559f6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_37cbaa50"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/rest.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.932080+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "69b959c9ec2ba0edd7bd6aea3dc6566456d8199c3d6b620aeea538fba99737f2"
+  }
+}

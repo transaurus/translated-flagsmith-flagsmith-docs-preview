@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/deployment/configuration/importing-and-exporting.md",
+  "source_file_content_hash": "1b4983334e91c0489b3a29d13c80636a1c0873f77a63115d3c0b49a80a41d85b",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Importing and Exporting\nsidebar_position: 110\n---",
+      "source_content_hash": "4279a1449e7d2b1dcf1097b88560cb9100b2b9422afbfa59e01684fda567a459",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "0eeea6cc",
+      "source_content": ":::tip\n\nYou need to be running Flagsmith version `2.28.2` or greater to be able to export and import your Flagsmith data.\n\n:::",
+      "source_content_hash": "a2ee1ca41d828d48cd1c18600489b2f2b240c3417a06efd76e6b025ae93d0624",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n需运行Flagsmith版本`2.28.2`或更高才能导出和导入数据。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "8d66f911",
+      "source_content": "Flagsmith offers some helpful utilities if you want to migrate your application from one Flagsmith instance to another.",
+      "source_content_hash": "118cce970881223a2e157e660de3f496a632f8cef20127a428f468d123c357b2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith提供实用工具支持在不同实例间迁移数据。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "If, for example, you wanted to move from self hosting Flagsmith to our SaaS version, the process looks something like\nthis:",
+      "source_content_hash": "408de773b468ff325c65dcf7a5579d9b3e3b0d559c4248ff556fba34d66daff6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如从自托管迁移至SaaS版本的流程如下："
+      }
+    },
+    {
+      "segment_id": "84758135",
+      "source_content": "- **Step 1.** Contact Flagsmith support to confirm you would like to migrate from self hosted to cloud\n- **Step 2.** Generate a JSON file from your self hosted instance (more information below)\n- **Step 3.** Send the JSON file to Flagsmith support\n- **Step 4.** Flagsmith support will import the JSON file into our cloud offering\n- **Step 5.** Register and re-add your users and passwords (Flagsmith support will need to assign at least one\n  organisation administrator to the newly imported organisation)",
+      "source_content_hash": "07d0e8b50a3a013259b2158550c0ad5387fda0c687dc0887173e24e796b9cc60",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- **步骤1.** 联系Flagsmith客服确认迁移意向\n- **步骤2.** 从自托管实例生成JSON文件（详见下文）\n- **步骤3.** 将JSON文件发送给Flagsmith客服\n- **步骤4.** 客服会将数据导入云端服务\n- **步骤5.** 重新注册用户并设置密码（客服需为导入的组织至少分配一名管理员）"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## What is exported?",
+      "source_content_hash": "78548b6257fa05657c38fc29f7d12fdf45a6c7cabfaa17300ac9991c4087ebcd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 导出范围"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "We **will** export the following entities:",
+      "source_content_hash": "6b6447d760c7c09da48bbf87e43c24bc47e471d7b3d4334ddc3a8cea7d17e24a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**包含**以下实体："
+      }
+    },
+    {
+      "segment_id": "1d13125b",
+      "source_content": "- Flags\n- Segments\n- Identities\n- Integrations",
+      "source_content_hash": "093dba9a1d9461c30f59c670da1743b9ff47b6c51fa34fe52174ea93a62f37ac",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 功能开关\n- 用户分群\n- 用户标识\n- 集成配置"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "We **will not** export the following entities:",
+      "source_content_hash": "6088cb418fd150c8bf658eb67a3c5d1be4109211b0739bdf87a0aa49b0a624da",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "**不包含**以下实体："
+      }
+    },
+    {
+      "segment_id": "fc8eadc3",
+      "source_content": "- Flagsmith Users that log into the Dashboard and manage Flagsmith\n- Audit logs\n- Change requests\n- Scheduled flag changes",
+      "source_content_hash": "6567144d3f23b3cfb9d7e3764b45460e9e2e2781fd9b0fbb190528508d8ce723",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 登录管理后台的Flagsmith用户\n- 审计日志\n- 变更请求\n- 定时开关变更"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "## The export process",
+      "source_content_hash": "3355c0ac11e8a4808b097b9da4cae4cfe9a83b92524aaa1ae5a95e59b9e06aad",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 导出流程"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "The export process involves running a command from a terminal window. This must either be run from a running container\nin your self hosted deployment or, alternatively, you can run a separate container that can connect to the same database\nas your deployed fleet of flagsmith instances. To run the command, you'll also need to find the id of your organisation.\nYou can do this through the django admin interface. Information about accessing the admin interface can be found\n[here](/deployment/configuration/django-admin.md). Once you've obtained access to the admin interface, if you browse to\nthe 'Organisations' menu item on the left, you should see something along the lines of the following:",
+      "source_content_hash": "99eba902821cdef383c435a02f6760d80d2f2edde7a8659483c808dd4662eca7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需通过终端命令执行导出操作，可选择以下方式：\n1. 在已运行的容器内执行\n2. 启动新容器连接相同数据库\n\n执行前需获取组织ID，可通过Django管理界面查询（访问方法参见[此文档](/deployment/configuration/django-admin.md)）。在管理界面的\"Organisations\"菜单中可见类似信息："
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "![](/img/organisations-admin.png)",
+      "source_content_hash": "58f3ae146a54d54878e6ca7922ffd976a8f435ec6dc72553da05539f2a517803",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![](/img/organisations-admin.png)"
+      }
+    },
+    {
+      "segment_id": "c504c207",
+      "source_content": "The id you need is the one in brackets after the organisation name, so here it would be 1.",
+      "source_content_hash": "64ea141410e3c68240a600abfab103bc033fc9732800e02e74ae4f0e7cd60c57",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "括号内的数字即为所需ID（图示案例中为1）。\n\n获取组织ID后，可选择两种导出方式："
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Once you've obtained the id of your organisation, you're ready to export the organisation as a JSON file. There are 2\noptions as to where to output the organisation export JSON file. Option 1 - local file system, Option 2 - S3 bucket.\nThese options are detailed below.",
+      "source_content_hash": "fbcc8143e6331666014cec5caa9eaaccdbfff251afc59b9b0ccb9efa6d3b656b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ""
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "### Option 1 - Local File System",
+      "source_content_hash": "69a96c8af9b9b45d8fdd45d6fa5dea3f348f8111f456d92dd8093eadd5b168aa",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 选项1 - 本地文件系统"
+      }
+    },
+    {
+      "segment_id": "6d254e09",
+      "source_content": "```bash\npython manage.py dumporganisationtolocalfs <organisation-id> <local-file-system-path>\n```",
+      "source_content_hash": "f4344c232b028a9931c73d6f49eb613eb5cf221cafc365307d37f27accd23a96",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_6d254e09"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "e.g.",
+      "source_content_hash": "a79b4bf9e7696b20f00efb8d207076c72c5b9a16b96437c62a6719a2d5d2d5c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如："
+      }
+    },
+    {
+      "segment_id": "7a577a50",
+      "source_content": "```bash\npython manage.py dumporganisationtolocalfs 1 /tmp/organisation-1.json\n```",
+      "source_content_hash": "80dc7b4431a113bcfbe1504e7694cdf0782357624c6c2281d75ac48f3d469f98",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7a577a50"
+      }
+    },
+    {
+      "segment_id": "657c2b20",
+      "source_content": "Since this will write to your local file system, you may need to attach a volume to your docker container to be able to\nobtain the file afterwards. There is an example docker-compose file provided below to help guide you to do this.",
+      "source_content_hash": "927433fb8ec864a1c7d75aecc1473a5a28eaf49372e3f4f038fc9f4fcd177e5a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需挂载Docker卷以获取导出文件，参考下方示例docker-compose文件："
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```yml\nversion: '3'\nservices:\n postgres:\n  image: postgres:11.12-alpine\n  environment:\n   POSTGRES_PASSWORD: password\n   POSTGRES_DB: flagsmith\n  container_name: flagsmith_postgres\n  ports:\n   - '5434:5432'\n\n flagsmith:\n  build:\n   dockerfile: ./Dockerfile\n   context: .\n  environment:\n   DJANGO_ALLOWED_HOSTS: '*'\n   DATABASE_URL: postgresql://postgres:password@postgres:5432/flagsmith\n   ENV: prod\n   ALLOW_REGISTRATION_WITHOUT_INVITE: 'True'\n  ports:\n   - '8000:8000'\n  depends_on:\n   - postgres\n  links:\n   - postgres\n\n flagsmith-fs-exporter:\n  build:\n   dockerfile: ./Dockerfile\n   context: .\n  environment:\n   DATABASE_URL: postgresql://postgres:password@postgres:5432/flagsmith\n  command:\n   - 'dump-organisation-to-local-fs'\n   - '1'\n   - '/tmp/flagsmith-exporter/org-1.json'\n  depends_on:\n   - postgres\n   - flagsmith\n  links:\n   - postgres\n  volumes:\n   - '/tmp/flagsmith-exporter:/tmp/flagsmith-exporter'\n```",
+      "source_content_hash": "065f45aa59c9922f8faab16dc61c0d55cef3a285cf733124c742ae4d8f4bcfc8",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    },
+    {
+      "segment_id": "37fca32e",
+      "source_content": "### Option 2 - S3 bucket",
+      "source_content_hash": "6bd47d4d8e58f926c9a7bb8a28fa713cf90debdc63a75b71fd02f15f8922da30",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 选项2 - S3存储桶"
+      }
+    },
+    {
+      "segment_id": "a8610918",
+      "source_content": "The command you will need to run for this is slightly different as per the following.",
+      "source_content_hash": "3e66a2103144b29fa922b7618af0267f392796fd2fb230f7664a5e3c9cb71947",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需使用以下变体命令："
+      }
+    },
+    {
+      "segment_id": "7102653e",
+      "source_content": "```bash\npython manage.py dumporganisationtos3 <organisation-id> <bucket-name> <key>\n```",
+      "source_content_hash": "80299577e55b7a0eed4987b5b7f10a9842faa1d01e79a476d442ce14107966d5",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7102653e"
+      }
+    },
+    {
+      "segment_id": "b9331170",
+      "source_content": "e.g.",
+      "source_content_hash": "a79b4bf9e7696b20f00efb8d207076c72c5b9a16b96437c62a6719a2d5d2d5c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "例如："
+      }
+    },
+    {
+      "segment_id": "2f34b0ad",
+      "source_content": "```bash\npython manage.py dumporganisationtos3 1 my-export-bucket exports/organisation-1.json\n```",
+      "source_content_hash": "43c1dd20a1738d9561d358a90857af14be200a99ba3cd5ad504a31f650f1ce90",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_2f34b0ad"
+      }
+    },
+    {
+      "segment_id": "9c9e2b64",
+      "source_content": "This requires the application to be running with access to an AWS account. If you're running the application in AWS,\nmake sure whichever role you are using to run you container has access to read from and write to the given S3 bucket.\nAlternatively, you can provide the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables to refer to an\nIAM user that has access to the S3 bucket.",
+      "source_content_hash": "7f316bb87851d7f2ee2022f14dc2490871863bbd992b3225aa94a5b54d571ba0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "需确保应用具有AWS账户访问权限。若在AWS环境运行，请确认容器角色具有指定S3桶的读写权限，或通过环境变量`AWS_ACCESS_KEY_ID`和`AWS_SECRET_ACCESS_KEY`配置具有权限的IAM用户。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/deployment/configuration/importing-and-exporting.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.949385+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "1b4983334e91c0489b3a29d13c80636a1c0873f77a63115d3c0b49a80a41d85b"
+  }
+}

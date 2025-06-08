@@ -1,0 +1,1632 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/platform/releases.md",
+  "source_file_content_hash": "f686faa874abd0bb540ca7313644fdeb995767e5f90ef699fbd6387c7ed6d083",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Releases",
+      "source_content_hash": "ed11c89ab41657b379cac19bec4bcf32c885268a8a96dfcc6229680beefdd0ad",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 版本发布"
+      }
+    },
+    {
+      "segment_id": "faebdc62",
+      "source_content": "We have a fairly simple tagging strategy:",
+      "source_content_hash": "45991e68334d3f5b487db4357af5b6d341283e376fec4d249d07f967192797ff",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们采用较为简单的标签策略："
+      }
+    },
+    {
+      "segment_id": "17ded777",
+      "source_content": "- Git tags created from the `main` branch trigger Docker image builds tagged `latest`.\n- Git tags e.g. `2.7.1` will trigger Docker image builds tagged:\n  - `2.7.1`\n  - `2.7`",
+      "source_content_hash": "229c5316fe747dff0f85d748aa72e04948d88abc50e3b02f7c2ac4f35492e681",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 从 `main` 分支创建的 Git 标签会触发标记为 `latest` 的 Docker 镜像构建。\n- 例如 `2.7.1` 这类 Git 标签将触发以下版本的 Docker 镜像构建：\n  - `2.7.1`\n  - `2.7`"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "Please look out our [Github Releases](https://github.com/Flagsmith/flagsmith/releases) page for detailed change logs.",
+      "source_content_hash": "677e7dbf9be1cd91855a347a3a2f8eb9d3b51579cdffe3e8e932d3c48eda6981",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "详细变更日志请查阅我们的 [Github Releases](https://github.com/Flagsmith/flagsmith/releases) 页面。"
+      }
+    },
+    {
+      "segment_id": "9fcbdce9",
+      "source_content": "## v2.48",
+      "source_content_hash": "a649c05d1b2de6b39f61b38b7e351a39ca7506dddffc690a1d24502ed56398f3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.48"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "Released **14 March 2023**",
+      "source_content_hash": "72eb21d7cdde97b67252c2f6fd98b9d01d3bbe7e95f5055b0309f545a68289c5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年3月14日**"
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "- Feature name validation\n- Show 'last logged in' on users area\n- Hide disabled Flags per Environment\n- Rename Users > Identities in the nav for consistency\n- Various bug fixes",
+      "source_content_hash": "0d62628f55b728f54025f0235ea56e7270c6b4cb80e440f8a0f60020b3b87add",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 功能名称验证\n- 在用户区域显示\"最后登录时间\"\n- 按环境隐藏已禁用的功能开关\n- 将导航栏中的\"用户\"重命名为\"身份\"以保持一致性\n- 多项错误修复"
+      }
+    },
+    {
+      "segment_id": "63622bf0",
+      "source_content": "## v2.47",
+      "source_content_hash": "70740ae4d5509c8bfaa6a86e313c94e390871d164d574ed3b1a030ba2dbd8a1d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.47"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Released **6 March 2023**",
+      "source_content_hash": "098045015566e09acee62f35b54ffd72dc75fd06344bb970651b1e50300a6a34",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年3月6日**"
+      }
+    },
+    {
+      "segment_id": "0cc488ed",
+      "source_content": "- Upgrade to Python 3.11",
+      "source_content_hash": "fde21d31ba63559b1f1a198603e32d37cef955783f5e4d52aa8743084bacf124",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 升级至 Python 3.11"
+      }
+    },
+    {
+      "segment_id": "3c36424c",
+      "source_content": "## v2.46",
+      "source_content_hash": "e289fd18a1bba50bdf2a3216a81e9bbc0c40dc61adb521dd02c8a31bd26d5e53",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.46"
+      }
+    },
+    {
+      "segment_id": "26524352",
+      "source_content": "Released **3 March 2023**",
+      "source_content_hash": "980b865f5f3ef6352debfba199cf8478c4fff602404bdf4b23c6ac3470b9704d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年3月3日**"
+      }
+    },
+    {
+      "segment_id": "86b525ab",
+      "source_content": "- Add ability to store usage data in Postgres",
+      "source_content_hash": "be9fe73ad662c78f3851f91d197c45450e8ca612f05056ae26d69392fddb02a0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增将使用数据存储至Postgres的功能"
+      }
+    },
+    {
+      "segment_id": "a1b3d8cb",
+      "source_content": "## v2.45",
+      "source_content_hash": "2266488a365800bbfd2c2feaf87b77c7095d3c16d0b1848166a86db68a18e077",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.45"
+      }
+    },
+    {
+      "segment_id": "517051a7",
+      "source_content": "Released **2 March 2023**",
+      "source_content_hash": "12e3c54bddb0d1e7c1c9f3241805a8e97a2e417bec963b4d299814974000e92a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年3月2日**"
+      }
+    },
+    {
+      "segment_id": "157151e9",
+      "source_content": "- Real time flags\n- Scheduled Change requests split out from regular Change Requests\n- Generic meta-data to entity models - backend implemented",
+      "source_content_hash": "969304db9d4d1f168b918efb26249b0177956e65584a828b7757b796062cd2d9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 实时功能开关\n- 计划变更请求从常规变更请求中分离\n- 为实体模型实现通用元数据后端支持"
+      }
+    },
+    {
+      "segment_id": "8d04259b",
+      "source_content": "## v2.44",
+      "source_content_hash": "5b2fb1e7d7589d2866c965b6da1589c80b3785358687ca993cdddff241181b9e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.44"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Released **1 March 2023**",
+      "source_content_hash": "e77563b2a4648cfb09bfe73e74c72d57f7d650f40f5bca39afb598f408459cf0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年3月1日**"
+      }
+    },
+    {
+      "segment_id": "824626b3",
+      "source_content": "- Bug fixes for multivariate flag values\n- Permission tweaks\n- Bug fixes soft-delete edge cases",
+      "source_content_hash": "61fa3850db4de06b91c98892b3d4f155a1bec6f64b5bb2460cc063cbc15175a9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 修复多变量功能开关值的错误\n- 权限调整\n- 修复软删除边界情况的错误"
+      }
+    },
+    {
+      "segment_id": "6d28a77c",
+      "source_content": "## v2.43",
+      "source_content_hash": "cac4c0dd2f05e6383a2a43b0ba2480eabd681f4e71d531834f95486225ceffe7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.43"
+      }
+    },
+    {
+      "segment_id": "f7ef78f9",
+      "source_content": "Released **20 February 2023**",
+      "source_content_hash": "e33a780f943275f38db2f66260f68d479d8be603458cb8e142ee7e1111d23cf8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年2月20日**"
+      }
+    },
+    {
+      "segment_id": "157c9741",
+      "source_content": "- Improve caching\n- Security patches",
+      "source_content_hash": "107765d3dc5f95a40a263c4513e00503f508ffcc68cd281339b02f9e29f5f9ca",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 缓存优化\n- 安全补丁"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## v2.42",
+      "source_content_hash": "c05c296b89b9a027ea01d5db6369d72994d2776bfbc0f9255de9b01ed6171388",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.42"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "Released **20 February 2023**",
+      "source_content_hash": "e33a780f943275f38db2f66260f68d479d8be603458cb8e142ee7e1111d23cf8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年2月20日**"
+      }
+    },
+    {
+      "segment_id": "3df4f066",
+      "source_content": "- Big Audit Log refactor\n- Datadog Dashboard Widget\n- Add soft delete to core model entities",
+      "source_content_hash": "fb71e16f394f99cdb36281e653c78c989dab763f248be084e0cfa0525d377c8a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 审计日志重大重构\n- 新增Datadog仪表板组件\n- 为核心模型实体添加软删除功能"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "## v2.41",
+      "source_content_hash": "d8b49cd0d6413845115a5dce22685a8a1017d940c4a599673dbbc061c09a155c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.41"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "Released **4 January 2023**",
+      "source_content_hash": "c0bc99cf7c9b5ed9ed2c05e792314519579da3480cc0e6f5c1e84879d1ba2952",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2023年1月4日**"
+      }
+    },
+    {
+      "segment_id": "a4bd3cfc",
+      "source_content": "- Add ability to validate feature names using regex\n- Add View identities permission\n- Fix security issue creating unauthorised Terraform API keys",
+      "source_content_hash": "0a15d39ecd084bdcdf4536807b50984615c8c08b291d84fab54a2e0a572ce511",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增通过正则表达式验证功能名称的能力\n- 新增查看身份权限\n- 修复创建未授权Terraform API密钥的安全问题"
+      }
+    },
+    {
+      "segment_id": "d422fb13",
+      "source_content": "## v2.40",
+      "source_content_hash": "b7c1136093f1287853e0315237ddab5f09a9cc4ca7d3031e4700511a357fb62b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.40"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "Released **20 December 2022**",
+      "source_content_hash": "56d1b8195973095a59ccb531133ac9789a8b0b42ac3b2c2a32aba9cfdc57edf6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年12月20日**"
+      }
+    },
+    {
+      "segment_id": "caffd879",
+      "source_content": "- Add 'Manage user groups' permission\n- Add setting to allow upper case characters to be used in feature names\n- Display traits with a float value correctly in UI",
+      "source_content_hash": "8f6106c239905fe72fc65ce695bb83617ebc37e8fe4703afaad4ec3e55652ceb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增\"管理用户组\"权限\n- 新增允许在功能名称中使用大写字母的设置\n- 在界面中正确显示浮点数值的特征"
+      }
+    },
+    {
+      "segment_id": "b936dd6a",
+      "source_content": "## v2.39",
+      "source_content_hash": "5cdd65b0b96dd437a30041470e1dabba3ed1466e48c556517a4379ca82e18fdc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.39"
+      }
+    },
+    {
+      "segment_id": "a5c5772a",
+      "source_content": "Released **6 December 2022**",
+      "source_content_hash": "6cb3a08b1b1b59f048fc9ccf07a670afde5638d8927fd10d3b08d2a3db34c0b8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年12月6日**"
+      }
+    },
+    {
+      "segment_id": "5dbc17cf",
+      "source_content": "- Add option to add DB read replicas\n- Add description field to segment condition\n- Expire user cookies after 30 days of inactivity",
+      "source_content_hash": "6e97074cc3962aa9b51ceeebcd1699c62c373002e403e17d99019e43824e9421",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增添加数据库只读副本的选项\n- 为分段条件添加描述字段\n- 用户30天不活动后使cookie失效"
+      }
+    },
+    {
+      "segment_id": "3a8d2b95",
+      "source_content": "## v2.38",
+      "source_content_hash": "1c16a6c573ae2d96bb256406cf99146129c33ec10f599d8fa41a9c9dbea8c54e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.38"
+      }
+    },
+    {
+      "segment_id": "5803caac",
+      "source_content": "Released **29 November 2022**",
+      "source_content_hash": "5b1207c3f904d96b020b7760b58bea930ae2c2285a1b57217e7bd443a30ebe08",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年11月29日**"
+      }
+    },
+    {
+      "segment_id": "d0b8a6db",
+      "source_content": "- Fix missing invite users button",
+      "source_content_hash": "75e14c65cfb9483966f0b595517307575384f243b1c846ee612dc98747a75686",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 修复缺失的邀请用户按钮"
+      }
+    },
+    {
+      "segment_id": "e33a2404",
+      "source_content": "## v2.37",
+      "source_content_hash": "8b75ec92176274e19c6608dbd72800902a3e39fd45f73e9fca110142689bc66d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.37"
+      }
+    },
+    {
+      "segment_id": "82e90254",
+      "source_content": "Released **22 November 2022**",
+      "source_content_hash": "ded1044f3c7a26cd432b0acc401196f0e60e0e0b3c9d2dfbd4c2f1a28019159d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年11月22日**"
+      }
+    },
+    {
+      "segment_id": "dee20070",
+      "source_content": "- Add segment support for Terraform integration\n- Add ability to rotate personal API tokens\n- Performance optimisations for retrieving segments for an identity\n- UI improvements for settings",
+      "source_content_hash": "b3a3ab368315f0bd38314daa5ab92a026551bda3b8e074c23338a1a046b0a882",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 为Terraform集成添加分段支持\n- 新增轮换个人API令牌的功能\n- 优化获取身份分段的性能\n- 设置界面改进"
+      }
+    },
+    {
+      "segment_id": "71169a2d",
+      "source_content": "## v2.36",
+      "source_content_hash": "5e12c8b46f512b154ee9c981d1b308c76954e92c1d860115599b67bcb8a88ddc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.36"
+      }
+    },
+    {
+      "segment_id": "c1eaf30b",
+      "source_content": "Released **11 November 2022**",
+      "source_content_hash": "1920d8e4a3f127bacafc3be77209fb3622c9fc154d2e487409d6a5ca660cbb32",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年11月11日**"
+      }
+    },
+    {
+      "segment_id": "7a3b7c62",
+      "source_content": "- Add read only view for features\n- Performance optimisations for updating identity traits\n- Prevent invite links creation in the API\n- Make master API keys read only",
+      "source_content_hash": "c03e942b767c30687563d042760c5f6d96f01ffa0a08b73c6ff748e70d1a5e87",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增功能的只读视图\n- 优化更新身份特征的性能\n- 禁止通过API创建邀请链接\n- 使主API密钥变为只读"
+      }
+    },
+    {
+      "segment_id": "6693c38c",
+      "source_content": "## v2.35",
+      "source_content_hash": "ad2be710af08ab283e8a1210436a519a62edae504ec1bbd043edc1e48cfd1cf0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.35"
+      }
+    },
+    {
+      "segment_id": "e9313fef",
+      "source_content": "Released **8 November 2022**",
+      "source_content_hash": "d2498f6445198cd58a3766120aeffb06d4951adcdf73977ab862754b9a9a6047",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年11月8日**"
+      }
+    },
+    {
+      "segment_id": "2890f5b2",
+      "source_content": "- Add option to hide invite links\n- Add SAML group sync (SaaS / Private cloud only)\n- Multivariate feature management fixes\n- Add more tag colours",
+      "source_content_hash": "b0f19784bb29fbd9c5f2131db0359257ecddd5b95cfcd109fb8275b149a1d455",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增隐藏邀请链接的选项\n- 添加SAML组同步功能（仅限SaaS/私有云）\n- 修复多变量功能管理问题\n- 增加更多标签颜色选项"
+      }
+    },
+    {
+      "segment_id": "cbd60296",
+      "source_content": "## v2.34",
+      "source_content_hash": "06983000d8873ed770c0c02cc985afaae8edfecae5d7bcbf0e2a5ff3550b2331",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.34"
+      }
+    },
+    {
+      "segment_id": "f38d1cb0",
+      "source_content": "Released **25 October 2022**",
+      "source_content_hash": "767652ff3a9b1704f8b19549a74784349944484018709e48954ae2dc49016001",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年10月25日**"
+      }
+    },
+    {
+      "segment_id": "0aa939cf",
+      "source_content": "- Add functionality to include a permission group when inviting users via email\n- Performance optimisations for update-traits endpoint\n- Remove user traits panel from dashboard\n- Add ability to invalidate / regenerate invite links\n- Performance optimisations for listing segments\n- Performance optimisations for /traits/bulk endpoint\n- Add expiring cache options for flags and identities endpoints",
+      "source_content_hash": "7d6a751cbdbae5453f2b5af6ec9adc5d7633ec6e72c57c524eff43206c712d5d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增通过邮件邀请用户时关联权限组的功能\n- 优化更新特征接口的性能\n- 从仪表盘移除用户特征面板\n- 新增失效/重新生成邀请链接功能\n- 优化列举用户分群接口性能\n- 优化批量特征接口性能\n- 为功能开关和身份端点添加可设置过期时间的缓存选项"
+      }
+    },
+    {
+      "segment_id": "8f1c1cd6",
+      "source_content": "## v2.33",
+      "source_content_hash": "5e66ac7b60080bb4b94ec72c8b298f408793e5dbea0eba45f0d93ad820627ab3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.33"
+      }
+    },
+    {
+      "segment_id": "383fbdd2",
+      "source_content": "Released **20 October 2022**",
+      "source_content_hash": "b6082590be2c0941c7339e560fc4f32a94735a40b8f375151381153f5d7c3ad5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年10月20日**"
+      }
+    },
+    {
+      "segment_id": "9ceae896",
+      "source_content": "- Add functionality to support adding users to a default user group on joining an organisation\n- Add new index to identites to improve dashboard performance\n- IS_SET and IS_NOT_SET segment operators\n- Add statsd metrics",
+      "source_content_hash": "f7b8e7ce9b3cd8ec4f242555da65587fb5309b72f611bebfe85fe2d77e5ff786",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增用户加入组织时自动加入默认用户组功能\n- 为身份表添加新索引以提升仪表盘性能\n- 新增IS_SET和IS_NOT_SET分群运算符\n- 添加statsd指标统计"
+      }
+    },
+    {
+      "segment_id": "734d40d8",
+      "source_content": "## v2.32",
+      "source_content_hash": "908a65116a22467d27a16410c8899dfed312e278ea513e0cb3b81303c3a2887c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.32"
+      }
+    },
+    {
+      "segment_id": "9e90a9b3",
+      "source_content": "Released **6 October 2022**",
+      "source_content_hash": "a07d15361435b2d6f492bf0a6271413f07f7e5e987816c6f7dd0dd3637528e21",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年10月6日**"
+      }
+    },
+    {
+      "segment_id": "d3939446",
+      "source_content": "- Mixpanel integration payload fix\n- Add fix for testing webhooks in UI when webhook has basic authentication\n- Add MV options support for Terraform",
+      "source_content_hash": "74fce95dcc094dcca8f5b240b86d02281f8ca7d6593c9d6a50efd29d7f882f12",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 修复Mixpanel集成数据负载问题\n- 修复带基础认证的Webhook在UI中测试的问题\n- 为Terraform添加多变量选项支持"
+      }
+    },
+    {
+      "segment_id": "ad3e22c6",
+      "source_content": "## v2.31",
+      "source_content_hash": "2d300203272d1f263b6539f13e165a3f6b3dbe3591996eb6da602c9eec1107e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.31"
+      }
+    },
+    {
+      "segment_id": "3e8f45da",
+      "source_content": "Released **29 September 2022**",
+      "source_content_hash": "354e990d3ebf4754937087c315cd0f1573f326c5d5b807402699d82e055c0dfe",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年9月29日**"
+      }
+    },
+    {
+      "segment_id": "1852dfef",
+      "source_content": "- Permissions fix for identity feature states view\n- Percentage split operator fix for 0 value\n- Added modulo operator for segment engine\n- create / approve change request permissions",
+      "source_content_hash": "021c47d964183f003c0e512ec9b2e8bc9f2ee7204bb80ab8401a0fa4c90995f0",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 修复身份特征状态视图的权限问题\n- 修复百分比分割运算符对0值的处理\n- 为分群引擎添加取模运算符\n- 新增创建/审批变更请求权限"
+      }
+    },
+    {
+      "segment_id": "531ec0bb",
+      "source_content": "## v2.30",
+      "source_content_hash": "a782af90abaf395e83cff11686adfee5d2c7593b8cc06aea01e6a4c1b3220ac3",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.30"
+      }
+    },
+    {
+      "segment_id": "d2a3d4c7",
+      "source_content": "Released **13 September 2022**",
+      "source_content_hash": "3670dfd54ee84d16bf6995bf67ce33a56305ba004f94544079dd191aff8034c0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年9月13日**"
+      }
+    },
+    {
+      "segment_id": "93fcd90c",
+      "source_content": "- Add support for managing project features in Terraform\n- Feature specific segments\n- Add audit log records for Change Requests\n- Add setting to prevent flag defaults being set in all environments when creating a feature",
+      "source_content_hash": "8aca8a6d803ae7022a4b5c645ef77b6e42752a5bd75bb64835d5190e9cb3f32e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增通过Terraform管理项目功能开关的支持\n- 功能专属分群\n- 为变更请求添加审计日志记录\n- 新增设置项防止创建功能时在所有环境设置默认开关值"
+      }
+    },
+    {
+      "segment_id": "657bde08",
+      "source_content": "## v2.29",
+      "source_content_hash": "4b9730438911b3afcc67f10499255277eb47bc8b3ad8206e7346a9a8b4a22ec7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.29"
+      }
+    },
+    {
+      "segment_id": "827eb9a3",
+      "source_content": "Released **8 August 2022**",
+      "source_content_hash": "173b9768064b86d91cd6111fb25473310f242fea0d6b215b3d208a30722c4ddb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年8月8日**"
+      }
+    },
+    {
+      "segment_id": "35b64b93",
+      "source_content": "- Async processor core engine\n- Allow Segment overrides when viewing associated Features for a Segment\n- Allow users with CREATE_FEATURE permission to manage multivariate options",
+      "source_content_hash": "8f999a1544cd6e04802c02d448156e8d0dc7a0b77159bf0904004f3a807e6419",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 异步处理器核心引擎\n- 允许在查看分群关联功能时覆盖分群规则\n- 允许拥有CREATE_FEATURE权限的用户管理多变量选项"
+      }
+    },
+    {
+      "segment_id": "67edbbc4",
+      "source_content": "## v2.28",
+      "source_content_hash": "1297ab31bc36a037a0106c24f2610596860fa8f61864d40f80fd94ec0b170431",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.28"
+      }
+    },
+    {
+      "segment_id": "61a78cbe",
+      "source_content": "Released **8 July 2022**",
+      "source_content_hash": "4e21a1bf7509344007b4a70eda073258b6081c244367534f6b6ebce3c034928e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年7月8日**"
+      }
+    },
+    {
+      "segment_id": "471486dc",
+      "source_content": "- Import/Export data improvements\n- Export organisation to AWS S3\n- Show associated Segments in Features\n- Add management command to import organisation\n- Add manage Segments permissions\n- Show Segment Identity Sampling\n- Prevent null feature type\n- (Enterprise only) Add LDAP username/password\n- (Enterprise only) LDAP permission group syncing fixes",
+      "source_content_hash": "44cdb2401c545a360c8698d77bbdc5ad50502d502c11c5440fd71ad1b3793839",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 数据导入导出功能改进\n- 支持将组织数据导出至AWS S3\n- 在功能页面显示关联分群\n- 新增导入组织的管理命令\n- 添加管理分群权限\n- 显示分群身份采样\n- 防止功能类型为空\n- (仅企业版)添加LDAP用户名/密码支持\n- (仅企业版)修复LDAP权限组同步问题"
+      }
+    },
+    {
+      "segment_id": "af250a10",
+      "source_content": "## v2.27",
+      "source_content_hash": "671faa97194e90c9b4bff1079c4ad26a0b3e7a542d7645c4ba4af3be506a24a6",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.27"
+      }
+    },
+    {
+      "segment_id": "295367fa",
+      "source_content": "Released **1 July 2022**",
+      "source_content_hash": "b33027f3bef89a0d6953a74526ad158fe077b6895d71272c8510725805d1913a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年7月1日**"
+      }
+    },
+    {
+      "segment_id": "bc3926aa",
+      "source_content": "- Add ability to export and import data for an organisation\n- Allow Environments to prevent clients from setting Traits",
+      "source_content_hash": "d96cde95a0283027b8bb9cc49ce4eade3ad30bf5182736ebd86851ee47730936",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增组织数据导出导入功能\n- 允许环境配置禁止客户端设置特征"
+      }
+    },
+    {
+      "segment_id": "3bff4086",
+      "source_content": "## v2.26",
+      "source_content_hash": "c33b5305d890a4fd00cc0697866523a8e88c71e18d8195441e8c29b127f91ed8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.26"
+      }
+    },
+    {
+      "segment_id": "015c0c6e",
+      "source_content": "Released **22 June 2022**",
+      "source_content_hash": "1b0a36a108ea9ef8cce3da5eba3ea1d9769da9523713ab7beb9794d2bcd41e9e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年6月22日**"
+      }
+    },
+    {
+      "segment_id": "412352a8",
+      "source_content": "- Bug Fixes",
+      "source_content_hash": "2dfba2808b520282834927c33c5a2b0dbddd10fba4a0bdf7e3f28503ec519f1e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 错误修复"
+      }
+    },
+    {
+      "segment_id": "e29294bd",
+      "source_content": "## v2.25",
+      "source_content_hash": "362da693ee8a7b2dc306fe5eb6143f2aad0d11aaeedec4684218c098369d5349",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.25"
+      }
+    },
+    {
+      "segment_id": "ebfad7e4",
+      "source_content": "Released **17 June 2022**",
+      "source_content_hash": "e81eeac19305c49bf4dc3011f33cf97b8932e213e0e579d29c3fbd09cda25029",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年6月17日**"
+      }
+    },
+    {
+      "segment_id": "41da8c12",
+      "source_content": "- Filter tags\n- Added user-managed \"Beta Features\"\n- Prevent users on free plans from setting minimum_change_request_approvals",
+      "source_content_hash": "e4d6d85172addfee95878896c3e31ee9db6431ed779ed47db2bbedc87311874e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 标签筛选功能\n- 新增用户管理的\"Beta功能\"\n- 禁止免费版用户设置最小变更请求审批数"
+      }
+    },
+    {
+      "segment_id": "197e1a1b",
+      "source_content": "## v2.24",
+      "source_content_hash": "59e665a933208c76abd406c106a5aa84a79968dcb8c5ba65049b3bd5d6197ea0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.24"
+      }
+    },
+    {
+      "segment_id": "09512450",
+      "source_content": "Released **1 June 2022**",
+      "source_content_hash": "7cbd217c8aa2d43afb3cce23fb8625e4a2e5928246c283dcbd669fd9a37c38b9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年6月1日**"
+      }
+    },
+    {
+      "segment_id": "062167cd",
+      "source_content": "- Segments overrides can now take Multi-Variate percentages\n- RBAC updates\n- Allow custom headers in CORS restrictions",
+      "source_content_hash": "c05d6f5ec43fa61fb9eb115f66b932136f90d2412f63ffc00bbaa3f9f049a36d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 分群覆盖现在支持多变量百分比\n- RBAC权限更新\n- 允许在CORS限制中添加自定义请求头"
+      }
+    },
+    {
+      "segment_id": "dc825187",
+      "source_content": "## v2.23",
+      "source_content_hash": "74cce99c474e3200cd2f0c473368c4929b08b2f48566308c430cd27249ad91b0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.23"
+      }
+    },
+    {
+      "segment_id": "833ce577",
+      "source_content": "Released **17 May 2022**",
+      "source_content_hash": "b1ac94f3cd451d7cfee0a17520e344fed7b7806973a2d0bc05a268227aac5ccf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年5月17日**"
+      }
+    },
+    {
+      "segment_id": "dee201e7",
+      "source_content": "- Security Audit Fixes\n- Add cache for returning 403 for unknown Environments in header\n- Semver and regex validation",
+      "source_content_hash": "3896595e72fc0398c6709ac7bcf16c544cd3d49d0837e2be1a0509555067f114",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 安全审计修复\n- 为未知环境请求头添加403缓存\n- 语义化版本和正则表达式验证"
+      }
+    },
+    {
+      "segment_id": "43662a16",
+      "source_content": "## v2.22",
+      "source_content_hash": "c0f95dedc0e540754b871aca7cf8b25cd093d948393c802bc3add9cc885fec85",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.22"
+      }
+    },
+    {
+      "segment_id": "85821ad3",
+      "source_content": "Released **25 April 2022**",
+      "source_content_hash": "72e7ece10997332980b03136813ab3a836a4403670e0d781d1d59e6288db6f9d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年4月25日**"
+      }
+    },
+    {
+      "segment_id": "4f62aae3",
+      "source_content": "- Semantic Version Operators\n- Permissions Improvements\n- UI improvements",
+      "source_content_hash": "b9888b5a58d5ba14d47e83a840219bfb2ac6b2c6773e2473a95702a6eaaa63c3",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 语义化版本运算符\n- 权限系统改进\n- UI优化"
+      }
+    },
+    {
+      "segment_id": "f210f942",
+      "source_content": "## v2.21",
+      "source_content_hash": "983e64878cf2216be48f07f491a297ffa4f45ae6eaf47140a05d4f38b7562b1e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.21"
+      }
+    },
+    {
+      "segment_id": "2dbbb313",
+      "source_content": "Released **12 April 2022**",
+      "source_content_hash": "4101d299fcd48a35f062fd787f18f11f4d6bedcca95d5da1e05c81b04b62d84b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年4月12日**"
+      }
+    },
+    {
+      "segment_id": "13f388ba",
+      "source_content": "- Dropped Python 3.6 support\n- Change Requests",
+      "source_content_hash": "f5e3761cbcd2acd4f6bd0e092cec1df246ccf3e9bf33d0f7577c93c98bd73c1e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 停止支持Python 3.6\n- 变更请求功能"
+      }
+    },
+    {
+      "segment_id": "61d0a6d1",
+      "source_content": "## v2.20",
+      "source_content_hash": "99fb3d3d0b793c283fbb2ffc6d6d9b6b93a80938f4594f390966cf24405fe834",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.20"
+      }
+    },
+    {
+      "segment_id": "face5559",
+      "source_content": "Released **7 April 2022**",
+      "source_content_hash": "56d28fbca60d88b58d3a26abf0fc6d4969ef0f62c92f91d69bdb8e616f165d9f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年4月7日**"
+      }
+    },
+    {
+      "segment_id": "3f49aaf9",
+      "source_content": "- Dashboard performance improvements\n- Segment Identity Sampling",
+      "source_content_hash": "b87e54a8c549000fa37b4eff3813157b6547bf3f4b70846325a4a6380170b39e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 仪表板性能优化\n- 新增用户分群抽样功能"
+      }
+    },
+    {
+      "segment_id": "13095ea3",
+      "source_content": "## v2.19",
+      "source_content_hash": "d56e8010c84bc22e8f720cfa03482afc3f17ed499e63e303c321ad5cf6079093",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.19"
+      }
+    },
+    {
+      "segment_id": "b0c30ab4",
+      "source_content": "Released **24 March 2022**",
+      "source_content_hash": "aaede6d1eb56af492413fb0aebb4a863ffb482d7b67d3c1af6f9ef93f92c412b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年3月24日**"
+      }
+    },
+    {
+      "segment_id": "2aad2645",
+      "source_content": "- Dashboard performance improvements\n- UI tweaks\n- ARM Docker images\n- Dynatrace Integration",
+      "source_content_hash": "c6c252041269cb393085e2cff72c2f472cd7d2170dc33ad9a61957cb07eef5f9",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 仪表板性能优化\n- 用户界面微调\n- 新增ARM架构Docker镜像\n- 集成Dynatrace监控工具"
+      }
+    },
+    {
+      "segment_id": "371cb514",
+      "source_content": "## v2.18",
+      "source_content_hash": "781bb771a09ce7be6077888ddf7e768bc0ae78089e775d816d898ae5855b26f7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.18"
+      }
+    },
+    {
+      "segment_id": "5d5a3416",
+      "source_content": "Released **15 February 2022**",
+      "source_content_hash": "e33af2a5748033231d2906755453fd4643459e13b517ae94bae7bee21fc2eea1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年2月15日**"
+      }
+    },
+    {
+      "segment_id": "44c87a8c",
+      "source_content": "- Server-side SDK keys Frontend developed\n- Improved Segment Rules evaluation\n- Multiple Dependency Updates",
+      "source_content_hash": "649949ef9b3e18392885b0e55dfd706c63cd7419334c574e2da3ad3e08eaa22d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开发服务端SDK密钥前端功能\n- 优化用户分群规则评估逻辑\n- 多项依赖库更新"
+      }
+    },
+    {
+      "segment_id": "66a437ee",
+      "source_content": "## v2.17",
+      "source_content_hash": "59422c311721d8178734dbc85192fd59154e1f6656a456b37b0248cf85937ad0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.17"
+      }
+    },
+    {
+      "segment_id": "bb5297fc",
+      "source_content": "Released **8 February 2022**",
+      "source_content_hash": "6db367bbea49e5b7c10db249d70e7a0c055a83c3f58771957e2848821297fdfc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年2月8日**"
+      }
+    },
+    {
+      "segment_id": "50e5a678",
+      "source_content": "- Webhook Analytics Integration\n- Audit Log Search is now Server-side\n- Improvements to Flag Value Text Editor",
+      "source_content_hash": "a87791e8b1314932472d50062fbbc1b19578153456c4e353b436d9fc297d24cb",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增Webhook数据分析集成\n- 审计日志搜索改为服务端实现\n- 功能开关值文本编辑器优化"
+      }
+    },
+    {
+      "segment_id": "2b20caf3",
+      "source_content": "## v2.16",
+      "source_content_hash": "16b8335ef37abeef8afc11a8bb6c9b85de22a87b989ef26938f99c76e7a11b87",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.16"
+      }
+    },
+    {
+      "segment_id": "52d45a2c",
+      "source_content": "Released **31 January 2022**",
+      "source_content_hash": "4872cb91f5a1eca0ccd89ebc6f4c6993d4e84ebd315625b58ba8885adf468801",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年1月31日**"
+      }
+    },
+    {
+      "segment_id": "a8490b9a",
+      "source_content": "- Segment Override Permissions Upgrade\n- Added lots of 1-click installers (fly.io, render, digital ocean)\n- Rudderstack Integration\n- New SDK tokens in preparation for SDKv2",
+      "source_content_hash": "3aec44d96e07eac4a5e7a71b030e028cbc93ef9c832e66c4f8af3c00a636fa11",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户分群覆盖权限升级\n- 新增多平台一键部署方案（fly.io/render/digital ocean）\n- 集成Rudderstack数据分析平台\n- 为SDKv2预置新令牌体系"
+      }
+    },
+    {
+      "segment_id": "38115c9a",
+      "source_content": "## v2.15",
+      "source_content_hash": "bc34bf015982ae65952a1300ae2c384c91095f77886514fc4dd38f49e35444b1",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.15"
+      }
+    },
+    {
+      "segment_id": "46e586a3",
+      "source_content": "Released **22 January 2022**",
+      "source_content_hash": "63a5c2fbfa4e6fcfc24015371dbb318ed529f431c8bd8115062c0516024e8baf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年1月22日**"
+      }
+    },
+    {
+      "segment_id": "fc4d82ef",
+      "source_content": "- Added hostnames to InfluxDB\n- Better Env Var handling of SSL and `USE_X_FORWARDED_HOST`",
+      "source_content_hash": "a2872d31235d4f65eb8186ad7d8782b0da1b95c0a1765d8e79863ee0c4f5a4ea",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- InfluxDB增加主机名记录\n- 优化SSL和`USE_X_FORWARDED_HOST`环境变量处理"
+      }
+    },
+    {
+      "segment_id": "e151b2af",
+      "source_content": "## v2.14",
+      "source_content_hash": "2f4abbe100d0216c010457ff157ef2aec41258c7d093888315b14f3e79174a77",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.14"
+      }
+    },
+    {
+      "segment_id": "850ec775",
+      "source_content": "Released **4 January 2022**",
+      "source_content_hash": "da1b704a80aa123917c5c4339f5b575db5592758325f6ed7517756504591fdaf",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2022年1月4日**"
+      }
+    },
+    {
+      "segment_id": "9873f94c",
+      "source_content": "- Slack Integration\n- Additional Permission Options\n- E2E tests moved to TestCafe",
+      "source_content_hash": "bdff2a5b4ebe996719e3956f3d3dc3908c3196eeba35da5d7979390f516c680f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Slack平台集成\n- 扩展权限配置选项\n- 端到端测试迁移至TestCafe框架"
+      }
+    },
+    {
+      "segment_id": "295e85da",
+      "source_content": "## v2.13",
+      "source_content_hash": "1a5731bfd041e4acfca0740acc5bbcc871a22aa80b60fae37a5c6e32d905b62b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.13"
+      }
+    },
+    {
+      "segment_id": "a5a28988",
+      "source_content": "Released **8 December 2021**",
+      "source_content_hash": "8e059df3647ce717d3c7ca41f2a3b07ab48fe131031f286ae9ba6c0757d6fc15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年12月8日**"
+      }
+    },
+    {
+      "segment_id": "d20eeb48",
+      "source_content": "- Protected Flags\n- Compare Environments\n- Force 2fa",
+      "source_content_hash": "e6c67d6213eeedb2a0a106df26092886345f29d9874f331f4cef7eb7e7286a82",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 受保护功能开关\n- 环境配置对比功能\n- 强制双因素认证"
+      }
+    },
+    {
+      "segment_id": "fd59095d",
+      "source_content": "## v2.12",
+      "source_content_hash": "dda9880a4d92a54463d9d50a0e3e54743637f7e0d250c81498da1c98d5960e48",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.12"
+      }
+    },
+    {
+      "segment_id": "c2a9a004",
+      "source_content": "Released **2 December 2021**",
+      "source_content_hash": "0c2d69ca2d9013e5395f933e4af28bd9ad7d5c1e7a27b1881574be513db5243b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年12月2日**"
+      }
+    },
+    {
+      "segment_id": "63aec83f",
+      "source_content": "- Environment Variable renaming",
+      "source_content_hash": "353c54e22d075d299a4f7a5a57c602f39f65ff403f5b7abbc372d793edcd962c",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 环境变量命名规范调整"
+      }
+    },
+    {
+      "segment_id": "becb5987",
+      "source_content": "## v2.11",
+      "source_content_hash": "46c08fafd3fd0eaf4b32954ad38f70f78af0ab1b257de6bda73090c9ccfeb3db",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.11"
+      }
+    },
+    {
+      "segment_id": "d83b50df",
+      "source_content": "Released **18 November 2021**",
+      "source_content_hash": "7a07db112b03655cb3c6d8a5042b0e498ca9ea495d05ccfdcc5f317b9c4c29bb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年11月18日**"
+      }
+    },
+    {
+      "segment_id": "9fc293b5",
+      "source_content": "- Improved Docker Compose\n- Heap Integration\n- Multiple Dependency Updates",
+      "source_content_hash": "4642749df478af3ef647be651fbba6b29a8912741c1deecb058388a6bb859719",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Docker Compose配置优化\n- Heap分析平台集成\n- 多项依赖库更新"
+      }
+    },
+    {
+      "segment_id": "757c087d",
+      "source_content": "## v2.10",
+      "source_content_hash": "a4613aa87c6062d3e7fe46915b3257433f67206599f4f7838007c58cd2b40c27",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.10"
+      }
+    },
+    {
+      "segment_id": "1dffcdf5",
+      "source_content": "Released **2 November 2021**",
+      "source_content_hash": "b767f219b52119b1c1328fcd1631e9e229ed9525a7a57cc10971a003d5d07e5e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年11月2日**"
+      }
+    },
+    {
+      "segment_id": "5815329c",
+      "source_content": "- Elixir SDK\n- Archive Flags\n- Specify Flag Owners\n- Database performance improvements\n- Permission improvements",
+      "source_content_hash": "682eef4a293e5d636379bc9fc5b07e65590597990952991e5aaf4a2a6f1f028e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- Elixir语言SDK支持\n- 功能开关归档功能\n- 指定功能负责人\n- 数据库性能优化\n- 权限系统改进"
+      }
+    },
+    {
+      "segment_id": "4632603c",
+      "source_content": "## v2.9",
+      "source_content_hash": "931fbedb36a5dc7800a98f7348284a4591f365d17f581d4c0c86e59ec1479391",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.9"
+      }
+    },
+    {
+      "segment_id": "9802de48",
+      "source_content": "Released **23 August 2021**",
+      "source_content_hash": "ff6a7b6a42efa2e7a63695217bd8db62360c7fb301e073efcedf49b854bcc23c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年8月23日**"
+      }
+    },
+    {
+      "segment_id": "6d83531a",
+      "source_content": "- Archive flags\n- Optionally GZIP responses\n- Large number of small bug fixes",
+      "source_content_hash": "448adf25bfffc88c58399cddb38bab992d9b336225c9254aa8635282e4521111",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 功能开关归档\n- 响应内容可选GZIP压缩\n- 大量细节问题修复"
+      }
+    },
+    {
+      "segment_id": "42a9e250",
+      "source_content": "## v2.8",
+      "source_content_hash": "12cbe4ed5cfc35b04ad0322385a3205ee19b0e5fc7a20cffc5dc3e1e781c9779",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.8"
+      }
+    },
+    {
+      "segment_id": "e4ab192a",
+      "source_content": "Released **28 July 2021**",
+      "source_content_hash": "7c0ed801466e049acf1311a6017a37ac576836aa350d13c9ec30f54dd182556f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年7月28日**"
+      }
+    },
+    {
+      "segment_id": "af20384f",
+      "source_content": "- SAML Integration (Enterprise version only)",
+      "source_content_hash": "bac2c8482867a7b83503798614388a184caeae6c9c5316948613073d251f39e2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 企业版专属SAML集成"
+      }
+    },
+    {
+      "segment_id": "12e415c2",
+      "source_content": "## v2.7",
+      "source_content_hash": "2afe56a75c175902c027a61deb628a4bf4f7a2a78316717b3858f900779a66de",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.7"
+      }
+    },
+    {
+      "segment_id": "9cbb5424",
+      "source_content": "Released **5 May 2021**",
+      "source_content_hash": "85b29d07d6bc5c7ae7f2d25e77b38e07f52910d3743a700281b3b4ecb7a14816",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年5月5日**"
+      }
+    },
+    {
+      "segment_id": "9c877fa1",
+      "source_content": "- [Multivariate Flags](https://flagsmith.com/blog/introducing-multivariate-flags/)\n- Various minor bug fixes",
+      "source_content_hash": "5ad88713e59f84fa672dc23d2ccbec86a752731b3517380669c0d8a14661613a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- [多变量功能开关](https://flagsmith.com/blog/introducing-multivariate-flags/)\n- 多项细节问题修复"
+      }
+    },
+    {
+      "segment_id": "cb0acec9",
+      "source_content": "## v2.6",
+      "source_content_hash": "b517aabaa4baaf267f3514c2f2624da69159ec9dcf71d9b773c9e15fedbceffe",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.6"
+      }
+    },
+    {
+      "segment_id": "eb398072",
+      "source_content": "Released **9 Apr 2021**",
+      "source_content_hash": "fcfb13afad402e5f0ef1447aa2eed1fa715b9667e2152cdefa6c5b65d4476aab",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年4月9日**"
+      }
+    },
+    {
+      "segment_id": "0a314ba1",
+      "source_content": "- Combine Feature Flags and Remote Config\n- Dark mode\n- Formatter for remote config supporting xml, json, toml and yaml\n- Fix Segment override incorrect date\n- Add sorting to identity feature list\n- Enable SDK analytics based on FLAGSMITH_ANALYTICS env var\n- Configurable butter-bar\n- Show segment descriptions\n- New integrations\n  - Mixpanel\n  - Heap Analytics\n  - New Relic",
+      "source_content_hash": "8f6f7650612f58a448180b84cb9b89900c87e50808549409880f7513b5604110",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 功能开关与远程配置合并\n- 深色模式支持\n- 远程配置格式化工具（支持XML/JSON/TOML/YAML）\n- 修复用户分群覆盖日期错误\n- 用户特征列表增加排序功能\n- 通过FLAGSMITH_ANALYTICS环境变量控制SDK分析\n- 可配置公告栏\n- 显示用户分群描述\n- 新增集成方案：\n  - Mixpanel\n  - Heap Analytics\n  - New Relic"
+      }
+    },
+    {
+      "segment_id": "56f32447",
+      "source_content": "Breaking changes:",
+      "source_content_hash": "c8f62457e1169357d39971e0e314acb2b3907e345f3c3b76dbd7221e95aab71f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "重大变更："
+      }
+    },
+    {
+      "segment_id": "5ffdb9f2",
+      "source_content": "- Segment overrides use new API",
+      "source_content_hash": "3120421a24e1db996af7d1805934d28eeb1f3fba737ef32e8894174c17f2881a",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户分群覆盖采用新API规范"
+      }
+    },
+    {
+      "segment_id": "06d2929c",
+      "source_content": "## v2.5",
+      "source_content_hash": "a049774174ea8e27f41163584fbda7fe21de7c7fb3b915f7c0ca329f78061f01",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.5"
+      }
+    },
+    {
+      "segment_id": "323eea94",
+      "source_content": "Released **20 Jan 2021**",
+      "source_content_hash": "40d3478fa0dcaf9e156ee630203c4df76a910b24ac86f162a1e6595d6b8e1843",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2021年1月20日**"
+      }
+    },
+    {
+      "segment_id": "aaddedb4",
+      "source_content": "- Add invite via link functionality\n- More third party integrations",
+      "source_content_hash": "66855b092217f4205368562b8caba591356daf87440703355ec4911dcca0ccd8",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增链接邀请功能\n- 扩展第三方集成方案"
+      }
+    },
+    {
+      "segment_id": "5ce48008",
+      "source_content": "## v2.4",
+      "source_content_hash": "fdd809c4292321e1f3bd9e0751cc42f4a8248f9e87ad6de4ed4d6a37da9f2ea8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.4"
+      }
+    },
+    {
+      "segment_id": "4869d0e4",
+      "source_content": "Released **7 Dec 2020**",
+      "source_content_hash": "8d8d4b064d99c120ad85812130d43d07de2ba0acb2a6fa03e3d948c2f3000927",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2020年12月7日**"
+      }
+    },
+    {
+      "segment_id": "d14a9e24",
+      "source_content": "This release is the first under our new brand, Flagsmith.",
+      "source_content_hash": "4c33314f68f30df125f18fbc90a77ed3b3662d96965121843916e4c63320e406",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此版本是我们以新品牌Flagsmith发布的首个版本。"
+      }
+    },
+    {
+      "segment_id": "fe2c7f95",
+      "source_content": "The rebrand comes with no breaking changes, mainly just a refactor to urls and wording, however we have built several\nnew features and bug fixes since our last release:",
+      "source_content_hash": "afd2a67c747e1618dc074911cca31d24640c51633d4534bb09165c5f69c02e49",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "品牌重塑未引入破坏性变更，主要涉及URL和文案的重构，但自上一版本以来我们已构建多项新功能并修复了若干问题："
+      }
+    },
+    {
+      "segment_id": "1c7ed9a5",
+      "source_content": "- If your api is using influx, we now show usage data in a graph format\n  ![image](https://user-images.githubusercontent.com/8608314/101258233-16227880-3719-11eb-86c0-738c43d2ec0f.png)\n- New look and feel\n- Ability to bulk enable / disable all segment overrides and user overrides for a flag\n  ![image](https://user-images.githubusercontent.com/8608314/101258463-87aef680-371a-11eb-9e98-35c976612962.png)\n- Sensible page size for the users page\n- Improved E2E stability\n- Integration page, this page is almost fully managed by remote config. It will allow users t enhance Flagsmith with\n  your favourite tools. We currently support data dog and will shortly support amplitude.\n  ![image](https://user-images.githubusercontent.com/8608314/101258436-6ea64580-371a-11eb-8afe-3626eb36bbbe.png)",
+      "source_content_hash": "afc69d488804b732a1fd4f5f3e9038ab2d01c4dd1125ea2bce1a8a06d88b403b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 若API使用InfluxDB，现以图表形式展示使用量数据  \n  ![image](https://user-images.githubusercontent.com/8608314/101258233-16227880-3719-11eb-86c0-738c43d2ec0f.png)\n- 全新视觉风格\n- 支持批量启用/禁用某个功能标志的所有分段覆盖和用户覆盖  \n  ![image](https://user-images.githubusercontent.com/8608314/101258463-87aef680-371a-11eb-9e98-35c976612962.png)\n- 用户页面采用合理分页\n- 提升端到端测试稳定性\n- 集成页面（该页面几乎完全由远程配置管理），支持用户通过喜爱的工具增强Flagsmith功能。当前已支持Datadog，即将支持Amplitude  \n  ![image](https://user-images.githubusercontent.com/8608314/101258436-6ea64580-371a-11eb-8afe-3626eb36bbbe.png)"
+      }
+    },
+    {
+      "segment_id": "85f6fcdd",
+      "source_content": "The remote config to use this is as follows:",
+      "source_content_hash": "008b4acc37413ce0acd62b48f89eb2f66bd242109d70ad399cec3e20d0ecf025",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "实现此功能的远程配置如下："
+      }
+    },
+    {
+      "segment_id": "92e959fe",
+      "source_content": "```json\nintegrations:\n\n[\"data_dog\"]\n```",
+      "source_content_hash": "16e6741d9cd17e7e8613d7b030389f217a014da74927b20b6dd47fba93b006ad",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_92e959fe"
+      }
+    },
+    {
+      "segment_id": "46382a82",
+      "source_content": "```json\nintegration_data\n{\n    \"perEnvironment\": false,\n    \"image\": \"https://xyz\",\n    \"fields\": [\n      {\n        \"key\": \"base_url\",\n        \"label\": \"Base URL\"\n      },\n      {\n        \"key\": \"api_key\",\n        \"label\": \"API Key\"\n      }\n    ],\n    \"tags\": [\n      \"logging\"\n    ],\n    \"title\": \"Data dog\",\n    \"description\": \"Sends events to Data dog for when flags are created, updated and removed. Logs are tagged with the environment they came from e.g. production.\"\n}\n```",
+      "source_content_hash": "8ce6a179cbd8a5559ea0f6e33c1ba1fa9176ce89dec2a51807ab0e48b821bf39",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_46382a82"
+      }
+    },
+    {
+      "segment_id": "4588f81b",
+      "source_content": "## v2.3",
+      "source_content_hash": "77f8d9aec9f842cc7ac80fe58c0c861bef2b9739ea3aa3bff56383e2b56f5e03",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.3"
+      }
+    },
+    {
+      "segment_id": "df64d276",
+      "source_content": "Released **9 Nov 2020**",
+      "source_content_hash": "d035672fbb9f6b32aa98165ba390effa58ad70108efa0c247331090c029b04c4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2020年11月9日**"
+      }
+    },
+    {
+      "segment_id": "b79c3482",
+      "source_content": "We've added a bunch of new features and bug fixes.",
+      "source_content_hash": "3705deceb22a728a0f2f37b7620f88af3f03f39934ba9ec6ef96995b94da9f97",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们新增了多项功能并修复了若干问题。"
+      }
+    },
+    {
+      "segment_id": "3880a2b6",
+      "source_content": "- You can now tag flags with user-defined tags. You can use these tags to manage flags and organise them.\n- Beta release of both [Data Dog](https://docs.flagsmith.com/integrations/datadog/) and\n  [Amplitude](https://docs.flagsmith.com/integrations/amplitude/) integrations.\n- You can now set multiple traits in a single call\n- For a given feature, show which Identities have it individually overridden\n- When viewing an Identity, show the segments and test whether the identity is a member of each segment",
+      "source_content_hash": "f1459345ed1e8262a6d1ba012f9f48fd13c27d8e8e37df091b9a212096f2789d",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 现可为功能标志添加用户自定义标签，用于分类管理\n- [Datadog](https://docs.flagsmith.com/integrations/datadog/)与[Amplitude](https://docs.flagsmith.com/integrations/amplitude/)集成进入Beta阶段\n- 支持单次调用设置多个用户特征\n- 可查看特定功能被哪些用户单独覆盖\n- 查看用户时显示其所属分段及分段匹配测试结果"
+      }
+    },
+    {
+      "segment_id": "c721d9c4",
+      "source_content": "## v2.2",
+      "source_content_hash": "098e2391fcc53eb9a917311734fa4b7ce4aa2eb4fac1a9bf40da49a387f6103b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.2"
+      }
+    },
+    {
+      "segment_id": "36b947e5",
+      "source_content": "Released **12th June 2020**",
+      "source_content_hash": "2911e6153c1fefaa321e5a2dec93ac033c1f8de02c5fe5a9002098c3137eb927",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2020年6月12日**"
+      }
+    },
+    {
+      "segment_id": "a5ee5ca0",
+      "source_content": "- Flags that are defined with Segment overrides are now based on an Environment level, as opposed to a Project level. So\n  you can now define Segment overrides differently between Environments\n- Redesigned the left hand navigation area\n- You can now filter the audit log per flag\n- You can jump to a flags audit log from the main features page",
+      "source_content_hash": "8ffb7d48c31b82429cc9fa93af5501642f8cc8a4859ed1041a4ecd98baea51fc",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 分段覆盖功能现基于环境层级（而非项目层级），支持为不同环境配置差异化分段规则\n- 左侧导航栏重新设计\n- 审计日志可按功能标志筛选\n- 从功能主页面可直接跳转至对应审计日志"
+      }
+    },
+    {
+      "segment_id": "5827a184",
+      "source_content": "## v2.1",
+      "source_content_hash": "89e45631a0c78b3400d0d41503ad04997e73c93bf28e91326b19e4f24a33a532",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.1"
+      }
+    },
+    {
+      "segment_id": "5e15188a",
+      "source_content": "Released **28th May 2020**",
+      "source_content_hash": "6ec7201a5490d583e897892caa26da9d846705762c99f001a81126584d4c9c81",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2020年5月28日**"
+      }
+    },
+    {
+      "segment_id": "262a1837",
+      "source_content": "- Google OAuth2 integration\n- 2 Factor authentication\n- Influx DB integration for API call statistics\n- The API can now set multiple traits in a single API request\n- Fixed an issue where webhooks could miss data in a certain scenarios\n- Mainly CSS design Tweaks",
+      "source_content_hash": "8338585b15ece03f5cf1a8df1a285f02aaf3feec91a83bb912647dcd24370cea",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增Google OAuth2集成\n- 双重认证功能\n- 支持InfluxDB统计API调用数据\n- 单次API请求可设置多个用户特征\n- 修复特定场景下Webhook可能丢失数据的问题\n- 主要进行CSS样式优化"
+      }
+    },
+    {
+      "segment_id": "9f33b63d",
+      "source_content": "## v2.0",
+      "source_content_hash": "749c73c4106a71cf088575bf68eab9656407a8dd63c71613ace6f17572b343a4",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v2.0"
+      }
+    },
+    {
+      "segment_id": "ceff655b",
+      "source_content": "Released **19th December 2019**",
+      "source_content_hash": "5d273e1991c2c9d67bd810e0a9b894e572c00a415e4621814855291f461f4005",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2019年12月19日**"
+      }
+    },
+    {
+      "segment_id": "a530c3b4",
+      "source_content": "- Removed Flagsmith homepage from Front End App\n- Added Webhooks",
+      "source_content_hash": "310e0d7f0c4226749aea0dc2676e892c3e8eecf3251b021941fd00c87ea314d4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 移除前端应用中的Flagsmith主页\n- 新增Webhooks功能"
+      }
+    },
+    {
+      "segment_id": "2f9a305c",
+      "source_content": "## v1.9",
+      "source_content_hash": "a57b4d6f4e21a7385aca7c8883322d9312ccf44f7f6325a29dbd01601bd7add7",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## v1.9"
+      }
+    },
+    {
+      "segment_id": "0b7b2b74",
+      "source_content": "Released **22nd September 2019**",
+      "source_content_hash": "452ecf0f1a420a42eb881526e4a4f44213e3865b67bed15c0e9631ef9d65d46a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "发布于 **2019年9月22日**"
+      }
+    },
+    {
+      "segment_id": "e1ac9a72",
+      "source_content": "- Added Segments\n- Added Auditing Logs\n- Better E2E testing",
+      "source_content_hash": "8b30fe99aea39689bf765d3c71ccddee930ab104ddc388fb16812b3097318551",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 新增用户分段功能\n- 添加审计日志\n- 优化端到端测试"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/platform/releases.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.955771+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "f686faa874abd0bb540ca7313644fdeb995767e5f90ef699fbd6387c7ed6d083"
+  }
+}

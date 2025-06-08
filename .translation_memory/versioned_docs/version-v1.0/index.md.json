@@ -1,0 +1,222 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/index.md",
+  "source_file_content_hash": "b4f09f54a8d39b3da38e4f6eec7a7d3bcf4cd2cc091a7c64f54e0b7f5cc94394",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nid: intro\nslug: /\ntitle: Manage feature flags across web, mobile and server side applications\nsidebar_position: 1\nsidebar_label: Overview\n---",
+      "source_content_hash": "cab47835891f9ebf46c47ec449c6e51a39048a80af8578fefbbf73013b59dcdf",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "# ![Flagsmith Documentation](/img/banner-logo-dark.png)",
+      "source_content_hash": "669671ece14c9a76e0fd9482da4178ea64d359e857fd78e92ed1d4a830966bc5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# ![Flagsmith 文档](/img/banner-logo-dark.png)"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "[Flagsmith](https://flagsmith.com/) lets you manage features across web, mobile and server side applications. Flagsmith\nis Open Source. Host yourself or let us take care of the hosting.",
+      "source_content_hash": "59ffb05d08bfbdc0c7aac0f74d36473602a10cc26c98ebb0f480c5d00e4de8bc",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "[Flagsmith](https://flagsmith.com/) 允许您跨网页、移动端和服务器端应用程序管理功能特性。Flagsmith 是开源的，您可以选择自主托管或由我们提供托管服务。"
+      }
+    },
+    {
+      "segment_id": "ad8fd492",
+      "source_content": "The application consist of 3 components:",
+      "source_content_hash": "9618b96e0bb924dcef5f8f97810f13923730cdc537f3be8dc513a438d685facd",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该应用包含三个核心组件："
+      }
+    },
+    {
+      "segment_id": "4ddf6ae7",
+      "source_content": "1. [Server-Side REST API](https://github.com/Flagsmith/flagsmith/tree/main/api).\n2. [Front End Administration Web Interface](https://github.com/Flagsmith/flagsmith/tree/main/frontend).\n3. [Client Libraries](/#client-libraries).",
+      "source_content_hash": "73a8807afc51d5fb5624d535881ba1845632216469e521df389c98aec3d1911f",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. [服务端 REST API](https://github.com/Flagsmith/flagsmith/tree/main/api)\n2. [前端管理界面](https://github.com/Flagsmith/flagsmith/tree/main/frontend)\n3. [客户端库](/#client-libraries)"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "To get up and running, you can either use [https://flagsmith.com/](https://flagsmith.com/) for 1 and 2 above, or you can\nself host the API and Front End. Once you have these components up and running, you can add the client libraries to your\napps and start managing your features remotely.",
+      "source_content_hash": "96f37765f685f7ce27d6a5f69ed4117dec3ece05f0a5224f380f8182c15b3157",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "快速开始的方式有两种：直接使用 [https://flagsmith.com/](https://flagsmith.com/) 提供的第1和第2项服务，或者自行托管API与前端。完成这些组件的部署后，即可在应用中集成客户端库，开始远程管理功能特性。"
+      }
+    },
+    {
+      "segment_id": "95b38f97",
+      "source_content": "## Open Source vs SaaS vs Enterprise",
+      "source_content_hash": "250332538191095454c27852e83cdd2aa56f946401c6cc41e91ab9ad3e22278e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 开源版 vs SaaS版 vs 企业版"
+      }
+    },
+    {
+      "segment_id": "ccc88b4c",
+      "source_content": "You are free to run the Open Source version of Flagsmith however you see fit! There are some differences between the\nOpen Source, SaaS hosted and Enterprise plans:",
+      "source_content_hash": "f3db34aeaa4cdfb7b8a9d34d40858290bbc4f4495de2cd7c9638a633c3d63d90",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以自由使用开源版Flagsmith！不同版本之间存在以下差异："
+      }
+    },
+    {
+      "segment_id": "77bf3ec9",
+      "source_content": "- The Open Source version has **no** API request or Identity limits - you can run as many API instances in a cluster as\n  you wish\n- The Open Source version has **no** Dashboard User limits - you can have as many team members as you wish\n- The SaaS and Enterprise versions have [Change Requests and Flag Scheduling](advanced-use/change-requests.md)\n- The SaaS and Enterprise versions have [Role-Based Access Controls](advanced-use/permissions.md)\n- The SaaS and Enterprise versions have additional [Authentication Providers](enterprise-edition)",
+      "source_content_hash": "1f5c1c3eca8a64d9a2618bfe58eb7a81ac420e52f9bb7d4de6ad73bb9268d5e2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 开源版**无**API请求或身份标识限制——可随意扩展API实例集群\n- 开源版**无**仪表盘用户数量限制——团队成员数量不受限\n- SaaS版和企业版支持[变更请求与功能调度](advanced-use/change-requests.md)\n- SaaS版和企业版具备[基于角色的访问控制](advanced-use/permissions.md)\n- SaaS版和企业版提供更多[认证提供商](enterprise-edition)选项"
+      }
+    },
+    {
+      "segment_id": "109ace10",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装指南"
+      }
+    },
+    {
+      "segment_id": "214ab298",
+      "source_content": ":::tip\n\nWe also have a paid-for [Enterprise Edition](enterprise-edition.md) of the platform with a number of additional\nfeatures. Please get in touch if you want to learn more.\n\n:::",
+      "source_content_hash": "e613b5faec4a72031e46f85d15a37953278daf14f0ba36ba8f8c6cebf50e61cf",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n我们还提供功能更强大的付费[企业版](enterprise-edition.md)。如需了解更多信息，欢迎随时联系我们。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "aa1e7006",
+      "source_content": "More information can be found on the [Self Hosted Page](/deployment/overview).",
+      "source_content_hash": "e7383050e8d330aa47b44542c59961a412294bccd7858dc80ab5ed6b9a1c3bf2",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更多详情请参阅[自主托管页面](/deployment/overview)。"
+      }
+    },
+    {
+      "segment_id": "f44c1398",
+      "source_content": "### Server Side API",
+      "source_content_hash": "14294f12ba27a2d3fdf9c109f287446751a3c13817b0271094aa458df90cf37b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 服务端API"
+      }
+    },
+    {
+      "segment_id": "29528c8d",
+      "source_content": "The source code and installation instructions can be found at\n[the GitHub project](https://github.com/flagsmith/flagsmith). The API is written in Python and is based on Django and\nthe Django Rest Framework.",
+      "source_content_hash": "5f2d9bf17a443fa2df4e4944bd13362f01600e07aeeba9c5f34326840a2a2274",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "源代码与安装指南详见[GitHub项目](https://github.com/flagsmith/flagsmith)。该API采用Python编写，基于Django及Django Rest框架构建。"
+      }
+    },
+    {
+      "segment_id": "c6cc90a0",
+      "source_content": "### Front End Website",
+      "source_content_hash": "8dc695fb977a7241ce4e19a706acbea3128673232bd18214b8b7e8e63038b23e",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 前端网站"
+      }
+    },
+    {
+      "segment_id": "d3649a1e",
+      "source_content": "The source code and installation instructions can be found at\n[the GitHub project](https://github.com/flagsmith/flagsmith-frontend). The Front End Website is written in\nReact/Javascript and requires NodeJS.",
+      "source_content_hash": "113d16d744d79faa36260dcebe5e8d7d67c5bb1c5afe319ef63e1d175bb51f1d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "源代码与安装指南详见[GitHub项目](https://github.com/flagsmith/flagsmith-frontend)。前端网站使用React/JavaScript开发，需搭配NodeJS环境。"
+      }
+    },
+    {
+      "segment_id": "7283cdac",
+      "source_content": "## Client Libraries",
+      "source_content_hash": "e32767b5a9f1d498f2021faffade68bfd136865a4332a2d42a96f523bd31046f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 客户端库"
+      }
+    },
+    {
+      "segment_id": "1131ef75",
+      "source_content": "Once you are setup with the front and back end, you can integrate our client libraries within your apps.",
+      "source_content_hash": "920161d6da2b3c0e11a7023c8d61e29140ca156d23da44e7d4b29a3894e607c4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成前后端部署后，即可在应用中集成我们的客户端库。"
+      }
+    },
+    {
+      "segment_id": "f1fa4157",
+      "source_content": "| Client Side SDKs                       | Server Side SDKs               |\n| -------------------------------------- | ------------------------------ |\n| [Javascript](/clients/javascript)      | [Node.js](/v1.0/clients/node)  |\n| [Android/Kotlin](/clients/android)     | [Java](/v1.0/clients/java)     |\n| [Flutter](/clients/flutter)            | [.Net](/v1.0/clients/dotnet)   |\n| [iOS/Swift](/clients/ios)              | [Python](/v1.0/clients/python) |\n| [React & React Native](/clients/react) | [Ruby](/v1.0/clients/ruby)     |\n| [Next.js and SSR](/clients/next-ssr)   | [Rust](/v1.0/clients/rust)     |\n|                                        | [Go](/v1.0/clients/go)         |\n|                                        | [Elixir](/v1.0/clients/elixir) |",
+      "source_content_hash": "114b0892d596cc0e53d2a60c2a8771a55ceb4332bb6af1e53ce1076bbf912582",
+      "node_type": "table",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f1fa4157"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "## What Next",
+      "source_content_hash": "95a31e99c8df562c81d9271dddcee79b9c72ebb2fd86194a6a809e66b7add738",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 后续步骤"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Check out our [Quick Start Guide](quickstart.md) to get a high level overview of how to implement feature flags in your\napplication.",
+      "source_content_hash": "21e96d78b8e6d0ff9c95e68f738dfbdc7902f6724900bbaf1bdc6e97e279a50c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "查看我们的[快速入门指南](quickstart.md)，了解如何在应用中实施功能特性的高层级概览。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/index.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.949888+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "b4f09f54a8d39b3da38e4f6eec7a7d3bcf4cd2cc091a7c64f54e0b7f5cc94394"
+  }
+}

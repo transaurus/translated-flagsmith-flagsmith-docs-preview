@@ -1,0 +1,342 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/clients/client-side/android.md",
+  "source_file_content_hash": "aaea55eb32729be48b8a4e666331d67febc9a236152b634ccb86be4d6df1ee45",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Android/Kotlin SDK\nsidebar_label: Android / Kotlin\ndescription: Manage your Feature Flags and Remote Config in your Android applications.\nslug: /clients/android\n---",
+      "source_content_hash": "8cade26cbf1ba75537b754c4328559b468e2526bebfee86d0453bbb06e241939",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "This SDK can be used for Android applications written in Kotlin. The source code for the client is available on\n[Github](https://github.com/Flagsmith/flagsmith-kotlin-android-client/).",
+      "source_content_hash": "b0ce594e575e10ab3975ecf9f6400ab458150714b4d4fbbfbd355be206e363f3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该SDK适用于使用Kotlin编写的Android应用程序。客户端源代码可在[Github](https://github.com/Flagsmith/flagsmith-kotlin-android-client/)上获取。"
+      }
+    },
+    {
+      "segment_id": "8a5f6a7b",
+      "source_content": "## Installation",
+      "source_content_hash": "a15d12503bf00f654df068bd9e5af6259db1703ac04a61365b991ce52557e5ea",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 安装指南"
+      }
+    },
+    {
+      "segment_id": "ba4f48ff",
+      "source_content": "### Gradle - App",
+      "source_content_hash": "ea1a6bd6576898d3cf7ee6a86ac84939554e1e01f70e5263b6ecbe8aac7e4a74",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Gradle - 应用模块"
+      }
+    },
+    {
+      "segment_id": "cf898102",
+      "source_content": "In your project path `app/build.gradle` add a new dependence",
+      "source_content_hash": "f3b8d5f2945bb6edb233b5246ac8fff5abdaa7517e497be1e109222018cc228b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在项目路径`app/build.gradle`中添加新依赖项"
+      }
+    },
+    {
+      "segment_id": "93be3c14",
+      "source_content": "```groovy\n//flagsmith\nimplementation 'com.github.Flagsmith:flagsmith-kotlin-android-client:1.0.1'\n```",
+      "source_content_hash": "61f81d17122bd40e0e79cb52ee0d8922b6d3e0bb8082979cec1ecc20ceb5ff8e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_93be3c14"
+      }
+    },
+    {
+      "segment_id": "2df4f75f",
+      "source_content": "You should be able to find the latest version in the\n[releases section](https://github.com/Flagsmith/flagsmith-kotlin-android-client/releases) of the GitHub repository.",
+      "source_content_hash": "2184af02527f0f52e4d0d4b992a06a6a1067d489291874cbe6e39cfb7058bc1b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以在GitHub仓库的[发布页面](https://github.com/Flagsmith/flagsmith-kotlin-android-client/releases)找到最新版本。"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "### Gradle - Project",
+      "source_content_hash": "94f21e7bb0a3f9fa19d4b184e5e133d1448ac2b95ad97eccbbd930ba0c6f6382",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### Gradle - 项目配置"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "In the new Gradle version 7+ update your `settings.gradle` file to include JitPack if you haven't already",
+      "source_content_hash": "4a55e3bd80ce0b49af770b953f60c916e3d49fa9d8ddb09e8112a3c50c11b83c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在Gradle 7+版本中，更新`settings.gradle`文件以包含JitPack仓库（如尚未配置）"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```groovy\nrepositories {\n    google()\n    mavenCentral()\n\n    maven { url \"https://jitpack.io\" }\n}\n```",
+      "source_content_hash": "9c8641f7acf89b2bcc6dc8b7b97352798d43ca4fbce738646a96dda045b05eaa",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your Client-side Environment Key in the Environment\nsettings page.",
+      "source_content_hash": "e29bab26bff233a506a8f5a22b3a0332bd313224a107f7601465a5bcb38c5f51",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK需针对[https://flagsmith.com](https://flagsmith.com)上项目的单个环境进行初始化，例如开发或生产环境。您可以在环境设置页面找到客户端环境密钥。"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "![Image](/img/api-key.png)",
+      "source_content_hash": "2f8c9c0b83b22f457d85301252648e4ee57be438573461d3e6a2d30e2b49a330",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## Initialization",
+      "source_content_hash": "4b88c911f3d13273b2a6c403fa214dc7c6cca60693293bcb6540abab97837f9b",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 初始化配置"
+      }
+    },
+    {
+      "segment_id": "c674e260",
+      "source_content": "### Within your Activity inside `onCreate()`",
+      "source_content_hash": "a39690358607a24e900c9be4758f6ae7cce7c2877b09a10aa925d4c2b87e13e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 在Activity的`onCreate()`方法中初始化"
+      }
+    },
+    {
+      "segment_id": "95318d95",
+      "source_content": "```kotlin\nlateinit var flagsmith : Flagsmith\n\noverride fun onCreate(savedInstanceState: Bundle?) {\n    initFlagsmith();\n}\n\nprivate fun initFlagsmith() {\n    flagsmith = Flagsmith(environmentKey = FlagsmithConfigHelper.environmentDevelopmentKey, context = context)\n}\n```",
+      "source_content_hash": "7d4f6aa6299ce79c9f875087a266d68b8b42a82fd0d71f902ea72212bd4de020",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_95318d95"
+      }
+    },
+    {
+      "segment_id": "c431704b",
+      "source_content": "## Custom configuration",
+      "source_content_hash": "0943a62dcd57f19f07fb4412eca38787d33006d0345a0f62dc1ab0c13c53bff9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 自定义配置"
+      }
+    },
+    {
+      "segment_id": "79ad944d",
+      "source_content": "The Flagsmith SDK has various parameters for initialisation. Most of these are optional, and allow you to configure the\nFlagmsith SDK to your specific needs:",
+      "source_content_hash": "bebf2b2a94f326def03992a79111b843d91a803b3402293e0eaad89359261dc4",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith SDK提供多种初始化参数，多数为可选配置，可根据需求灵活调整："
+      }
+    },
+    {
+      "segment_id": "180e9ce9",
+      "source_content": "- `environmentKey` Take this API key from the Flagsmith dashboard and pass here\n- `baseUrl` By default we'll connect to the Flagsmith backend, but if you self-host you can configure here\n- `context` The current Context is required to use the Flagsmith Analytics functionality\n- `enableAnalytics` Enable analytics - default true. Disable this if you'd like to avoid the use of Context\n- `analyticsFlushPeriod` The period in seconds between attempts by the Flagsmith SDK to push analytic events to the\n  server",
+      "source_content_hash": "5a5489e045b8b5a57d5c3cf09eb0e3337f57ad2bf259709803213a2ac8820bf4",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- `environmentKey` 从Flagsmith仪表板获取API密钥并在此传入\n- `baseUrl` 默认连接Flagsmith官方后端，自托管用户可在此配置私有API地址  \n- `context` 使用Flagsmith分析功能时必须传入当前上下文\n- `enableAnalytics` 启用分析功能（默认true），如需禁用上下文追踪可关闭此选项\n- `analyticsFlushPeriod` SDK向服务器推送分析事件的间隔时间（秒）"
+      }
+    },
+    {
+      "segment_id": "daed5acb",
+      "source_content": "## Flags",
+      "source_content_hash": "642ccf3cbeb899a826e48071e1c2bb1409d14e44d326342c495e072759a07efb",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 功能开关管理"
+      }
+    },
+    {
+      "segment_id": "6cc549f2",
+      "source_content": "Now you are all set to retrieve feature flags from your project. For example to list and print all flags:",
+      "source_content_hash": "15af5b0a8fe97583d1dfd0b5257cfdcca847ce8210c82405cab8c3bfc7d04e15",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完成配置后即可获取项目功能开关。例如列出并打印所有开关："
+      }
+    },
+    {
+      "segment_id": "8a9e710a",
+      "source_content": "```kotlin\nflagsmith.getFeatureFlags { result ->\n    result.fold(\n        onSuccess = { flagList ->\n            Log.i(\"Flagsmith\", \"Current flags:\")\n            flagList.forEach { Log.i(\"Flagsmith\", \"- ${it.feature.name} - enabled: ${it.enabled} value: ${it.featureStateValue ?: \"not set\"}\") }\n        },\n        onFailure = { err ->\n            Log.e(\"Flagsmith\", \"Error getting feature flags\", err)\n        })\n}\n```",
+      "source_content_hash": "82063cb0bc91e95d699265108802e65b95e804c12ccacbd854481546ef0c18ca",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8a9e710a"
+      }
+    },
+    {
+      "segment_id": "ec8ed2a1",
+      "source_content": "### Get Flag Object by `featureId`",
+      "source_content_hash": "cfbe541d7f054167073f911eaa882bc222a7dc69aaaca41ccc09938c6446823a",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 通过`featureId`获取开关对象"
+      }
+    },
+    {
+      "segment_id": "51867d16",
+      "source_content": "To retrieve a feature flag boolean value by its name:",
+      "source_content_hash": "de5db25f3321c4375f742a32b608b0e275c9544eaaa1e45896ac6552d912aa8d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据功能名称获取布尔型开关值："
+      }
+    },
+    {
+      "segment_id": "59f28e14",
+      "source_content": "```kotlin\nflagsmith.hasFeatureFlag(forFeatureId = \"test_feature1\") { result ->\n    val isEnabled = result.getOrDefault(true)\n    Log.i(\"Flagsmith\", \"test_feature1 is enabled? $isEnabled\")\n}\n```",
+      "source_content_hash": "291db1adf67f592bd53595dddd15623ce0b742d9cfd581070a828fe23d8a18db",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_59f28e14"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "### Create a Trait for a user identity",
+      "source_content_hash": "666d44bf92d5ab978da3066275e68f14db94c444d27ff81e3fdf432cd395e863",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 为用户身份创建特征值"
+      }
+    },
+    {
+      "segment_id": "1cf51900",
+      "source_content": "```kotlin\nflagsmith.setTrait(Trait(key = \"set-from-client\", value = \"12345\"), identity = \"test@test.com\") { result ->\n    result.fold(\n        onSuccess = { _ ->\n            Log.i(\"Flagsmith\", \"Successfully set trait\")\n\n        },\n        onFailure = { err ->\n            Log.e(\"Flagsmith\", \"Error setting trait\", err)\n        })\n}\n```",
+      "source_content_hash": "2edccbc28a3bccc9361d246825a912a60fcc1aeab8f06cb101f4dc4520ed2e02",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_1cf51900"
+      }
+    },
+    {
+      "segment_id": "48155948",
+      "source_content": "### Get all Traits",
+      "source_content_hash": "942e00adc2d58a9ea4d95393094e4a73d3420a3742a1f1cc4b51cd984a300ebd",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取所有特征"
+      }
+    },
+    {
+      "segment_id": "1958bc43",
+      "source_content": "To retrieve a trait for a particular identity as explained here\n[Traits](../../basic-features/managing-identities.md#identity-traits)",
+      "source_content_hash": "cc898695d4e5383902ebd535ecd566850cd77611f2deb7a91afe7dbb91650603",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据特定身份获取特征值，详见[特征管理文档](../../basic-features/managing-identities.md#identity-traits)"
+      }
+    },
+    {
+      "segment_id": "b27056c4",
+      "source_content": "```kotlin\nflagsmith.getTraits(identity = \"test@test.com\") { result ->\n    result.fold(\n        onSuccess = { traits ->\n            traits.forEach {\n                Log.i(\"Flagsmith\", \"Trait - ${it.key} : ${it.value}\")\n            }\n        },\n        onFailure = { err ->\n            Log.e(\"Flagsmith\", \"Error setting trait\", err)\n        })\n}\n```",
+      "source_content_hash": "b1bbc6304598f3e812e6dfa27a60323f56e045988c7e810cacef4ad4dd1e6a32",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b27056c4"
+      }
+    },
+    {
+      "segment_id": "c83259bb",
+      "source_content": "## Override the default base URL",
+      "source_content_hash": "095c2b2fab43265c1a198c0aa44e7d58e796aaa7a1162d81d14343c9269674a9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认API地址"
+      }
+    },
+    {
+      "segment_id": "14bc6b75",
+      "source_content": "If you'd like to use your own API URL you can override this like so during initialization:",
+      "source_content_hash": "b6619c149aa40b8a5ff35906b315a36b78216211db79011eb55ab6abe14be8d0",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "初始化时可通过以下方式自定义API基础URL："
+      }
+    },
+    {
+      "segment_id": "9ed0f908",
+      "source_content": "```kotlin\n        flagsmith = Flagsmith(\n            environmentKey = Helper.environmentDevelopmentKey,\n            context = context,\n            baseUrl = \"https://hostedflagsmith.company.com/\")\n```",
+      "source_content_hash": "5765ffdaa4328760b1c4ecad117fec61b1f4eba113a48f16b14560e121948629",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_9ed0f908"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/clients/client-side/android.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.951574+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "aaea55eb32729be48b8a4e666331d67febc9a236152b634ccb86be4d6df1ee45"
+  }
+}

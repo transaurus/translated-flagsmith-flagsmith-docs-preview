@@ -1,0 +1,282 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/basic-features/overview.md",
+  "source_file_content_hash": "504a3930b007ef22b0674f01d6e599a29cb82d6e5ec0a9df721cc08a828f2359",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Feature Flags - An Overview\nsidebar_label: Overview\nsidebar_position: 1\n---",
+      "source_content_hash": "339c378cf876acef342a22bf5f28bffdc9b14d574bd759045270cefc2d5d90d5",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "6ef78e84",
+      "source_content": "Feature Flags are a development methodology that allow you to ship code and features before they are finished. This\ngreatly benefits Continuous Integration and Continuous Deployment (CI/CD). The typical workflow for this is as follows.",
+      "source_content_hash": "952d989a4809d678d20a029f026b76f3f6aa95fc93a5ddad5b954723f19e02ef",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能标志（Feature Flags）是一种开发方法论，允许您在功能尚未完成时就部署代码。这为持续集成与持续部署（CI/CD）带来显著优势。典型工作流程如下："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "1. You are about to start work on a new feature. Lets imaging you are going to implement a sharing button with your\n   application.\n2. Create a new Feature Flag in Flagsmith, calling it \"sharing_button\". Set it to enabled on your development\n   environment, and disabled on your production environment.\n3. Start working on the feature. Whenever you write code that shows the button within the UI, wrap it in a conditional\n   statement, testing against the value of the flag \"sharing button\". Only show the button if the flag is set to True.\n4. Because your button only shows when the \"sharing_button\" flag is set to True, you are safe to commit your code as you\n   work on the feature. Your code will be live within the production platform, but the functionality is hidden behind\n   the flag.\n5. Once you are happy with your Feature, you can enable the \"sharing_button\" for other members of your team and with\n   Beta testers.\n6. If everything is working as intended, simply flip the \"sharing_button\" flag to True for everyone in your production\n   environment, and your feature is rolled out.",
+      "source_content_hash": "8c544beabae1b464ec55a3035d081962df6ff514de0516aa2f047067199beec2",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 当您准备开发新功能时，假设需要为应用实现分享按钮\n2. 在Flagsmith中创建名为\"sharing_button\"的功能标志，在开发环境中启用，在生产环境中禁用\n3. 开发功能时，所有涉及显示该按钮的UI代码都需包裹在条件语句中，仅当\"sharing_button\"标志为True时显示\n4. 由于按钮显示受标志控制，您可以安全地持续提交代码。功能代码会存在于生产环境，但实际功能被标志隐藏\n5. 功能开发完成后，可逐步为团队成员和Beta测试者启用\"sharing_button\"标志\n6. 确认功能运行正常后，只需在生产环境将该标志全局设为True即可完成功能发布"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "If you want to learn more about Feature Flags,\n[Flickr wrote the seminal blog post on it in 2009](https://code.flickr.net/2009/12/02/flipping-out/)",
+      "source_content_hash": "c7ca16f612857bb624386a4eb9b7e22c900e30c5b351b0511cdf66327e0cdb5c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若想深入了解功能标志技术，[Flickr在2009年发表的博客文章](https://code.flickr.net/2009/12/02/flipping-out/)是该领域的开创性文献"
+      }
+    },
+    {
+      "segment_id": "fa430ad4",
+      "source_content": "## Flagsmith Model",
+      "source_content_hash": "b3353efa3d6806a515c8031b8367e7287c31fc9d7f58790081e407e11d5598ac",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## Flagsmith数据模型"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Here's a high level overview of the data model for Flagsmith. Fear not - it's not as complex as it looks!",
+      "source_content_hash": "cac15463f2c11e593f93c7b6718b0f1dccd3fc053480facfc8716cc8a73307e3",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "以下是Flagsmith数据模型的高层概览，实际结构并不像看起来那么复杂："
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "![Image](/img/flagsmith-model.svg)",
+      "source_content_hash": "50aa91158a3e81b9f84dbfa786328493c35955cb63baba58b6e68e8b507c605f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![图片](/img/flagsmith-model.svg)"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "OK let's break this down.",
+      "source_content_hash": "f3a0d48ac79f6e914d8b627523bdfd3e723b7560fb5f08fa15f492ec98ae314e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在让我们分解说明："
+      }
+    },
+    {
+      "segment_id": "f422383e",
+      "source_content": "### Organisations",
+      "source_content_hash": "8981df0b9638b4f359709410d945f05984e63ab47654668b2dab6ffee23a146d",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 组织"
+      }
+    },
+    {
+      "segment_id": "97ae4a01",
+      "source_content": "Organisations are a way for you and other team members to manage projects and their features. Users can be members of\nmultiple organisations.",
+      "source_content_hash": "f31c36bdc1db34099eb4fbfce3b748aec2cdc30e96e34ff652190914beff6892",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "组织是您与团队成员管理项目及其功能的单元。单个用户可以属于多个组织。"
+      }
+    },
+    {
+      "segment_id": "782c902a",
+      "source_content": "### Projects",
+      "source_content_hash": "4acb4cd6f775b286f4f4a73438d42383b652e5dcee308e4c07fbef8a8e0e2319",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 项目"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "Projects contain one or more Environments that share a single set of Features across all of the Environments within the\nProject. Organisations can have any number of Projects.",
+      "source_content_hash": "01825ad285c30fcfce374fb8bcdb9349ab56fc4ddde3697c6769c82c0d879c45",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "项目包含一个或多个环境，这些环境共享同一组功能定义。单个组织可以拥有任意数量的项目。"
+      }
+    },
+    {
+      "segment_id": "35a77014",
+      "source_content": "### Environments",
+      "source_content_hash": "a4b4b68ab46b0cdc7ab7ad2aaa18d59ffb85c821778c1e6a3bf77dabc993ba50",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 环境"
+      }
+    },
+    {
+      "segment_id": "13d9cd70",
+      "source_content": "Environments are a way to separate the configuration of your features. For example, your project's Development and\nStaging environments might have a feature configured as on while it is turned off in your Production environment. A\nproject can have any number of environments.",
+      "source_content_hash": "0a8629691309d2e3d0abb1f6da80ebc0802793295ab2a544c5f994901abdccca",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "环境用于隔离功能配置。例如，开发环境和预发布环境可以启用某个功能，而生产环境保持关闭状态。单个项目可配置多个环境。"
+      }
+    },
+    {
+      "segment_id": "11c76fcc",
+      "source_content": "### Features",
+      "source_content_hash": "55aec44787473df9add42bcb49e7a9d80129cb7de7533c5bfbaa8c673fbeec14",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 功能"
+      }
+    },
+    {
+      "segment_id": "98d26038",
+      "source_content": "Features are shared between all the Environments within the Project, but their values/states can be modified between\nEnvironments.",
+      "source_content_hash": "91d29c0aa2517f705fc92194ce8683aa434833406860ff974ba00c0bc253cc07",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "功能在项目内所有环境间共享，但每个环境可以独立修改其开关状态和配置值。"
+      }
+    },
+    {
+      "segment_id": "2c1b51df",
+      "source_content": "### Identities",
+      "source_content_hash": "20e8490f4a30fff00ecc6bf3e472e26a68ce998bf0e8416258862aa1332c4752",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 身份"
+      }
+    },
+    {
+      "segment_id": "e536ea0d",
+      "source_content": "Identities are a particular user registration for one of your Project's environments. Registering identities within the\nclient application allows you to manage features for individual users. Identity features can be overridden from your\nenvironment defaults. For example, joe@yourwebsite.com would be a different identity in your development environment to\nthe one in production, and they can have different features enabled for each environment.",
+      "source_content_hash": "c26f47352bfe2454de476441d907baef23f401a61cc290cd25fc56360b9b3b6e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "身份代表用户在特定环境中的注册实体。在客户端应用中注册身份后，您可以为特定用户管理功能配置。身份级别的功能设置会覆盖环境默认值。例如joe@yourwebsite.com在开发环境和生产环境中是不同身份，可以分别配置不同功能。"
+      }
+    },
+    {
+      "segment_id": "8b2a52b1",
+      "source_content": "For more info see [Identities](/basic-features/managing-identities).",
+      "source_content_hash": "e15bc18bdf004e96707553d537eac04c456cf349177e98065cb065f048c360a8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "详见[身份管理](/basic-features/managing-identities)"
+      }
+    },
+    {
+      "segment_id": "126950d7",
+      "source_content": "### Traits",
+      "source_content_hash": "03dce4ea01dd45ee2fbbd7f0855bf07479137e3ce244251b1afaba267e9bd769",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 特征"
+      }
+    },
+    {
+      "segment_id": "0bb95128",
+      "source_content": "You can store any number of Traits against an Identity. Traits are simple name:value pairs that can store any type of\ndata. Some examples of traits that you might store against an Identity might be:",
+      "source_content_hash": "e20cf72eff862a5a93dc6dca452309eb54473e42f26c5387fcaa955413ac64e5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以为身份存储任意数量的特征数据。特征是简单的键值对，可保存各类信息，例如："
+      }
+    },
+    {
+      "segment_id": "af7d8a35",
+      "source_content": "- The number of times the user has logged in.\n- If they have accepted the application terms and conditions.\n- Their preference for application theme.\n- If they have performed certain actions within your application.",
+      "source_content_hash": "c91838a7f4b1cab04f3f403da202e4ab47e358db8d8ddf8957a1b4974c5f0f5e",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 用户登录次数\n- 是否接受应用条款\n- 偏好的应用主题\n- 在应用内执行过的特定操作"
+      }
+    },
+    {
+      "segment_id": "f01228d3",
+      "source_content": "For more info see [Traits](/basic-features/managing-identities.md#identity-traits).",
+      "source_content_hash": "465c3691841ae71b9647812254a8bf91d160f9f14964ae91b251109c32e5a3d7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "详见[特征管理](/basic-features/managing-identities.md#identity-traits)"
+      }
+    },
+    {
+      "segment_id": "93028a4e",
+      "source_content": "### Segments",
+      "source_content_hash": "b2a4ee9fc7a87f1f34be1aafb2c1cda0b384eb92f7ed77a44b4d38b26ade5bc5",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 用户分群"
+      }
+    },
+    {
+      "segment_id": "e8e162a9",
+      "source_content": "Segments are a way to define a group of users by traits such as number of times logged in, device, location or any\nnumber of custom defined traits.",
+      "source_content_hash": "64de6559fbc08f9e4a5f50ab4f044d3a493d79d3e580f63dfaf0d65470df8af5",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "分群功能允许根据登录次数、设备类型、地理位置或任何自定义特征来定义用户群体。"
+      }
+    },
+    {
+      "segment_id": "6270d577",
+      "source_content": "Similarly to individual users, you will be able to override environment defaults for features. For example showing\ncertain features for a \"power user\" segment.",
+      "source_content_hash": "04e9814b9c94df127f038f2dd1298795faaeb0875f017f55613f0195bf66623b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "与针对单个用户类似，您也能够为特定用户群体覆盖环境默认的功能配置。例如，为\"高级用户\"群体展示某些特定功能。"
+      }
+    },
+    {
+      "segment_id": "fbc2db85",
+      "source_content": "For more info see [Segments](/basic-features/managing-segments.md).",
+      "source_content_hash": "2440e95359573739616c89d52d68fdb71ec154a8b68c9bf918e6385e2521d8ad",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更多信息请参阅[用户群体](/basic-features/managing-segments.md)章节。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/basic-features/overview.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.925027+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "504a3930b007ef22b0674f01d6e599a29cb82d6e5ec0a9df721cc08a828f2359"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/clients/server-side/rust.md",
+  "source_file_content_hash": "ee1829305f8dc74dc2d02d56bb489280ab140504482bd1880bff24bfc0dc3db9",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Flagsmith Rust SDK\nsidebar_label: Rust\ndescription: Manage your Feature Flags and Remote Config in your Rust applications.\nslug: /clients/rust\n---",
+      "source_content_hash": "31875b9705752045a191a637048d07ddce2f8b7d5b423e094b0f52bd3a2a1833",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "The SDK client for Rust [https://flagsmith.com/](https://www.flagsmith.com/). Flagsmith allows you to manage feature\nflags and remote config across multiple projects, environments and organisations.",
+      "source_content_hash": "2fc5914bb88ace51e9497a22cb73d698b2860c3315485e045099072775e3d792",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "适用于 Rust 的 SDK 客户端 [https://flagsmith.com/](https://www.flagsmith.com/)。Flagsmith 允许您跨多个项目、环境和组织管理功能开关与远程配置。"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "The source code for the client is available on [Github](https://github.com/flagsmith/flagsmith-rust-client).",
+      "source_content_hash": "372c2b5217b909ca8893e6e1bd9446e7bb91620cc3040884dbcf671710d01e3b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端源代码托管于 [Github](https://github.com/flagsmith/flagsmith-rust-client)。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "The client SDK is published to [Crates](https://crates.io/crates/flagsmith)",
+      "source_content_hash": "121ef1a1d8f8869e095fe9ddc3858bf9ce9e028f8ffb7495b369b9cf0e32c139",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "该客户端 SDK 已发布至 [Crates](https://crates.io/crates/flagsmith) 平台"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## Basic Usage",
+      "source_content_hash": "2e1f823b8f972f8b6b6da0c66804fcea6cc6439142480a758b86f9fa649954e9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 基础用法"
+      }
+    },
+    {
+      "segment_id": "42ad8e83",
+      "source_content": "The SDK is initialised against a single environment within a project on [https://flagsmith.com](https://flagsmith.com),\nfor example the Development or Production environment. You can find your environment key in the Environment settings\npage.",
+      "source_content_hash": "3d3a90877fe53183656cbef7eff7620ba39509a51427ea7aaab12729a0698d00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK 需针对 [https://flagsmith.com](https://flagsmith.com) 上某个项目内的特定环境（例如开发环境或生产环境）进行初始化。您可以在环境设置页面找到对应的环境密钥。"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "![API Key](/img/api-key.png)",
+      "source_content_hash": "63fc462a78f011a99f44055dd4364789086c3b250ee6096e21f73f70b29dbb7b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![API密钥](/img/api-key.png)"
+      }
+    },
+    {
+      "segment_id": "40f9552a",
+      "source_content": "## Usage",
+      "source_content_hash": "63bfd61a0561b255a2caa0a2e3add091ca7e327f2fa06a407cbb2ff341b858d8",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 使用方法"
+      }
+    },
+    {
+      "segment_id": "ed7dde9c",
+      "source_content": "### Retrieving feature flags for your project",
+      "source_content_hash": "a6fd9b26261438ea9973686021b7e585f0016cfb451a560936b61ca53e1a32a0",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "### 获取项目的功能开关"
+      }
+    },
+    {
+      "segment_id": "a76548f8",
+      "source_content": "In your application initialise the Flagsmith client with your API key",
+      "source_content_hash": "0342395d0e2c9f42362887b967968956107f5412adc1b2b1ddd24fda31096785",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "在应用程序中通过API密钥初始化Flagsmith客户端"
+      }
+    },
+    {
+      "segment_id": "0c911872",
+      "source_content": "```rust\nlet flagsmith = flagsmith::Client::new(\"<Your API Key>\");\n```",
+      "source_content_hash": "0a15dbe9bae97ba35db21da3d41b1187fac0d9e93a971e9fa5265c3e4afa67b2",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_0c911872"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "To check if a feature flag exists and is enabled:",
+      "source_content_hash": "2d71f5e6484a76e4b0dca71d1f9380e67621196b6aa12ab0561d102f844c2571",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "检查功能开关是否存在并已启用："
+      }
+    },
+    {
+      "segment_id": "ef6eebef",
+      "source_content": "```rust\nlet flagsmith = flagsmith::Client::new(\"<Your API Key>\");\nif flagsmith.feature_enabled(\"cart_abundant_notification_ab_test_enabled\")? {\n    println!(\"Feature enabled\");\n}\n```",
+      "source_content_hash": "c3fad1fec22c3ac4793457662589237bda890a0912f33a67d813a682f26a6166",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ef6eebef"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "To get the configuration value for feature flag value:",
+      "source_content_hash": "371d5e66e05051270aef801e7a9ba2b1b5f453dcd7a459a845aeaf54ca8be636",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "获取功能开关的配置值："
+      }
+    },
+    {
+      "segment_id": "45022e4f",
+      "source_content": "```rust\nuse flagsmith::{Client,Value};\n\nlet flagsmith = Client::new(\"<Your API Key>\");\n\nif let Some(Value::String(s)) = bt.get_value(\"cart_abundant_notification_ab_test\")? {\n    println!(\"{}\", s);\n}\n```",
+      "source_content_hash": "77b8d8a6a4c9b4ee691a4040c52e5be4e699314ad104ca47a8d77b7acdf1febb",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_45022e4f"
+      }
+    },
+    {
+      "segment_id": "b36c6338",
+      "source_content": "More examples can be found in the\n[Tests](https://github.com/Flagsmith/flagsmith-rust-client/blob/main/tests/integration_test.rs)",
+      "source_content_hash": "60358c6f5eb8a86814b34732c5074d665ae94dead77ffa42b6d03cf89bd89700",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "更多示例可参考[测试代码](https://github.com/Flagsmith/flagsmith-rust-client/blob/main/tests/integration_test.rs)"
+      }
+    },
+    {
+      "segment_id": "e50bebbf",
+      "source_content": "## Override default configuration",
+      "source_content_hash": "242d7e795c949122455c15bebd1a6da0d35e44cae8b607acd146f8b795b3b897",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 覆盖默认配置"
+      }
+    },
+    {
+      "segment_id": "23dfb152",
+      "source_content": "By default, client is using default configuration. You can override configuration as follows:",
+      "source_content_hash": "3eda83b532790dd5560ee76491b9ffe63ea1f477ba46587b72844c618aadd1e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端默认使用预设配置，您可通过以下方式覆盖配置："
+      }
+    },
+    {
+      "segment_id": "c05ad55e",
+      "source_content": "```rust\nlet flagsmith = flagsmith::Client {\n    api_key: String::from(\"secret key\"),\n    base_uri: String::from(\"https://features.on.my.own.server/api/v1/\"),\n};\n```",
+      "source_content_hash": "7532bc7916b5f1d576ece21c725516e08b0762102f39e064b506d7057c58d29d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c05ad55e"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/clients/server-side/rust.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.936323+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "ee1829305f8dc74dc2d02d56bb489280ab140504482bd1880bff24bfc0dc3db9"
+  }
+}

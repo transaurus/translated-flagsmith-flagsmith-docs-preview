@@ -1,0 +1,192 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/advanced-use/scheduled-flags.md",
+  "source_file_content_hash": "625ced86c1adc12e924c9a60697160e053929767eb1bd9e65910fd906ed32f9b",
+  "segments": [
+    {
+      "segment_id": "76e4a56a",
+      "source_content": "# Scheduled Flags",
+      "source_content_hash": "3b73b7aea02391ecd78cccbbcec616a08bad1915749f971bcc00fd1f5b5705d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# 定时功能开关"
+      }
+    },
+    {
+      "segment_id": "13b248dc",
+      "source_content": ":::tip\n\nScheduled Flags are part of our Scale-Up and Enterprise plans.\n\n:::",
+      "source_content_hash": "8a79a6ad21d91c47008177147890a2c3c1dd04b8021575797524c434a53f133c",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n定时功能开关属于我们的Scale-Up和企业版套餐功能。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "d912d376",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "8ac585fb",
+      "source_content": "You can use Scheduled Flags to queue up changes to Flags to be modified automatically in a future point in time.",
+      "source_content_hash": "d2a1cfd92c5d8bb3618212acaa4d1b8dd1bfbfd683aa8fa16d29b14173edc7c1",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您可以使用定时功能开关来预设功能开关的变更，使其在未来指定时间点自动生效。"
+      }
+    },
+    {
+      "segment_id": "180bddb1",
+      "source_content": "You can create a Scheduled Flag change in 1 of two ways:",
+      "source_content_hash": "55aa7806f7cecf050755e25676edf98d75e510f949a81ab1f15089e325ab0d17",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "有两种方式可以创建定时功能开关变更："
+      }
+    },
+    {
+      "segment_id": "4269e691",
+      "source_content": "- As part of a Change Request.\n- If you are not enforcing Change Requests, you can schedule the Flag change when modifying a Flag.",
+      "source_content_hash": "77b216f679815f1de04a819024d47031f06f8784062b86e61cc226bdf5564bda",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 作为变更请求的一部分\n- 若未启用变更请求强制流程，可直接在修改功能开关时设置定时变更"
+      }
+    },
+    {
+      "segment_id": "d350c018",
+      "source_content": "## Creating a Scheduled Flag change as part of a Change Request",
+      "source_content_hash": "e505cdeba9b6776cd0a16d9c636df3019d865ef97434262890315d6de760291c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 作为变更请求创建定时功能开关变更"
+      }
+    },
+    {
+      "segment_id": "1acb9a05",
+      "source_content": "Once an Environment is configured with Change Requests enabled, attempting to change a flag value will prompt you to\ncreate a new Change Request.",
+      "source_content_hash": "9defee47ac5cab6e0c181218b364416acf9fabde543fef8ca2072dc33a8c2ce7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当环境配置启用了变更请求功能后，尝试修改功能开关值时系统会提示您创建新的变更请求。"
+      }
+    },
+    {
+      "segment_id": "b7a64917",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/change-request-schedule.png\"/></div>",
+      "source_content_hash": "ec6b1228f52c73189d10bdf52132c5afe81ed87992c024104f073ee256145021",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_b7a64917"
+      }
+    },
+    {
+      "segment_id": "f2c2bdd0",
+      "source_content": "You will need to provide:",
+      "source_content_hash": "f3152360a31186dd82c8a54b828fb1ced7ad4881d4e845e5737fc20d7bf81990",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "您需要提供："
+      }
+    },
+    {
+      "segment_id": "b3f5c97c",
+      "source_content": "- The title of the Change Request\n- Optionally a description of the reason for the Change Request\n- The Date and Time that you want the flag change to take effect",
+      "source_content_hash": "885c35ba932ab5315360b05e2da2959bec730bdc00b857f4409bcdc7734dafc5",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 变更请求的标题\n- （可选）变更原因的说明\n- 功能开关变更应生效的日期和时间"
+      }
+    },
+    {
+      "segment_id": "48847fd4",
+      "source_content": "## Creating a stand-alone Scheduled Flag change",
+      "source_content_hash": "a300eebfe635a79a40678cb6f27d0b02b0cbd584f1ac5058a97ffca4ef5fd37c",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 创建独立的定时功能开关变更"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "If the Environment you are working with does not have Change Requests enabled, you can create a Scheduled Flag Change\ndirectly from when editing the Flag.",
+      "source_content_hash": "3457de85fa84c25a8c59054f59f15e6f7450bba428c41b13ff1ce3bfa37d436f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若当前操作环境未启用变更请求功能，您可以直接在编辑功能开关时创建定时变更。"
+      }
+    },
+    {
+      "segment_id": "e7c54101",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/scheduled-flag-create.png\"/></div>",
+      "source_content_hash": "3c58408553b4f59fc09154148ecabf84ff6bc0ac0a5dc7d46448dfa2ee623185",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e7c54101"
+      }
+    },
+    {
+      "segment_id": "80d9e13c",
+      "source_content": "## Scheduled Flags and Change Requests",
+      "source_content_hash": "0f5d6ae470afee63082c1493e0c49faefff0d712cc0210a6b308082e523f7a41",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 定时功能开关与变更请求"
+      }
+    },
+    {
+      "segment_id": "33331f27",
+      "source_content": "Scheduled Flags pending go live will appear in the Change Request area.",
+      "source_content_hash": "3b4f81627237236981b07caa5995599aa695f8a9d8750832e6541b90b4d8a6cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "待生效的定时功能开关会显示在变更请求区域。"
+      }
+    },
+    {
+      "segment_id": "50746522",
+      "source_content": "![Listing Scheduled Flags](/img/scheduled-flag-list.png)",
+      "source_content_hash": "a427b6ebb189a54d1a2fd7443a0a34346e811fa97f815c66647664a7abcb149c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "![定时功能开关列表](/img/scheduled-flag-list.png)"
+      }
+    },
+    {
+      "segment_id": "95e9ba12",
+      "source_content": "Once the Schedule of the flag has passed the Scheduled Flag will move to the \"Closed\" list.",
+      "source_content_hash": "891fdd4a7c207bd47c07f236a777731c788efeaacadf8e44cbded46f45c499e7",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当预设时间到达后，定时功能开关会自动移至\"已关闭\"列表。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/advanced-use/scheduled-flags.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.934859+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "625ced86c1adc12e924c9a60697160e053929767eb1bd9e65910fd906ed32f9b"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "versioned_docs/version-v1.0/deployment/AWS.md",
+  "source_file_content_hash": "c78184625a05487e5fd071cbf2559741df057a69486bb8ad8edfacd45921d477",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\ntitle: Deploying Flagsmith on AWS\ndescription: Getting Started with Flagsmith on AWS\nsidebar_label: AWS\nsidebar_position: 70\n---",
+      "source_content_hash": "7225f78e3b87171cbca50ae622a78fa91a02dc28e54e88a834bf09aaa91163e5",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "cc3c868d",
+      "source_content": "## Overview",
+      "source_content_hash": "7337f3d0aa29e9a82b8f1650b743a98eef90794631fa763a319686e69c546821",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 概述"
+      }
+    },
+    {
+      "segment_id": "7e5c5a39",
+      "source_content": "We recommend running Flagsmith on AWS using the following AWS services:",
+      "source_content_hash": "8fcb983a981d88d0edc2e8c274d147da947bc65c87b69486c18e1b4efe8c9ead",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们推荐使用以下AWS服务运行Flagsmith："
+      }
+    },
+    {
+      "segment_id": "143e51c1",
+      "source_content": "- ECS/Fargate for running the Docker image\n- RDS/Aurora/Postgres for the database\n- Application Load Balancer to distribute traffic",
+      "source_content_hash": "db61d0e5689818a8bf765fd4caf51e195c75248c93c5544b5e6c2c7d3a4d4a3b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 使用ECS/Fargate运行Docker镜像\n- 使用RDS/Aurora/PostgreSQL作为数据库\n- 使用应用负载均衡器分配流量"
+      }
+    },
+    {
+      "segment_id": "86b54d44",
+      "source_content": "We have [Pulumi](https://www.pulumi.com/) scripts available for AWS deployments. Please get in touch if these are of\ninterest.",
+      "source_content_hash": "4d03360ef9a301491c1412174cee8cf523e7a069f6a64f80d079ddae74ed9cb8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们提供适用于AWS部署的[Pulumi](https://www.pulumi.com/)脚本。如有需要请联系我们。"
+      }
+    },
+    {
+      "segment_id": "aee0e40d",
+      "source_content": "## ECS",
+      "source_content_hash": "40249b51ba3e7dc10e08c703be601c6af057b85b7c44876c825d01eaef22237f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## ECS"
+      }
+    },
+    {
+      "segment_id": "f5f6d2ce",
+      "source_content": "Unless you have specific requirements, we recommend running the\n[unified Docker image](https://hub.docker.com/repository/docker/flagsmith/flagsmith).",
+      "source_content_hash": "072f6250586c77eeee3aa8592183c59d4984eb4a5ee8cab62002747f06db8754",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "除非有特殊需求，我们建议运行[统一Docker镜像](https://hub.docker.com/repository/docker/flagsmith/flagsmith)。"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "It's best to study our [docker-compose file](https://github.com/Flagsmith/self-hosted/blob/main/docker-compose.yml) in\norder to set up the base environment variables. Further environment variables are\n[described here](locally-api.md#environment-variables).",
+      "source_content_hash": "574a08dcf82c8c86c9232044b868a543238d1f7c04496e23c8957758602c2885",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "建议参考我们的[docker-compose文件](https://github.com/Flagsmith/self-hosted/blob/main/docker-compose.yml)来设置基础环境变量。更多环境变量配置可[参见此处](locally-api.md#environment-variables)。"
+      }
+    },
+    {
+      "segment_id": "d9172fa4",
+      "source_content": "Run a single ECS service with at least two Fargate instances running for failover. For more info on Fargate sizes, see\nour [scaling page](/deployment/configuration/sizing-and-scaling).",
+      "source_content_hash": "a7d8030af7dd2a6e3ff0c1c123e3156c59d03fe87fa08281da6b2240dd88c86e",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "运行单个ECS服务时，建议至少部署两个Fargate实例以实现故障转移。有关Fargate规格的更多信息，请参阅我们的[扩展指南](/deployment/configuration/sizing-and-scaling)。"
+      }
+    },
+    {
+      "segment_id": "dfe931a2",
+      "source_content": "If you are using health-checks, make sure to use `/health` as the health-check endpoint.",
+      "source_content_hash": "db795be632b0ab15b68a4445ee4195172eac62b5a2419a339a3648aee97703b9",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "若使用健康检查，请确保将`/health`设为健康检查端点。"
+      }
+    },
+    {
+      "segment_id": "0037ff70",
+      "source_content": "## RDS/Aurora",
+      "source_content_hash": "2ffbde3953396fbb1ad398264056ed95149656943fab7fbd8fda37ff1a906937",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## RDS/Aurora"
+      }
+    },
+    {
+      "segment_id": "bdc231b1",
+      "source_content": "We run in production on PostgreSQL version `11`; Aurora release `3.x`. When starting for the first time, the application\nwill create that database schema automatically. Schema upgrades will also happen seamlessly during application server\nupgrades.",
+      "source_content_hash": "38c816fefeff76a3e675ee014b76bbaef2ebc2b90a4149155cc33ffee2fbdea8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们在生产环境使用PostgreSQL `11`版本和Aurora `3.x`发行版。首次启动时，应用会自动创建数据库模式。应用服务器升级时模式也会自动同步更新。"
+      }
+    },
+    {
+      "segment_id": "62a6890b",
+      "source_content": "## Application Load Balancer",
+      "source_content_hash": "4926e62b5aecbdec573597fd867732f70314c99d0092388b0852aa014542f9d9",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 应用负载均衡器"
+      }
+    },
+    {
+      "segment_id": "3cfe6286",
+      "source_content": "We direct all traffic through an AWS ALB to the relevant ECS service.",
+      "source_content_hash": "e7a88f5ab5b0554800186829d6f251006652c5c27c8c5f484c061abf4058435d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "我们通过AWS ALB将所有流量引导至对应的ECS服务。"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/version-v1.0/deployment/AWS.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.934487+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "c78184625a05487e5fd071cbf2559741df057a69486bb8ad8edfacd45921d477"
+  }
+}

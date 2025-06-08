@@ -1,0 +1,442 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "docs/quickstart.md",
+  "source_file_content_hash": "46f951fcf1c58dfe8e5aee7ba73dbf2fc5b74475d3128f0e1bfcc4d9ac5e5f08",
+  "segments": [
+    {
+      "segment_id": "58cfcc64",
+      "source_content": "---\nsidebar_position: 2\nsidebar_label: Quick Start\n---",
+      "source_content_hash": "4c767220f5d0841f9526c1e4742197c13ce50f78dbf1b1c514739e190ef56c43",
+      "node_type": "yaml",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_58cfcc64"
+      }
+    },
+    {
+      "segment_id": "b3de8742",
+      "source_content": "# Flagsmith Quick Start Guide",
+      "source_content_hash": "ddef917d6d9316ab4a1ca266a8055cb43b529c689e756e2bb6c52447cae8b239",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "# Flagsmith 快速入门指南"
+      }
+    },
+    {
+      "segment_id": "3fbbcc07",
+      "source_content": "Let's get up and running in 5 minutes. We're going to run through the following steps:",
+      "source_content_hash": "b0044ae85ae9332c86221f45b3669749331ec4d3d138b6be6b2c109bf402aa24",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "让我们在5分钟内完成配置并运行。我们将按照以下步骤操作："
+      }
+    },
+    {
+      "segment_id": "4a5b6a68",
+      "source_content": "1. Create an account on [Flagsmith.com](https://flagsmith.com/) and add your first Flag.\n2. Import our Javascript SDK into your web page.\n3. Connect to the Flagsmith API and get your flags.\n4. Update your application based on the flag value.",
+      "source_content_hash": "1d2ed612d93525a721d4fa7a86f254af9de1a2c2efb31bce635bdb130652110b",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "1. 在 [Flagsmith.com](https://flagsmith.com/) 创建账户并添加第一个功能开关。\n2. 将我们的 JavaScript SDK 导入网页。\n3. 连接至 Flagsmith API 并获取功能开关。\n4. 根据开关值更新应用程序。"
+      }
+    },
+    {
+      "segment_id": "e14c9928",
+      "source_content": "## 1. Create an account with Flagsmith",
+      "source_content_hash": "7480fe8a6d96a36cf41ea13a479d0a8a637d900393b46cf9d3af252df6374809",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 1. 创建 Flagsmith 账户"
+      }
+    },
+    {
+      "segment_id": "a7378c68",
+      "source_content": ":::tip\n\nTo get up and running quickly, we're going to use the hosted service at flagsmith.com, but you can easily run the\n[platform locally via Docker](/deployment/hosting/docker.md).\n\n:::",
+      "source_content_hash": "dcd7ea9004244de32e5b34b1a21776ae28d5c6fff645d75165c1f4e187864684",
+      "node_type": "containerDirective",
+      "translatable": true,
+      "translations": {
+        "zh-CN": ":::tip\n\n为快速开始，我们将使用 flagsmith.com 的托管服务，但您也可以轻松通过 [Docker 本地运行平台](/deployment/hosting/docker.md)。\n\n:::"
+      }
+    },
+    {
+      "segment_id": "98cfbd53",
+      "source_content": "Head over to [Flagsmith](https://app.flagsmith.com/signup) and create an account. We're going to create an Organisation\nand a Project.",
+      "source_content_hash": "8e35f344e2688a21e3ddd6cf9157a379d1213b53e1e41480288144127ecc548d",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "前往 [Flagsmith](https://app.flagsmith.com/signup) 创建账户。我们将创建一个组织和一个项目。"
+      }
+    },
+    {
+      "segment_id": "358a309f",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_1.png\"/></div>",
+      "source_content_hash": "b1d2abb65f1093d6e9a404692b3471199a0d3d3eeb41c083648800c646bd05de",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_358a309f"
+      }
+    },
+    {
+      "segment_id": "4b1d2d7d",
+      "source_content": "Flagsmith manages Flags with Projects, so let's create one now:",
+      "source_content_hash": "7ae8a8682fb8068f30a2f1867e1330988fe3a1cb9632fd81a945c378f738a09a",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 通过项目管理功能开关，现在让我们创建一个："
+      }
+    },
+    {
+      "segment_id": "ea37d64a",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_2.png\"/></div>",
+      "source_content_hash": "576c2d88662507bf37179b5298c44368d8e98e96ed85b584182074481609e00b",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_ea37d64a"
+      }
+    },
+    {
+      "segment_id": "4daf5cdd",
+      "source_content": "Flagsmith organises Projects into separate Environments. When you create a Project, Flagsmith automatically creates\n`Development` and `Production` Environments. We will come to these Environments later. Let's go ahead and create our\nfirst Flag. This flag is simply going to control whether a button shows on our super simple web page.",
+      "source_content_hash": "9f28c96c89fd513e83f09767b60a9457b2851a49518c234d1a73011df907ae32",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 将项目组织到独立的环境中。创建项目时，系统会自动生成`开发`和`生产`环境。稍后我们会用到这些环境。现在先创建第一个功能开关，该开关将控制一个按钮是否显示在我们极其简单的网页上。"
+      }
+    },
+    {
+      "segment_id": "7b66d6d6",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_3.png\"/></div>",
+      "source_content_hash": "881d9c093c7d11a3529e6520dfa5a14e77dc679d0f0f17dd91e555757d78eb55",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_7b66d6d6"
+      }
+    },
+    {
+      "segment_id": "c3a738de",
+      "source_content": "Flags within Flagsmith are a combination of both: A Boolean value - the `Flag State` and then optionally: A\nString/Integer/Float value - the `Flag Value`. For now, we're just going to use the `Boolean` value of the flag to\ncontrol whether the button shows. Let's go ahead and create a flag called `show_demo_button`. We're going to leave it as\nDisabled by default:",
+      "source_content_hash": "df024e0a0e581af8a2466bbeeb8cc3bc714c2c4963fff38d5bdc2b91f6eecb00",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 中的功能开关包含两部分：布尔值——`开关状态`，以及可选的字符串/整数/浮点数——`开关值`。目前我们仅使用开关的`布尔值`来控制按钮显示。现在创建一个名为`show_demo_button`的开关，默认保持禁用状态："
+      }
+    },
+    {
+      "segment_id": "e2ae1ac7",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_4.png\"/></div>",
+      "source_content_hash": "4c3cb7995fad0caa9e8d6d2ae36beeef5b6945ede1191cb6ac0811380709fe62",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_e2ae1ac7"
+      }
+    },
+    {
+      "segment_id": "8bddee80",
+      "source_content": "## 2. Import the Javascript SDK",
+      "source_content_hash": "3c08ecdf01b683d13f0849d175f6a814fd27d7b60805eeec7a66d2b19a54f5cc",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 2. 导入 JavaScript SDK"
+      }
+    },
+    {
+      "segment_id": "a9d49f92",
+      "source_content": "OK so we've set up our flag; now let's bring it into our application. We have a (very!) simple web page:",
+      "source_content_hash": "4d749237728a5c8af77fc3583e023204bfefe5739bacafeb6d4dfa505d081667",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在功能开关已配置完成，接下来将其集成到应用中。我们有一个（非常！）简单的网页："
+      }
+    },
+    {
+      "segment_id": "95318d95",
+      "source_content": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n <head>\n  <meta charset=\"utf-8\" />\n  <title>Flagsmith Quickstart Guide</title>\n </head>\n <body>\n  <h1>Here's our button!</h1>\n  <div id=\"submit_button\">\n   <input type=\"submit\" value=\"Flagsmith Quickstart Button!\" />\n  </div>\n </body>\n</html>\n```",
+      "source_content_hash": "cd6169e6f2c7c071386f67c3e0ab764e1ddb17e832edefc3c29df8b2d231b31d",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_95318d95"
+      }
+    },
+    {
+      "segment_id": "531437ca",
+      "source_content": "It's pretty simple, and looks like this:",
+      "source_content_hash": "9449f737cbdcbdd7457f0741dfbe99876ea093de02403bd8997bd43da97f912b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "页面非常简单，效果如下："
+      }
+    },
+    {
+      "segment_id": "c537a3d3",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_8.png\"/></div>",
+      "source_content_hash": "ec0fa1afa1fdd5dd72d6793a34cb4a99055fef23fa62f58edcf22b5536076622",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_c537a3d3"
+      }
+    },
+    {
+      "segment_id": "7f71ff2a",
+      "source_content": "As per our [Javascript Docs](clients/client-side/javascript.md), we will import the SDK inline into our web page:",
+      "source_content_hash": "bdc860c9147ded155eb69fc5577cd035750003cffd8222f36f94d4bdb25f8396",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "根据 [JavaScript 文档](clients/client-side/javascript.md)，我们将内联导入 SDK："
+      }
+    },
+    {
+      "segment_id": "4fb3ded8",
+      "source_content": "```html\n<script src=\"https://cdn.jsdelivr.net/npm/flagsmith/index.js\"></script>\n```",
+      "source_content_hash": "fe5f7eff855a390276fe04b841512282e7b6a63cd5a778368f366e23a36e6e1e",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_4fb3ded8"
+      }
+    },
+    {
+      "segment_id": "b051b70c",
+      "source_content": "## 3. Connect to the Flagsmith API",
+      "source_content_hash": "ee9871bc88319f29353208ad431a05882a8f6164579ec5b862e516657fee978f",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 3. 连接 Flagsmith API"
+      }
+    },
+    {
+      "segment_id": "d0dd855b",
+      "source_content": "We can now connect to the Flagsmith API and get our Flags. When you initialise the Flagsmith SDK, you have to provide an\nEnvironment ID. This way, the SDK knows which Project and Environment to grab flags for. Head to the Environment\nSettings page within Flagsmith, and copy the API key:",
+      "source_content_hash": "62b270781af88e34631ac9183ff6dc62e6da1e3f06e82d87cfdce461173bd3db",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在可以连接 Flagsmith API 并获取功能开关。初始化 SDK 时需要提供环境ID，这样 SDK 才能知道从哪个项目的哪个环境获取开关。进入 Flagsmith 的环境设置页面，复制 API 密钥："
+      }
+    },
+    {
+      "segment_id": "41b1e179",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_6.png\"/></div>",
+      "source_content_hash": "1fa2bbeacb23e25a8f33b24313b10e9fec5d3fd168c2de99634fa1074c54beab",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_41b1e179"
+      }
+    },
+    {
+      "segment_id": "a1fa5396",
+      "source_content": "Then paste your API key into the code below:",
+      "source_content_hash": "7b6d7ed9f6b2a36ca68763c3f9da7a171a96f3d4daa5929996eee56206e3b62c",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "将 API 密钥粘贴到以下代码中："
+      }
+    },
+    {
+      "segment_id": "8c3563d3",
+      "source_content": "```html\n<script>\n flagsmith.init({\n  environmentID: '<add your API key here!>',\n  onChange: (oldFlags, params) => {},\n });\n</script>\n```",
+      "source_content_hash": "9f0cfc47aaa063e5d0e17f3df55a878c0cdf8720eb2b0e02fc78b84196b91381",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_8c3563d3"
+      }
+    },
+    {
+      "segment_id": "785750ac",
+      "source_content": "Now when the browser opens the web page, it will download the Javascript SDK and make a call to `edge.api.flagsmith.com`\nto get the flags for our Environment. You can see this in the browser network tab:",
+      "source_content_hash": "1e0196978e48ad682d3208bd7d5be8aed1bdd3ef7b336e7d5016c5c34ea4506f",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "当浏览器加载网页时，会下载 JavaScript SDK 并向 `edge.api.flagsmith.com` 发起调用以获取环境对应的功能开关。您可以在浏览器网络标签页中查看："
+      }
+    },
+    {
+      "segment_id": "f9d6f2bf",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_7.png\"/></div>",
+      "source_content_hash": "14ea905cb6b46441b74f59d6103c9a0d065e144f5aae10a6c1d1e40039859339",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_f9d6f2bf"
+      }
+    },
+    {
+      "segment_id": "1862c5fe",
+      "source_content": "You can see here that the flag is being returned by the Flagsmith API and it has `\"enabled\": false` as the value.",
+      "source_content_hash": "2b5a365a49a8f2f4c5971a26066ac09dc93c0a71df921f679043a102da73689b",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "此处可见 Flagsmith API 返回的开关值为 `\"enabled\": false`。"
+      }
+    },
+    {
+      "segment_id": "a138e327",
+      "source_content": "## 4. Hook up our Application",
+      "source_content_hash": "3d901fc7a3820b43d7c00e75333622ab6c7536913225dc8b9a647e277a2dda69",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 4. 集成到应用"
+      }
+    },
+    {
+      "segment_id": "a2c0166e",
+      "source_content": "Let's hook this value up to our button, so that the value of the flag controls whether the button is hidden or shown.",
+      "source_content_hash": "c821d8ed17185a32acf63d7f72bd58fe6ef2d23db99816e5ceed1e9e2ce678cb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "现在将这个值与按钮关联，使开关状态控制按钮的显隐。"
+      }
+    },
+    {
+      "segment_id": "d44e4104",
+      "source_content": "```html\n<script>\n flagsmith.init({\n  environmentID: '<add your API key here!>',\n  onChange: (oldFlags, params) => {\n   if (flagsmith.hasFeature('show_demo_button')) {\n    var submit_button = document.getElementById('submit_button');\n    submit_button.style.display = 'block';\n   }\n  },\n });\n</script>\n```",
+      "source_content_hash": "d2761e72a1968ebd96a98e758b7ab23d706cb17e349d6935cfc39a738f3daa6b",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_d44e4104"
+      }
+    },
+    {
+      "segment_id": "396efb28",
+      "source_content": "This code sets up a callback, which is triggered when we get a response back from the Flagsmith API. We simply check for\nthe state of the flag and set the display visibility based on the result.",
+      "source_content_hash": "5ebf11d188242a7a39c6e82070a060c27a9a0d2da1a0120333a24b8f16980ee8",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "这段代码设置了回调函数，当 Flagsmith API 返回响应时触发。我们只需检查开关状态并根据结果设置显示属性。"
+      }
+    },
+    {
+      "segment_id": "a6c928a1",
+      "source_content": "Our entire webpage now reads like this:",
+      "source_content_hash": "cc45992e5cac7c081153590996b2b73ffb19668891d1490ab78ba08104846124",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "完整网页代码如下："
+      }
+    },
+    {
+      "segment_id": "3917a88d",
+      "source_content": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n <head>\n  <meta charset=\"utf-8\" />\n  <title>Flagsmith Quickstart Guide</title>\n  <script src=\"https://cdn.jsdelivr.net/npm/flagsmith/index.js\"></script>\n  <script>\n   flagsmith.init({\n    environmentID: 'ZfmJTbLQZrhZVHkVhXbsNi',\n    onChange: (oldFlags, params) => {\n     if (flagsmith.hasFeature('show_demo_button')) {\n      var submit_button = document.getElementById('submit_button');\n      submit_button.style.display = 'block';\n     }\n    },\n   });\n  </script>\n </head>\n <body>\n  <h1>Here's our button!</h1>\n  <div id=\"submit_button\" style=\"display:none\">\n   <input type=\"submit\" value=\"Flagsmith Quickstart Button!\" />\n  </div>\n </body>\n</html>\n```",
+      "source_content_hash": "e5219ea12284e0b91318d27a9ef38597dc867bf4d146b15405279b73ff5163a6",
+      "node_type": "code",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_3917a88d"
+      }
+    },
+    {
+      "segment_id": "3e8f45da",
+      "source_content": "If we go back and refresh our browser, you will see that the button has now disappeared.",
+      "source_content_hash": "e243376201b64ee77ef6f3d1bdbe782e5141a6a791542a9d00b8a6b04af6f008",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "如果返回浏览器并刷新页面，您会发现按钮现在已经消失。"
+      }
+    },
+    {
+      "segment_id": "dc9a6065",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_9.png\"/></div>",
+      "source_content_hash": "ca4cfd0f865320dc9873b30d0f01a7b26845ab7d0bd303b6f25159bb9947a7c8",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_dc9a6065"
+      }
+    },
+    {
+      "segment_id": "63565425",
+      "source_content": "We've now put the control of the button visibility behind our Flagsmith Flag! You can now go back to the Flagsmith\ndashboard and enable the flag:",
+      "source_content_hash": "d9ad68d6c65f7fad073dd1ea369fc13516dab8200c7e69ae2c6c3ea3d9298ac6",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "至此，我们已通过Flagsmith的功能开关控制了按钮的显示状态！您现在可以返回Flagsmith控制台启用该开关："
+      }
+    },
+    {
+      "segment_id": "a6c20a74",
+      "source_content": "<div style={{textAlign: 'center'}}><img width=\"75%\" src=\"/img/quickstart/demo_create_10.png\"/></div>",
+      "source_content_hash": "762139969c6e414aed5fa372ef57278e4c52eef8c061816cdf7b74c2bc028ec4",
+      "node_type": "mdxJsxFlowElement",
+      "translatable": false,
+      "translations": {
+        "zh-CN": "@@untranslatable_placeholder_a6c20a74"
+      }
+    },
+    {
+      "segment_id": "d2a3d4c7",
+      "source_content": "Return to your browser, refresh the page, and the button will re-appear.",
+      "source_content_hash": "5b77582a648f585eabcd4c224f04ef4e9a55a6a6305ddbc8c3c2bd1979cceccb",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "返回浏览器刷新页面，按钮将重新出现。"
+      }
+    },
+    {
+      "segment_id": "d4eab4a6",
+      "source_content": "## Finishing Up",
+      "source_content_hash": "b7791aeabaf49d5d1004311990555ebd202c95a6ad6b0016f63dd5c5ec767d11",
+      "node_type": "heading",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "## 完成设置"
+      }
+    },
+    {
+      "segment_id": "0ddaa835",
+      "source_content": "This was a pretty simple demo, but it covers the core concepts involved in integrating Flagsmith into your application.\nFrom here, some areas of the documentation you might want to check out are:",
+      "source_content_hash": "dab898e5943a61e32f221e7d0b0e32a2894472987e35a431c613f6860fbb8487",
+      "node_type": "paragraph",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "虽然这是个简单的演示，但它涵盖了将Flagsmith集成到应用程序中的核心概念。接下来您可以查阅文档中的以下内容："
+      }
+    },
+    {
+      "segment_id": "af7b7e3f",
+      "source_content": "- A deeper overview of the application - [Features](basic-features/managing-features.md),\n  [Identities](basic-features/managing-identities.md) and [Segments](basic-features/managing-segments.md).\n- More details about our [API and SDKs](clients/rest.md).\n- How you can [run Flagsmith yourself](deployment/overview.md) or use our [Hosted API](https://flagsmith.com/).",
+      "source_content_hash": "810a1d735dc11e3995b4fcf2093841fa4ecf7a3fa8b2761d864645da35bf0813",
+      "node_type": "list",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "- 更深入的应用概览：[功能管理](basic-features/managing-features.md)、\n  [身份管理](basic-features/managing-identities.md)和[用户分群](basic-features/managing-segments.md)\n- 关于[API与SDK](clients/rest.md)的更多细节\n- 如何[自行部署Flagsmith](deployment/overview.md)或使用我们的[托管API](https://flagsmith.com/)"
+      }
+    }
+  ],
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current/quickstart.md",
+  "last_updated_timestamp": "2025-06-08T19:31:17.929306+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "46f951fcf1c58dfe8e5aee7ba73dbf2fc5b74475d3128f0e1bfcc4d9ac5e5f08"
+  }
+}
