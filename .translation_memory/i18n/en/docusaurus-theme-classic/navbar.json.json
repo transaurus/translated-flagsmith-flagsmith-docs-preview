@@ -1,0 +1,133 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "i18n/en/docusaurus-theme-classic/navbar.json",
+  "source_file_content_hash": "3e9e1d0ca2362c62fcd09e0cecba4041a71f505365796849c2e331fd10afef99",
+  "segments": [
+    {
+      "segment_id": "title",
+      "source_content": "Flagsmith",
+      "source_content_hash": "cc47ffe494c0181b640c8a7d2f903c9279341564e33875efc8296f93cf496104",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith"
+      },
+      "metadata": {
+        "json_description": "The title in the navbar"
+      }
+    },
+    {
+      "segment_id": "logo.alt",
+      "source_content": "Flagsmith Logo",
+      "source_content_hash": "ee5614ce5c5610dd8533810ff141594cea5c8f0dab061f3136246cd6ff8664e6",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith 徽标"
+      },
+      "metadata": {
+        "json_description": "The alt text of navbar logo"
+      }
+    },
+    {
+      "segment_id": "item.label.Docs",
+      "source_content": "Docs",
+      "source_content_hash": "7af023c43013b9a53fbff7dd4b5821588bba3319308878229740489152c43f6d",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "文档"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Docs"
+      }
+    },
+    {
+      "segment_id": "item.label.API",
+      "source_content": "API",
+      "source_content_hash": "c8e5998f6a3955c21d858936fe05c69621724d7f825c6e17793002a0fa798bf9",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "API"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label API"
+      }
+    },
+    {
+      "segment_id": "item.label.Flagsmith.com",
+      "source_content": "Flagsmith.com",
+      "source_content_hash": "6024d2a7d765fc4fd64e38fb5e4fcaf5ff014c36c99a0296e697108213f7094f",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Flagsmith.com"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Flagsmith.com"
+      }
+    },
+    {
+      "segment_id": "item.label.GitHub",
+      "source_content": "GitHub",
+      "source_content_hash": "f911e414cf6bdfc595532ab166b5ba0f63d73c021452fcdacbda363dda6ad8fb",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "GitHub"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label GitHub"
+      }
+    },
+    {
+      "segment_id": "item.label.Discord",
+      "source_content": "Discord",
+      "source_content_hash": "053bc65874ad6098e58c41c57b378a2f36b0220e5e0b46722245e6c2f796818c",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "Discord"
+      },
+      "metadata": {
+        "json_description": "Navbar item with label Discord"
+      }
+    }
+  ],
+  "original_json_structure": {
+    "title": {
+      "message": "Flagsmith",
+      "description": "The title in the navbar"
+    },
+    "logo.alt": {
+      "message": "Flagsmith Logo",
+      "description": "The alt text of navbar logo"
+    },
+    "item.label.Docs": {
+      "message": "Docs",
+      "description": "Navbar item with label Docs"
+    },
+    "item.label.API": {
+      "message": "API",
+      "description": "Navbar item with label API"
+    },
+    "item.label.Flagsmith.com": {
+      "message": "Flagsmith.com",
+      "description": "Navbar item with label Flagsmith.com"
+    },
+    "item.label.GitHub": {
+      "message": "GitHub",
+      "description": "Navbar item with label GitHub"
+    },
+    "item.label.Discord": {
+      "message": "Discord",
+      "description": "Navbar item with label Discord"
+    }
+  },
+  "target_i18n_subpath": "docusaurus-theme-classic/navbar.json",
+  "last_updated_timestamp": "2025-06-10T10:44:28.278438+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "3e9e1d0ca2362c62fcd09e0cecba4041a71f505365796849c2e331fd10afef99"
+  }
+}

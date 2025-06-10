@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "v1.0",
+    "description": "The label for version v1.0"
+  },
+  "sidebar.tutorialSidebar.category.Basic Features": {
+    "message": "Basic Features",
+    "description": "The label for category Basic Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced Use": {
+    "message": "Advanced Use",
+    "description": "The label for category Advanced Use in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Guides & Examples": {
+    "message": "Guides & Examples",
+    "description": "The label for category Guides & Examples in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.SDKs": {
+    "message": "SDKs",
+    "description": "The label for category SDKs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Client Side": {
+    "message": "Client Side",
+    "description": "The label for category Client Side in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Server Side": {
+    "message": "Server Side",
+    "description": "The label for category Server Side in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrations": {
+    "message": "Integrations",
+    "description": "The label for category Integrations in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Deployment": {
+    "message": "Deployment",
+    "description": "The label for category Deployment in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Platform": {
+    "message": "Platform",
+    "description": "The label for category Platform in sidebar tutorialSidebar"
+  }
+}

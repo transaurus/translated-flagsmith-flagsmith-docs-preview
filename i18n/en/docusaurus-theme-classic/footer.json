@@ -1,0 +1,42 @@
+{
+  "link.title.Flagsmith": {
+    "message": "Flagsmith",
+    "description": "The title of the footer links column with title=Flagsmith in the footer"
+  },
+  "link.title.Open Source": {
+    "message": "Open Source",
+    "description": "The title of the footer links column with title=Open Source in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Flagsmith.com": {
+    "message": "Flagsmith.com",
+    "description": "The label of footer link with label=Flagsmith.com linking to https://flagsmith.com/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/getflagsmith"
+  },
+  "link.item.label.Github": {
+    "message": "Github",
+    "description": "The label of footer link with label=Github linking to https://github.com/Flagsmith"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/hFhxNtXzgm"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to https://flagsmith.com/blog/"
+  },
+  "link.item.label.Podcast": {
+    "message": "Podcast",
+    "description": "The label of footer link with label=Podcast linking to https://flagsmith.com/podcast/"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 Bullet Train Ltd. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

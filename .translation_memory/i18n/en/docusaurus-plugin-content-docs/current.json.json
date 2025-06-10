@@ -1,0 +1,201 @@
+{
+  "source_file_path_relative_to_docusaurus_root": "i18n/en/docusaurus-plugin-content-docs/current.json",
+  "source_file_content_hash": "94f36e5f0df2b3d7c9fb39dbbe019bbec1ed2f48f2f9d8283870155b9ea9859c",
+  "segments": [
+    {
+      "segment_id": "version.label",
+      "source_content": "v2.0",
+      "source_content_hash": "7761fa9497f8fb823413df637f6939cc265fa6d389bef6c7b75eeb2f7bd13ea4",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "v2.0"
+      },
+      "metadata": {
+        "json_description": "The label for version current"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Basic Features",
+      "source_content": "Basic Features",
+      "source_content_hash": "fd7eead1962aa67476e341a50a517849d0ccea55fabb549a40c93e33180565b6",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "基础功能"
+      },
+      "metadata": {
+        "json_description": "The label for category Basic Features in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Advanced Use",
+      "source_content": "Advanced Use",
+      "source_content_hash": "20c01ab2b601425f2dade2de9ede584cefa4c0f570e31351ed5a33e101c19877",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "高级用法"
+      },
+      "metadata": {
+        "json_description": "The label for category Advanced Use in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Guides & Examples",
+      "source_content": "Guides & Examples",
+      "source_content_hash": "e3c674b35612f24743527e15e3f432e53c5a5f64e19178c0e315cc666bbf707e",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "指南与示例"
+      },
+      "metadata": {
+        "json_description": "The label for category Guides & Examples in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.SDKs",
+      "source_content": "SDKs",
+      "source_content_hash": "f35720ac1e47da4f84cefe4cf723f444b2d37e461bee66137c15a3ef2429d425",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "SDK开发包"
+      },
+      "metadata": {
+        "json_description": "The label for category SDKs in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Client Side",
+      "source_content": "Client Side",
+      "source_content_hash": "d4bb37c4cf29becef4798eddc1d18a88f3c9e15de975778dcd696bf3fb48dc3b",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "客户端"
+      },
+      "metadata": {
+        "json_description": "The label for category Client Side in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Integrations",
+      "source_content": "Integrations",
+      "source_content_hash": "090512d93fcc3c0d307d0c5760823992c4670ced80eb4464aa6c97c71b456891",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "集成方案"
+      },
+      "metadata": {
+        "json_description": "The label for category Integrations in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Deployment",
+      "source_content": "Deployment",
+      "source_content_hash": "870a8ffd98f4f2bd5041ee4cebde82de4bdeb253fac88c5469a2f15f15614186",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "部署"
+      },
+      "metadata": {
+        "json_description": "The label for category Deployment in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Hosting",
+      "source_content": "Hosting",
+      "source_content_hash": "b4ec9bba800b2844765f9e7ed624315e99fe1855e9cfd70580bb1cf20dfbeba2",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "托管服务"
+      },
+      "metadata": {
+        "json_description": "The label for category Hosting in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Configuration",
+      "source_content": "Configuration",
+      "source_content_hash": "b332c3492d5eb10a118eb6d8b0dcd689bc2477ce2ae16b303753b942b54377bc",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "配置管理"
+      },
+      "metadata": {
+        "json_description": "The label for category Configuration in sidebar tutorialSidebar"
+      }
+    },
+    {
+      "segment_id": "sidebar.tutorialSidebar.category.Platform",
+      "source_content": "Platform",
+      "source_content_hash": "c78ffe19571018fbc93a78873969046fe1a80c3d21e5d20fbb2ca17c7c53a144",
+      "node_type": "json_message",
+      "translatable": true,
+      "translations": {
+        "zh-CN": "平台功能"
+      },
+      "metadata": {
+        "json_description": "The label for category Platform in sidebar tutorialSidebar"
+      }
+    }
+  ],
+  "original_json_structure": {
+    "version.label": {
+      "message": "v2.0",
+      "description": "The label for version current"
+    },
+    "sidebar.tutorialSidebar.category.Basic Features": {
+      "message": "Basic Features",
+      "description": "The label for category Basic Features in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Advanced Use": {
+      "message": "Advanced Use",
+      "description": "The label for category Advanced Use in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Guides & Examples": {
+      "message": "Guides & Examples",
+      "description": "The label for category Guides & Examples in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.SDKs": {
+      "message": "SDKs",
+      "description": "The label for category SDKs in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Client Side": {
+      "message": "Client Side",
+      "description": "The label for category Client Side in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Integrations": {
+      "message": "Integrations",
+      "description": "The label for category Integrations in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Deployment": {
+      "message": "Deployment",
+      "description": "The label for category Deployment in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Hosting": {
+      "message": "Hosting",
+      "description": "The label for category Hosting in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Configuration": {
+      "message": "Configuration",
+      "description": "The label for category Configuration in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Platform": {
+      "message": "Platform",
+      "description": "The label for category Platform in sidebar tutorialSidebar"
+    }
+  },
+  "target_i18n_subpath": "docusaurus-plugin-content-docs/current.json",
+  "last_updated_timestamp": "2025-06-10T10:44:28.280626+00:00",
+  "schema_version": "1.0",
+  "translated_versions": {
+    "zh-CN": "94f36e5f0df2b3d7c9fb39dbbe019bbec1ed2f48f2f9d8283870155b9ea9859c"
+  }
+}
